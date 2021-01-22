@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 961</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex962.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SET', score: 5 }},
+{data: { id: 'C14orf93', score: 3 }},
+{data: { id: 'FAM111B', score: 4 }},
+{data: { id: 'ZKSCAN8', score: 4 }},
+{data: { id: 'ZNF445', score: 5 }}], 
+ edges: [{ data: { source: 'ZNF445', target: 'SET', directed: 'false', weight: 0.890706} },
+{ data: { source: 'ZNF445', target: 'C14orf93', directed: 'false', weight: 0.144297} },
+{ data: { source: 'ZNF445', target: 'FAM111B', directed: 'false', weight: 0.0947832} },
+{ data: { source: 'SET', target: 'C14orf93', directed: 'false', weight: 0.572087} },
+{ data: { source: 'SET', target: 'FAM111B', directed: 'false', weight: 0.302551} },
+{ data: { source: 'SET', target: 'ZKSCAN8', directed: 'false', weight: 0.11296099999999999} },
+{ data: { source: 'C14orf93', target: 'FAM111B', directed: 'false', weight: 0.10926300000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.57966
+    </section>
+    </body>
+    </html>
+    

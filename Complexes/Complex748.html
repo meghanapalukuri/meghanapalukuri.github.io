@@ -1,0 +1,88 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 748</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex749.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PPP3CB', score: 5 }},
+{data: { id: 'PPP3CA', score: 5 }},
+{data: { id: 'SIK3', score: 5 }},
+{data: { id: 'PPP3CC', score: 5 }},
+{data: { id: 'RCAN2', score: 4 }},
+{data: { id: 'RCAN3', score: 5 }}], 
+ edges: [{ data: { source: 'RCAN2', target: 'PPP3CA', directed: 'false', weight: 0.319637} },
+{ data: { source: 'RCAN2', target: 'PPP3CC', directed: 'false', weight: 0.31799499999999997} },
+{ data: { source: 'RCAN2', target: 'PPP3CB', directed: 'false', weight: 0.301571} },
+{ data: { source: 'RCAN3', target: 'PPP3CC', directed: 'false', weight: 0.748009} },
+{ data: { source: 'RCAN3', target: 'PPP3CB', directed: 'false', weight: 0.7437239999999999} },
+{ data: { source: 'RCAN3', target: 'PPP3CA', directed: 'false', weight: 0.41858199999999995} },
+{ data: { source: 'RCAN3', target: 'SIK3', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'SIK3', target: 'PPP3CC', directed: 'false', weight: 0.622642} },
+{ data: { source: 'SIK3', target: 'PPP3CA', directed: 'false', weight: 0.19629100000000002} },
+{ data: { source: 'SIK3', target: 'PPP3CB', directed: 'false', weight: 0.09685880000000001} },
+{ data: { source: 'PPP3CC', target: 'PPP3CB', directed: 'false', weight: 0.5} },
+{ data: { source: 'PPP3CC', target: 'PPP3CA', directed: 'false', weight: 0.205204} },
+{ data: { source: 'PPP3CA', target: 'PPP3CB', directed: 'false', weight: 0.355147} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.65982
+    </section>
+    </body>
+    </html>
+    

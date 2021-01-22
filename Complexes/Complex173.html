@@ -1,0 +1,105 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 173</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex174.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MEIS2', score: 5 }},
+{data: { id: 'PBX2', score: 5 }},
+{data: { id: 'MAB21L1', score: 5 }},
+{data: { id: 'MEIS1', score: 5 }},
+{data: { id: 'PBX1', score: 5 }},
+{data: { id: 'PBX3', score: 5 }},
+{data: { id: 'MEIS3', score: 5 }},
+{data: { id: 'PIGL', score: 5 }}], 
+ edges: [{ data: { source: 'PBX1', target: 'PBX2', directed: 'false', weight: 0.9583370000000001} },
+{ data: { source: 'PBX1', target: 'MEIS2', directed: 'false', weight: 0.831751} },
+{ data: { source: 'PBX1', target: 'PBX3', directed: 'false', weight: 0.579203} },
+{ data: { source: 'PBX1', target: 'MEIS1', directed: 'false', weight: 0.41868} },
+{ data: { source: 'PBX1', target: 'MAB21L1', directed: 'false', weight: 0.275252} },
+{ data: { source: 'PBX1', target: 'PIGL', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'PBX1', target: 'MEIS3', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'MEIS3', target: 'MEIS2', directed: 'false', weight: 0.981441} },
+{ data: { source: 'MEIS3', target: 'PIGL', directed: 'false', weight: 0.171414} },
+{ data: { source: 'MEIS3', target: 'MAB21L1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'MEIS3', target: 'MEIS1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'MEIS3', target: 'PBX3', directed: 'false', weight: 0.128057} },
+{ data: { source: 'MEIS3', target: 'PBX2', directed: 'false', weight: 0.11473699999999999} },
+{ data: { source: 'MEIS2', target: 'MAB21L1', directed: 'false', weight: 0.970283} },
+{ data: { source: 'MEIS2', target: 'PIGL', directed: 'false', weight: 0.9690270000000001} },
+{ data: { source: 'MEIS2', target: 'PBX3', directed: 'false', weight: 0.9369569999999999} },
+{ data: { source: 'MEIS2', target: 'PBX2', directed: 'false', weight: 0.930668} },
+{ data: { source: 'MEIS2', target: 'MEIS1', directed: 'false', weight: 0.838651} },
+{ data: { source: 'MAB21L1', target: 'MEIS1', directed: 'false', weight: 0.817917} },
+{ data: { source: 'MAB21L1', target: 'PBX3', directed: 'false', weight: 0.5} },
+{ data: { source: 'MAB21L1', target: 'PBX2', directed: 'false', weight: 0.385114} },
+{ data: { source: 'MAB21L1', target: 'PIGL', directed: 'false', weight: 0.140692} },
+{ data: { source: 'PBX2', target: 'PBX3', directed: 'false', weight: 0.6435810000000001} },
+{ data: { source: 'PBX2', target: 'MEIS1', directed: 'false', weight: 0.46998900000000005} },
+{ data: { source: 'PBX2', target: 'PIGL', directed: 'false', weight: 0.11473699999999999} },
+{ data: { source: 'PBX3', target: 'MEIS1', directed: 'false', weight: 0.6375390000000001} },
+{ data: { source: 'PBX3', target: 'PIGL', directed: 'false', weight: 0.128057} },
+{ data: { source: 'MEIS1', target: 'PIGL', directed: 'false', weight: 0.133451} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.83042
+    </section>
+    </body>
+    </html>
+    

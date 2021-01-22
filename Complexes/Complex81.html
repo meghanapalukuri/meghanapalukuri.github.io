@@ -1,0 +1,259 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 81</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex82.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RPLP0', score: 5 }},
+{data: { id: 'RPS11', score: 5 }},
+{data: { id: 'NPM1', score: 5 }},
+{data: { id: 'RPL5', score: 5 }},
+{data: { id: 'RPS15A', score: 5 }},
+{data: { id: 'RPS13', score: 5 }},
+{data: { id: 'RPS25', score: 5 }},
+{data: { id: 'RPS4X', score: 5 }},
+{data: { id: 'LOC101929876', score: 0 }},
+{data: { id: 'RPL8', score: 5 }},
+{data: { id: 'RPL4', score: 5 }},
+{data: { id: 'RPL35', score: 5 }},
+{data: { id: 'RPL38', score: 5 }},
+{data: { id: 'RPL6', score: 5 }},
+{data: { id: 'HIST1H1C', score: 0 }},
+{data: { id: 'RPS16', score: 5 }},
+{data: { id: 'RPL13', score: 5 }},
+{data: { id: 'RPL30', score: 5 }},
+{data: { id: 'RPS23', score: 5 }}], 
+ edges: [{ data: { source: 'RPL38', target: 'RPL35', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL38', target: 'RPS11', directed: 'false', weight: 0.999992} },
+{ data: { source: 'RPL38', target: 'RPS25', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'RPL38', target: 'RPL5', directed: 'false', weight: 0.999985} },
+{ data: { source: 'RPL38', target: 'RPS16', directed: 'false', weight: 0.999983} },
+{ data: { source: 'RPL38', target: 'RPS4X', directed: 'false', weight: 0.999983} },
+{ data: { source: 'RPL38', target: 'RPS13', directed: 'false', weight: 0.999975} },
+{ data: { source: 'RPL38', target: 'RPL8', directed: 'false', weight: 0.9999709999999999} },
+{ data: { source: 'RPL38', target: 'RPL6', directed: 'false', weight: 0.9999540000000001} },
+{ data: { source: 'RPL38', target: 'RPL13', directed: 'false', weight: 0.9999100000000001} },
+{ data: { source: 'RPL38', target: 'RPS23', directed: 'false', weight: 0.999907} },
+{ data: { source: 'RPL38', target: 'RPL30', directed: 'false', weight: 0.999784} },
+{ data: { source: 'RPL38', target: 'RPS15A', directed: 'false', weight: 0.999611} },
+{ data: { source: 'RPL38', target: 'RPL4', directed: 'false', weight: 0.9990209999999999} },
+{ data: { source: 'RPL38', target: 'LOC101929876', directed: 'false', weight: 0.998713} },
+{ data: { source: 'RPL38', target: 'RPLP0', directed: 'false', weight: 0.998674} },
+{ data: { source: 'RPL38', target: 'NPM1', directed: 'false', weight: 0.991455} },
+{ data: { source: 'RPL38', target: 'HIST1H1C', directed: 'false', weight: 0.750708} },
+{ data: { source: 'HIST1H1C', target: 'RPL5', directed: 'false', weight: 0.9778370000000001} },
+{ data: { source: 'HIST1H1C', target: 'NPM1', directed: 'false', weight: 0.937887} },
+{ data: { source: 'HIST1H1C', target: 'RPS16', directed: 'false', weight: 0.9068290000000001} },
+{ data: { source: 'HIST1H1C', target: 'RPS23', directed: 'false', weight: 0.8943629999999999} },
+{ data: { source: 'HIST1H1C', target: 'RPS25', directed: 'false', weight: 0.7978} },
+{ data: { source: 'HIST1H1C', target: 'RPS4X', directed: 'false', weight: 0.7887430000000001} },
+{ data: { source: 'HIST1H1C', target: 'RPS13', directed: 'false', weight: 0.73464} },
+{ data: { source: 'HIST1H1C', target: 'RPL30', directed: 'false', weight: 0.7164189999999999} },
+{ data: { source: 'HIST1H1C', target: 'RPLP0', directed: 'false', weight: 0.704825} },
+{ data: { source: 'HIST1H1C', target: 'RPL6', directed: 'false', weight: 0.678944} },
+{ data: { source: 'HIST1H1C', target: 'RPL8', directed: 'false', weight: 0.660961} },
+{ data: { source: 'HIST1H1C', target: 'RPS15A', directed: 'false', weight: 0.597719} },
+{ data: { source: 'HIST1H1C', target: 'RPS11', directed: 'false', weight: 0.567258} },
+{ data: { source: 'HIST1H1C', target: 'RPL35', directed: 'false', weight: 0.408668} },
+{ data: { source: 'HIST1H1C', target: 'RPL4', directed: 'false', weight: 0.22780100000000003} },
+{ data: { source: 'HIST1H1C', target: 'RPL13', directed: 'false', weight: 0.18218099999999998} },
+{ data: { source: 'HIST1H1C', target: 'LOC101929876', directed: 'false', weight: 0.167416} },
+{ data: { source: 'RPL4', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL4', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL4', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL4', target: 'RPLP0', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL4', target: 'RPL30', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL4', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL4', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL4', target: 'RPL35', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL4', target: 'RPS16', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPL4', target: 'RPS25', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPL4', target: 'NPM1', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'RPL4', target: 'RPS11', directed: 'false', weight: 0.999985} },
+{ data: { source: 'RPL4', target: 'RPS15A', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'RPL4', target: 'RPS4X', directed: 'false', weight: 0.99998} },
+{ data: { source: 'RPL4', target: 'RPS23', directed: 'false', weight: 0.9999600000000001} },
+{ data: { source: 'RPL4', target: 'LOC101929876', directed: 'false', weight: 0.99982} },
+{ data: { source: 'RPL35', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL35', target: 'RPS16', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL35', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL35', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL35', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL35', target: 'RPS25', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL35', target: 'RPS15A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL35', target: 'RPL30', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL35', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL35', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL35', target: 'LOC101929876', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL35', target: 'RPS4X', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL35', target: 'RPLP0', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPL35', target: 'RPS11', directed: 'false', weight: 0.999992} },
+{ data: { source: 'RPL35', target: 'NPM1', directed: 'false', weight: 0.9942989999999999} },
+{ data: { source: 'RPS4X', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS4X', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS4X', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS4X', target: 'RPS15A', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPS4X', target: 'RPLP0', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPS4X', target: 'RPL5', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPS4X', target: 'RPS23', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'RPS4X', target: 'RPL8', directed: 'false', weight: 0.999994} },
+{ data: { source: 'RPS4X', target: 'RPL30', directed: 'false', weight: 0.9999809999999999} },
+{ data: { source: 'RPS4X', target: 'RPS25', directed: 'false', weight: 0.999975} },
+{ data: { source: 'RPS4X', target: 'RPS16', directed: 'false', weight: 0.999969} },
+{ data: { source: 'RPS4X', target: 'RPS11', directed: 'false', weight: 0.999935} },
+{ data: { source: 'RPS4X', target: 'LOC101929876', directed: 'false', weight: 0.999928} },
+{ data: { source: 'RPS4X', target: 'NPM1', directed: 'false', weight: 0.9976879999999999} },
+{ data: { source: 'RPL5', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS15A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPLP0', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL30', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS25', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL5', target: 'RPS16', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL5', target: 'RPS11', directed: 'false', weight: 0.999992} },
+{ data: { source: 'RPL5', target: 'LOC101929876', directed: 'false', weight: 0.999973} },
+{ data: { source: 'RPL5', target: 'NPM1', directed: 'false', weight: 0.9995930000000001} },
+{ data: { source: 'LOC101929876', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'LOC101929876', target: 'RPL13', directed: 'false', weight: 0.999999} },
+{ data: { source: 'LOC101929876', target: 'RPL6', directed: 'false', weight: 0.999993} },
+{ data: { source: 'LOC101929876', target: 'RPS11', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'LOC101929876', target: 'RPL30', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'LOC101929876', target: 'RPS13', directed: 'false', weight: 0.999966} },
+{ data: { source: 'LOC101929876', target: 'RPS23', directed: 'false', weight: 0.999893} },
+{ data: { source: 'LOC101929876', target: 'RPLP0', directed: 'false', weight: 0.999877} },
+{ data: { source: 'LOC101929876', target: 'RPS15A', directed: 'false', weight: 0.999799} },
+{ data: { source: 'LOC101929876', target: 'RPS16', directed: 'false', weight: 0.999584} },
+{ data: { source: 'LOC101929876', target: 'RPS25', directed: 'false', weight: 0.9987299999999999} },
+{ data: { source: 'LOC101929876', target: 'NPM1', directed: 'false', weight: 0.0924993} },
+{ data: { source: 'RPLP0', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPL30', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPS25', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPLP0', target: 'RPS23', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPLP0', target: 'RPS15A', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPLP0', target: 'RPS16', directed: 'false', weight: 0.999994} },
+{ data: { source: 'RPLP0', target: 'RPS11', directed: 'false', weight: 0.999992} },
+{ data: { source: 'RPLP0', target: 'NPM1', directed: 'false', weight: 0.9701930000000001} },
+{ data: { source: 'RPL6', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPS16', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPS25', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPS15A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPL30', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPS11', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'RPL6', target: 'NPM1', directed: 'false', weight: 0.999583} },
+{ data: { source: 'NPM1', target: 'RPS13', directed: 'false', weight: 0.999993} },
+{ data: { source: 'NPM1', target: 'RPL8', directed: 'false', weight: 0.9999889999999999} },
+{ data: { source: 'NPM1', target: 'RPL13', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'NPM1', target: 'RPS23', directed: 'false', weight: 0.999819} },
+{ data: { source: 'NPM1', target: 'RPS16', directed: 'false', weight: 0.999771} },
+{ data: { source: 'NPM1', target: 'RPS11', directed: 'false', weight: 0.998778} },
+{ data: { source: 'NPM1', target: 'RPS25', directed: 'false', weight: 0.997135} },
+{ data: { source: 'NPM1', target: 'RPS15A', directed: 'false', weight: 0.975893} },
+{ data: { source: 'NPM1', target: 'RPL30', directed: 'false', weight: 0.925746} },
+{ data: { source: 'RPL30', target: 'RPS25', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPS16', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPS23', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL30', target: 'RPS15A', directed: 'false', weight: 0.999994} },
+{ data: { source: 'RPL30', target: 'RPS11', directed: 'false', weight: 0.9999020000000001} },
+{ data: { source: 'RPS16', target: 'RPS15A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPS11', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPS25', directed: 'false', weight: 0.999984} },
+{ data: { source: 'RPS16', target: 'RPS23', directed: 'false', weight: 0.999775} },
+{ data: { source: 'RPS15A', target: 'RPS25', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS15A', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS15A', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS15A', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS15A', target: 'RPS23', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPS15A', target: 'RPS11', directed: 'false', weight: 0.999993} },
+{ data: { source: 'RPL8', target: 'RPS25', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL8', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL8', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL8', target: 'RPS11', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL8', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL13', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL13', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL13', target: 'RPS11', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL13', target: 'RPS25', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS11', target: 'RPS23', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPS11', target: 'RPS13', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPS11', target: 'RPS25', directed: 'false', weight: 0.9999629999999999} },
+{ data: { source: 'RPS13', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS13', target: 'RPS25', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS23', target: 'RPS25', directed: 'false', weight: 1.0} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.99038
+    </section>
+    </body>
+    </html>
+    

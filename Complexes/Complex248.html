@@ -1,0 +1,82 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 248</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex249.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TAF4', score: 5 }},
+{data: { id: 'AK6', score: 5 }},
+{data: { id: 'TAF7', score: 5 }},
+{data: { id: 'TAF5', score: 5 }},
+{data: { id: 'TAF10', score: 5 }}], 
+ edges: [{ data: { source: 'TAF10', target: 'TAF4', directed: 'false', weight: 0.998099} },
+{ data: { source: 'TAF10', target: 'AK6', directed: 'false', weight: 0.991051} },
+{ data: { source: 'TAF10', target: 'TAF7', directed: 'false', weight: 0.104198} },
+{ data: { source: 'TAF5', target: 'TAF4', directed: 'false', weight: 0.996778} },
+{ data: { source: 'TAF5', target: 'AK6', directed: 'false', weight: 0.990295} },
+{ data: { source: 'AK6', target: 'TAF4', directed: 'false', weight: 0.9734149999999999} },
+{ data: { source: 'AK6', target: 'TAF7', directed: 'false', weight: 0.962018} },
+{ data: { source: 'TAF7', target: 'TAF4', directed: 'false', weight: 0.9904290000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.77931
+    </section>
+    </body>
+    </html>
+    

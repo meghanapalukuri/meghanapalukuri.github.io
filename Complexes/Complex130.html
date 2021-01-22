@@ -1,0 +1,232 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 130</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex131.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RPS9', score: 5 }},
+{data: { id: 'RPL5', score: 5 }},
+{data: { id: 'CANX', score: 5 }},
+{data: { id: 'RPL22', score: 5 }},
+{data: { id: 'RPS2', score: 5 }},
+{data: { id: 'RPL17-C18orf32', score: 2 }},
+{data: { id: 'RPL8', score: 5 }},
+{data: { id: 'RPL7', score: 5 }},
+{data: { id: 'RPL7A', score: 5 }},
+{data: { id: 'TUFM', score: 5 }},
+{data: { id: 'RPL23A', score: 5 }},
+{data: { id: 'RPS3', score: 5 }},
+{data: { id: 'CLGN', score: 5 }},
+{data: { id: 'RPL10A', score: 5 }},
+{data: { id: 'RPS16', score: 5 }},
+{data: { id: 'MOGS', score: 5 }},
+{data: { id: 'RPL14', score: 5 }},
+{data: { id: 'RPS23', score: 5 }},
+{data: { id: 'SLC25A5', score: 5 }}], 
+ edges: [{ data: { source: 'RPS2', target: 'RPL17-C18orf32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPS9', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPL10A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPL7A', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPS2', target: 'RPL22', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'RPS2', target: 'RPS23', directed: 'false', weight: 0.999574} },
+{ data: { source: 'RPS2', target: 'RPS16', directed: 'false', weight: 0.999517} },
+{ data: { source: 'RPS2', target: 'TUFM', directed: 'false', weight: 0.9970680000000001} },
+{ data: { source: 'RPS2', target: 'SLC25A5', directed: 'false', weight: 0.983102} },
+{ data: { source: 'RPS2', target: 'CANX', directed: 'false', weight: 0.656311} },
+{ data: { source: 'CLGN', target: 'CANX', directed: 'false', weight: 0.493918} },
+{ data: { source: 'CLGN', target: 'MOGS', directed: 'false', weight: 0.21113099999999999} },
+{ data: { source: 'RPS9', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS9', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS9', target: 'RPS16', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS9', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS9', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS9', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS9', target: 'RPL7A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS9', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS9', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS9', target: 'RPL10A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS9', target: 'RPL17-C18orf32', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPS9', target: 'RPL22', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPS9', target: 'SLC25A5', directed: 'false', weight: 0.999091} },
+{ data: { source: 'RPS9', target: 'TUFM', directed: 'false', weight: 0.997143} },
+{ data: { source: 'RPS9', target: 'CANX', directed: 'false', weight: 0.759093} },
+{ data: { source: 'SLC25A5', target: 'RPL5', directed: 'false', weight: 0.99989} },
+{ data: { source: 'SLC25A5', target: 'RPL14', directed: 'false', weight: 0.9980100000000001} },
+{ data: { source: 'SLC25A5', target: 'RPS16', directed: 'false', weight: 0.997391} },
+{ data: { source: 'SLC25A5', target: 'RPS23', directed: 'false', weight: 0.9961899999999999} },
+{ data: { source: 'SLC25A5', target: 'RPL22', directed: 'false', weight: 0.993925} },
+{ data: { source: 'SLC25A5', target: 'RPL7A', directed: 'false', weight: 0.993518} },
+{ data: { source: 'SLC25A5', target: 'RPL10A', directed: 'false', weight: 0.9932989999999999} },
+{ data: { source: 'SLC25A5', target: 'RPL8', directed: 'false', weight: 0.993287} },
+{ data: { source: 'SLC25A5', target: 'RPL7', directed: 'false', weight: 0.991503} },
+{ data: { source: 'SLC25A5', target: 'TUFM', directed: 'false', weight: 0.975938} },
+{ data: { source: 'SLC25A5', target: 'RPL23A', directed: 'false', weight: 0.975929} },
+{ data: { source: 'SLC25A5', target: 'RPL17-C18orf32', directed: 'false', weight: 0.9728389999999999} },
+{ data: { source: 'SLC25A5', target: 'RPS3', directed: 'false', weight: 0.9546680000000001} },
+{ data: { source: 'SLC25A5', target: 'CANX', directed: 'false', weight: 0.9195530000000001} },
+{ data: { source: 'RPL7A', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7A', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7A', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7A', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7A', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7A', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7A', target: 'RPL10A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7A', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7A', target: 'RPS16', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL7A', target: 'RPL22', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL7A', target: 'RPL17-C18orf32', directed: 'false', weight: 0.999942} },
+{ data: { source: 'RPL7A', target: 'TUFM', directed: 'false', weight: 0.997624} },
+{ data: { source: 'RPL7A', target: 'CANX', directed: 'false', weight: 0.652988} },
+{ data: { source: 'RPL22', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL22', target: 'RPS3', directed: 'false', weight: 0.999992} },
+{ data: { source: 'RPL22', target: 'RPL23A', directed: 'false', weight: 0.999978} },
+{ data: { source: 'RPL22', target: 'RPL8', directed: 'false', weight: 0.999966} },
+{ data: { source: 'RPL22', target: 'RPS16', directed: 'false', weight: 0.9999610000000001} },
+{ data: { source: 'RPL22', target: 'RPS23', directed: 'false', weight: 0.9999299999999999} },
+{ data: { source: 'RPL22', target: 'RPL7', directed: 'false', weight: 0.999906} },
+{ data: { source: 'RPL22', target: 'RPL10A', directed: 'false', weight: 0.9997290000000001} },
+{ data: { source: 'RPL22', target: 'RPL14', directed: 'false', weight: 0.9981030000000001} },
+{ data: { source: 'RPL22', target: 'TUFM', directed: 'false', weight: 0.9711989999999999} },
+{ data: { source: 'RPL22', target: 'RPL17-C18orf32', directed: 'false', weight: 0.9230940000000001} },
+{ data: { source: 'RPL22', target: 'CANX', directed: 'false', weight: 0.879393} },
+{ data: { source: 'RPL5', target: 'RPL17-C18orf32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL10A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS16', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL5', target: 'TUFM', directed: 'false', weight: 0.9768180000000001} },
+{ data: { source: 'RPL5', target: 'CANX', directed: 'false', weight: 0.947634} },
+{ data: { source: 'CANX', target: 'RPS16', directed: 'false', weight: 0.9561350000000001} },
+{ data: { source: 'CANX', target: 'TUFM', directed: 'false', weight: 0.9377969999999999} },
+{ data: { source: 'CANX', target: 'RPL7', directed: 'false', weight: 0.926538} },
+{ data: { source: 'CANX', target: 'RPS3', directed: 'false', weight: 0.8708530000000001} },
+{ data: { source: 'CANX', target: 'RPL14', directed: 'false', weight: 0.853633} },
+{ data: { source: 'CANX', target: 'RPL8', directed: 'false', weight: 0.669543} },
+{ data: { source: 'CANX', target: 'RPS23', directed: 'false', weight: 0.638532} },
+{ data: { source: 'CANX', target: 'RPL17-C18orf32', directed: 'false', weight: 0.6338050000000001} },
+{ data: { source: 'CANX', target: 'RPL10A', directed: 'false', weight: 0.630695} },
+{ data: { source: 'CANX', target: 'RPL23A', directed: 'false', weight: 0.576172} },
+{ data: { source: 'CANX', target: 'MOGS', directed: 'false', weight: 0.542509} },
+{ data: { source: 'RPL17-C18orf32', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL17-C18orf32', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL17-C18orf32', target: 'RPS16', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL17-C18orf32', target: 'RPL7', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'RPL17-C18orf32', target: 'RPL10A', directed: 'false', weight: 0.999994} },
+{ data: { source: 'RPL17-C18orf32', target: 'RPL23A', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'RPL17-C18orf32', target: 'RPL14', directed: 'false', weight: 0.99974} },
+{ data: { source: 'RPL17-C18orf32', target: 'RPL8', directed: 'false', weight: 0.999648} },
+{ data: { source: 'RPL17-C18orf32', target: 'TUFM', directed: 'false', weight: 0.997043} },
+{ data: { source: 'RPS16', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPL8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPL10A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPL14', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'RPS16', target: 'RPS23', directed: 'false', weight: 0.999775} },
+{ data: { source: 'RPS16', target: 'TUFM', directed: 'false', weight: 0.975197} },
+{ data: { source: 'RPL8', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL8', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL8', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL8', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL8', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL8', target: 'RPL10A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL8', target: 'TUFM', directed: 'false', weight: 0.9759190000000001} },
+{ data: { source: 'RPL10A', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPS3', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL10A', target: 'TUFM', directed: 'false', weight: 0.843253} },
+{ data: { source: 'RPL14', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPS3', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL14', target: 'TUFM', directed: 'false', weight: 0.997028} },
+{ data: { source: 'RPS23', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS23', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS23', target: 'RPS3', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPS23', target: 'TUFM', directed: 'false', weight: 0.975508} },
+{ data: { source: 'RPL23A', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL23A', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL23A', target: 'TUFM', directed: 'false', weight: 0.9759200000000001} },
+{ data: { source: 'RPL7', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'TUFM', directed: 'false', weight: 0.9867889999999999} },
+{ data: { source: 'RPS3', target: 'TUFM', directed: 'false', weight: 0.951305} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.96990
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>MOGS
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,84 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 377</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex378.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CLDND1', score: 4 }},
+{data: { id: 'ZDHHC8', score: 5 }},
+{data: { id: 'GOLGA7', score: 5 }},
+{data: { id: 'MAN1A2', score: 5 }}], 
+ edges: [{ data: { source: 'MAN1A2', target: 'CLDND1', directed: 'false', weight: 0.43397299999999994} },
+{ data: { source: 'MAN1A2', target: 'ZDHHC8', directed: 'false', weight: 0.11730499999999999} },
+{ data: { source: 'MAN1A2', target: 'GOLGA7', directed: 'false', weight: 0.0952688} },
+{ data: { source: 'CLDND1', target: 'GOLGA7', directed: 'false', weight: 0.9714969999999999} },
+{ data: { source: 'CLDND1', target: 'ZDHHC8', directed: 'false', weight: 0.9679559999999999} },
+{ data: { source: 'GOLGA7', target: 'ZDHHC8', directed: 'false', weight: 0.140692} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.77018
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>GOLGA7
+    </section>
+    </body>
+    </html>
+    

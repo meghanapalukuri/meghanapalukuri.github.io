@@ -1,0 +1,108 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 912</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex913.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CEP131', score: 5 }},
+{data: { id: 'CEP19', score: 5 }},
+{data: { id: 'KIAA0753', score: 5 }},
+{data: { id: 'CCDC77', score: 3 }},
+{data: { id: 'PPP2R3C', score: 5 }},
+{data: { id: 'CEP350', score: 5 }},
+{data: { id: 'FGFR1OP', score: 0 }},
+{data: { id: 'TBC1D31', score: 3 }},
+{data: { id: 'CSPP1', score: 5 }}], 
+ edges: [{ data: { source: 'KIAA0753', target: 'PPP2R3C', directed: 'false', weight: 0.745815} },
+{ data: { source: 'KIAA0753', target: 'FGFR1OP', directed: 'false', weight: 0.74035} },
+{ data: { source: 'KIAA0753', target: 'CSPP1', directed: 'false', weight: 0.537725} },
+{ data: { source: 'KIAA0753', target: 'TBC1D31', directed: 'false', weight: 0.434483} },
+{ data: { source: 'KIAA0753', target: 'CCDC77', directed: 'false', weight: 0.209758} },
+{ data: { source: 'KIAA0753', target: 'CEP131', directed: 'false', weight: 0.1903} },
+{ data: { source: 'KIAA0753', target: 'CEP350', directed: 'false', weight: 0.05663769999999999} },
+{ data: { source: 'CSPP1', target: 'FGFR1OP', directed: 'false', weight: 0.8945379999999999} },
+{ data: { source: 'CSPP1', target: 'TBC1D31', directed: 'false', weight: 0.742741} },
+{ data: { source: 'CSPP1', target: 'CCDC77', directed: 'false', weight: 0.507455} },
+{ data: { source: 'CEP350', target: 'FGFR1OP', directed: 'false', weight: 0.999898} },
+{ data: { source: 'CEP350', target: 'PPP2R3C', directed: 'false', weight: 0.791227} },
+{ data: { source: 'CEP350', target: 'CEP19', directed: 'false', weight: 0.151455} },
+{ data: { source: 'CEP350', target: 'CCDC77', directed: 'false', weight: 0.0828443} },
+{ data: { source: 'CEP350', target: 'CEP131', directed: 'false', weight: 0.0347269} },
+{ data: { source: 'FGFR1OP', target: 'PPP2R3C', directed: 'false', weight: 0.9998049999999999} },
+{ data: { source: 'FGFR1OP', target: 'CEP19', directed: 'false', weight: 0.976284} },
+{ data: { source: 'FGFR1OP', target: 'TBC1D31', directed: 'false', weight: 0.621211} },
+{ data: { source: 'FGFR1OP', target: 'CCDC77', directed: 'false', weight: 0.55155} },
+{ data: { source: 'FGFR1OP', target: 'CEP131', directed: 'false', weight: 0.178892} },
+{ data: { source: 'CEP19', target: 'PPP2R3C', directed: 'false', weight: 0.151455} },
+{ data: { source: 'CCDC77', target: 'TBC1D31', directed: 'false', weight: 0.617131} },
+{ data: { source: 'CCDC77', target: 'PPP2R3C', directed: 'false', weight: 0.322766} },
+{ data: { source: 'CCDC77', target: 'CEP131', directed: 'false', weight: 0.23845500000000003} },
+{ data: { source: 'CEP131', target: 'PPP2R3C', directed: 'false', weight: 0.327019} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.58939
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>CEP350
+    </section>
+    </body>
+    </html>
+    

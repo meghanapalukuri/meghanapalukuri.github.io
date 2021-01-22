@@ -1,0 +1,75 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 521</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex522.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CDK16', score: 5 }},
+{data: { id: 'CDK17', score: 5 }},
+{data: { id: 'BRCA1', score: 5 }}], 
+ edges: [{ data: { source: 'BRCA1', target: 'CDK16', directed: 'false', weight: 0.70698} },
+{ data: { source: 'BRCA1', target: 'CDK17', directed: 'false', weight: 0.112499} },
+{ data: { source: 'CDK16', target: 'CDK17', directed: 'false', weight: 0.676455} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.75748
+    </section>
+    </body>
+    </html>
+    

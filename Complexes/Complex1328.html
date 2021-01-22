@@ -1,0 +1,106 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1328</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1329.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SRP72', score: 5 }},
+{data: { id: 'PRRC2C', score: 5 }},
+{data: { id: 'SRP54', score: 5 }},
+{data: { id: 'SPATS2L', score: 4 }},
+{data: { id: 'RPL10', score: 5 }},
+{data: { id: 'TFB1M', score: 5 }},
+{data: { id: 'SRP19', score: 5 }},
+{data: { id: 'RIOX1', score: 5 }},
+{data: { id: 'MRM3', score: 5 }}], 
+ edges: [{ data: { source: 'RIOX1', target: 'RPL10', directed: 'false', weight: 0.9507559999999999} },
+{ data: { source: 'RIOX1', target: 'SRP72', directed: 'false', weight: 0.847432} },
+{ data: { source: 'RIOX1', target: 'PRRC2C', directed: 'false', weight: 0.194323} },
+{ data: { source: 'RIOX1', target: 'MRM3', directed: 'false', weight: 0.129685} },
+{ data: { source: 'RPL10', target: 'SRP72', directed: 'false', weight: 0.981125} },
+{ data: { source: 'RPL10', target: 'MRM3', directed: 'false', weight: 0.9304209999999999} },
+{ data: { source: 'RPL10', target: 'PRRC2C', directed: 'false', weight: 0.9256969999999999} },
+{ data: { source: 'SRP72', target: 'MRM3', directed: 'false', weight: 0.9216190000000001} },
+{ data: { source: 'SRP72', target: 'SPATS2L', directed: 'false', weight: 0.9039719999999999} },
+{ data: { source: 'SRP72', target: 'PRRC2C', directed: 'false', weight: 0.8846860000000001} },
+{ data: { source: 'SRP72', target: 'SRP19', directed: 'false', weight: 0.787198} },
+{ data: { source: 'SRP72', target: 'TFB1M', directed: 'false', weight: 0.758798} },
+{ data: { source: 'SPATS2L', target: 'PRRC2C', directed: 'false', weight: 0.12533699999999998} },
+{ data: { source: 'SPATS2L', target: 'SRP19', directed: 'false', weight: 0.100589} },
+{ data: { source: 'SPATS2L', target: 'MRM3', directed: 'false', weight: 0.09480110000000001} },
+{ data: { source: 'SPATS2L', target: 'TFB1M', directed: 'false', weight: 0.0871659} },
+{ data: { source: 'MRM3', target: 'PRRC2C', directed: 'false', weight: 0.16206900000000002} },
+{ data: { source: 'MRM3', target: 'TFB1M', directed: 'false', weight: 0.138569} },
+{ data: { source: 'MRM3', target: 'SRP19', directed: 'false', weight: 0.100589} },
+{ data: { source: 'TFB1M', target: 'PRRC2C', directed: 'false', weight: 0.12529} },
+{ data: { source: 'TFB1M', target: 'SRP19', directed: 'false', weight: 0.0925168} },
+{ data: { source: 'SRP54', target: 'SRP19', directed: 'false', weight: 0.9588709999999999} },
+{ data: { source: 'SRP19', target: 'PRRC2C', directed: 'false', weight: 0.0960696} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.51459
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        3 interacting protein(s): <br>SRP72 SRP54 SRP19
+    </section>
+    </body>
+    </html>
+    

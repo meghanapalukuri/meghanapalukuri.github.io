@@ -1,0 +1,102 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 151</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex152.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TGFBRAP1', score: 5 }},
+{data: { id: 'VPS41', score: 5 }},
+{data: { id: 'VPS33A', score: 5 }},
+{data: { id: 'VPS16', score: 5 }},
+{data: { id: 'VPS8', score: 5 }},
+{data: { id: 'VPS11', score: 5 }},
+{data: { id: 'VPS18', score: 5 }}], 
+ edges: [{ data: { source: 'VPS18', target: 'VPS33A', directed: 'false', weight: 0.9999459999999999} },
+{ data: { source: 'VPS18', target: 'VPS11', directed: 'false', weight: 0.999541} },
+{ data: { source: 'VPS18', target: 'VPS16', directed: 'false', weight: 0.999315} },
+{ data: { source: 'VPS18', target: 'VPS41', directed: 'false', weight: 0.999049} },
+{ data: { source: 'VPS18', target: 'TGFBRAP1', directed: 'false', weight: 0.995292} },
+{ data: { source: 'VPS18', target: 'VPS8', directed: 'false', weight: 0.9359629999999999} },
+{ data: { source: 'VPS8', target: 'VPS11', directed: 'false', weight: 0.9112870000000001} },
+{ data: { source: 'VPS8', target: 'VPS33A', directed: 'false', weight: 0.458507} },
+{ data: { source: 'VPS8', target: 'VPS16', directed: 'false', weight: 0.44343599999999994} },
+{ data: { source: 'VPS8', target: 'TGFBRAP1', directed: 'false', weight: 0.2823} },
+{ data: { source: 'VPS8', target: 'VPS41', directed: 'false', weight: 0.13574} },
+{ data: { source: 'VPS16', target: 'VPS33A', directed: 'false', weight: 0.9993780000000001} },
+{ data: { source: 'VPS16', target: 'VPS41', directed: 'false', weight: 0.9958889999999999} },
+{ data: { source: 'VPS16', target: 'VPS11', directed: 'false', weight: 0.952564} },
+{ data: { source: 'VPS16', target: 'TGFBRAP1', directed: 'false', weight: 0.80398} },
+{ data: { source: 'VPS41', target: 'VPS11', directed: 'false', weight: 0.9987440000000001} },
+{ data: { source: 'VPS41', target: 'VPS33A', directed: 'false', weight: 0.9928540000000001} },
+{ data: { source: 'VPS41', target: 'TGFBRAP1', directed: 'false', weight: 0.9383290000000001} },
+{ data: { source: 'VPS33A', target: 'VPS11', directed: 'false', weight: 0.938466} },
+{ data: { source: 'VPS33A', target: 'TGFBRAP1', directed: 'false', weight: 0.6940149999999999} },
+{ data: { source: 'TGFBRAP1', target: 'VPS11', directed: 'false', weight: 0.9999020000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.88717
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>VPS11
+    </section>
+    </body>
+    </html>
+    

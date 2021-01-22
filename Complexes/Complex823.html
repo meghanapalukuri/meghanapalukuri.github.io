@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 823</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex824.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ELMSAN1', score: 0 }},
+{data: { id: 'WDFY2', score: 5 }},
+{data: { id: 'UTP6', score: 4 }},
+{data: { id: 'DNTTIP1', score: 5 }},
+{data: { id: 'SLC7A3', score: 5 }}], 
+ edges: [{ data: { source: 'DNTTIP1', target: 'ELMSAN1', directed: 'false', weight: 0.999426} },
+{ data: { source: 'DNTTIP1', target: 'WDFY2', directed: 'false', weight: 0.9757} },
+{ data: { source: 'DNTTIP1', target: 'UTP6', directed: 'false', weight: 0.171414} },
+{ data: { source: 'DNTTIP1', target: 'SLC7A3', directed: 'false', weight: 0.133451} },
+{ data: { source: 'UTP6', target: 'WDFY2', directed: 'false', weight: 0.967066} },
+{ data: { source: 'UTP6', target: 'SLC7A3', directed: 'false', weight: 0.133451} },
+{ data: { source: 'SLC7A3', target: 'WDFY2', directed: 'false', weight: 0.62142} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.63104
+    </section>
+    </body>
+    </html>
+    

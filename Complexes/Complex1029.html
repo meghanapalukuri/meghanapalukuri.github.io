@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1029</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1030.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'UBE2S', score: 5 }},
+{data: { id: 'ELMO3', score: 4 }},
+{data: { id: 'SEPTIN14', score: 5 }},
+{data: { id: 'USP6NL', score: 5 }},
+{data: { id: 'RNF40', score: 5 }}], 
+ edges: [{ data: { source: 'USP6NL', target: 'UBE2S', directed: 'false', weight: 0.29083000000000003} },
+{ data: { source: 'USP6NL', target: 'RNF40', directed: 'false', weight: 0.06380860000000001} },
+{ data: { source: 'USP6NL', target: 'ELMO3', directed: 'false', weight: 0.0618262} },
+{ data: { source: 'UBE2S', target: 'RNF40', directed: 'false', weight: 0.8909520000000001} },
+{ data: { source: 'UBE2S', target: 'ELMO3', directed: 'false', weight: 0.38182699999999997} },
+{ data: { source: 'RNF40', target: 'SEPTIN14', directed: 'false', weight: 0.115195} },
+{ data: { source: 'RNF40', target: 'ELMO3', directed: 'false', weight: 0.058330999999999994} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.56578
+    </section>
+    </body>
+    </html>
+    

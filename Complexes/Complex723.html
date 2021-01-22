@@ -1,0 +1,83 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 723</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex724.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HIRA', score: 5 }},
+{data: { id: 'C15orf41', score: 0 }},
+{data: { id: 'UBN1', score: 5 }},
+{data: { id: 'ASF1A', score: 5 }},
+{data: { id: 'UBN2', score: 3 }}], 
+ edges: [{ data: { source: 'UBN1', target: 'ASF1A', directed: 'false', weight: 0.37968} },
+{ data: { source: 'UBN1', target: 'C15orf41', directed: 'false', weight: 0.133179} },
+{ data: { source: 'UBN1', target: 'HIRA', directed: 'false', weight: 0.115879} },
+{ data: { source: 'UBN2', target: 'ASF1A', directed: 'false', weight: 0.47204700000000005} },
+{ data: { source: 'UBN2', target: 'C15orf41', directed: 'false', weight: 0.144297} },
+{ data: { source: 'UBN2', target: 'HIRA', directed: 'false', weight: 0.125749} },
+{ data: { source: 'HIRA', target: 'ASF1A', directed: 'false', weight: 0.546316} },
+{ data: { source: 'HIRA', target: 'C15orf41', directed: 'false', weight: 0.144297} },
+{ data: { source: 'C15orf41', target: 'ASF1A', directed: 'false', weight: 0.815242} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.66631
+    </section>
+    </body>
+    </html>
+    

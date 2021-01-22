@@ -1,0 +1,101 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1271</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1272.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GTF2H1', score: 5 }},
+{data: { id: 'CCNH', score: 5 }},
+{data: { id: 'GTF2H3', score: 5 }},
+{data: { id: 'GTF2H4', score: 5 }},
+{data: { id: 'CDK7', score: 5 }},
+{data: { id: 'RPA2', score: 5 }},
+{data: { id: 'GTF2H5', score: 5 }},
+{data: { id: 'GTF2H2', score: 5 }},
+{data: { id: 'MNAT1', score: 5 }},
+{data: { id: 'ERCC3', score: 5 }}], 
+ edges: [{ data: { source: 'GTF2H1', target: 'GTF2H2', directed: 'false', weight: 0.99954} },
+{ data: { source: 'GTF2H1', target: 'GTF2H3', directed: 'false', weight: 0.998207} },
+{ data: { source: 'GTF2H1', target: 'ERCC3', directed: 'false', weight: 0.99092} },
+{ data: { source: 'GTF2H1', target: 'GTF2H4', directed: 'false', weight: 0.9446049999999999} },
+{ data: { source: 'GTF2H1', target: 'GTF2H5', directed: 'false', weight: 0.8152689999999999} },
+{ data: { source: 'CDK7', target: 'MNAT1', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'CDK7', target: 'CCNH', directed: 'false', weight: 0.9999129999999999} },
+{ data: { source: 'CDK7', target: 'GTF2H5', directed: 'false', weight: 0.820883} },
+{ data: { source: 'CDK7', target: 'RPA2', directed: 'false', weight: 0.508706} },
+{ data: { source: 'GTF2H3', target: 'GTF2H2', directed: 'false', weight: 0.998115} },
+{ data: { source: 'GTF2H3', target: 'ERCC3', directed: 'false', weight: 0.9945879999999999} },
+{ data: { source: 'GTF2H3', target: 'GTF2H5', directed: 'false', weight: 0.981874} },
+{ data: { source: 'GTF2H3', target: 'GTF2H4', directed: 'false', weight: 0.8602059999999999} },
+{ data: { source: 'ERCC3', target: 'GTF2H2', directed: 'false', weight: 0.9906889999999999} },
+{ data: { source: 'ERCC3', target: 'GTF2H4', directed: 'false', weight: 0.9459879999999999} },
+{ data: { source: 'ERCC3', target: 'GTF2H5', directed: 'false', weight: 0.706213} },
+{ data: { source: 'MNAT1', target: 'CCNH', directed: 'false', weight: 0.999893} },
+{ data: { source: 'MNAT1', target: 'GTF2H5', directed: 'false', weight: 0.837134} },
+{ data: { source: 'CCNH', target: 'GTF2H5', directed: 'false', weight: 0.577206} },
+{ data: { source: 'GTF2H5', target: 'GTF2H4', directed: 'false', weight: 0.98654} },
+{ data: { source: 'GTF2H5', target: 'GTF2H2', directed: 'false', weight: 0.722767} },
+{ data: { source: 'GTF2H4', target: 'GTF2H2', directed: 'false', weight: 0.9011239999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.52755
+    </section>
+    </body>
+    </html>
+    

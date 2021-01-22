@@ -1,0 +1,109 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 943</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex944.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ITGA2', score: 5 }},
+{data: { id: 'LGALS8', score: 5 }},
+{data: { id: 'ITGAV', score: 5 }},
+{data: { id: 'ITGA5', score: 5 }},
+{data: { id: 'ITGA6', score: 5 }},
+{data: { id: 'ITGA1', score: 5 }},
+{data: { id: 'SLC17A5', score: 5 }},
+{data: { id: 'ITGB1', score: 5 }},
+{data: { id: 'ITGA3', score: 5 }}], 
+ edges: [{ data: { source: 'ITGA3', target: 'ITGB1', directed: 'false', weight: 0.948802} },
+{ data: { source: 'ITGA3', target: 'ITGA5', directed: 'false', weight: 0.33761399999999997} },
+{ data: { source: 'ITGA3', target: 'ITGA6', directed: 'false', weight: 0.25801} },
+{ data: { source: 'ITGA3', target: 'ITGA1', directed: 'false', weight: 0.239852} },
+{ data: { source: 'ITGA3', target: 'ITGA2', directed: 'false', weight: 0.23255100000000004} },
+{ data: { source: 'ITGA3', target: 'ITGAV', directed: 'false', weight: 0.190412} },
+{ data: { source: 'ITGB1', target: 'ITGA5', directed: 'false', weight: 0.998532} },
+{ data: { source: 'ITGB1', target: 'ITGAV', directed: 'false', weight: 0.975927} },
+{ data: { source: 'ITGB1', target: 'ITGA6', directed: 'false', weight: 0.961311} },
+{ data: { source: 'ITGB1', target: 'ITGA1', directed: 'false', weight: 0.9406399999999999} },
+{ data: { source: 'ITGB1', target: 'ITGA2', directed: 'false', weight: 0.637605} },
+{ data: { source: 'ITGA2', target: 'LGALS8', directed: 'false', weight: 0.7583260000000001} },
+{ data: { source: 'ITGA2', target: 'ITGA1', directed: 'false', weight: 0.303415} },
+{ data: { source: 'ITGA2', target: 'SLC17A5', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'ITGA2', target: 'ITGA6', directed: 'false', weight: 0.22321} },
+{ data: { source: 'ITGA2', target: 'ITGA5', directed: 'false', weight: 0.204725} },
+{ data: { source: 'ITGA2', target: 'ITGAV', directed: 'false', weight: 0.10698800000000001} },
+{ data: { source: 'ITGAV', target: 'ITGA6', directed: 'false', weight: 0.241196} },
+{ data: { source: 'ITGAV', target: 'ITGA5', directed: 'false', weight: 0.166653} },
+{ data: { source: 'ITGAV', target: 'ITGA1', directed: 'false', weight: 0.110739} },
+{ data: { source: 'LGALS8', target: 'ITGA1', directed: 'false', weight: 0.9505629999999999} },
+{ data: { source: 'LGALS8', target: 'SLC17A5', directed: 'false', weight: 0.835073} },
+{ data: { source: 'ITGA5', target: 'ITGA6', directed: 'false', weight: 0.228122} },
+{ data: { source: 'ITGA5', target: 'ITGA1', directed: 'false', weight: 0.211378} },
+{ data: { source: 'ITGA1', target: 'SLC17A5', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'ITGA1', target: 'ITGA6', directed: 'false', weight: 0.15504600000000002} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.58276
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>ITGB1
+    </section>
+    </body>
+    </html>
+    

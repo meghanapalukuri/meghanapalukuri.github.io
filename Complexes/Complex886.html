@@ -1,0 +1,84 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 886</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex887.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CLASRP', score: 5 }},
+{data: { id: 'SNW1', score: 5 }},
+{data: { id: 'BCAS2', score: 5 }},
+{data: { id: 'PPIL1', score: 5 }},
+{data: { id: 'LUC7L2', score: 5 }},
+{data: { id: 'ESS2', score: 5 }}], 
+ edges: [{ data: { source: 'ESS2', target: 'SNW1', directed: 'false', weight: 0.98135} },
+{ data: { source: 'ESS2', target: 'CLASRP', directed: 'false', weight: 0.165074} },
+{ data: { source: 'ESS2', target: 'BCAS2', directed: 'false', weight: 0.147196} },
+{ data: { source: 'ESS2', target: 'PPIL1', directed: 'false', weight: 0.144297} },
+{ data: { source: 'PPIL1', target: 'SNW1', directed: 'false', weight: 0.9957229999999999} },
+{ data: { source: 'PPIL1', target: 'CLASRP', directed: 'false', weight: 0.144297} },
+{ data: { source: 'SNW1', target: 'CLASRP', directed: 'false', weight: 0.996878} },
+{ data: { source: 'SNW1', target: 'BCAS2', directed: 'false', weight: 0.996547} },
+{ data: { source: 'LUC7L2', target: 'CLASRP', directed: 'false', weight: 0.901875} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.59939
+    </section>
+    </body>
+    </html>
+    

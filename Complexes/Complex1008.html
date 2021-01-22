@@ -1,0 +1,95 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1008</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1009.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TRAF1', score: 5 }},
+{data: { id: 'TRAF3', score: 5 }},
+{data: { id: 'SPATS2', score: 3 }},
+{data: { id: 'LTBR', score: 5 }},
+{data: { id: 'RPL10', score: 5 }},
+{data: { id: 'HDAC5', score: 5 }},
+{data: { id: 'CCDC113', score: 4 }},
+{data: { id: 'HNRNPU', score: 5 }}], 
+ edges: [{ data: { source: 'HNRNPU', target: 'RPL10', directed: 'false', weight: 0.99959} },
+{ data: { source: 'HNRNPU', target: 'SPATS2', directed: 'false', weight: 0.922233} },
+{ data: { source: 'RPL10', target: 'SPATS2', directed: 'false', weight: 0.968783} },
+{ data: { source: 'LTBR', target: 'CCDC113', directed: 'false', weight: 0.9848040000000001} },
+{ data: { source: 'LTBR', target: 'HDAC5', directed: 'false', weight: 0.978398} },
+{ data: { source: 'LTBR', target: 'TRAF1', directed: 'false', weight: 0.9700559999999999} },
+{ data: { source: 'LTBR', target: 'SPATS2', directed: 'false', weight: 0.87664} },
+{ data: { source: 'LTBR', target: 'TRAF3', directed: 'false', weight: 0.628945} },
+{ data: { source: 'SPATS2', target: 'CCDC113', directed: 'false', weight: 0.140692} },
+{ data: { source: 'SPATS2', target: 'HDAC5', directed: 'false', weight: 0.140692} },
+{ data: { source: 'SPATS2', target: 'TRAF1', directed: 'false', weight: 0.123797} },
+{ data: { source: 'SPATS2', target: 'TRAF3', directed: 'false', weight: 0.104198} },
+{ data: { source: 'TRAF1', target: 'TRAF3', directed: 'false', weight: 0.238157} },
+{ data: { source: 'TRAF1', target: 'HDAC5', directed: 'false', weight: 0.151455} },
+{ data: { source: 'TRAF1', target: 'CCDC113', directed: 'false', weight: 0.151455} },
+{ data: { source: 'TRAF3', target: 'HDAC5', directed: 'false', weight: 0.128057} },
+{ data: { source: 'TRAF3', target: 'CCDC113', directed: 'false', weight: 0.128057} },
+{ data: { source: 'CCDC113', target: 'HDAC5', directed: 'false', weight: 0.171414} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.57013
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,94 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1350</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1351.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SNRPN', score: 5 }},
+{data: { id: 'SNRPA1', score: 5 }},
+{data: { id: 'SNRPF', score: 5 }},
+{data: { id: 'PRKRIP1', score: 5 }},
+{data: { id: 'SLC4A1AP', score: 5 }},
+{data: { id: 'GPATCH11', score: 4 }},
+{data: { id: 'HTATSF1', score: 5 }},
+{data: { id: 'DDX46', score: 5 }}], 
+ edges: [{ data: { source: 'SNRPN', target: 'SNRPA1', directed: 'false', weight: 0.978398} },
+{ data: { source: 'SNRPN', target: 'PRKRIP1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'SNRPN', target: 'SNRPF', directed: 'false', weight: 0.171414} },
+{ data: { source: 'SNRPN', target: 'GPATCH11', directed: 'false', weight: 0.140692} },
+{ data: { source: 'SNRPN', target: 'SLC4A1AP', directed: 'false', weight: 0.11730499999999999} },
+{ data: { source: 'SNRPN', target: 'HTATSF1', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'SLC4A1AP', target: 'SNRPA1', directed: 'false', weight: 0.775396} },
+{ data: { source: 'SLC4A1AP', target: 'HTATSF1', directed: 'false', weight: 0.364713} },
+{ data: { source: 'SLC4A1AP', target: 'PRKRIP1', directed: 'false', weight: 0.0445491} },
+{ data: { source: 'PRKRIP1', target: 'SNRPA1', directed: 'false', weight: 0.940148} },
+{ data: { source: 'PRKRIP1', target: 'SNRPF', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PRKRIP1', target: 'GPATCH11', directed: 'false', weight: 0.140692} },
+{ data: { source: 'PRKRIP1', target: 'HTATSF1', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'SNRPA1', target: 'SNRPF', directed: 'false', weight: 0.9759260000000001} },
+{ data: { source: 'SNRPA1', target: 'HTATSF1', directed: 'false', weight: 0.811549} },
+{ data: { source: 'SNRPA1', target: 'GPATCH11', directed: 'false', weight: 0.631167} },
+{ data: { source: 'HTATSF1', target: 'DDX46', directed: 'false', weight: 0.9736549999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.50717
+    </section>
+    </body>
+    </html>
+    

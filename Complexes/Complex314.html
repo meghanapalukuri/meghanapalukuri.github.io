@@ -1,0 +1,79 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 314</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex315.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'LDLRAD4', score: 5 }},
+{data: { id: 'RBCK1', score: 5 }},
+{data: { id: 'SMURF2', score: 5 }},
+{data: { id: 'STXBP4', score: 5 }}], 
+ edges: [{ data: { source: 'SMURF2', target: 'LDLRAD4', directed: 'false', weight: 0.991762} },
+{ data: { source: 'SMURF2', target: 'RBCK1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'SMURF2', target: 'STXBP4', directed: 'false', weight: 0.11730499999999999} },
+{ data: { source: 'RBCK1', target: 'LDLRAD4', directed: 'false', weight: 0.727386} },
+{ data: { source: 'RBCK1', target: 'STXBP4', directed: 'false', weight: 0.102922} },
+{ data: { source: 'LDLRAD4', target: 'STXBP4', directed: 'false', weight: 0.8342} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.77349
+    </section>
+    </body>
+    </html>
+    

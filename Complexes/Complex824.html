@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 824</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex825.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GAK', score: 5 }},
+{data: { id: 'PHLPP1', score: 5 }},
+{data: { id: 'DMWD', score: 3 }},
+{data: { id: 'USP46', score: 5 }},
+{data: { id: 'PHLPP2', score: 5 }}], 
+ edges: [{ data: { source: 'GAK', target: 'DMWD', directed: 'false', weight: 0.6889029999999999} },
+{ data: { source: 'PHLPP2', target: 'USP46', directed: 'false', weight: 0.9819709999999999} },
+{ data: { source: 'PHLPP2', target: 'PHLPP1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'PHLPP2', target: 'DMWD', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'USP46', target: 'DMWD', directed: 'false', weight: 0.9193969999999999} },
+{ data: { source: 'USP46', target: 'PHLPP1', directed: 'false', weight: 0.913482} },
+{ data: { source: 'DMWD', target: 'PHLPP1', directed: 'false', weight: 0.146753} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.62972
+    </section>
+    </body>
+    </html>
+    

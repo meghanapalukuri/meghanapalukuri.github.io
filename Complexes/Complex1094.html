@@ -1,0 +1,98 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1094</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1095.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'POLR2B', score: 5 }},
+{data: { id: 'GTF2F2', score: 5 }},
+{data: { id: 'POLR2G', score: 5 }},
+{data: { id: 'RBM46', score: 3 }},
+{data: { id: 'POLR2E', score: 5 }},
+{data: { id: 'SUPT4H1', score: 5 }},
+{data: { id: 'NCL', score: 5 }},
+{data: { id: 'SUPT5H', score: 5 }}], 
+ edges: [{ data: { source: 'GTF2F2', target: 'SUPT4H1', directed: 'false', weight: 0.97641} },
+{ data: { source: 'GTF2F2', target: 'POLR2E', directed: 'false', weight: 0.976} },
+{ data: { source: 'GTF2F2', target: 'SUPT5H', directed: 'false', weight: 0.967001} },
+{ data: { source: 'GTF2F2', target: 'POLR2B', directed: 'false', weight: 0.791155} },
+{ data: { source: 'GTF2F2', target: 'RBM46', directed: 'false', weight: 0.11354600000000001} },
+{ data: { source: 'GTF2F2', target: 'NCL', directed: 'false', weight: 0.0912562} },
+{ data: { source: 'POLR2B', target: 'POLR2G', directed: 'false', weight: 0.998574} },
+{ data: { source: 'POLR2B', target: 'SUPT5H', directed: 'false', weight: 0.9867370000000001} },
+{ data: { source: 'POLR2B', target: 'POLR2E', directed: 'false', weight: 0.955729} },
+{ data: { source: 'POLR2B', target: 'SUPT4H1', directed: 'false', weight: 0.104379} },
+{ data: { source: 'POLR2G', target: 'POLR2E', directed: 'false', weight: 0.9817020000000001} },
+{ data: { source: 'NCL', target: 'SUPT5H', directed: 'false', weight: 0.971059} },
+{ data: { source: 'NCL', target: 'RBM46', directed: 'false', weight: 0.704994} },
+{ data: { source: 'NCL', target: 'SUPT4H1', directed: 'false', weight: 0.0684202} },
+{ data: { source: 'POLR2E', target: 'SUPT5H', directed: 'false', weight: 0.939807} },
+{ data: { source: 'SUPT5H', target: 'SUPT4H1', directed: 'false', weight: 0.9915360000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.55278
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>GTF2F2
+    </section>
+    </body>
+    </html>
+    

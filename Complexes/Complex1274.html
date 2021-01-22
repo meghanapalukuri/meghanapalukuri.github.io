@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1274</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1275.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ATP5MG', score: 5 }},
+{data: { id: 'ATP5F1A', score: 5 }},
+{data: { id: 'DLAT', score: 5 }},
+{data: { id: 'STAT5B', score: 5 }},
+{data: { id: 'PDHA1', score: 5 }},
+{data: { id: 'PDHX', score: 5 }},
+{data: { id: 'PDHB', score: 5 }},
+{data: { id: 'ATP5F1B', score: 5 }},
+{data: { id: 'STAT5A', score: 5 }}], 
+ edges: [{ data: { source: 'DLAT', target: 'PDHB', directed: 'false', weight: 0.9999299999999999} },
+{ data: { source: 'DLAT', target: 'PDHA1', directed: 'false', weight: 0.999826} },
+{ data: { source: 'DLAT', target: 'STAT5A', directed: 'false', weight: 0.898526} },
+{ data: { source: 'DLAT', target: 'PDHX', directed: 'false', weight: 0.840566} },
+{ data: { source: 'DLAT', target: 'STAT5B', directed: 'false', weight: 0.734251} },
+{ data: { source: 'ATP5MG', target: 'ATP5F1A', directed: 'false', weight: 0.9946659999999999} },
+{ data: { source: 'ATP5MG', target: 'ATP5F1B', directed: 'false', weight: 0.951416} },
+{ data: { source: 'ATP5MG', target: 'PDHA1', directed: 'false', weight: 0.370243} },
+{ data: { source: 'PDHB', target: 'PDHA1', directed: 'false', weight: 0.999948} },
+{ data: { source: 'PDHB', target: 'PDHX', directed: 'false', weight: 0.9953219999999999} },
+{ data: { source: 'PDHB', target: 'STAT5A', directed: 'false', weight: 0.9294290000000001} },
+{ data: { source: 'PDHB', target: 'STAT5B', directed: 'false', weight: 0.8367879999999999} },
+{ data: { source: 'PDHA1', target: 'STAT5A', directed: 'false', weight: 0.948998} },
+{ data: { source: 'PDHA1', target: 'PDHX', directed: 'false', weight: 0.933788} },
+{ data: { source: 'PDHA1', target: 'ATP5F1A', directed: 'false', weight: 0.885999} },
+{ data: { source: 'PDHA1', target: 'STAT5B', directed: 'false', weight: 0.6547029999999999} },
+{ data: { source: 'PDHA1', target: 'ATP5F1B', directed: 'false', weight: 0.479871} },
+{ data: { source: 'ATP5F1B', target: 'ATP5F1A', directed: 'false', weight: 0.999692} },
+{ data: { source: 'PDHX', target: 'STAT5A', directed: 'false', weight: 0.9594379999999999} },
+{ data: { source: 'PDHX', target: 'STAT5B', directed: 'false', weight: 0.8918950000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.52729
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>ATP5MG
+    </section>
+    </body>
+    </html>
+    

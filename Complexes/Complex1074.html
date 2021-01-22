@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1074</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1075.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RINT1', score: 5 }},
+{data: { id: 'TNPO2', score: 5 }},
+{data: { id: 'ZW10', score: 5 }},
+{data: { id: 'DNAAF5', score: 5 }},
+{data: { id: 'TTI1', score: 5 }},
+{data: { id: 'VAC14', score: 5 }},
+{data: { id: 'KNTC1', score: 5 }},
+{data: { id: 'XPO7', score: 5 }},
+{data: { id: 'GCN1', score: 5 }}], 
+ edges: [{ data: { source: 'GCN1', target: 'ZW10', directed: 'false', weight: 0.623717} },
+{ data: { source: 'GCN1', target: 'XPO7', directed: 'false', weight: 0.581176} },
+{ data: { source: 'GCN1', target: 'VAC14', directed: 'false', weight: 0.522996} },
+{ data: { source: 'GCN1', target: 'TTI1', directed: 'false', weight: 0.46347299999999997} },
+{ data: { source: 'GCN1', target: 'DNAAF5', directed: 'false', weight: 0.426387} },
+{ data: { source: 'GCN1', target: 'KNTC1', directed: 'false', weight: 0.349532} },
+{ data: { source: 'GCN1', target: 'RINT1', directed: 'false', weight: 0.194752} },
+{ data: { source: 'KNTC1', target: 'ZW10', directed: 'false', weight: 0.9975639999999999} },
+{ data: { source: 'KNTC1', target: 'VAC14', directed: 'false', weight: 0.270404} },
+{ data: { source: 'KNTC1', target: 'RINT1', directed: 'false', weight: 0.212495} },
+{ data: { source: 'KNTC1', target: 'TTI1', directed: 'false', weight: 0.20948699999999998} },
+{ data: { source: 'RINT1', target: 'ZW10', directed: 'false', weight: 0.9988469999999999} },
+{ data: { source: 'RINT1', target: 'TTI1', directed: 'false', weight: 0.299213} },
+{ data: { source: 'RINT1', target: 'VAC14', directed: 'false', weight: 0.272831} },
+{ data: { source: 'DNAAF5', target: 'XPO7', directed: 'false', weight: 0.607101} },
+{ data: { source: 'TTI1', target: 'TNPO2', directed: 'false', weight: 0.510916} },
+{ data: { source: 'TTI1', target: 'ZW10', directed: 'false', weight: 0.426387} },
+{ data: { source: 'TTI1', target: 'XPO7', directed: 'false', weight: 0.401391} },
+{ data: { source: 'TTI1', target: 'VAC14', directed: 'false', weight: 0.354385} },
+{ data: { source: 'VAC14', target: 'ZW10', directed: 'false', weight: 0.33407800000000004} },
+{ data: { source: 'VAC14', target: 'TNPO2', directed: 'false', weight: 0.293028} },
+{ data: { source: 'VAC14', target: 'XPO7', directed: 'false', weight: 0.247908} },
+{ data: { source: 'XPO7', target: 'ZW10', directed: 'false', weight: 0.550275} },
+{ data: { source: 'XPO7', target: 'TNPO2', directed: 'false', weight: 0.493504} },
+{ data: { source: 'ZW10', target: 'TNPO2', directed: 'false', weight: 0.6256229999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.55746
+    </section>
+    </body>
+    </html>
+    

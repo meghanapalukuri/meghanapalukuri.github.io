@@ -1,0 +1,96 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 976</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex977.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RBPJ', score: 5 }},
+{data: { id: 'NOTCH3', score: 5 }},
+{data: { id: 'FBXO42', score: 3 }},
+{data: { id: 'NOTCH1', score: 5 }},
+{data: { id: 'NOTCH2', score: 5 }},
+{data: { id: 'ANKRD44', score: 4 }},
+{data: { id: 'MAML1', score: 5 }},
+{data: { id: 'ZNF589', score: 5 }}], 
+ edges: [{ data: { source: 'ZNF589', target: 'RBPJ', directed: 'false', weight: 0.974557} },
+{ data: { source: 'ZNF589', target: 'NOTCH2', directed: 'false', weight: 0.151927} },
+{ data: { source: 'ZNF589', target: 'MAML1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ZNF589', target: 'FBXO42', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ZNF589', target: 'NOTCH1', directed: 'false', weight: 0.133456} },
+{ data: { source: 'ANKRD44', target: 'NOTCH1', directed: 'false', weight: 0.979675} },
+{ data: { source: 'ANKRD44', target: 'NOTCH2', directed: 'false', weight: 0.897634} },
+{ data: { source: 'ANKRD44', target: 'NOTCH3', directed: 'false', weight: 0.698549} },
+{ data: { source: 'MAML1', target: 'RBPJ', directed: 'false', weight: 0.9995879999999999} },
+{ data: { source: 'MAML1', target: 'NOTCH1', directed: 'false', weight: 0.304485} },
+{ data: { source: 'MAML1', target: 'NOTCH2', directed: 'false', weight: 0.1888} },
+{ data: { source: 'MAML1', target: 'FBXO42', directed: 'false', weight: 0.171414} },
+{ data: { source: 'FBXO42', target: 'RBPJ', directed: 'false', weight: 0.82952} },
+{ data: { source: 'FBXO42', target: 'NOTCH1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'RBPJ', target: 'NOTCH1', directed: 'false', weight: 0.920143} },
+{ data: { source: 'RBPJ', target: 'NOTCH2', directed: 'false', weight: 0.867424} },
+{ data: { source: 'NOTCH3', target: 'NOTCH2', directed: 'false', weight: 0.349532} },
+{ data: { source: 'NOTCH3', target: 'NOTCH1', directed: 'false', weight: 0.222827} },
+{ data: { source: 'NOTCH1', target: 'NOTCH2', directed: 'false', weight: 0.311189} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.57597
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,83 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 595</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex596.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CREBBP', score: 5 }},
+{data: { id: 'MAPK15', score: 5 }},
+{data: { id: 'CDK2', score: 5 }},
+{data: { id: 'RBL1', score: 5 }},
+{data: { id: 'RBL2', score: 5 }}], 
+ edges: [{ data: { source: 'CREBBP', target: 'CDK2', directed: 'false', weight: 0.596483} },
+{ data: { source: 'CREBBP', target: 'RBL2', directed: 'false', weight: 0.390018} },
+{ data: { source: 'CREBBP', target: 'RBL1', directed: 'false', weight: 0.390018} },
+{ data: { source: 'CREBBP', target: 'MAPK15', directed: 'false', weight: 0.133451} },
+{ data: { source: 'RBL1', target: 'CDK2', directed: 'false', weight: 0.8419030000000001} },
+{ data: { source: 'RBL1', target: 'RBL2', directed: 'false', weight: 0.1922} },
+{ data: { source: 'RBL1', target: 'MAPK15', directed: 'false', weight: 0.133451} },
+{ data: { source: 'RBL2', target: 'CDK2', directed: 'false', weight: 0.776558} },
+{ data: { source: 'MAPK15', target: 'CDK2', directed: 'false', weight: 0.742035} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.71731
+    </section>
+    </body>
+    </html>
+    

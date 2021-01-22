@@ -1,0 +1,93 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 666</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex667.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'FAM160A1', score: 2 }},
+{data: { id: 'HOOK3', score: 5 }},
+{data: { id: 'AKTIP', score: 5 }},
+{data: { id: 'FAM160A2', score: 5 }},
+{data: { id: 'HOOK1', score: 5 }},
+{data: { id: 'NAB1', score: 4 }}], 
+ edges: [{ data: { source: 'HOOK3', target: 'AKTIP', directed: 'false', weight: 0.952498} },
+{ data: { source: 'HOOK3', target: 'FAM160A2', directed: 'false', weight: 0.178521} },
+{ data: { source: 'HOOK3', target: 'FAM160A1', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'FAM160A1', target: 'AKTIP', directed: 'false', weight: 0.9752879999999999} },
+{ data: { source: 'FAM160A1', target: 'NAB1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'FAM160A1', target: 'FAM160A2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'FAM160A1', target: 'HOOK1', directed: 'false', weight: 0.100611} },
+{ data: { source: 'NAB1', target: 'AKTIP', directed: 'false', weight: 0.97051} },
+{ data: { source: 'NAB1', target: 'FAM160A2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'NAB1', target: 'HOOK1', directed: 'false', weight: 0.100611} },
+{ data: { source: 'AKTIP', target: 'FAM160A2', directed: 'false', weight: 0.9875360000000001} },
+{ data: { source: 'AKTIP', target: 'HOOK1', directed: 'false', weight: 0.8411540000000001} },
+{ data: { source: 'HOOK1', target: 'FAM160A2', directed: 'false', weight: 0.14871800000000002} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.68165
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>HOOK1
+    </section>
+    </body>
+    </html>
+    

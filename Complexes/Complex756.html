@@ -1,0 +1,80 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 756</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex757.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'FAM3A', score: 4 }},
+{data: { id: 'ITGB5', score: 5 }},
+{data: { id: 'MFGE8', score: 5 }}], 
+ edges: [{ data: { source: 'FAM3A', target: 'MFGE8', directed: 'false', weight: 0.280667} },
+{ data: { source: 'FAM3A', target: 'ITGB5', directed: 'false', weight: 0.0809483} },
+{ data: { source: 'MFGE8', target: 'ITGB5', directed: 'false', weight: 0.422306} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.65849
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>MFGE8
+    </section>
+    </body>
+    </html>
+    

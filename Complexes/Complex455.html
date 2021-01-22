@@ -1,0 +1,155 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 455</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex456.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SDCBP', score: 5 }},
+{data: { id: 'QARS', score: 2 }},
+{data: { id: 'GFPT1', score: 5 }},
+{data: { id: 'TARSL2', score: 0 }},
+{data: { id: 'DARS', score: 2 }},
+{data: { id: 'AIMP2', score: 5 }},
+{data: { id: 'MARS', score: 1 }},
+{data: { id: 'KARS', score: 0 }},
+{data: { id: 'RARS', score: 0 }},
+{data: { id: 'GFPT2', score: 5 }},
+{data: { id: 'AIMP1', score: 5 }},
+{data: { id: 'LARS', score: 1 }},
+{data: { id: 'SIRT6', score: 5 }},
+{data: { id: 'EEF1E1', score: 5 }},
+{data: { id: 'IARS', score: 2 }},
+{data: { id: 'YTHDF2', score: 5 }}], 
+ edges: [{ data: { source: 'IARS', target: 'EEF1E1', directed: 'false', weight: 0.9998870000000001} },
+{ data: { source: 'IARS', target: 'RARS', directed: 'false', weight: 0.9997870000000001} },
+{ data: { source: 'IARS', target: 'MARS', directed: 'false', weight: 0.9997799999999999} },
+{ data: { source: 'IARS', target: 'LARS', directed: 'false', weight: 0.9988} },
+{ data: { source: 'IARS', target: 'KARS', directed: 'false', weight: 0.997459} },
+{ data: { source: 'IARS', target: 'AIMP1', directed: 'false', weight: 0.992401} },
+{ data: { source: 'IARS', target: 'DARS', directed: 'false', weight: 0.9893049999999999} },
+{ data: { source: 'IARS', target: 'AIMP2', directed: 'false', weight: 0.9882799999999999} },
+{ data: { source: 'IARS', target: 'QARS', directed: 'false', weight: 0.9758979999999999} },
+{ data: { source: 'IARS', target: 'YTHDF2', directed: 'false', weight: 0.38866300000000004} },
+{ data: { source: 'IARS', target: 'SDCBP', directed: 'false', weight: 0.19083699999999998} },
+{ data: { source: 'SDCBP', target: 'AIMP2', directed: 'false', weight: 0.702426} },
+{ data: { source: 'SDCBP', target: 'TARSL2', directed: 'false', weight: 0.526891} },
+{ data: { source: 'SDCBP', target: 'EEF1E1', directed: 'false', weight: 0.370217} },
+{ data: { source: 'SDCBP', target: 'AIMP1', directed: 'false', weight: 0.30703600000000003} },
+{ data: { source: 'SDCBP', target: 'DARS', directed: 'false', weight: 0.21793400000000002} },
+{ data: { source: 'SDCBP', target: 'LARS', directed: 'false', weight: 0.20933600000000002} },
+{ data: { source: 'SDCBP', target: 'QARS', directed: 'false', weight: 0.167627} },
+{ data: { source: 'SDCBP', target: 'MARS', directed: 'false', weight: 0.139502} },
+{ data: { source: 'SDCBP', target: 'KARS', directed: 'false', weight: 0.136184} },
+{ data: { source: 'SDCBP', target: 'RARS', directed: 'false', weight: 0.11553} },
+{ data: { source: 'GFPT2', target: 'SIRT6', directed: 'false', weight: 0.9026799999999999} },
+{ data: { source: 'GFPT2', target: 'TARSL2', directed: 'false', weight: 0.6229279999999999} },
+{ data: { source: 'SIRT6', target: 'GFPT1', directed: 'false', weight: 0.6234430000000001} },
+{ data: { source: 'TARSL2', target: 'GFPT1', directed: 'false', weight: 0.46690200000000004} },
+{ data: { source: 'RARS', target: 'AIMP1', directed: 'false', weight: 0.9993200000000001} },
+{ data: { source: 'RARS', target: 'MARS', directed: 'false', weight: 0.9992030000000001} },
+{ data: { source: 'RARS', target: 'KARS', directed: 'false', weight: 0.998122} },
+{ data: { source: 'RARS', target: 'QARS', directed: 'false', weight: 0.995035} },
+{ data: { source: 'RARS', target: 'AIMP2', directed: 'false', weight: 0.992539} },
+{ data: { source: 'RARS', target: 'EEF1E1', directed: 'false', weight: 0.986461} },
+{ data: { source: 'RARS', target: 'LARS', directed: 'false', weight: 0.9758959999999999} },
+{ data: { source: 'RARS', target: 'DARS', directed: 'false', weight: 0.9758950000000001} },
+{ data: { source: 'RARS', target: 'YTHDF2', directed: 'false', weight: 0.0363805} },
+{ data: { source: 'AIMP2', target: 'MARS', directed: 'false', weight: 0.99929} },
+{ data: { source: 'AIMP2', target: 'QARS', directed: 'false', weight: 0.9974290000000001} },
+{ data: { source: 'AIMP2', target: 'DARS', directed: 'false', weight: 0.9962549999999999} },
+{ data: { source: 'AIMP2', target: 'AIMP1', directed: 'false', weight: 0.976775} },
+{ data: { source: 'AIMP2', target: 'KARS', directed: 'false', weight: 0.975936} },
+{ data: { source: 'AIMP2', target: 'LARS', directed: 'false', weight: 0.9759329999999999} },
+{ data: { source: 'AIMP2', target: 'EEF1E1', directed: 'false', weight: 0.9758959999999999} },
+{ data: { source: 'AIMP2', target: 'YTHDF2', directed: 'false', weight: 0.0424376} },
+{ data: { source: 'YTHDF2', target: 'AIMP1', directed: 'false', weight: 0.509232} },
+{ data: { source: 'YTHDF2', target: 'QARS', directed: 'false', weight: 0.398733} },
+{ data: { source: 'YTHDF2', target: 'MARS', directed: 'false', weight: 0.100952} },
+{ data: { source: 'YTHDF2', target: 'KARS', directed: 'false', weight: 0.0797143} },
+{ data: { source: 'YTHDF2', target: 'LARS', directed: 'false', weight: 0.0589429} },
+{ data: { source: 'YTHDF2', target: 'EEF1E1', directed: 'false', weight: 0.0192885} },
+{ data: { source: 'YTHDF2', target: 'DARS', directed: 'false', weight: 0.016868099999999997} },
+{ data: { source: 'AIMP1', target: 'MARS', directed: 'false', weight: 0.9999299999999999} },
+{ data: { source: 'AIMP1', target: 'DARS', directed: 'false', weight: 0.999635} },
+{ data: { source: 'AIMP1', target: 'QARS', directed: 'false', weight: 0.994034} },
+{ data: { source: 'AIMP1', target: 'LARS', directed: 'false', weight: 0.97593} },
+{ data: { source: 'AIMP1', target: 'EEF1E1', directed: 'false', weight: 0.9759209999999999} },
+{ data: { source: 'AIMP1', target: 'KARS', directed: 'false', weight: 0.9759209999999999} },
+{ data: { source: 'KARS', target: 'MARS', directed: 'false', weight: 0.9982639999999999} },
+{ data: { source: 'KARS', target: 'QARS', directed: 'false', weight: 0.997402} },
+{ data: { source: 'KARS', target: 'EEF1E1', directed: 'false', weight: 0.996618} },
+{ data: { source: 'KARS', target: 'DARS', directed: 'false', weight: 0.979759} },
+{ data: { source: 'KARS', target: 'LARS', directed: 'false', weight: 0.975924} },
+{ data: { source: 'EEF1E1', target: 'MARS', directed: 'false', weight: 0.997826} },
+{ data: { source: 'EEF1E1', target: 'DARS', directed: 'false', weight: 0.993771} },
+{ data: { source: 'EEF1E1', target: 'LARS', directed: 'false', weight: 0.975914} },
+{ data: { source: 'EEF1E1', target: 'QARS', directed: 'false', weight: 0.9758889999999999} },
+{ data: { source: 'QARS', target: 'DARS', directed: 'false', weight: 0.9970620000000001} },
+{ data: { source: 'QARS', target: 'MARS', directed: 'false', weight: 0.9874569999999999} },
+{ data: { source: 'QARS', target: 'LARS', directed: 'false', weight: 0.975922} },
+{ data: { source: 'DARS', target: 'MARS', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'DARS', target: 'LARS', directed: 'false', weight: 0.982991} },
+{ data: { source: 'LARS', target: 'MARS', directed: 'false', weight: 0.997748} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.76569
+    </section>
+    </body>
+    </html>
+    

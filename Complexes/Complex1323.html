@@ -1,0 +1,100 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1323</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1324.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'AP1S2', score: 5 }},
+{data: { id: 'AP1AR', score: 5 }},
+{data: { id: 'MLF1', score: 5 }},
+{data: { id: 'AP1G2', score: 5 }},
+{data: { id: 'AP1M2', score: 5 }},
+{data: { id: 'AFTPH', score: 5 }},
+{data: { id: 'HEATR5B', score: 3 }},
+{data: { id: 'SYNRG', score: 5 }},
+{data: { id: 'AP1S3', score: 5 }}], 
+ edges: [{ data: { source: 'AP1S2', target: 'AP1G2', directed: 'false', weight: 0.9992700000000001} },
+{ data: { source: 'AP1S2', target: 'AFTPH', directed: 'false', weight: 0.9918969999999999} },
+{ data: { source: 'AP1S2', target: 'AP1AR', directed: 'false', weight: 0.989459} },
+{ data: { source: 'AP1S2', target: 'HEATR5B', directed: 'false', weight: 0.9296209999999999} },
+{ data: { source: 'AP1S2', target: 'SYNRG', directed: 'false', weight: 0.918314} },
+{ data: { source: 'AP1S2', target: 'AP1M2', directed: 'false', weight: 0.701676} },
+{ data: { source: 'AP1S2', target: 'AP1S3', directed: 'false', weight: 0.463714} },
+{ data: { source: 'AFTPH', target: 'AP1M2', directed: 'false', weight: 0.756907} },
+{ data: { source: 'AFTPH', target: 'HEATR5B', directed: 'false', weight: 0.285983} },
+{ data: { source: 'AFTPH', target: 'AP1G2', directed: 'false', weight: 0.27327399999999996} },
+{ data: { source: 'AFTPH', target: 'AP1AR', directed: 'false', weight: 0.144297} },
+{ data: { source: 'AFTPH', target: 'AP1S3', directed: 'false', weight: 0.140692} },
+{ data: { source: 'HEATR5B', target: 'SYNRG', directed: 'false', weight: 0.48655} },
+{ data: { source: 'HEATR5B', target: 'AP1M2', directed: 'false', weight: 0.43786400000000003} },
+{ data: { source: 'HEATR5B', target: 'AP1G2', directed: 'false', weight: 0.25805900000000004} },
+{ data: { source: 'HEATR5B', target: 'AP1AR', directed: 'false', weight: 0.165074} },
+{ data: { source: 'HEATR5B', target: 'AP1S3', directed: 'false', weight: 0.114755} },
+{ data: { source: 'AP1G2', target: 'AP1M2', directed: 'false', weight: 0.9594950000000001} },
+{ data: { source: 'AP1G2', target: 'AP1S3', directed: 'false', weight: 0.463714} },
+{ data: { source: 'AP1G2', target: 'AP1AR', directed: 'false', weight: 0.165074} },
+{ data: { source: 'MLF1', target: 'SYNRG', directed: 'false', weight: 0.967533} },
+{ data: { source: 'AP1S3', target: 'AP1M2', directed: 'false', weight: 0.693691} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.51502
+    </section>
+    </body>
+    </html>
+    

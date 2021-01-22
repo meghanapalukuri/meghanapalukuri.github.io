@@ -1,0 +1,101 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 863</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex864.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RDX', score: 5 }},
+{data: { id: 'EIF5AL1', score: 3 }},
+{data: { id: 'MSN', score: 5 }},
+{data: { id: 'LCP1', score: 5 }},
+{data: { id: 'TPT1', score: 5 }},
+{data: { id: 'TAF15', score: 5 }},
+{data: { id: 'EZR', score: 5 }},
+{data: { id: 'PLS1', score: 5 }}], 
+ edges: [{ data: { source: 'EZR', target: 'MSN', directed: 'false', weight: 0.874489} },
+{ data: { source: 'EZR', target: 'RDX', directed: 'false', weight: 0.8615290000000001} },
+{ data: { source: 'EZR', target: 'EIF5AL1', directed: 'false', weight: 0.623267} },
+{ data: { source: 'EZR', target: 'LCP1', directed: 'false', weight: 0.383787} },
+{ data: { source: 'EZR', target: 'PLS1', directed: 'false', weight: 0.345172} },
+{ data: { source: 'EZR', target: 'TAF15', directed: 'false', weight: 0.039723699999999994} },
+{ data: { source: 'RDX', target: 'MSN', directed: 'false', weight: 0.7570720000000001} },
+{ data: { source: 'RDX', target: 'EIF5AL1', directed: 'false', weight: 0.5} },
+{ data: { source: 'RDX', target: 'LCP1', directed: 'false', weight: 0.40922800000000004} },
+{ data: { source: 'RDX', target: 'PLS1', directed: 'false', weight: 0.28520500000000004} },
+{ data: { source: 'RDX', target: 'TAF15', directed: 'false', weight: 0.07624639999999999} },
+{ data: { source: 'TAF15', target: 'MSN', directed: 'false', weight: 0.88792} },
+{ data: { source: 'TAF15', target: 'EIF5AL1', directed: 'false', weight: 0.265469} },
+{ data: { source: 'TAF15', target: 'LCP1', directed: 'false', weight: 0.031435000000000005} },
+{ data: { source: 'TAF15', target: 'PLS1', directed: 'false', weight: 0.00292729} },
+{ data: { source: 'MSN', target: 'EIF5AL1', directed: 'false', weight: 0.770961} },
+{ data: { source: 'MSN', target: 'PLS1', directed: 'false', weight: 0.7584890000000001} },
+{ data: { source: 'MSN', target: 'LCP1', directed: 'false', weight: 0.365305} },
+{ data: { source: 'EIF5AL1', target: 'TPT1', directed: 'false', weight: 0.94355} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.61058
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>RDX
+    </section>
+    </body>
+    </html>
+    

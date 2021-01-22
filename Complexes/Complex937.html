@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 937</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex938.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PATJ', score: 5 }},
+{data: { id: 'LIN7C', score: 5 }},
+{data: { id: 'MPP6', score: 3 }},
+{data: { id: 'DLG1', score: 5 }},
+{data: { id: 'MPP5', score: 5 }},
+{data: { id: 'CASK', score: 5 }},
+{data: { id: 'MPP7', score: 5 }},
+{data: { id: 'DLG3', score: 5 }},
+{data: { id: 'ARHGEF26', score: 5 }}], 
+ edges: [{ data: { source: 'MPP6', target: 'LIN7C', directed: 'false', weight: 0.9996860000000001} },
+{ data: { source: 'MPP6', target: 'MPP5', directed: 'false', weight: 0.22619} },
+{ data: { source: 'MPP6', target: 'MPP7', directed: 'false', weight: 0.200786} },
+{ data: { source: 'MPP6', target: 'CASK', directed: 'false', weight: 0.168469} },
+{ data: { source: 'MPP6', target: 'DLG1', directed: 'false', weight: 0.148509} },
+{ data: { source: 'MPP6', target: 'ARHGEF26', directed: 'false', weight: 0.108694} },
+{ data: { source: 'CASK', target: 'LIN7C', directed: 'false', weight: 0.996451} },
+{ data: { source: 'CASK', target: 'MPP7', directed: 'false', weight: 0.37938299999999997} },
+{ data: { source: 'CASK', target: 'DLG1', directed: 'false', weight: 0.322756} },
+{ data: { source: 'CASK', target: 'MPP5', directed: 'false', weight: 0.23044299999999998} },
+{ data: { source: 'CASK', target: 'PATJ', directed: 'false', weight: 0.138536} },
+{ data: { source: 'CASK', target: 'ARHGEF26', directed: 'false', weight: 0.133456} },
+{ data: { source: 'ARHGEF26', target: 'LIN7C', directed: 'false', weight: 0.835724} },
+{ data: { source: 'ARHGEF26', target: 'MPP7', directed: 'false', weight: 0.133456} },
+{ data: { source: 'MPP5', target: 'LIN7C', directed: 'false', weight: 0.998008} },
+{ data: { source: 'MPP5', target: 'PATJ', directed: 'false', weight: 0.293097} },
+{ data: { source: 'MPP5', target: 'MPP7', directed: 'false', weight: 0.270991} },
+{ data: { source: 'MPP5', target: 'DLG1', directed: 'false', weight: 0.25250700000000004} },
+{ data: { source: 'DLG1', target: 'LIN7C', directed: 'false', weight: 0.9863620000000001} },
+{ data: { source: 'DLG1', target: 'DLG3', directed: 'false', weight: 0.881534} },
+{ data: { source: 'DLG1', target: 'MPP7', directed: 'false', weight: 0.449295} },
+{ data: { source: 'DLG1', target: 'PATJ', directed: 'false', weight: 0.153201} },
+{ data: { source: 'PATJ', target: 'LIN7C', directed: 'false', weight: 0.8592209999999999} },
+{ data: { source: 'PATJ', target: 'MPP7', directed: 'false', weight: 0.165845} },
+{ data: { source: 'LIN7C', target: 'MPP7', directed: 'false', weight: 0.9997219999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.58472
+    </section>
+    </body>
+    </html>
+    

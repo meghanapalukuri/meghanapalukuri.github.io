@@ -1,0 +1,84 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1195</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1196.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SEC24D', score: 5 }},
+{data: { id: 'GLDC', score: 5 }},
+{data: { id: 'LYRM2', score: 2 }},
+{data: { id: 'NDUFAB1', score: 5 }},
+{data: { id: 'SEC23B', score: 5 }},
+{data: { id: 'ATPAF2', score: 5 }}], 
+ edges: [{ data: { source: 'GLDC', target: 'NDUFAB1', directed: 'false', weight: 0.7671180000000001} },
+{ data: { source: 'GLDC', target: 'SEC24D', directed: 'false', weight: 0.546575} },
+{ data: { source: 'GLDC', target: 'SEC23B', directed: 'false', weight: 0.384106} },
+{ data: { source: 'GLDC', target: 'ATPAF2', directed: 'false', weight: 0.345713} },
+{ data: { source: 'GLDC', target: 'LYRM2', directed: 'false', weight: 0.128057} },
+{ data: { source: 'SEC23B', target: 'SEC24D', directed: 'false', weight: 0.9915129999999999} },
+{ data: { source: 'NDUFAB1', target: 'LYRM2', directed: 'false', weight: 0.976499} },
+{ data: { source: 'NDUFAB1', target: 'ATPAF2', directed: 'false', weight: 0.367123} },
+{ data: { source: 'LYRM2', target: 'ATPAF2', directed: 'false', weight: 0.133451} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.53591
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,104 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1304</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1305.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HNRNPA1', score: 5 }},
+{data: { id: 'FAM120A', score: 5 }},
+{data: { id: 'HNRNPDL', score: 5 }},
+{data: { id: 'EIF4H', score: 5 }},
+{data: { id: 'HNRNPH3', score: 5 }},
+{data: { id: 'HNRNPL', score: 5 }},
+{data: { id: 'ILF2', score: 5 }},
+{data: { id: 'HNRNPAB', score: 5 }},
+{data: { id: 'STRBP', score: 5 }}], 
+ edges: [{ data: { source: 'HNRNPL', target: 'HNRNPA1', directed: 'false', weight: 0.999616} },
+{ data: { source: 'HNRNPL', target: 'ILF2', directed: 'false', weight: 0.993767} },
+{ data: { source: 'HNRNPL', target: 'HNRNPDL', directed: 'false', weight: 0.801848} },
+{ data: { source: 'HNRNPL', target: 'HNRNPAB', directed: 'false', weight: 0.692394} },
+{ data: { source: 'HNRNPL', target: 'FAM120A', directed: 'false', weight: 0.333175} },
+{ data: { source: 'HNRNPL', target: 'STRBP', directed: 'false', weight: 0.165698} },
+{ data: { source: 'HNRNPL', target: 'HNRNPH3', directed: 'false', weight: 0.10694300000000001} },
+{ data: { source: 'HNRNPL', target: 'EIF4H', directed: 'false', weight: 0.0619086} },
+{ data: { source: 'HNRNPAB', target: 'HNRNPH3', directed: 'false', weight: 0.935474} },
+{ data: { source: 'HNRNPAB', target: 'HNRNPA1', directed: 'false', weight: 0.75564} },
+{ data: { source: 'HNRNPAB', target: 'HNRNPDL', directed: 'false', weight: 0.7320180000000001} },
+{ data: { source: 'HNRNPAB', target: 'EIF4H', directed: 'false', weight: 0.102671} },
+{ data: { source: 'ILF2', target: 'STRBP', directed: 'false', weight: 0.927007} },
+{ data: { source: 'ILF2', target: 'FAM120A', directed: 'false', weight: 0.48923999999999995} },
+{ data: { source: 'HNRNPA1', target: 'HNRNPH3', directed: 'false', weight: 0.9998670000000001} },
+{ data: { source: 'HNRNPA1', target: 'EIF4H', directed: 'false', weight: 0.81591} },
+{ data: { source: 'HNRNPA1', target: 'HNRNPDL', directed: 'false', weight: 0.194139} },
+{ data: { source: 'HNRNPH3', target: 'EIF4H', directed: 'false', weight: 0.864658} },
+{ data: { source: 'HNRNPH3', target: 'HNRNPDL', directed: 'false', weight: 0.736586} },
+{ data: { source: 'STRBP', target: 'FAM120A', directed: 'false', weight: 0.146782} },
+{ data: { source: 'EIF4H', target: 'HNRNPDL', directed: 'false', weight: 0.397291} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.52218
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>EIF4H
+    </section>
+    </body>
+    </html>
+    

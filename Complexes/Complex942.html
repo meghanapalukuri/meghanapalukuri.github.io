@@ -1,0 +1,93 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 942</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex943.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TEAD1', score: 5 }},
+{data: { id: 'YAP1', score: 5 }},
+{data: { id: 'WWTR1', score: 5 }},
+{data: { id: 'VGLL4', score: 5 }},
+{data: { id: 'TEAD3', score: 5 }},
+{data: { id: 'TEAD4', score: 5 }},
+{data: { id: 'TEAD2', score: 5 }},
+{data: { id: 'IRF2BPL', score: 5 }}], 
+ edges: [{ data: { source: 'TEAD2', target: 'TEAD4', directed: 'false', weight: 0.9644809999999999} },
+{ data: { source: 'TEAD2', target: 'VGLL4', directed: 'false', weight: 0.151455} },
+{ data: { source: 'TEAD2', target: 'WWTR1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'TEAD2', target: 'TEAD1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'TEAD3', target: 'YAP1', directed: 'false', weight: 0.942687} },
+{ data: { source: 'TEAD3', target: 'VGLL4', directed: 'false', weight: 0.932099} },
+{ data: { source: 'TEAD3', target: 'TEAD4', directed: 'false', weight: 0.552964} },
+{ data: { source: 'TEAD3', target: 'TEAD1', directed: 'false', weight: 0.514948} },
+{ data: { source: 'TEAD3', target: 'WWTR1', directed: 'false', weight: 0.471671} },
+{ data: { source: 'TEAD1', target: 'TEAD4', directed: 'false', weight: 0.9948540000000001} },
+{ data: { source: 'TEAD1', target: 'VGLL4', directed: 'false', weight: 0.7328399999999999} },
+{ data: { source: 'TEAD1', target: 'WWTR1', directed: 'false', weight: 0.5} },
+{ data: { source: 'TEAD4', target: 'WWTR1', directed: 'false', weight: 0.9311229999999999} },
+{ data: { source: 'TEAD4', target: 'VGLL4', directed: 'false', weight: 0.7507050000000001} },
+{ data: { source: 'IRF2BPL', target: 'VGLL4', directed: 'false', weight: 0.9690989999999999} },
+{ data: { source: 'VGLL4', target: 'WWTR1', directed: 'false', weight: 0.133456} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.58310
+    </section>
+    </body>
+    </html>
+    

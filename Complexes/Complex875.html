@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 875</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex876.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TEX35', score: 4 }},
+{data: { id: 'BORCS6', score: 5 }},
+{data: { id: 'LAMTOR3', score: 5 }},
+{data: { id: 'TRIM37', score: 5 }},
+{data: { id: 'BORCS7', score: 3 }}], 
+ edges: [{ data: { source: 'BORCS7', target: 'BORCS6', directed: 'false', weight: 0.9446620000000001} },
+{ data: { source: 'BORCS7', target: 'TEX35', directed: 'false', weight: 0.381965} },
+{ data: { source: 'BORCS7', target: 'LAMTOR3', directed: 'false', weight: 0.151455} },
+{ data: { source: 'BORCS7', target: 'TRIM37', directed: 'false', weight: 0.151455} },
+{ data: { source: 'BORCS6', target: 'TRIM37', directed: 'false', weight: 0.8885649999999999} },
+{ data: { source: 'BORCS6', target: 'LAMTOR3', directed: 'false', weight: 0.489604} },
+{ data: { source: 'LAMTOR3', target: 'TRIM37', directed: 'false', weight: 0.171414} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.60657
+    </section>
+    </body>
+    </html>
+    

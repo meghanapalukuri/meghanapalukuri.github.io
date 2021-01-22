@@ -1,0 +1,95 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1056</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1057.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MAP3K15', score: 5 }},
+{data: { id: 'TNFSF13B', score: 5 }},
+{data: { id: 'PLEKHO2', score: 3 }},
+{data: { id: 'MAP3K6', score: 5 }},
+{data: { id: 'MAP3K5', score: 5 }},
+{data: { id: 'FAM118A', score: 5 }},
+{data: { id: 'CENPJ', score: 5 }},
+{data: { id: 'FAM160B1', score: 2 }}], 
+ edges: [{ data: { source: 'MAP3K5', target: 'TNFSF13B', directed: 'false', weight: 0.9772770000000001} },
+{ data: { source: 'MAP3K5', target: 'FAM118A', directed: 'false', weight: 0.171414} },
+{ data: { source: 'MAP3K5', target: 'MAP3K15', directed: 'false', weight: 0.171414} },
+{ data: { source: 'MAP3K5', target: 'FAM160B1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'MAP3K5', target: 'MAP3K6', directed: 'false', weight: 0.151455} },
+{ data: { source: 'TNFSF13B', target: 'MAP3K15', directed: 'false', weight: 0.980426} },
+{ data: { source: 'TNFSF13B', target: 'FAM160B1', directed: 'false', weight: 0.970701} },
+{ data: { source: 'TNFSF13B', target: 'FAM118A', directed: 'false', weight: 0.9612709999999999} },
+{ data: { source: 'TNFSF13B', target: 'MAP3K6', directed: 'false', weight: 0.778175} },
+{ data: { source: 'PLEKHO2', target: 'CENPJ', directed: 'false', weight: 0.958175} },
+{ data: { source: 'PLEKHO2', target: 'MAP3K6', directed: 'false', weight: 0.743196} },
+{ data: { source: 'FAM118A', target: 'MAP3K15', directed: 'false', weight: 0.171414} },
+{ data: { source: 'FAM118A', target: 'FAM160B1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'FAM118A', target: 'MAP3K6', directed: 'false', weight: 0.151455} },
+{ data: { source: 'MAP3K6', target: 'CENPJ', directed: 'false', weight: 0.151455} },
+{ data: { source: 'MAP3K6', target: 'MAP3K15', directed: 'false', weight: 0.151455} },
+{ data: { source: 'MAP3K6', target: 'FAM160B1', directed: 'false', weight: 0.133456} },
+{ data: { source: 'FAM160B1', target: 'MAP3K15', directed: 'false', weight: 0.151455} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.56038
+    </section>
+    </body>
+    </html>
+    

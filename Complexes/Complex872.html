@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 872</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex873.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'LCOR', score: 5 }},
+{data: { id: 'CTBP1', score: 5 }},
+{data: { id: 'GALK1', score: 5 }},
+{data: { id: 'TRPS1', score: 5 }},
+{data: { id: 'C15orf39', score: 3 }}], 
+ edges: [{ data: { source: 'CTBP1', target: 'LCOR', directed: 'false', weight: 0.965757} },
+{ data: { source: 'CTBP1', target: 'TRPS1', directed: 'false', weight: 0.843407} },
+{ data: { source: 'CTBP1', target: 'C15orf39', directed: 'false', weight: 0.614613} },
+{ data: { source: 'CTBP1', target: 'GALK1', directed: 'false', weight: 0.37205900000000003} },
+{ data: { source: 'C15orf39', target: 'TRPS1', directed: 'false', weight: 0.128057} },
+{ data: { source: 'C15orf39', target: 'LCOR', directed: 'false', weight: 0.112499} },
+{ data: { source: 'LCOR', target: 'TRPS1', directed: 'false', weight: 0.151455} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.60766
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,90 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 972</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex973.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ADCY6', score: 5 }},
+{data: { id: 'HEG1', score: 5 }},
+{data: { id: 'LGALS3', score: 5 }},
+{data: { id: 'ITGA1', score: 5 }},
+{data: { id: 'SDK1', score: 5 }},
+{data: { id: 'SLC17A5', score: 5 }},
+{data: { id: 'TMEM63A', score: 5 }}], 
+ edges: [{ data: { source: 'SDK1', target: 'LGALS3', directed: 'false', weight: 0.8939290000000001} },
+{ data: { source: 'SDK1', target: 'ITGA1', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'SDK1', target: 'HEG1', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'SDK1', target: 'SLC17A5', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'SDK1', target: 'TMEM63A', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'HEG1', target: 'SLC17A5', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'HEG1', target: 'ITGA1', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'HEG1', target: 'LGALS3', directed: 'false', weight: 0.336084} },
+{ data: { source: 'HEG1', target: 'TMEM63A', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'TMEM63A', target: 'ITGA1', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'TMEM63A', target: 'SLC17A5', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'ADCY6', target: 'ITGA1', directed: 'false', weight: 0.238157} },
+{ data: { source: 'ADCY6', target: 'SLC17A5', directed: 'false', weight: 0.238157} },
+{ data: { source: 'ITGA1', target: 'SLC17A5', directed: 'false', weight: 0.33813200000000004} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.57752
+    </section>
+    </body>
+    </html>
+    

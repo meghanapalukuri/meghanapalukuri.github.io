@@ -1,0 +1,114 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1009</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1010.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'IMPAD1', score: 3 }},
+{data: { id: 'SEMA4F', score: 5 }},
+{data: { id: 'CHST12', score: 5 }},
+{data: { id: 'DIPK1B', score: 3 }},
+{data: { id: 'ENTPD6', score: 5 }},
+{data: { id: 'CHST14', score: 5 }},
+{data: { id: 'PACC1', score: 5 }},
+{data: { id: 'LRIG1', score: 5 }},
+{data: { id: 'LRFN3', score: 5 }},
+{data: { id: 'NETO2', score: 4 }}], 
+ edges: [{ data: { source: 'SEMA4F', target: 'ENTPD6', directed: 'false', weight: 0.37254} },
+{ data: { source: 'SEMA4F', target: 'CHST12', directed: 'false', weight: 0.26252600000000004} },
+{ data: { source: 'SEMA4F', target: 'CHST14', directed: 'false', weight: 0.17396099999999998} },
+{ data: { source: 'SEMA4F', target: 'LRIG1', directed: 'false', weight: 0.140575} },
+{ data: { source: 'PACC1', target: 'ENTPD6', directed: 'false', weight: 0.37254} },
+{ data: { source: 'PACC1', target: 'DIPK1B', directed: 'false', weight: 0.359898} },
+{ data: { source: 'PACC1', target: 'IMPAD1', directed: 'false', weight: 0.164021} },
+{ data: { source: 'PACC1', target: 'CHST12', directed: 'false', weight: 0.124904} },
+{ data: { source: 'PACC1', target: 'CHST14', directed: 'false', weight: 0.124124} },
+{ data: { source: 'PACC1', target: 'LRFN3', directed: 'false', weight: 0.102586} },
+{ data: { source: 'PACC1', target: 'LRIG1', directed: 'false', weight: 0.07892769999999999} },
+{ data: { source: 'LRFN3', target: 'CHST12', directed: 'false', weight: 0.353919} },
+{ data: { source: 'LRFN3', target: 'DIPK1B', directed: 'false', weight: 0.329342} },
+{ data: { source: 'LRFN3', target: 'LRIG1', directed: 'false', weight: 0.25908400000000004} },
+{ data: { source: 'LRFN3', target: 'ENTPD6', directed: 'false', weight: 0.22340100000000002} },
+{ data: { source: 'LRFN3', target: 'CHST14', directed: 'false', weight: 0.223189} },
+{ data: { source: 'LRFN3', target: 'IMPAD1', directed: 'false', weight: 0.22075999999999998} },
+{ data: { source: 'NETO2', target: 'DIPK1B', directed: 'false', weight: 0.49374300000000004} },
+{ data: { source: 'NETO2', target: 'CHST14', directed: 'false', weight: 0.170156} },
+{ data: { source: 'NETO2', target: 'IMPAD1', directed: 'false', weight: 0.143488} },
+{ data: { source: 'ENTPD6', target: 'LRIG1', directed: 'false', weight: 0.725223} },
+{ data: { source: 'ENTPD6', target: 'DIPK1B', directed: 'false', weight: 0.622679} },
+{ data: { source: 'ENTPD6', target: 'IMPAD1', directed: 'false', weight: 0.438147} },
+{ data: { source: 'ENTPD6', target: 'CHST12', directed: 'false', weight: 0.358021} },
+{ data: { source: 'ENTPD6', target: 'CHST14', directed: 'false', weight: 0.342471} },
+{ data: { source: 'CHST12', target: 'LRIG1', directed: 'false', weight: 0.35973099999999997} },
+{ data: { source: 'CHST12', target: 'CHST14', directed: 'false', weight: 0.318657} },
+{ data: { source: 'CHST12', target: 'DIPK1B', directed: 'false', weight: 0.307265} },
+{ data: { source: 'CHST12', target: 'IMPAD1', directed: 'false', weight: 0.133217} },
+{ data: { source: 'CHST14', target: 'LRIG1', directed: 'false', weight: 0.26962800000000003} },
+{ data: { source: 'CHST14', target: 'DIPK1B', directed: 'false', weight: 0.180576} },
+{ data: { source: 'CHST14', target: 'IMPAD1', directed: 'false', weight: 0.100271} },
+{ data: { source: 'DIPK1B', target: 'IMPAD1', directed: 'false', weight: 0.276586} },
+{ data: { source: 'DIPK1B', target: 'LRIG1', directed: 'false', weight: 0.211445} },
+{ data: { source: 'LRIG1', target: 'IMPAD1', directed: 'false', weight: 0.154798} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.56985
+    </section>
+    </body>
+    </html>
+    

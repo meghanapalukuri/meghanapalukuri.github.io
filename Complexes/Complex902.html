@@ -1,0 +1,154 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 902</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex903.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SGSH', score: 5 }},
+{data: { id: 'GALNS', score: 5 }},
+{data: { id: 'MOXD1', score: 5 }},
+{data: { id: 'ARSK', score: 4 }},
+{data: { id: 'TXNDC16', score: 5 }},
+{data: { id: 'MAN2A1', score: 5 }},
+{data: { id: 'CERCAM', score: 5 }},
+{data: { id: 'ARSB', score: 5 }},
+{data: { id: 'MEGF8', score: 5 }},
+{data: { id: 'ITGA8', score: 5 }},
+{data: { id: 'SIAE', score: 5 }},
+{data: { id: 'FUT11', score: 4 }},
+{data: { id: 'POGLUT1', score: 5 }},
+{data: { id: 'CACNA2D2', score: 5 }}], 
+ edges: [{ data: { source: 'ARSK', target: 'POGLUT1', directed: 'false', weight: 0.8864040000000001} },
+{ data: { source: 'ARSK', target: 'MAN2A1', directed: 'false', weight: 0.81576} },
+{ data: { source: 'ARSK', target: 'SIAE', directed: 'false', weight: 0.7475390000000001} },
+{ data: { source: 'ARSK', target: 'TXNDC16', directed: 'false', weight: 0.711407} },
+{ data: { source: 'ARSK', target: 'CACNA2D2', directed: 'false', weight: 0.6616770000000001} },
+{ data: { source: 'ARSK', target: 'MOXD1', directed: 'false', weight: 0.631306} },
+{ data: { source: 'ARSK', target: 'ITGA8', directed: 'false', weight: 0.610646} },
+{ data: { source: 'ARSK', target: 'ARSB', directed: 'false', weight: 0.5} },
+{ data: { source: 'ARSK', target: 'MEGF8', directed: 'false', weight: 0.489958} },
+{ data: { source: 'ARSK', target: 'CERCAM', directed: 'false', weight: 0.463631} },
+{ data: { source: 'ARSK', target: 'GALNS', directed: 'false', weight: 0.394927} },
+{ data: { source: 'CERCAM', target: 'TXNDC16', directed: 'false', weight: 0.7851739999999999} },
+{ data: { source: 'CERCAM', target: 'FUT11', directed: 'false', weight: 0.7563380000000001} },
+{ data: { source: 'CERCAM', target: 'MEGF8', directed: 'false', weight: 0.643514} },
+{ data: { source: 'CERCAM', target: 'SGSH', directed: 'false', weight: 0.588342} },
+{ data: { source: 'CERCAM', target: 'POGLUT1', directed: 'false', weight: 0.476051} },
+{ data: { source: 'CERCAM', target: 'GALNS', directed: 'false', weight: 0.432575} },
+{ data: { source: 'CERCAM', target: 'MAN2A1', directed: 'false', weight: 0.355254} },
+{ data: { source: 'CERCAM', target: 'SIAE', directed: 'false', weight: 0.320284} },
+{ data: { source: 'SIAE', target: 'SGSH', directed: 'false', weight: 0.8898159999999999} },
+{ data: { source: 'SIAE', target: 'POGLUT1', directed: 'false', weight: 0.879556} },
+{ data: { source: 'SIAE', target: 'TXNDC16', directed: 'false', weight: 0.849734} },
+{ data: { source: 'SIAE', target: 'ARSB', directed: 'false', weight: 0.554096} },
+{ data: { source: 'SIAE', target: 'MEGF8', directed: 'false', weight: 0.485256} },
+{ data: { source: 'SIAE', target: 'FUT11', directed: 'false', weight: 0.447254} },
+{ data: { source: 'SIAE', target: 'MOXD1', directed: 'false', weight: 0.415713} },
+{ data: { source: 'SIAE', target: 'GALNS', directed: 'false', weight: 0.382211} },
+{ data: { source: 'SIAE', target: 'CACNA2D2', directed: 'false', weight: 0.263791} },
+{ data: { source: 'SIAE', target: 'ITGA8', directed: 'false', weight: 0.238733} },
+{ data: { source: 'SIAE', target: 'MAN2A1', directed: 'false', weight: 0.23248400000000002} },
+{ data: { source: 'ARSB', target: 'POGLUT1', directed: 'false', weight: 0.44086899999999996} },
+{ data: { source: 'ARSB', target: 'MOXD1', directed: 'false', weight: 0.377325} },
+{ data: { source: 'ARSB', target: 'MEGF8', directed: 'false', weight: 0.265049} },
+{ data: { source: 'ARSB', target: 'GALNS', directed: 'false', weight: 0.240954} },
+{ data: { source: 'ARSB', target: 'CACNA2D2', directed: 'false', weight: 0.22344899999999998} },
+{ data: { source: 'ARSB', target: 'MAN2A1', directed: 'false', weight: 0.22344899999999998} },
+{ data: { source: 'ARSB', target: 'ITGA8', directed: 'false', weight: 0.2162} },
+{ data: { source: 'ARSB', target: 'TXNDC16', directed: 'false', weight: 0.195677} },
+{ data: { source: 'GALNS', target: 'TXNDC16', directed: 'false', weight: 0.638939} },
+{ data: { source: 'GALNS', target: 'FUT11', directed: 'false', weight: 0.49135100000000004} },
+{ data: { source: 'GALNS', target: 'POGLUT1', directed: 'false', weight: 0.426387} },
+{ data: { source: 'GALNS', target: 'MEGF8', directed: 'false', weight: 0.38145300000000004} },
+{ data: { source: 'GALNS', target: 'MAN2A1', directed: 'false', weight: 0.329342} },
+{ data: { source: 'GALNS', target: 'SGSH', directed: 'false', weight: 0.269524} },
+{ data: { source: 'GALNS', target: 'MOXD1', directed: 'false', weight: 0.10701400000000001} },
+{ data: { source: 'ITGA8', target: 'CACNA2D2', directed: 'false', weight: 0.643729} },
+{ data: { source: 'ITGA8', target: 'POGLUT1', directed: 'false', weight: 0.519949} },
+{ data: { source: 'ITGA8', target: 'MAN2A1', directed: 'false', weight: 0.28913} },
+{ data: { source: 'ITGA8', target: 'MOXD1', directed: 'false', weight: 0.274547} },
+{ data: { source: 'ITGA8', target: 'MEGF8', directed: 'false', weight: 0.253645} },
+{ data: { source: 'MOXD1', target: 'CACNA2D2', directed: 'false', weight: 0.355254} },
+{ data: { source: 'MOXD1', target: 'POGLUT1', directed: 'false', weight: 0.33569299999999996} },
+{ data: { source: 'MOXD1', target: 'TXNDC16', directed: 'false', weight: 0.251952} },
+{ data: { source: 'MOXD1', target: 'MAN2A1', directed: 'false', weight: 0.250272} },
+{ data: { source: 'MOXD1', target: 'MEGF8', directed: 'false', weight: 0.128496} },
+{ data: { source: 'TXNDC16', target: 'FUT11', directed: 'false', weight: 0.837802} },
+{ data: { source: 'TXNDC16', target: 'POGLUT1', directed: 'false', weight: 0.53483} },
+{ data: { source: 'TXNDC16', target: 'SGSH', directed: 'false', weight: 0.48393} },
+{ data: { source: 'TXNDC16', target: 'MEGF8', directed: 'false', weight: 0.47748500000000005} },
+{ data: { source: 'TXNDC16', target: 'MAN2A1', directed: 'false', weight: 0.39475} },
+{ data: { source: 'MEGF8', target: 'SGSH', directed: 'false', weight: 0.819375} },
+{ data: { source: 'MEGF8', target: 'FUT11', directed: 'false', weight: 0.664324} },
+{ data: { source: 'MEGF8', target: 'POGLUT1', directed: 'false', weight: 0.310145} },
+{ data: { source: 'MEGF8', target: 'CACNA2D2', directed: 'false', weight: 0.291416} },
+{ data: { source: 'MEGF8', target: 'MAN2A1', directed: 'false', weight: 0.20438299999999998} },
+{ data: { source: 'CACNA2D2', target: 'POGLUT1', directed: 'false', weight: 0.359898} },
+{ data: { source: 'CACNA2D2', target: 'MAN2A1', directed: 'false', weight: 0.273449} },
+{ data: { source: 'POGLUT1', target: 'MAN2A1', directed: 'false', weight: 0.359898} },
+{ data: { source: 'FUT11', target: 'MAN2A1', directed: 'false', weight: 0.781242} },
+{ data: { source: 'FUT11', target: 'SGSH', directed: 'false', weight: 0.668928} },
+{ data: { source: 'MAN2A1', target: 'SGSH', directed: 'false', weight: 0.22733499999999998} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.59402
+    </section>
+    </body>
+    </html>
+    

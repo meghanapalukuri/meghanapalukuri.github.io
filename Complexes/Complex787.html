@@ -1,0 +1,91 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 787</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex788.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'LSM4', score: 5 }},
+{data: { id: 'LSM8', score: 5 }},
+{data: { id: 'LSM5', score: 5 }},
+{data: { id: 'SLU7', score: 5 }},
+{data: { id: 'SPTB', score: 5 }},
+{data: { id: 'LSM7', score: 5 }}], 
+ edges: [{ data: { source: 'SPTB', target: 'LSM4', directed: 'false', weight: 0.652135} },
+{ data: { source: 'SPTB', target: 'LSM8', directed: 'false', weight: 0.559754} },
+{ data: { source: 'SPTB', target: 'LSM5', directed: 'false', weight: 0.09732719999999999} },
+{ data: { source: 'LSM5', target: 'LSM4', directed: 'false', weight: 0.947391} },
+{ data: { source: 'LSM5', target: 'LSM8', directed: 'false', weight: 0.8149609999999999} },
+{ data: { source: 'LSM5', target: 'SLU7', directed: 'false', weight: 0.341941} },
+{ data: { source: 'SLU7', target: 'LSM7', directed: 'false', weight: 0.8827309999999999} },
+{ data: { source: 'SLU7', target: 'LSM4', directed: 'false', weight: 0.869807} },
+{ data: { source: 'SLU7', target: 'LSM8', directed: 'false', weight: 0.815326} },
+{ data: { source: 'LSM7', target: 'LSM8', directed: 'false', weight: 0.044931} },
+{ data: { source: 'LSM4', target: 'LSM8', directed: 'false', weight: 0.12505} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.64875
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>SLU7
+    </section>
+    </body>
+    </html>
+    

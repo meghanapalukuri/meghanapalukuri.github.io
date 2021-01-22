@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1024</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1025.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RHOD', score: 5 }},
+{data: { id: 'PLXNB2', score: 5 }},
+{data: { id: 'DAAM1', score: 5 }},
+{data: { id: 'C1orf198', score: 3 }},
+{data: { id: 'CACNA2D2', score: 5 }}], 
+ edges: [{ data: { source: 'C1orf198', target: 'RHOD', directed: 'false', weight: 0.573116} },
+{ data: { source: 'C1orf198', target: 'PLXNB2', directed: 'false', weight: 0.0938091} },
+{ data: { source: 'C1orf198', target: 'DAAM1', directed: 'false', weight: 0.08909589999999999} },
+{ data: { source: 'DAAM1', target: 'RHOD', directed: 'false', weight: 0.5138520000000001} },
+{ data: { source: 'DAAM1', target: 'PLXNB2', directed: 'false', weight: 0.0621592} },
+{ data: { source: 'PLXNB2', target: 'RHOD', directed: 'false', weight: 0.457848} },
+{ data: { source: 'PLXNB2', target: 'CACNA2D2', directed: 'false', weight: 0.383635} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.56721
+    </section>
+    </body>
+    </html>
+    

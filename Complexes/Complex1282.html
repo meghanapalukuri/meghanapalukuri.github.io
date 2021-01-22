@@ -1,0 +1,94 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1282</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1283.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GTF2I', score: 5 }},
+{data: { id: 'SPTAN1', score: 5 }},
+{data: { id: 'HNRNPL', score: 5 }},
+{data: { id: 'SPTBN1', score: 5 }},
+{data: { id: 'ILF2', score: 5 }},
+{data: { id: 'VCP', score: 5 }},
+{data: { id: 'STRBP', score: 5 }},
+{data: { id: 'SF3B3', score: 5 }}], 
+ edges: [{ data: { source: 'HNRNPL', target: 'ILF2', directed: 'false', weight: 0.993767} },
+{ data: { source: 'HNRNPL', target: 'STRBP', directed: 'false', weight: 0.165698} },
+{ data: { source: 'SPTBN1', target: 'SF3B3', directed: 'false', weight: 0.9821479999999999} },
+{ data: { source: 'SPTBN1', target: 'ILF2', directed: 'false', weight: 0.9526819999999999} },
+{ data: { source: 'SPTBN1', target: 'VCP', directed: 'false', weight: 0.560491} },
+{ data: { source: 'SPTBN1', target: 'GTF2I', directed: 'false', weight: 0.392052} },
+{ data: { source: 'SPTBN1', target: 'STRBP', directed: 'false', weight: 0.294973} },
+{ data: { source: 'SPTBN1', target: 'SPTAN1', directed: 'false', weight: 0.252471} },
+{ data: { source: 'SF3B3', target: 'SPTAN1', directed: 'false', weight: 0.9859950000000001} },
+{ data: { source: 'SF3B3', target: 'VCP', directed: 'false', weight: 0.9253809999999999} },
+{ data: { source: 'ILF2', target: 'SPTAN1', directed: 'false', weight: 0.9828600000000001} },
+{ data: { source: 'ILF2', target: 'STRBP', directed: 'false', weight: 0.927007} },
+{ data: { source: 'ILF2', target: 'VCP', directed: 'false', weight: 0.789341} },
+{ data: { source: 'ILF2', target: 'GTF2I', directed: 'false', weight: 0.5} },
+{ data: { source: 'STRBP', target: 'SPTAN1', directed: 'false', weight: 0.5} },
+{ data: { source: 'GTF2I', target: 'SPTAN1', directed: 'false', weight: 0.483498} },
+{ data: { source: 'VCP', target: 'SPTAN1', directed: 'false', weight: 0.317915} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.52610
+    </section>
+    </body>
+    </html>
+    

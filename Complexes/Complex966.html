@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 966</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex967.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GALNT16', score: 5 }},
+{data: { id: 'CDA', score: 5 }},
+{data: { id: 'PEX19', score: 5 }},
+{data: { id: 'MARC2', score: 0 }},
+{data: { id: 'EXOG', score: 5 }}], 
+ edges: [{ data: { source: 'EXOG', target: 'PEX19', directed: 'false', weight: 0.600234} },
+{ data: { source: 'EXOG', target: 'GALNT16', directed: 'false', weight: 0.151455} },
+{ data: { source: 'EXOG', target: 'MARC2', directed: 'false', weight: 0.133456} },
+{ data: { source: 'MARC2', target: 'PEX19', directed: 'false', weight: 0.49180100000000004} },
+{ data: { source: 'MARC2', target: 'GALNT16', directed: 'false', weight: 0.151455} },
+{ data: { source: 'CDA', target: 'PEX19', directed: 'false', weight: 0.374221} },
+{ data: { source: 'GALNT16', target: 'PEX19', directed: 'false', weight: 0.612638} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.57926
+    </section>
+    </body>
+    </html>
+    

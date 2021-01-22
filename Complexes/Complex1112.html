@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1112</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1113.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'AATF', score: 5 }},
+{data: { id: 'NSUN5', score: 5 }},
+{data: { id: 'BCCIP', score: 5 }},
+{data: { id: 'NOC2L', score: 5 }},
+{data: { id: 'WDR36', score: 5 }},
+{data: { id: 'WDR3', score: 4 }},
+{data: { id: 'TBL3', score: 4 }},
+{data: { id: 'NOB1', score: 5 }},
+{data: { id: 'PWP2', score: 3 }}], 
+ edges: [{ data: { source: 'WDR3', target: 'TBL3', directed: 'false', weight: 0.999994} },
+{ data: { source: 'WDR3', target: 'WDR36', directed: 'false', weight: 0.9999389999999999} },
+{ data: { source: 'WDR3', target: 'PWP2', directed: 'false', weight: 0.9988100000000001} },
+{ data: { source: 'WDR3', target: 'NSUN5', directed: 'false', weight: 0.798561} },
+{ data: { source: 'WDR3', target: 'NOB1', directed: 'false', weight: 0.569609} },
+{ data: { source: 'WDR3', target: 'BCCIP', directed: 'false', weight: 0.225523} },
+{ data: { source: 'PWP2', target: 'WDR36', directed: 'false', weight: 0.999934} },
+{ data: { source: 'PWP2', target: 'TBL3', directed: 'false', weight: 0.9998229999999999} },
+{ data: { source: 'PWP2', target: 'BCCIP', directed: 'false', weight: 0.32501399999999997} },
+{ data: { source: 'PWP2', target: 'NSUN5', directed: 'false', weight: 0.0532126} },
+{ data: { source: 'WDR36', target: 'TBL3', directed: 'false', weight: 0.9997010000000001} },
+{ data: { source: 'WDR36', target: 'BCCIP', directed: 'false', weight: 0.9457270000000001} },
+{ data: { source: 'WDR36', target: 'NOC2L', directed: 'false', weight: 0.848224} },
+{ data: { source: 'WDR36', target: 'AATF', directed: 'false', weight: 0.6894779999999999} },
+{ data: { source: 'WDR36', target: 'NSUN5', directed: 'false', weight: 0.109293} },
+{ data: { source: 'AATF', target: 'TBL3', directed: 'false', weight: 0.700388} },
+{ data: { source: 'AATF', target: 'NOC2L', directed: 'false', weight: 0.633165} },
+{ data: { source: 'TBL3', target: 'BCCIP', directed: 'false', weight: 0.7894939999999999} },
+{ data: { source: 'TBL3', target: 'NSUN5', directed: 'false', weight: 0.111451} },
+{ data: { source: 'NSUN5', target: 'NOB1', directed: 'false', weight: 0.09128789999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.54803
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>AATF
+    </section>
+    </body>
+    </html>
+    

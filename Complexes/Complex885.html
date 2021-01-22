@@ -1,0 +1,100 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 885</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex886.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GORASP2', score: 5 }},
+{data: { id: 'GALE', score: 5 }},
+{data: { id: 'GARS', score: 2 }},
+{data: { id: 'ISYNA1', score: 5 }},
+{data: { id: 'GPD1L', score: 5 }},
+{data: { id: 'PGD', score: 5 }},
+{data: { id: 'ALDOA', score: 5 }},
+{data: { id: 'PGP', score: 5 }},
+{data: { id: 'ALDOC', score: 5 }}], 
+ edges: [{ data: { source: 'GORASP2', target: 'ALDOC', directed: 'false', weight: 0.847726} },
+{ data: { source: 'GORASP2', target: 'ALDOA', directed: 'false', weight: 0.7543850000000001} },
+{ data: { source: 'GORASP2', target: 'PGP', directed: 'false', weight: 0.0585136} },
+{ data: { source: 'ISYNA1', target: 'PGD', directed: 'false', weight: 0.842706} },
+{ data: { source: 'ISYNA1', target: 'ALDOC', directed: 'false', weight: 0.682411} },
+{ data: { source: 'ISYNA1', target: 'ALDOA', directed: 'false', weight: 0.605905} },
+{ data: { source: 'PGP', target: 'ALDOC', directed: 'false', weight: 0.74417} },
+{ data: { source: 'PGP', target: 'ALDOA', directed: 'false', weight: 0.705696} },
+{ data: { source: 'PGP', target: 'PGD', directed: 'false', weight: 0.037307599999999996} },
+{ data: { source: 'PGP', target: 'GALE', directed: 'false', weight: 0.0349329} },
+{ data: { source: 'PGP', target: 'GPD1L', directed: 'false', weight: 0.014352700000000001} },
+{ data: { source: 'ALDOC', target: 'GPD1L', directed: 'false', weight: 0.9169149999999999} },
+{ data: { source: 'ALDOC', target: 'GALE', directed: 'false', weight: 0.83836} },
+{ data: { source: 'ALDOC', target: 'PGD', directed: 'false', weight: 0.765273} },
+{ data: { source: 'ALDOC', target: 'ALDOA', directed: 'false', weight: 0.6952649999999999} },
+{ data: { source: 'PGD', target: 'ALDOA', directed: 'false', weight: 0.86755} },
+{ data: { source: 'PGD', target: 'GALE', directed: 'false', weight: 0.819348} },
+{ data: { source: 'PGD', target: 'GPD1L', directed: 'false', weight: 0.0632839} },
+{ data: { source: 'GPD1L', target: 'ALDOA', directed: 'false', weight: 0.8995280000000001} },
+{ data: { source: 'GPD1L', target: 'GALE', directed: 'false', weight: 0.052387800000000005} },
+{ data: { source: 'GARS', target: 'GALE', directed: 'false', weight: 0.755182} },
+{ data: { source: 'ALDOA', target: 'GALE', directed: 'false', weight: 0.508292} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.59952
+    </section>
+    </body>
+    </html>
+    

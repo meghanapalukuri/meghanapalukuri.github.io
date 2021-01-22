@@ -1,0 +1,82 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 899</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex900.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PODXL2', score: 5 }},
+{data: { id: 'PCDHGC3', score: 4 }},
+{data: { id: 'CDON', score: 5 }},
+{data: { id: 'CEACAM21', score: 3 }},
+{data: { id: 'PCDHGA11', score: 3 }}], 
+ edges: [{ data: { source: 'PCDHGA11', target: 'PCDHGC3', directed: 'false', weight: 0.33813200000000004} },
+{ data: { source: 'PCDHGA11', target: 'CEACAM21', directed: 'false', weight: 0.296129} },
+{ data: { source: 'PCDHGA11', target: 'CDON', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PODXL2', target: 'CEACAM21', directed: 'false', weight: 0.5} },
+{ data: { source: 'PODXL2', target: 'CDON', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PCDHGC3', target: 'CEACAM21', directed: 'false', weight: 0.284912} },
+{ data: { source: 'PCDHGC3', target: 'CDON', directed: 'false', weight: 0.151455} },
+{ data: { source: 'CDON', target: 'CEACAM21', directed: 'false', weight: 0.9161389999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.59421
+    </section>
+    </body>
+    </html>
+    

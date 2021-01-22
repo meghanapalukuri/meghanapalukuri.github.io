@@ -1,0 +1,120 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 152</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex153.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'EMC10', score: 5 }},
+{data: { id: 'EMC3', score: 4 }},
+{data: { id: 'EMC7', score: 4 }},
+{data: { id: 'EMC4', score: 5 }},
+{data: { id: 'EMC6', score: 5 }},
+{data: { id: 'EMC9', score: 3 }},
+{data: { id: 'EMC2', score: 5 }},
+{data: { id: 'MMGT1', score: 5 }},
+{data: { id: 'EMC8', score: 5 }},
+{data: { id: 'EMC1', score: 5 }}], 
+ edges: [{ data: { source: 'EMC1', target: 'EMC2', directed: 'false', weight: 0.9995790000000001} },
+{ data: { source: 'EMC1', target: 'EMC4', directed: 'false', weight: 0.990001} },
+{ data: { source: 'EMC1', target: 'EMC7', directed: 'false', weight: 0.986936} },
+{ data: { source: 'EMC1', target: 'EMC3', directed: 'false', weight: 0.979024} },
+{ data: { source: 'EMC1', target: 'EMC10', directed: 'false', weight: 0.978599} },
+{ data: { source: 'EMC1', target: 'EMC8', directed: 'false', weight: 0.978348} },
+{ data: { source: 'EMC1', target: 'MMGT1', directed: 'false', weight: 0.874166} },
+{ data: { source: 'EMC2', target: 'EMC8', directed: 'false', weight: 1.0} },
+{ data: { source: 'EMC2', target: 'EMC3', directed: 'false', weight: 0.999999} },
+{ data: { source: 'EMC2', target: 'EMC10', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'EMC2', target: 'EMC7', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'EMC2', target: 'EMC4', directed: 'false', weight: 0.999992} },
+{ data: { source: 'EMC2', target: 'MMGT1', directed: 'false', weight: 0.9999170000000001} },
+{ data: { source: 'EMC2', target: 'EMC9', directed: 'false', weight: 0.9416100000000001} },
+{ data: { source: 'EMC2', target: 'EMC6', directed: 'false', weight: 0.8574440000000001} },
+{ data: { source: 'EMC8', target: 'EMC3', directed: 'false', weight: 0.9996879999999999} },
+{ data: { source: 'EMC8', target: 'MMGT1', directed: 'false', weight: 0.99375} },
+{ data: { source: 'EMC8', target: 'EMC6', directed: 'false', weight: 0.975289} },
+{ data: { source: 'EMC8', target: 'EMC7', directed: 'false', weight: 0.934025} },
+{ data: { source: 'EMC8', target: 'EMC10', directed: 'false', weight: 0.908482} },
+{ data: { source: 'EMC8', target: 'EMC4', directed: 'false', weight: 0.8755069999999999} },
+{ data: { source: 'EMC10', target: 'MMGT1', directed: 'false', weight: 0.980037} },
+{ data: { source: 'EMC10', target: 'EMC6', directed: 'false', weight: 0.884158} },
+{ data: { source: 'EMC10', target: 'EMC7', directed: 'false', weight: 0.8571799999999999} },
+{ data: { source: 'EMC10', target: 'EMC3', directed: 'false', weight: 0.826782} },
+{ data: { source: 'EMC10', target: 'EMC4', directed: 'false', weight: 0.739287} },
+{ data: { source: 'EMC6', target: 'EMC4', directed: 'false', weight: 0.981416} },
+{ data: { source: 'EMC6', target: 'MMGT1', directed: 'false', weight: 0.937786} },
+{ data: { source: 'EMC6', target: 'EMC7', directed: 'false', weight: 0.267304} },
+{ data: { source: 'EMC6', target: 'EMC3', directed: 'false', weight: 0.197241} },
+{ data: { source: 'EMC3', target: 'EMC7', directed: 'false', weight: 0.9993350000000001} },
+{ data: { source: 'EMC3', target: 'EMC4', directed: 'false', weight: 0.997107} },
+{ data: { source: 'EMC3', target: 'MMGT1', directed: 'false', weight: 0.9879100000000001} },
+{ data: { source: 'MMGT1', target: 'EMC4', directed: 'false', weight: 0.982634} },
+{ data: { source: 'MMGT1', target: 'EMC7', directed: 'false', weight: 0.41810699999999995} },
+{ data: { source: 'EMC7', target: 'EMC4', directed: 'false', weight: 0.858441} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.88652
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>EMC1
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,251 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 120</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex121.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'EIF1AX', score: 4 }},
+{data: { id: 'RPS18', score: 5 }},
+{data: { id: 'RPL19', score: 5 }},
+{data: { id: 'NPM3', score: 5 }},
+{data: { id: 'NPM1', score: 5 }},
+{data: { id: 'RPL5', score: 5 }},
+{data: { id: 'RPS2', score: 5 }},
+{data: { id: 'RPS13', score: 5 }},
+{data: { id: 'RPS19', score: 5 }},
+{data: { id: 'ZNF622', score: 5 }},
+{data: { id: 'SERBP1', score: 5 }},
+{data: { id: 'RPS17', score: 5 }},
+{data: { id: 'RPL10', score: 5 }},
+{data: { id: 'DDX47', score: 5 }},
+{data: { id: 'RPS3', score: 5 }},
+{data: { id: 'TSR1', score: 4 }},
+{data: { id: 'DHX29', score: 5 }},
+{data: { id: 'NAT10', score: 5 }},
+{data: { id: 'RPS5', score: 5 }}], 
+ edges: [{ data: { source: 'NPM3', target: 'NPM1', directed: 'false', weight: 0.990566} },
+{ data: { source: 'NPM3', target: 'RPL19', directed: 'false', weight: 0.7208859999999999} },
+{ data: { source: 'NPM3', target: 'SERBP1', directed: 'false', weight: 0.661929} },
+{ data: { source: 'NPM3', target: 'RPL5', directed: 'false', weight: 0.625162} },
+{ data: { source: 'NPM3', target: 'EIF1AX', directed: 'false', weight: 0.594072} },
+{ data: { source: 'NPM3', target: 'RPS19', directed: 'false', weight: 0.594016} },
+{ data: { source: 'NPM3', target: 'DHX29', directed: 'false', weight: 0.594016} },
+{ data: { source: 'NPM3', target: 'DDX47', directed: 'false', weight: 0.594016} },
+{ data: { source: 'NPM3', target: 'TSR1', directed: 'false', weight: 0.586209} },
+{ data: { source: 'NPM3', target: 'RPS13', directed: 'false', weight: 0.544355} },
+{ data: { source: 'NPM3', target: 'ZNF622', directed: 'false', weight: 0.535428} },
+{ data: { source: 'NPM3', target: 'RPL10', directed: 'false', weight: 0.530118} },
+{ data: { source: 'NPM3', target: 'RPS5', directed: 'false', weight: 0.5} },
+{ data: { source: 'NPM3', target: 'RPS2', directed: 'false', weight: 0.442166} },
+{ data: { source: 'NPM3', target: 'RPS3', directed: 'false', weight: 0.37043899999999996} },
+{ data: { source: 'NPM3', target: 'RPS18', directed: 'false', weight: 0.357098} },
+{ data: { source: 'NPM3', target: 'RPS17', directed: 'false', weight: 0.334715} },
+{ data: { source: 'NPM3', target: 'NAT10', directed: 'false', weight: 0.21406} },
+{ data: { source: 'RPS2', target: 'RPS19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPS18', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPS5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPL10', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS2', target: 'TSR1', directed: 'false', weight: 0.9999610000000001} },
+{ data: { source: 'RPS2', target: 'NAT10', directed: 'false', weight: 0.999591} },
+{ data: { source: 'RPS2', target: 'NPM1', directed: 'false', weight: 0.9987799999999999} },
+{ data: { source: 'RPS2', target: 'RPS17', directed: 'false', weight: 0.9979299999999999} },
+{ data: { source: 'RPS2', target: 'SERBP1', directed: 'false', weight: 0.9953129999999999} },
+{ data: { source: 'RPS2', target: 'ZNF622', directed: 'false', weight: 0.977734} },
+{ data: { source: 'RPS2', target: 'DDX47', directed: 'false', weight: 0.563882} },
+{ data: { source: 'RPS2', target: 'EIF1AX', directed: 'false', weight: 0.42503500000000005} },
+{ data: { source: 'SERBP1', target: 'NPM1', directed: 'false', weight: 0.99487} },
+{ data: { source: 'SERBP1', target: 'RPL10', directed: 'false', weight: 0.9791540000000001} },
+{ data: { source: 'SERBP1', target: 'RPL5', directed: 'false', weight: 0.960455} },
+{ data: { source: 'SERBP1', target: 'RPS3', directed: 'false', weight: 0.940213} },
+{ data: { source: 'SERBP1', target: 'RPL19', directed: 'false', weight: 0.935795} },
+{ data: { source: 'SERBP1', target: 'RPS19', directed: 'false', weight: 0.9052790000000001} },
+{ data: { source: 'SERBP1', target: 'RPS18', directed: 'false', weight: 0.8611139999999999} },
+{ data: { source: 'SERBP1', target: 'DHX29', directed: 'false', weight: 0.820254} },
+{ data: { source: 'SERBP1', target: 'RPS13', directed: 'false', weight: 0.739041} },
+{ data: { source: 'SERBP1', target: 'EIF1AX', directed: 'false', weight: 0.72712} },
+{ data: { source: 'SERBP1', target: 'DDX47', directed: 'false', weight: 0.594016} },
+{ data: { source: 'SERBP1', target: 'ZNF622', directed: 'false', weight: 0.535428} },
+{ data: { source: 'SERBP1', target: 'TSR1', directed: 'false', weight: 0.40438} },
+{ data: { source: 'SERBP1', target: 'RPS17', directed: 'false', weight: 0.334715} },
+{ data: { source: 'SERBP1', target: 'RPS5', directed: 'false', weight: 0.26359499999999997} },
+{ data: { source: 'SERBP1', target: 'NAT10', directed: 'false', weight: 0.21406} },
+{ data: { source: 'RPS19', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS19', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS19', target: 'RPL10', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS19', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS19', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS19', target: 'RPS5', directed: 'false', weight: 0.999966} },
+{ data: { source: 'RPS19', target: 'NPM1', directed: 'false', weight: 0.9995370000000001} },
+{ data: { source: 'RPS19', target: 'TSR1', directed: 'false', weight: 0.999094} },
+{ data: { source: 'RPS19', target: 'EIF1AX', directed: 'false', weight: 0.996316} },
+{ data: { source: 'RPS19', target: 'RPS18', directed: 'false', weight: 0.9900459999999999} },
+{ data: { source: 'RPS19', target: 'NAT10', directed: 'false', weight: 0.9891840000000001} },
+{ data: { source: 'RPS19', target: 'ZNF622', directed: 'false', weight: 0.975662} },
+{ data: { source: 'RPS19', target: 'RPS17', directed: 'false', weight: 0.9133290000000001} },
+{ data: { source: 'RPS19', target: 'DDX47', directed: 'false', weight: 0.7432} },
+{ data: { source: 'RPL10', target: 'RPS18', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPS5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPS17', directed: 'false', weight: 0.999091} },
+{ data: { source: 'RPL10', target: 'NPM1', directed: 'false', weight: 0.9925579999999999} },
+{ data: { source: 'RPL10', target: 'NAT10', directed: 'false', weight: 0.991082} },
+{ data: { source: 'RPL10', target: 'TSR1', directed: 'false', weight: 0.970219} },
+{ data: { source: 'RPL10', target: 'DDX47', directed: 'false', weight: 0.856022} },
+{ data: { source: 'RPL10', target: 'ZNF622', directed: 'false', weight: 0.521917} },
+{ data: { source: 'RPL10', target: 'EIF1AX', directed: 'false', weight: 0.112928} },
+{ data: { source: 'RPL5', target: 'RPS18', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'NPM1', directed: 'false', weight: 0.9995930000000001} },
+{ data: { source: 'RPL5', target: 'EIF1AX', directed: 'false', weight: 0.9833280000000001} },
+{ data: { source: 'RPL5', target: 'TSR1', directed: 'false', weight: 0.959059} },
+{ data: { source: 'RPL5', target: 'ZNF622', directed: 'false', weight: 0.949558} },
+{ data: { source: 'RPL5', target: 'NAT10', directed: 'false', weight: 0.923961} },
+{ data: { source: 'RPL5', target: 'DDX47', directed: 'false', weight: 0.40967200000000004} },
+{ data: { source: 'RPL5', target: 'RPS17', directed: 'false', weight: 0.256486} },
+{ data: { source: 'ZNF622', target: 'RPS3', directed: 'false', weight: 0.96554} },
+{ data: { source: 'ZNF622', target: 'NPM1', directed: 'false', weight: 0.9156110000000001} },
+{ data: { source: 'ZNF622', target: 'RPS18', directed: 'false', weight: 0.8659129999999999} },
+{ data: { source: 'ZNF622', target: 'RPL19', directed: 'false', weight: 0.8659129999999999} },
+{ data: { source: 'ZNF622', target: 'RPS13', directed: 'false', weight: 0.766149} },
+{ data: { source: 'ZNF622', target: 'RPS5', directed: 'false', weight: 0.709046} },
+{ data: { source: 'ZNF622', target: 'DDX47', directed: 'false', weight: 0.676471} },
+{ data: { source: 'ZNF622', target: 'EIF1AX', directed: 'false', weight: 0.5} },
+{ data: { source: 'ZNF622', target: 'DHX29', directed: 'false', weight: 0.459611} },
+{ data: { source: 'ZNF622', target: 'TSR1', directed: 'false', weight: 0.435331} },
+{ data: { source: 'ZNF622', target: 'RPS17', directed: 'false', weight: 0.399751} },
+{ data: { source: 'ZNF622', target: 'NAT10', directed: 'false', weight: 0.35570799999999997} },
+{ data: { source: 'RPS17', target: 'NPM1', directed: 'false', weight: 0.9982219999999999} },
+{ data: { source: 'RPS17', target: 'RPS5', directed: 'false', weight: 0.9650139999999999} },
+{ data: { source: 'RPS17', target: 'TSR1', directed: 'false', weight: 0.950865} },
+{ data: { source: 'RPS17', target: 'RPS18', directed: 'false', weight: 0.830485} },
+{ data: { source: 'RPS17', target: 'RPS13', directed: 'false', weight: 0.826069} },
+{ data: { source: 'RPS17', target: 'RPL19', directed: 'false', weight: 0.723024} },
+{ data: { source: 'RPS17', target: 'RPS3', directed: 'false', weight: 0.544938} },
+{ data: { source: 'RPS17', target: 'DDX47', directed: 'false', weight: 0.459611} },
+{ data: { source: 'RPS17', target: 'NAT10', directed: 'false', weight: 0.438366} },
+{ data: { source: 'RPS17', target: 'DHX29', directed: 'false', weight: 0.288177} },
+{ data: { source: 'RPS17', target: 'EIF1AX', directed: 'false', weight: 0.283621} },
+{ data: { source: 'DDX47', target: 'NPM1', directed: 'false', weight: 0.985181} },
+{ data: { source: 'DDX47', target: 'RPS18', directed: 'false', weight: 0.7432} },
+{ data: { source: 'DDX47', target: 'RPL19', directed: 'false', weight: 0.7432} },
+{ data: { source: 'DDX47', target: 'RPS5', directed: 'false', weight: 0.691619} },
+{ data: { source: 'DDX47', target: 'RPS3', directed: 'false', weight: 0.691281} },
+{ data: { source: 'DDX47', target: 'RPS13', directed: 'false', weight: 0.594016} },
+{ data: { source: 'DDX47', target: 'EIF1AX', directed: 'false', weight: 0.541415} },
+{ data: { source: 'DDX47', target: 'DHX29', directed: 'false', weight: 0.519755} },
+{ data: { source: 'DDX47', target: 'TSR1', directed: 'false', weight: 0.5167970000000001} },
+{ data: { source: 'DDX47', target: 'NAT10', directed: 'false', weight: 0.27932399999999996} },
+{ data: { source: 'EIF1AX', target: 'RPS3', directed: 'false', weight: 0.9998469999999999} },
+{ data: { source: 'EIF1AX', target: 'RPS13', directed: 'false', weight: 0.9898040000000001} },
+{ data: { source: 'EIF1AX', target: 'RPS18', directed: 'false', weight: 0.9717180000000001} },
+{ data: { source: 'EIF1AX', target: 'RPL19', directed: 'false', weight: 0.541415} },
+{ data: { source: 'EIF1AX', target: 'DHX29', directed: 'false', weight: 0.541415} },
+{ data: { source: 'EIF1AX', target: 'RPS5', directed: 'false', weight: 0.387818} },
+{ data: { source: 'EIF1AX', target: 'NPM1', directed: 'false', weight: 0.358481} },
+{ data: { source: 'EIF1AX', target: 'NAT10', directed: 'false', weight: 0.195685} },
+{ data: { source: 'EIF1AX', target: 'TSR1', directed: 'false', weight: 0.162482} },
+{ data: { source: 'NPM1', target: 'RPS13', directed: 'false', weight: 0.999993} },
+{ data: { source: 'NPM1', target: 'RPL19', directed: 'false', weight: 0.999991} },
+{ data: { source: 'NPM1', target: 'RPS5', directed: 'false', weight: 0.999821} },
+{ data: { source: 'NPM1', target: 'RPS18', directed: 'false', weight: 0.9993719999999999} },
+{ data: { source: 'NPM1', target: 'RPS3', directed: 'false', weight: 0.9991129999999999} },
+{ data: { source: 'NPM1', target: 'TSR1', directed: 'false', weight: 0.9943930000000001} },
+{ data: { source: 'NPM1', target: 'NAT10', directed: 'false', weight: 0.9923639999999999} },
+{ data: { source: 'RPS5', target: 'RPS18', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS5', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS5', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS5', target: 'RPS3', directed: 'false', weight: 0.9997790000000001} },
+{ data: { source: 'RPS5', target: 'TSR1', directed: 'false', weight: 0.9969030000000001} },
+{ data: { source: 'RPS5', target: 'NAT10', directed: 'false', weight: 0.991058} },
+{ data: { source: 'RPS5', target: 'DHX29', directed: 'false', weight: 0.44267399999999996} },
+{ data: { source: 'RPL19', target: 'RPS18', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL19', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL19', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL19', target: 'TSR1', directed: 'false', weight: 0.932753} },
+{ data: { source: 'RPL19', target: 'NAT10', directed: 'false', weight: 0.777578} },
+{ data: { source: 'NAT10', target: 'TSR1', directed: 'false', weight: 0.9973139999999999} },
+{ data: { source: 'NAT10', target: 'RPS3', directed: 'false', weight: 0.9150719999999999} },
+{ data: { source: 'NAT10', target: 'RPS13', directed: 'false', weight: 0.8742700000000001} },
+{ data: { source: 'NAT10', target: 'RPS18', directed: 'false', weight: 0.855547} },
+{ data: { source: 'NAT10', target: 'DHX29', directed: 'false', weight: 0.179753} },
+{ data: { source: 'TSR1', target: 'RPS13', directed: 'false', weight: 0.9989969999999999} },
+{ data: { source: 'TSR1', target: 'RPS18', directed: 'false', weight: 0.989758} },
+{ data: { source: 'TSR1', target: 'RPS3', directed: 'false', weight: 0.953851} },
+{ data: { source: 'TSR1', target: 'DHX29', directed: 'false', weight: 0.334363} },
+{ data: { source: 'RPS18', target: 'RPS13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS18', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS13', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS13', target: 'DHX29', directed: 'false', weight: 0.373726} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.97579
+    </section>
+    </body>
+    </html>
+    

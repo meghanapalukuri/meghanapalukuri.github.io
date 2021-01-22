@@ -1,0 +1,99 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1173</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1174.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GNA11', score: 5 }},
+{data: { id: 'RRAS2', score: 5 }},
+{data: { id: 'EPHA2', score: 5 }},
+{data: { id: 'EPB41L3', score: 5 }},
+{data: { id: 'CTNND1', score: 5 }},
+{data: { id: 'RAP2B', score: 5 }},
+{data: { id: 'GNA13', score: 5 }},
+{data: { id: 'CXADR', score: 5 }}], 
+ edges: [{ data: { source: 'GNA13', target: 'RRAS2', directed: 'false', weight: 0.432965} },
+{ data: { source: 'GNA13', target: 'CTNND1', directed: 'false', weight: 0.432008} },
+{ data: { source: 'GNA13', target: 'CXADR', directed: 'false', weight: 0.297257} },
+{ data: { source: 'GNA13', target: 'EPHA2', directed: 'false', weight: 0.20529499999999998} },
+{ data: { source: 'GNA13', target: 'RAP2B', directed: 'false', weight: 0.19856600000000002} },
+{ data: { source: 'GNA13', target: 'GNA11', directed: 'false', weight: 0.127545} },
+{ data: { source: 'GNA13', target: 'EPB41L3', directed: 'false', weight: 0.12061199999999998} },
+{ data: { source: 'CTNND1', target: 'CXADR', directed: 'false', weight: 0.792293} },
+{ data: { source: 'CTNND1', target: 'EPB41L3', directed: 'false', weight: 0.587943} },
+{ data: { source: 'CTNND1', target: 'RAP2B', directed: 'false', weight: 0.385361} },
+{ data: { source: 'CTNND1', target: 'EPHA2', directed: 'false', weight: 0.32426900000000003} },
+{ data: { source: 'GNA11', target: 'EPHA2', directed: 'false', weight: 0.5397689999999999} },
+{ data: { source: 'GNA11', target: 'RRAS2', directed: 'false', weight: 0.5286029999999999} },
+{ data: { source: 'GNA11', target: 'CXADR', directed: 'false', weight: 0.318657} },
+{ data: { source: 'EPHA2', target: 'CXADR', directed: 'false', weight: 0.32426900000000003} },
+{ data: { source: 'EPHA2', target: 'EPB41L3', directed: 'false', weight: 0.30694} },
+{ data: { source: 'EPHA2', target: 'RAP2B', directed: 'false', weight: 0.292948} },
+{ data: { source: 'EPHA2', target: 'RRAS2', directed: 'false', weight: 0.29130700000000004} },
+{ data: { source: 'RAP2B', target: 'EPB41L3', directed: 'false', weight: 0.548347} },
+{ data: { source: 'RAP2B', target: 'CXADR', directed: 'false', weight: 0.385361} },
+{ data: { source: 'RRAS2', target: 'CXADR', directed: 'false', weight: 0.385613} },
+{ data: { source: 'CXADR', target: 'EPB41L3', directed: 'false', weight: 0.587943} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.53822
+    </section>
+    </body>
+    </html>
+    

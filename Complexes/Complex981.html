@@ -1,0 +1,86 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 981</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex982.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GPR89A', score: 5 }},
+{data: { id: 'SC5D', score: 5 }},
+{data: { id: 'SIGMAR1', score: 5 }},
+{data: { id: 'VKORC1L1', score: 5 }},
+{data: { id: 'ALG8', score: 5 }}], 
+ edges: [{ data: { source: 'ALG8', target: 'GPR89A', directed: 'false', weight: 0.352171} },
+{ data: { source: 'ALG8', target: 'SIGMAR1', directed: 'false', weight: 0.280702} },
+{ data: { source: 'ALG8', target: 'SC5D', directed: 'false', weight: 0.104198} },
+{ data: { source: 'GPR89A', target: 'SIGMAR1', directed: 'false', weight: 0.64045} },
+{ data: { source: 'GPR89A', target: 'SC5D', directed: 'false', weight: 0.45249700000000004} },
+{ data: { source: 'GPR89A', target: 'VKORC1L1', directed: 'false', weight: 0.447834} },
+{ data: { source: 'SC5D', target: 'SIGMAR1', directed: 'false', weight: 0.19279100000000002} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.57545
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>SIGMAR1 ALG8
+    </section>
+    </body>
+    </html>
+    

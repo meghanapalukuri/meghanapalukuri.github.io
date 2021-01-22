@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 868</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex869.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DAZAP2', score: 5 }},
+{data: { id: 'RBPMS', score: 5 }},
+{data: { id: 'PLEKHB1', score: 5 }},
+{data: { id: 'GDE1', score: 5 }},
+{data: { id: 'RBFOX2', score: 5 }}], 
+ edges: [{ data: { source: 'RBPMS', target: 'RBFOX2', directed: 'false', weight: 0.8594360000000001} },
+{ data: { source: 'RBPMS', target: 'PLEKHB1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'RBPMS', target: 'DAZAP2', directed: 'false', weight: 0.114755} },
+{ data: { source: 'GDE1', target: 'DAZAP2', directed: 'false', weight: 0.454899} },
+{ data: { source: 'RBFOX2', target: 'DAZAP2', directed: 'false', weight: 0.7759159999999999} },
+{ data: { source: 'RBFOX2', target: 'PLEKHB1', directed: 'false', weight: 0.750581} },
+{ data: { source: 'DAZAP2', target: 'PLEKHB1', directed: 'false', weight: 0.140692} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.60831
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,91 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 850</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex851.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RAB5B', score: 5 }},
+{data: { id: 'RAB5C', score: 5 }},
+{data: { id: 'CHM', score: 5 }},
+{data: { id: 'RILP', score: 5 }},
+{data: { id: 'RAB5A', score: 5 }},
+{data: { id: 'RAB7A', score: 5 }}], 
+ edges: [{ data: { source: 'RAB5C', target: 'CHM', directed: 'false', weight: 0.819044} },
+{ data: { source: 'RAB5C', target: 'RAB7A', directed: 'false', weight: 0.790555} },
+{ data: { source: 'RAB5C', target: 'RAB5B', directed: 'false', weight: 0.631423} },
+{ data: { source: 'RAB5C', target: 'RAB5A', directed: 'false', weight: 0.16464} },
+{ data: { source: 'RAB5B', target: 'RAB7A', directed: 'false', weight: 0.948434} },
+{ data: { source: 'RAB5B', target: 'CHM', directed: 'false', weight: 0.115879} },
+{ data: { source: 'CHM', target: 'RAB7A', directed: 'false', weight: 0.9122870000000001} },
+{ data: { source: 'CHM', target: 'RILP', directed: 'false', weight: 0.144297} },
+{ data: { source: 'CHM', target: 'RAB5A', directed: 'false', weight: 0.0886254} },
+{ data: { source: 'RAB5A', target: 'RAB7A', directed: 'false', weight: 0.634794} },
+{ data: { source: 'RILP', target: 'RAB7A', directed: 'false', weight: 0.5} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.61653
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>RAB5C RAB7A
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,87 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 775</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex776.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ELOB', score: 5 }},
+{data: { id: 'ELOC', score: 5 }},
+{data: { id: 'ASB9', score: 5 }},
+{data: { id: 'CUL5', score: 5 }},
+{data: { id: 'OGDHL', score: 5 }}], 
+ edges: [{ data: { source: 'CUL5', target: 'ELOC', directed: 'false', weight: 0.909113} },
+{ data: { source: 'CUL5', target: 'ELOB', directed: 'false', weight: 0.68042} },
+{ data: { source: 'CUL5', target: 'ASB9', directed: 'false', weight: 0.23909499999999997} },
+{ data: { source: 'ELOC', target: 'ELOB', directed: 'false', weight: 0.999216} },
+{ data: { source: 'ELOC', target: 'ASB9', directed: 'false', weight: 0.5640069999999999} },
+{ data: { source: 'ELOC', target: 'OGDHL', directed: 'false', weight: 0.021366299999999998} },
+{ data: { source: 'ELOB', target: 'OGDHL', directed: 'false', weight: 0.554299} },
+{ data: { source: 'ELOB', target: 'ASB9', directed: 'false', weight: 0.28641} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.65144
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>ELOB ELOC
+    </section>
+    </body>
+    </html>
+    

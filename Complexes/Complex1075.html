@@ -1,0 +1,84 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1075</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1076.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ARVCF', score: 5 }},
+{data: { id: 'LRPPRC', score: 5 }},
+{data: { id: 'CTNNB1', score: 5 }},
+{data: { id: 'CDH1', score: 5 }},
+{data: { id: 'CDH10', score: 5 }},
+{data: { id: 'SLIRP', score: 5 }}], 
+ edges: [{ data: { source: 'LRPPRC', target: 'CDH1', directed: 'false', weight: 0.933947} },
+{ data: { source: 'LRPPRC', target: 'SLIRP', directed: 'false', weight: 0.14386500000000002} },
+{ data: { source: 'LRPPRC', target: 'ARVCF', directed: 'false', weight: 0.11585699999999999} },
+{ data: { source: 'CDH1', target: 'SLIRP', directed: 'false', weight: 0.972036} },
+{ data: { source: 'CDH1', target: 'CTNNB1', directed: 'false', weight: 0.889547} },
+{ data: { source: 'CDH1', target: 'ARVCF', directed: 'false', weight: 0.650988} },
+{ data: { source: 'CDH1', target: 'CDH10', directed: 'false', weight: 0.237166} },
+{ data: { source: 'SLIRP', target: 'ARVCF', directed: 'false', weight: 0.12021300000000001} },
+{ data: { source: 'CTNNB1', target: 'CDH10', directed: 'false', weight: 0.9932620000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.55735
+    </section>
+    </body>
+    </html>
+    

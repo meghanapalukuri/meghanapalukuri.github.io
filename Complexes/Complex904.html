@@ -1,0 +1,86 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 904</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex905.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'UBQLN4', score: 5 }},
+{data: { id: 'UBQLN1', score: 5 }},
+{data: { id: 'PHGDH', score: 5 }},
+{data: { id: 'UBQLN2', score: 5 }},
+{data: { id: 'RIDA', score: 5 }},
+{data: { id: 'RAD23B', score: 5 }}], 
+ edges: [{ data: { source: 'PHGDH', target: 'UBQLN4', directed: 'false', weight: 0.866591} },
+{ data: { source: 'PHGDH', target: 'UBQLN1', directed: 'false', weight: 0.8143600000000001} },
+{ data: { source: 'PHGDH', target: 'RAD23B', directed: 'false', weight: 0.0121182} },
+{ data: { source: 'UBQLN4', target: 'RAD23B', directed: 'false', weight: 0.855642} },
+{ data: { source: 'UBQLN4', target: 'UBQLN1', directed: 'false', weight: 0.0567064} },
+{ data: { source: 'UBQLN2', target: 'RAD23B', directed: 'false', weight: 0.965374} },
+{ data: { source: 'UBQLN2', target: 'UBQLN1', directed: 'false', weight: 0.941853} },
+{ data: { source: 'UBQLN2', target: 'RIDA', directed: 'false', weight: 0.487191} },
+{ data: { source: 'RIDA', target: 'UBQLN1', directed: 'false', weight: 0.448805} },
+{ data: { source: 'RIDA', target: 'RAD23B', directed: 'false', weight: 0.108372} },
+{ data: { source: 'UBQLN1', target: 'RAD23B', directed: 'false', weight: 0.9829969999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.59267
+    </section>
+    </body>
+    </html>
+    

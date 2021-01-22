@@ -1,0 +1,82 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 950</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex951.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PMVK', score: 5 }},
+{data: { id: 'ALDH9A1', score: 5 }},
+{data: { id: 'TPD52L2', score: 5 }},
+{data: { id: 'EFHD2', score: 4 }},
+{data: { id: 'ENSA', score: 5 }}], 
+ edges: [{ data: { source: 'TPD52L2', target: 'EFHD2', directed: 'false', weight: 0.463966} },
+{ data: { source: 'TPD52L2', target: 'PMVK', directed: 'false', weight: 0.42663199999999996} },
+{ data: { source: 'TPD52L2', target: 'ENSA', directed: 'false', weight: 0.00727403} },
+{ data: { source: 'TPD52L2', target: 'ALDH9A1', directed: 'false', weight: 0.00534947} },
+{ data: { source: 'ALDH9A1', target: 'EFHD2', directed: 'false', weight: 0.419642} },
+{ data: { source: 'ALDH9A1', target: 'ENSA', directed: 'false', weight: 0.101187} },
+{ data: { source: 'PMVK', target: 'EFHD2', directed: 'false', weight: 0.31085} },
+{ data: { source: 'ENSA', target: 'EFHD2', directed: 'false', weight: 0.582588} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.58121
+    </section>
+    </body>
+    </html>
+    

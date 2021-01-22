@@ -1,0 +1,96 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 855</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex856.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'KANSL1', score: 5 }},
+{data: { id: 'WDR5', score: 5 }},
+{data: { id: 'RERE', score: 5 }},
+{data: { id: 'ATN1', score: 5 }},
+{data: { id: 'PAXIP1', score: 5 }},
+{data: { id: 'KAT8', score: 5 }},
+{data: { id: 'KMT2D', score: 5 }},
+{data: { id: 'ASH2L', score: 5 }}], 
+ edges: [{ data: { source: 'WDR5', target: 'ASH2L', directed: 'false', weight: 0.992806} },
+{ data: { source: 'WDR5', target: 'ATN1', directed: 'false', weight: 0.982352} },
+{ data: { source: 'WDR5', target: 'PAXIP1', directed: 'false', weight: 0.9799479999999999} },
+{ data: { source: 'WDR5', target: 'RERE', directed: 'false', weight: 0.956375} },
+{ data: { source: 'WDR5', target: 'KANSL1', directed: 'false', weight: 0.9464469999999999} },
+{ data: { source: 'WDR5', target: 'KMT2D', directed: 'false', weight: 0.8797360000000001} },
+{ data: { source: 'PAXIP1', target: 'KMT2D', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PAXIP1', target: 'RERE', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PAXIP1', target: 'KANSL1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PAXIP1', target: 'ATN1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PAXIP1', target: 'ASH2L', directed: 'false', weight: 0.151455} },
+{ data: { source: 'KANSL1', target: 'KAT8', directed: 'false', weight: 0.992994} },
+{ data: { source: 'KANSL1', target: 'RERE', directed: 'false', weight: 0.301973} },
+{ data: { source: 'KANSL1', target: 'KMT2D', directed: 'false', weight: 0.268574} },
+{ data: { source: 'KANSL1', target: 'ATN1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ASH2L', target: 'ATN1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ATN1', target: 'KMT2D', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ATN1', target: 'RERE', directed: 'false', weight: 0.171414} },
+{ data: { source: 'RERE', target: 'KMT2D', directed: 'false', weight: 0.268574} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.61354
+    </section>
+    </body>
+    </html>
+    

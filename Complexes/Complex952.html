@@ -1,0 +1,97 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 952</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex953.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SETD3', score: 5 }},
+{data: { id: 'RNASEH2B', score: 5 }},
+{data: { id: 'CMTR1', score: 5 }},
+{data: { id: 'MAGEB1', score: 2 }},
+{data: { id: 'CCDC186', score: 3 }},
+{data: { id: 'RNASEH2C', score: 5 }},
+{data: { id: 'RNASEH2A', score: 5 }},
+{data: { id: 'KIAA1143', score: 2 }}], 
+ edges: [{ data: { source: 'SETD3', target: 'CMTR1', directed: 'false', weight: 0.47345} },
+{ data: { source: 'SETD3', target: 'RNASEH2B', directed: 'false', weight: 0.433251} },
+{ data: { source: 'SETD3', target: 'RNASEH2A', directed: 'false', weight: 0.280563} },
+{ data: { source: 'RNASEH2C', target: 'KIAA1143', directed: 'false', weight: 0.9699610000000001} },
+{ data: { source: 'RNASEH2C', target: 'RNASEH2A', directed: 'false', weight: 0.9510379999999999} },
+{ data: { source: 'RNASEH2C', target: 'RNASEH2B', directed: 'false', weight: 0.911386} },
+{ data: { source: 'RNASEH2C', target: 'CMTR1', directed: 'false', weight: 0.46649700000000005} },
+{ data: { source: 'RNASEH2C', target: 'CCDC186', directed: 'false', weight: 0.30451100000000003} },
+{ data: { source: 'RNASEH2C', target: 'MAGEB1', directed: 'false', weight: 0.237725} },
+{ data: { source: 'CMTR1', target: 'RNASEH2A', directed: 'false', weight: 0.691289} },
+{ data: { source: 'CMTR1', target: 'RNASEH2B', directed: 'false', weight: 0.57393} },
+{ data: { source: 'CMTR1', target: 'CCDC186', directed: 'false', weight: 0.0931492} },
+{ data: { source: 'CMTR1', target: 'KIAA1143', directed: 'false', weight: 0.019294099999999998} },
+{ data: { source: 'RNASEH2A', target: 'RNASEH2B', directed: 'false', weight: 0.9254030000000001} },
+{ data: { source: 'RNASEH2A', target: 'CCDC186', directed: 'false', weight: 0.44428199999999995} },
+{ data: { source: 'RNASEH2A', target: 'MAGEB1', directed: 'false', weight: 0.29122800000000004} },
+{ data: { source: 'RNASEH2A', target: 'KIAA1143', directed: 'false', weight: 0.26105} },
+{ data: { source: 'MAGEB1', target: 'RNASEH2B', directed: 'false', weight: 0.311947} },
+{ data: { source: 'RNASEH2B', target: 'CCDC186', directed: 'false', weight: 0.44388} },
+{ data: { source: 'RNASEH2B', target: 'KIAA1143', directed: 'false', weight: 0.153804} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.58097
+    </section>
+    </body>
+    </html>
+    

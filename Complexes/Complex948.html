@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 948</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex949.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TLK2', score: 5 }},
+{data: { id: 'EID3', score: 5 }},
+{data: { id: 'DYNLL1', score: 5 }},
+{data: { id: 'ZMYM4', score: 5 }},
+{data: { id: 'TLK1', score: 5 }}], 
+ edges: [{ data: { source: 'EID3', target: 'TLK2', directed: 'false', weight: 0.41584399999999994} },
+{ data: { source: 'ZMYM4', target: 'DYNLL1', directed: 'false', weight: 0.676921} },
+{ data: { source: 'ZMYM4', target: 'TLK1', directed: 'false', weight: 0.11228099999999999} },
+{ data: { source: 'ZMYM4', target: 'TLK2', directed: 'false', weight: 0.08441860000000001} },
+{ data: { source: 'TLK1', target: 'DYNLL1', directed: 'false', weight: 0.5} },
+{ data: { source: 'TLK1', target: 'TLK2', directed: 'false', weight: 0.125737} },
+{ data: { source: 'DYNLL1', target: 'TLK2', directed: 'false', weight: 0.6644439999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.58138
+    </section>
+    </body>
+    </html>
+    

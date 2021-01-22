@@ -1,0 +1,110 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 958</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex959.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SLC9A6', score: 5 }},
+{data: { id: 'CLCN3', score: 5 }},
+{data: { id: 'PTPRK', score: 5 }},
+{data: { id: 'RRAGB', score: 5 }},
+{data: { id: 'CSPG4', score: 5 }},
+{data: { id: 'PTPRJ', score: 5 }},
+{data: { id: 'ALCAM', score: 5 }},
+{data: { id: 'ARSG', score: 5 }},
+{data: { id: 'LGALS8', score: 5 }},
+{data: { id: 'AMIGO3', score: 4 }}], 
+ edges: [{ data: { source: 'CLCN3', target: 'LGALS8', directed: 'false', weight: 0.8864059999999999} },
+{ data: { source: 'CLCN3', target: 'PTPRJ', directed: 'false', weight: 0.463714} },
+{ data: { source: 'CLCN3', target: 'ALCAM', directed: 'false', weight: 0.463714} },
+{ data: { source: 'CLCN3', target: 'CSPG4', directed: 'false', weight: 0.390018} },
+{ data: { source: 'CLCN3', target: 'SLC9A6', directed: 'false', weight: 0.390018} },
+{ data: { source: 'CLCN3', target: 'PTPRK', directed: 'false', weight: 0.345713} },
+{ data: { source: 'CLCN3', target: 'RRAGB', directed: 'false', weight: 0.287896} },
+{ data: { source: 'ALCAM', target: 'LGALS8', directed: 'false', weight: 0.651846} },
+{ data: { source: 'ALCAM', target: 'PTPRJ', directed: 'false', weight: 0.5378149999999999} },
+{ data: { source: 'ALCAM', target: 'SLC9A6', directed: 'false', weight: 0.463714} },
+{ data: { source: 'ALCAM', target: 'CSPG4', directed: 'false', weight: 0.463714} },
+{ data: { source: 'ALCAM', target: 'PTPRK', directed: 'false', weight: 0.414998} },
+{ data: { source: 'ALCAM', target: 'RRAGB', directed: 'false', weight: 0.352171} },
+{ data: { source: 'SLC9A6', target: 'LGALS8', directed: 'false', weight: 0.617876} },
+{ data: { source: 'SLC9A6', target: 'PTPRJ', directed: 'false', weight: 0.463714} },
+{ data: { source: 'SLC9A6', target: 'CSPG4', directed: 'false', weight: 0.390018} },
+{ data: { source: 'SLC9A6', target: 'PTPRK', directed: 'false', weight: 0.345713} },
+{ data: { source: 'SLC9A6', target: 'RRAGB', directed: 'false', weight: 0.287896} },
+{ data: { source: 'ARSG', target: 'PTPRK', directed: 'false', weight: 0.6984239999999999} },
+{ data: { source: 'ARSG', target: 'AMIGO3', directed: 'false', weight: 0.171414} },
+{ data: { source: 'AMIGO3', target: 'PTPRK', directed: 'false', weight: 0.5115649999999999} },
+{ data: { source: 'CSPG4', target: 'LGALS8', directed: 'false', weight: 0.847807} },
+{ data: { source: 'CSPG4', target: 'PTPRJ', directed: 'false', weight: 0.463714} },
+{ data: { source: 'CSPG4', target: 'PTPRK', directed: 'false', weight: 0.345713} },
+{ data: { source: 'CSPG4', target: 'RRAGB', directed: 'false', weight: 0.287896} },
+{ data: { source: 'LGALS8', target: 'PTPRJ', directed: 'false', weight: 0.8404799999999999} },
+{ data: { source: 'LGALS8', target: 'PTPRK', directed: 'false', weight: 0.344073} },
+{ data: { source: 'LGALS8', target: 'RRAGB', directed: 'false', weight: 0.230229} },
+{ data: { source: 'PTPRK', target: 'PTPRJ', directed: 'false', weight: 0.414998} },
+{ data: { source: 'PTPRK', target: 'RRAGB', directed: 'false', weight: 0.249522} },
+{ data: { source: 'RRAGB', target: 'PTPRJ', directed: 'false', weight: 0.352171} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.57981
+    </section>
+    </body>
+    </html>
+    

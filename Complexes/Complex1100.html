@@ -1,0 +1,106 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1100</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1101.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SDE2', score: 5 }},
+{data: { id: 'CASC3', score: 5 }},
+{data: { id: 'EIF4A3', score: 5 }},
+{data: { id: 'SCRN3', score: 2 }},
+{data: { id: 'CCDC9', score: 2 }},
+{data: { id: 'PYM1', score: 5 }},
+{data: { id: 'PABPN1', score: 5 }},
+{data: { id: 'MAGOH', score: 5 }},
+{data: { id: 'RBM8A', score: 5 }},
+{data: { id: 'MAGOHB', score: 5 }}], 
+ edges: [{ data: { source: 'CASC3', target: 'RBM8A', directed: 'false', weight: 0.769623} },
+{ data: { source: 'CASC3', target: 'MAGOH', directed: 'false', weight: 0.641224} },
+{ data: { source: 'CASC3', target: 'EIF4A3', directed: 'false', weight: 0.619142} },
+{ data: { source: 'CASC3', target: 'PABPN1', directed: 'false', weight: 0.22501500000000002} },
+{ data: { source: 'CASC3', target: 'CCDC9', directed: 'false', weight: 0.21118699999999999} },
+{ data: { source: 'CASC3', target: 'PYM1', directed: 'false', weight: 0.0929508} },
+{ data: { source: 'CASC3', target: 'MAGOHB', directed: 'false', weight: 0.0775955} },
+{ data: { source: 'RBM8A', target: 'MAGOH', directed: 'false', weight: 0.9994200000000001} },
+{ data: { source: 'RBM8A', target: 'EIF4A3', directed: 'false', weight: 0.9946510000000001} },
+{ data: { source: 'RBM8A', target: 'MAGOHB', directed: 'false', weight: 0.989749} },
+{ data: { source: 'RBM8A', target: 'CCDC9', directed: 'false', weight: 0.985891} },
+{ data: { source: 'RBM8A', target: 'SDE2', directed: 'false', weight: 0.949989} },
+{ data: { source: 'RBM8A', target: 'SCRN3', directed: 'false', weight: 0.133456} },
+{ data: { source: 'EIF4A3', target: 'CCDC9', directed: 'false', weight: 0.998842} },
+{ data: { source: 'EIF4A3', target: 'MAGOH', directed: 'false', weight: 0.9540489999999999} },
+{ data: { source: 'EIF4A3', target: 'PABPN1', directed: 'false', weight: 0.813493} },
+{ data: { source: 'EIF4A3', target: 'MAGOHB', directed: 'false', weight: 0.144789} },
+{ data: { source: 'EIF4A3', target: 'PYM1', directed: 'false', weight: 0.0938909} },
+{ data: { source: 'SDE2', target: 'MAGOH', directed: 'false', weight: 0.115879} },
+{ data: { source: 'SDE2', target: 'CCDC9', directed: 'false', weight: 0.0960696} },
+{ data: { source: 'SDE2', target: 'MAGOHB', directed: 'false', weight: 0.0925168} },
+{ data: { source: 'SCRN3', target: 'MAGOH', directed: 'false', weight: 0.291439} },
+{ data: { source: 'PABPN1', target: 'MAGOH', directed: 'false', weight: 0.5} },
+{ data: { source: 'PYM1', target: 'MAGOH', directed: 'false', weight: 0.9877530000000001} },
+{ data: { source: 'MAGOH', target: 'MAGOHB', directed: 'false', weight: 0.9556040000000001} },
+{ data: { source: 'MAGOH', target: 'CCDC9', directed: 'false', weight: 0.314668} },
+{ data: { source: 'MAGOHB', target: 'CCDC9', directed: 'false', weight: 0.939559} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.55129
+    </section>
+    </body>
+    </html>
+    

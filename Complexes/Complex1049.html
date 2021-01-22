@@ -1,0 +1,89 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1049</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1050.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ARHGEF7', score: 5 }},
+{data: { id: 'SLC33A1', score: 5 }},
+{data: { id: 'GIT1', score: 5 }},
+{data: { id: 'FBXO28', score: 5 }},
+{data: { id: 'GIT2', score: 5 }},
+{data: { id: 'SLC7A1', score: 5 }},
+{data: { id: 'PAK2', score: 5 }}], 
+ edges: [{ data: { source: 'GIT2', target: 'PAK2', directed: 'false', weight: 0.803537} },
+{ data: { source: 'GIT2', target: 'GIT1', directed: 'false', weight: 0.762077} },
+{ data: { source: 'GIT2', target: 'ARHGEF7', directed: 'false', weight: 0.266867} },
+{ data: { source: 'GIT2', target: 'FBXO28', directed: 'false', weight: 0.12021300000000001} },
+{ data: { source: 'PAK2', target: 'GIT1', directed: 'false', weight: 0.8971879999999999} },
+{ data: { source: 'PAK2', target: 'ARHGEF7', directed: 'false', weight: 0.849134} },
+{ data: { source: 'PAK2', target: 'FBXO28', directed: 'false', weight: 0.561992} },
+{ data: { source: 'FBXO28', target: 'GIT1', directed: 'false', weight: 0.10441700000000001} },
+{ data: { source: 'FBXO28', target: 'ARHGEF7', directed: 'false', weight: 0.0960696} },
+{ data: { source: 'SLC33A1', target: 'SLC7A1', directed: 'false', weight: 0.88149} },
+{ data: { source: 'SLC33A1', target: 'ARHGEF7', directed: 'false', weight: 0.806344} },
+{ data: { source: 'SLC7A1', target: 'ARHGEF7', directed: 'false', weight: 0.133179} },
+{ data: { source: 'ARHGEF7', target: 'GIT1', directed: 'false', weight: 0.465448} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.56159
+    </section>
+    </body>
+    </html>
+    

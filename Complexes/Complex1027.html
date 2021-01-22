@@ -1,0 +1,120 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1027</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1028.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CLYBL', score: 5 }},
+{data: { id: 'HIBCH', score: 5 }},
+{data: { id: 'ETFB', score: 5 }},
+{data: { id: 'CAT', score: 5 }},
+{data: { id: 'BPNT1', score: 5 }},
+{data: { id: 'ADSL', score: 5 }},
+{data: { id: 'SOD2', score: 5 }},
+{data: { id: 'QDPR', score: 5 }},
+{data: { id: 'ETFA', score: 5 }},
+{data: { id: 'CBS', score: 5 }},
+{data: { id: 'FABP5', score: 5 }}], 
+ edges: [{ data: { source: 'CLYBL', target: 'CAT', directed: 'false', weight: 0.307199} },
+{ data: { source: 'ETFA', target: 'ETFB', directed: 'false', weight: 0.9852040000000001} },
+{ data: { source: 'ETFA', target: 'CAT', directed: 'false', weight: 0.894487} },
+{ data: { source: 'ETFA', target: 'BPNT1', directed: 'false', weight: 0.84272} },
+{ data: { source: 'ETFA', target: 'QDPR', directed: 'false', weight: 0.794497} },
+{ data: { source: 'ETFA', target: 'SOD2', directed: 'false', weight: 0.716526} },
+{ data: { source: 'ETFA', target: 'ADSL', directed: 'false', weight: 0.335897} },
+{ data: { source: 'ETFA', target: 'FABP5', directed: 'false', weight: 0.17061099999999998} },
+{ data: { source: 'ETFA', target: 'CBS', directed: 'false', weight: 0.057528699999999995} },
+{ data: { source: 'SOD2', target: 'FABP5', directed: 'false', weight: 0.571018} },
+{ data: { source: 'SOD2', target: 'QDPR', directed: 'false', weight: 0.5} },
+{ data: { source: 'SOD2', target: 'CBS', directed: 'false', weight: 0.406361} },
+{ data: { source: 'SOD2', target: 'ADSL', directed: 'false', weight: 0.393507} },
+{ data: { source: 'SOD2', target: 'BPNT1', directed: 'false', weight: 0.353063} },
+{ data: { source: 'SOD2', target: 'CAT', directed: 'false', weight: 0.199388} },
+{ data: { source: 'FABP5', target: 'ADSL', directed: 'false', weight: 0.755382} },
+{ data: { source: 'FABP5', target: 'QDPR', directed: 'false', weight: 0.433359} },
+{ data: { source: 'FABP5', target: 'CBS', directed: 'false', weight: 0.328498} },
+{ data: { source: 'FABP5', target: 'CAT', directed: 'false', weight: 0.266138} },
+{ data: { source: 'FABP5', target: 'BPNT1', directed: 'false', weight: 0.0156089} },
+{ data: { source: 'ADSL', target: 'QDPR', directed: 'false', weight: 0.792211} },
+{ data: { source: 'ADSL', target: 'ETFB', directed: 'false', weight: 0.668679} },
+{ data: { source: 'ADSL', target: 'CAT', directed: 'false', weight: 0.431699} },
+{ data: { source: 'ADSL', target: 'HIBCH', directed: 'false', weight: 0.38466999999999996} },
+{ data: { source: 'ADSL', target: 'CBS', directed: 'false', weight: 0.352125} },
+{ data: { source: 'ADSL', target: 'BPNT1', directed: 'false', weight: 0.303807} },
+{ data: { source: 'BPNT1', target: 'CAT', directed: 'false', weight: 0.62584} },
+{ data: { source: 'BPNT1', target: 'CBS', directed: 'false', weight: 0.29570799999999997} },
+{ data: { source: 'BPNT1', target: 'QDPR', directed: 'false', weight: 0.061542999999999994} },
+{ data: { source: 'BPNT1', target: 'HIBCH', directed: 'false', weight: 0.0303488} },
+{ data: { source: 'CAT', target: 'CBS', directed: 'false', weight: 0.6403909999999999} },
+{ data: { source: 'CAT', target: 'QDPR', directed: 'false', weight: 0.491411} },
+{ data: { source: 'QDPR', target: 'HIBCH', directed: 'false', weight: 0.792347} },
+{ data: { source: 'QDPR', target: 'CBS', directed: 'false', weight: 0.621746} },
+{ data: { source: 'HIBCH', target: 'CBS', directed: 'false', weight: 0.0507141} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.56603
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>ETFA
+    </section>
+    </body>
+    </html>
+    

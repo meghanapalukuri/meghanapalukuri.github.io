@@ -1,0 +1,110 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 907</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex908.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ZSWIM6', score: 4 }},
+{data: { id: 'EIF2B3', score: 5 }},
+{data: { id: 'TNPO1', score: 5 }},
+{data: { id: 'HEATR3', score: 3 }},
+{data: { id: 'EIF2B4', score: 5 }},
+{data: { id: 'SAAL1', score: 3 }},
+{data: { id: 'SCMH1', score: 5 }},
+{data: { id: 'EIF2B2', score: 5 }},
+{data: { id: 'EIF2B1', score: 5 }},
+{data: { id: 'EIF2B5', score: 5 }}], 
+ edges: [{ data: { source: 'TNPO1', target: 'HEATR3', directed: 'false', weight: 0.705683} },
+{ data: { source: 'TNPO1', target: 'SAAL1', directed: 'false', weight: 0.48707} },
+{ data: { source: 'EIF2B2', target: 'EIF2B5', directed: 'false', weight: 0.999993} },
+{ data: { source: 'EIF2B2', target: 'EIF2B3', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'EIF2B2', target: 'EIF2B4', directed: 'false', weight: 0.9999239999999999} },
+{ data: { source: 'EIF2B2', target: 'EIF2B1', directed: 'false', weight: 0.998859} },
+{ data: { source: 'EIF2B2', target: 'SAAL1', directed: 'false', weight: 0.396579} },
+{ data: { source: 'EIF2B2', target: 'HEATR3', directed: 'false', weight: 0.259304} },
+{ data: { source: 'EIF2B4', target: 'EIF2B3', directed: 'false', weight: 1.0} },
+{ data: { source: 'EIF2B4', target: 'EIF2B5', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'EIF2B4', target: 'EIF2B1', directed: 'false', weight: 0.9980379999999999} },
+{ data: { source: 'EIF2B4', target: 'SAAL1', directed: 'false', weight: 0.5507380000000001} },
+{ data: { source: 'EIF2B4', target: 'HEATR3', directed: 'false', weight: 0.187903} },
+{ data: { source: 'HEATR3', target: 'SAAL1', directed: 'false', weight: 0.610581} },
+{ data: { source: 'HEATR3', target: 'EIF2B5', directed: 'false', weight: 0.515089} },
+{ data: { source: 'HEATR3', target: 'EIF2B3', directed: 'false', weight: 0.45116300000000004} },
+{ data: { source: 'HEATR3', target: 'EIF2B1', directed: 'false', weight: 0.130526} },
+{ data: { source: 'EIF2B1', target: 'EIF2B3', directed: 'false', weight: 0.999972} },
+{ data: { source: 'EIF2B1', target: 'EIF2B5', directed: 'false', weight: 0.9995379999999999} },
+{ data: { source: 'EIF2B1', target: 'SAAL1', directed: 'false', weight: 0.463566} },
+{ data: { source: 'ZSWIM6', target: 'EIF2B3', directed: 'false', weight: 0.396848} },
+{ data: { source: 'ZSWIM6', target: 'SCMH1', directed: 'false', weight: 0.2823} },
+{ data: { source: 'EIF2B5', target: 'EIF2B3', directed: 'false', weight: 1.0} },
+{ data: { source: 'EIF2B5', target: 'SAAL1', directed: 'false', weight: 0.726931} },
+{ data: { source: 'SAAL1', target: 'EIF2B3', directed: 'false', weight: 0.702625} },
+{ data: { source: 'EIF2B3', target: 'SCMH1', directed: 'false', weight: 0.349582} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.59078
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>HEATR3 SAAL1
+    </section>
+    </body>
+    </html>
+    

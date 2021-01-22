@@ -1,0 +1,116 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1340</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1341.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PKN3', score: 5 }},
+{data: { id: 'DIP2A', score: 5 }},
+{data: { id: 'PIK3CB', score: 5 }},
+{data: { id: 'WDR6', score: 5 }},
+{data: { id: 'FTSJ1', score: 5 }},
+{data: { id: 'PIK3R3', score: 5 }},
+{data: { id: 'PLEKHH3', score: 3 }},
+{data: { id: 'PIK3R2', score: 5 }},
+{data: { id: 'PIK3R1', score: 5 }},
+{data: { id: 'PIK3CA', score: 5 }}], 
+ edges: [{ data: { source: 'PIK3R2', target: 'PIK3R1', directed: 'false', weight: 0.983784} },
+{ data: { source: 'PIK3R2', target: 'PIK3R3', directed: 'false', weight: 0.9806229999999999} },
+{ data: { source: 'PIK3R2', target: 'PIK3CA', directed: 'false', weight: 0.836462} },
+{ data: { source: 'PIK3R2', target: 'PIK3CB', directed: 'false', weight: 0.5892609999999999} },
+{ data: { source: 'PIK3R2', target: 'WDR6', directed: 'false', weight: 0.517034} },
+{ data: { source: 'PIK3R2', target: 'PLEKHH3', directed: 'false', weight: 0.40891700000000003} },
+{ data: { source: 'PIK3R2', target: 'PKN3', directed: 'false', weight: 0.35416} },
+{ data: { source: 'PIK3R2', target: 'DIP2A', directed: 'false', weight: 0.149314} },
+{ data: { source: 'FTSJ1', target: 'WDR6', directed: 'false', weight: 0.999341} },
+{ data: { source: 'PIK3CB', target: 'PIK3R1', directed: 'false', weight: 0.9977440000000001} },
+{ data: { source: 'PIK3CB', target: 'PKN3', directed: 'false', weight: 0.356858} },
+{ data: { source: 'PIK3CB', target: 'PIK3CA', directed: 'false', weight: 0.327809} },
+{ data: { source: 'PIK3CB', target: 'PLEKHH3', directed: 'false', weight: 0.23532899999999998} },
+{ data: { source: 'PIK3CB', target: 'PIK3R3', directed: 'false', weight: 0.21305700000000002} },
+{ data: { source: 'PIK3CB', target: 'DIP2A', directed: 'false', weight: 0.115015} },
+{ data: { source: 'PIK3CB', target: 'WDR6', directed: 'false', weight: 0.091262} },
+{ data: { source: 'PKN3', target: 'DIP2A', directed: 'false', weight: 0.391893} },
+{ data: { source: 'PKN3', target: 'PIK3R1', directed: 'false', weight: 0.342777} },
+{ data: { source: 'PKN3', target: 'PLEKHH3', directed: 'false', weight: 0.2873} },
+{ data: { source: 'PKN3', target: 'WDR6', directed: 'false', weight: 0.21062899999999998} },
+{ data: { source: 'PKN3', target: 'PIK3R3', directed: 'false', weight: 0.206527} },
+{ data: { source: 'PKN3', target: 'PIK3CA', directed: 'false', weight: 0.112499} },
+{ data: { source: 'PIK3CA', target: 'PIK3R1', directed: 'false', weight: 0.896581} },
+{ data: { source: 'PIK3CA', target: 'PIK3R3', directed: 'false', weight: 0.687991} },
+{ data: { source: 'PIK3CA', target: 'PLEKHH3', directed: 'false', weight: 0.0924841} },
+{ data: { source: 'PIK3CA', target: 'WDR6', directed: 'false', weight: 0.0881212} },
+{ data: { source: 'PIK3CA', target: 'DIP2A', directed: 'false', weight: 0.0863487} },
+{ data: { source: 'PLEKHH3', target: 'PIK3R1', directed: 'false', weight: 0.383738} },
+{ data: { source: 'PLEKHH3', target: 'DIP2A', directed: 'false', weight: 0.343107} },
+{ data: { source: 'PLEKHH3', target: 'WDR6', directed: 'false', weight: 0.268194} },
+{ data: { source: 'PLEKHH3', target: 'PIK3R3', directed: 'false', weight: 0.13952799999999999} },
+{ data: { source: 'PIK3R3', target: 'PIK3R1', directed: 'false', weight: 0.581568} },
+{ data: { source: 'PIK3R3', target: 'WDR6', directed: 'false', weight: 0.20468499999999998} },
+{ data: { source: 'PIK3R3', target: 'DIP2A', directed: 'false', weight: 0.10447999999999999} },
+{ data: { source: 'WDR6', target: 'PIK3R1', directed: 'false', weight: 0.48393} },
+{ data: { source: 'WDR6', target: 'DIP2A', directed: 'false', weight: 0.158435} },
+{ data: { source: 'PIK3R1', target: 'DIP2A', directed: 'false', weight: 0.138653} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.51044
+    </section>
+    </body>
+    </html>
+    

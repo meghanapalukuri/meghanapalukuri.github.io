@@ -1,0 +1,111 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 896</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex897.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GAK', score: 5 }},
+{data: { id: 'GTSE1', score: 5 }},
+{data: { id: 'DENND1A', score: 5 }},
+{data: { id: 'STAMBP', score: 5 }},
+{data: { id: 'PIK3C2A', score: 5 }},
+{data: { id: 'PICALM', score: 5 }},
+{data: { id: 'HIP1R', score: 5 }},
+{data: { id: 'CLINT1', score: 5 }},
+{data: { id: 'PFKFB3', score: 5 }},
+{data: { id: 'CLTCL1', score: 5 }}], 
+ edges: [{ data: { source: 'PIK3C2A', target: 'CLTCL1', directed: 'false', weight: 0.800037} },
+{ data: { source: 'PIK3C2A', target: 'STAMBP', directed: 'false', weight: 0.7186670000000001} },
+{ data: { source: 'PIK3C2A', target: 'PICALM', directed: 'false', weight: 0.718195} },
+{ data: { source: 'PIK3C2A', target: 'HIP1R', directed: 'false', weight: 0.594202} },
+{ data: { source: 'PIK3C2A', target: 'CLINT1', directed: 'false', weight: 0.555558} },
+{ data: { source: 'PIK3C2A', target: 'GAK', directed: 'false', weight: 0.21817199999999998} },
+{ data: { source: 'PIK3C2A', target: 'DENND1A', directed: 'false', weight: 0.159179} },
+{ data: { source: 'GAK', target: 'STAMBP', directed: 'false', weight: 0.6669619999999999} },
+{ data: { source: 'GAK', target: 'CLTCL1', directed: 'false', weight: 0.593422} },
+{ data: { source: 'GAK', target: 'HIP1R', directed: 'false', weight: 0.427257} },
+{ data: { source: 'GAK', target: 'DENND1A', directed: 'false', weight: 0.10206599999999999} },
+{ data: { source: 'GAK', target: 'PICALM', directed: 'false', weight: 0.0935398} },
+{ data: { source: 'GAK', target: 'CLINT1', directed: 'false', weight: 0.08262989999999999} },
+{ data: { source: 'PFKFB3', target: 'HIP1R', directed: 'false', weight: 0.308924} },
+{ data: { source: 'CLTCL1', target: 'STAMBP', directed: 'false', weight: 0.9299729999999999} },
+{ data: { source: 'CLTCL1', target: 'PICALM', directed: 'false', weight: 0.892317} },
+{ data: { source: 'CLTCL1', target: 'HIP1R', directed: 'false', weight: 0.677269} },
+{ data: { source: 'CLTCL1', target: 'CLINT1', directed: 'false', weight: 0.605769} },
+{ data: { source: 'CLTCL1', target: 'DENND1A', directed: 'false', weight: 0.283875} },
+{ data: { source: 'GTSE1', target: 'PICALM', directed: 'false', weight: 0.558426} },
+{ data: { source: 'GTSE1', target: 'HIP1R', directed: 'false', weight: 0.537763} },
+{ data: { source: 'GTSE1', target: 'DENND1A', directed: 'false', weight: 0.112978} },
+{ data: { source: 'DENND1A', target: 'PICALM', directed: 'false', weight: 0.801531} },
+{ data: { source: 'DENND1A', target: 'HIP1R', directed: 'false', weight: 0.478813} },
+{ data: { source: 'DENND1A', target: 'CLINT1', directed: 'false', weight: 0.15970399999999998} },
+{ data: { source: 'DENND1A', target: 'STAMBP', directed: 'false', weight: 0.0964212} },
+{ data: { source: 'HIP1R', target: 'PICALM', directed: 'false', weight: 0.998074} },
+{ data: { source: 'HIP1R', target: 'CLINT1', directed: 'false', weight: 0.478813} },
+{ data: { source: 'HIP1R', target: 'STAMBP', directed: 'false', weight: 0.09289410000000001} },
+{ data: { source: 'STAMBP', target: 'CLINT1', directed: 'false', weight: 0.427098} },
+{ data: { source: 'STAMBP', target: 'PICALM', directed: 'false', weight: 0.0911987} },
+{ data: { source: 'CLINT1', target: 'PICALM', directed: 'false', weight: 0.312639} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.59486
+    </section>
+    </body>
+    </html>
+    

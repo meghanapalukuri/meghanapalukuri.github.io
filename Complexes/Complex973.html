@@ -1,0 +1,92 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 973</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex974.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'BLZF1', score: 5 }},
+{data: { id: 'SLC30A6', score: 4 }},
+{data: { id: 'SEC16A', score: 5 }},
+{data: { id: 'USO1', score: 5 }},
+{data: { id: 'PKP2', score: 5 }},
+{data: { id: 'FAM83H', score: 5 }}], 
+ edges: [{ data: { source: 'USO1', target: 'BLZF1', directed: 'false', weight: 0.7421800000000001} },
+{ data: { source: 'USO1', target: 'SLC30A6', directed: 'false', weight: 0.735486} },
+{ data: { source: 'USO1', target: 'SEC16A', directed: 'false', weight: 0.281609} },
+{ data: { source: 'USO1', target: 'FAM83H', directed: 'false', weight: 0.179514} },
+{ data: { source: 'USO1', target: 'PKP2', directed: 'false', weight: 0.16606400000000002} },
+{ data: { source: 'SLC30A6', target: 'BLZF1', directed: 'false', weight: 0.133179} },
+{ data: { source: 'SLC30A6', target: 'PKP2', directed: 'false', weight: 0.12021300000000001} },
+{ data: { source: 'SLC30A6', target: 'SEC16A', directed: 'false', weight: 0.0814118} },
+{ data: { source: 'SEC16A', target: 'PKP2', directed: 'false', weight: 0.278225} },
+{ data: { source: 'SEC16A', target: 'BLZF1', directed: 'false', weight: 0.0648611} },
+{ data: { source: 'BLZF1', target: 'PKP2', directed: 'false', weight: 0.10994200000000001} },
+{ data: { source: 'FAM83H', target: 'PKP2', directed: 'false', weight: 0.24688600000000002} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.57742
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>SLC30A6 PKP2
+    </section>
+    </body>
+    </html>
+    

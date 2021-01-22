@@ -1,0 +1,91 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1026</title>
+
+        <script src="cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1027.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'INHBA', score: 5 }},
+{data: { id: 'RCHY1', score: 5 }},
+{data: { id: 'GINM1', score: 2 }},
+{data: { id: 'ITGB8', score: 5 }},
+{data: { id: 'CALCB', score: 5 }},
+{data: { id: 'PLEKHA5', score: 5 }}], 
+ edges: [{ data: { source: 'CALCB', target: 'GINM1', directed: 'false', weight: 0.8759600000000001} },
+{ data: { source: 'CALCB', target: 'INHBA', directed: 'false', weight: 0.171414} },
+{ data: { source: 'CALCB', target: 'PLEKHA5', directed: 'false', weight: 0.151455} },
+{ data: { source: 'CALCB', target: 'RCHY1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ITGB8', target: 'GINM1', directed: 'false', weight: 0.8125220000000001} },
+{ data: { source: 'PLEKHA5', target: 'GINM1', directed: 'false', weight: 0.857978} },
+{ data: { source: 'PLEKHA5', target: 'INHBA', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PLEKHA5', target: 'RCHY1', directed: 'false', weight: 0.133456} },
+{ data: { source: 'RCHY1', target: 'GINM1', directed: 'false', weight: 0.9159860000000001} },
+{ data: { source: 'RCHY1', target: 'INHBA', directed: 'false', weight: 0.151455} },
+{ data: { source: 'INHBA', target: 'GINM1', directed: 'false', weight: 0.967566} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, red, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.56677
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>PLEKHA5
+    </section>
+    </body>
+    </html>
+    
