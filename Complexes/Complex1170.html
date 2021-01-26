@@ -29,9 +29,9 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PFAS', score: 5 }},
-{data: { id: 'NIF3L1', score: 5 }},
-{data: { id: 'NONO', score: 5 }}], 
+elements:{nodes: [{data: { id: 'PFAS', score: 5, href: "https://www.uniprot.org/uniprot/O15067" }},
+{data: { id: 'NIF3L1', score: 5, href: "https://www.uniprot.org/uniprot/Q9GZT8" }},
+{data: { id: 'NONO', score: 5, href: "https://www.uniprot.org/uniprot/Q15233" }}], 
  edges: [{ data: { source: 'PFAS', target: 'NONO', directed: 'false', weight: 0.6460560000000001} },
 { data: { source: 'PFAS', target: 'NIF3L1', directed: 'false', weight: 0.614124} }]},
 
@@ -40,7 +40,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -59,6 +59,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

@@ -29,24 +29,24 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ZNRD1', score: 2 }},
-{data: { id: 'POLR2G', score: 5 }},
-{data: { id: 'POLR2H', score: 5 }},
-{data: { id: 'CD3EAP', score: 1 }},
-{data: { id: 'POLR2I', score: 5 }},
-{data: { id: 'POLR1B', score: 5 }},
-{data: { id: 'GPN3', score: 4 }},
-{data: { id: 'TWISTNB', score: 1 }},
-{data: { id: 'POLR2C', score: 5 }},
-{data: { id: 'POLR2L', score: 5 }},
-{data: { id: 'POLR1A', score: 5 }},
-{data: { id: 'POLR1D', score: 5 }},
-{data: { id: 'POLR2K', score: 5 }},
-{data: { id: 'POLR2F', score: 5 }},
-{data: { id: 'RRN3', score: 5 }},
-{data: { id: 'POLR2E', score: 5 }},
-{data: { id: 'GPN1', score: 5 }},
-{data: { id: 'POLR1E', score: 5 }}], 
+elements:{nodes: [{data: { id: 'ZNRD1', score: 2, href: "https://www.uniprot.org/uniprot/Q2L6J2" }},
+{data: { id: 'POLR2G', score: 5, href: "https://www.uniprot.org/uniprot/P62487" }},
+{data: { id: 'POLR2H', score: 5, href: "https://www.uniprot.org/uniprot/P52434" }},
+{data: { id: 'CD3EAP', score: 1, href: "https://www.uniprot.org/uniprot/A0JLT1" }},
+{data: { id: 'POLR2I', score: 5, href: "https://www.uniprot.org/uniprot/P36954" }},
+{data: { id: 'POLR1B', score: 5, href: "https://www.uniprot.org/uniprot/Q9H9Y6" }},
+{data: { id: 'GPN3', score: 4, href: "https://www.uniprot.org/uniprot/Q9UHW5" }},
+{data: { id: 'TWISTNB', score: 1, href: "https://www.uniprot.org/uniprot/L8E9H7" }},
+{data: { id: 'POLR2C', score: 5, href: "https://www.uniprot.org/uniprot/P19387" }},
+{data: { id: 'POLR2L', score: 5, href: "https://www.uniprot.org/uniprot/P62875" }},
+{data: { id: 'POLR1A', score: 5, href: "https://www.uniprot.org/uniprot/O95602" }},
+{data: { id: 'POLR1D', score: 5, href: "https://www.uniprot.org/uniprot/P0DPB6" }},
+{data: { id: 'POLR2K', score: 5, href: "https://www.uniprot.org/uniprot/P53803" }},
+{data: { id: 'POLR2F', score: 5, href: "https://www.uniprot.org/uniprot/P61218" }},
+{data: { id: 'RRN3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NYV6" }},
+{data: { id: 'POLR2E', score: 5, href: "https://www.uniprot.org/uniprot/P19388" }},
+{data: { id: 'GPN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9HCN4" }},
+{data: { id: 'POLR1E', score: 5, href: "https://www.uniprot.org/uniprot/Q9GZS1" }}], 
  edges: [{ data: { source: 'POLR1A', target: 'POLR1D', directed: 'false', weight: 0.999999} },
 { data: { source: 'POLR1A', target: 'POLR2E', directed: 'false', weight: 0.9999309999999999} },
 { data: { source: 'POLR1A', target: 'CD3EAP', directed: 'false', weight: 0.999761} },
@@ -162,7 +162,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -181,6 +181,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

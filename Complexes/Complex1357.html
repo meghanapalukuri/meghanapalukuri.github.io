@@ -29,17 +29,17 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ACTN2', score: 5 }},
-{data: { id: 'TPM4', score: 5 }},
-{data: { id: 'MYH6', score: 5 }},
-{data: { id: 'MYO1B', score: 5 }},
-{data: { id: 'TPM1', score: 5 }},
-{data: { id: 'TPM3', score: 5 }},
-{data: { id: 'KLHL21', score: 5 }},
-{data: { id: 'DLG5', score: 5 }},
-{data: { id: 'CNTLN', score: 5 }},
-{data: { id: 'ZBTB44', score: 5 }},
-{data: { id: 'TPM2', score: 5 }}], 
+elements:{nodes: [{data: { id: 'ACTN2', score: 5, href: "https://www.uniprot.org/uniprot/P35609" }},
+{data: { id: 'TPM4', score: 5, href: "https://www.uniprot.org/uniprot/P67936" }},
+{data: { id: 'MYH6', score: 5, href: "https://www.uniprot.org/uniprot/P13533" }},
+{data: { id: 'MYO1B', score: 5, href: "https://www.uniprot.org/uniprot/O43795" }},
+{data: { id: 'TPM1', score: 5, href: "https://www.uniprot.org/uniprot/P09493" }},
+{data: { id: 'TPM3', score: 5, href: "https://www.uniprot.org/uniprot/P06753" }},
+{data: { id: 'KLHL21', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJP4" }},
+{data: { id: 'DLG5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDM6" }},
+{data: { id: 'CNTLN', score: 5, href: "https://www.uniprot.org/uniprot/Q9NXG0" }},
+{data: { id: 'ZBTB44', score: 5, href: "https://www.uniprot.org/uniprot/Q8NCP5" }},
+{data: { id: 'TPM2', score: 5, href: "https://www.uniprot.org/uniprot/P07951" }}], 
  edges: [{ data: { source: 'ACTN2', target: 'TPM1', directed: 'false', weight: 0.787251} },
 { data: { source: 'ACTN2', target: 'TPM3', directed: 'false', weight: 0.705709} },
 { data: { source: 'ACTN2', target: 'TPM4', directed: 'false', weight: 0.622981} },
@@ -77,7 +77,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -96,6 +96,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

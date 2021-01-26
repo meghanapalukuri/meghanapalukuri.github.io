@@ -29,19 +29,19 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'HNRNPA1', score: 5 }},
-{data: { id: 'RBMXL1', score: 3 }},
-{data: { id: 'SAFB', score: 5 }},
-{data: { id: 'YLPM1', score: 5 }},
-{data: { id: 'TAF15', score: 5 }},
-{data: { id: 'APOBEC3B', score: 5 }},
-{data: { id: 'RBMX', score: 5 }},
-{data: { id: 'ZNF326', score: 5 }},
-{data: { id: 'ZNF638', score: 5 }},
-{data: { id: 'HNRNPA3', score: 5 }},
-{data: { id: 'NCOA5', score: 5 }},
-{data: { id: 'SAFB2', score: 5 }},
-{data: { id: 'RBM12B', score: 3 }}], 
+elements:{nodes: [{data: { id: 'HNRNPA1', score: 5, href: "https://www.uniprot.org/uniprot/P09651" }},
+{data: { id: 'RBMXL1', score: 3, href: "https://www.uniprot.org/uniprot/Q96E39" }},
+{data: { id: 'SAFB', score: 5, href: "https://www.uniprot.org/uniprot/Q15424" }},
+{data: { id: 'YLPM1', score: 5, href: "https://www.uniprot.org/uniprot/P49750" }},
+{data: { id: 'TAF15', score: 5, href: "https://www.uniprot.org/uniprot/Q92804" }},
+{data: { id: 'APOBEC3B', score: 5, href: "https://www.uniprot.org/uniprot/Q9UH17" }},
+{data: { id: 'RBMX', score: 5, href: "https://www.uniprot.org/uniprot/P38159" }},
+{data: { id: 'ZNF326', score: 5, href: "https://www.uniprot.org/uniprot/Q5BKZ1" }},
+{data: { id: 'ZNF638', score: 5, href: "https://www.uniprot.org/uniprot/Q14966" }},
+{data: { id: 'HNRNPA3', score: 5, href: "https://www.uniprot.org/uniprot/P51991" }},
+{data: { id: 'NCOA5', score: 5, href: "https://www.uniprot.org/uniprot/Q9HCD5" }},
+{data: { id: 'SAFB2', score: 5, href: "https://www.uniprot.org/uniprot/Q14151" }},
+{data: { id: 'RBM12B', score: 3, href: "https://www.uniprot.org/uniprot/Q8IXT5" }}], 
  edges: [{ data: { source: 'SAFB2', target: 'SAFB', directed: 'false', weight: 0.9994540000000001} },
 { data: { source: 'SAFB2', target: 'RBMX', directed: 'false', weight: 0.9799889999999999} },
 { data: { source: 'SAFB2', target: 'HNRNPA1', directed: 'false', weight: 0.900833} },
@@ -102,7 +102,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -121,6 +121,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

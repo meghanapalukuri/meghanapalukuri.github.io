@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GNA11', score: 5 }},
-{data: { id: 'GNG12', score: 5 }},
-{data: { id: 'GNAL', score: 5 }},
-{data: { id: 'GNAQ', score: 5 }},
-{data: { id: 'GNB2', score: 5 }},
-{data: { id: 'GNAS', score: 5 }}], 
+elements:{nodes: [{data: { id: 'GNA11', score: 5, href: "https://www.uniprot.org/uniprot/P29992" }},
+{data: { id: 'GNG12', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBI6" }},
+{data: { id: 'GNAL', score: 5, href: "https://www.uniprot.org/uniprot/P38405" }},
+{data: { id: 'GNAQ', score: 5, href: "https://www.uniprot.org/uniprot/P50148" }},
+{data: { id: 'GNB2', score: 5, href: "https://www.uniprot.org/uniprot/P62879" }},
+{data: { id: 'GNAS', score: 5, href: "https://www.uniprot.org/uniprot/O95467" }}], 
  edges: [{ data: { source: 'GNAS', target: 'GNAL', directed: 'false', weight: 0.939933} },
 { data: { source: 'GNAS', target: 'GNB2', directed: 'false', weight: 0.817196} },
 { data: { source: 'GNAS', target: 'GNG12', directed: 'false', weight: 0.313452} },
@@ -50,7 +50,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -69,6 +69,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

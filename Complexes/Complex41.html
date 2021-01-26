@@ -29,32 +29,32 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SF3B2', score: 5 }},
-{data: { id: 'CDC5L', score: 5 }},
-{data: { id: 'CPSF6', score: 5 }},
-{data: { id: 'KPNB1', score: 5 }},
-{data: { id: 'RANBP2', score: 5 }},
-{data: { id: 'DDX17', score: 5 }},
-{data: { id: 'U2SURP', score: 5 }},
-{data: { id: 'SF3A3', score: 5 }},
-{data: { id: 'TCERG1', score: 5 }},
-{data: { id: 'PRPF19', score: 5 }},
-{data: { id: 'SF3A1', score: 5 }},
-{data: { id: 'TPR', score: 5 }},
-{data: { id: 'SNRNP200', score: 5 }},
-{data: { id: 'SRRT', score: 5 }},
-{data: { id: 'SNU13', score: 5 }},
-{data: { id: 'SNRPA1', score: 5 }},
-{data: { id: 'PRPF40A', score: 5 }},
-{data: { id: 'PRPF8', score: 5 }},
-{data: { id: 'DHX15', score: 5 }},
-{data: { id: 'RBM25', score: 5 }},
-{data: { id: 'SF3B3', score: 5 }},
-{data: { id: 'SF3B1', score: 5 }},
-{data: { id: 'SNRPD1', score: 5 }},
-{data: { id: 'SNRPD2', score: 5 }},
-{data: { id: 'EFTUD2', score: 5 }},
-{data: { id: 'DDX23', score: 5 }}], 
+elements:{nodes: [{data: { id: 'SF3B2', score: 5, href: "https://www.uniprot.org/uniprot/Q13435" }},
+{data: { id: 'CDC5L', score: 5, href: "https://www.uniprot.org/uniprot/Q99459" }},
+{data: { id: 'CPSF6', score: 5, href: "https://www.uniprot.org/uniprot/Q16630" }},
+{data: { id: 'KPNB1', score: 5, href: "https://www.uniprot.org/uniprot/Q14974" }},
+{data: { id: 'RANBP2', score: 5, href: "https://www.uniprot.org/uniprot/P49792" }},
+{data: { id: 'DDX17', score: 5, href: "https://www.uniprot.org/uniprot/Q92841" }},
+{data: { id: 'U2SURP', score: 5, href: "https://www.uniprot.org/uniprot/O15042" }},
+{data: { id: 'SF3A3', score: 5, href: "https://www.uniprot.org/uniprot/Q12874" }},
+{data: { id: 'TCERG1', score: 5, href: "https://www.uniprot.org/uniprot/O14776" }},
+{data: { id: 'PRPF19', score: 5, href: "https://www.uniprot.org/uniprot/Q9UMS4" }},
+{data: { id: 'SF3A1', score: 5, href: "https://www.uniprot.org/uniprot/Q15459" }},
+{data: { id: 'TPR', score: 5, href: "https://www.uniprot.org/uniprot/P12270" }},
+{data: { id: 'SNRNP200', score: 5, href: "https://www.uniprot.org/uniprot/O75643" }},
+{data: { id: 'SRRT', score: 5, href: "https://www.uniprot.org/uniprot/Q9BXP5" }},
+{data: { id: 'SNU13', score: 5, href: "https://www.uniprot.org/uniprot/P55769" }},
+{data: { id: 'SNRPA1', score: 5, href: "https://www.uniprot.org/uniprot/P09661" }},
+{data: { id: 'PRPF40A', score: 5, href: "https://www.uniprot.org/uniprot/O75400" }},
+{data: { id: 'PRPF8', score: 5, href: "https://www.uniprot.org/uniprot/Q6P2Q9" }},
+{data: { id: 'DHX15', score: 5, href: "https://www.uniprot.org/uniprot/O43143" }},
+{data: { id: 'RBM25', score: 5, href: "https://www.uniprot.org/uniprot/P49756" }},
+{data: { id: 'SF3B3', score: 5, href: "https://www.uniprot.org/uniprot/Q15393" }},
+{data: { id: 'SF3B1', score: 5, href: "https://www.uniprot.org/uniprot/O75533" }},
+{data: { id: 'SNRPD1', score: 5, href: "https://www.uniprot.org/uniprot/P62314" }},
+{data: { id: 'SNRPD2', score: 5, href: "https://www.uniprot.org/uniprot/P62316" }},
+{data: { id: 'EFTUD2', score: 5, href: "https://www.uniprot.org/uniprot/Q15029" }},
+{data: { id: 'DDX23', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUQ8" }}], 
  edges: [{ data: { source: 'PRPF8', target: 'DDX23', directed: 'false', weight: 0.9999950000000001} },
 { data: { source: 'PRPF8', target: 'SNRNP200', directed: 'false', weight: 0.9999790000000001} },
 { data: { source: 'PRPF8', target: 'SNRPD2', directed: 'false', weight: 0.999977} },
@@ -379,7 +379,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -398,6 +398,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

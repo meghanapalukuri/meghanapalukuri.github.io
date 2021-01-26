@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PHRF1', score: 4 }},
-{data: { id: 'GPATCH2L', score: 5 }},
-{data: { id: 'CSNK2A2', score: 5 }},
-{data: { id: 'HAGHL', score: 3 }},
-{data: { id: 'GPATCH2', score: 5 }},
-{data: { id: 'NKAP', score: 5 }}], 
+elements:{nodes: [{data: { id: 'PHRF1', score: 4, href: "https://www.uniprot.org/uniprot/Q9P1Y6" }},
+{data: { id: 'GPATCH2L', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWQ4" }},
+{data: { id: 'CSNK2A2', score: 5, href: "https://www.uniprot.org/uniprot/P19784" }},
+{data: { id: 'HAGHL', score: 3, href: "https://www.uniprot.org/uniprot/Q6PII5" }},
+{data: { id: 'GPATCH2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NW75" }},
+{data: { id: 'NKAP', score: 5, href: "https://www.uniprot.org/uniprot/Q8N5F7" }}], 
  edges: [{ data: { source: 'HAGHL', target: 'CSNK2A2', directed: 'false', weight: 0.963183} },
 { data: { source: 'HAGHL', target: 'GPATCH2L', directed: 'false', weight: 0.171414} },
 { data: { source: 'HAGHL', target: 'GPATCH2', directed: 'false', weight: 0.171414} },
@@ -54,7 +54,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -73,6 +73,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

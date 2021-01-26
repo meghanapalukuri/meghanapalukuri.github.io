@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'BORCS8', score: 4 }},
-{data: { id: 'SCLT1', score: 5 }},
-{data: { id: 'UACA', score: 5 }},
-{data: { id: 'CCDC57', score: 5 }},
-{data: { id: 'BORCS6', score: 5 }},
-{data: { id: 'KXD1', score: 5 }}], 
+elements:{nodes: [{data: { id: 'BORCS8', score: 4, href: "https://www.uniprot.org/uniprot/Q96FH0" }},
+{data: { id: 'SCLT1', score: 5, href: "https://www.uniprot.org/uniprot/Q96NL6" }},
+{data: { id: 'UACA', score: 5, href: "https://www.uniprot.org/uniprot/Q9BZF9" }},
+{data: { id: 'CCDC57', score: 5, href: "https://www.uniprot.org/uniprot/Q2TAC2" }},
+{data: { id: 'BORCS6', score: 5, href: "https://www.uniprot.org/uniprot/Q96GS4" }},
+{data: { id: 'KXD1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQD3" }}], 
  edges: [{ data: { source: 'UACA', target: 'BORCS6', directed: 'false', weight: 0.9266989999999999} },
 { data: { source: 'UACA', target: 'CCDC57', directed: 'false', weight: 0.151455} },
 { data: { source: 'UACA', target: 'SCLT1', directed: 'false', weight: 0.133456} },
@@ -54,7 +54,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -73,6 +73,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

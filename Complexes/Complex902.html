@@ -29,20 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SGSH', score: 5 }},
-{data: { id: 'GALNS', score: 5 }},
-{data: { id: 'MOXD1', score: 5 }},
-{data: { id: 'ARSK', score: 4 }},
-{data: { id: 'TXNDC16', score: 5 }},
-{data: { id: 'MAN2A1', score: 5 }},
-{data: { id: 'CERCAM', score: 5 }},
-{data: { id: 'ARSB', score: 5 }},
-{data: { id: 'MEGF8', score: 5 }},
-{data: { id: 'ITGA8', score: 5 }},
-{data: { id: 'SIAE', score: 5 }},
-{data: { id: 'FUT11', score: 4 }},
-{data: { id: 'POGLUT1', score: 5 }},
-{data: { id: 'CACNA2D2', score: 5 }}], 
+elements:{nodes: [{data: { id: 'SGSH', score: 5, href: "https://www.uniprot.org/uniprot/P51688" }},
+{data: { id: 'GALNS', score: 5, href: "https://www.uniprot.org/uniprot/P34059" }},
+{data: { id: 'MOXD1', score: 5, href: "https://www.uniprot.org/uniprot/Q6UVY6" }},
+{data: { id: 'ARSK', score: 4, href: "https://www.uniprot.org/uniprot/Q6UWY0" }},
+{data: { id: 'TXNDC16', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2K2" }},
+{data: { id: 'MAN2A1', score: 5, href: "https://www.uniprot.org/uniprot/Q16706" }},
+{data: { id: 'CERCAM', score: 5, href: "https://www.uniprot.org/uniprot/Q5T4B2" }},
+{data: { id: 'ARSB', score: 5, href: "https://www.uniprot.org/uniprot/P15848" }},
+{data: { id: 'MEGF8', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z7M0" }},
+{data: { id: 'ITGA8', score: 5, href: "https://www.uniprot.org/uniprot/P53708" }},
+{data: { id: 'SIAE', score: 5, href: "https://www.uniprot.org/uniprot/Q9HAT2" }},
+{data: { id: 'FUT11', score: 4, href: "https://www.uniprot.org/uniprot/Q495W5" }},
+{data: { id: 'POGLUT1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NBL1" }},
+{data: { id: 'CACNA2D2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NY47" }}], 
  edges: [{ data: { source: 'ARSK', target: 'POGLUT1', directed: 'false', weight: 0.8864040000000001} },
 { data: { source: 'ARSK', target: 'MAN2A1', directed: 'false', weight: 0.81576} },
 { data: { source: 'ARSK', target: 'SIAE', directed: 'false', weight: 0.7475390000000001} },
@@ -120,7 +120,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -139,6 +139,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NME2', score: 5 }},
-{data: { id: 'FKBP2', score: 5 }},
-{data: { id: 'TAGLN2', score: 5 }},
-{data: { id: 'SOD1', score: 5 }},
-{data: { id: 'TAGLN3', score: 3 }},
-{data: { id: 'ENO1', score: 5 }},
-{data: { id: 'PIN1', score: 5 }},
-{data: { id: 'FKBP1A', score: 5 }},
-{data: { id: 'DAZAP1', score: 5 }},
-{data: { id: 'ATP6V1C1', score: 5 }}], 
+elements:{nodes: [{data: { id: 'NME2', score: 5, href: "https://www.uniprot.org/uniprot/P22392" }},
+{data: { id: 'FKBP2', score: 5, href: "https://www.uniprot.org/uniprot/P26885" }},
+{data: { id: 'TAGLN2', score: 5, href: "https://www.uniprot.org/uniprot/P37802" }},
+{data: { id: 'SOD1', score: 5, href: "https://www.uniprot.org/uniprot/P00441" }},
+{data: { id: 'TAGLN3', score: 3, href: "https://www.uniprot.org/uniprot/Q9UI15" }},
+{data: { id: 'ENO1', score: 5, href: "https://www.uniprot.org/uniprot/P06733" }},
+{data: { id: 'PIN1', score: 5, href: "https://www.uniprot.org/uniprot/Q13526" }},
+{data: { id: 'FKBP1A', score: 5, href: "https://www.uniprot.org/uniprot/P62942" }},
+{data: { id: 'DAZAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q96EP5" }},
+{data: { id: 'ATP6V1C1', score: 5, href: "https://www.uniprot.org/uniprot/P21283" }}], 
  edges: [{ data: { source: 'SOD1', target: 'NME2', directed: 'false', weight: 0.923911} },
 { data: { source: 'SOD1', target: 'TAGLN3', directed: 'false', weight: 0.861513} },
 { data: { source: 'SOD1', target: 'ENO1', directed: 'false', weight: 0.679266} },
@@ -77,7 +77,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -96,6 +96,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

@@ -29,17 +29,17 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FABP3', score: 5 }},
-{data: { id: 'MDH2', score: 5 }},
-{data: { id: 'TALDO1', score: 5 }},
-{data: { id: 'TAGLN3', score: 3 }},
-{data: { id: 'GOT2', score: 5 }},
-{data: { id: 'PPIF', score: 5 }},
-{data: { id: 'FABP7', score: 5 }},
-{data: { id: 'CNN3', score: 5 }},
-{data: { id: 'FABP5', score: 5 }},
-{data: { id: 'HINT1', score: 5 }},
-{data: { id: 'GLRX', score: 5 }}], 
+elements:{nodes: [{data: { id: 'FABP3', score: 5, href: "https://www.uniprot.org/uniprot/P05413" }},
+{data: { id: 'MDH2', score: 5, href: "https://www.uniprot.org/uniprot/P40926" }},
+{data: { id: 'TALDO1', score: 5, href: "https://www.uniprot.org/uniprot/P37837" }},
+{data: { id: 'TAGLN3', score: 3, href: "https://www.uniprot.org/uniprot/Q9UI15" }},
+{data: { id: 'GOT2', score: 5, href: "https://www.uniprot.org/uniprot/P00505" }},
+{data: { id: 'PPIF', score: 5, href: "https://www.uniprot.org/uniprot/P30405" }},
+{data: { id: 'FABP7', score: 5, href: "https://www.uniprot.org/uniprot/O15540" }},
+{data: { id: 'CNN3', score: 5, href: "https://www.uniprot.org/uniprot/Q15417" }},
+{data: { id: 'FABP5', score: 5, href: "https://www.uniprot.org/uniprot/Q01469" }},
+{data: { id: 'HINT1', score: 5, href: "https://www.uniprot.org/uniprot/P49773" }},
+{data: { id: 'GLRX', score: 5, href: "https://www.uniprot.org/uniprot/P35754" }}], 
  edges: [{ data: { source: 'FABP7', target: 'HINT1', directed: 'false', weight: 0.9995799999999999} },
 { data: { source: 'FABP7', target: 'TAGLN3', directed: 'false', weight: 0.998524} },
 { data: { source: 'FABP7', target: 'GLRX', directed: 'false', weight: 0.945665} },
@@ -80,7 +80,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -99,6 +99,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

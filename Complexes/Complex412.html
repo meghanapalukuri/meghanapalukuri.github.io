@@ -29,9 +29,9 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'BRD2', score: 5 }},
-{data: { id: 'PWWP2B', score: 3 }},
-{data: { id: 'FARP1', score: 5 }}], 
+elements:{nodes: [{data: { id: 'BRD2', score: 5, href: "https://www.uniprot.org/uniprot/P25440" }},
+{data: { id: 'PWWP2B', score: 3, href: "https://www.uniprot.org/uniprot/Q6NUJ5" }},
+{data: { id: 'FARP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y4F1" }}], 
  edges: [{ data: { source: 'FARP1', target: 'BRD2', directed: 'false', weight: 0.8587049999999999} },
 { data: { source: 'FARP1', target: 'PWWP2B', directed: 'false', weight: 0.09242919999999999} },
 { data: { source: 'PWWP2B', target: 'BRD2', directed: 'false', weight: 0.927758} }]},
@@ -41,7 +41,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -60,6 +60,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

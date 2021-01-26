@@ -30,9 +30,9 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: '5284', score: 0 }},
-{data: { id: 'GTF2B', score: 5 }},
-{data: { id: 'PRB1', score: 5 }},
-{data: { id: 'POLR2J2', score: 3 }}], 
+{data: { id: 'GTF2B', score: 5, href: "https://www.uniprot.org/uniprot/Q00403" }},
+{data: { id: 'PRB1', score: 5, href: "https://www.uniprot.org/uniprot/P04280" }},
+{data: { id: 'POLR2J2', score: 3, href: "https://www.uniprot.org/uniprot/Q9GZM3" }}], 
  edges: [{ data: { source: 'GTF2B', target: 'PRB1', directed: 'false', weight: 0.6223420000000001} },
 { data: { source: 'GTF2B', target: 'POLR2J2', directed: 'false', weight: 0.549845} },
 { data: { source: 'GTF2B', target: '5284', directed: 'false', weight: 0.35336} },
@@ -43,7 +43,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -62,6 +62,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

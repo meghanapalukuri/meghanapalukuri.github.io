@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GTF2H1', score: 5 }},
-{data: { id: 'CCNH', score: 5 }},
-{data: { id: 'GTF2H3', score: 5 }},
-{data: { id: 'GTF2H4', score: 5 }},
-{data: { id: 'CDK7', score: 5 }},
-{data: { id: 'RPA2', score: 5 }},
-{data: { id: 'GTF2H5', score: 5 }},
-{data: { id: 'GTF2H2', score: 5 }},
-{data: { id: 'MNAT1', score: 5 }},
-{data: { id: 'ERCC3', score: 5 }}], 
+elements:{nodes: [{data: { id: 'GTF2H1', score: 5, href: "https://www.uniprot.org/uniprot/P32780" }},
+{data: { id: 'CCNH', score: 5, href: "https://www.uniprot.org/uniprot/P51946" }},
+{data: { id: 'GTF2H3', score: 5, href: "https://www.uniprot.org/uniprot/Q13889" }},
+{data: { id: 'GTF2H4', score: 5, href: "https://www.uniprot.org/uniprot/Q92759" }},
+{data: { id: 'CDK7', score: 5, href: "https://www.uniprot.org/uniprot/P50613" }},
+{data: { id: 'RPA2', score: 5, href: "https://www.uniprot.org/uniprot/P15927" }},
+{data: { id: 'GTF2H5', score: 5, href: "https://www.uniprot.org/uniprot/Q6ZYL4" }},
+{data: { id: 'GTF2H2', score: 5, href: "https://www.uniprot.org/uniprot/Q13888" }},
+{data: { id: 'MNAT1', score: 5, href: "https://www.uniprot.org/uniprot/P51948" }},
+{data: { id: 'ERCC3', score: 5, href: "https://www.uniprot.org/uniprot/P19447" }}], 
  edges: [{ data: { source: 'GTF2H1', target: 'GTF2H2', directed: 'false', weight: 0.99954} },
 { data: { source: 'GTF2H1', target: 'GTF2H3', directed: 'false', weight: 0.998207} },
 { data: { source: 'GTF2H1', target: 'ERCC3', directed: 'false', weight: 0.99092} },
@@ -67,7 +67,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -86,6 +86,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

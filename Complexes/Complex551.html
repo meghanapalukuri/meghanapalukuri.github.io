@@ -29,10 +29,10 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TUBA1C', score: 5 }},
-{data: { id: 'TUBB6', score: 5 }},
-{data: { id: 'ATAD3A', score: 5 }},
-{data: { id: 'AUP1', score: 5 }}], 
+elements:{nodes: [{data: { id: 'TUBA1C', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQE3" }},
+{data: { id: 'TUBB6', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUF5" }},
+{data: { id: 'ATAD3A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVI7" }},
+{data: { id: 'AUP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y679" }}], 
  edges: [{ data: { source: 'TUBA1C', target: 'TUBB6', directed: 'false', weight: 0.8143229999999999} },
 { data: { source: 'TUBA1C', target: 'ATAD3A', directed: 'false', weight: 0.632849} },
 { data: { source: 'TUBA1C', target: 'AUP1', directed: 'false', weight: 0.43848100000000007} },
@@ -45,7 +45,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -64,6 +64,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

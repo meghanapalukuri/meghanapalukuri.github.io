@@ -29,15 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CEP131', score: 5 }},
-{data: { id: 'CEP19', score: 5 }},
-{data: { id: 'KIAA0753', score: 5 }},
-{data: { id: 'CCDC77', score: 3 }},
-{data: { id: 'PPP2R3C', score: 5 }},
-{data: { id: 'CEP350', score: 5 }},
+elements:{nodes: [{data: { id: 'CEP131', score: 5, href: "https://www.uniprot.org/uniprot/Q9UPN4" }},
+{data: { id: 'CEP19', score: 5, href: "https://www.uniprot.org/uniprot/Q96LK0" }},
+{data: { id: 'KIAA0753', score: 5, href: "https://www.uniprot.org/uniprot/Q2KHM9" }},
+{data: { id: 'CCDC77', score: 3, href: "https://www.uniprot.org/uniprot/Q9BR77" }},
+{data: { id: 'PPP2R3C', score: 5, href: "https://www.uniprot.org/uniprot/Q969Q6" }},
+{data: { id: 'CEP350', score: 5, href: "https://www.uniprot.org/uniprot/Q5VT06" }},
 {data: { id: 'FGFR1OP', score: 0 }},
-{data: { id: 'TBC1D31', score: 3 }},
-{data: { id: 'CSPP1', score: 5 }}], 
+{data: { id: 'TBC1D31', score: 3, href: "https://www.uniprot.org/uniprot/Q96DN5" }},
+{data: { id: 'CSPP1', score: 5, href: "https://www.uniprot.org/uniprot/Q1MSJ5" }}], 
  edges: [{ data: { source: 'KIAA0753', target: 'PPP2R3C', directed: 'false', weight: 0.745815} },
 { data: { source: 'KIAA0753', target: 'FGFR1OP', directed: 'false', weight: 0.74035} },
 { data: { source: 'KIAA0753', target: 'CSPP1', directed: 'false', weight: 0.537725} },
@@ -69,7 +69,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -88,6 +88,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

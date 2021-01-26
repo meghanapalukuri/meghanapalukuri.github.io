@@ -29,20 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'POLRMT', score: 5 }},
-{data: { id: 'DHX33', score: 5 }},
-{data: { id: 'USP10', score: 5 }},
-{data: { id: 'NPM1', score: 5 }},
-{data: { id: 'RPS25', score: 5 }},
-{data: { id: 'SPATS2', score: 3 }},
-{data: { id: 'IGF2BP1', score: 5 }},
-{data: { id: 'RPL10', score: 5 }},
-{data: { id: 'RPL29', score: 5 }},
-{data: { id: 'MEPCE', score: 5 }},
-{data: { id: 'RIOX1', score: 5 }},
-{data: { id: 'MRM3', score: 5 }},
-{data: { id: 'HNRNPU', score: 5 }},
-{data: { id: 'BAZ1B', score: 5 }},
+elements:{nodes: [{data: { id: 'POLRMT', score: 5, href: "https://www.uniprot.org/uniprot/O00411" }},
+{data: { id: 'DHX33', score: 5, href: "https://www.uniprot.org/uniprot/Q9H6R0" }},
+{data: { id: 'USP10', score: 5, href: "https://www.uniprot.org/uniprot/Q14694" }},
+{data: { id: 'NPM1', score: 5, href: "https://www.uniprot.org/uniprot/P06748" }},
+{data: { id: 'RPS25', score: 5, href: "https://www.uniprot.org/uniprot/P62851" }},
+{data: { id: 'SPATS2', score: 3, href: "https://www.uniprot.org/uniprot/Q86XZ4" }},
+{data: { id: 'IGF2BP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZI8" }},
+{data: { id: 'RPL10', score: 5, href: "https://www.uniprot.org/uniprot/P27635" }},
+{data: { id: 'RPL29', score: 5, href: "https://www.uniprot.org/uniprot/P47914" }},
+{data: { id: 'MEPCE', score: 5, href: "https://www.uniprot.org/uniprot/Q7L2J0" }},
+{data: { id: 'RIOX1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H6W3" }},
+{data: { id: 'MRM3', score: 5, href: "https://www.uniprot.org/uniprot/Q9HC36" }},
+{data: { id: 'HNRNPU', score: 5, href: "https://www.uniprot.org/uniprot/Q00839" }},
+{data: { id: 'BAZ1B', score: 5, href: "https://www.uniprot.org/uniprot/Q9UIG0" }},
 {data: { id: 'H1FX', score: 0 }}], 
  edges: [{ data: { source: 'RIOX1', target: 'RPL10', directed: 'false', weight: 0.9507559999999999} },
 { data: { source: 'RIOX1', target: 'HNRNPU', directed: 'false', weight: 0.872008} },
@@ -125,7 +125,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -144,6 +144,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

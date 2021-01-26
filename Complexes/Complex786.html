@@ -30,12 +30,12 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: 'HIST2H2AB', score: 0 }},
-{data: { id: 'PRKDC', score: 5 }},
-{data: { id: 'XPC', score: 5 }},
-{data: { id: 'CETN2', score: 5 }},
-{data: { id: 'PARP2', score: 5 }},
+{data: { id: 'PRKDC', score: 5, href: "https://www.uniprot.org/uniprot/P78527" }},
+{data: { id: 'XPC', score: 5, href: "https://www.uniprot.org/uniprot/Q01831" }},
+{data: { id: 'CETN2', score: 5, href: "https://www.uniprot.org/uniprot/P41208" }},
+{data: { id: 'PARP2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UGN5" }},
 {data: { id: 'H2AFY', score: 0 }},
-{data: { id: 'XRCC5', score: 5 }}], 
+{data: { id: 'XRCC5', score: 5, href: "https://www.uniprot.org/uniprot/P13010" }}], 
  edges: [{ data: { source: 'H2AFY', target: 'XPC', directed: 'false', weight: 0.44501} },
 { data: { source: 'H2AFY', target: 'CETN2', directed: 'false', weight: 0.270861} },
 { data: { source: 'H2AFY', target: 'PARP2', directed: 'false', weight: 0.252218} },
@@ -57,7 +57,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -76,6 +76,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

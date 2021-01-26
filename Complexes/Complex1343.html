@@ -29,15 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SMARCD1', score: 5 }},
-{data: { id: 'TBL1X', score: 5 }},
-{data: { id: 'NCOR1', score: 5 }},
-{data: { id: 'GPS2', score: 5 }},
-{data: { id: 'TBL1XR1', score: 5 }},
-{data: { id: 'SMARCB1', score: 5 }},
-{data: { id: 'NCOR2', score: 5 }},
-{data: { id: 'SMARCD2', score: 5 }},
-{data: { id: 'ANKRD11', score: 5 }}], 
+elements:{nodes: [{data: { id: 'SMARCD1', score: 5, href: "https://www.uniprot.org/uniprot/Q96GM5" }},
+{data: { id: 'TBL1X', score: 5, href: "https://www.uniprot.org/uniprot/O60907" }},
+{data: { id: 'NCOR1', score: 5, href: "https://www.uniprot.org/uniprot/O75376" }},
+{data: { id: 'GPS2', score: 5, href: "https://www.uniprot.org/uniprot/Q13227" }},
+{data: { id: 'TBL1XR1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BZK7" }},
+{data: { id: 'SMARCB1', score: 5, href: "https://www.uniprot.org/uniprot/Q12824" }},
+{data: { id: 'NCOR2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y618" }},
+{data: { id: 'SMARCD2', score: 5, href: "https://www.uniprot.org/uniprot/Q92925" }},
+{data: { id: 'ANKRD11', score: 5, href: "https://www.uniprot.org/uniprot/Q6UB99" }}], 
  edges: [{ data: { source: 'SMARCD2', target: 'SMARCB1', directed: 'false', weight: 0.9999899999999999} },
 { data: { source: 'SMARCD2', target: 'SMARCD1', directed: 'false', weight: 0.999693} },
 { data: { source: 'SMARCD2', target: 'TBL1XR1', directed: 'false', weight: 0.632197} },
@@ -68,7 +68,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -87,6 +87,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

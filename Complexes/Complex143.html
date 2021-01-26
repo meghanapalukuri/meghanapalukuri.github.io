@@ -29,21 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CNOT7', score: 5 }},
-{data: { id: 'CNOT11', score: 5 }},
-{data: { id: 'CNOT6L', score: 5 }},
-{data: { id: 'TOB2', score: 5 }},
-{data: { id: 'CNOT6', score: 5 }},
-{data: { id: 'CNOT2', score: 5 }},
-{data: { id: 'CNOT10', score: 5 }},
-{data: { id: 'FHL2', score: 5 }},
-{data: { id: 'TOB1', score: 5 }},
-{data: { id: 'CNOT9', score: 5 }},
-{data: { id: 'CNOT1', score: 5 }},
-{data: { id: 'CNOT3', score: 5 }},
-{data: { id: 'CNOT8', score: 5 }},
-{data: { id: 'BTG3', score: 4 }},
-{data: { id: 'TNKS1BP1', score: 5 }}], 
+elements:{nodes: [{data: { id: 'CNOT7', score: 5, href: "https://www.uniprot.org/uniprot/Q9UIV1" }},
+{data: { id: 'CNOT11', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKZ1" }},
+{data: { id: 'CNOT6L', score: 5, href: "https://www.uniprot.org/uniprot/Q96LI5" }},
+{data: { id: 'TOB2', score: 5, href: "https://www.uniprot.org/uniprot/Q14106" }},
+{data: { id: 'CNOT6', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULM6" }},
+{data: { id: 'CNOT2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZN8" }},
+{data: { id: 'CNOT10', score: 5, href: "https://www.uniprot.org/uniprot/Q9H9A5" }},
+{data: { id: 'FHL2', score: 5, href: "https://www.uniprot.org/uniprot/Q14192" }},
+{data: { id: 'TOB1', score: 5, href: "https://www.uniprot.org/uniprot/P50616" }},
+{data: { id: 'CNOT9', score: 5, href: "https://www.uniprot.org/uniprot/Q92600" }},
+{data: { id: 'CNOT1', score: 5, href: "https://www.uniprot.org/uniprot/A5YKK6" }},
+{data: { id: 'CNOT3', score: 5, href: "https://www.uniprot.org/uniprot/O75175" }},
+{data: { id: 'CNOT8', score: 5, href: "https://www.uniprot.org/uniprot/Q9UFF9" }},
+{data: { id: 'BTG3', score: 4, href: "https://www.uniprot.org/uniprot/Q14201" }},
+{data: { id: 'TNKS1BP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9C0C2" }}], 
  edges: [{ data: { source: 'FHL2', target: 'CNOT1', directed: 'false', weight: 0.95755} },
 { data: { source: 'FHL2', target: 'CNOT2', directed: 'false', weight: 0.8949940000000001} },
 { data: { source: 'FHL2', target: 'CNOT9', directed: 'false', weight: 0.642413} },
@@ -155,7 +155,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -174,6 +174,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'EMC10', score: 5 }},
-{data: { id: 'EMC3', score: 4 }},
-{data: { id: 'EMC7', score: 4 }},
-{data: { id: 'EMC4', score: 5 }},
-{data: { id: 'EMC6', score: 5 }},
-{data: { id: 'EMC9', score: 3 }},
-{data: { id: 'EMC2', score: 5 }},
-{data: { id: 'MMGT1', score: 5 }},
-{data: { id: 'EMC8', score: 5 }},
-{data: { id: 'EMC1', score: 5 }}], 
+elements:{nodes: [{data: { id: 'EMC10', score: 5, href: "https://www.uniprot.org/uniprot/Q5UCC4" }},
+{data: { id: 'EMC3', score: 4, href: "https://www.uniprot.org/uniprot/Q9P0I2" }},
+{data: { id: 'EMC7', score: 4, href: "https://www.uniprot.org/uniprot/Q9NPA0" }},
+{data: { id: 'EMC4', score: 5, href: "https://www.uniprot.org/uniprot/Q5J8M3" }},
+{data: { id: 'EMC6', score: 5, href: "https://www.uniprot.org/uniprot/Q9BV81" }},
+{data: { id: 'EMC9', score: 3, href: "https://www.uniprot.org/uniprot/Q9Y3B6" }},
+{data: { id: 'EMC2', score: 5, href: "https://www.uniprot.org/uniprot/Q15006" }},
+{data: { id: 'MMGT1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N4V1" }},
+{data: { id: 'EMC8', score: 5, href: "https://www.uniprot.org/uniprot/O43402" }},
+{data: { id: 'EMC1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N766" }}], 
  edges: [{ data: { source: 'EMC1', target: 'EMC2', directed: 'false', weight: 0.9995790000000001} },
 { data: { source: 'EMC1', target: 'EMC4', directed: 'false', weight: 0.990001} },
 { data: { source: 'EMC1', target: 'EMC7', directed: 'false', weight: 0.986936} },
@@ -81,7 +81,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -100,6 +100,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

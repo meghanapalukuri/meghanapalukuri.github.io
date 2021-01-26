@@ -29,11 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DNAJB1', score: 5 }},
-{data: { id: 'TRIM25', score: 5 }},
-{data: { id: 'ARPP19', score: 5 }},
-{data: { id: 'PSPC1', score: 5 }},
-{data: { id: 'SH3PXD2B', score: 5 }}], 
+elements:{nodes: [{data: { id: 'DNAJB1', score: 5, href: "https://www.uniprot.org/uniprot/P25685" }},
+{data: { id: 'TRIM25', score: 5, href: "https://www.uniprot.org/uniprot/Q14258" }},
+{data: { id: 'ARPP19', score: 5, href: "https://www.uniprot.org/uniprot/P56211" }},
+{data: { id: 'PSPC1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXF1" }},
+{data: { id: 'SH3PXD2B', score: 5, href: "https://www.uniprot.org/uniprot/A1X283" }}], 
  edges: [{ data: { source: 'SH3PXD2B', target: 'PSPC1', directed: 'false', weight: 0.5301} },
 { data: { source: 'SH3PXD2B', target: 'ARPP19', directed: 'false', weight: 0.5} },
 { data: { source: 'SH3PXD2B', target: 'TRIM25', directed: 'false', weight: 0.193931} },
@@ -46,7 +46,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -65,6 +65,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

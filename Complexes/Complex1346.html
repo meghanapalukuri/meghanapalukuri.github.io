@@ -29,25 +29,25 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NDUFA2', score: 5 }},
-{data: { id: 'NDUFB7', score: 5 }},
-{data: { id: 'NDUFA7', score: 5 }},
-{data: { id: 'NDUFA12', score: 5 }},
-{data: { id: 'NDUFA8', score: 5 }},
-{data: { id: 'NDUFS6', score: 5 }},
-{data: { id: 'NDUFB4', score: 5 }},
-{data: { id: 'NDUFS3', score: 5 }},
-{data: { id: 'TMEM43', score: 5 }},
-{data: { id: 'TMUB1', score: 5 }},
-{data: { id: 'UQCRC1', score: 5 }},
-{data: { id: 'ATAD1', score: 5 }},
-{data: { id: 'NDUFS1', score: 5 }},
-{data: { id: 'NDUFV2', score: 5 }},
-{data: { id: 'TMEM199', score: 5 }},
-{data: { id: 'GOLT1B', score: 5 }},
-{data: { id: 'FAM8A1', score: 4 }},
-{data: { id: 'STOML2', score: 5 }},
-{data: { id: 'NDUFV1', score: 5 }}], 
+elements:{nodes: [{data: { id: 'NDUFA2', score: 5, href: "https://www.uniprot.org/uniprot/O43678" }},
+{data: { id: 'NDUFB7', score: 5, href: "https://www.uniprot.org/uniprot/P17568" }},
+{data: { id: 'NDUFA7', score: 5, href: "https://www.uniprot.org/uniprot/O95182" }},
+{data: { id: 'NDUFA12', score: 5, href: "https://www.uniprot.org/uniprot/Q9UI09" }},
+{data: { id: 'NDUFA8', score: 5, href: "https://www.uniprot.org/uniprot/P51970" }},
+{data: { id: 'NDUFS6', score: 5, href: "https://www.uniprot.org/uniprot/O75380" }},
+{data: { id: 'NDUFB4', score: 5, href: "https://www.uniprot.org/uniprot/O95168" }},
+{data: { id: 'NDUFS3', score: 5, href: "https://www.uniprot.org/uniprot/O75489" }},
+{data: { id: 'TMEM43', score: 5, href: "https://www.uniprot.org/uniprot/Q9BTV4" }},
+{data: { id: 'TMUB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BVT8" }},
+{data: { id: 'UQCRC1', score: 5, href: "https://www.uniprot.org/uniprot/P31930" }},
+{data: { id: 'ATAD1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NBU5" }},
+{data: { id: 'NDUFS1', score: 5, href: "https://www.uniprot.org/uniprot/P28331" }},
+{data: { id: 'NDUFV2', score: 5, href: "https://www.uniprot.org/uniprot/P19404" }},
+{data: { id: 'TMEM199', score: 5, href: "https://www.uniprot.org/uniprot/Q8N511" }},
+{data: { id: 'GOLT1B', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3E0" }},
+{data: { id: 'FAM8A1', score: 4, href: "https://www.uniprot.org/uniprot/Q9UBU6" }},
+{data: { id: 'STOML2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJZ1" }},
+{data: { id: 'NDUFV1', score: 5, href: "https://www.uniprot.org/uniprot/P49821" }}], 
  edges: [{ data: { source: 'NDUFS6', target: 'GOLT1B', directed: 'false', weight: 0.952593} },
 { data: { source: 'NDUFS6', target: 'NDUFV2', directed: 'false', weight: 0.9284399999999999} },
 { data: { source: 'NDUFS6', target: 'NDUFS1', directed: 'false', weight: 0.8113640000000001} },
@@ -169,7 +169,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -188,6 +188,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

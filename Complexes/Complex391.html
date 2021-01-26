@@ -30,9 +30,9 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: 'FAM192A', score: 0 }},
-{data: { id: 'PSME3', score: 5 }},
-{data: { id: 'CBX2', score: 5 }},
-{data: { id: 'ZBTB9', score: 5 }}], 
+{data: { id: 'PSME3', score: 5, href: "https://www.uniprot.org/uniprot/P61289" }},
+{data: { id: 'CBX2', score: 5, href: "https://www.uniprot.org/uniprot/Q14781" }},
+{data: { id: 'ZBTB9', score: 5, href: "https://www.uniprot.org/uniprot/Q96C00" }}], 
  edges: [{ data: { source: 'FAM192A', target: 'PSME3', directed: 'false', weight: 1.0} },
 { data: { source: 'FAM192A', target: 'CBX2', directed: 'false', weight: 0.0968222} },
 { data: { source: 'FAM192A', target: 'ZBTB9', directed: 'false', weight: 0.0895252} },
@@ -45,7 +45,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -64,6 +64,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>

@@ -29,15 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GORASP2', score: 5 }},
-{data: { id: 'GALE', score: 5 }},
-{data: { id: 'GARS', score: 2 }},
-{data: { id: 'ISYNA1', score: 5 }},
-{data: { id: 'GPD1L', score: 5 }},
-{data: { id: 'PGD', score: 5 }},
-{data: { id: 'ALDOA', score: 5 }},
-{data: { id: 'PGP', score: 5 }},
-{data: { id: 'ALDOC', score: 5 }}], 
+elements:{nodes: [{data: { id: 'GORASP2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H8Y8" }},
+{data: { id: 'GALE', score: 5, href: "https://www.uniprot.org/uniprot/Q14376" }},
+{data: { id: 'GARS', score: 2, href: "https://www.uniprot.org/uniprot/A0A090N8G0" }},
+{data: { id: 'ISYNA1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPH2" }},
+{data: { id: 'GPD1L', score: 5, href: "https://www.uniprot.org/uniprot/Q8N335" }},
+{data: { id: 'PGD', score: 5, href: "https://www.uniprot.org/uniprot/P52209" }},
+{data: { id: 'ALDOA', score: 5, href: "https://www.uniprot.org/uniprot/P04075" }},
+{data: { id: 'PGP', score: 5, href: "https://www.uniprot.org/uniprot/A6NDG6" }},
+{data: { id: 'ALDOC', score: 5, href: "https://www.uniprot.org/uniprot/P09972" }}], 
  edges: [{ data: { source: 'GORASP2', target: 'ALDOC', directed: 'false', weight: 0.847726} },
 { data: { source: 'GORASP2', target: 'ALDOA', directed: 'false', weight: 0.7543850000000001} },
 { data: { source: 'GORASP2', target: 'PGP', directed: 'false', weight: 0.0585136} },
@@ -66,7 +66,7 @@ style: [
         selector: 'node',
         style: {
             shape: 'rectangle',
-            'background-color': 'mapData(score, 0, 5, red, green)',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
         }
     },
@@ -85,6 +85,14 @@ style: [
 cy.layout({
     name: 'circle'
 }).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
 
 
     </script>
