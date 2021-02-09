@@ -1,0 +1,106 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1053</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1054.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'AK2', score: 5, href: "https://www.uniprot.org/uniprot/P54819" }},
+{data: { id: 'ISOC1', score: 2, href: "https://www.uniprot.org/uniprot/Q96CN7" }},
+{data: { id: 'ARHGDIA', score: 5, href: "https://www.uniprot.org/uniprot/P52565" }},
+{data: { id: 'TIAL1', score: 5, href: "https://www.uniprot.org/uniprot/Q01085" }},
+{data: { id: 'PCBP3', score: 5, href: "https://www.uniprot.org/uniprot/P57721" }},
+{data: { id: 'HMGCL', score: 5, href: "https://www.uniprot.org/uniprot/P35914" }},
+{data: { id: 'GGA2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJY4" }},
+{data: { id: 'TIA1', score: 5, href: "https://www.uniprot.org/uniprot/P31483" }}], 
+ edges: [{ data: { source: 'ARHGDIA', target: 'TIAL1', directed: 'false', weight: 0.521243} },
+{ data: { source: 'ARHGDIA', target: 'ISOC1', directed: 'false', weight: 0.327298} },
+{ data: { source: 'ARHGDIA', target: 'TIA1', directed: 'false', weight: 0.200133} },
+{ data: { source: 'ARHGDIA', target: 'PCBP3', directed: 'false', weight: 0.09042610000000001} },
+{ data: { source: 'ARHGDIA', target: 'GGA2', directed: 'false', weight: 0.00926235} },
+{ data: { source: 'ISOC1', target: 'TIAL1', directed: 'false', weight: 0.8560530000000001} },
+{ data: { source: 'ISOC1', target: 'TIA1', directed: 'false', weight: 0.779459} },
+{ data: { source: 'ISOC1', target: 'PCBP3', directed: 'false', weight: 0.0613066} },
+{ data: { source: 'ISOC1', target: 'GGA2', directed: 'false', weight: 0.027860500000000003} },
+{ data: { source: 'ISOC1', target: 'HMGCL', directed: 'false', weight: 0.013108700000000001} },
+{ data: { source: 'AK2', target: 'TIA1', directed: 'false', weight: 0.086815} },
+{ data: { source: 'AK2', target: 'TIAL1', directed: 'false', weight: 0.00872231} },
+{ data: { source: 'PCBP3', target: 'TIAL1', directed: 'false', weight: 0.323892} },
+{ data: { source: 'PCBP3', target: 'GGA2', directed: 'false', weight: 0.0760108} },
+{ data: { source: 'PCBP3', target: 'HMGCL', directed: 'false', weight: 0.0531033} },
+{ data: { source: 'PCBP3', target: 'TIA1', directed: 'false', weight: 0.03465530000000001} },
+{ data: { source: 'TIA1', target: 'TIAL1', directed: 'false', weight: 0.775278} },
+{ data: { source: 'TIA1', target: 'GGA2', directed: 'false', weight: 0.511608} },
+{ data: { source: 'TIA1', target: 'HMGCL', directed: 'false', weight: 0.130994} },
+{ data: { source: 'TIAL1', target: 'HMGCL', directed: 'false', weight: 0.335361} },
+{ data: { source: 'TIAL1', target: 'GGA2', directed: 'false', weight: 0.31189} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.56078
+    </section>
+    </body>
+    </html>
+    

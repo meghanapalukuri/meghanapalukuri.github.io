@@ -1,0 +1,87 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 651</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex652.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MAGED2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UNF1" }},
+{data: { id: 'GNAL', score: 5, href: "https://www.uniprot.org/uniprot/P38405" }},
+{data: { id: 'GNAS', score: 5, href: "https://www.uniprot.org/uniprot/O95467" }},
+{data: { id: 'OCIAD1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX40" }}], 
+ edges: [{ data: { source: 'GNAL', target: 'GNAS', directed: 'false', weight: 0.939933} },
+{ data: { source: 'GNAL', target: 'MAGED2', directed: 'false', weight: 0.222827} },
+{ data: { source: 'GNAL', target: 'OCIAD1', directed: 'false', weight: 0.0833615} },
+{ data: { source: 'OCIAD1', target: 'GNAS', directed: 'false', weight: 0.42815299999999995} },
+{ data: { source: 'OCIAD1', target: 'MAGED2', directed: 'false', weight: 0.06745880000000001} },
+{ data: { source: 'GNAS', target: 'MAGED2', directed: 'false', weight: 0.391493} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.68470
+    </section>
+    </body>
+    </html>
+    

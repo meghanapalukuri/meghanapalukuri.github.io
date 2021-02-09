@@ -1,0 +1,95 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1028</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1029.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RABGGTB', score: 5, href: "https://www.uniprot.org/uniprot/P53611" }},
+{data: { id: 'FBXL20', score: 4, href: "https://www.uniprot.org/uniprot/Q96IG2" }},
+{data: { id: 'PGBD5', score: 5, href: "https://www.uniprot.org/uniprot/Q8N414" }},
+{data: { id: 'RABGGTA', score: 5, href: "https://www.uniprot.org/uniprot/Q92696" }},
+{data: { id: 'PTP4A2', score: 5, href: "https://www.uniprot.org/uniprot/Q12974" }},
+{data: { id: 'PTAR1', score: 2, href: "https://www.uniprot.org/uniprot/Q7Z6K3" }}], 
+ edges: [{ data: { source: 'PTAR1', target: 'RABGGTB', directed: 'false', weight: 0.944999} },
+{ data: { source: 'PTAR1', target: 'PGBD5', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PTAR1', target: 'FBXL20', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PTAR1', target: 'PTP4A2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PGBD5', target: 'RABGGTB', directed: 'false', weight: 0.972649} },
+{ data: { source: 'PGBD5', target: 'FBXL20', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PGBD5', target: 'PTP4A2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PGBD5', target: 'RABGGTA', directed: 'false', weight: 0.120276} },
+{ data: { source: 'RABGGTB', target: 'RABGGTA', directed: 'false', weight: 0.970366} },
+{ data: { source: 'RABGGTB', target: 'PTP4A2', directed: 'false', weight: 0.878498} },
+{ data: { source: 'RABGGTB', target: 'FBXL20', directed: 'false', weight: 0.5671579999999999} },
+{ data: { source: 'FBXL20', target: 'PTP4A2', directed: 'false', weight: 0.151455} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.56580
+    </section>
+    </body>
+    </html>
+    

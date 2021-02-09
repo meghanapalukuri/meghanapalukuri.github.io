@@ -1,0 +1,255 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 110</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex111.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RPL23', score: 5, href: "https://www.uniprot.org/uniprot/P62829" }},
+{data: { id: 'RPS8', score: 5, href: "https://www.uniprot.org/uniprot/P62241" }},
+{data: { id: 'RPLP0', score: 5, href: "https://www.uniprot.org/uniprot/P05388" }},
+{data: { id: 'RPL5', score: 5, href: "https://www.uniprot.org/uniprot/P46777" }},
+{data: { id: 'RPL9', score: 5, href: "https://www.uniprot.org/uniprot/P32969" }},
+{data: { id: 'RPS15A', score: 5, href: "https://www.uniprot.org/uniprot/P62244" }},
+{data: { id: 'RPL14', score: 5, href: "https://www.uniprot.org/uniprot/P50914" }},
+{data: { id: 'UGGT1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NYU2" }},
+{data: { id: 'RPL10', score: 5, href: "https://www.uniprot.org/uniprot/P27635" }},
+{data: { id: 'RPL23A', score: 5, href: "https://www.uniprot.org/uniprot/P62750" }},
+{data: { id: 'RPL24', score: 5, href: "https://www.uniprot.org/uniprot/P83731" }},
+{data: { id: 'RPS3', score: 5, href: "https://www.uniprot.org/uniprot/P23396" }},
+{data: { id: 'BTF3', score: 5, href: "https://www.uniprot.org/uniprot/P20290" }},
+{data: { id: 'RPL6', score: 5, href: "https://www.uniprot.org/uniprot/Q02878" }},
+{data: { id: 'RPS6', score: 5, href: "https://www.uniprot.org/uniprot/P62753" }},
+{data: { id: 'G3BP1', score: 5, href: "https://www.uniprot.org/uniprot/Q13283" }},
+{data: { id: 'RPS16', score: 5, href: "https://www.uniprot.org/uniprot/P62249" }},
+{data: { id: 'RPL12', score: 5, href: "https://www.uniprot.org/uniprot/P30050" }},
+{data: { id: 'RPS23', score: 5, href: "https://www.uniprot.org/uniprot/P62266" }}], 
+ edges: [{ data: { source: 'RPL9', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL9', target: 'RPS16', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL9', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL9', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL9', target: 'RPS15A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL9', target: 'RPS8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL9', target: 'RPLP0', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL9', target: 'RPL10', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL9', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL9', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL9', target: 'RPS6', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL9', target: 'RPL24', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'RPL9', target: 'RPL23A', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'RPL9', target: 'RPL12', directed: 'false', weight: 0.9999819999999999} },
+{ data: { source: 'RPL9', target: 'RPS3', directed: 'false', weight: 0.9997209999999999} },
+{ data: { source: 'RPL9', target: 'G3BP1', directed: 'false', weight: 0.9658540000000001} },
+{ data: { source: 'RPL9', target: 'BTF3', directed: 'false', weight: 0.931125} },
+{ data: { source: 'RPL12', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL12', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL12', target: 'RPS6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL12', target: 'RPL24', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL12', target: 'RPS15A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL12', target: 'RPS8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL12', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL12', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL12', target: 'RPLP0', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPL12', target: 'RPL14', directed: 'false', weight: 0.999993} },
+{ data: { source: 'RPL12', target: 'RPS16', directed: 'false', weight: 0.999992} },
+{ data: { source: 'RPL12', target: 'RPL10', directed: 'false', weight: 0.999983} },
+{ data: { source: 'RPL12', target: 'RPL23A', directed: 'false', weight: 0.999877} },
+{ data: { source: 'RPL12', target: 'RPS3', directed: 'false', weight: 0.999771} },
+{ data: { source: 'RPL12', target: 'BTF3', directed: 'false', weight: 0.975565} },
+{ data: { source: 'RPL12', target: 'G3BP1', directed: 'false', weight: 0.794039} },
+{ data: { source: 'RPL10', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPS16', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPS6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPLP0', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPL24', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPS15A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPS8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10', target: 'RPL23A', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL10', target: 'RPL14', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL10', target: 'G3BP1', directed: 'false', weight: 0.998442} },
+{ data: { source: 'RPL10', target: 'BTF3', directed: 'false', weight: 0.9649129999999999} },
+{ data: { source: 'RPL24', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL24', target: 'RPS16', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL24', target: 'RPS6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL24', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL24', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL24', target: 'RPS15A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL24', target: 'RPS8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL24', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL24', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL24', target: 'RPL5', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL24', target: 'RPS3', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL24', target: 'RPLP0', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL24', target: 'BTF3', directed: 'false', weight: 0.990761} },
+{ data: { source: 'RPL24', target: 'G3BP1', directed: 'false', weight: 0.974657} },
+{ data: { source: 'RPL5', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS15A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPLP0', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL5', target: 'RPL23', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL5', target: 'RPS16', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL5', target: 'G3BP1', directed: 'false', weight: 0.990767} },
+{ data: { source: 'RPL5', target: 'BTF3', directed: 'false', weight: 0.8666459999999999} },
+{ data: { source: 'RPLP0', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPS6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPS8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP0', target: 'RPS23', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPLP0', target: 'RPS15A', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPLP0', target: 'RPL23A', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPLP0', target: 'RPL14', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'RPLP0', target: 'RPS16', directed: 'false', weight: 0.999994} },
+{ data: { source: 'RPLP0', target: 'RPS3', directed: 'false', weight: 0.9996790000000001} },
+{ data: { source: 'RPLP0', target: 'BTF3', directed: 'false', weight: 0.994743} },
+{ data: { source: 'RPLP0', target: 'G3BP1', directed: 'false', weight: 0.7427699999999999} },
+{ data: { source: 'UGGT1', target: 'BTF3', directed: 'false', weight: 0.787611} },
+{ data: { source: 'RPS6', target: 'RPS16', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS6', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS6', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS6', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS6', target: 'RPS15A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS6', target: 'RPS8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS6', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS6', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS6', target: 'RPL6', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS6', target: 'G3BP1', directed: 'false', weight: 0.991434} },
+{ data: { source: 'RPS6', target: 'BTF3', directed: 'false', weight: 0.864137} },
+{ data: { source: 'RPL6', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPS16', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPS15A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPS8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL6', target: 'G3BP1', directed: 'false', weight: 0.949734} },
+{ data: { source: 'RPL6', target: 'BTF3', directed: 'false', weight: 0.9353940000000001} },
+{ data: { source: 'G3BP1', target: 'RPS15A', directed: 'false', weight: 0.9976799999999999} },
+{ data: { source: 'G3BP1', target: 'RPS16', directed: 'false', weight: 0.993986} },
+{ data: { source: 'G3BP1', target: 'RPL14', directed: 'false', weight: 0.9904360000000001} },
+{ data: { source: 'G3BP1', target: 'RPS8', directed: 'false', weight: 0.976261} },
+{ data: { source: 'G3BP1', target: 'RPS3', directed: 'false', weight: 0.964217} },
+{ data: { source: 'G3BP1', target: 'RPS23', directed: 'false', weight: 0.9538200000000001} },
+{ data: { source: 'G3BP1', target: 'RPL23', directed: 'false', weight: 0.922831} },
+{ data: { source: 'G3BP1', target: 'RPL23A', directed: 'false', weight: 0.888283} },
+{ data: { source: 'G3BP1', target: 'BTF3', directed: 'false', weight: 0.8421200000000001} },
+{ data: { source: 'RPS16', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPS15A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS16', target: 'RPS8', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPS16', target: 'RPL14', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'RPS16', target: 'RPS23', directed: 'false', weight: 0.999775} },
+{ data: { source: 'RPS16', target: 'BTF3', directed: 'false', weight: 0.876553} },
+{ data: { source: 'RPS15A', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS15A', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS15A', target: 'RPS8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS15A', target: 'RPS23', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPS15A', target: 'RPL23A', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPS15A', target: 'RPS3', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'RPS15A', target: 'BTF3', directed: 'false', weight: 0.996733} },
+{ data: { source: 'BTF3', target: 'RPS3', directed: 'false', weight: 0.999452} },
+{ data: { source: 'BTF3', target: 'RPL23', directed: 'false', weight: 0.9979049999999999} },
+{ data: { source: 'BTF3', target: 'RPL23A', directed: 'false', weight: 0.9723780000000001} },
+{ data: { source: 'BTF3', target: 'RPS23', directed: 'false', weight: 0.853562} },
+{ data: { source: 'BTF3', target: 'RPL14', directed: 'false', weight: 0.830778} },
+{ data: { source: 'BTF3', target: 'RPS8', directed: 'false', weight: 0.8208190000000001} },
+{ data: { source: 'RPL14', target: 'RPS8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPS23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPS3', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL14', target: 'RPL23', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPS23', target: 'RPS8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS23', target: 'RPL23A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS23', target: 'RPL23', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPS23', target: 'RPS3', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL23A', target: 'RPS8', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL23A', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL23A', target: 'RPL23', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPS8', target: 'RPL23', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS8', target: 'RPS3', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPS3', target: 'RPL23', directed: 'false', weight: 0.9999979999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.98413
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>G3BP1
+    </section>
+    </body>
+    </html>
+    

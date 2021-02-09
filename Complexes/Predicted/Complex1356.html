@@ -1,0 +1,111 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1356</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1357.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CHST10', score: 5, href: "https://www.uniprot.org/uniprot/O43529" }},
+{data: { id: 'MBTPS1', score: 5, href: "https://www.uniprot.org/uniprot/Q14703" }},
+{data: { id: 'ARSK', score: 4, href: "https://www.uniprot.org/uniprot/Q6UWY0" }},
+{data: { id: 'FAM234B', score: 2, href: "https://www.uniprot.org/uniprot/A2RU67" }},
+{data: { id: 'DCBLD2', score: 5, href: "https://www.uniprot.org/uniprot/Q96PD2" }},
+{data: { id: 'ENTPD6', score: 5, href: "https://www.uniprot.org/uniprot/O75354" }},
+{data: { id: 'PTPRU', score: 5, href: "https://www.uniprot.org/uniprot/Q92729" }},
+{data: { id: 'SCARB1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WTV0" }}], 
+ edges: [{ data: { source: 'ARSK', target: 'ENTPD6', directed: 'false', weight: 0.8988659999999999} },
+{ data: { source: 'ARSK', target: 'CHST10', directed: 'false', weight: 0.583155} },
+{ data: { source: 'ARSK', target: 'MBTPS1', directed: 'false', weight: 0.560215} },
+{ data: { source: 'CHST10', target: 'ENTPD6', directed: 'false', weight: 0.352794} },
+{ data: { source: 'CHST10', target: 'MBTPS1', directed: 'false', weight: 0.266356} },
+{ data: { source: 'CHST10', target: 'FAM234B', directed: 'false', weight: 0.243616} },
+{ data: { source: 'CHST10', target: 'PTPRU', directed: 'false', weight: 0.215419} },
+{ data: { source: 'CHST10', target: 'SCARB1', directed: 'false', weight: 0.192072} },
+{ data: { source: 'CHST10', target: 'DCBLD2', directed: 'false', weight: 0.110069} },
+{ data: { source: 'SCARB1', target: 'DCBLD2', directed: 'false', weight: 0.332071} },
+{ data: { source: 'SCARB1', target: 'MBTPS1', directed: 'false', weight: 0.320822} },
+{ data: { source: 'SCARB1', target: 'FAM234B', directed: 'false', weight: 0.118072} },
+{ data: { source: 'SCARB1', target: 'PTPRU', directed: 'false', weight: 0.0999707} },
+{ data: { source: 'FAM234B', target: 'MBTPS1', directed: 'false', weight: 0.209813} },
+{ data: { source: 'FAM234B', target: 'PTPRU', directed: 'false', weight: 0.136782} },
+{ data: { source: 'FAM234B', target: 'DCBLD2', directed: 'false', weight: 0.0911765} },
+{ data: { source: 'ENTPD6', target: 'MBTPS1', directed: 'false', weight: 0.453038} },
+{ data: { source: 'ENTPD6', target: 'PTPRU', directed: 'false', weight: 0.11420699999999999} },
+{ data: { source: 'MBTPS1', target: 'DCBLD2', directed: 'false', weight: 0.42352399999999996} },
+{ data: { source: 'MBTPS1', target: 'PTPRU', directed: 'false', weight: 0.128383} },
+{ data: { source: 'DCBLD2', target: 'PTPRU', directed: 'false', weight: 0.0879759} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.50178
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>SCARB1
+    </section>
+    </body>
+    </html>
+    

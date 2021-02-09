@@ -1,0 +1,94 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 988</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex989.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'IMPDH1', score: 5, href: "https://www.uniprot.org/uniprot/P20839" }},
+{data: { id: 'DDX53', score: 5, href: "https://www.uniprot.org/uniprot/Q86TM3" }},
+{data: { id: 'ANKRD9', score: 2, href: "https://www.uniprot.org/uniprot/Q96BM1" }},
+{data: { id: 'SLC25A44', score: 4, href: "https://www.uniprot.org/uniprot/Q96H78" }},
+{data: { id: 'IMPDH2', score: 5, href: "https://www.uniprot.org/uniprot/P12268" }}], 
+ edges: [{ data: { source: 'IMPDH2', target: 'IMPDH1', directed: 'false', weight: 0.9999549999999999} },
+{ data: { source: 'IMPDH2', target: 'ANKRD9', directed: 'false', weight: 0.9803879999999999} },
+{ data: { source: 'IMPDH2', target: 'DDX53', directed: 'false', weight: 0.769696} },
+{ data: { source: 'IMPDH2', target: 'SLC25A44', directed: 'false', weight: 0.481997} },
+{ data: { source: 'DDX53', target: 'IMPDH1', directed: 'false', weight: 0.505722} },
+{ data: { source: 'ANKRD9', target: 'SLC25A44', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ANKRD9', target: 'IMPDH1', directed: 'false', weight: 0.09308949999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.57411
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>IMPDH2
+    </section>
+    </body>
+    </html>
+    

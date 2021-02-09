@@ -1,0 +1,86 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 752</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex753.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TEFM', score: 5, href: "https://www.uniprot.org/uniprot/Q96QE5" }},
+{data: { id: 'KBTBD6', score: 3, href: "https://www.uniprot.org/uniprot/Q86V97" }},
+{data: { id: 'KBTBD7', score: 4, href: "https://www.uniprot.org/uniprot/Q8WVZ9" }},
+{data: { id: 'DOK4', score: 5, href: "https://www.uniprot.org/uniprot/Q8TEW6" }}], 
+ edges: [{ data: { source: 'KBTBD6', target: 'KBTBD7', directed: 'false', weight: 0.9526680000000001} },
+{ data: { source: 'KBTBD6', target: 'DOK4', directed: 'false', weight: 0.326046} },
+{ data: { source: 'KBTBD6', target: 'TEFM', directed: 'false', weight: 0.115879} },
+{ data: { source: 'TEFM', target: 'KBTBD7', directed: 'false', weight: 0.907148} },
+{ data: { source: 'DOK4', target: 'KBTBD7', directed: 'false', weight: 0.38000700000000004} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.65899
+    </section>
+    </body>
+    </html>
+    

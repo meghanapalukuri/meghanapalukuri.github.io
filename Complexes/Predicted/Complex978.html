@@ -1,0 +1,106 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 978</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex979.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HNRNPLL', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVV9" }},
+{data: { id: 'PHLDB2', score: 5, href: "https://www.uniprot.org/uniprot/Q86SQ0" }},
+{data: { id: 'DBN1', score: 5, href: "https://www.uniprot.org/uniprot/Q16643" }},
+{data: { id: 'DAB2', score: 5, href: "https://www.uniprot.org/uniprot/P98082" }},
+{data: { id: 'CAPZB', score: 5, href: "https://www.uniprot.org/uniprot/P47756" }},
+{data: { id: 'ACTR3', score: 5, href: "https://www.uniprot.org/uniprot/P61158" }},
+{data: { id: 'ACTB', score: 5, href: "https://www.uniprot.org/uniprot/P60709" }},
+{data: { id: 'CAPZA1', score: 5, href: "https://www.uniprot.org/uniprot/P52907" }},
+{data: { id: 'MYO6', score: 5, href: "https://www.uniprot.org/uniprot/Q9UM54" }}], 
+ edges: [{ data: { source: 'HNRNPLL', target: 'ACTR3', directed: 'false', weight: 0.7315470000000001} },
+{ data: { source: 'HNRNPLL', target: 'CAPZB', directed: 'false', weight: 0.0185263} },
+{ data: { source: 'HNRNPLL', target: 'CAPZA1', directed: 'false', weight: 0.00537989} },
+{ data: { source: 'DBN1', target: 'ACTB', directed: 'false', weight: 0.9967219999999999} },
+{ data: { source: 'CAPZB', target: 'ACTB', directed: 'false', weight: 0.958174} },
+{ data: { source: 'CAPZB', target: 'ACTR3', directed: 'false', weight: 0.9177120000000001} },
+{ data: { source: 'CAPZB', target: 'CAPZA1', directed: 'false', weight: 0.7357640000000001} },
+{ data: { source: 'CAPZB', target: 'MYO6', directed: 'false', weight: 0.645562} },
+{ data: { source: 'CAPZB', target: 'PHLDB2', directed: 'false', weight: 0.0123256} },
+{ data: { source: 'PHLDB2', target: 'ACTB', directed: 'false', weight: 0.487342} },
+{ data: { source: 'PHLDB2', target: 'ACTR3', directed: 'false', weight: 0.0337325} },
+{ data: { source: 'PHLDB2', target: 'MYO6', directed: 'false', weight: 0.028916300000000002} },
+{ data: { source: 'PHLDB2', target: 'CAPZA1', directed: 'false', weight: 0.022671599999999997} },
+{ data: { source: 'MYO6', target: 'ACTB', directed: 'false', weight: 0.9464600000000001} },
+{ data: { source: 'MYO6', target: 'ACTR3', directed: 'false', weight: 0.5635} },
+{ data: { source: 'MYO6', target: 'DAB2', directed: 'false', weight: 0.562164} },
+{ data: { source: 'MYO6', target: 'CAPZA1', directed: 'false', weight: 0.275471} },
+{ data: { source: 'ACTB', target: 'CAPZA1', directed: 'false', weight: 0.980525} },
+{ data: { source: 'ACTB', target: 'ACTR3', directed: 'false', weight: 0.734792} },
+{ data: { source: 'CAPZA1', target: 'ACTR3', directed: 'false', weight: 0.5649770000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.57558
+    </section>
+    </body>
+    </html>
+    

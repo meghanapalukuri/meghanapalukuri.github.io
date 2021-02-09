@@ -1,0 +1,99 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 786</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex787.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HIST2H2AB', score: 0 }},
+{data: { id: 'PRKDC', score: 5, href: "https://www.uniprot.org/uniprot/P78527" }},
+{data: { id: 'XPC', score: 5, href: "https://www.uniprot.org/uniprot/Q01831" }},
+{data: { id: 'CETN2', score: 5, href: "https://www.uniprot.org/uniprot/P41208" }},
+{data: { id: 'PARP2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UGN5" }},
+{data: { id: 'H2AFY', score: 0 }},
+{data: { id: 'XRCC5', score: 5, href: "https://www.uniprot.org/uniprot/P13010" }}], 
+ edges: [{ data: { source: 'H2AFY', target: 'XPC', directed: 'false', weight: 0.44501} },
+{ data: { source: 'H2AFY', target: 'CETN2', directed: 'false', weight: 0.270861} },
+{ data: { source: 'H2AFY', target: 'PARP2', directed: 'false', weight: 0.252218} },
+{ data: { source: 'H2AFY', target: 'XRCC5', directed: 'false', weight: 0.249522} },
+{ data: { source: 'H2AFY', target: 'HIST2H2AB', directed: 'false', weight: 0.09221649999999999} },
+{ data: { source: 'PRKDC', target: 'XRCC5', directed: 'false', weight: 0.991253} },
+{ data: { source: 'XRCC5', target: 'CETN2', directed: 'false', weight: 0.72387} },
+{ data: { source: 'XRCC5', target: 'XPC', directed: 'false', weight: 0.6435810000000001} },
+{ data: { source: 'XRCC5', target: 'PARP2', directed: 'false', weight: 0.579203} },
+{ data: { source: 'XRCC5', target: 'HIST2H2AB', directed: 'false', weight: 0.363442} },
+{ data: { source: 'PARP2', target: 'XPC', directed: 'false', weight: 0.884648} },
+{ data: { source: 'PARP2', target: 'CETN2', directed: 'false', weight: 0.664762} },
+{ data: { source: 'PARP2', target: 'HIST2H2AB', directed: 'false', weight: 0.29684499999999997} },
+{ data: { source: 'HIST2H2AB', target: 'XPC', directed: 'false', weight: 0.403582} },
+{ data: { source: 'CETN2', target: 'XPC', directed: 'false', weight: 0.8462040000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.64929
+    </section>
+    </body>
+    </html>
+    

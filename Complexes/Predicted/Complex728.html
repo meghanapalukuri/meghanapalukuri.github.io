@@ -1,0 +1,90 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 728</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex729.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'CNBP', score: 5, href: "https://www.uniprot.org/uniprot/P62633" }},
+{data: { id: 'PFAS', score: 5, href: "https://www.uniprot.org/uniprot/O15067" }},
+{data: { id: 'CUTC', score: 5, href: "https://www.uniprot.org/uniprot/Q9NTM9" }},
+{data: { id: 'SFPQ', score: 5, href: "https://www.uniprot.org/uniprot/P23246" }},
+{data: { id: 'NONO', score: 5, href: "https://www.uniprot.org/uniprot/Q15233" }}], 
+ edges: [{ data: { source: 'CUTC', target: 'NONO', directed: 'false', weight: 0.444191} },
+{ data: { source: 'CUTC', target: 'SFPQ', directed: 'false', weight: 0.432871} },
+{ data: { source: 'SFPQ', target: 'NONO', directed: 'false', weight: 0.9758969999999999} },
+{ data: { source: 'SFPQ', target: 'CNBP', directed: 'false', weight: 0.818238} },
+{ data: { source: 'SFPQ', target: 'PFAS', directed: 'false', weight: 0.584696} },
+{ data: { source: 'PFAS', target: 'NONO', directed: 'false', weight: 0.6460560000000001} },
+{ data: { source: 'PFAS', target: 'CNBP', directed: 'false', weight: 0.07366210000000001} },
+{ data: { source: 'NONO', target: 'CNBP', directed: 'false', weight: 0.857224} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.66571
+    </section>
+    </body>
+    </html>
+    

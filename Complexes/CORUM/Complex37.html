@@ -1,0 +1,89 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 37</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex38.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GTF2H2', score: 5, href: "https://www.uniprot.org/uniprot/Q13888" }},
+{data: { id: 'GTF2H1', score: 5, href: "https://www.uniprot.org/uniprot/P32780" }},
+{data: { id: 'ERCC3', score: 5, href: "https://www.uniprot.org/uniprot/P19447" }},
+{data: { id: 'GTF2H3', score: 5, href: "https://www.uniprot.org/uniprot/Q13889" }},
+{data: { id: 'GTF2H4', score: 5, href: "https://www.uniprot.org/uniprot/Q92759" }}], 
+ edges: [{ data: { source: 'GTF2H2', target: 'GTF2H1', directed: 'false', weight: 0.99954} },
+{ data: { source: 'GTF2H2', target: 'GTF2H3', directed: 'false', weight: 0.998115} },
+{ data: { source: 'GTF2H2', target: 'ERCC3', directed: 'false', weight: 0.9906889999999999} },
+{ data: { source: 'GTF2H2', target: 'GTF2H4', directed: 'false', weight: 0.9011239999999999} },
+{ data: { source: 'GTF2H1', target: 'GTF2H3', directed: 'false', weight: 0.998207} },
+{ data: { source: 'GTF2H1', target: 'ERCC3', directed: 'false', weight: 0.99092} },
+{ data: { source: 'GTF2H1', target: 'GTF2H4', directed: 'false', weight: 0.9446049999999999} },
+{ data: { source: 'ERCC3', target: 'GTF2H3', directed: 'false', weight: 0.9945879999999999} },
+{ data: { source: 'ERCC3', target: 'GTF2H4', directed: 'false', weight: 0.9459879999999999} },
+{ data: { source: 'GTF2H3', target: 'GTF2H4', directed: 'false', weight: 0.8602059999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+    </section>
+    </body>
+    </html>
+    

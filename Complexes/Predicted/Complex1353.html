@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1353</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1354.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PLXNA3', score: 5, href: "https://www.uniprot.org/uniprot/P51805" }},
+{data: { id: 'GALNT7', score: 5, href: "https://www.uniprot.org/uniprot/Q86SF2" }},
+{data: { id: 'ENTPD6', score: 5, href: "https://www.uniprot.org/uniprot/O75354" }},
+{data: { id: 'LRIG1', score: 5, href: "https://www.uniprot.org/uniprot/Q96JA1" }},
+{data: { id: 'ADAM17', score: 5, href: "https://www.uniprot.org/uniprot/P78536" }},
+{data: { id: 'TTC13', score: 2, href: "https://www.uniprot.org/uniprot/Q8NBP0" }},
+{data: { id: 'CHPF', score: 5, href: "https://www.uniprot.org/uniprot/Q8IZ52" }}], 
+ edges: [{ data: { source: 'ADAM17', target: 'CHPF', directed: 'false', weight: 0.31451399999999996} },
+{ data: { source: 'ADAM17', target: 'LRIG1', directed: 'false', weight: 0.30286599999999997} },
+{ data: { source: 'ADAM17', target: 'GALNT7', directed: 'false', weight: 0.276586} },
+{ data: { source: 'ADAM17', target: 'TTC13', directed: 'false', weight: 0.09792100000000001} },
+{ data: { source: 'CHPF', target: 'LRIG1', directed: 'false', weight: 0.445546} },
+{ data: { source: 'CHPF', target: 'ENTPD6', directed: 'false', weight: 0.369264} },
+{ data: { source: 'CHPF', target: 'TTC13', directed: 'false', weight: 0.353128} },
+{ data: { source: 'CHPF', target: 'GALNT7', directed: 'false', weight: 0.353128} },
+{ data: { source: 'GALNT7', target: 'TTC13', directed: 'false', weight: 0.124294} },
+{ data: { source: 'GALNT7', target: 'LRIG1', directed: 'false', weight: 0.111536} },
+{ data: { source: 'ENTPD6', target: 'LRIG1', directed: 'false', weight: 0.725223} },
+{ data: { source: 'ENTPD6', target: 'PLXNA3', directed: 'false', weight: 0.6914939999999999} },
+{ data: { source: 'PLXNA3', target: 'LRIG1', directed: 'false', weight: 0.470394} },
+{ data: { source: 'LRIG1', target: 'TTC13', directed: 'false', weight: 0.08441010000000002} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.50460
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>CHPF
+    </section>
+    </body>
+    </html>
+    

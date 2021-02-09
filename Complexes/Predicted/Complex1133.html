@@ -1,0 +1,113 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1133</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1134.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'GPT2', score: 5, href: "https://www.uniprot.org/uniprot/Q8TD30" }},
+{data: { id: 'LDHAL6A', score: 4, href: "https://www.uniprot.org/uniprot/Q6ZMR3" }},
+{data: { id: 'ETFB', score: 5, href: "https://www.uniprot.org/uniprot/P38117" }},
+{data: { id: 'FH', score: 5, href: "https://www.uniprot.org/uniprot/P07954" }},
+{data: { id: 'CRYZ', score: 5, href: "https://www.uniprot.org/uniprot/Q08257" }},
+{data: { id: 'ADSL', score: 5, href: "https://www.uniprot.org/uniprot/P30566" }},
+{data: { id: 'DBI', score: 5, href: "https://www.uniprot.org/uniprot/P07108" }},
+{data: { id: 'OXCT1', score: 5, href: "https://www.uniprot.org/uniprot/P55809" }},
+{data: { id: 'ETFA', score: 5, href: "https://www.uniprot.org/uniprot/P13804" }}], 
+ edges: [{ data: { source: 'ETFA', target: 'ETFB', directed: 'false', weight: 0.9852040000000001} },
+{ data: { source: 'ETFA', target: 'CRYZ', directed: 'false', weight: 0.7604609999999999} },
+{ data: { source: 'ETFA', target: 'LDHAL6A', directed: 'false', weight: 0.712561} },
+{ data: { source: 'ETFA', target: 'ADSL', directed: 'false', weight: 0.335897} },
+{ data: { source: 'ADSL', target: 'DBI', directed: 'false', weight: 0.890991} },
+{ data: { source: 'ADSL', target: 'OXCT1', directed: 'false', weight: 0.8523440000000001} },
+{ data: { source: 'ADSL', target: 'FH', directed: 'false', weight: 0.71212} },
+{ data: { source: 'ADSL', target: 'ETFB', directed: 'false', weight: 0.668679} },
+{ data: { source: 'ADSL', target: 'GPT2', directed: 'false', weight: 0.551646} },
+{ data: { source: 'DBI', target: 'ETFB', directed: 'false', weight: 0.844612} },
+{ data: { source: 'DBI', target: 'OXCT1', directed: 'false', weight: 0.544892} },
+{ data: { source: 'DBI', target: 'GPT2', directed: 'false', weight: 0.5} },
+{ data: { source: 'DBI', target: 'FH', directed: 'false', weight: 0.00922051} },
+{ data: { source: 'FH', target: 'GPT2', directed: 'false', weight: 0.9064129999999999} },
+{ data: { source: 'FH', target: 'ETFB', directed: 'false', weight: 0.742309} },
+{ data: { source: 'FH', target: 'OXCT1', directed: 'false', weight: 0.6769} },
+{ data: { source: 'LDHAL6A', target: 'ETFB', directed: 'false', weight: 0.934895} },
+{ data: { source: 'LDHAL6A', target: 'CRYZ', directed: 'false', weight: 0.0424403} },
+{ data: { source: 'ETFB', target: 'OXCT1', directed: 'false', weight: 0.818574} },
+{ data: { source: 'ETFB', target: 'CRYZ', directed: 'false', weight: 0.46421899999999994} },
+{ data: { source: 'ETFB', target: 'GPT2', directed: 'false', weight: 0.315386} },
+{ data: { source: 'OXCT1', target: 'GPT2', directed: 'false', weight: 0.763948} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.54330
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>ETFA
+    </section>
+    </body>
+    </html>
+    

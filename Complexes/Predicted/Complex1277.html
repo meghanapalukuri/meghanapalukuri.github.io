@@ -1,0 +1,82 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 1277</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1278.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'UBA1', score: 5, href: "https://www.uniprot.org/uniprot/P22314" }},
+{data: { id: 'CHTF8', score: 4, href: "https://www.uniprot.org/uniprot/P0CG13" }},
+{data: { id: 'UGT2B10', score: 4, href: "https://www.uniprot.org/uniprot/P36537" }}], 
+ edges: [{ data: { source: 'UGT2B10', target: 'UBA1', directed: 'false', weight: 0.274323} },
+{ data: { source: 'CHTF8', target: 'UBA1', directed: 'false', weight: 0.6271680000000001} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.52690
+    </section>
+    </body>
+    </html>
+    

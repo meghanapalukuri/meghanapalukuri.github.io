@@ -1,0 +1,127 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 970</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex971.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'TNPO2', score: 5, href: "https://www.uniprot.org/uniprot/O14787" }},
+{data: { id: 'ZW10', score: 5, href: "https://www.uniprot.org/uniprot/O43264" }},
+{data: { id: 'DNAAF5', score: 5, href: "https://www.uniprot.org/uniprot/Q86Y56" }},
+{data: { id: 'TTI1', score: 5, href: "https://www.uniprot.org/uniprot/O43156" }},
+{data: { id: 'THADA', score: 5, href: "https://www.uniprot.org/uniprot/Q6YHU6" }},
+{data: { id: 'ATR', score: 5, href: "https://www.uniprot.org/uniprot/Q13535" }},
+{data: { id: 'TNPO3', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5L0" }},
+{data: { id: 'XPO6', score: 5, href: "https://www.uniprot.org/uniprot/Q96QU8" }},
+{data: { id: 'ATM', score: 5, href: "https://www.uniprot.org/uniprot/A0A024R3C7" }},
+{data: { id: 'XPO7', score: 5, href: "https://www.uniprot.org/uniprot/Q9UIA9" }},
+{data: { id: 'GCN1', score: 5, href: "https://www.uniprot.org/uniprot/Q92616" }}], 
+ edges: [{ data: { source: 'ATM', target: 'XPO7', directed: 'false', weight: 0.384596} },
+{ data: { source: 'ATM', target: 'DNAAF5', directed: 'false', weight: 0.33407800000000004} },
+{ data: { source: 'ATM', target: 'THADA', directed: 'false', weight: 0.303195} },
+{ data: { source: 'GCN1', target: 'ZW10', directed: 'false', weight: 0.623717} },
+{ data: { source: 'GCN1', target: 'XPO7', directed: 'false', weight: 0.581176} },
+{ data: { source: 'GCN1', target: 'TTI1', directed: 'false', weight: 0.46347299999999997} },
+{ data: { source: 'GCN1', target: 'XPO6', directed: 'false', weight: 0.44086899999999996} },
+{ data: { source: 'GCN1', target: 'DNAAF5', directed: 'false', weight: 0.426387} },
+{ data: { source: 'GCN1', target: 'ATR', directed: 'false', weight: 0.401391} },
+{ data: { source: 'DNAAF5', target: 'XPO7', directed: 'false', weight: 0.607101} },
+{ data: { source: 'DNAAF5', target: 'THADA', directed: 'false', weight: 0.20732899999999999} },
+{ data: { source: 'TTI1', target: 'THADA', directed: 'false', weight: 0.7223970000000001} },
+{ data: { source: 'TTI1', target: 'TNPO2', directed: 'false', weight: 0.510916} },
+{ data: { source: 'TTI1', target: 'XPO6', directed: 'false', weight: 0.44086899999999996} },
+{ data: { source: 'TTI1', target: 'ZW10', directed: 'false', weight: 0.426387} },
+{ data: { source: 'TTI1', target: 'XPO7', directed: 'false', weight: 0.401391} },
+{ data: { source: 'TTI1', target: 'ATR', directed: 'false', weight: 0.265096} },
+{ data: { source: 'TTI1', target: 'TNPO3', directed: 'false', weight: 0.25932} },
+{ data: { source: 'THADA', target: 'XPO6', directed: 'false', weight: 0.6435810000000001} },
+{ data: { source: 'THADA', target: 'ATR', directed: 'false', weight: 0.51279} },
+{ data: { source: 'THADA', target: 'TNPO2', directed: 'false', weight: 0.44567700000000005} },
+{ data: { source: 'THADA', target: 'TNPO3', directed: 'false', weight: 0.403582} },
+{ data: { source: 'THADA', target: 'XPO7', directed: 'false', weight: 0.328104} },
+{ data: { source: 'THADA', target: 'ZW10', directed: 'false', weight: 0.322601} },
+{ data: { source: 'XPO6', target: 'ATR', directed: 'false', weight: 0.579203} },
+{ data: { source: 'XPO6', target: 'XPO7', directed: 'false', weight: 0.559377} },
+{ data: { source: 'XPO6', target: 'ZW10', directed: 'false', weight: 0.42352399999999996} },
+{ data: { source: 'XPO6', target: 'TNPO2', directed: 'false', weight: 0.391893} },
+{ data: { source: 'XPO6', target: 'TNPO3', directed: 'false', weight: 0.363442} },
+{ data: { source: 'XPO7', target: 'ATR', directed: 'false', weight: 0.61695} },
+{ data: { source: 'XPO7', target: 'ZW10', directed: 'false', weight: 0.550275} },
+{ data: { source: 'XPO7', target: 'TNPO2', directed: 'false', weight: 0.493504} },
+{ data: { source: 'XPO7', target: 'TNPO3', directed: 'false', weight: 0.443483} },
+{ data: { source: 'TNPO3', target: 'TNPO2', directed: 'false', weight: 0.9685819999999999} },
+{ data: { source: 'TNPO3', target: 'ATR', directed: 'false', weight: 0.443483} },
+{ data: { source: 'TNPO3', target: 'ZW10', directed: 'false', weight: 0.194233} },
+{ data: { source: 'ZW10', target: 'TNPO2', directed: 'false', weight: 0.6256229999999999} },
+{ data: { source: 'ZW10', target: 'ATR', directed: 'false', weight: 0.375017} },
+{ data: { source: 'TNPO2', target: 'ATR', directed: 'false', weight: 0.33331900000000003} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.57802
+    </section>
+    </body>
+    </html>
+    

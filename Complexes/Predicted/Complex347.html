@@ -1,0 +1,87 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Complex 347</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex348.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SETD2', score: 5, href: "https://www.uniprot.org/uniprot/Q9BYW2" }},
+{data: { id: 'AUNIP', score: 5, href: "https://www.uniprot.org/uniprot/Q9H7T9" }},
+{data: { id: 'AURKA', score: 5, href: "https://www.uniprot.org/uniprot/O14965" }},
+{data: { id: 'ITPKC', score: 5, href: "https://www.uniprot.org/uniprot/Q96DU7" }}], 
+ edges: [{ data: { source: 'ITPKC', target: 'AURKA', directed: 'false', weight: 0.975} },
+{ data: { source: 'ITPKC', target: 'AUNIP', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ITPKC', target: 'SETD2', directed: 'false', weight: 0.120276} },
+{ data: { source: 'AUNIP', target: 'AURKA', directed: 'false', weight: 0.950202} },
+{ data: { source: 'AUNIP', target: 'SETD2', directed: 'false', weight: 0.10556600000000001} },
+{ data: { source: 'SETD2', target: 'AURKA', directed: 'false', weight: 0.518907} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+	<br>
+	<br>
+	<br> 
+    Complex Score (from Super.Complex) = 0.77190
+    </section>
+    </body>
+    </html>
+    
