@@ -29,26 +29,24 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RNPS1', score: 5, href: "https://www.uniprot.org/uniprot/Q15287" }},
-{data: { id: 'SAP18', score: 5, href: "https://www.uniprot.org/uniprot/O00422" }},
-{data: { id: 'CWC22', score: 5, href: "https://www.uniprot.org/uniprot/Q9HCG8" }},
-{data: { id: 'ZRANB2', score: 5, href: "https://www.uniprot.org/uniprot/O95218" }},
-{data: { id: 'H2AFZ', score: 0 }},
-{data: { id: 'GPATCH8', score: 4, href: "https://www.uniprot.org/uniprot/Q9UKJ3" }},
-{data: { id: 'ACIN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKV3" }}], 
- edges: [{ data: { source: 'RNPS1', target: 'ACIN1', directed: 'false', weight: 0.99926} },
-{ data: { source: 'RNPS1', target: 'GPATCH8', directed: 'false', weight: 0.9967739999999999} },
-{ data: { source: 'RNPS1', target: 'CWC22', directed: 'false', weight: 0.9759450000000001} },
-{ data: { source: 'RNPS1', target: 'ZRANB2', directed: 'false', weight: 0.9732299999999999} },
-{ data: { source: 'RNPS1', target: 'SAP18', directed: 'false', weight: 0.9643430000000001} },
-{ data: { source: 'RNPS1', target: 'H2AFZ', directed: 'false', weight: 0.48214300000000004} },
-{ data: { source: 'CWC22', target: 'ACIN1', directed: 'false', weight: 0.951304} },
-{ data: { source: 'CWC22', target: 'ZRANB2', directed: 'false', weight: 0.45883100000000004} },
-{ data: { source: 'CWC22', target: 'GPATCH8', directed: 'false', weight: 0.09315419999999999} },
-{ data: { source: 'CWC22', target: 'SAP18', directed: 'false', weight: 0.0509925} },
-{ data: { source: 'SAP18', target: 'ZRANB2', directed: 'false', weight: 0.0668043} },
-{ data: { source: 'SAP18', target: 'H2AFZ', directed: 'false', weight: 0.020368200000000003} },
-{ data: { source: 'ZRANB2', target: 'GPATCH8', directed: 'false', weight: 0.061500400000000004} }]},
+elements:{nodes: [{data: { id: 'HLA-C', score: 5, href: "https://www.uniprot.org/uniprot/P10321" }},
+{data: { id: 'HLA-A', score: 5, href: "https://www.uniprot.org/uniprot/P04439" }},
+{data: { id: 'HLA-H', score: 5, href: "https://www.uniprot.org/uniprot/P01893" }},
+{data: { id: 'ECEL1', score: 5, href: "https://www.uniprot.org/uniprot/O95672" }},
+{data: { id: 'HLA-E', score: 5, href: "https://www.uniprot.org/uniprot/P13747" }},
+{data: { id: 'EIF2AK3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZJ5" }}], 
+ edges: [{ data: { source: 'HLA-C', target: 'HLA-A', directed: 'false', weight: 0.746871} },
+{ data: { source: 'HLA-C', target: 'HLA-E', directed: 'false', weight: 0.42016899999999996} },
+{ data: { source: 'HLA-C', target: 'HLA-H', directed: 'false', weight: 0.29441999999999996} },
+{ data: { source: 'HLA-C', target: 'ECEL1', directed: 'false', weight: 0.105939} },
+{ data: { source: 'HLA-C', target: 'EIF2AK3', directed: 'false', weight: 0.0364249} },
+{ data: { source: 'HLA-A', target: 'HLA-H', directed: 'false', weight: 0.185937} },
+{ data: { source: 'HLA-H', target: 'HLA-E', directed: 'false', weight: 0.561453} },
+{ data: { source: 'HLA-H', target: 'EIF2AK3', directed: 'false', weight: 0.184918} },
+{ data: { source: 'HLA-H', target: 'ECEL1', directed: 'false', weight: 0.123797} },
+{ data: { source: 'EIF2AK3', target: 'HLA-E', directed: 'false', weight: 0.305055} },
+{ data: { source: 'EIF2AK3', target: 'ECEL1', directed: 'false', weight: 0.108694} },
+{ data: { source: 'HLA-E', target: 'ECEL1', directed: 'false', weight: 0.48900200000000005} }]},
 
 style: [
     {
@@ -90,7 +88,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.58521
+    Complex Score (from Super.Complex) = 0.58507
     </section>
     </body>
     </html>

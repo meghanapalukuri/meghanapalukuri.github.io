@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DCLRE1C', score: 5, href: "https://www.uniprot.org/uniprot/Q96SD1" }},
-{data: { id: 'TRIM26', score: 5, href: "https://www.uniprot.org/uniprot/Q12899" }},
-{data: { id: 'ANKRD52', score: 3, href: "https://www.uniprot.org/uniprot/Q8NB46" }}], 
- edges: [{ data: { source: 'ANKRD52', target: 'DCLRE1C', directed: 'false', weight: 0.9262239999999999} },
-{ data: { source: 'ANKRD52', target: 'TRIM26', directed: 'false', weight: 0.10556600000000001} },
-{ data: { source: 'TRIM26', target: 'DCLRE1C', directed: 'false', weight: 0.49097299999999994} }]},
+elements:{nodes: [{data: { id: 'FAM241A', score: 2, href: "https://www.uniprot.org/uniprot/Q8N8J7" }},
+{data: { id: 'RTN4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NQC3" }},
+{data: { id: 'SH3PXD2A', score: 5, href: "https://www.uniprot.org/uniprot/Q5TCZ1" }}], 
+ edges: [{ data: { source: 'SH3PXD2A', target: 'RTN4', directed: 'false', weight: 0.973541} },
+{ data: { source: 'SH3PXD2A', target: 'FAM241A', directed: 'false', weight: 0.11730499999999999} },
+{ data: { source: 'FAM241A', target: 'RTN4', directed: 'false', weight: 0.36430500000000005} }]},
 
 style: [
     {
@@ -76,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.75621
+    Complex Score (from Super.Complex) = 0.75620
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>RTN4
     </section>
     </body>
     </html>

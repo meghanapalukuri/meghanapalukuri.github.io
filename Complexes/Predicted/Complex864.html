@@ -29,18 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PPM1A', score: 5, href: "https://www.uniprot.org/uniprot/P35813" }},
-{data: { id: 'PPM1B', score: 5, href: "https://www.uniprot.org/uniprot/O75688" }},
-{data: { id: 'INPPL1', score: 5, href: "https://www.uniprot.org/uniprot/O15357" }},
-{data: { id: 'NAA10', score: 5, href: "https://www.uniprot.org/uniprot/P41227" }},
-{data: { id: 'ATP6V1H', score: 5, href: "https://www.uniprot.org/uniprot/Q9UI12" }}], 
- edges: [{ data: { source: 'NAA10', target: 'PPM1A', directed: 'false', weight: 0.763983} },
-{ data: { source: 'NAA10', target: 'PPM1B', directed: 'false', weight: 0.703659} },
-{ data: { source: 'INPPL1', target: 'PPM1A', directed: 'false', weight: 0.338806} },
-{ data: { source: 'INPPL1', target: 'PPM1B', directed: 'false', weight: 0.060491199999999995} },
-{ data: { source: 'PPM1B', target: 'PPM1A', directed: 'false', weight: 0.9583709999999999} },
-{ data: { source: 'PPM1B', target: 'ATP6V1H', directed: 'false', weight: 0.480897} },
-{ data: { source: 'PPM1A', target: 'ATP6V1H', directed: 'false', weight: 0.29123699999999997} }]},
+elements:{nodes: [{data: { id: 'MDN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NU22" }},
+{data: { id: 'GPD1L', score: 5, href: "https://www.uniprot.org/uniprot/Q8N335" }},
+{data: { id: 'PCBD1', score: 5, href: "https://www.uniprot.org/uniprot/P61457" }},
+{data: { id: 'COQ5', score: 5, href: "https://www.uniprot.org/uniprot/Q5HYK3" }}], 
+ edges: [{ data: { source: 'COQ5', target: 'GPD1L', directed: 'false', weight: 0.444558} },
+{ data: { source: 'COQ5', target: 'MDN1', directed: 'false', weight: 0.161324} },
+{ data: { source: 'GPD1L', target: 'PCBD1', directed: 'false', weight: 0.669782} },
+{ data: { source: 'GPD1L', target: 'MDN1', directed: 'false', weight: 0.39475} }]},
 
 style: [
     {
@@ -82,7 +78,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.55790
+    Complex Score (from Super.Complex) = 0.55751
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>MDN1
     </section>
     </body>
     </html>

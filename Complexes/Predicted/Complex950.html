@@ -29,11 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CNN2', score: 5, href: "https://www.uniprot.org/uniprot/Q99439" }},
-{data: { id: 'SARS', score: 2, href: "https://www.uniprot.org/uniprot/Q0VGA5" }},
-{data: { id: 'ALAD', score: 5, href: "https://www.uniprot.org/uniprot/P13716" }}], 
- edges: [{ data: { source: 'ALAD', target: 'CNN2', directed: 'false', weight: 0.578996} },
-{ data: { source: 'ALAD', target: 'SARS', directed: 'false', weight: 0.53235} }]},
+elements:{nodes: [{data: { id: 'BYSL', score: 5, href: "https://www.uniprot.org/uniprot/Q13895" }},
+{data: { id: 'PSG6', score: 5, href: "https://www.uniprot.org/uniprot/Q00889" }},
+{data: { id: 'PSG1', score: 5, href: "https://www.uniprot.org/uniprot/P11464" }},
+{data: { id: 'PSG5', score: 3, href: "https://www.uniprot.org/uniprot/Q15238" }},
+{data: { id: 'FAM207A', score: 3, href: "https://www.uniprot.org/uniprot/Q9NSI2" }},
+{data: { id: 'PARN', score: 5, href: "https://www.uniprot.org/uniprot/O95453" }}], 
+ edges: [{ data: { source: 'PSG5', target: 'PSG1', directed: 'false', weight: 0.9766879999999999} },
+{ data: { source: 'PSG5', target: 'PSG6', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PSG5', target: 'PARN', directed: 'false', weight: 0.128057} },
+{ data: { source: 'PSG1', target: 'PSG6', directed: 'false', weight: 0.965097} },
+{ data: { source: 'PSG1', target: 'PARN', directed: 'false', weight: 0.6568609999999999} },
+{ data: { source: 'PSG6', target: 'PARN', directed: 'false', weight: 0.128057} },
+{ data: { source: 'BYSL', target: 'PARN', directed: 'false', weight: 0.647788} },
+{ data: { source: 'BYSL', target: 'FAM207A', directed: 'false', weight: 0.40582399999999996} },
+{ data: { source: 'PARN', target: 'FAM207A', directed: 'false', weight: 0.0911765} }]},
 
 style: [
     {
@@ -75,7 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53492
+    Complex Score (from Super.Complex) = 0.53458
     </section>
     </body>
     </html>

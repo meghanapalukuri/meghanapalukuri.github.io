@@ -29,19 +29,40 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MTERF4', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z6M4" }},
+elements:{nodes: [{data: { id: 'GINS3', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRX5" }},
+{data: { id: 'TIMELESS', score: 5, href: "https://www.uniprot.org/uniprot/Q9UNS1" }},
+{data: { id: 'CLSPN', score: 5, href: "https://www.uniprot.org/uniprot/Q9HAW4" }},
+{data: { id: 'GINS2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y248" }},
+{data: { id: 'GINS4', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRT9" }},
+{data: { id: 'WDHD1', score: 5, href: "https://www.uniprot.org/uniprot/O75717" }},
 {data: { id: 'CA10', score: 3, href: "https://www.uniprot.org/uniprot/Q9NS85" }},
 {data: { id: 'PIAS4', score: 5, href: "https://www.uniprot.org/uniprot/Q8N2W9" }},
-{data: { id: 'WDHD1', score: 5, href: "https://www.uniprot.org/uniprot/O75717" }},
-{data: { id: 'ASS1', score: 5, href: "https://www.uniprot.org/uniprot/P00966" }}], 
- edges: [{ data: { source: 'WDHD1', target: 'CA10', directed: 'false', weight: 0.83226} },
+{data: { id: 'TIPIN', score: 5, href: "https://www.uniprot.org/uniprot/Q9BVW5" }},
+{data: { id: 'GINS1', score: 5, href: "https://www.uniprot.org/uniprot/Q14691" }}], 
+ edges: [{ data: { source: 'GINS3', target: 'GINS4', directed: 'false', weight: 0.9985780000000001} },
+{ data: { source: 'GINS3', target: 'GINS2', directed: 'false', weight: 0.9946219999999999} },
+{ data: { source: 'GINS3', target: 'TIPIN', directed: 'false', weight: 0.9714459999999999} },
+{ data: { source: 'GINS3', target: 'CLSPN', directed: 'false', weight: 0.796709} },
+{ data: { source: 'GINS3', target: 'GINS1', directed: 'false', weight: 0.7327600000000001} },
+{ data: { source: 'GINS3', target: 'TIMELESS', directed: 'false', weight: 0.714755} },
+{ data: { source: 'WDHD1', target: 'CA10', directed: 'false', weight: 0.83226} },
+{ data: { source: 'WDHD1', target: 'GINS4', directed: 'false', weight: 0.563949} },
 { data: { source: 'WDHD1', target: 'PIAS4', directed: 'false', weight: 0.140692} },
-{ data: { source: 'MTERF4', target: 'CA10', directed: 'false', weight: 0.634555} },
-{ data: { source: 'MTERF4', target: 'PIAS4', directed: 'false', weight: 0.151455} },
-{ data: { source: 'MTERF4', target: 'ASS1', directed: 'false', weight: 0.123797} },
+{ data: { source: 'TIMELESS', target: 'TIPIN', directed: 'false', weight: 0.999973} },
+{ data: { source: 'TIMELESS', target: 'GINS4', directed: 'false', weight: 0.8841959999999999} },
+{ data: { source: 'TIMELESS', target: 'GINS1', directed: 'false', weight: 0.390018} },
+{ data: { source: 'TIMELESS', target: 'GINS2', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'TIMELESS', target: 'CLSPN', directed: 'false', weight: 0.24882600000000002} },
+{ data: { source: 'GINS2', target: 'GINS4', directed: 'false', weight: 0.934578} },
+{ data: { source: 'GINS2', target: 'GINS1', directed: 'false', weight: 0.926638} },
+{ data: { source: 'GINS2', target: 'TIPIN', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'GINS2', target: 'CLSPN', directed: 'false', weight: 0.151455} },
+{ data: { source: 'GINS4', target: 'TIPIN', directed: 'false', weight: 0.986808} },
+{ data: { source: 'GINS4', target: 'GINS1', directed: 'false', weight: 0.597964} },
 { data: { source: 'PIAS4', target: 'CA10', directed: 'false', weight: 0.985661} },
-{ data: { source: 'PIAS4', target: 'ASS1', directed: 'false', weight: 0.140692} },
-{ data: { source: 'ASS1', target: 'CA10', directed: 'false', weight: 0.8762770000000001} }]},
+{ data: { source: 'CLSPN', target: 'TIPIN', directed: 'false', weight: 0.43237} },
+{ data: { source: 'CLSPN', target: 'GINS1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'GINS1', target: 'TIPIN', directed: 'false', weight: 0.23098000000000002} }]},
 
 style: [
     {
@@ -83,7 +104,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.54413
+    Complex Score (from Super.Complex) = 0.54400
     </section>
     </body>
     </html>

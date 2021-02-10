@@ -29,15 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SLX4', score: 5, href: "https://www.uniprot.org/uniprot/Q8IY92" }},
-{data: { id: 'XPA', score: 5, href: "https://www.uniprot.org/uniprot/P23025" }},
-{data: { id: 'ERCC1', score: 5, href: "https://www.uniprot.org/uniprot/P07992" }},
-{data: { id: 'ERCC4', score: 5, href: "https://www.uniprot.org/uniprot/Q92889" }}], 
- edges: [{ data: { source: 'SLX4', target: 'ERCC1', directed: 'false', weight: 0.9744879999999999} },
-{ data: { source: 'SLX4', target: 'ERCC4', directed: 'false', weight: 0.21936399999999998} },
-{ data: { source: 'ERCC1', target: 'ERCC4', directed: 'false', weight: 0.999957} },
-{ data: { source: 'ERCC1', target: 'XPA', directed: 'false', weight: 0.439953} },
-{ data: { source: 'XPA', target: 'ERCC4', directed: 'false', weight: 0.14624600000000001} }]},
+elements:{nodes: [{data: { id: 'MBL2', score: 5, href: "https://www.uniprot.org/uniprot/P11226" }},
+{data: { id: 'UAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q16222" }},
+{data: { id: 'SERPINC1', score: 0 }}], 
+ edges: [{ data: { source: 'SERPINC1', target: 'UAP1', directed: 'false', weight: 0.48585900000000004} },
+{ data: { source: 'SERPINC1', target: 'MBL2', directed: 'false', weight: 0.101333} },
+{ data: { source: 'MBL2', target: 'UAP1', directed: 'false', weight: 0.436141} }]},
 
 style: [
     {
@@ -79,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66378
+    Complex Score (from Super.Complex) = 0.66351
     </section>
     </body>
     </html>

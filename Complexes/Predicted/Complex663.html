@@ -29,18 +29,23 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'BCL2L11', score: 5, href: "https://www.uniprot.org/uniprot/O43521" }},
-{data: { id: 'BCL2L1', score: 5, href: "https://www.uniprot.org/uniprot/A0A0S2Z3C5" }},
-{data: { id: 'BCL2', score: 5, href: "https://www.uniprot.org/uniprot/A0A024R2B3" }},
-{data: { id: 'BAX', score: 5, href: "https://www.uniprot.org/uniprot/Q07812" }},
-{data: { id: 'BAD', score: 5, href: "https://www.uniprot.org/uniprot/A0A024R562" }}], 
- edges: [{ data: { source: 'BCL2L11', target: 'BCL2', directed: 'false', weight: 0.663101} },
-{ data: { source: 'BCL2L1', target: 'BAD', directed: 'false', weight: 0.9832989999999999} },
-{ data: { source: 'BCL2L1', target: 'BCL2', directed: 'false', weight: 0.982734} },
-{ data: { source: 'BCL2L1', target: 'BAX', directed: 'false', weight: 0.952636} },
-{ data: { source: 'BCL2', target: 'BAX', directed: 'false', weight: 0.192166} },
-{ data: { source: 'BCL2', target: 'BAD', directed: 'false', weight: 0.151455} },
-{ data: { source: 'BAX', target: 'BAD', directed: 'false', weight: 0.11473699999999999} }]},
+elements:{nodes: [{data: { id: 'VTA1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NP79" }},
+{data: { id: 'UBA2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBT2" }},
+{data: { id: 'CHMP5', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZZ3" }},
+{data: { id: 'CAPN7', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6W3" }},
+{data: { id: 'VPS9D1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2B5" }},
+{data: { id: 'VPS4B', score: 5, href: "https://www.uniprot.org/uniprot/O75351" }}], 
+ edges: [{ data: { source: 'VTA1', target: 'VPS4B', directed: 'false', weight: 0.930861} },
+{ data: { source: 'VTA1', target: 'VPS9D1', directed: 'false', weight: 0.133179} },
+{ data: { source: 'VTA1', target: 'CAPN7', directed: 'false', weight: 0.125737} },
+{ data: { source: 'VTA1', target: 'CHMP5', directed: 'false', weight: 0.102352} },
+{ data: { source: 'UBA2', target: 'CHMP5', directed: 'false', weight: 0.970268} },
+{ data: { source: 'VPS4B', target: 'VPS9D1', directed: 'false', weight: 0.943733} },
+{ data: { source: 'VPS4B', target: 'CHMP5', directed: 'false', weight: 0.7478090000000001} },
+{ data: { source: 'VPS4B', target: 'CAPN7', directed: 'false', weight: 0.595145} },
+{ data: { source: 'CHMP5', target: 'CAPN7', directed: 'false', weight: 0.313765} },
+{ data: { source: 'CHMP5', target: 'VPS9D1', directed: 'false', weight: 0.222125} },
+{ data: { source: 'VPS9D1', target: 'CAPN7', directed: 'false', weight: 0.396848} }]},
 
 style: [
     {
@@ -82,7 +87,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.63532
+    Complex Score (from Super.Complex) = 0.63438
     </section>
     </body>
     </html>

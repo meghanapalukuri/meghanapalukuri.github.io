@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'EEA1', score: 5, href: "https://www.uniprot.org/uniprot/Q15075" }},
-{data: { id: 'IL24', score: 5, href: "https://www.uniprot.org/uniprot/Q13007" }},
-{data: { id: 'DDX3Y', score: 5, href: "https://www.uniprot.org/uniprot/O15523" }}], 
- edges: [{ data: { source: 'EEA1', target: 'DDX3Y', directed: 'false', weight: 0.625452} },
-{ data: { source: 'EEA1', target: 'IL24', directed: 'false', weight: 0.26708899999999997} },
-{ data: { source: 'DDX3Y', target: 'IL24', directed: 'false', weight: 0.08872469999999999} }]},
+elements:{nodes: [{data: { id: 'HLA-DQB1', score: 5, href: "https://www.uniprot.org/uniprot/P01920" }},
+{data: { id: 'CNNM3', score: 5, href: "https://www.uniprot.org/uniprot/Q8NE01" }},
+{data: { id: 'CNNM1', score: 4, href: "https://www.uniprot.org/uniprot/Q9NRU3" }}], 
+ edges: [{ data: { source: 'CNNM3', target: 'CNNM1', directed: 'false', weight: 0.41561800000000004} },
+{ data: { source: 'CNNM3', target: 'HLA-DQB1', directed: 'false', weight: 0.175861} },
+{ data: { source: 'CNNM1', target: 'HLA-DQB1', directed: 'false', weight: 0.26776300000000003} }]},
 
 style: [
     {
@@ -76,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66490
+    Complex Score (from Super.Complex) = 0.66434
     </section>
     </body>
     </html>

@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'OSBPL2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H1P3" }},
-{data: { id: 'RAP1GDS1', score: 5, href: "https://www.uniprot.org/uniprot/P52306" }},
-{data: { id: 'GRB2', score: 5, href: "https://www.uniprot.org/uniprot/P62993" }}], 
- edges: [{ data: { source: 'OSBPL2', target: 'RAP1GDS1', directed: 'false', weight: 0.56285} },
-{ data: { source: 'OSBPL2', target: 'GRB2', directed: 'false', weight: 0.241558} },
-{ data: { source: 'RAP1GDS1', target: 'GRB2', directed: 'false', weight: 0.740863} }]},
+elements:{nodes: [{data: { id: 'KIAA1586', score: 4, href: "https://www.uniprot.org/uniprot/Q9HCI6" }},
+{data: { id: 'SPACA1', score: 5, href: "https://www.uniprot.org/uniprot/Q9HBV2" }},
+{data: { id: 'DDIT4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX09" }}], 
+ edges: [{ data: { source: 'SPACA1', target: 'DDIT4', directed: 'false', weight: 0.752261} },
+{ data: { source: 'SPACA1', target: 'KIAA1586', directed: 'false', weight: 0.638636} },
+{ data: { source: 'KIAA1586', target: 'DDIT4', directed: 'false', weight: 0.151455} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.75975
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>RAP1GDS1
+    Complex Score (from Super.Complex) = 0.75972
     </section>
     </body>
     </html>

@@ -29,19 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'EIF4A1', score: 5, href: "https://www.uniprot.org/uniprot/P60842" }},
-{data: { id: 'EIF4G2', score: 5, href: "https://www.uniprot.org/uniprot/P78344" }},
-{data: { id: 'EIF4G1', score: 5, href: "https://www.uniprot.org/uniprot/Q04637" }},
-{data: { id: 'EIF4A2', score: 5, href: "https://www.uniprot.org/uniprot/Q14240" }},
-{data: { id: 'PFKFB4', score: 5, href: "https://www.uniprot.org/uniprot/Q16877" }}], 
- edges: [{ data: { source: 'EIF4A2', target: 'EIF4G1', directed: 'false', weight: 0.9825860000000001} },
-{ data: { source: 'EIF4A2', target: 'EIF4A1', directed: 'false', weight: 0.975029} },
-{ data: { source: 'EIF4A2', target: 'PFKFB4', directed: 'false', weight: 0.299647} },
-{ data: { source: 'EIF4G1', target: 'EIF4A1', directed: 'false', weight: 0.9759209999999999} },
-{ data: { source: 'EIF4G1', target: 'EIF4G2', directed: 'false', weight: 0.879289} },
-{ data: { source: 'EIF4G1', target: 'PFKFB4', directed: 'false', weight: 0.040965499999999995} },
-{ data: { source: 'EIF4A1', target: 'EIF4G2', directed: 'false', weight: 0.419353} },
-{ data: { source: 'EIF4A1', target: 'PFKFB4', directed: 'false', weight: 0.25417199999999995} }]},
+elements:{nodes: [{data: { id: 'HPS1', score: 5, href: "https://www.uniprot.org/uniprot/Q92902" }},
+{data: { id: 'SALL1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NSC2" }},
+{data: { id: 'SALL2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y467" }}], 
+ edges: [{ data: { source: 'SALL1', target: 'HPS1', directed: 'false', weight: 0.55914} },
+{ data: { source: 'SALL1', target: 'SALL2', directed: 'false', weight: 0.165961} },
+{ data: { source: 'SALL2', target: 'HPS1', directed: 'false', weight: 0.32663400000000004} }]},
 
 style: [
     {
@@ -83,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.67129
+    Complex Score (from Super.Complex) = 0.67049
     </section>
     </body>
     </html>

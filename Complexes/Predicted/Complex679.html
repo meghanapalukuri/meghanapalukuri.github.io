@@ -29,19 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'EML1', score: 5, href: "https://www.uniprot.org/uniprot/O00423" }},
-{data: { id: 'EML4', score: 4, href: "https://www.uniprot.org/uniprot/Q9HC35" }},
-{data: { id: 'EML3', score: 4, href: "https://www.uniprot.org/uniprot/Q32P44" }},
-{data: { id: 'NEK9', score: 5, href: "https://www.uniprot.org/uniprot/Q8TD19" }},
-{data: { id: 'EML2', score: 5, href: "https://www.uniprot.org/uniprot/O95834" }}], 
- edges: [{ data: { source: 'NEK9', target: 'EML3', directed: 'false', weight: 0.792075} },
-{ data: { source: 'NEK9', target: 'EML1', directed: 'false', weight: 0.74043} },
-{ data: { source: 'NEK9', target: 'EML2', directed: 'false', weight: 0.676632} },
-{ data: { source: 'NEK9', target: 'EML4', directed: 'false', weight: 0.317083} },
-{ data: { source: 'EML4', target: 'EML1', directed: 'false', weight: 0.305667} },
-{ data: { source: 'EML4', target: 'EML2', directed: 'false', weight: 0.271635} },
-{ data: { source: 'EML4', target: 'EML3', directed: 'false', weight: 0.172871} },
-{ data: { source: 'EML2', target: 'EML1', directed: 'false', weight: 0.571014} }]},
+elements:{nodes: [{data: { id: 'SCAMP4', score: 5, href: "https://www.uniprot.org/uniprot/Q969E2" }},
+{data: { id: 'ATP1B3', score: 5, href: "https://www.uniprot.org/uniprot/P54709" }},
+{data: { id: 'REEP6', score: 5, href: "https://www.uniprot.org/uniprot/Q96HR9" }},
+{data: { id: 'REEP5', score: 5, href: "https://www.uniprot.org/uniprot/Q00765" }}], 
+ edges: [{ data: { source: 'ATP1B3', target: 'REEP5', directed: 'false', weight: 0.7400399999999999} },
+{ data: { source: 'REEP6', target: 'REEP5', directed: 'false', weight: 0.997417} },
+{ data: { source: 'REEP6', target: 'SCAMP4', directed: 'false', weight: 0.165074} },
+{ data: { source: 'SCAMP4', target: 'REEP5', directed: 'false', weight: 0.981615} }]},
 
 style: [
     {
@@ -83,12 +78,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.62743
+    Complex Score (from Super.Complex) = 0.62602
         <br> 
         <br>
         Connection to SARS-COV2: 
         <br>
-        1 interacting protein(s): <br>NEK9
+        2 interacting protein(s): <br>REEP6 REEP5
     </section>
     </body>
     </html>

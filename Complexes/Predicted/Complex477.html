@@ -29,20 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'IMMP1L', score: 3, href: "https://www.uniprot.org/uniprot/Q96LU5" }},
-{data: { id: 'TSPAN5', score: 5, href: "https://www.uniprot.org/uniprot/P62079" }},
-{data: { id: 'NAT8L', score: 5, href: "https://www.uniprot.org/uniprot/Q8N9F0" }},
-{data: { id: 'PIEZO1', score: 5, href: "https://www.uniprot.org/uniprot/Q92508" }},
-{data: { id: 'TMEM248', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWD8" }}], 
- edges: [{ data: { source: 'PIEZO1', target: 'TSPAN5', directed: 'false', weight: 0.51669} },
-{ data: { source: 'PIEZO1', target: 'TMEM248', directed: 'false', weight: 0.171414} },
-{ data: { source: 'PIEZO1', target: 'IMMP1L', directed: 'false', weight: 0.151455} },
-{ data: { source: 'TMEM248', target: 'TSPAN5', directed: 'false', weight: 0.958706} },
-{ data: { source: 'TMEM248', target: 'NAT8L', directed: 'false', weight: 0.151455} },
-{ data: { source: 'TMEM248', target: 'IMMP1L', directed: 'false', weight: 0.151455} },
-{ data: { source: 'NAT8L', target: 'TSPAN5', directed: 'false', weight: 0.931889} },
-{ data: { source: 'NAT8L', target: 'IMMP1L', directed: 'false', weight: 0.133456} },
-{ data: { source: 'TSPAN5', target: 'IMMP1L', directed: 'false', weight: 0.97809} }]},
+elements:{nodes: [{data: { id: 'SMAD9', score: 5, href: "https://www.uniprot.org/uniprot/O15198" }},
+{data: { id: 'LEMD3', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2U8" }},
+{data: { id: 'SMAD3', score: 5, href: "https://www.uniprot.org/uniprot/A0A024R5Z3" }},
+{data: { id: 'SMAD2', score: 5, href: "https://www.uniprot.org/uniprot/Q15796" }}], 
+ edges: [{ data: { source: 'SMAD2', target: 'SMAD3', directed: 'false', weight: 0.987474} },
+{ data: { source: 'SMAD2', target: 'SMAD9', directed: 'false', weight: 0.133456} },
+{ data: { source: 'SMAD2', target: 'LEMD3', directed: 'false', weight: 0.0833615} },
+{ data: { source: 'LEMD3', target: 'SMAD3', directed: 'false', weight: 0.715896} },
+{ data: { source: 'LEMD3', target: 'SMAD9', directed: 'false', weight: 0.186304} },
+{ data: { source: 'SMAD9', target: 'SMAD3', directed: 'false', weight: 0.984751} }]},
 
 style: [
     {
@@ -84,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.70489
+    Complex Score (from Super.Complex) = 0.70482
     </section>
     </body>
     </html>

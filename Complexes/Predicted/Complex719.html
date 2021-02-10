@@ -29,18 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'KCNK1', score: 5, href: "https://www.uniprot.org/uniprot/O00180" }},
-{data: { id: 'GOLGA5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TBA6" }},
-{data: { id: 'ABCC1', score: 5, href: "https://www.uniprot.org/uniprot/P33527" }},
-{data: { id: 'CERS2', score: 5, href: "https://www.uniprot.org/uniprot/Q96G23" }},
-{data: { id: 'CXCR4', score: 5, href: "https://www.uniprot.org/uniprot/P61073" }}], 
- edges: [{ data: { source: 'KCNK1', target: 'ABCC1', directed: 'false', weight: 0.855417} },
-{ data: { source: 'KCNK1', target: 'GOLGA5', directed: 'false', weight: 0.707076} },
-{ data: { source: 'KCNK1', target: 'CXCR4', directed: 'false', weight: 0.705331} },
-{ data: { source: 'KCNK1', target: 'CERS2', directed: 'false', weight: 0.632021} },
-{ data: { source: 'ABCC1', target: 'CXCR4', directed: 'false', weight: 0.19934000000000002} },
-{ data: { source: 'ABCC1', target: 'GOLGA5', directed: 'false', weight: 0.0972698} },
-{ data: { source: 'CXCR4', target: 'GOLGA5', directed: 'false', weight: 0.132679} }]},
+elements:{nodes: [{data: { id: 'CLEC16A', score: 5, href: "https://www.uniprot.org/uniprot/Q2KHT3" }},
+{data: { id: 'SAMHD1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3Z3" }},
+{data: { id: 'RNF41', score: 5, href: "https://www.uniprot.org/uniprot/Q9H4P4" }},
+{data: { id: 'SOGA1', score: 5, href: "https://www.uniprot.org/uniprot/O94964" }},
+{data: { id: 'MTCL1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y4B5" }}], 
+ edges: [{ data: { source: 'SAMHD1', target: 'SOGA1', directed: 'false', weight: 0.617458} },
+{ data: { source: 'SAMHD1', target: 'MTCL1', directed: 'false', weight: 0.24502800000000002} },
+{ data: { source: 'SOGA1', target: 'RNF41', directed: 'false', weight: 0.753696} },
+{ data: { source: 'SOGA1', target: 'MTCL1', directed: 'false', weight: 0.404448} },
+{ data: { source: 'RNF41', target: 'CLEC16A', directed: 'false', weight: 0.690767} },
+{ data: { source: 'RNF41', target: 'MTCL1', directed: 'false', weight: 0.407647} },
+{ data: { source: 'MTCL1', target: 'CLEC16A', directed: 'false', weight: 0.09737960000000001} }]},
 
 style: [
     {
@@ -82,12 +82,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.60624
+    Complex Score (from Super.Complex) = 0.60147
         <br> 
         <br>
         Connection to SARS-COV2: 
         <br>
-        1 interacting protein(s): <br>ABCC1
+        1 interacting protein(s): <br>RNF41
     </section>
     </body>
     </html>

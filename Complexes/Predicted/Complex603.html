@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CKAP4', score: 5, href: "https://www.uniprot.org/uniprot/Q07065" }},
-{data: { id: 'RABL3', score: 0 }},
-{data: { id: 'CLCN7', score: 5, href: "https://www.uniprot.org/uniprot/P51798" }}], 
- edges: [{ data: { source: 'CLCN7', target: 'CKAP4', directed: 'false', weight: 0.364009} },
-{ data: { source: 'CLCN7', target: 'RABL3', directed: 'false', weight: 0.11324100000000001} },
-{ data: { source: 'RABL3', target: 'CKAP4', directed: 'false', weight: 0.30564} }]},
+elements:{nodes: [{data: { id: 'SLC30A7', score: 5, href: "https://www.uniprot.org/uniprot/Q8NEW0" }},
+{data: { id: 'SLC30A6', score: 4, href: "https://www.uniprot.org/uniprot/Q6NXT4" }},
+{data: { id: 'SLC30A5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAD4" }}], 
+ edges: [{ data: { source: 'SLC30A7', target: 'SLC30A5', directed: 'false', weight: 0.29496700000000003} },
+{ data: { source: 'SLC30A7', target: 'SLC30A6', directed: 'false', weight: 0.130385} },
+{ data: { source: 'SLC30A6', target: 'SLC30A5', directed: 'false', weight: 0.345713} }]},
 
 style: [
     {
@@ -76,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65984
+    Complex Score (from Super.Complex) = 0.65932
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>SLC30A7 SLC30A6
     </section>
     </body>
     </html>

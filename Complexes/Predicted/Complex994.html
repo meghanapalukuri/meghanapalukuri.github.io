@@ -29,35 +29,43 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DLAT', score: 5, href: "https://www.uniprot.org/uniprot/P10515" }},
-{data: { id: 'ATP5MG', score: 5, href: "https://www.uniprot.org/uniprot/O75964" }},
-{data: { id: 'PDHA1', score: 5, href: "https://www.uniprot.org/uniprot/P08559" }},
-{data: { id: 'PDHX', score: 5, href: "https://www.uniprot.org/uniprot/O00330" }},
-{data: { id: 'PDHB', score: 5, href: "https://www.uniprot.org/uniprot/P11177" }},
-{data: { id: 'STAT5A', score: 5, href: "https://www.uniprot.org/uniprot/P42229" }},
-{data: { id: 'ATP5F1B', score: 5, href: "https://www.uniprot.org/uniprot/P06576" }},
-{data: { id: 'ATP5F1A', score: 5, href: "https://www.uniprot.org/uniprot/P25705" }},
-{data: { id: 'STAT5B', score: 5, href: "https://www.uniprot.org/uniprot/P51692" }}], 
- edges: [{ data: { source: 'ATP5F1A', target: 'ATP5F1B', directed: 'false', weight: 0.999692} },
-{ data: { source: 'ATP5F1A', target: 'ATP5MG', directed: 'false', weight: 0.9946659999999999} },
-{ data: { source: 'ATP5F1A', target: 'PDHA1', directed: 'false', weight: 0.885999} },
-{ data: { source: 'DLAT', target: 'PDHB', directed: 'false', weight: 0.9999299999999999} },
-{ data: { source: 'DLAT', target: 'PDHA1', directed: 'false', weight: 0.999826} },
-{ data: { source: 'DLAT', target: 'STAT5A', directed: 'false', weight: 0.898526} },
-{ data: { source: 'DLAT', target: 'PDHX', directed: 'false', weight: 0.840566} },
-{ data: { source: 'DLAT', target: 'STAT5B', directed: 'false', weight: 0.734251} },
-{ data: { source: 'PDHX', target: 'PDHB', directed: 'false', weight: 0.9953219999999999} },
-{ data: { source: 'PDHX', target: 'STAT5A', directed: 'false', weight: 0.9594379999999999} },
-{ data: { source: 'PDHX', target: 'PDHA1', directed: 'false', weight: 0.933788} },
-{ data: { source: 'PDHX', target: 'STAT5B', directed: 'false', weight: 0.8918950000000001} },
-{ data: { source: 'STAT5A', target: 'PDHA1', directed: 'false', weight: 0.948998} },
-{ data: { source: 'STAT5A', target: 'PDHB', directed: 'false', weight: 0.9294290000000001} },
-{ data: { source: 'ATP5MG', target: 'ATP5F1B', directed: 'false', weight: 0.951416} },
-{ data: { source: 'ATP5MG', target: 'PDHA1', directed: 'false', weight: 0.370243} },
-{ data: { source: 'PDHB', target: 'PDHA1', directed: 'false', weight: 0.999948} },
-{ data: { source: 'PDHB', target: 'STAT5B', directed: 'false', weight: 0.8367879999999999} },
-{ data: { source: 'PDHA1', target: 'STAT5B', directed: 'false', weight: 0.6547029999999999} },
-{ data: { source: 'PDHA1', target: 'ATP5F1B', directed: 'false', weight: 0.479871} }]},
+elements:{nodes: [{data: { id: 'BUD31', score: 5, href: "https://www.uniprot.org/uniprot/P41223" }},
+{data: { id: 'LSM2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y333" }},
+{data: { id: 'PLRG1', score: 5, href: "https://www.uniprot.org/uniprot/O43660" }},
+{data: { id: 'SMNDC1', score: 5, href: "https://www.uniprot.org/uniprot/O75940" }},
+{data: { id: 'SF3A2', score: 5, href: "https://www.uniprot.org/uniprot/Q15428" }},
+{data: { id: 'SF3A3', score: 5, href: "https://www.uniprot.org/uniprot/Q12874" }},
+{data: { id: 'LSM3', score: 5, href: "https://www.uniprot.org/uniprot/P62310" }},
+{data: { id: 'ZMAT2', score: 5, href: "https://www.uniprot.org/uniprot/Q96NC0" }},
+{data: { id: 'LSM6', score: 5, href: "https://www.uniprot.org/uniprot/P62312" }},
+{data: { id: 'SF3B3', score: 5, href: "https://www.uniprot.org/uniprot/Q15393" }}], 
+ edges: [{ data: { source: 'SF3A3', target: 'SF3B3', directed: 'false', weight: 0.999985} },
+{ data: { source: 'SF3A3', target: 'SF3A2', directed: 'false', weight: 0.9946729999999999} },
+{ data: { source: 'SF3A3', target: 'SMNDC1', directed: 'false', weight: 0.975907} },
+{ data: { source: 'SF3A3', target: 'PLRG1', directed: 'false', weight: 0.9724440000000001} },
+{ data: { source: 'SMNDC1', target: 'SF3B3', directed: 'false', weight: 0.995842} },
+{ data: { source: 'SMNDC1', target: 'LSM2', directed: 'false', weight: 0.9759329999999999} },
+{ data: { source: 'SMNDC1', target: 'LSM6', directed: 'false', weight: 0.9759209999999999} },
+{ data: { source: 'SMNDC1', target: 'PLRG1', directed: 'false', weight: 0.9759} },
+{ data: { source: 'SMNDC1', target: 'BUD31', directed: 'false', weight: 0.9274870000000001} },
+{ data: { source: 'SMNDC1', target: 'LSM3', directed: 'false', weight: 0.917833} },
+{ data: { source: 'SMNDC1', target: 'SF3A2', directed: 'false', weight: 0.686925} },
+{ data: { source: 'SMNDC1', target: 'ZMAT2', directed: 'false', weight: 0.10676600000000001} },
+{ data: { source: 'SF3A2', target: 'SF3B3', directed: 'false', weight: 0.9947360000000001} },
+{ data: { source: 'SF3A2', target: 'PLRG1', directed: 'false', weight: 0.9699260000000001} },
+{ data: { source: 'SF3A2', target: 'BUD31', directed: 'false', weight: 0.7568090000000001} },
+{ data: { source: 'SF3B3', target: 'PLRG1', directed: 'false', weight: 0.9759190000000001} },
+{ data: { source: 'PLRG1', target: 'BUD31', directed: 'false', weight: 0.18591300000000002} },
+{ data: { source: 'LSM3', target: 'LSM2', directed: 'false', weight: 0.650702} },
+{ data: { source: 'LSM3', target: 'ZMAT2', directed: 'false', weight: 0.650065} },
+{ data: { source: 'LSM3', target: 'LSM6', directed: 'false', weight: 0.45053699999999997} },
+{ data: { source: 'LSM3', target: 'BUD31', directed: 'false', weight: 0.443424} },
+{ data: { source: 'BUD31', target: 'LSM2', directed: 'false', weight: 0.9759190000000001} },
+{ data: { source: 'BUD31', target: 'LSM6', directed: 'false', weight: 0.9227139999999999} },
+{ data: { source: 'BUD31', target: 'ZMAT2', directed: 'false', weight: 0.607637} },
+{ data: { source: 'LSM6', target: 'ZMAT2', directed: 'false', weight: 0.960427} },
+{ data: { source: 'LSM6', target: 'LSM2', directed: 'false', weight: 0.15171800000000002} },
+{ data: { source: 'ZMAT2', target: 'LSM2', directed: 'false', weight: 0.969197} }]},
 
 style: [
     {
@@ -99,12 +107,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.52729
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>ATP5MG
+    Complex Score (from Super.Complex) = 0.52692
     </section>
     </body>
     </html>

@@ -29,15 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'STAT1', score: 5, href: "https://www.uniprot.org/uniprot/P42224" }},
-{data: { id: 'TXN2', score: 5, href: "https://www.uniprot.org/uniprot/Q99757" }},
-{data: { id: 'NUDT2', score: 5, href: "https://www.uniprot.org/uniprot/P50583" }},
-{data: { id: 'TXNDC12', score: 5, href: "https://www.uniprot.org/uniprot/O95881" }}], 
- edges: [{ data: { source: 'STAT1', target: 'TXNDC12', directed: 'false', weight: 0.392844} },
-{ data: { source: 'STAT1', target: 'NUDT2', directed: 'false', weight: 0.185893} },
-{ data: { source: 'NUDT2', target: 'TXNDC12', directed: 'false', weight: 0.578575} },
-{ data: { source: 'NUDT2', target: 'TXN2', directed: 'false', weight: 0.0671653} },
-{ data: { source: 'TXNDC12', target: 'TXN2', directed: 'false', weight: 0.353968} }]},
+elements:{nodes: [{data: { id: 'TOR1A', score: 5, href: "https://www.uniprot.org/uniprot/O14656" }},
+{data: { id: 'ZNF747', score: 3, href: "https://www.uniprot.org/uniprot/Q9BV97" }},
+{data: { id: 'ZNF707', score: 4, href: "https://www.uniprot.org/uniprot/Q96C28" }},
+{data: { id: 'ZNF273', score: 3, href: "https://www.uniprot.org/uniprot/Q14593" }},
+{data: { id: 'TOR2A', score: 5, href: "https://www.uniprot.org/uniprot/Q8N2E6" }}], 
+ edges: [{ data: { source: 'ZNF707', target: 'ZNF747', directed: 'false', weight: 0.9027930000000001} },
+{ data: { source: 'ZNF707', target: 'TOR2A', directed: 'false', weight: 0.818757} },
+{ data: { source: 'ZNF707', target: 'ZNF273', directed: 'false', weight: 0.685465} },
+{ data: { source: 'ZNF747', target: 'ZNF273', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ZNF747', target: 'TOR2A', directed: 'false', weight: 0.140692} },
+{ data: { source: 'TOR1A', target: 'TOR2A', directed: 'false', weight: 0.5363939999999999} },
+{ data: { source: 'TOR2A', target: 'ZNF273', directed: 'false', weight: 0.140692} }]},
 
 style: [
     {
@@ -79,7 +82,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.61406
+    Complex Score (from Super.Complex) = 0.61281
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>TOR1A
     </section>
     </body>
     </html>

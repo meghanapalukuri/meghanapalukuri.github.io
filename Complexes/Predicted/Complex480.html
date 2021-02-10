@@ -29,20 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'IFT88', score: 5, href: "https://www.uniprot.org/uniprot/Q13099" }},
-{data: { id: 'IFT22', score: 4, href: "https://www.uniprot.org/uniprot/Q9H7X7" }},
-{data: { id: 'TTC30B', score: 4, href: "https://www.uniprot.org/uniprot/Q8N4P2" }},
-{data: { id: 'IFT57', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWB7" }},
-{data: { id: 'RABEP2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H5N1" }}], 
- edges: [{ data: { source: 'IFT22', target: 'IFT57', directed: 'false', weight: 0.601388} },
-{ data: { source: 'IFT22', target: 'IFT88', directed: 'false', weight: 0.28781100000000004} },
-{ data: { source: 'IFT22', target: 'TTC30B', directed: 'false', weight: 0.123797} },
-{ data: { source: 'IFT57', target: 'RABEP2', directed: 'false', weight: 0.9639770000000001} },
-{ data: { source: 'IFT57', target: 'IFT88', directed: 'false', weight: 0.9256190000000001} },
-{ data: { source: 'IFT57', target: 'TTC30B', directed: 'false', weight: 0.879188} },
-{ data: { source: 'IFT88', target: 'RABEP2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'IFT88', target: 'TTC30B', directed: 'false', weight: 0.0177621} },
-{ data: { source: 'TTC30B', target: 'RABEP2', directed: 'false', weight: 0.151455} }]},
+elements:{nodes: [{data: { id: 'EIF4G3', score: 5, href: "https://www.uniprot.org/uniprot/O43432" }},
+{data: { id: 'EIF4ENIF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NRA8" }},
+{data: { id: 'ANGEL1', score: 4, href: "https://www.uniprot.org/uniprot/Q9UNK9" }},
+{data: { id: 'EIF4EBP1', score: 5, href: "https://www.uniprot.org/uniprot/Q13541" }},
+{data: { id: 'EIF4E', score: 5, href: "https://www.uniprot.org/uniprot/P06730" }}], 
+ edges: [{ data: { source: 'ANGEL1', target: 'EIF4E', directed: 'false', weight: 0.8904989999999999} },
+{ data: { source: 'ANGEL1', target: 'EIF4ENIF1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'ANGEL1', target: 'EIF4EBP1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'ANGEL1', target: 'EIF4G3', directed: 'false', weight: 0.08813739999999999} },
+{ data: { source: 'EIF4EBP1', target: 'EIF4E', directed: 'false', weight: 0.850827} },
+{ data: { source: 'EIF4EBP1', target: 'EIF4ENIF1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'EIF4E', target: 'EIF4G3', directed: 'false', weight: 0.9843799999999999} },
+{ data: { source: 'EIF4E', target: 'EIF4ENIF1', directed: 'false', weight: 0.982555} },
+{ data: { source: 'EIF4ENIF1', target: 'EIF4G3', directed: 'false', weight: 0.108674} }]},
 
 style: [
     {
@@ -84,7 +84,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.70386
+    Complex Score (from Super.Complex) = 0.70304
     </section>
     </body>
     </html>

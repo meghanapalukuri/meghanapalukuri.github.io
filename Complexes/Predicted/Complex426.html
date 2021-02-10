@@ -29,16 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RRAGA', score: 5, href: "https://www.uniprot.org/uniprot/Q7L523" }},
-{data: { id: 'RRAGC', score: 5, href: "https://www.uniprot.org/uniprot/Q9HB90" }},
-{data: { id: 'SLC38A9', score: 5, href: "https://www.uniprot.org/uniprot/Q8NBW4" }},
-{data: { id: 'RRAGD', score: 5, href: "https://www.uniprot.org/uniprot/Q9NQL2" }}], 
- edges: [{ data: { source: 'SLC38A9', target: 'RRAGA', directed: 'false', weight: 0.6968840000000001} },
-{ data: { source: 'SLC38A9', target: 'RRAGC', directed: 'false', weight: 0.5299699999999999} },
-{ data: { source: 'SLC38A9', target: 'RRAGD', directed: 'false', weight: 0.11730499999999999} },
-{ data: { source: 'RRAGC', target: 'RRAGA', directed: 'false', weight: 0.9627049999999999} },
-{ data: { source: 'RRAGC', target: 'RRAGD', directed: 'false', weight: 0.120276} },
-{ data: { source: 'RRAGA', target: 'RRAGD', directed: 'false', weight: 0.960111} }]},
+elements:{nodes: [{data: { id: 'ASNSD1', score: 3, href: "https://www.uniprot.org/uniprot/Q9NWL6" }},
+{data: { id: 'RFPL3', score: 5, href: "https://www.uniprot.org/uniprot/O75679" }},
+{data: { id: 'RFPL1', score: 5, href: "https://www.uniprot.org/uniprot/O75677" }},
+{data: { id: 'RFPL2', score: 4, href: "https://www.uniprot.org/uniprot/O75678" }},
+{data: { id: 'DAB2IP', score: 5, href: "https://www.uniprot.org/uniprot/Q5VWQ8" }}], 
+ edges: [{ data: { source: 'RFPL1', target: 'RFPL3', directed: 'false', weight: 0.9836020000000001} },
+{ data: { source: 'RFPL1', target: 'ASNSD1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'RFPL1', target: 'DAB2IP', directed: 'false', weight: 0.171414} },
+{ data: { source: 'RFPL1', target: 'RFPL2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'RFPL3', target: 'RFPL2', directed: 'false', weight: 0.9849110000000001} },
+{ data: { source: 'RFPL3', target: 'ASNSD1', directed: 'false', weight: 0.982225} },
+{ data: { source: 'RFPL3', target: 'DAB2IP', directed: 'false', weight: 0.9792379999999999} },
+{ data: { source: 'DAB2IP', target: 'ASNSD1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'DAB2IP', target: 'RFPL2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ASNSD1', target: 'RFPL2', directed: 'false', weight: 0.151455} }]},
 
 style: [
     {
@@ -80,7 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.74244
+    Complex Score (from Super.Complex) = 0.74241
     </section>
     </body>
     </html>

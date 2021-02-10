@@ -29,18 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MAD1L1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6D9" }},
-{data: { id: 'EPM2AIP1', score: 5, href: "https://www.uniprot.org/uniprot/Q7L775" }},
-{data: { id: 'BAG5', score: 5, href: "https://www.uniprot.org/uniprot/Q9UL15" }},
-{data: { id: 'MAD2L1BP', score: 5, href: "https://www.uniprot.org/uniprot/Q15013" }},
-{data: { id: 'MAD2L1', score: 5, href: "https://www.uniprot.org/uniprot/Q13257" }}], 
- edges: [{ data: { source: 'MAD1L1', target: 'BAG5', directed: 'false', weight: 0.806249} },
-{ data: { source: 'MAD1L1', target: 'MAD2L1BP', directed: 'false', weight: 0.715875} },
-{ data: { source: 'MAD1L1', target: 'MAD2L1', directed: 'false', weight: 0.64625} },
-{ data: { source: 'MAD1L1', target: 'EPM2AIP1', directed: 'false', weight: 0.133179} },
-{ data: { source: 'EPM2AIP1', target: 'MAD2L1', directed: 'false', weight: 0.579746} },
-{ data: { source: 'EPM2AIP1', target: 'MAD2L1BP', directed: 'false', weight: 0.144297} },
-{ data: { source: 'MAD2L1', target: 'MAD2L1BP', directed: 'false', weight: 0.941802} }]},
+elements:{nodes: [{data: { id: 'KIAA0232', score: 2, href: "https://www.uniprot.org/uniprot/Q92628" }},
+{data: { id: 'HSPBAP1', score: 4, href: "https://www.uniprot.org/uniprot/Q96EW2" }},
+{data: { id: 'FOXD2', score: 5, href: "https://www.uniprot.org/uniprot/O60548" }},
+{data: { id: 'FOXD4L6', score: 2, href: "https://www.uniprot.org/uniprot/Q3SYB3" }}], 
+ edges: [{ data: { source: 'FOXD2', target: 'FOXD4L6', directed: 'false', weight: 0.6264270000000001} },
+{ data: { source: 'FOXD2', target: 'HSPBAP1', directed: 'false', weight: 0.133456} },
+{ data: { source: 'KIAA0232', target: 'FOXD4L6', directed: 'false', weight: 0.435532} },
+{ data: { source: 'KIAA0232', target: 'HSPBAP1', directed: 'false', weight: 0.112499} },
+{ data: { source: 'FOXD4L6', target: 'HSPBAP1', directed: 'false', weight: 0.719233} }]},
 
 style: [
     {
@@ -82,12 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.63358
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>BAG5
+    Complex Score (from Super.Complex) = 0.63228
     </section>
     </body>
     </html>

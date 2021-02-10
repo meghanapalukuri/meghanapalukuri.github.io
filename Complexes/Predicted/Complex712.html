@@ -29,18 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NOB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULX3" }},
-{data: { id: 'HS3ST3B1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y662" }},
-{data: { id: 'IL27RA', score: 5, href: "https://www.uniprot.org/uniprot/Q6UWB1" }},
-{data: { id: 'HLA-DPA1', score: 5, href: "https://www.uniprot.org/uniprot/P20036" }},
-{data: { id: 'DCBLD1', score: 3, href: "https://www.uniprot.org/uniprot/Q8N8Z6" }}], 
- edges: [{ data: { source: 'DCBLD1', target: 'HLA-DPA1', directed: 'false', weight: 0.8911190000000001} },
-{ data: { source: 'DCBLD1', target: 'HS3ST3B1', directed: 'false', weight: 0.171414} },
-{ data: { source: 'DCBLD1', target: 'IL27RA', directed: 'false', weight: 0.171414} },
-{ data: { source: 'NOB1', target: 'HLA-DPA1', directed: 'false', weight: 0.547085} },
-{ data: { source: 'HS3ST3B1', target: 'HLA-DPA1', directed: 'false', weight: 0.907113} },
-{ data: { source: 'HS3ST3B1', target: 'IL27RA', directed: 'false', weight: 0.171414} },
-{ data: { source: 'HLA-DPA1', target: 'IL27RA', directed: 'false', weight: 0.49271800000000004} }]},
+elements:{nodes: [{data: { id: 'CTBP1', score: 5, href: "https://www.uniprot.org/uniprot/Q13363" }},
+{data: { id: 'GALK1', score: 5, href: "https://www.uniprot.org/uniprot/P51570" }},
+{data: { id: 'C15orf39', score: 3, href: "https://www.uniprot.org/uniprot/Q6ZRI6" }},
+{data: { id: 'LCOR', score: 5, href: "https://www.uniprot.org/uniprot/Q96JN0" }},
+{data: { id: 'TRPS1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHF7" }}], 
+ edges: [{ data: { source: 'GALK1', target: 'CTBP1', directed: 'false', weight: 0.37205900000000003} },
+{ data: { source: 'TRPS1', target: 'CTBP1', directed: 'false', weight: 0.843407} },
+{ data: { source: 'TRPS1', target: 'LCOR', directed: 'false', weight: 0.151455} },
+{ data: { source: 'TRPS1', target: 'C15orf39', directed: 'false', weight: 0.128057} },
+{ data: { source: 'LCOR', target: 'CTBP1', directed: 'false', weight: 0.965757} },
+{ data: { source: 'LCOR', target: 'C15orf39', directed: 'false', weight: 0.112499} },
+{ data: { source: 'CTBP1', target: 'C15orf39', directed: 'false', weight: 0.614613} }]},
 
 style: [
     {
@@ -82,7 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.60820
+    Complex Score (from Super.Complex) = 0.60766
     </section>
     </body>
     </html>

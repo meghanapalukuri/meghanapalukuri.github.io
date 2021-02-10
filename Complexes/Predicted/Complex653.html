@@ -29,17 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'KDM3B', score: 5, href: "https://www.uniprot.org/uniprot/Q7LBC6" }},
-{data: { id: 'PRIM2', score: 5, href: "https://www.uniprot.org/uniprot/P49643" }},
-{data: { id: 'POLA1', score: 5, href: "https://www.uniprot.org/uniprot/P09884" }},
-{data: { id: 'POLA2', score: 5, href: "https://www.uniprot.org/uniprot/Q14181" }},
-{data: { id: 'PRIM1', score: 5, href: "https://www.uniprot.org/uniprot/P49642" }}], 
- edges: [{ data: { source: 'PRIM2', target: 'PRIM1', directed: 'false', weight: 0.586024} },
-{ data: { source: 'PRIM2', target: 'POLA2', directed: 'false', weight: 0.290571} },
-{ data: { source: 'POLA2', target: 'PRIM1', directed: 'false', weight: 0.996274} },
-{ data: { source: 'POLA2', target: 'POLA1', directed: 'false', weight: 0.9959979999999999} },
-{ data: { source: 'KDM3B', target: 'POLA1', directed: 'false', weight: 0.43888999999999995} },
-{ data: { source: 'PRIM1', target: 'POLA1', directed: 'false', weight: 0.8800959999999999} }]},
+elements:{nodes: [{data: { id: 'PLD6', score: 5, href: "https://www.uniprot.org/uniprot/Q8N2A8" }},
+{data: { id: 'FAM20B', score: 5, href: "https://www.uniprot.org/uniprot/O75063" }},
+{data: { id: 'PIGH', score: 5, href: "https://www.uniprot.org/uniprot/Q14442" }},
+{data: { id: 'CYBC1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQA9" }},
+{data: { id: 'P2RX4', score: 5, href: "https://www.uniprot.org/uniprot/Q99571" }}], 
+ edges: [{ data: { source: 'PLD6', target: 'P2RX4', directed: 'false', weight: 0.303128} },
+{ data: { source: 'PLD6', target: 'FAM20B', directed: 'false', weight: 0.17435} },
+{ data: { source: 'PLD6', target: 'PIGH', directed: 'false', weight: 0.140692} },
+{ data: { source: 'CYBC1', target: 'P2RX4', directed: 'false', weight: 0.321538} },
+{ data: { source: 'CYBC1', target: 'PIGH', directed: 'false', weight: 0.151455} },
+{ data: { source: 'CYBC1', target: 'FAM20B', directed: 'false', weight: 0.10556600000000001} },
+{ data: { source: 'PIGH', target: 'P2RX4', directed: 'false', weight: 0.40184200000000003} },
+{ data: { source: 'PIGH', target: 'FAM20B', directed: 'false', weight: 0.120276} },
+{ data: { source: 'FAM20B', target: 'P2RX4', directed: 'false', weight: 0.553984} }]},
 
 style: [
     {
@@ -81,12 +84,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.64261
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        4 interacting protein(s): <br>PRIM2 POLA1 POLA2 PRIM1
+    Complex Score (from Super.Complex) = 0.64224
     </section>
     </body>
     </html>

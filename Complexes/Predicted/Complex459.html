@@ -29,16 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CBWD2', score: 2, href: "https://www.uniprot.org/uniprot/Q8IUF1" }},
-{data: { id: 'CBWD1', score: 3, href: "https://www.uniprot.org/uniprot/Q9BRT8" }},
-{data: { id: 'CBWD6', score: 2, href: "https://www.uniprot.org/uniprot/Q4V339" }},
-{data: { id: 'CBWD7', score: 0 }}], 
- edges: [{ data: { source: 'CBWD2', target: 'CBWD1', directed: 'false', weight: 0.800557} },
-{ data: { source: 'CBWD2', target: 'CBWD7', directed: 'false', weight: 0.37721} },
-{ data: { source: 'CBWD2', target: 'CBWD6', directed: 'false', weight: 0.108694} },
-{ data: { source: 'CBWD6', target: 'CBWD1', directed: 'false', weight: 0.836441} },
-{ data: { source: 'CBWD6', target: 'CBWD7', directed: 'false', weight: 0.117318} },
-{ data: { source: 'CBWD1', target: 'CBWD7', directed: 'false', weight: 0.8468969999999999} }]},
+elements:{nodes: [{data: { id: 'MAPK15', score: 5, href: "https://www.uniprot.org/uniprot/Q8TD08" }},
+{data: { id: 'CREBBP', score: 5, href: "https://www.uniprot.org/uniprot/Q92793" }},
+{data: { id: 'CDK2', score: 5, href: "https://www.uniprot.org/uniprot/P24941" }},
+{data: { id: 'RBL1', score: 5, href: "https://www.uniprot.org/uniprot/P28749" }},
+{data: { id: 'RBL2', score: 5, href: "https://www.uniprot.org/uniprot/Q08999" }}], 
+ edges: [{ data: { source: 'RBL1', target: 'CDK2', directed: 'false', weight: 0.8419030000000001} },
+{ data: { source: 'RBL1', target: 'CREBBP', directed: 'false', weight: 0.390018} },
+{ data: { source: 'RBL1', target: 'RBL2', directed: 'false', weight: 0.1922} },
+{ data: { source: 'RBL1', target: 'MAPK15', directed: 'false', weight: 0.133451} },
+{ data: { source: 'CDK2', target: 'RBL2', directed: 'false', weight: 0.776558} },
+{ data: { source: 'CDK2', target: 'MAPK15', directed: 'false', weight: 0.742035} },
+{ data: { source: 'CDK2', target: 'CREBBP', directed: 'false', weight: 0.596483} },
+{ data: { source: 'RBL2', target: 'CREBBP', directed: 'false', weight: 0.390018} },
+{ data: { source: 'CREBBP', target: 'MAPK15', directed: 'false', weight: 0.133451} }]},
 
 style: [
     {
@@ -80,7 +84,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.71754
+    Complex Score (from Super.Complex) = 0.71731
     </section>
     </body>
     </html>

@@ -29,15 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'VPS33B', score: 5, href: "https://www.uniprot.org/uniprot/Q9H267" }},
-{data: { id: 'ITPR3', score: 5, href: "https://www.uniprot.org/uniprot/Q14573" }},
-{data: { id: 'ITPRID2', score: 5, href: "https://www.uniprot.org/uniprot/P28290" }},
-{data: { id: 'FKBP15', score: 5, href: "https://www.uniprot.org/uniprot/Q5T1M5" }}], 
- edges: [{ data: { source: 'VPS33B', target: 'ITPRID2', directed: 'false', weight: 0.976133} },
-{ data: { source: 'VPS33B', target: 'FKBP15', directed: 'false', weight: 0.140692} },
-{ data: { source: 'ITPR3', target: 'ITPRID2', directed: 'false', weight: 0.766808} },
-{ data: { source: 'ITPR3', target: 'FKBP15', directed: 'false', weight: 0.108699} },
-{ data: { source: 'FKBP15', target: 'ITPRID2', directed: 'false', weight: 0.657233} }]},
+elements:{nodes: [{data: { id: 'RICTOR', score: 5, href: "https://www.uniprot.org/uniprot/Q6R327" }},
+{data: { id: 'FOXF2', score: 5, href: "https://www.uniprot.org/uniprot/Q12947" }},
+{data: { id: 'SDF4', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRK5" }},
+{data: { id: 'IQSEC1', score: 5, href: "https://www.uniprot.org/uniprot/Q6DN90" }}], 
+ edges: [{ data: { source: 'FOXF2', target: 'SDF4', directed: 'false', weight: 0.366433} },
+{ data: { source: 'FOXF2', target: 'RICTOR', directed: 'false', weight: 0.33825500000000003} },
+{ data: { source: 'FOXF2', target: 'IQSEC1', directed: 'false', weight: 0.09906530000000001} },
+{ data: { source: 'SDF4', target: 'RICTOR', directed: 'false', weight: 0.294696} },
+{ data: { source: 'SDF4', target: 'IQSEC1', directed: 'false', weight: 0.0712622} },
+{ data: { source: 'RICTOR', target: 'IQSEC1', directed: 'false', weight: 0.265096} }]},
 
 style: [
     {
@@ -79,12 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65873
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>FKBP15
+    Complex Score (from Super.Complex) = 0.65843
     </section>
     </body>
     </html>

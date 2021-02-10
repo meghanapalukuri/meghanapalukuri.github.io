@@ -29,11 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NEUROG2', score: 0 }},
-{data: { id: 'SRP14', score: 5, href: "https://www.uniprot.org/uniprot/P37108" }},
-{data: { id: 'SRP9', score: 5, href: "https://www.uniprot.org/uniprot/P49458" }}], 
- edges: [{ data: { source: 'SRP14', target: 'SRP9', directed: 'false', weight: 0.9963209999999999} },
-{ data: { source: 'SRP9', target: 'NEUROG2', directed: 'false', weight: 0.34608099999999997} }]},
+elements:{nodes: [{data: { id: 'CASP3', score: 5, href: "https://www.uniprot.org/uniprot/P42574" }},
+{data: { id: 'SERPINB8', score: 5, href: "https://www.uniprot.org/uniprot/P50452" }},
+{data: { id: 'THOP1', score: 5, href: "https://www.uniprot.org/uniprot/P52888" }},
+{data: { id: 'IDE', score: 5, href: "https://www.uniprot.org/uniprot/P14735" }}], 
+ edges: [{ data: { source: 'THOP1', target: 'IDE', directed: 'false', weight: 0.58515} },
+{ data: { source: 'THOP1', target: 'CASP3', directed: 'false', weight: 0.171296} },
+{ data: { source: 'CASP3', target: 'IDE', directed: 'false', weight: 0.588596} },
+{ data: { source: 'IDE', target: 'SERPINB8', directed: 'false', weight: 0.6832020000000001} }]},
 
 style: [
     {
@@ -75,7 +78,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.57040
+    Complex Score (from Super.Complex) = 0.56969
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>IDE
     </section>
     </body>
     </html>

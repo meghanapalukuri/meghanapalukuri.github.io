@@ -29,19 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TRAF6', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y4K3" }},
-{data: { id: 'DEUP1', score: 5, href: "https://www.uniprot.org/uniprot/Q05D60" }},
-{data: { id: 'IFT20', score: 5, href: "https://www.uniprot.org/uniprot/Q8IY31" }},
-{data: { id: 'HIP1', score: 5, href: "https://www.uniprot.org/uniprot/O00291" }},
-{data: { id: 'DGKH', score: 5, href: "https://www.uniprot.org/uniprot/Q86XP1" }}], 
- edges: [{ data: { source: 'TRAF6', target: 'DEUP1', directed: 'false', weight: 0.818858} },
-{ data: { source: 'TRAF6', target: 'HIP1', directed: 'false', weight: 0.140692} },
-{ data: { source: 'TRAF6', target: 'DGKH', directed: 'false', weight: 0.123797} },
-{ data: { source: 'HIP1', target: 'DEUP1', directed: 'false', weight: 0.94631} },
-{ data: { source: 'HIP1', target: 'DGKH', directed: 'false', weight: 0.151455} },
-{ data: { source: 'HIP1', target: 'IFT20', directed: 'false', weight: 0.140692} },
-{ data: { source: 'DEUP1', target: 'DGKH', directed: 'false', weight: 0.780525} },
-{ data: { source: 'DEUP1', target: 'IFT20', directed: 'false', weight: 0.6015550000000001} }]},
+elements:{nodes: [{data: { id: 'GSTM5', score: 5, href: "https://www.uniprot.org/uniprot/P46439" }},
+{data: { id: 'ARFGAP3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NP61" }},
+{data: { id: 'ARFGAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N6T3" }}], 
+ edges: [{ data: { source: 'GSTM5', target: 'ARFGAP1', directed: 'false', weight: 0.629772} },
+{ data: { source: 'ARFGAP3', target: 'ARFGAP1', directed: 'false', weight: 0.6691819999999999} }]},
 
 style: [
     {
@@ -83,7 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53816
+    Complex Score (from Super.Complex) = 0.53776
     </section>
     </body>
     </html>

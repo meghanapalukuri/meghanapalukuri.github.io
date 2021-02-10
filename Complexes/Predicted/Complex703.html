@@ -29,15 +29,17 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FLT4', score: 5, href: "https://www.uniprot.org/uniprot/P35916" }},
-{data: { id: 'RHBDF2', score: 5, href: "https://www.uniprot.org/uniprot/Q6PJF5" }},
-{data: { id: 'TMEM205', score: 5, href: "https://www.uniprot.org/uniprot/Q6UW68" }},
-{data: { id: 'TMEM52B', score: 5, href: "https://www.uniprot.org/uniprot/Q4KMG9" }}], 
- edges: [{ data: { source: 'TMEM52B', target: 'RHBDF2', directed: 'false', weight: 0.582333} },
-{ data: { source: 'TMEM52B', target: 'TMEM205', directed: 'false', weight: 0.41271899999999995} },
-{ data: { source: 'TMEM52B', target: 'FLT4', directed: 'false', weight: 0.293631} },
-{ data: { source: 'FLT4', target: 'RHBDF2', directed: 'false', weight: 0.158424} },
-{ data: { source: 'TMEM205', target: 'RHBDF2', directed: 'false', weight: 0.0977318} }]},
+elements:{nodes: [{data: { id: 'GRK2', score: 5, href: "https://www.uniprot.org/uniprot/P25098" }},
+{data: { id: 'DXO', score: 5, href: "https://www.uniprot.org/uniprot/O77932" }},
+{data: { id: 'PTPRF', score: 5, href: "https://www.uniprot.org/uniprot/P10586" }},
+{data: { id: 'UFD1', score: 5, href: "https://www.uniprot.org/uniprot/Q92890" }},
+{data: { id: 'NPLOC4', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAT6" }}], 
+ edges: [{ data: { source: 'DXO', target: 'UFD1', directed: 'false', weight: 0.5961930000000001} },
+{ data: { source: 'DXO', target: 'NPLOC4', directed: 'false', weight: 0.443671} },
+{ data: { source: 'NPLOC4', target: 'UFD1', directed: 'false', weight: 0.9960469999999999} },
+{ data: { source: 'NPLOC4', target: 'PTPRF', directed: 'false', weight: 0.33679000000000003} },
+{ data: { source: 'PTPRF', target: 'GRK2', directed: 'false', weight: 0.8929520000000001} },
+{ data: { source: 'PTPRF', target: 'UFD1', directed: 'false', weight: 0.479336} }]},
 
 style: [
     {
@@ -79,7 +81,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.61258
+    Complex Score (from Super.Complex) = 0.61189
     </section>
     </body>
     </html>

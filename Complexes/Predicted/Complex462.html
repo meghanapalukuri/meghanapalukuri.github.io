@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TMEFF1', score: 5, href: "https://www.uniprot.org/uniprot/Q8IYR6" }},
-{data: { id: 'BCS1L', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y276" }},
-{data: { id: 'DHRS2', score: 5, href: "https://www.uniprot.org/uniprot/Q13268" }},
-{data: { id: 'FGF2', score: 5, href: "https://www.uniprot.org/uniprot/P09038" }}], 
- edges: [{ data: { source: 'TMEFF1', target: 'FGF2', directed: 'false', weight: 0.976686} },
-{ data: { source: 'TMEFF1', target: 'DHRS2', directed: 'false', weight: 0.8764430000000001} },
-{ data: { source: 'TMEFF1', target: 'BCS1L', directed: 'false', weight: 0.736571} },
-{ data: { source: 'FGF2', target: 'BCS1L', directed: 'false', weight: 0.151455} },
-{ data: { source: 'FGF2', target: 'DHRS2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'DHRS2', target: 'BCS1L', directed: 'false', weight: 0.133456} }]},
+elements:{nodes: [{data: { id: 'HEATR5A', score: 3, href: "https://www.uniprot.org/uniprot/Q86XA9" }},
+{data: { id: 'KIF6', score: 4, href: "https://www.uniprot.org/uniprot/Q6ZMV9" }},
+{data: { id: 'SNX16', score: 5, href: "https://www.uniprot.org/uniprot/P57768" }},
+{data: { id: 'FEZ2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHY8" }}], 
+ edges: [{ data: { source: 'KIF6', target: 'HEATR5A', directed: 'false', weight: 0.9781549999999999} },
+{ data: { source: 'KIF6', target: 'SNX16', directed: 'false', weight: 0.8336889999999999} },
+{ data: { source: 'KIF6', target: 'FEZ2', directed: 'false', weight: 0.758065} },
+{ data: { source: 'HEATR5A', target: 'FEZ2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'HEATR5A', target: 'SNX16', directed: 'false', weight: 0.151455} },
+{ data: { source: 'SNX16', target: 'FEZ2', directed: 'false', weight: 0.133456} }]},
 
 style: [
     {
@@ -80,12 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.71451
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>BCS1L
+    Complex Score (from Super.Complex) = 0.71376
     </section>
     </body>
     </html>

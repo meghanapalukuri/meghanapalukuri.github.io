@@ -29,24 +29,33 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SLC30A6', score: 4, href: "https://www.uniprot.org/uniprot/Q6NXT4" }},
-{data: { id: 'USO1', score: 5, href: "https://www.uniprot.org/uniprot/O60763" }},
-{data: { id: 'BLZF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H2G9" }},
-{data: { id: 'PKP2', score: 5, href: "https://www.uniprot.org/uniprot/Q99959" }},
-{data: { id: 'FAM83H', score: 5, href: "https://www.uniprot.org/uniprot/Q6ZRV2" }},
-{data: { id: 'SEC16A', score: 5, href: "https://www.uniprot.org/uniprot/O15027" }}], 
- edges: [{ data: { source: 'FAM83H', target: 'PKP2', directed: 'false', weight: 0.24688600000000002} },
-{ data: { source: 'FAM83H', target: 'USO1', directed: 'false', weight: 0.179514} },
-{ data: { source: 'USO1', target: 'BLZF1', directed: 'false', weight: 0.7421800000000001} },
-{ data: { source: 'USO1', target: 'SLC30A6', directed: 'false', weight: 0.735486} },
-{ data: { source: 'USO1', target: 'SEC16A', directed: 'false', weight: 0.281609} },
-{ data: { source: 'USO1', target: 'PKP2', directed: 'false', weight: 0.16606400000000002} },
-{ data: { source: 'SLC30A6', target: 'BLZF1', directed: 'false', weight: 0.133179} },
-{ data: { source: 'SLC30A6', target: 'PKP2', directed: 'false', weight: 0.12021300000000001} },
-{ data: { source: 'SLC30A6', target: 'SEC16A', directed: 'false', weight: 0.0814118} },
-{ data: { source: 'PKP2', target: 'SEC16A', directed: 'false', weight: 0.278225} },
-{ data: { source: 'PKP2', target: 'BLZF1', directed: 'false', weight: 0.10994200000000001} },
-{ data: { source: 'SEC16A', target: 'BLZF1', directed: 'false', weight: 0.0648611} }]},
+elements:{nodes: [{data: { id: 'MAML1', score: 5, href: "https://www.uniprot.org/uniprot/Q92585" }},
+{data: { id: 'ANKRD44', score: 4, href: "https://www.uniprot.org/uniprot/Q8N8A2" }},
+{data: { id: 'NOTCH2', score: 5, href: "https://www.uniprot.org/uniprot/Q04721" }},
+{data: { id: 'ZNF589', score: 5, href: "https://www.uniprot.org/uniprot/Q86UQ0" }},
+{data: { id: 'NOTCH3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UM47" }},
+{data: { id: 'FBXO42', score: 3, href: "https://www.uniprot.org/uniprot/Q6P3S6" }},
+{data: { id: 'RBPJ', score: 5, href: "https://www.uniprot.org/uniprot/Q06330" }},
+{data: { id: 'NOTCH1', score: 5, href: "https://www.uniprot.org/uniprot/P46531" }}], 
+ edges: [{ data: { source: 'NOTCH2', target: 'ANKRD44', directed: 'false', weight: 0.897634} },
+{ data: { source: 'NOTCH2', target: 'RBPJ', directed: 'false', weight: 0.867424} },
+{ data: { source: 'NOTCH2', target: 'NOTCH3', directed: 'false', weight: 0.349532} },
+{ data: { source: 'NOTCH2', target: 'NOTCH1', directed: 'false', weight: 0.311189} },
+{ data: { source: 'NOTCH2', target: 'MAML1', directed: 'false', weight: 0.1888} },
+{ data: { source: 'NOTCH2', target: 'ZNF589', directed: 'false', weight: 0.151927} },
+{ data: { source: 'ZNF589', target: 'RBPJ', directed: 'false', weight: 0.974557} },
+{ data: { source: 'ZNF589', target: 'MAML1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ZNF589', target: 'FBXO42', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ZNF589', target: 'NOTCH1', directed: 'false', weight: 0.133456} },
+{ data: { source: 'FBXO42', target: 'RBPJ', directed: 'false', weight: 0.82952} },
+{ data: { source: 'FBXO42', target: 'MAML1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'FBXO42', target: 'NOTCH1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'NOTCH3', target: 'ANKRD44', directed: 'false', weight: 0.698549} },
+{ data: { source: 'NOTCH3', target: 'NOTCH1', directed: 'false', weight: 0.222827} },
+{ data: { source: 'NOTCH1', target: 'ANKRD44', directed: 'false', weight: 0.979675} },
+{ data: { source: 'NOTCH1', target: 'RBPJ', directed: 'false', weight: 0.920143} },
+{ data: { source: 'NOTCH1', target: 'MAML1', directed: 'false', weight: 0.304485} },
+{ data: { source: 'MAML1', target: 'RBPJ', directed: 'false', weight: 0.9995879999999999} }]},
 
 style: [
     {
@@ -88,12 +97,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.57742
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        2 interacting protein(s): <br>SLC30A6 PKP2
+    Complex Score (from Super.Complex) = 0.57597
     </section>
     </body>
     </html>

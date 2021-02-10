@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'HLA-DRB5', score: 5, href: "https://www.uniprot.org/uniprot/Q30154" }},
-{data: { id: 'HLA-DRB1', score: 5, href: "https://www.uniprot.org/uniprot/P01911" }},
-{data: { id: 'None', score: 0 }}], 
- edges: [{ data: { source: 'HLA-DRB1', target: 'HLA-DRB5', directed: 'false', weight: 0.886908} },
-{ data: { source: 'HLA-DRB1', target: 'None', directed: 'false', weight: 0.71238} },
-{ data: { source: 'None', target: 'HLA-DRB5', directed: 'false', weight: 0.119025} }]},
+elements:{nodes: [{data: { id: 'ECPAS', score: 5, href: "https://www.uniprot.org/uniprot/Q5VYK3" }},
+{data: { id: 'ACAA2', score: 5, href: "https://www.uniprot.org/uniprot/P42765" }},
+{data: { id: 'PTBP3', score: 5, href: "https://www.uniprot.org/uniprot/O95758" }}], 
+ edges: [{ data: { source: 'ECPAS', target: 'ACAA2', directed: 'false', weight: 0.517401} },
+{ data: { source: 'ECPAS', target: 'PTBP3', directed: 'false', weight: 0.270991} },
+{ data: { source: 'ACAA2', target: 'PTBP3', directed: 'false', weight: 0.9408219999999999} }]},
 
 style: [
     {
@@ -76,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76580
+    Complex Score (from Super.Complex) = 0.76575
     </section>
     </body>
     </html>

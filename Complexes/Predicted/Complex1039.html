@@ -29,31 +29,27 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PRKRIP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H875" }},
-{data: { id: 'SNRPA1', score: 5, href: "https://www.uniprot.org/uniprot/P09661" }},
-{data: { id: 'DDX46', score: 5, href: "https://www.uniprot.org/uniprot/Q7L014" }},
-{data: { id: 'SNRPN', score: 5, href: "https://www.uniprot.org/uniprot/P63162" }},
-{data: { id: 'GPATCH11', score: 4, href: "https://www.uniprot.org/uniprot/Q8N954" }},
-{data: { id: 'SLC4A1AP', score: 5, href: "https://www.uniprot.org/uniprot/Q9BWU0" }},
-{data: { id: 'SNRPF', score: 5, href: "https://www.uniprot.org/uniprot/P62306" }},
-{data: { id: 'HTATSF1', score: 5, href: "https://www.uniprot.org/uniprot/O43719" }}], 
- edges: [{ data: { source: 'SNRPF', target: 'SNRPA1', directed: 'false', weight: 0.9759260000000001} },
-{ data: { source: 'SNRPF', target: 'PRKRIP1', directed: 'false', weight: 0.171414} },
-{ data: { source: 'SNRPF', target: 'SNRPN', directed: 'false', weight: 0.171414} },
-{ data: { source: 'SLC4A1AP', target: 'SNRPA1', directed: 'false', weight: 0.775396} },
-{ data: { source: 'SLC4A1AP', target: 'HTATSF1', directed: 'false', weight: 0.364713} },
-{ data: { source: 'SLC4A1AP', target: 'SNRPN', directed: 'false', weight: 0.11730499999999999} },
-{ data: { source: 'SLC4A1AP', target: 'PRKRIP1', directed: 'false', weight: 0.0445491} },
-{ data: { source: 'HTATSF1', target: 'DDX46', directed: 'false', weight: 0.9736549999999999} },
-{ data: { source: 'HTATSF1', target: 'SNRPA1', directed: 'false', weight: 0.811549} },
-{ data: { source: 'HTATSF1', target: 'PRKRIP1', directed: 'false', weight: 0.11047699999999999} },
-{ data: { source: 'HTATSF1', target: 'SNRPN', directed: 'false', weight: 0.11047699999999999} },
-{ data: { source: 'PRKRIP1', target: 'SNRPA1', directed: 'false', weight: 0.940148} },
-{ data: { source: 'PRKRIP1', target: 'SNRPN', directed: 'false', weight: 0.171414} },
-{ data: { source: 'PRKRIP1', target: 'GPATCH11', directed: 'false', weight: 0.140692} },
-{ data: { source: 'SNRPA1', target: 'SNRPN', directed: 'false', weight: 0.978398} },
-{ data: { source: 'SNRPA1', target: 'GPATCH11', directed: 'false', weight: 0.631167} },
-{ data: { source: 'GPATCH11', target: 'SNRPN', directed: 'false', weight: 0.140692} }]},
+elements:{nodes: [{data: { id: 'CHPF', score: 5, href: "https://www.uniprot.org/uniprot/Q8IZ52" }},
+{data: { id: 'TTC13', score: 2, href: "https://www.uniprot.org/uniprot/Q8NBP0" }},
+{data: { id: 'LRIG1', score: 5, href: "https://www.uniprot.org/uniprot/Q96JA1" }},
+{data: { id: 'GALNT7', score: 5, href: "https://www.uniprot.org/uniprot/Q86SF2" }},
+{data: { id: 'ENTPD6', score: 5, href: "https://www.uniprot.org/uniprot/O75354" }},
+{data: { id: 'PLXNA3', score: 5, href: "https://www.uniprot.org/uniprot/P51805" }},
+{data: { id: 'ADAM17', score: 5, href: "https://www.uniprot.org/uniprot/P78536" }}], 
+ edges: [{ data: { source: 'ENTPD6', target: 'LRIG1', directed: 'false', weight: 0.725223} },
+{ data: { source: 'ENTPD6', target: 'PLXNA3', directed: 'false', weight: 0.6914939999999999} },
+{ data: { source: 'ENTPD6', target: 'CHPF', directed: 'false', weight: 0.369264} },
+{ data: { source: 'LRIG1', target: 'PLXNA3', directed: 'false', weight: 0.470394} },
+{ data: { source: 'LRIG1', target: 'CHPF', directed: 'false', weight: 0.445546} },
+{ data: { source: 'LRIG1', target: 'ADAM17', directed: 'false', weight: 0.30286599999999997} },
+{ data: { source: 'LRIG1', target: 'GALNT7', directed: 'false', weight: 0.111536} },
+{ data: { source: 'LRIG1', target: 'TTC13', directed: 'false', weight: 0.08441010000000002} },
+{ data: { source: 'CHPF', target: 'TTC13', directed: 'false', weight: 0.353128} },
+{ data: { source: 'CHPF', target: 'GALNT7', directed: 'false', weight: 0.353128} },
+{ data: { source: 'CHPF', target: 'ADAM17', directed: 'false', weight: 0.31451399999999996} },
+{ data: { source: 'GALNT7', target: 'ADAM17', directed: 'false', weight: 0.276586} },
+{ data: { source: 'GALNT7', target: 'TTC13', directed: 'false', weight: 0.124294} },
+{ data: { source: 'TTC13', target: 'ADAM17', directed: 'false', weight: 0.09792100000000001} }]},
 
 style: [
     {
@@ -95,7 +91,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.50717
+    Complex Score (from Super.Complex) = 0.50460
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>CHPF
     </section>
     </body>
     </html>

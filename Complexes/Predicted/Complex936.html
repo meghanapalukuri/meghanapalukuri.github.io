@@ -29,21 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SLC35A5', score: 3, href: "https://www.uniprot.org/uniprot/Q9BS91" }},
-{data: { id: 'KIAA0319L', score: 5, href: "https://www.uniprot.org/uniprot/Q8IZA0" }},
-{data: { id: 'LGALS8', score: 5, href: "https://www.uniprot.org/uniprot/O00214" }},
-{data: { id: 'PODXL', score: 5, href: "https://www.uniprot.org/uniprot/O00592" }},
-{data: { id: 'SPPL2A', score: 5, href: "https://www.uniprot.org/uniprot/Q8TCT8" }},
-{data: { id: 'ADCY6', score: 5, href: "https://www.uniprot.org/uniprot/O43306" }}], 
- edges: [{ data: { source: 'ADCY6', target: 'LGALS8', directed: 'false', weight: 0.814529} },
-{ data: { source: 'ADCY6', target: 'SPPL2A', directed: 'false', weight: 0.128057} },
-{ data: { source: 'ADCY6', target: 'SLC35A5', directed: 'false', weight: 0.112499} },
-{ data: { source: 'SLC35A5', target: 'LGALS8', directed: 'false', weight: 0.911401} },
-{ data: { source: 'SLC35A5', target: 'SPPL2A', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SPPL2A', target: 'LGALS8', directed: 'false', weight: 0.811329} },
-{ data: { source: 'LGALS8', target: 'PODXL', directed: 'false', weight: 0.5} },
-{ data: { source: 'LGALS8', target: 'KIAA0319L', directed: 'false', weight: 0.254323} },
-{ data: { source: 'PODXL', target: 'KIAA0319L', directed: 'false', weight: 0.684525} }]},
+elements:{nodes: [{data: { id: 'TXNDC15', score: 5, href: "https://www.uniprot.org/uniprot/Q96J42" }},
+{data: { id: 'PIGN', score: 5, href: "https://www.uniprot.org/uniprot/O95427" }},
+{data: { id: 'MARCH6', score: 0 }}], 
+ edges: [{ data: { source: 'MARCH6', target: 'TXNDC15', directed: 'false', weight: 0.56824} },
+{ data: { source: 'TXNDC15', target: 'PIGN', directed: 'false', weight: 0.580974} }]},
 
 style: [
     {
@@ -85,7 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53660
+    Complex Score (from Super.Complex) = 0.53623
     </section>
     </body>
     </html>

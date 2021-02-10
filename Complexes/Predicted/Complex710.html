@@ -29,15 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FDXR', score: 5, href: "https://www.uniprot.org/uniprot/P22570" }},
-{data: { id: 'NNT', score: 5, href: "https://www.uniprot.org/uniprot/Q13423" }},
-{data: { id: 'PCCA', score: 5, href: "https://www.uniprot.org/uniprot/P05165" }},
-{data: { id: 'CPS1', score: 5, href: "https://www.uniprot.org/uniprot/P31327" }}], 
- edges: [{ data: { source: 'FDXR', target: 'PCCA', directed: 'false', weight: 0.292948} },
-{ data: { source: 'FDXR', target: 'CPS1', directed: 'false', weight: 0.131827} },
-{ data: { source: 'NNT', target: 'PCCA', directed: 'false', weight: 0.29130700000000004} },
-{ data: { source: 'NNT', target: 'CPS1', directed: 'false', weight: 0.18651500000000001} },
-{ data: { source: 'CPS1', target: 'PCCA', directed: 'false', weight: 0.427584} }]},
+elements:{nodes: [{data: { id: 'NOB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULX3" }},
+{data: { id: 'HS3ST3B1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y662" }},
+{data: { id: 'IL27RA', score: 5, href: "https://www.uniprot.org/uniprot/Q6UWB1" }},
+{data: { id: 'HLA-DPA1', score: 5, href: "https://www.uniprot.org/uniprot/P20036" }},
+{data: { id: 'DCBLD1', score: 3, href: "https://www.uniprot.org/uniprot/Q8N8Z6" }}], 
+ edges: [{ data: { source: 'DCBLD1', target: 'HLA-DPA1', directed: 'false', weight: 0.8911190000000001} },
+{ data: { source: 'DCBLD1', target: 'HS3ST3B1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'DCBLD1', target: 'IL27RA', directed: 'false', weight: 0.171414} },
+{ data: { source: 'NOB1', target: 'HLA-DPA1', directed: 'false', weight: 0.547085} },
+{ data: { source: 'HS3ST3B1', target: 'HLA-DPA1', directed: 'false', weight: 0.907113} },
+{ data: { source: 'HS3ST3B1', target: 'IL27RA', directed: 'false', weight: 0.171414} },
+{ data: { source: 'HLA-DPA1', target: 'IL27RA', directed: 'false', weight: 0.49271800000000004} }]},
 
 style: [
     {
@@ -79,7 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.60859
+    Complex Score (from Super.Complex) = 0.60820
     </section>
     </body>
     </html>

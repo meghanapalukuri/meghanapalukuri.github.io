@@ -29,19 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ELOC', score: 5, href: "https://www.uniprot.org/uniprot/Q15369" }},
-{data: { id: 'OGDHL', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULD0" }},
-{data: { id: 'CUL5', score: 5, href: "https://www.uniprot.org/uniprot/Q93034" }},
-{data: { id: 'ASB9', score: 5, href: "https://www.uniprot.org/uniprot/Q96DX5" }},
-{data: { id: 'ELOB', score: 5, href: "https://www.uniprot.org/uniprot/Q15370" }}], 
- edges: [{ data: { source: 'CUL5', target: 'ELOC', directed: 'false', weight: 0.909113} },
-{ data: { source: 'CUL5', target: 'ELOB', directed: 'false', weight: 0.68042} },
-{ data: { source: 'CUL5', target: 'ASB9', directed: 'false', weight: 0.23909499999999997} },
-{ data: { source: 'OGDHL', target: 'ELOB', directed: 'false', weight: 0.554299} },
-{ data: { source: 'OGDHL', target: 'ELOC', directed: 'false', weight: 0.021366299999999998} },
-{ data: { source: 'ELOC', target: 'ELOB', directed: 'false', weight: 0.999216} },
-{ data: { source: 'ELOC', target: 'ASB9', directed: 'false', weight: 0.5640069999999999} },
-{ data: { source: 'ELOB', target: 'ASB9', directed: 'false', weight: 0.28641} }]},
+elements:{nodes: [{data: { id: 'HECTD4', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y4D8" }},
+{data: { id: 'TTC3', score: 5, href: "https://www.uniprot.org/uniprot/P53804" }},
+{data: { id: 'MKNK1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUB5" }},
+{data: { id: 'PDLIM5', score: 5, href: "https://www.uniprot.org/uniprot/Q96HC4" }},
+{data: { id: 'AKAP12', score: 5, href: "https://www.uniprot.org/uniprot/Q02952" }}], 
+ edges: [{ data: { source: 'MKNK1', target: 'PDLIM5', directed: 'false', weight: 0.804035} },
+{ data: { source: 'MKNK1', target: 'HECTD4', directed: 'false', weight: 0.0635339} },
+{ data: { source: 'MKNK1', target: 'AKAP12', directed: 'false', weight: 0.0533477} },
+{ data: { source: 'MKNK1', target: 'TTC3', directed: 'false', weight: 0.042649099999999995} },
+{ data: { source: 'PDLIM5', target: 'TTC3', directed: 'false', weight: 0.491179} },
+{ data: { source: 'PDLIM5', target: 'HECTD4', directed: 'false', weight: 0.415357} },
+{ data: { source: 'PDLIM5', target: 'AKAP12', directed: 'false', weight: 0.309687} },
+{ data: { source: 'AKAP12', target: 'TTC3', directed: 'false', weight: 0.05752959999999999} },
+{ data: { source: 'TTC3', target: 'HECTD4', directed: 'false', weight: 0.06877430000000001} }]},
 
 style: [
     {
@@ -83,12 +84,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65144
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        2 interacting protein(s): <br>ELOC ELOB
+    Complex Score (from Super.Complex) = 0.65095
     </section>
     </body>
     </html>

@@ -29,23 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CHAC2', score: 4, href: "https://www.uniprot.org/uniprot/Q8WUX2" }},
-{data: { id: 'FSD1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BTV5" }},
-{data: { id: 'ARPIN', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z6K5" }},
-{data: { id: 'EFHD1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUP0" }},
-{data: { id: 'UBFD1', score: 3, href: "https://www.uniprot.org/uniprot/O14562" }},
-{data: { id: 'GORASP2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H8Y8" }}], 
- edges: [{ data: { source: 'FSD1', target: 'EFHD1', directed: 'false', weight: 0.538658} },
-{ data: { source: 'FSD1', target: 'UBFD1', directed: 'false', weight: 0.42233699999999996} },
-{ data: { source: 'FSD1', target: 'CHAC2', directed: 'false', weight: 0.42126} },
-{ data: { source: 'FSD1', target: 'ARPIN', directed: 'false', weight: 0.41608500000000004} },
-{ data: { source: 'GORASP2', target: 'UBFD1', directed: 'false', weight: 0.832145} },
-{ data: { source: 'EFHD1', target: 'UBFD1', directed: 'false', weight: 0.133456} },
-{ data: { source: 'EFHD1', target: 'CHAC2', directed: 'false', weight: 0.133456} },
-{ data: { source: 'EFHD1', target: 'ARPIN', directed: 'false', weight: 0.112499} },
-{ data: { source: 'ARPIN', target: 'UBFD1', directed: 'false', weight: 0.112499} },
-{ data: { source: 'ARPIN', target: 'CHAC2', directed: 'false', weight: 0.112499} },
-{ data: { source: 'UBFD1', target: 'CHAC2', directed: 'false', weight: 0.33813200000000004} }]},
+elements:{nodes: [{data: { id: 'ROPN1L', score: 5, href: "https://www.uniprot.org/uniprot/Q96C74" }},
+{data: { id: 'EFCAB7', score: 4, href: "https://www.uniprot.org/uniprot/A8K855" }},
+{data: { id: 'AKAP14', score: 5, href: "https://www.uniprot.org/uniprot/Q86UN6" }},
+{data: { id: 'SPA17', score: 5, href: "https://www.uniprot.org/uniprot/Q15506" }}], 
+ edges: [{ data: { source: 'AKAP14', target: 'SPA17', directed: 'false', weight: 0.9289040000000001} },
+{ data: { source: 'AKAP14', target: 'EFCAB7', directed: 'false', weight: 0.0936635} },
+{ data: { source: 'EFCAB7', target: 'SPA17', directed: 'false', weight: 0.9582809999999999} },
+{ data: { source: 'EFCAB7', target: 'ROPN1L', directed: 'false', weight: 0.117318} },
+{ data: { source: 'ROPN1L', target: 'SPA17', directed: 'false', weight: 0.808106} }]},
 
 style: [
     {
@@ -87,7 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.57974
+    Complex Score (from Super.Complex) = 0.57956
     </section>
     </body>
     </html>

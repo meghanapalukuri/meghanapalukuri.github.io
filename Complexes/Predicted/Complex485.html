@@ -29,20 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ATP7A', score: 5, href: "https://www.uniprot.org/uniprot/Q04656" }},
-{data: { id: 'OSBPL2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H1P3" }},
-{data: { id: 'APLP1', score: 5, href: "https://www.uniprot.org/uniprot/P51693" }},
-{data: { id: 'SYDE2', score: 4, href: "https://www.uniprot.org/uniprot/Q5VT97" }},
-{data: { id: 'APBB2', score: 5, href: "https://www.uniprot.org/uniprot/Q92870" }}], 
- edges: [{ data: { source: 'APLP1', target: 'APBB2', directed: 'false', weight: 0.861418} },
-{ data: { source: 'APLP1', target: 'OSBPL2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'APLP1', target: 'SYDE2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'APLP1', target: 'ATP7A', directed: 'false', weight: 0.140692} },
-{ data: { source: 'ATP7A', target: 'APBB2', directed: 'false', weight: 0.751538} },
-{ data: { source: 'ATP7A', target: 'SYDE2', directed: 'false', weight: 0.140692} },
-{ data: { source: 'OSBPL2', target: 'APBB2', directed: 'false', weight: 0.914948} },
-{ data: { source: 'OSBPL2', target: 'SYDE2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'APBB2', target: 'SYDE2', directed: 'false', weight: 0.9367989999999999} }]},
+elements:{nodes: [{data: { id: 'TSN', score: 5, href: "https://www.uniprot.org/uniprot/Q15631" }},
+{data: { id: 'TSNAX', score: 5, href: "https://www.uniprot.org/uniprot/Q99598" }},
+{data: { id: 'CEP128', score: 4, href: "https://www.uniprot.org/uniprot/Q6ZU80" }},
+{data: { id: 'KIF2A', score: 5, href: "https://www.uniprot.org/uniprot/O00139" }}], 
+ edges: [{ data: { source: 'TSNAX', target: 'CEP128', directed: 'false', weight: 0.931622} },
+{ data: { source: 'TSNAX', target: 'KIF2A', directed: 'false', weight: 0.809294} },
+{ data: { source: 'TSNAX', target: 'TSN', directed: 'false', weight: 0.805719} },
+{ data: { source: 'KIF2A', target: 'TSN', directed: 'false', weight: 0.21335900000000002} },
+{ data: { source: 'KIF2A', target: 'CEP128', directed: 'false', weight: 0.151455} },
+{ data: { source: 'CEP128', target: 'TSN', directed: 'false', weight: 0.117318} }]},
 
 style: [
     {
@@ -84,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.70172
+    Complex Score (from Super.Complex) = 0.70124
     </section>
     </body>
     </html>
