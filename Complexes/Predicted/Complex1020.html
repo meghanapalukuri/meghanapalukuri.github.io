@@ -29,32 +29,23 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'LDLRAD4', score: 5, href: "https://www.uniprot.org/uniprot/O15165" }},
-{data: { id: 'EPN2', score: 5, href: "https://www.uniprot.org/uniprot/O95208" }},
-{data: { id: 'WWC2', score: 5, href: "https://www.uniprot.org/uniprot/Q6AWC2" }},
-{data: { id: 'FLCN', score: 5, href: "https://www.uniprot.org/uniprot/Q8NFG4" }},
-{data: { id: 'SMURF2', score: 5, href: "https://www.uniprot.org/uniprot/Q9HAU4" }},
-{data: { id: 'EPN3', score: 5, href: "https://www.uniprot.org/uniprot/Q9H201" }},
-{data: { id: 'DPY19L1', score: 3, href: "https://www.uniprot.org/uniprot/Q2PZI1" }},
-{data: { id: 'SMURF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9HCE7" }}], 
- edges: [{ data: { source: 'DPY19L1', target: 'LDLRAD4', directed: 'false', weight: 0.9104049999999999} },
-{ data: { source: 'DPY19L1', target: 'WWC2', directed: 'false', weight: 0.140692} },
-{ data: { source: 'DPY19L1', target: 'SMURF2', directed: 'false', weight: 0.140692} },
-{ data: { source: 'DPY19L1', target: 'FLCN', directed: 'false', weight: 0.140692} },
-{ data: { source: 'DPY19L1', target: 'SMURF1', directed: 'false', weight: 0.123797} },
-{ data: { source: 'LDLRAD4', target: 'SMURF2', directed: 'false', weight: 0.991762} },
-{ data: { source: 'LDLRAD4', target: 'FLCN', directed: 'false', weight: 0.9875010000000001} },
-{ data: { source: 'LDLRAD4', target: 'WWC2', directed: 'false', weight: 0.974289} },
-{ data: { source: 'LDLRAD4', target: 'SMURF1', directed: 'false', weight: 0.9621430000000001} },
-{ data: { source: 'EPN3', target: 'EPN2', directed: 'false', weight: 0.984498} },
-{ data: { source: 'EPN3', target: 'SMURF1', directed: 'false', weight: 0.974555} },
-{ data: { source: 'SMURF2', target: 'WWC2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'SMURF2', target: 'FLCN', directed: 'false', weight: 0.171414} },
-{ data: { source: 'SMURF2', target: 'SMURF1', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SMURF1', target: 'WWC2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SMURF1', target: 'EPN2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SMURF1', target: 'FLCN', directed: 'false', weight: 0.151455} },
-{ data: { source: 'WWC2', target: 'FLCN', directed: 'false', weight: 0.171414} }]},
+elements:{nodes: [{data: { id: 'MUC7', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAX7" }},
+{data: { id: 'ZG16B', score: 4, href: "https://www.uniprot.org/uniprot/Q96DA0" }},
+{data: { id: 'CST4', score: 5, href: "https://www.uniprot.org/uniprot/P01036" }},
+{data: { id: 'CST2', score: 5, href: "https://www.uniprot.org/uniprot/P09228" }},
+{data: { id: 'CST1', score: 5, href: "https://www.uniprot.org/uniprot/P01037" }},
+{data: { id: 'AMY1C', score: 5, href: "https://www.uniprot.org/uniprot/P0DTE8" }}], 
+ edges: [{ data: { source: 'CST2', target: 'CST4', directed: 'false', weight: 0.545516} },
+{ data: { source: 'CST2', target: 'CST1', directed: 'false', weight: 0.5299699999999999} },
+{ data: { source: 'CST2', target: 'MUC7', directed: 'false', weight: 0.45249700000000004} },
+{ data: { source: 'ZG16B', target: 'CST4', directed: 'false', weight: 0.341945} },
+{ data: { source: 'ZG16B', target: 'AMY1C', directed: 'false', weight: 0.332955} },
+{ data: { source: 'ZG16B', target: 'MUC7', directed: 'false', weight: 0.321988} },
+{ data: { source: 'CST1', target: 'CST4', directed: 'false', weight: 0.47122600000000003} },
+{ data: { source: 'CST1', target: 'MUC7', directed: 'false', weight: 0.133243} },
+{ data: { source: 'AMY1C', target: 'MUC7', directed: 'false', weight: 0.31246999999999997} },
+{ data: { source: 'AMY1C', target: 'CST4', directed: 'false', weight: 0.22013899999999997} },
+{ data: { source: 'MUC7', target: 'CST4', directed: 'false', weight: 0.5} }]},
 
 style: [
     {
@@ -96,12 +87,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.56828
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>DPY19L1
+    Complex Score (from Super.Complex) = 0.52080
     </section>
     </body>
     </html>

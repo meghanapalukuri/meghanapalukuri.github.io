@@ -29,15 +29,27 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GLDC', score: 5, href: "https://www.uniprot.org/uniprot/P23378" }},
-{data: { id: 'LYRM7', score: 5, href: "https://www.uniprot.org/uniprot/Q5U5X0" }},
-{data: { id: 'NDUFAB1', score: 5, href: "https://www.uniprot.org/uniprot/O14561" }},
-{data: { id: 'LYRM2', score: 2, href: "https://www.uniprot.org/uniprot/Q9NU23" }}], 
- edges: [{ data: { source: 'GLDC', target: 'NDUFAB1', directed: 'false', weight: 0.7671180000000001} },
-{ data: { source: 'GLDC', target: 'LYRM2', directed: 'false', weight: 0.128057} },
-{ data: { source: 'LYRM7', target: 'NDUFAB1', directed: 'false', weight: 0.415025} },
-{ data: { source: 'LYRM7', target: 'LYRM2', directed: 'false', weight: 0.11248399999999999} },
-{ data: { source: 'LYRM2', target: 'NDUFAB1', directed: 'false', weight: 0.976499} }]},
+elements:{nodes: [{data: { id: 'IFNA6', score: 5, href: "https://www.uniprot.org/uniprot/P05013" }},
+{data: { id: 'IFNA5', score: 5, href: "https://www.uniprot.org/uniprot/P01569" }},
+{data: { id: 'IFIT3', score: 5, href: "https://www.uniprot.org/uniprot/O14879" }},
+{data: { id: 'IFNA14', score: 5, href: "https://www.uniprot.org/uniprot/P01570" }},
+{data: { id: 'ISG15', score: 5, href: "https://www.uniprot.org/uniprot/P05161" }},
+{data: { id: 'IFIT1', score: 5, href: "https://www.uniprot.org/uniprot/P09914" }},
+{data: { id: 'IFNA8', score: 5, href: "https://www.uniprot.org/uniprot/P32881" }}], 
+ edges: [{ data: { source: 'IFIT1', target: 'IFNA14', directed: 'false', weight: 0.743065} },
+{ data: { source: 'IFIT1', target: 'IFNA8', directed: 'false', weight: 0.546316} },
+{ data: { source: 'IFIT1', target: 'ISG15', directed: 'false', weight: 0.463714} },
+{ data: { source: 'IFIT1', target: 'IFIT3', directed: 'false', weight: 0.463714} },
+{ data: { source: 'IFIT1', target: 'IFNA5', directed: 'false', weight: 0.32061100000000003} },
+{ data: { source: 'IFIT1', target: 'IFNA6', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'ISG15', target: 'IFIT3', directed: 'false', weight: 0.714739} },
+{ data: { source: 'ISG15', target: 'IFNA8', directed: 'false', weight: 0.650841} },
+{ data: { source: 'ISG15', target: 'IFNA14', directed: 'false', weight: 0.611881} },
+{ data: { source: 'IFNA5', target: 'IFNA6', directed: 'false', weight: 0.969872} },
+{ data: { source: 'IFNA5', target: 'IFNA14', directed: 'false', weight: 0.548299} },
+{ data: { source: 'IFIT3', target: 'IFNA14', directed: 'false', weight: 0.901784} },
+{ data: { source: 'IFIT3', target: 'IFNA8', directed: 'false', weight: 0.399802} },
+{ data: { source: 'IFNA6', target: 'IFNA14', directed: 'false', weight: 0.73024} }]},
 
 style: [
     {
@@ -79,7 +91,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.64942
+    Complex Score (from Super.Complex) = 0.57939
     </section>
     </body>
     </html>

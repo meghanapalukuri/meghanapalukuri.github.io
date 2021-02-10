@@ -29,18 +29,17 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GPAT4', score: 5, href: "https://www.uniprot.org/uniprot/Q86UL3" }},
-{data: { id: 'FADS2', score: 5, href: "https://www.uniprot.org/uniprot/O95864" }},
-{data: { id: 'GPAT3', score: 5, href: "https://www.uniprot.org/uniprot/Q53EU6" }},
-{data: { id: 'GGCX', score: 5, href: "https://www.uniprot.org/uniprot/P38435" }},
-{data: { id: 'CHP1', score: 5, href: "https://www.uniprot.org/uniprot/Q99653" }}], 
- edges: [{ data: { source: 'GPAT3', target: 'GPAT4', directed: 'false', weight: 0.8752120000000001} },
-{ data: { source: 'GPAT3', target: 'CHP1', directed: 'false', weight: 0.427584} },
-{ data: { source: 'GPAT3', target: 'FADS2', directed: 'false', weight: 0.249333} },
-{ data: { source: 'FADS2', target: 'GGCX', directed: 'false', weight: 0.545516} },
-{ data: { source: 'FADS2', target: 'CHP1', directed: 'false', weight: 0.343587} },
-{ data: { source: 'FADS2', target: 'GPAT4', directed: 'false', weight: 0.313319} },
-{ data: { source: 'CHP1', target: 'GPAT4', directed: 'false', weight: 0.49291499999999994} }]},
+elements:{nodes: [{data: { id: 'RBP1', score: 5, href: "https://www.uniprot.org/uniprot/P09455" }},
+{data: { id: 'CELF2', score: 5, href: "https://www.uniprot.org/uniprot/O95319" }},
+{data: { id: 'FSCN1', score: 5, href: "https://www.uniprot.org/uniprot/Q16658" }},
+{data: { id: 'PITPNA', score: 5, href: "https://www.uniprot.org/uniprot/Q00169" }},
+{data: { id: 'PPIA', score: 5, href: "https://www.uniprot.org/uniprot/P62937" }}], 
+ edges: [{ data: { source: 'PITPNA', target: 'FSCN1', directed: 'false', weight: 0.63962} },
+{ data: { source: 'RBP1', target: 'PPIA', directed: 'false', weight: 0.5676640000000001} },
+{ data: { source: 'RBP1', target: 'CELF2', directed: 'false', weight: 0.018595} },
+{ data: { source: 'PPIA', target: 'FSCN1', directed: 'false', weight: 0.6811699999999999} },
+{ data: { source: 'PPIA', target: 'CELF2', directed: 'false', weight: 0.43631400000000004} },
+{ data: { source: 'CELF2', target: 'FSCN1', directed: 'false', weight: 0.06573580000000001} }]},
 
 style: [
     {
@@ -82,12 +81,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.60426
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>GGCX
+    Complex Score (from Super.Complex) = 0.55185
     </section>
     </body>
     </html>

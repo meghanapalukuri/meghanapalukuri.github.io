@@ -29,16 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GPS2', score: 5, href: "https://www.uniprot.org/uniprot/Q13227" }},
-{data: { id: 'HDAC3', score: 5, href: "https://www.uniprot.org/uniprot/O15379" }},
-{data: { id: 'NCOR1', score: 5, href: "https://www.uniprot.org/uniprot/O75376" }},
-{data: { id: 'ANKRD11', score: 5, href: "https://www.uniprot.org/uniprot/Q6UB99" }}], 
- edges: [{ data: { source: 'NCOR1', target: 'GPS2', directed: 'false', weight: 0.902982} },
-{ data: { source: 'NCOR1', target: 'HDAC3', directed: 'false', weight: 0.194752} },
-{ data: { source: 'NCOR1', target: 'ANKRD11', directed: 'false', weight: 0.117494} },
-{ data: { source: 'HDAC3', target: 'GPS2', directed: 'false', weight: 0.852248} },
-{ data: { source: 'HDAC3', target: 'ANKRD11', directed: 'false', weight: 0.101714} },
-{ data: { source: 'ANKRD11', target: 'GPS2', directed: 'false', weight: 0.984268} }]},
+elements:{nodes: [{data: { id: 'VPS33B', score: 5, href: "https://www.uniprot.org/uniprot/Q9H267" }},
+{data: { id: 'ITPR3', score: 5, href: "https://www.uniprot.org/uniprot/Q14573" }},
+{data: { id: 'ITPRID2', score: 5, href: "https://www.uniprot.org/uniprot/P28290" }},
+{data: { id: 'FKBP15', score: 5, href: "https://www.uniprot.org/uniprot/Q5T1M5" }}], 
+ edges: [{ data: { source: 'VPS33B', target: 'ITPRID2', directed: 'false', weight: 0.976133} },
+{ data: { source: 'VPS33B', target: 'FKBP15', directed: 'false', weight: 0.140692} },
+{ data: { source: 'ITPR3', target: 'ITPRID2', directed: 'false', weight: 0.766808} },
+{ data: { source: 'ITPR3', target: 'FKBP15', directed: 'false', weight: 0.108699} },
+{ data: { source: 'FKBP15', target: 'ITPRID2', directed: 'false', weight: 0.657233} }]},
 
 style: [
     {
@@ -80,7 +79,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.70619
+    Complex Score (from Super.Complex) = 0.65873
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>FKBP15
     </section>
     </body>
     </html>

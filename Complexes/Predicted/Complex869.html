@@ -29,18 +29,43 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SCAMP5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAC9" }},
-{data: { id: 'HPCAL4', score: 5, href: "https://www.uniprot.org/uniprot/Q9UM19" }},
-{data: { id: 'NUFIP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHK0" }},
-{data: { id: 'PDE2A', score: 5, href: "https://www.uniprot.org/uniprot/O00408" }},
-{data: { id: 'ZNHIT3', score: 5, href: "https://www.uniprot.org/uniprot/Q15649" }}], 
- edges: [{ data: { source: 'PDE2A', target: 'NUFIP1', directed: 'false', weight: 0.826785} },
-{ data: { source: 'PDE2A', target: 'SCAMP5', directed: 'false', weight: 0.171414} },
-{ data: { source: 'PDE2A', target: 'ZNHIT3', directed: 'false', weight: 0.140692} },
-{ data: { source: 'NUFIP1', target: 'ZNHIT3', directed: 'false', weight: 0.98654} },
-{ data: { source: 'NUFIP1', target: 'HPCAL4', directed: 'false', weight: 0.5796979999999999} },
-{ data: { source: 'NUFIP1', target: 'SCAMP5', directed: 'false', weight: 0.443995} },
-{ data: { source: 'SCAMP5', target: 'ZNHIT3', directed: 'false', weight: 0.140692} }]},
+elements:{nodes: [{data: { id: 'SMN1', score: 5, href: "https://www.uniprot.org/uniprot/Q16637" }},
+{data: { id: 'GEMIN2', score: 5, href: "https://www.uniprot.org/uniprot/O14893" }},
+{data: { id: 'CIP2A', score: 5, href: "https://www.uniprot.org/uniprot/Q8TCG1" }},
+{data: { id: 'GEMIN4', score: 5, href: "https://www.uniprot.org/uniprot/P57678" }},
+{data: { id: 'GEMIN7', score: 5, href: "https://www.uniprot.org/uniprot/Q9H840" }},
+{data: { id: 'STRAP', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3F4" }},
+{data: { id: 'GEMIN8', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWZ8" }},
+{data: { id: 'DDX20', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHI6" }},
+{data: { id: 'GEMIN5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TEQ6" }},
+{data: { id: 'GEMIN6', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXD5" }}], 
+ edges: [{ data: { source: 'CIP2A', target: 'GEMIN4', directed: 'false', weight: 0.764292} },
+{ data: { source: 'CIP2A', target: 'DDX20', directed: 'false', weight: 0.708716} },
+{ data: { source: 'GEMIN5', target: 'DDX20', directed: 'false', weight: 0.945808} },
+{ data: { source: 'GEMIN5', target: 'GEMIN2', directed: 'false', weight: 0.742722} },
+{ data: { source: 'GEMIN5', target: 'GEMIN4', directed: 'false', weight: 0.464868} },
+{ data: { source: 'SMN1', target: 'GEMIN6', directed: 'false', weight: 0.9641360000000001} },
+{ data: { source: 'SMN1', target: 'GEMIN7', directed: 'false', weight: 0.8537520000000001} },
+{ data: { source: 'SMN1', target: 'STRAP', directed: 'false', weight: 0.561554} },
+{ data: { source: 'SMN1', target: 'GEMIN8', directed: 'false', weight: 0.5425949999999999} },
+{ data: { source: 'GEMIN4', target: 'DDX20', directed: 'false', weight: 0.998397} },
+{ data: { source: 'GEMIN4', target: 'GEMIN8', directed: 'false', weight: 0.689479} },
+{ data: { source: 'GEMIN4', target: 'GEMIN6', directed: 'false', weight: 0.582547} },
+{ data: { source: 'GEMIN4', target: 'GEMIN2', directed: 'false', weight: 0.461742} },
+{ data: { source: 'GEMIN4', target: 'GEMIN7', directed: 'false', weight: 0.275792} },
+{ data: { source: 'GEMIN2', target: 'DDX20', directed: 'false', weight: 0.466801} },
+{ data: { source: 'GEMIN2', target: 'GEMIN7', directed: 'false', weight: 0.3829} },
+{ data: { source: 'GEMIN2', target: 'GEMIN8', directed: 'false', weight: 0.262863} },
+{ data: { source: 'GEMIN2', target: 'GEMIN6', directed: 'false', weight: 0.0975913} },
+{ data: { source: 'STRAP', target: 'GEMIN7', directed: 'false', weight: 0.849706} },
+{ data: { source: 'STRAP', target: 'GEMIN6', directed: 'false', weight: 0.45418500000000006} },
+{ data: { source: 'STRAP', target: 'GEMIN8', directed: 'false', weight: 0.35867} },
+{ data: { source: 'GEMIN7', target: 'GEMIN8', directed: 'false', weight: 0.905611} },
+{ data: { source: 'GEMIN7', target: 'DDX20', directed: 'false', weight: 0.718906} },
+{ data: { source: 'GEMIN7', target: 'GEMIN6', directed: 'false', weight: 0.18085} },
+{ data: { source: 'DDX20', target: 'GEMIN8', directed: 'false', weight: 0.572821} },
+{ data: { source: 'DDX20', target: 'GEMIN6', directed: 'false', weight: 0.45073} },
+{ data: { source: 'GEMIN8', target: 'GEMIN6', directed: 'false', weight: 0.546074} }]},
 
 style: [
     {
@@ -82,7 +107,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.60829
+    Complex Score (from Super.Complex) = 0.55625
     </section>
     </body>
     </html>

@@ -29,15 +29,35 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DERL1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUN8" }},
-{data: { id: 'TMEM87A', score: 5, href: "https://www.uniprot.org/uniprot/Q8NBN3" }},
-{data: { id: 'PTDSS2', score: 5, href: "https://www.uniprot.org/uniprot/Q9BVG9" }},
-{data: { id: 'MBOAT1', score: 5, href: "https://www.uniprot.org/uniprot/Q6ZNC8" }}], 
- edges: [{ data: { source: 'DERL1', target: 'PTDSS2', directed: 'false', weight: 0.290321} },
-{ data: { source: 'DERL1', target: 'TMEM87A', directed: 'false', weight: 0.22982800000000003} },
-{ data: { source: 'DERL1', target: 'MBOAT1', directed: 'false', weight: 0.030887900000000003} },
-{ data: { source: 'MBOAT1', target: 'PTDSS2', directed: 'false', weight: 0.423509} },
-{ data: { source: 'TMEM87A', target: 'PTDSS2', directed: 'false', weight: 0.652694} }]},
+elements:{nodes: [{data: { id: 'HMGCL', score: 5, href: "https://www.uniprot.org/uniprot/P35914" }},
+{data: { id: 'ISOC1', score: 2, href: "https://www.uniprot.org/uniprot/Q96CN7" }},
+{data: { id: 'TIAL1', score: 5, href: "https://www.uniprot.org/uniprot/Q01085" }},
+{data: { id: 'PCBP3', score: 5, href: "https://www.uniprot.org/uniprot/P57721" }},
+{data: { id: 'GGA2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJY4" }},
+{data: { id: 'TIA1', score: 5, href: "https://www.uniprot.org/uniprot/P31483" }},
+{data: { id: 'ARHGDIA', score: 5, href: "https://www.uniprot.org/uniprot/P52565" }},
+{data: { id: 'AK2', score: 5, href: "https://www.uniprot.org/uniprot/P54819" }}], 
+ edges: [{ data: { source: 'TIA1', target: 'ISOC1', directed: 'false', weight: 0.779459} },
+{ data: { source: 'TIA1', target: 'TIAL1', directed: 'false', weight: 0.775278} },
+{ data: { source: 'TIA1', target: 'GGA2', directed: 'false', weight: 0.511608} },
+{ data: { source: 'TIA1', target: 'ARHGDIA', directed: 'false', weight: 0.200133} },
+{ data: { source: 'TIA1', target: 'HMGCL', directed: 'false', weight: 0.130994} },
+{ data: { source: 'TIA1', target: 'AK2', directed: 'false', weight: 0.086815} },
+{ data: { source: 'TIA1', target: 'PCBP3', directed: 'false', weight: 0.03465530000000001} },
+{ data: { source: 'PCBP3', target: 'TIAL1', directed: 'false', weight: 0.323892} },
+{ data: { source: 'PCBP3', target: 'ARHGDIA', directed: 'false', weight: 0.09042610000000001} },
+{ data: { source: 'PCBP3', target: 'GGA2', directed: 'false', weight: 0.0760108} },
+{ data: { source: 'PCBP3', target: 'ISOC1', directed: 'false', weight: 0.0613066} },
+{ data: { source: 'PCBP3', target: 'HMGCL', directed: 'false', weight: 0.0531033} },
+{ data: { source: 'ISOC1', target: 'TIAL1', directed: 'false', weight: 0.8560530000000001} },
+{ data: { source: 'ISOC1', target: 'ARHGDIA', directed: 'false', weight: 0.327298} },
+{ data: { source: 'ISOC1', target: 'GGA2', directed: 'false', weight: 0.027860500000000003} },
+{ data: { source: 'ISOC1', target: 'HMGCL', directed: 'false', weight: 0.013108700000000001} },
+{ data: { source: 'GGA2', target: 'TIAL1', directed: 'false', weight: 0.31189} },
+{ data: { source: 'GGA2', target: 'ARHGDIA', directed: 'false', weight: 0.00926235} },
+{ data: { source: 'TIAL1', target: 'ARHGDIA', directed: 'false', weight: 0.521243} },
+{ data: { source: 'TIAL1', target: 'HMGCL', directed: 'false', weight: 0.335361} },
+{ data: { source: 'TIAL1', target: 'AK2', directed: 'false', weight: 0.00872231} }]},
 
 style: [
     {
@@ -79,7 +99,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.61620
+    Complex Score (from Super.Complex) = 0.56078
     </section>
     </body>
     </html>

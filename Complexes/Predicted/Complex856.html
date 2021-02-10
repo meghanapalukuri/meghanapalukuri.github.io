@@ -29,18 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'BSG', score: 5, href: "https://www.uniprot.org/uniprot/P35613" }},
-{data: { id: 'GNPAT', score: 5, href: "https://www.uniprot.org/uniprot/O15228" }},
-{data: { id: 'TBCD', score: 5, href: "https://www.uniprot.org/uniprot/Q9BTW9" }},
-{data: { id: 'TARBP1', score: 5, href: "https://www.uniprot.org/uniprot/Q13395" }},
-{data: { id: 'DDC', score: 5, href: "https://www.uniprot.org/uniprot/P20711" }}], 
- edges: [{ data: { source: 'TARBP1', target: 'BSG', directed: 'false', weight: 0.878058} },
-{ data: { source: 'TARBP1', target: 'TBCD', directed: 'false', weight: 0.61002} },
-{ data: { source: 'TARBP1', target: 'GNPAT', directed: 'false', weight: 0.133243} },
-{ data: { source: 'TARBP1', target: 'DDC', directed: 'false', weight: 0.128057} },
-{ data: { source: 'GNPAT', target: 'BSG', directed: 'false', weight: 0.5108689999999999} },
-{ data: { source: 'GNPAT', target: 'DDC', directed: 'false', weight: 0.11730499999999999} },
-{ data: { source: 'BSG', target: 'DDC', directed: 'false', weight: 0.9897790000000001} }]},
+elements:{nodes: [{data: { id: 'CLASP2', score: 5, href: "https://www.uniprot.org/uniprot/O75122" }},
+{data: { id: 'PDE4DIP', score: 5, href: "https://www.uniprot.org/uniprot/Q5VU43" }},
+{data: { id: 'KIF18B', score: 5, href: "https://www.uniprot.org/uniprot/Q86Y91" }},
+{data: { id: 'CLASP1', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z460" }},
+{data: { id: 'MAPRE1', score: 5, href: "https://www.uniprot.org/uniprot/Q15691" }}], 
+ edges: [{ data: { source: 'KIF18B', target: 'MAPRE1', directed: 'false', weight: 0.9749479999999999} },
+{ data: { source: 'KIF18B', target: 'CLASP2', directed: 'false', weight: 0.145554} },
+{ data: { source: 'KIF18B', target: 'PDE4DIP', directed: 'false', weight: 0.123797} },
+{ data: { source: 'CLASP2', target: 'MAPRE1', directed: 'false', weight: 0.9049659999999999} },
+{ data: { source: 'CLASP2', target: 'CLASP1', directed: 'false', weight: 0.544525} },
+{ data: { source: 'CLASP2', target: 'PDE4DIP', directed: 'false', weight: 0.114755} },
+{ data: { source: 'PDE4DIP', target: 'MAPRE1', directed: 'false', weight: 0.80548} }]},
 
 style: [
     {
@@ -82,7 +82,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.61309
+    Complex Score (from Super.Complex) = 0.55952
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>PDE4DIP
     </section>
     </body>
     </html>

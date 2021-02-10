@@ -29,26 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GPATCH8', score: 4, href: "https://www.uniprot.org/uniprot/Q9UKJ3" }},
-{data: { id: 'CWC22', score: 5, href: "https://www.uniprot.org/uniprot/Q9HCG8" }},
-{data: { id: 'H2AFZ', score: 0 }},
-{data: { id: 'RNPS1', score: 5, href: "https://www.uniprot.org/uniprot/Q15287" }},
-{data: { id: 'SAP18', score: 5, href: "https://www.uniprot.org/uniprot/O00422" }},
-{data: { id: 'ZRANB2', score: 5, href: "https://www.uniprot.org/uniprot/O95218" }},
-{data: { id: 'ACIN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKV3" }}], 
- edges: [{ data: { source: 'SAP18', target: 'RNPS1', directed: 'false', weight: 0.9643430000000001} },
-{ data: { source: 'SAP18', target: 'ZRANB2', directed: 'false', weight: 0.0668043} },
-{ data: { source: 'SAP18', target: 'CWC22', directed: 'false', weight: 0.0509925} },
-{ data: { source: 'SAP18', target: 'H2AFZ', directed: 'false', weight: 0.020368200000000003} },
-{ data: { source: 'H2AFZ', target: 'RNPS1', directed: 'false', weight: 0.48214300000000004} },
-{ data: { source: 'GPATCH8', target: 'RNPS1', directed: 'false', weight: 0.9967739999999999} },
-{ data: { source: 'GPATCH8', target: 'CWC22', directed: 'false', weight: 0.09315419999999999} },
-{ data: { source: 'GPATCH8', target: 'ZRANB2', directed: 'false', weight: 0.061500400000000004} },
-{ data: { source: 'RNPS1', target: 'ACIN1', directed: 'false', weight: 0.99926} },
-{ data: { source: 'RNPS1', target: 'CWC22', directed: 'false', weight: 0.9759450000000001} },
-{ data: { source: 'RNPS1', target: 'ZRANB2', directed: 'false', weight: 0.9732299999999999} },
-{ data: { source: 'ZRANB2', target: 'CWC22', directed: 'false', weight: 0.45883100000000004} },
-{ data: { source: 'ACIN1', target: 'CWC22', directed: 'false', weight: 0.951304} }]},
+elements:{nodes: [{data: { id: 'RAB5C', score: 5, href: "https://www.uniprot.org/uniprot/P51148" }},
+{data: { id: 'RAB5B', score: 5, href: "https://www.uniprot.org/uniprot/P61020" }},
+{data: { id: 'PTPN11', score: 5, href: "https://www.uniprot.org/uniprot/Q06124" }}], 
+ edges: [{ data: { source: 'PTPN11', target: 'RAB5C', directed: 'false', weight: 0.6350439999999999} },
+{ data: { source: 'RAB5C', target: 'RAB5B', directed: 'false', weight: 0.631423} }]},
 
 style: [
     {
@@ -90,7 +75,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.58521
+    Complex Score (from Super.Complex) = 0.53697
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>RAB5C
     </section>
     </body>
     </html>

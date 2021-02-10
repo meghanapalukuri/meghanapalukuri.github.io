@@ -29,20 +29,25 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TACC2', score: 5, href: "https://www.uniprot.org/uniprot/O95359" }},
-{data: { id: 'CKAP5', score: 5, href: "https://www.uniprot.org/uniprot/Q14008" }},
-{data: { id: 'SLAIN1', score: 5, href: "https://www.uniprot.org/uniprot/Q8ND83" }},
-{data: { id: 'SLAIN2', score: 5, href: "https://www.uniprot.org/uniprot/Q9P270" }},
-{data: { id: 'TACC1', score: 5, href: "https://www.uniprot.org/uniprot/O75410" }}], 
- edges: [{ data: { source: 'SLAIN2', target: 'CKAP5', directed: 'false', weight: 0.364498} },
-{ data: { source: 'SLAIN2', target: 'TACC2', directed: 'false', weight: 0.141783} },
-{ data: { source: 'SLAIN2', target: 'TACC1', directed: 'false', weight: 0.09480110000000001} },
-{ data: { source: 'CKAP5', target: 'TACC2', directed: 'false', weight: 0.689547} },
-{ data: { source: 'CKAP5', target: 'TACC1', directed: 'false', weight: 0.621142} },
-{ data: { source: 'CKAP5', target: 'SLAIN1', directed: 'false', weight: 0.5465869999999999} },
-{ data: { source: 'SLAIN1', target: 'TACC2', directed: 'false', weight: 0.0293887} },
-{ data: { source: 'SLAIN1', target: 'TACC1', directed: 'false', weight: 0.00806614} },
-{ data: { source: 'TACC2', target: 'TACC1', directed: 'false', weight: 0.266934} }]},
+elements:{nodes: [{data: { id: 'CSNK2A2', score: 5, href: "https://www.uniprot.org/uniprot/P19784" }},
+{data: { id: 'LEO1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVC0" }},
+{data: { id: 'CSNK2A1', score: 5, href: "https://www.uniprot.org/uniprot/P68400" }},
+{data: { id: 'CSNK2B', score: 5, href: "https://www.uniprot.org/uniprot/P67870" }},
+{data: { id: 'PAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N7H5" }},
+{data: { id: 'DOK4', score: 5, href: "https://www.uniprot.org/uniprot/Q8TEW6" }},
+{data: { id: 'SUPT4H1', score: 5, href: "https://www.uniprot.org/uniprot/P63272" }}], 
+ edges: [{ data: { source: 'SUPT4H1', target: 'CSNK2A1', directed: 'false', weight: 0.98854} },
+{ data: { source: 'SUPT4H1', target: 'PAF1', directed: 'false', weight: 0.609625} },
+{ data: { source: 'SUPT4H1', target: 'DOK4', directed: 'false', weight: 0.547657} },
+{ data: { source: 'SUPT4H1', target: 'CSNK2B', directed: 'false', weight: 0.15437} },
+{ data: { source: 'CSNK2B', target: 'CSNK2A2', directed: 'false', weight: 0.9965440000000001} },
+{ data: { source: 'CSNK2B', target: 'CSNK2A1', directed: 'false', weight: 0.9759} },
+{ data: { source: 'CSNK2B', target: 'PAF1', directed: 'false', weight: 0.613187} },
+{ data: { source: 'DOK4', target: 'CSNK2A1', directed: 'false', weight: 0.0749268} },
+{ data: { source: 'PAF1', target: 'CSNK2A1', directed: 'false', weight: 0.9191290000000001} },
+{ data: { source: 'PAF1', target: 'LEO1', directed: 'false', weight: 0.721615} },
+{ data: { source: 'CSNK2A1', target: 'CSNK2A2', directed: 'false', weight: 0.990316} },
+{ data: { source: 'CSNK2A1', target: 'LEO1', directed: 'false', weight: 0.665896} }]},
 
 style: [
     {
@@ -84,7 +89,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66694
+    Complex Score (from Super.Complex) = 0.59970
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>CSNK2A2 CSNK2B
     </section>
     </body>
     </html>

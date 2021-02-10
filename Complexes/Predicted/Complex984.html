@@ -29,26 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FAM192A', score: 0 }},
-{data: { id: 'PSME3', score: 5, href: "https://www.uniprot.org/uniprot/P61289" }},
-{data: { id: 'SNAPC3', score: 5, href: "https://www.uniprot.org/uniprot/Q92966" }},
-{data: { id: 'SNAPC2', score: 5, href: "https://www.uniprot.org/uniprot/Q13487" }},
-{data: { id: 'SNAPC5', score: 5, href: "https://www.uniprot.org/uniprot/O75971" }},
-{data: { id: 'SNAPC4', score: 5, href: "https://www.uniprot.org/uniprot/Q5SXM2" }},
-{data: { id: 'SNAPC1', score: 5, href: "https://www.uniprot.org/uniprot/Q16533" }}], 
- edges: [{ data: { source: 'FAM192A', target: 'PSME3', directed: 'false', weight: 1.0} },
-{ data: { source: 'FAM192A', target: 'SNAPC1', directed: 'false', weight: 0.0847746} },
-{ data: { source: 'SNAPC2', target: 'SNAPC1', directed: 'false', weight: 0.984986} },
-{ data: { source: 'SNAPC2', target: 'SNAPC5', directed: 'false', weight: 0.171414} },
-{ data: { source: 'SNAPC2', target: 'SNAPC3', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SNAPC2', target: 'SNAPC4', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SNAPC5', target: 'SNAPC1', directed: 'false', weight: 0.966612} },
-{ data: { source: 'SNAPC5', target: 'SNAPC3', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SNAPC5', target: 'SNAPC4', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SNAPC1', target: 'SNAPC3', directed: 'false', weight: 0.9874059999999999} },
-{ data: { source: 'SNAPC1', target: 'SNAPC4', directed: 'false', weight: 0.9759110000000001} },
-{ data: { source: 'SNAPC1', target: 'PSME3', directed: 'false', weight: 0.905546} },
-{ data: { source: 'SNAPC3', target: 'SNAPC4', directed: 'false', weight: 0.33813200000000004} }]},
+elements:{nodes: [{data: { id: 'ZNF621', score: 3, href: "https://www.uniprot.org/uniprot/Q6ZSS3" }},
+{data: { id: 'TRIM39', score: 5, href: "https://www.uniprot.org/uniprot/Q9HCM9" }},
+{data: { id: 'ZNF19', score: 5, href: "https://www.uniprot.org/uniprot/P17023" }}], 
+ edges: [{ data: { source: 'TRIM39', target: 'ZNF621', directed: 'false', weight: 0.655472} },
+{ data: { source: 'TRIM39', target: 'ZNF19', directed: 'false', weight: 0.321772} }]},
 
 style: [
     {
@@ -90,7 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.57488
+    Complex Score (from Super.Complex) = 0.52961
     </section>
     </body>
     </html>

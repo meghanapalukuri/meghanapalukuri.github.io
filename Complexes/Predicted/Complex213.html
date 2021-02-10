@@ -29,12 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MAT2A', score: 5, href: "https://www.uniprot.org/uniprot/P31153" }},
-{data: { id: 'MAT2B', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZL9" }},
-{data: { id: 'MAT1A', score: 5, href: "https://www.uniprot.org/uniprot/Q00266" }}], 
- edges: [{ data: { source: 'MAT1A', target: 'MAT2A', directed: 'false', weight: 0.853417} },
-{ data: { source: 'MAT1A', target: 'MAT2B', directed: 'false', weight: 0.7502909999999999} },
-{ data: { source: 'MAT2B', target: 'MAT2A', directed: 'false', weight: 0.878325} }]},
+elements:{nodes: [{data: { id: 'MTG2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H4K7" }},
+{data: { id: 'PDSS2', score: 5, href: "https://www.uniprot.org/uniprot/Q86YH6" }},
+{data: { id: 'OXLD1', score: 1, href: "https://www.uniprot.org/uniprot/I3L208" }},
+{data: { id: 'TRMT2B', score: 3, href: "https://www.uniprot.org/uniprot/Q96GJ1" }}], 
+ edges: [{ data: { source: 'OXLD1', target: 'TRMT2B', directed: 'false', weight: 0.961917} },
+{ data: { source: 'OXLD1', target: 'PDSS2', directed: 'false', weight: 0.822559} },
+{ data: { source: 'OXLD1', target: 'MTG2', directed: 'false', weight: 0.689606} },
+{ data: { source: 'TRMT2B', target: 'PDSS2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'TRMT2B', target: 'MTG2', directed: 'false', weight: 0.133456} },
+{ data: { source: 'PDSS2', target: 'MTG2', directed: 'false', weight: 0.151455} }]},
 
 style: [
     {
@@ -76,12 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.79737
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>MAT2B
+    Complex Score (from Super.Complex) = 0.77246
     </section>
     </body>
     </html>

@@ -29,20 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ATN1', score: 5, href: "https://www.uniprot.org/uniprot/P54259" }},
-{data: { id: 'FAM199X', score: 2, href: "https://www.uniprot.org/uniprot/Q6PEV8" }},
-{data: { id: 'WDR5', score: 5, href: "https://www.uniprot.org/uniprot/P61964" }},
-{data: { id: 'ZXDC', score: 5, href: "https://www.uniprot.org/uniprot/Q2QGD7" }},
-{data: { id: 'RERE', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2R6" }}], 
- edges: [{ data: { source: 'WDR5', target: 'ATN1', directed: 'false', weight: 0.982352} },
-{ data: { source: 'WDR5', target: 'RERE', directed: 'false', weight: 0.956375} },
-{ data: { source: 'WDR5', target: 'FAM199X', directed: 'false', weight: 0.87913} },
-{ data: { source: 'WDR5', target: 'ZXDC', directed: 'false', weight: 0.475641} },
-{ data: { source: 'ZXDC', target: 'ATN1', directed: 'false', weight: 0.171414} },
-{ data: { source: 'ZXDC', target: 'FAM199X', directed: 'false', weight: 0.133451} },
-{ data: { source: 'FAM199X', target: 'RERE', directed: 'false', weight: 0.133451} },
-{ data: { source: 'FAM199X', target: 'ATN1', directed: 'false', weight: 0.133451} },
-{ data: { source: 'ATN1', target: 'RERE', directed: 'false', weight: 0.171414} }]},
+elements:{nodes: [{data: { id: 'PUM1', score: 5, href: "https://www.uniprot.org/uniprot/Q14671" }},
+{data: { id: 'HELZ', score: 5, href: "https://www.uniprot.org/uniprot/P42694" }},
+{data: { id: 'USP54', score: 5, href: "https://www.uniprot.org/uniprot/Q70EL1" }}], 
+ edges: [{ data: { source: 'PUM1', target: 'HELZ', directed: 'false', weight: 0.300708} },
+{ data: { source: 'PUM1', target: 'USP54', directed: 'false', weight: 0.0815261} },
+{ data: { source: 'USP54', target: 'HELZ', directed: 'false', weight: 0.363892} }]},
 
 style: [
     {
@@ -84,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.70240
+    Complex Score (from Super.Complex) = 0.65641
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>USP54
     </section>
     </body>
     </html>

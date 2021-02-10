@@ -29,11 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SERPINB3', score: 5, href: "https://www.uniprot.org/uniprot/P29508" }},
-{data: { id: 'SDF2L1', score: 4, href: "https://www.uniprot.org/uniprot/Q9HCN8" }},
-{data: { id: 'SERPINB4', score: 5, href: "https://www.uniprot.org/uniprot/P48594" }}], 
- edges: [{ data: { source: 'SDF2L1', target: 'SERPINB4', directed: 'false', weight: 0.835931} },
-{ data: { source: 'SERPINB4', target: 'SERPINB3', directed: 'false', weight: 0.9973770000000001} }]},
+elements:{nodes: [{data: { id: 'GNA11', score: 5, href: "https://www.uniprot.org/uniprot/P29992" }},
+{data: { id: 'GNAQ', score: 5, href: "https://www.uniprot.org/uniprot/P50148" }},
+{data: { id: 'GNAL', score: 5, href: "https://www.uniprot.org/uniprot/P38405" }},
+{data: { id: 'GNAS', score: 5, href: "https://www.uniprot.org/uniprot/O95467" }},
+{data: { id: 'GNB2', score: 5, href: "https://www.uniprot.org/uniprot/P62879" }},
+{data: { id: 'GNG12', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBI6" }}], 
+ edges: [{ data: { source: 'GNAQ', target: 'GNB2', directed: 'false', weight: 0.825166} },
+{ data: { source: 'GNAQ', target: 'GNA11', directed: 'false', weight: 0.515792} },
+{ data: { source: 'GNB2', target: 'GNA11', directed: 'false', weight: 0.860859} },
+{ data: { source: 'GNB2', target: 'GNAS', directed: 'false', weight: 0.817196} },
+{ data: { source: 'GNB2', target: 'GNG12', directed: 'false', weight: 0.319077} },
+{ data: { source: 'GNB2', target: 'GNAL', directed: 'false', weight: 0.163304} },
+{ data: { source: 'GNAS', target: 'GNAL', directed: 'false', weight: 0.939933} },
+{ data: { source: 'GNAS', target: 'GNG12', directed: 'false', weight: 0.313452} },
+{ data: { source: 'GNG12', target: 'GNAL', directed: 'false', weight: 0.151455} }]},
 
 style: [
     {
@@ -75,7 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.59878
+    Complex Score (from Super.Complex) = 0.54802
     </section>
     </body>
     </html>

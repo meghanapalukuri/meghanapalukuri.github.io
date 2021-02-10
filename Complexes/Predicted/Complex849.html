@@ -29,14 +29,26 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SDHA', score: 5, href: "https://www.uniprot.org/uniprot/P31040" }},
-{data: { id: 'SDHB', score: 5, href: "https://www.uniprot.org/uniprot/P21912" }},
-{data: { id: 'PDHA2', score: 5, href: "https://www.uniprot.org/uniprot/P29803" }},
-{data: { id: 'SDHAF2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX18" }}], 
- edges: [{ data: { source: 'SDHA', target: 'SDHB', directed: 'false', weight: 0.996382} },
-{ data: { source: 'SDHA', target: 'SDHAF2', directed: 'false', weight: 0.623471} },
-{ data: { source: 'SDHA', target: 'PDHA2', directed: 'false', weight: 0.416279} },
-{ data: { source: 'PDHA2', target: 'SDHB', directed: 'false', weight: 0.576159} }]},
+elements:{nodes: [{data: { id: 'ALDOC', score: 5, href: "https://www.uniprot.org/uniprot/P09972" }},
+{data: { id: 'CFL1', score: 5, href: "https://www.uniprot.org/uniprot/P23528" }},
+{data: { id: 'GALE', score: 5, href: "https://www.uniprot.org/uniprot/Q14376" }},
+{data: { id: 'ASNS', score: 5, href: "https://www.uniprot.org/uniprot/P08243" }},
+{data: { id: 'CAP2', score: 5, href: "https://www.uniprot.org/uniprot/P40123" }},
+{data: { id: 'CAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q01518" }},
+{data: { id: 'GARS', score: 2, href: "https://www.uniprot.org/uniprot/A0A090N8G0" }}], 
+ edges: [{ data: { source: 'CFL1', target: 'CAP2', directed: 'false', weight: 0.9884629999999999} },
+{ data: { source: 'CFL1', target: 'CAP1', directed: 'false', weight: 0.975943} },
+{ data: { source: 'ALDOC', target: 'GALE', directed: 'false', weight: 0.83836} },
+{ data: { source: 'CAP2', target: 'GALE', directed: 'false', weight: 0.59947} },
+{ data: { source: 'CAP2', target: 'CAP1', directed: 'false', weight: 0.373051} },
+{ data: { source: 'CAP2', target: 'GARS', directed: 'false', weight: 0.316008} },
+{ data: { source: 'CAP2', target: 'ASNS', directed: 'false', weight: 0.0262952} },
+{ data: { source: 'ASNS', target: 'GARS', directed: 'false', weight: 0.616097} },
+{ data: { source: 'ASNS', target: 'GALE', directed: 'false', weight: 0.374719} },
+{ data: { source: 'ASNS', target: 'CAP1', directed: 'false', weight: 0.12070999999999998} },
+{ data: { source: 'CAP1', target: 'GARS', directed: 'false', weight: 0.961986} },
+{ data: { source: 'CAP1', target: 'GALE', directed: 'false', weight: 0.353983} },
+{ data: { source: 'GARS', target: 'GALE', directed: 'false', weight: 0.755182} }]},
 
 style: [
     {
@@ -78,7 +90,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.61658
+    Complex Score (from Super.Complex) = 0.56140
     </section>
     </body>
     </html>

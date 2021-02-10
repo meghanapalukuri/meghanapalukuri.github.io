@@ -29,15 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'AIDA', score: 5, href: "https://www.uniprot.org/uniprot/Q96BJ3" }},
-{data: { id: 'C1orf21', score: 2, href: "https://www.uniprot.org/uniprot/Q9H246" }},
-{data: { id: 'TMEM185A', score: 3, href: "https://www.uniprot.org/uniprot/Q8NFB2" }},
-{data: { id: 'TMEM185B', score: 2, href: "https://www.uniprot.org/uniprot/Q9H7F4" }}], 
- edges: [{ data: { source: 'C1orf21', target: 'TMEM185A', directed: 'false', weight: 0.759613} },
-{ data: { source: 'C1orf21', target: 'TMEM185B', directed: 'false', weight: 0.171414} },
-{ data: { source: 'TMEM185A', target: 'TMEM185B', directed: 'false', weight: 0.981564} },
-{ data: { source: 'TMEM185A', target: 'AIDA', directed: 'false', weight: 0.5682149999999999} },
-{ data: { source: 'AIDA', target: 'TMEM185B', directed: 'false', weight: 0.133451} }]},
+elements:{nodes: [{data: { id: 'CEP104', score: 5, href: "https://www.uniprot.org/uniprot/O60308" }},
+{data: { id: 'CFAP410', score: 5, href: "https://www.uniprot.org/uniprot/O43822" }},
+{data: { id: 'NEK1', score: 5, href: "https://www.uniprot.org/uniprot/Q96PY6" }}], 
+ edges: [{ data: { source: 'NEK1', target: 'CFAP410', directed: 'false', weight: 0.9972620000000001} },
+{ data: { source: 'NEK1', target: 'CEP104', directed: 'false', weight: 0.480642} }]},
 
 style: [
     {
@@ -79,7 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65523
+    Complex Score (from Super.Complex) = 0.58409
     </section>
     </body>
     </html>

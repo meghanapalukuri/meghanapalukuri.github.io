@@ -29,12 +29,23 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PML', score: 5, href: "https://www.uniprot.org/uniprot/P29590" }},
-{data: { id: 'GOLGA6B', score: 2, href: "https://www.uniprot.org/uniprot/A6NDN3" }},
-{data: { id: 'NANP', score: 5, href: "https://www.uniprot.org/uniprot/Q8TBE9" }}], 
- edges: [{ data: { source: 'PML', target: 'GOLGA6B', directed: 'false', weight: 0.603197} },
-{ data: { source: 'PML', target: 'NANP', directed: 'false', weight: 0.296281} },
-{ data: { source: 'NANP', target: 'GOLGA6B', directed: 'false', weight: 0.125737} }]},
+elements:{nodes: [{data: { id: 'PSMB4', score: 5, href: "https://www.uniprot.org/uniprot/P28070" }},
+{data: { id: 'PSMB5', score: 5, href: "https://www.uniprot.org/uniprot/P28074" }},
+{data: { id: 'UBFD1', score: 3, href: "https://www.uniprot.org/uniprot/O14562" }},
+{data: { id: 'RAC3', score: 5, href: "https://www.uniprot.org/uniprot/P60763" }},
+{data: { id: 'LMF1', score: 5, href: "https://www.uniprot.org/uniprot/Q96S06" }},
+{data: { id: 'AKIRIN2', score: 5, href: "https://www.uniprot.org/uniprot/Q53H80" }}], 
+ edges: [{ data: { source: 'PSMB5', target: 'AKIRIN2', directed: 'false', weight: 0.9980559999999999} },
+{ data: { source: 'PSMB5', target: 'UBFD1', directed: 'false', weight: 0.982029} },
+{ data: { source: 'PSMB5', target: 'LMF1', directed: 'false', weight: 0.961966} },
+{ data: { source: 'PSMB5', target: 'RAC3', directed: 'false', weight: 0.440532} },
+{ data: { source: 'PSMB5', target: 'PSMB4', directed: 'false', weight: 0.170795} },
+{ data: { source: 'LMF1', target: 'AKIRIN2', directed: 'false', weight: 0.144297} },
+{ data: { source: 'LMF1', target: 'RAC3', directed: 'false', weight: 0.125737} },
+{ data: { source: 'LMF1', target: 'UBFD1', directed: 'false', weight: 0.11228099999999999} },
+{ data: { source: 'AKIRIN2', target: 'PSMB4', directed: 'false', weight: 0.983677} },
+{ data: { source: 'AKIRIN2', target: 'RAC3', directed: 'false', weight: 0.109293} },
+{ data: { source: 'AKIRIN2', target: 'UBFD1', directed: 'false', weight: 0.0974347} }]},
 
 style: [
     {
@@ -76,7 +87,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66619
+    Complex Score (from Super.Complex) = 0.59906
     </section>
     </body>
     </html>

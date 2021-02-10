@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GRB2', score: 5, href: "https://www.uniprot.org/uniprot/P62993" }},
-{data: { id: 'OSBPL2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H1P3" }},
-{data: { id: 'RAP1GDS1', score: 5, href: "https://www.uniprot.org/uniprot/P52306" }}], 
- edges: [{ data: { source: 'GRB2', target: 'RAP1GDS1', directed: 'false', weight: 0.740863} },
-{ data: { source: 'GRB2', target: 'OSBPL2', directed: 'false', weight: 0.241558} },
-{ data: { source: 'OSBPL2', target: 'RAP1GDS1', directed: 'false', weight: 0.56285} }]},
+elements:{nodes: [{data: { id: 'PTPRK', score: 5, href: "https://www.uniprot.org/uniprot/Q15262" }},
+{data: { id: 'ARSG', score: 5, href: "https://www.uniprot.org/uniprot/Q96EG1" }},
+{data: { id: 'AMIGO3', score: 4, href: "https://www.uniprot.org/uniprot/Q86WK7" }}], 
+ edges: [{ data: { source: 'ARSG', target: 'PTPRK', directed: 'false', weight: 0.6984239999999999} },
+{ data: { source: 'ARSG', target: 'AMIGO3', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PTPRK', target: 'AMIGO3', directed: 'false', weight: 0.5115649999999999} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.75975
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>RAP1GDS1
+    Complex Score (from Super.Complex) = 0.68666
     </section>
     </body>
     </html>

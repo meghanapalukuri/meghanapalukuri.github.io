@@ -29,12 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NINL', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2I6" }},
-{data: { id: 'MIPOL1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TD10" }},
-{data: { id: 'LRRC39', score: 4, href: "https://www.uniprot.org/uniprot/Q96DD0" }}], 
- edges: [{ data: { source: 'LRRC39', target: 'NINL', directed: 'false', weight: 0.979173} },
-{ data: { source: 'LRRC39', target: 'MIPOL1', directed: 'false', weight: 0.9759760000000001} },
-{ data: { source: 'NINL', target: 'MIPOL1', directed: 'false', weight: 0.171414} }]},
+elements:{nodes: [{data: { id: 'ATXN7L1', score: 3, href: "https://www.uniprot.org/uniprot/Q9ULK2" }},
+{data: { id: 'ATXN7', score: 5, href: "https://www.uniprot.org/uniprot/O15265" }},
+{data: { id: 'ATXN7L3', score: 5, href: "https://www.uniprot.org/uniprot/Q14CW9" }},
+{data: { id: 'ATXN7L2', score: 2, href: "https://www.uniprot.org/uniprot/Q5T6C5" }},
+{data: { id: 'USP27X', score: 5, href: "https://www.uniprot.org/uniprot/A6NNY8" }}], 
+ edges: [{ data: { source: 'ATXN7L1', target: 'ATXN7L3', directed: 'false', weight: 0.932975} },
+{ data: { source: 'ATXN7L1', target: 'ATXN7', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ATXN7L1', target: 'ATXN7L2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ATXN7L1', target: 'USP27X', directed: 'false', weight: 0.151455} },
+{ data: { source: 'USP27X', target: 'ATXN7L3', directed: 'false', weight: 0.978252} },
+{ data: { source: 'USP27X', target: 'ATXN7', directed: 'false', weight: 0.151455} },
+{ data: { source: 'USP27X', target: 'ATXN7L2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ATXN7L2', target: 'ATXN7L3', directed: 'false', weight: 0.9851280000000001} },
+{ data: { source: 'ATXN7L2', target: 'ATXN7', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ATXN7', target: 'ATXN7L3', directed: 'false', weight: 0.97996} }]},
 
 style: [
     {
@@ -76,12 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76734
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        2 interacting protein(s): <br>NINL MIPOL1
+    Complex Score (from Super.Complex) = 0.74095
     </section>
     </body>
     </html>

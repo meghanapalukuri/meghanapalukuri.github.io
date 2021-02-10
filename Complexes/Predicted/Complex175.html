@@ -29,21 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'C12orf4', score: 2, href: "https://www.uniprot.org/uniprot/Q9NQ89" }},
-{data: { id: 'CRYZL1', score: 3, href: "https://www.uniprot.org/uniprot/O95825" }},
-{data: { id: 'GATD1', score: 3, href: "https://www.uniprot.org/uniprot/Q8NB37" }},
-{data: { id: 'TBCK', score: 5, href: "https://www.uniprot.org/uniprot/Q8TEA7" }},
-{data: { id: 'PPP1R21', score: 5, href: "https://www.uniprot.org/uniprot/Q6ZMI0" }}], 
- edges: [{ data: { source: 'CRYZL1', target: 'PPP1R21', directed: 'false', weight: 0.993237} },
-{ data: { source: 'CRYZL1', target: 'TBCK', directed: 'false', weight: 0.798455} },
-{ data: { source: 'CRYZL1', target: 'GATD1', directed: 'false', weight: 0.25852800000000004} },
-{ data: { source: 'CRYZL1', target: 'C12orf4', directed: 'false', weight: 0.213613} },
-{ data: { source: 'PPP1R21', target: 'TBCK', directed: 'false', weight: 0.954095} },
-{ data: { source: 'PPP1R21', target: 'C12orf4', directed: 'false', weight: 0.812434} },
-{ data: { source: 'PPP1R21', target: 'GATD1', directed: 'false', weight: 0.809246} },
-{ data: { source: 'GATD1', target: 'TBCK', directed: 'false', weight: 0.9411729999999999} },
-{ data: { source: 'GATD1', target: 'C12orf4', directed: 'false', weight: 0.25852800000000004} },
-{ data: { source: 'C12orf4', target: 'TBCK', directed: 'false', weight: 0.9132170000000001} }]},
+elements:{nodes: [{data: { id: 'WDR45', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y484" }},
+{data: { id: 'ATG2B', score: 4, href: "https://www.uniprot.org/uniprot/Q96BY7" }},
+{data: { id: 'LHX6', score: 5, href: "https://www.uniprot.org/uniprot/Q9UPM6" }},
+{data: { id: 'ARID3B', score: 5, href: "https://www.uniprot.org/uniprot/Q8IVW6" }}], 
+ edges: [{ data: { source: 'ARID3B', target: 'LHX6', directed: 'false', weight: 0.720252} },
+{ data: { source: 'ARID3B', target: 'ATG2B', directed: 'false', weight: 0.114755} },
+{ data: { source: 'ARID3B', target: 'WDR45', directed: 'false', weight: 0.114755} },
+{ data: { source: 'ATG2B', target: 'LHX6', directed: 'false', weight: 0.962491} },
+{ data: { source: 'ATG2B', target: 'WDR45', directed: 'false', weight: 0.24226599999999998} },
+{ data: { source: 'WDR45', target: 'LHX6', directed: 'false', weight: 0.788471} }]},
 
 style: [
     {
@@ -85,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.82828
+    Complex Score (from Super.Complex) = 0.77405
     </section>
     </body>
     </html>

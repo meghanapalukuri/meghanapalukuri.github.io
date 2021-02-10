@@ -29,20 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MAPK14', score: 5, href: "https://www.uniprot.org/uniprot/L7RSM2" }},
-{data: { id: 'MKNK1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUB5" }},
-{data: { id: 'MAPKAPK2', score: 5, href: "https://www.uniprot.org/uniprot/P49137" }},
-{data: { id: 'MKNK2', score: 5, href: "https://www.uniprot.org/uniprot/Q9HBH9" }},
-{data: { id: 'OBSL1', score: 5, href: "https://www.uniprot.org/uniprot/O75147" }}], 
- edges: [{ data: { source: 'MAPKAPK2', target: 'MAPK14', directed: 'false', weight: 0.999784} },
-{ data: { source: 'MAPKAPK2', target: 'MKNK1', directed: 'false', weight: 0.171414} },
-{ data: { source: 'MAPKAPK2', target: 'MKNK2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'MAPKAPK2', target: 'OBSL1', directed: 'false', weight: 0.0995769} },
-{ data: { source: 'MKNK1', target: 'MAPK14', directed: 'false', weight: 0.9804510000000001} },
-{ data: { source: 'MKNK1', target: 'MKNK2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'MAPK14', target: 'MKNK2', directed: 'false', weight: 0.984476} },
-{ data: { source: 'MAPK14', target: 'OBSL1', directed: 'false', weight: 0.418925} },
-{ data: { source: 'OBSL1', target: 'MKNK2', directed: 'false', weight: 0.0995769} }]},
+elements:{nodes: [{data: { id: 'FH', score: 5, href: "https://www.uniprot.org/uniprot/P07954" }},
+{data: { id: 'PGM5', score: 5, href: "https://www.uniprot.org/uniprot/Q15124" }},
+{data: { id: 'ACAT2', score: 5, href: "https://www.uniprot.org/uniprot/Q9BWD1" }},
+{data: { id: 'DBI', score: 5, href: "https://www.uniprot.org/uniprot/P07108" }},
+{data: { id: 'OXCT1', score: 5, href: "https://www.uniprot.org/uniprot/P55809" }}], 
+ edges: [{ data: { source: 'FH', target: 'PGM5', directed: 'false', weight: 0.939214} },
+{ data: { source: 'FH', target: 'OXCT1', directed: 'false', weight: 0.6769} },
+{ data: { source: 'FH', target: 'DBI', directed: 'false', weight: 0.00922051} },
+{ data: { source: 'OXCT1', target: 'PGM5', directed: 'false', weight: 0.938725} },
+{ data: { source: 'OXCT1', target: 'DBI', directed: 'false', weight: 0.544892} },
+{ data: { source: 'DBI', target: 'PGM5', directed: 'false', weight: 0.87764} },
+{ data: { source: 'DBI', target: 'ACAT2', directed: 'false', weight: 0.561533} }]},
 
 style: [
     {
@@ -84,7 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.69657
+    Complex Score (from Super.Complex) = 0.65099
     </section>
     </body>
     </html>

@@ -29,23 +29,30 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'INHBA', score: 5, href: "https://www.uniprot.org/uniprot/P08476" }},
-{data: { id: 'RCHY1', score: 5, href: "https://www.uniprot.org/uniprot/Q96PM5" }},
-{data: { id: 'GINM1', score: 2, href: "https://www.uniprot.org/uniprot/Q9NU53" }},
-{data: { id: 'ITGB8', score: 5, href: "https://www.uniprot.org/uniprot/P26012" }},
-{data: { id: 'CALCB', score: 5, href: "https://www.uniprot.org/uniprot/P10092" }},
-{data: { id: 'PLEKHA5', score: 5, href: "https://www.uniprot.org/uniprot/Q9HAU0" }}], 
- edges: [{ data: { source: 'CALCB', target: 'GINM1', directed: 'false', weight: 0.8759600000000001} },
-{ data: { source: 'CALCB', target: 'INHBA', directed: 'false', weight: 0.171414} },
-{ data: { source: 'CALCB', target: 'PLEKHA5', directed: 'false', weight: 0.151455} },
-{ data: { source: 'CALCB', target: 'RCHY1', directed: 'false', weight: 0.151455} },
-{ data: { source: 'ITGB8', target: 'GINM1', directed: 'false', weight: 0.8125220000000001} },
-{ data: { source: 'PLEKHA5', target: 'GINM1', directed: 'false', weight: 0.857978} },
-{ data: { source: 'PLEKHA5', target: 'INHBA', directed: 'false', weight: 0.151455} },
-{ data: { source: 'PLEKHA5', target: 'RCHY1', directed: 'false', weight: 0.133456} },
-{ data: { source: 'RCHY1', target: 'GINM1', directed: 'false', weight: 0.9159860000000001} },
-{ data: { source: 'RCHY1', target: 'INHBA', directed: 'false', weight: 0.151455} },
-{ data: { source: 'INHBA', target: 'GINM1', directed: 'false', weight: 0.967566} }]},
+elements:{nodes: [{data: { id: 'NAP1L1', score: 5, href: "https://www.uniprot.org/uniprot/P55209" }},
+{data: { id: 'RPS8', score: 5, href: "https://www.uniprot.org/uniprot/P62241" }},
+{data: { id: 'ANP32A', score: 5, href: "https://www.uniprot.org/uniprot/P39687" }},
+{data: { id: 'CDK11A', score: 5, href: "https://www.uniprot.org/uniprot/Q9UQ88" }},
+{data: { id: 'ANP32B', score: 5, href: "https://www.uniprot.org/uniprot/Q92688" }},
+{data: { id: 'ANP32E', score: 5, href: "https://www.uniprot.org/uniprot/Q9BTT0" }},
+{data: { id: 'NOLC1', score: 5, href: "https://www.uniprot.org/uniprot/Q14978" }},
+{data: { id: 'CCNL1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UK58" }}], 
+ edges: [{ data: { source: 'RPS8', target: 'NOLC1', directed: 'false', weight: 0.9940450000000001} },
+{ data: { source: 'RPS8', target: 'NAP1L1', directed: 'false', weight: 0.9851260000000001} },
+{ data: { source: 'ANP32E', target: 'CDK11A', directed: 'false', weight: 0.911208} },
+{ data: { source: 'ANP32E', target: 'ANP32A', directed: 'false', weight: 0.889007} },
+{ data: { source: 'ANP32E', target: 'ANP32B', directed: 'false', weight: 0.63456} },
+{ data: { source: 'ANP32E', target: 'NOLC1', directed: 'false', weight: 0.559629} },
+{ data: { source: 'ANP32E', target: 'NAP1L1', directed: 'false', weight: 0.441899} },
+{ data: { source: 'ANP32E', target: 'CCNL1', directed: 'false', weight: 0.258013} },
+{ data: { source: 'ANP32A', target: 'CDK11A', directed: 'false', weight: 0.924795} },
+{ data: { source: 'ANP32A', target: 'ANP32B', directed: 'false', weight: 0.62278} },
+{ data: { source: 'ANP32A', target: 'CCNL1', directed: 'false', weight: 0.10141599999999999} },
+{ data: { source: 'CDK11A', target: 'ANP32B', directed: 'false', weight: 0.9552459999999999} },
+{ data: { source: 'CDK11A', target: 'CCNL1', directed: 'false', weight: 0.296442} },
+{ data: { source: 'ANP32B', target: 'NOLC1', directed: 'false', weight: 0.8703780000000001} },
+{ data: { source: 'ANP32B', target: 'CCNL1', directed: 'false', weight: 0.268472} },
+{ data: { source: 'NAP1L1', target: 'NOLC1', directed: 'false', weight: 0.802258} }]},
 
 style: [
     {
@@ -87,12 +94,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.56677
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>PLEKHA5
+    Complex Score (from Super.Complex) = 0.51524
     </section>
     </body>
     </html>

@@ -29,24 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'EIF2AK3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZJ5" }},
-{data: { id: 'ECEL1', score: 5, href: "https://www.uniprot.org/uniprot/O95672" }},
-{data: { id: 'HLA-H', score: 5, href: "https://www.uniprot.org/uniprot/P01893" }},
-{data: { id: 'HLA-C', score: 5, href: "https://www.uniprot.org/uniprot/P10321" }},
-{data: { id: 'HLA-A', score: 5, href: "https://www.uniprot.org/uniprot/P04439" }},
-{data: { id: 'HLA-E', score: 5, href: "https://www.uniprot.org/uniprot/P13747" }}], 
- edges: [{ data: { source: 'HLA-H', target: 'HLA-E', directed: 'false', weight: 0.561453} },
-{ data: { source: 'HLA-H', target: 'HLA-C', directed: 'false', weight: 0.29441999999999996} },
-{ data: { source: 'HLA-H', target: 'HLA-A', directed: 'false', weight: 0.185937} },
-{ data: { source: 'HLA-H', target: 'EIF2AK3', directed: 'false', weight: 0.184918} },
-{ data: { source: 'HLA-H', target: 'ECEL1', directed: 'false', weight: 0.123797} },
-{ data: { source: 'HLA-E', target: 'ECEL1', directed: 'false', weight: 0.48900200000000005} },
-{ data: { source: 'HLA-E', target: 'HLA-C', directed: 'false', weight: 0.42016899999999996} },
-{ data: { source: 'HLA-E', target: 'EIF2AK3', directed: 'false', weight: 0.305055} },
-{ data: { source: 'HLA-C', target: 'HLA-A', directed: 'false', weight: 0.746871} },
-{ data: { source: 'HLA-C', target: 'ECEL1', directed: 'false', weight: 0.105939} },
-{ data: { source: 'HLA-C', target: 'EIF2AK3', directed: 'false', weight: 0.0364249} },
-{ data: { source: 'EIF2AK3', target: 'ECEL1', directed: 'false', weight: 0.108694} }]},
+elements:{nodes: [{data: { id: 'SERPINB8', score: 5, href: "https://www.uniprot.org/uniprot/P50452" }},
+{data: { id: 'RBKS', score: 5, href: "https://www.uniprot.org/uniprot/Q9H477" }},
+{data: { id: 'CFAP298', score: 5, href: "https://www.uniprot.org/uniprot/P57076" }},
+{data: { id: 'GSS', score: 5, href: "https://www.uniprot.org/uniprot/P48637" }},
+{data: { id: 'TIMM44', score: 5, href: "https://www.uniprot.org/uniprot/O43615" }},
+{data: { id: 'MRI1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BV20" }}], 
+ edges: [{ data: { source: 'CFAP298', target: 'SERPINB8', directed: 'false', weight: 0.743157} },
+{ data: { source: 'CFAP298', target: 'GSS', directed: 'false', weight: 0.0767256} },
+{ data: { source: 'MRI1', target: 'GSS', directed: 'false', weight: 0.814638} },
+{ data: { source: 'MRI1', target: 'SERPINB8', directed: 'false', weight: 0.648859} },
+{ data: { source: 'MRI1', target: 'RBKS', directed: 'false', weight: 0.028545400000000002} },
+{ data: { source: 'RBKS', target: 'TIMM44', directed: 'false', weight: 0.534096} },
+{ data: { source: 'RBKS', target: 'GSS', directed: 'false', weight: 0.5} },
+{ data: { source: 'SERPINB8', target: 'GSS', directed: 'false', weight: 0.7901779999999999} },
+{ data: { source: 'TIMM44', target: 'GSS', directed: 'false', weight: 0.494062} }]},
 
 style: [
     {
@@ -88,7 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.58507
+    Complex Score (from Super.Complex) = 0.53677
     </section>
     </body>
     </html>

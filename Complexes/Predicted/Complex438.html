@@ -29,15 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'AXIN1', score: 5, href: "https://www.uniprot.org/uniprot/A0A0S2Z4M1" }},
-{data: { id: 'GSK3A', score: 5, href: "https://www.uniprot.org/uniprot/A0A024R0L5" }},
-{data: { id: 'FRAT1', score: 5, href: "https://www.uniprot.org/uniprot/Q92837" }},
-{data: { id: 'GSK3B', score: 5, href: "https://www.uniprot.org/uniprot/P49841" }}], 
- edges: [{ data: { source: 'GSK3B', target: 'FRAT1', directed: 'false', weight: 0.971023} },
-{ data: { source: 'GSK3B', target: 'AXIN1', directed: 'false', weight: 0.844852} },
-{ data: { source: 'GSK3B', target: 'GSK3A', directed: 'false', weight: 0.5745439999999999} },
-{ data: { source: 'FRAT1', target: 'GSK3A', directed: 'false', weight: 0.965234} },
-{ data: { source: 'AXIN1', target: 'GSK3A', directed: 'false', weight: 0.577001} }]},
+elements:{nodes: [{data: { id: 'E2F2', score: 5, href: "https://www.uniprot.org/uniprot/Q14209" }},
+{data: { id: 'E2F1', score: 5, href: "https://www.uniprot.org/uniprot/Q01094" }},
+{data: { id: 'E2F5', score: 5, href: "https://www.uniprot.org/uniprot/Q15329" }},
+{data: { id: 'E2F4', score: 5, href: "https://www.uniprot.org/uniprot/Q16254" }},
+{data: { id: 'TFDP2', score: 5, href: "https://www.uniprot.org/uniprot/Q14188" }}], 
+ edges: [{ data: { source: 'E2F2', target: 'TFDP2', directed: 'false', weight: 0.9851129999999999} },
+{ data: { source: 'E2F2', target: 'E2F5', directed: 'false', weight: 0.171414} },
+{ data: { source: 'E2F2', target: 'E2F1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'E2F2', target: 'E2F4', directed: 'false', weight: 0.140692} },
+{ data: { source: 'E2F4', target: 'TFDP2', directed: 'false', weight: 0.862777} },
+{ data: { source: 'E2F4', target: 'E2F5', directed: 'false', weight: 0.140692} },
+{ data: { source: 'E2F4', target: 'E2F1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'E2F5', target: 'TFDP2', directed: 'false', weight: 0.9850540000000001} },
+{ data: { source: 'E2F5', target: 'E2F1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'E2F1', target: 'TFDP2', directed: 'false', weight: 0.9891530000000001} }]},
 
 style: [
     {
@@ -79,7 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76697
+    Complex Score (from Super.Complex) = 0.73911
     </section>
     </body>
     </html>

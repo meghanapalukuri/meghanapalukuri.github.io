@@ -29,14 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ARHGEF12', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZN5" }},
-{data: { id: 'DDI2', score: 5, href: "https://www.uniprot.org/uniprot/Q5TDH0" }},
-{data: { id: 'TRMT6', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJA5" }},
-{data: { id: 'TRMT61A', score: 5, href: "https://www.uniprot.org/uniprot/Q96FX7" }}], 
- edges: [{ data: { source: 'TRMT61A', target: 'TRMT6', directed: 'false', weight: 0.997475} },
-{ data: { source: 'TRMT61A', target: 'ARHGEF12', directed: 'false', weight: 0.764999} },
-{ data: { source: 'ARHGEF12', target: 'TRMT6', directed: 'false', weight: 0.0952688} },
-{ data: { source: 'TRMT6', target: 'DDI2', directed: 'false', weight: 0.8528389999999999} }]},
+elements:{nodes: [{data: { id: 'GRIP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3R0" }},
+{data: { id: 'FNTB', score: 5, href: "https://www.uniprot.org/uniprot/P49356" }},
+{data: { id: 'DYRK1B', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y463" }},
+{data: { id: 'FNTA', score: 5, href: "https://www.uniprot.org/uniprot/P49354" }},
+{data: { id: 'FAM53C', score: 3, href: "https://www.uniprot.org/uniprot/Q9NYF3" }},
+{data: { id: 'DYRK1A', score: 5, href: "https://www.uniprot.org/uniprot/Q13627" }}], 
+ edges: [{ data: { source: 'DYRK1B', target: 'FAM53C', directed: 'false', weight: 0.9829540000000001} },
+{ data: { source: 'DYRK1B', target: 'FNTB', directed: 'false', weight: 0.128057} },
+{ data: { source: 'DYRK1B', target: 'DYRK1A', directed: 'false', weight: 0.11473699999999999} },
+{ data: { source: 'FAM53C', target: 'FNTB', directed: 'false', weight: 0.809684} },
+{ data: { source: 'FAM53C', target: 'DYRK1A', directed: 'false', weight: 0.727957} },
+{ data: { source: 'FNTA', target: 'FNTB', directed: 'false', weight: 0.9737370000000001} },
+{ data: { source: 'FNTA', target: 'GRIP1', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'GRIP1', target: 'FNTB', directed: 'false', weight: 0.963724} },
+{ data: { source: 'FNTB', target: 'DYRK1A', directed: 'false', weight: 0.4795} }]},
 
 style: [
     {
@@ -78,7 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.61897
+    Complex Score (from Super.Complex) = 0.56232
     </section>
     </body>
     </html>

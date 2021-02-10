@@ -29,18 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'HEXIM1', score: 5, href: "https://www.uniprot.org/uniprot/O94992" }},
-{data: { id: 'CDK9', score: 5, href: "https://www.uniprot.org/uniprot/P50750" }},
-{data: { id: 'OSBPL1A', score: 5, href: "https://www.uniprot.org/uniprot/Q9BXW6" }},
-{data: { id: 'HEXIM2', score: 5, href: "https://www.uniprot.org/uniprot/Q96MH2" }},
-{data: { id: 'NSMAF', score: 5, href: "https://www.uniprot.org/uniprot/Q92636" }}], 
- edges: [{ data: { source: 'NSMAF', target: 'HEXIM1', directed: 'false', weight: 0.977773} },
-{ data: { source: 'NSMAF', target: 'HEXIM2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'NSMAF', target: 'OSBPL1A', directed: 'false', weight: 0.140692} },
-{ data: { source: 'OSBPL1A', target: 'HEXIM1', directed: 'false', weight: 0.512482} },
-{ data: { source: 'OSBPL1A', target: 'HEXIM2', directed: 'false', weight: 0.123797} },
-{ data: { source: 'HEXIM2', target: 'HEXIM1', directed: 'false', weight: 0.97964} },
-{ data: { source: 'HEXIM2', target: 'CDK9', directed: 'false', weight: 0.74747} }]},
+elements:{nodes: [{data: { id: 'WNT3', score: 5, href: "https://www.uniprot.org/uniprot/P56703" }},
+{data: { id: 'PPP2R5B', score: 5, href: "https://www.uniprot.org/uniprot/Q15173" }},
+{data: { id: 'WNT3A', score: 5, href: "https://www.uniprot.org/uniprot/P56704" }},
+{data: { id: 'PPP2R5A', score: 5, href: "https://www.uniprot.org/uniprot/Q15172" }}], 
+ edges: [{ data: { source: 'PPP2R5A', target: 'WNT3A', directed: 'false', weight: 0.847476} },
+{ data: { source: 'PPP2R5A', target: 'WNT3', directed: 'false', weight: 0.133451} },
+{ data: { source: 'WNT3', target: 'WNT3A', directed: 'false', weight: 0.9884040000000001} },
+{ data: { source: 'WNT3', target: 'PPP2R5B', directed: 'false', weight: 0.151455} },
+{ data: { source: 'WNT3A', target: 'PPP2R5B', directed: 'false', weight: 0.8632629999999999} }]},
 
 style: [
     {
@@ -82,7 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.62140
+    Complex Score (from Super.Complex) = 0.56357
     </section>
     </body>
     </html>

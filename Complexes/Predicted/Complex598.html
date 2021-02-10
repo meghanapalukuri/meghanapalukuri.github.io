@@ -29,16 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SNX16', score: 5, href: "https://www.uniprot.org/uniprot/P57768" }},
-{data: { id: 'FEZ2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHY8" }},
-{data: { id: 'HEATR5A', score: 3, href: "https://www.uniprot.org/uniprot/Q86XA9" }},
-{data: { id: 'KIF6', score: 4, href: "https://www.uniprot.org/uniprot/Q6ZMV9" }}], 
- edges: [{ data: { source: 'HEATR5A', target: 'KIF6', directed: 'false', weight: 0.9781549999999999} },
-{ data: { source: 'HEATR5A', target: 'FEZ2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'HEATR5A', target: 'SNX16', directed: 'false', weight: 0.151455} },
-{ data: { source: 'KIF6', target: 'SNX16', directed: 'false', weight: 0.8336889999999999} },
-{ data: { source: 'KIF6', target: 'FEZ2', directed: 'false', weight: 0.758065} },
-{ data: { source: 'FEZ2', target: 'SNX16', directed: 'false', weight: 0.133456} }]},
+elements:{nodes: [{data: { id: 'RAD51D', score: 5, href: "https://www.uniprot.org/uniprot/O75771" }},
+{data: { id: 'NDUFAF5', score: 5, href: "https://www.uniprot.org/uniprot/Q5TEU4" }},
+{data: { id: 'XRCC2', score: 5, href: "https://www.uniprot.org/uniprot/O43543" }},
+{data: { id: 'RAD51B', score: 5, href: "https://www.uniprot.org/uniprot/O15315" }}], 
+ edges: [{ data: { source: 'RAD51B', target: 'XRCC2', directed: 'false', weight: 0.755131} },
+{ data: { source: 'RAD51B', target: 'RAD51D', directed: 'false', weight: 0.151455} },
+{ data: { source: 'RAD51D', target: 'XRCC2', directed: 'false', weight: 0.931998} },
+{ data: { source: 'RAD51D', target: 'NDUFAF5', directed: 'false', weight: 0.06392719999999999} },
+{ data: { source: 'NDUFAF5', target: 'XRCC2', directed: 'false', weight: 0.8134819999999999} }]},
 
 style: [
     {
@@ -80,7 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.71376
+    Complex Score (from Super.Complex) = 0.66177
     </section>
     </body>
     </html>

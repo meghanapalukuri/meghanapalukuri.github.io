@@ -29,18 +29,56 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RBFA', score: 5, href: "https://www.uniprot.org/uniprot/Q8N0V3" }},
-{data: { id: 'CD70', score: 5, href: "https://www.uniprot.org/uniprot/P32970" }},
-{data: { id: 'GSDME', score: 5, href: "https://www.uniprot.org/uniprot/O60443" }},
-{data: { id: 'SLC25A51', score: 3, href: "https://www.uniprot.org/uniprot/Q9H1U9" }},
-{data: { id: 'SCN2B', score: 5, href: "https://www.uniprot.org/uniprot/O60939" }}], 
- edges: [{ data: { source: 'RBFA', target: 'SCN2B', directed: 'false', weight: 0.9139950000000001} },
-{ data: { source: 'RBFA', target: 'GSDME', directed: 'false', weight: 0.151455} },
-{ data: { source: 'RBFA', target: 'SLC25A51', directed: 'false', weight: 0.140692} },
-{ data: { source: 'SCN2B', target: 'GSDME', directed: 'false', weight: 0.46312200000000003} },
-{ data: { source: 'SCN2B', target: 'SLC25A51', directed: 'false', weight: 0.44555100000000003} },
-{ data: { source: 'CD70', target: 'SLC25A51', directed: 'false', weight: 0.140692} },
-{ data: { source: 'GSDME', target: 'SLC25A51', directed: 'false', weight: 0.123797} }]},
+elements:{nodes: [{data: { id: 'PPL', score: 5, href: "https://www.uniprot.org/uniprot/O60437" }},
+{data: { id: 'LCN2', score: 5, href: "https://www.uniprot.org/uniprot/P80188" }},
+{data: { id: 'S100A9', score: 5, href: "https://www.uniprot.org/uniprot/P06702" }},
+{data: { id: 'EVPL', score: 5, href: "https://www.uniprot.org/uniprot/Q92817" }},
+{data: { id: 'ANXA1', score: 5, href: "https://www.uniprot.org/uniprot/P04083" }},
+{data: { id: 'CALML5', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZT1" }},
+{data: { id: 'IVL', score: 5, href: "https://www.uniprot.org/uniprot/P07476" }},
+{data: { id: 'S100A8', score: 5, href: "https://www.uniprot.org/uniprot/P05109" }},
+{data: { id: 'GM2A', score: 5, href: "https://www.uniprot.org/uniprot/P17900" }},
+{data: { id: 'TYMP', score: 5, href: "https://www.uniprot.org/uniprot/P19971" }},
+{data: { id: 'TRIM29', score: 5, href: "https://www.uniprot.org/uniprot/Q14134" }}], 
+ edges: [{ data: { source: 'TYMP', target: 'TRIM29', directed: 'false', weight: 0.5830649999999999} },
+{ data: { source: 'TYMP', target: 'EVPL', directed: 'false', weight: 0.5} },
+{ data: { source: 'TYMP', target: 'IVL', directed: 'false', weight: 0.483943} },
+{ data: { source: 'TYMP', target: 'PPL', directed: 'false', weight: 0.439122} },
+{ data: { source: 'TYMP', target: 'ANXA1', directed: 'false', weight: 0.329022} },
+{ data: { source: 'TYMP', target: 'S100A9', directed: 'false', weight: 0.222874} },
+{ data: { source: 'TYMP', target: 'CALML5', directed: 'false', weight: 0.222019} },
+{ data: { source: 'TYMP', target: 'LCN2', directed: 'false', weight: 0.0952728} },
+{ data: { source: 'GM2A', target: 'IVL', directed: 'false', weight: 0.384596} },
+{ data: { source: 'GM2A', target: 'S100A8', directed: 'false', weight: 0.270404} },
+{ data: { source: 'S100A9', target: 'PPL', directed: 'false', weight: 0.643612} },
+{ data: { source: 'S100A9', target: 'EVPL', directed: 'false', weight: 0.45249700000000004} },
+{ data: { source: 'S100A9', target: 'IVL', directed: 'false', weight: 0.417108} },
+{ data: { source: 'S100A9', target: 'CALML5', directed: 'false', weight: 0.287925} },
+{ data: { source: 'S100A9', target: 'TRIM29', directed: 'false', weight: 0.287896} },
+{ data: { source: 'S100A9', target: 'LCN2', directed: 'false', weight: 0.287896} },
+{ data: { source: 'S100A9', target: 'ANXA1', directed: 'false', weight: 0.154077} },
+{ data: { source: 'ANXA1', target: 'PPL', directed: 'false', weight: 0.329022} },
+{ data: { source: 'ANXA1', target: 'EVPL', directed: 'false', weight: 0.25845999999999997} },
+{ data: { source: 'ANXA1', target: 'IVL', directed: 'false', weight: 0.250654} },
+{ data: { source: 'ANXA1', target: 'TRIM29', directed: 'false', weight: 0.200087} },
+{ data: { source: 'ANXA1', target: 'LCN2', directed: 'false', weight: 0.118934} },
+{ data: { source: 'ANXA1', target: 'CALML5', directed: 'false', weight: 0.054964400000000004} },
+{ data: { source: 'TRIM29', target: 'EVPL', directed: 'false', weight: 0.6375390000000001} },
+{ data: { source: 'TRIM29', target: 'PPL', directed: 'false', weight: 0.5830649999999999} },
+{ data: { source: 'TRIM29', target: 'IVL', directed: 'false', weight: 0.41868} },
+{ data: { source: 'TRIM29', target: 'CALML5', directed: 'false', weight: 0.22399999999999998} },
+{ data: { source: 'TRIM29', target: 'LCN2', directed: 'false', weight: 0.102931} },
+{ data: { source: 'LCN2', target: 'IVL', directed: 'false', weight: 0.41868} },
+{ data: { source: 'LCN2', target: 'PPL', directed: 'false', weight: 0.313012} },
+{ data: { source: 'LCN2', target: 'EVPL', directed: 'false', weight: 0.175861} },
+{ data: { source: 'LCN2', target: 'CALML5', directed: 'false', weight: 0.130385} },
+{ data: { source: 'PPL', target: 'IVL', directed: 'false', weight: 0.732052} },
+{ data: { source: 'PPL', target: 'EVPL', directed: 'false', weight: 0.535433} },
+{ data: { source: 'PPL', target: 'CALML5', directed: 'false', weight: 0.378323} },
+{ data: { source: 'EVPL', target: 'IVL', directed: 'false', weight: 0.579203} },
+{ data: { source: 'EVPL', target: 'CALML5', directed: 'false', weight: 0.29496700000000003} },
+{ data: { source: 'CALML5', target: 'IVL', directed: 'false', weight: 0.208054} },
+{ data: { source: 'S100A8', target: 'IVL', directed: 'false', weight: 0.28783800000000004} }]},
 
 style: [
     {
@@ -82,7 +120,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.58124
+    Complex Score (from Super.Complex) = 0.53502
     </section>
     </body>
     </html>

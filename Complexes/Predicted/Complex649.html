@@ -29,12 +29,19 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SLC44A1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WWI5" }},
-{data: { id: 'TSPAN17', score: 5, href: "https://www.uniprot.org/uniprot/Q96FV3" }},
-{data: { id: 'METTL7A', score: 5, href: "https://www.uniprot.org/uniprot/Q9H8H3" }}], 
- edges: [{ data: { source: 'METTL7A', target: 'TSPAN17', directed: 'false', weight: 0.8928950000000001} },
-{ data: { source: 'METTL7A', target: 'SLC44A1', directed: 'false', weight: 0.133451} },
-{ data: { source: 'TSPAN17', target: 'SLC44A1', directed: 'false', weight: 0.375848} }]},
+elements:{nodes: [{data: { id: 'WBP2', score: 5, href: "https://www.uniprot.org/uniprot/Q969T9" }},
+{data: { id: 'CKMT1A', score: 5, href: "https://www.uniprot.org/uniprot/P12532" }},
+{data: { id: 'PGM2L1', score: 5, href: "https://www.uniprot.org/uniprot/Q6PCE3" }},
+{data: { id: 'LYPLA2', score: 5, href: "https://www.uniprot.org/uniprot/O95372" }},
+{data: { id: 'YKT6', score: 5, href: "https://www.uniprot.org/uniprot/O15498" }}], 
+ edges: [{ data: { source: 'CKMT1A', target: 'WBP2', directed: 'false', weight: 0.8346790000000001} },
+{ data: { source: 'CKMT1A', target: 'YKT6', directed: 'false', weight: 0.762228} },
+{ data: { source: 'CKMT1A', target: 'PGM2L1', directed: 'false', weight: 0.6881659999999999} },
+{ data: { source: 'CKMT1A', target: 'LYPLA2', directed: 'false', weight: 0.472233} },
+{ data: { source: 'LYPLA2', target: 'PGM2L1', directed: 'false', weight: 0.346679} },
+{ data: { source: 'LYPLA2', target: 'YKT6', directed: 'false', weight: 0.0163317} },
+{ data: { source: 'LYPLA2', target: 'WBP2', directed: 'false', weight: 0.015373500000000002} },
+{ data: { source: 'WBP2', target: 'PGM2L1', directed: 'false', weight: 0.942366} }]},
 
 style: [
     {
@@ -76,7 +83,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.68485
+    Complex Score (from Super.Complex) = 0.64526
     </section>
     </body>
     </html>

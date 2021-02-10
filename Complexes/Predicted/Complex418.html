@@ -29,12 +29,23 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CDC42', score: 5, href: "https://www.uniprot.org/uniprot/A0A024RAA5" }},
-{data: { id: 'NUDCD2', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVJ2" }},
-{data: { id: 'STMN1', score: 5, href: "https://www.uniprot.org/uniprot/P16949" }}], 
- edges: [{ data: { source: 'CDC42', target: 'STMN1', directed: 'false', weight: 0.872324} },
-{ data: { source: 'CDC42', target: 'NUDCD2', directed: 'false', weight: 0.345175} },
-{ data: { source: 'NUDCD2', target: 'STMN1', directed: 'false', weight: 0.53313} }]},
+elements:{nodes: [{data: { id: 'CSTF2', score: 5, href: "https://www.uniprot.org/uniprot/P33240" }},
+{data: { id: 'CSTF3', score: 5, href: "https://www.uniprot.org/uniprot/Q12996" }},
+{data: { id: 'PCF11', score: 5, href: "https://www.uniprot.org/uniprot/O94913" }},
+{data: { id: 'PAPOLB', score: 4, href: "https://www.uniprot.org/uniprot/Q9NRJ5" }},
+{data: { id: 'PAPOLA', score: 5, href: "https://www.uniprot.org/uniprot/P51003" }},
+{data: { id: 'CSTF2T', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0L4" }}], 
+ edges: [{ data: { source: 'PCF11', target: 'CSTF2', directed: 'false', weight: 0.874484} },
+{ data: { source: 'PCF11', target: 'CSTF2T', directed: 'false', weight: 0.0748257} },
+{ data: { source: 'CSTF2', target: 'CSTF3', directed: 'false', weight: 0.999983} },
+{ data: { source: 'CSTF2', target: 'PAPOLA', directed: 'false', weight: 0.987569} },
+{ data: { source: 'CSTF2', target: 'CSTF2T', directed: 'false', weight: 0.975407} },
+{ data: { source: 'CSTF2', target: 'PAPOLB', directed: 'false', weight: 0.587237} },
+{ data: { source: 'PAPOLB', target: 'CSTF3', directed: 'false', weight: 0.9091450000000001} },
+{ data: { source: 'PAPOLB', target: 'CSTF2T', directed: 'false', weight: 0.382148} },
+{ data: { source: 'PAPOLA', target: 'CSTF3', directed: 'false', weight: 0.9843} },
+{ data: { source: 'PAPOLA', target: 'CSTF2T', directed: 'false', weight: 0.8412959999999999} },
+{ data: { source: 'CSTF2T', target: 'CSTF3', directed: 'false', weight: 0.9995440000000001} }]},
 
 style: [
     {
@@ -76,7 +87,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76801
+    Complex Score (from Super.Complex) = 0.75271
     </section>
     </body>
     </html>

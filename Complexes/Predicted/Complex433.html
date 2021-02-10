@@ -29,16 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FAM9A', score: 5, href: "https://www.uniprot.org/uniprot/Q8IZU1" }},
-{data: { id: 'GOPC', score: 5, href: "https://www.uniprot.org/uniprot/Q9HD26" }},
-{data: { id: 'CAVIN1', score: 5, href: "https://www.uniprot.org/uniprot/Q6NZI2" }},
-{data: { id: 'NAP1L3', score: 2, href: "https://www.uniprot.org/uniprot/Q99457" }}], 
- edges: [{ data: { source: 'CAVIN1', target: 'FAM9A', directed: 'false', weight: 0.9022209999999999} },
-{ data: { source: 'CAVIN1', target: 'NAP1L3', directed: 'false', weight: 0.123797} },
-{ data: { source: 'CAVIN1', target: 'GOPC', directed: 'false', weight: 0.0912673} },
-{ data: { source: 'GOPC', target: 'FAM9A', directed: 'false', weight: 0.807496} },
-{ data: { source: 'GOPC', target: 'NAP1L3', directed: 'false', weight: 0.0844279} },
-{ data: { source: 'NAP1L3', target: 'FAM9A', directed: 'false', weight: 0.7085779999999999} }]},
+elements:{nodes: [{data: { id: 'APOA2', score: 5, href: "https://www.uniprot.org/uniprot/P02652" }},
+{data: { id: 'GDPD1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N9F7" }},
+{data: { id: 'HP', score: 5, href: "https://www.uniprot.org/uniprot/P00738" }},
+{data: { id: 'A1BG', score: 5, href: "https://www.uniprot.org/uniprot/P04217" }},
+{data: { id: 'CFB', score: 5, href: "https://www.uniprot.org/uniprot/P00751" }}], 
+ edges: [{ data: { source: 'A1BG', target: 'GDPD1', directed: 'false', weight: 0.9819829999999999} },
+{ data: { source: 'A1BG', target: 'APOA2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'A1BG', target: 'CFB', directed: 'false', weight: 0.151455} },
+{ data: { source: 'A1BG', target: 'HP', directed: 'false', weight: 0.140692} },
+{ data: { source: 'HP', target: 'GDPD1', directed: 'false', weight: 0.841923} },
+{ data: { source: 'HP', target: 'CFB', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'HP', target: 'APOA2', directed: 'false', weight: 0.140692} },
+{ data: { source: 'GDPD1', target: 'APOA2', directed: 'false', weight: 0.989072} },
+{ data: { source: 'GDPD1', target: 'CFB', directed: 'false', weight: 0.779312} },
+{ data: { source: 'APOA2', target: 'CFB', directed: 'false', weight: 0.151455} }]},
 
 style: [
     {
@@ -80,7 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76730
+    Complex Score (from Super.Complex) = 0.74070
     </section>
     </body>
     </html>

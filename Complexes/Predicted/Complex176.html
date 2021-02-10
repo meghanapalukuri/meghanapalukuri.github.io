@@ -29,21 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PIGU', score: 5, href: "https://www.uniprot.org/uniprot/Q9H490" }},
-{data: { id: 'PIGK', score: 5, href: "https://www.uniprot.org/uniprot/Q92643" }},
-{data: { id: 'PIGT', score: 5, href: "https://www.uniprot.org/uniprot/Q969N2" }},
-{data: { id: 'PIGS', score: 5, href: "https://www.uniprot.org/uniprot/Q96S52" }},
-{data: { id: 'GPAA1', score: 5, href: "https://www.uniprot.org/uniprot/O43292" }}], 
- edges: [{ data: { source: 'PIGS', target: 'GPAA1', directed: 'false', weight: 0.9998879999999999} },
-{ data: { source: 'PIGS', target: 'PIGT', directed: 'false', weight: 0.9992840000000001} },
-{ data: { source: 'PIGS', target: 'PIGK', directed: 'false', weight: 0.9982549999999999} },
-{ data: { source: 'PIGS', target: 'PIGU', directed: 'false', weight: 0.991814} },
-{ data: { source: 'PIGK', target: 'PIGU', directed: 'false', weight: 0.688149} },
-{ data: { source: 'PIGK', target: 'PIGT', directed: 'false', weight: 0.606064} },
-{ data: { source: 'PIGK', target: 'GPAA1', directed: 'false', weight: 0.56912} },
-{ data: { source: 'PIGU', target: 'GPAA1', directed: 'false', weight: 0.420967} },
-{ data: { source: 'PIGU', target: 'PIGT', directed: 'false', weight: 0.25572399999999995} },
-{ data: { source: 'PIGT', target: 'GPAA1', directed: 'false', weight: 0.4114} }]},
+elements:{nodes: [{data: { id: 'LIMD1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UGP4" }},
+{data: { id: 'PPP2R3A', score: 5, href: "https://www.uniprot.org/uniprot/Q06190" }},
+{data: { id: 'LPP', score: 5, href: "https://www.uniprot.org/uniprot/Q93052" }}], 
+ edges: [{ data: { source: 'PPP2R3A', target: 'LPP', directed: 'false', weight: 0.8797780000000001} },
+{ data: { source: 'PPP2R3A', target: 'LIMD1', directed: 'false', weight: 0.8210139999999999} },
+{ data: { source: 'LPP', target: 'LIMD1', directed: 'false', weight: 0.25852800000000004} }]},
 
 style: [
     {
@@ -85,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.82616
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        2 interacting protein(s): <br>PIGS GPAA1
+    Complex Score (from Super.Complex) = 0.77403
     </section>
     </body>
     </html>

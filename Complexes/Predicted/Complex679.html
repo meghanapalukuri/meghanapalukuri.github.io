@@ -29,12 +29,19 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DHDDS', score: 5, href: "https://www.uniprot.org/uniprot/Q86SQ9" }},
-{data: { id: 'NUS1', score: 5, href: "https://www.uniprot.org/uniprot/Q96E22" }},
-{data: { id: 'FOXP4', score: 4, href: "https://www.uniprot.org/uniprot/Q8IVH2" }}], 
- edges: [{ data: { source: 'FOXP4', target: 'DHDDS', directed: 'false', weight: 0.627742} },
-{ data: { source: 'FOXP4', target: 'NUS1', directed: 'false', weight: 0.11730499999999999} },
-{ data: { source: 'DHDDS', target: 'NUS1', directed: 'false', weight: 0.471317} }]},
+elements:{nodes: [{data: { id: 'EML1', score: 5, href: "https://www.uniprot.org/uniprot/O00423" }},
+{data: { id: 'EML4', score: 4, href: "https://www.uniprot.org/uniprot/Q9HC35" }},
+{data: { id: 'EML3', score: 4, href: "https://www.uniprot.org/uniprot/Q32P44" }},
+{data: { id: 'NEK9', score: 5, href: "https://www.uniprot.org/uniprot/Q8TD19" }},
+{data: { id: 'EML2', score: 5, href: "https://www.uniprot.org/uniprot/O95834" }}], 
+ edges: [{ data: { source: 'NEK9', target: 'EML3', directed: 'false', weight: 0.792075} },
+{ data: { source: 'NEK9', target: 'EML1', directed: 'false', weight: 0.74043} },
+{ data: { source: 'NEK9', target: 'EML2', directed: 'false', weight: 0.676632} },
+{ data: { source: 'NEK9', target: 'EML4', directed: 'false', weight: 0.317083} },
+{ data: { source: 'EML4', target: 'EML1', directed: 'false', weight: 0.305667} },
+{ data: { source: 'EML4', target: 'EML2', directed: 'false', weight: 0.271635} },
+{ data: { source: 'EML4', target: 'EML3', directed: 'false', weight: 0.172871} },
+{ data: { source: 'EML2', target: 'EML1', directed: 'false', weight: 0.571014} }]},
 
 style: [
     {
@@ -76,7 +83,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.67852
+    Complex Score (from Super.Complex) = 0.62743
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>NEK9
     </section>
     </body>
     </html>

@@ -29,12 +29,19 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'KIAA0930', score: 2, href: "https://www.uniprot.org/uniprot/Q6ICG6" }},
-{data: { id: 'WRN', score: 5, href: "https://www.uniprot.org/uniprot/Q14191" }},
-{data: { id: 'KLHL11', score: 3, href: "https://www.uniprot.org/uniprot/Q9NVR0" }}], 
- edges: [{ data: { source: 'KIAA0930', target: 'KLHL11', directed: 'false', weight: 0.716437} },
-{ data: { source: 'KIAA0930', target: 'WRN', directed: 'false', weight: 0.43287299999999995} },
-{ data: { source: 'WRN', target: 'KLHL11', directed: 'false', weight: 0.133456} }]},
+elements:{nodes: [{data: { id: 'PIP5K1A', score: 5, href: "https://www.uniprot.org/uniprot/Q99755" }},
+{data: { id: 'RABGGTB', score: 5, href: "https://www.uniprot.org/uniprot/P53611" }},
+{data: { id: 'NRXN3', score: 5, href: "https://www.uniprot.org/uniprot/Q9HDB5" }},
+{data: { id: 'TRIM41', score: 5, href: "https://www.uniprot.org/uniprot/Q8WV44" }},
+{data: { id: 'PIP5K1C', score: 5, href: "https://www.uniprot.org/uniprot/O60331" }}], 
+ edges: [{ data: { source: 'RABGGTB', target: 'PIP5K1C', directed: 'false', weight: 0.746003} },
+{ data: { source: 'RABGGTB', target: 'PIP5K1A', directed: 'false', weight: 0.7422479999999999} },
+{ data: { source: 'PIP5K1C', target: 'PIP5K1A', directed: 'false', weight: 0.8866200000000001} },
+{ data: { source: 'PIP5K1C', target: 'NRXN3', directed: 'false', weight: 0.133456} },
+{ data: { source: 'PIP5K1C', target: 'TRIM41', directed: 'false', weight: 0.123797} },
+{ data: { source: 'TRIM41', target: 'PIP5K1A', directed: 'false', weight: 0.376548} },
+{ data: { source: 'TRIM41', target: 'NRXN3', directed: 'false', weight: 0.123797} },
+{ data: { source: 'NRXN3', target: 'PIP5K1A', directed: 'false', weight: 0.557092} }]},
 
 style: [
     {
@@ -76,7 +83,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.68216
+    Complex Score (from Super.Complex) = 0.63451
     </section>
     </body>
     </html>

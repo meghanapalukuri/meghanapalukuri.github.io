@@ -29,16 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CEP192', score: 5, href: "https://www.uniprot.org/uniprot/Q8TEP8" }},
-{data: { id: 'SNX18', score: 5, href: "https://www.uniprot.org/uniprot/Q96RF0" }},
-{data: { id: 'AURKA', score: 5, href: "https://www.uniprot.org/uniprot/O14965" }},
-{data: { id: 'ITPKC', score: 5, href: "https://www.uniprot.org/uniprot/Q96DU7" }}], 
- edges: [{ data: { source: 'ITPKC', target: 'AURKA', directed: 'false', weight: 0.975} },
-{ data: { source: 'ITPKC', target: 'CEP192', directed: 'false', weight: 0.151455} },
-{ data: { source: 'ITPKC', target: 'SNX18', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SNX18', target: 'AURKA', directed: 'false', weight: 0.695968} },
-{ data: { source: 'SNX18', target: 'CEP192', directed: 'false', weight: 0.133456} },
-{ data: { source: 'AURKA', target: 'CEP192', directed: 'false', weight: 0.8437} }]},
+elements:{nodes: [{data: { id: 'PRAMEF15', score: 0 }},
+{data: { id: 'PRAMEF4', score: 2, href: "https://www.uniprot.org/uniprot/O60810" }},
+{data: { id: 'PRAMEF5', score: 2, href: "https://www.uniprot.org/uniprot/Q5TYX0" }}], 
+ edges: [{ data: { source: 'PRAMEF15', target: 'PRAMEF5', directed: 'false', weight: 0.9634149999999999} },
+{ data: { source: 'PRAMEF15', target: 'PRAMEF4', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PRAMEF5', target: 'PRAMEF4', directed: 'false', weight: 0.987375} }]},
 
 style: [
     {
@@ -80,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77367
+    Complex Score (from Super.Complex) = 0.76717
     </section>
     </body>
     </html>

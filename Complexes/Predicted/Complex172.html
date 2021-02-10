@@ -29,21 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NELFA', score: 5, href: "https://www.uniprot.org/uniprot/Q9H3P2" }},
-{data: { id: 'IGHMBP2', score: 5, href: "https://www.uniprot.org/uniprot/P38935" }},
-{data: { id: 'NELFCD', score: 5, href: "https://www.uniprot.org/uniprot/Q8IXH7" }},
-{data: { id: 'NELFE', score: 5, href: "https://www.uniprot.org/uniprot/P18615" }},
-{data: { id: 'NELFB', score: 5, href: "https://www.uniprot.org/uniprot/Q8WX92" }}], 
- edges: [{ data: { source: 'NELFE', target: 'NELFA', directed: 'false', weight: 0.999951} },
-{ data: { source: 'NELFE', target: 'NELFB', directed: 'false', weight: 0.999934} },
-{ data: { source: 'NELFE', target: 'NELFCD', directed: 'false', weight: 0.9759110000000001} },
-{ data: { source: 'NELFE', target: 'IGHMBP2', directed: 'false', weight: 0.79956} },
-{ data: { source: 'NELFA', target: 'NELFB', directed: 'false', weight: 0.967915} },
-{ data: { source: 'NELFA', target: 'NELFCD', directed: 'false', weight: 0.71812} },
-{ data: { source: 'NELFA', target: 'IGHMBP2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'NELFB', target: 'NELFCD', directed: 'false', weight: 0.975941} },
-{ data: { source: 'NELFB', target: 'IGHMBP2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'IGHMBP2', target: 'NELFCD', directed: 'false', weight: 0.171414} }]},
+elements:{nodes: [{data: { id: 'FPGS', score: 5, href: "https://www.uniprot.org/uniprot/Q05932" }},
+{data: { id: 'PALM2', score: 3, href: "https://www.uniprot.org/uniprot/Q8IXS6" }},
+{data: { id: 'ANK3', score: 5, href: "https://www.uniprot.org/uniprot/Q12955" }}], 
+ edges: [{ data: { source: 'ANK3', target: 'PALM2', directed: 'false', weight: 0.9507110000000001} },
+{ data: { source: 'ANK3', target: 'FPGS', directed: 'false', weight: 0.114755} },
+{ data: { source: 'FPGS', target: 'PALM2', directed: 'false', weight: 0.9201590000000001} }]},
 
 style: [
     {
@@ -85,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.83241
+    Complex Score (from Super.Complex) = 0.77426
     </section>
     </body>
     </html>

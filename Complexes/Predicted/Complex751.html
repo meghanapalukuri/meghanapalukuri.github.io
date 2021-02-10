@@ -29,12 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'HLA-DMB', score: 5, href: "https://www.uniprot.org/uniprot/P28068" }},
-{data: { id: 'HLA-DRA', score: 5, href: "https://www.uniprot.org/uniprot/P01903" }},
-{data: { id: 'KLK4', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5K2" }}], 
- edges: [{ data: { source: 'KLK4', target: 'HLA-DRA', directed: 'false', weight: 0.345528} },
-{ data: { source: 'KLK4', target: 'HLA-DMB', directed: 'false', weight: 0.133456} },
-{ data: { source: 'HLA-DMB', target: 'HLA-DRA', directed: 'false', weight: 0.28668699999999997} }]},
+elements:{nodes: [{data: { id: 'SKA2', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVK7" }},
+{data: { id: 'RALYL', score: 5, href: "https://www.uniprot.org/uniprot/Q86SE5" }},
+{data: { id: 'SKA1', score: 5, href: "https://www.uniprot.org/uniprot/Q96BD8" }}], 
+ edges: [{ data: { source: 'RALYL', target: 'SKA2', directed: 'false', weight: 0.5857220000000001} },
+{ data: { source: 'SKA1', target: 'SKA2', directed: 'false', weight: 0.9944049999999999} }]},
 
 style: [
     {
@@ -76,7 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65909
+    Complex Score (from Super.Complex) = 0.58856
     </section>
     </body>
     </html>

@@ -29,18 +29,46 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MAD1L1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6D9" }},
-{data: { id: 'EPM2AIP1', score: 5, href: "https://www.uniprot.org/uniprot/Q7L775" }},
-{data: { id: 'BAG5', score: 5, href: "https://www.uniprot.org/uniprot/Q9UL15" }},
-{data: { id: 'MAD2L1BP', score: 5, href: "https://www.uniprot.org/uniprot/Q15013" }},
-{data: { id: 'MAD2L1', score: 5, href: "https://www.uniprot.org/uniprot/Q13257" }}], 
- edges: [{ data: { source: 'EPM2AIP1', target: 'MAD2L1', directed: 'false', weight: 0.579746} },
-{ data: { source: 'EPM2AIP1', target: 'MAD2L1BP', directed: 'false', weight: 0.144297} },
-{ data: { source: 'EPM2AIP1', target: 'MAD1L1', directed: 'false', weight: 0.133179} },
-{ data: { source: 'MAD2L1', target: 'MAD2L1BP', directed: 'false', weight: 0.941802} },
-{ data: { source: 'MAD2L1', target: 'MAD1L1', directed: 'false', weight: 0.64625} },
-{ data: { source: 'MAD1L1', target: 'BAG5', directed: 'false', weight: 0.806249} },
-{ data: { source: 'MAD1L1', target: 'MAD2L1BP', directed: 'false', weight: 0.715875} }]},
+elements:{nodes: [{data: { id: 'TPRKB', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3C4" }},
+{data: { id: 'CCDC28B', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUN5" }},
+{data: { id: 'TLN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y490" }},
+{data: { id: 'TP53RK', score: 5, href: "https://www.uniprot.org/uniprot/Q96S44" }},
+{data: { id: 'MFAP3', score: 4, href: "https://www.uniprot.org/uniprot/P55082" }},
+{data: { id: 'GLRX3', score: 5, href: "https://www.uniprot.org/uniprot/O76003" }},
+{data: { id: 'LAGE3', score: 5, href: "https://www.uniprot.org/uniprot/Q14657" }},
+{data: { id: 'OSGEP', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPF4" }},
+{data: { id: 'GON7', score: 4, href: "https://www.uniprot.org/uniprot/Q9BXV9" }},
+{data: { id: 'HYKK', score: 5, href: "https://www.uniprot.org/uniprot/A2RU49" }}], 
+ edges: [{ data: { source: 'TPRKB', target: 'OSGEP', directed: 'false', weight: 0.999265} },
+{ data: { source: 'TPRKB', target: 'TP53RK', directed: 'false', weight: 0.9451139999999999} },
+{ data: { source: 'TPRKB', target: 'LAGE3', directed: 'false', weight: 0.8092739999999999} },
+{ data: { source: 'TPRKB', target: 'TLN1', directed: 'false', weight: 0.61811} },
+{ data: { source: 'TPRKB', target: 'GON7', directed: 'false', weight: 0.48676800000000003} },
+{ data: { source: 'TPRKB', target: 'MFAP3', directed: 'false', weight: 0.165074} },
+{ data: { source: 'TPRKB', target: 'HYKK', directed: 'false', weight: 0.128057} },
+{ data: { source: 'TPRKB', target: 'CCDC28B', directed: 'false', weight: 0.112499} },
+{ data: { source: 'TPRKB', target: 'GLRX3', directed: 'false', weight: 0.0151101} },
+{ data: { source: 'HYKK', target: 'OSGEP', directed: 'false', weight: 0.438271} },
+{ data: { source: 'HYKK', target: 'GON7', directed: 'false', weight: 0.151455} },
+{ data: { source: 'HYKK', target: 'CCDC28B', directed: 'false', weight: 0.151455} },
+{ data: { source: 'HYKK', target: 'LAGE3', directed: 'false', weight: 0.128057} },
+{ data: { source: 'HYKK', target: 'TP53RK', directed: 'false', weight: 0.101714} },
+{ data: { source: 'CCDC28B', target: 'OSGEP', directed: 'false', weight: 0.399052} },
+{ data: { source: 'CCDC28B', target: 'GON7', directed: 'false', weight: 0.133456} },
+{ data: { source: 'CCDC28B', target: 'LAGE3', directed: 'false', weight: 0.112499} },
+{ data: { source: 'CCDC28B', target: 'TP53RK', directed: 'false', weight: 0.08909589999999999} },
+{ data: { source: 'LAGE3', target: 'OSGEP', directed: 'false', weight: 0.999994} },
+{ data: { source: 'LAGE3', target: 'TP53RK', directed: 'false', weight: 0.7510859999999999} },
+{ data: { source: 'LAGE3', target: 'GON7', directed: 'false', weight: 0.48676800000000003} },
+{ data: { source: 'LAGE3', target: 'MFAP3', directed: 'false', weight: 0.165074} },
+{ data: { source: 'OSGEP', target: 'GON7', directed: 'false', weight: 0.999532} },
+{ data: { source: 'OSGEP', target: 'TP53RK', directed: 'false', weight: 0.9993700000000001} },
+{ data: { source: 'OSGEP', target: 'GLRX3', directed: 'false', weight: 0.6410399999999999} },
+{ data: { source: 'OSGEP', target: 'MFAP3', directed: 'false', weight: 0.609743} },
+{ data: { source: 'GLRX3', target: 'TP53RK', directed: 'false', weight: 0.9433379999999999} },
+{ data: { source: 'MFAP3', target: 'GON7', directed: 'false', weight: 0.165074} },
+{ data: { source: 'MFAP3', target: 'TP53RK', directed: 'false', weight: 0.165074} },
+{ data: { source: 'TP53RK', target: 'GON7', directed: 'false', weight: 0.8960110000000001} }]},
 
 style: [
     {
@@ -82,12 +110,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.63358
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>BAG5
+    Complex Score (from Super.Complex) = 0.57113
     </section>
     </body>
     </html>

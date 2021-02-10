@@ -29,12 +29,24 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ATF6', score: 5, href: "https://www.uniprot.org/uniprot/P18850" }},
-{data: { id: 'TTC17', score: 5, href: "https://www.uniprot.org/uniprot/Q96AE7" }},
-{data: { id: 'TMEM131', score: 3, href: "https://www.uniprot.org/uniprot/Q92545" }}], 
- edges: [{ data: { source: 'TTC17', target: 'TMEM131', directed: 'false', weight: 0.399592} },
-{ data: { source: 'TTC17', target: 'ATF6', directed: 'false', weight: 0.0741446} },
-{ data: { source: 'ATF6', target: 'TMEM131', directed: 'false', weight: 0.281457} }]},
+elements:{nodes: [{data: { id: 'HLA-C', score: 5, href: "https://www.uniprot.org/uniprot/P10321" }},
+{data: { id: 'HLA-A', score: 5, href: "https://www.uniprot.org/uniprot/P04439" }},
+{data: { id: 'HLA-H', score: 5, href: "https://www.uniprot.org/uniprot/P01893" }},
+{data: { id: 'ECEL1', score: 5, href: "https://www.uniprot.org/uniprot/O95672" }},
+{data: { id: 'HLA-E', score: 5, href: "https://www.uniprot.org/uniprot/P13747" }},
+{data: { id: 'EIF2AK3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZJ5" }}], 
+ edges: [{ data: { source: 'HLA-C', target: 'HLA-A', directed: 'false', weight: 0.746871} },
+{ data: { source: 'HLA-C', target: 'HLA-E', directed: 'false', weight: 0.42016899999999996} },
+{ data: { source: 'HLA-C', target: 'HLA-H', directed: 'false', weight: 0.29441999999999996} },
+{ data: { source: 'HLA-C', target: 'ECEL1', directed: 'false', weight: 0.105939} },
+{ data: { source: 'HLA-C', target: 'EIF2AK3', directed: 'false', weight: 0.0364249} },
+{ data: { source: 'HLA-A', target: 'HLA-H', directed: 'false', weight: 0.185937} },
+{ data: { source: 'HLA-H', target: 'HLA-E', directed: 'false', weight: 0.561453} },
+{ data: { source: 'HLA-H', target: 'EIF2AK3', directed: 'false', weight: 0.184918} },
+{ data: { source: 'HLA-H', target: 'ECEL1', directed: 'false', weight: 0.123797} },
+{ data: { source: 'EIF2AK3', target: 'HLA-E', directed: 'false', weight: 0.305055} },
+{ data: { source: 'EIF2AK3', target: 'ECEL1', directed: 'false', weight: 0.108694} },
+{ data: { source: 'HLA-E', target: 'ECEL1', directed: 'false', weight: 0.48900200000000005} }]},
 
 style: [
     {
@@ -76,7 +88,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65702
+    Complex Score (from Super.Complex) = 0.58507
     </section>
     </body>
     </html>

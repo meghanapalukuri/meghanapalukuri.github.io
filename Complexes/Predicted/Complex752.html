@@ -29,15 +29,29 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TEFM', score: 5, href: "https://www.uniprot.org/uniprot/Q96QE5" }},
-{data: { id: 'KBTBD6', score: 3, href: "https://www.uniprot.org/uniprot/Q86V97" }},
-{data: { id: 'KBTBD7', score: 4, href: "https://www.uniprot.org/uniprot/Q8WVZ9" }},
-{data: { id: 'DOK4', score: 5, href: "https://www.uniprot.org/uniprot/Q8TEW6" }}], 
- edges: [{ data: { source: 'KBTBD6', target: 'KBTBD7', directed: 'false', weight: 0.9526680000000001} },
-{ data: { source: 'KBTBD6', target: 'DOK4', directed: 'false', weight: 0.326046} },
-{ data: { source: 'KBTBD6', target: 'TEFM', directed: 'false', weight: 0.115879} },
-{ data: { source: 'TEFM', target: 'KBTBD7', directed: 'false', weight: 0.907148} },
-{ data: { source: 'DOK4', target: 'KBTBD7', directed: 'false', weight: 0.38000700000000004} }]},
+elements:{nodes: [{data: { id: 'CHST14', score: 5, href: "https://www.uniprot.org/uniprot/Q8NCH0" }},
+{data: { id: 'DIPK1B', score: 3, href: "https://www.uniprot.org/uniprot/Q5VUD6" }},
+{data: { id: 'NETO2', score: 4, href: "https://www.uniprot.org/uniprot/Q8NC67" }},
+{data: { id: 'HLA-DRB1', score: 5, href: "https://www.uniprot.org/uniprot/P01911" }},
+{data: { id: 'TMEM30A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NV96" }},
+{data: { id: 'IMPAD1', score: 3, href: "https://www.uniprot.org/uniprot/A0A024R7W0" }},
+{data: { id: 'PGAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q75T13" }}], 
+ edges: [{ data: { source: 'HLA-DRB1', target: 'TMEM30A', directed: 'false', weight: 0.470394} },
+{ data: { source: 'HLA-DRB1', target: 'NETO2', directed: 'false', weight: 0.365568} },
+{ data: { source: 'HLA-DRB1', target: 'PGAP1', directed: 'false', weight: 0.35996500000000003} },
+{ data: { source: 'CHST14', target: 'PGAP1', directed: 'false', weight: 0.41782600000000003} },
+{ data: { source: 'CHST14', target: 'TMEM30A', directed: 'false', weight: 0.26962800000000003} },
+{ data: { source: 'CHST14', target: 'DIPK1B', directed: 'false', weight: 0.180576} },
+{ data: { source: 'CHST14', target: 'NETO2', directed: 'false', weight: 0.170156} },
+{ data: { source: 'CHST14', target: 'IMPAD1', directed: 'false', weight: 0.100271} },
+{ data: { source: 'PGAP1', target: 'TMEM30A', directed: 'false', weight: 0.780148} },
+{ data: { source: 'PGAP1', target: 'IMPAD1', directed: 'false', weight: 0.34665999999999997} },
+{ data: { source: 'PGAP1', target: 'NETO2', directed: 'false', weight: 0.299547} },
+{ data: { source: 'DIPK1B', target: 'NETO2', directed: 'false', weight: 0.49374300000000004} },
+{ data: { source: 'DIPK1B', target: 'IMPAD1', directed: 'false', weight: 0.276586} },
+{ data: { source: 'NETO2', target: 'TMEM30A', directed: 'false', weight: 0.400802} },
+{ data: { source: 'NETO2', target: 'IMPAD1', directed: 'false', weight: 0.143488} },
+{ data: { source: 'TMEM30A', target: 'IMPAD1', directed: 'false', weight: 0.154798} }]},
 
 style: [
     {
@@ -79,7 +93,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65899
+    Complex Score (from Super.Complex) = 0.58821
     </section>
     </body>
     </html>

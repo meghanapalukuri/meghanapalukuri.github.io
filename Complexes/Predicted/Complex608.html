@@ -29,16 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RNF31', score: 5, href: "https://www.uniprot.org/uniprot/Q96EP0" }},
-{data: { id: 'SHARPIN', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0F6" }},
-{data: { id: 'LIPF', score: 5, href: "https://www.uniprot.org/uniprot/P07098" }},
-{data: { id: 'LRSAM1', score: 5, href: "https://www.uniprot.org/uniprot/Q6UWE0" }}], 
- edges: [{ data: { source: 'RNF31', target: 'LIPF', directed: 'false', weight: 0.813453} },
-{ data: { source: 'RNF31', target: 'SHARPIN', directed: 'false', weight: 0.222827} },
-{ data: { source: 'RNF31', target: 'LRSAM1', directed: 'false', weight: 0.108694} },
-{ data: { source: 'LRSAM1', target: 'LIPF', directed: 'false', weight: 0.9687459999999999} },
-{ data: { source: 'LRSAM1', target: 'SHARPIN', directed: 'false', weight: 0.133456} },
-{ data: { source: 'LIPF', target: 'SHARPIN', directed: 'false', weight: 0.9741709999999999} }]},
+elements:{nodes: [{data: { id: 'DOK4', score: 5, href: "https://www.uniprot.org/uniprot/Q8TEW6" }},
+{data: { id: 'TEFM', score: 5, href: "https://www.uniprot.org/uniprot/Q96QE5" }},
+{data: { id: 'KBTBD6', score: 3, href: "https://www.uniprot.org/uniprot/Q86V97" }},
+{data: { id: 'KBTBD7', score: 4, href: "https://www.uniprot.org/uniprot/Q8WVZ9" }}], 
+ edges: [{ data: { source: 'KBTBD7', target: 'KBTBD6', directed: 'false', weight: 0.9526680000000001} },
+{ data: { source: 'KBTBD7', target: 'TEFM', directed: 'false', weight: 0.907148} },
+{ data: { source: 'KBTBD7', target: 'DOK4', directed: 'false', weight: 0.38000700000000004} },
+{ data: { source: 'KBTBD6', target: 'DOK4', directed: 'false', weight: 0.326046} },
+{ data: { source: 'KBTBD6', target: 'TEFM', directed: 'false', weight: 0.115879} }]},
 
 style: [
     {
@@ -80,7 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.70840
+    Complex Score (from Super.Complex) = 0.65899
     </section>
     </body>
     </html>

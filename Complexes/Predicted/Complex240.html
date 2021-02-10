@@ -29,12 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TIMM8B', score: 4, href: "https://www.uniprot.org/uniprot/Q9Y5J9" }},
-{data: { id: 'TIMM13', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5L4" }},
-{data: { id: 'PDYN', score: 5, href: "https://www.uniprot.org/uniprot/P01213" }}], 
- edges: [{ data: { source: 'TIMM8B', target: 'TIMM13', directed: 'false', weight: 0.9992} },
-{ data: { source: 'TIMM8B', target: 'PDYN', directed: 'false', weight: 0.700897} },
-{ data: { source: 'PDYN', target: 'TIMM13', directed: 'false', weight: 0.465238} }]},
+elements:{nodes: [{data: { id: 'CSPG5', score: 5, href: "https://www.uniprot.org/uniprot/O95196" }},
+{data: { id: 'ANKRD13C', score: 5, href: "https://www.uniprot.org/uniprot/Q8N6S4" }},
+{data: { id: 'LAPTM4A', score: 4, href: "https://www.uniprot.org/uniprot/Q15012" }},
+{data: { id: 'DLK1', score: 5, href: "https://www.uniprot.org/uniprot/P80370" }}], 
+ edges: [{ data: { source: 'CSPG5', target: 'DLK1', directed: 'false', weight: 0.625749} },
+{ data: { source: 'CSPG5', target: 'LAPTM4A', directed: 'false', weight: 0.171414} },
+{ data: { source: 'CSPG5', target: 'ANKRD13C', directed: 'false', weight: 0.151455} },
+{ data: { source: 'DLK1', target: 'LAPTM4A', directed: 'false', weight: 0.885993} },
+{ data: { source: 'DLK1', target: 'ANKRD13C', directed: 'false', weight: 0.873397} },
+{ data: { source: 'LAPTM4A', target: 'ANKRD13C', directed: 'false', weight: 0.151455} }]},
 
 style: [
     {
@@ -76,12 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.78447
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>TIMM8B
+    Complex Score (from Super.Complex) = 0.77069
     </section>
     </body>
     </html>

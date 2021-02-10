@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'BIN3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NQY0" }},
-{data: { id: 'DNMBP', score: 5, href: "https://www.uniprot.org/uniprot/Q6XZF7" }},
-{data: { id: 'ARHGEF37', score: 2, href: "https://www.uniprot.org/uniprot/A1IGU5" }},
-{data: { id: 'PICK1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NRD5" }}], 
- edges: [{ data: { source: 'BIN3', target: 'ARHGEF37', directed: 'false', weight: 0.9784430000000001} },
-{ data: { source: 'BIN3', target: 'DNMBP', directed: 'false', weight: 0.953823} },
-{ data: { source: 'BIN3', target: 'PICK1', directed: 'false', weight: 0.589512} },
-{ data: { source: 'ARHGEF37', target: 'DNMBP', directed: 'false', weight: 0.151455} },
-{ data: { source: 'ARHGEF37', target: 'PICK1', directed: 'false', weight: 0.133451} },
-{ data: { source: 'DNMBP', target: 'PICK1', directed: 'false', weight: 0.117318} }]},
+elements:{nodes: [{data: { id: 'TRAF3IP1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDR0" }},
+{data: { id: 'HSBP1', score: 5, href: "https://www.uniprot.org/uniprot/O75506" }},
+{data: { id: 'IFT57', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWB7" }},
+{data: { id: 'EHBP1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NDI1" }}], 
+ edges: [{ data: { source: 'IFT57', target: 'TRAF3IP1', directed: 'false', weight: 0.9803719999999999} },
+{ data: { source: 'IFT57', target: 'HSBP1', directed: 'false', weight: 0.803006} },
+{ data: { source: 'IFT57', target: 'EHBP1', directed: 'false', weight: 0.487259} },
+{ data: { source: 'HSBP1', target: 'TRAF3IP1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'HSBP1', target: 'EHBP1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'TRAF3IP1', target: 'EHBP1', directed: 'false', weight: 0.171414} }]},
 
 style: [
     {
@@ -80,7 +80,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77403
+    Complex Score (from Super.Complex) = 0.76776
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>HSBP1
     </section>
     </body>
     </html>

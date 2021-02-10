@@ -29,12 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NDUFAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y375" }},
-{data: { id: 'ECSIT', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQ95" }},
-{data: { id: 'ACAD9', score: 5, href: "https://www.uniprot.org/uniprot/Q9H845" }}], 
- edges: [{ data: { source: 'ECSIT', target: 'NDUFAF1', directed: 'false', weight: 0.985202} },
-{ data: { source: 'ECSIT', target: 'ACAD9', directed: 'false', weight: 0.979089} },
-{ data: { source: 'NDUFAF1', target: 'ACAD9', directed: 'false', weight: 0.9036569999999999} }]},
+elements:{nodes: [{data: { id: 'FKBP6', score: 5, href: "https://www.uniprot.org/uniprot/O75344" }},
+{data: { id: 'EEF2K', score: 5, href: "https://www.uniprot.org/uniprot/O00418" }},
+{data: { id: 'AGAP3', score: 5, href: "https://www.uniprot.org/uniprot/Q96P47" }},
+{data: { id: 'USP19', score: 5, href: "https://www.uniprot.org/uniprot/O94966" }}], 
+ edges: [{ data: { source: 'AGAP3', target: 'FKBP6', directed: 'false', weight: 0.915108} },
+{ data: { source: 'AGAP3', target: 'EEF2K', directed: 'false', weight: 0.151455} },
+{ data: { source: 'AGAP3', target: 'USP19', directed: 'false', weight: 0.098638} },
+{ data: { source: 'FKBP6', target: 'EEF2K', directed: 'false', weight: 0.978325} },
+{ data: { source: 'FKBP6', target: 'USP19', directed: 'false', weight: 0.648928} },
+{ data: { source: 'USP19', target: 'EEF2K', directed: 'false', weight: 0.11248399999999999} }]},
 
 style: [
     {
@@ -76,12 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.81078
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        3 interacting protein(s): <br>NDUFAF1 ECSIT ACAD9
+    Complex Score (from Super.Complex) = 0.77352
     </section>
     </body>
     </html>

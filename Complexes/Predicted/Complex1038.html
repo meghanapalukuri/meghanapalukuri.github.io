@@ -29,18 +29,41 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CD2AP', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5K6" }},
-{data: { id: 'ERC2', score: 4, href: "https://www.uniprot.org/uniprot/O15083" }},
-{data: { id: 'DGUOK', score: 5, href: "https://www.uniprot.org/uniprot/Q16854" }},
-{data: { id: 'ERC1', score: 5, href: "https://www.uniprot.org/uniprot/Q8IUD2" }},
-{data: { id: 'RNF10', score: 5, href: "https://www.uniprot.org/uniprot/Q8N5U6" }}], 
- edges: [{ data: { source: 'ERC2', target: 'CD2AP', directed: 'false', weight: 0.5} },
-{ data: { source: 'ERC2', target: 'DGUOK', directed: 'false', weight: 0.356491} },
-{ data: { source: 'ERC2', target: 'RNF10', directed: 'false', weight: 0.144297} },
-{ data: { source: 'ERC2', target: 'ERC1', directed: 'false', weight: 0.09888419999999999} },
-{ data: { source: 'CD2AP', target: 'RNF10', directed: 'false', weight: 0.564099} },
-{ data: { source: 'CD2AP', target: 'ERC1', directed: 'false', weight: 0.288825} },
-{ data: { source: 'RNF10', target: 'ERC1', directed: 'false', weight: 0.0856923} }]},
+elements:{nodes: [{data: { id: 'KIF5B', score: 5, href: "https://www.uniprot.org/uniprot/P33176" }},
+{data: { id: 'KIF5C', score: 5, href: "https://www.uniprot.org/uniprot/O60282" }},
+{data: { id: 'CALB2', score: 4, href: "https://www.uniprot.org/uniprot/P22676" }},
+{data: { id: 'HPCA', score: 5, href: "https://www.uniprot.org/uniprot/P84074" }},
+{data: { id: 'KLC2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0B6" }},
+{data: { id: 'KLC1', score: 5, href: "https://www.uniprot.org/uniprot/Q07866" }},
+{data: { id: 'L1CAM', score: 5, href: "https://www.uniprot.org/uniprot/P32004" }},
+{data: { id: 'KLC4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NSK0" }},
+{data: { id: 'CDH13', score: 5, href: "https://www.uniprot.org/uniprot/P55290" }},
+{data: { id: 'KIF5A', score: 5, href: "https://www.uniprot.org/uniprot/Q12840" }}], 
+ edges: [{ data: { source: 'CDH13', target: 'CALB2', directed: 'false', weight: 0.714739} },
+{ data: { source: 'CDH13', target: 'L1CAM', directed: 'false', weight: 0.714739} },
+{ data: { source: 'CDH13', target: 'HPCA', directed: 'false', weight: 0.714739} },
+{ data: { source: 'CDH13', target: 'KIF5C', directed: 'false', weight: 0.397095} },
+{ data: { source: 'KIF5C', target: 'KLC1', directed: 'false', weight: 0.9982190000000001} },
+{ data: { source: 'KIF5C', target: 'KLC4', directed: 'false', weight: 0.99711} },
+{ data: { source: 'KIF5C', target: 'KLC2', directed: 'false', weight: 0.9941530000000001} },
+{ data: { source: 'KIF5C', target: 'KIF5B', directed: 'false', weight: 0.5724020000000001} },
+{ data: { source: 'KIF5C', target: 'CALB2', directed: 'false', weight: 0.397095} },
+{ data: { source: 'KIF5C', target: 'L1CAM', directed: 'false', weight: 0.397095} },
+{ data: { source: 'KIF5C', target: 'HPCA', directed: 'false', weight: 0.397095} },
+{ data: { source: 'KIF5C', target: 'KIF5A', directed: 'false', weight: 0.270404} },
+{ data: { source: 'L1CAM', target: 'CALB2', directed: 'false', weight: 0.714739} },
+{ data: { source: 'L1CAM', target: 'HPCA', directed: 'false', weight: 0.714739} },
+{ data: { source: 'KIF5A', target: 'KLC1', directed: 'false', weight: 0.9993780000000001} },
+{ data: { source: 'KIF5A', target: 'KLC4', directed: 'false', weight: 0.998006} },
+{ data: { source: 'KIF5A', target: 'KIF5B', directed: 'false', weight: 0.483943} },
+{ data: { source: 'KIF5A', target: 'KLC2', directed: 'false', weight: 0.35689299999999996} },
+{ data: { source: 'KLC4', target: 'KIF5B', directed: 'false', weight: 0.9996940000000001} },
+{ data: { source: 'KLC4', target: 'KLC2', directed: 'false', weight: 0.996338} },
+{ data: { source: 'KLC4', target: 'KLC1', directed: 'false', weight: 0.9859629999999999} },
+{ data: { source: 'KLC1', target: 'KIF5B', directed: 'false', weight: 0.998042} },
+{ data: { source: 'KLC1', target: 'KLC2', directed: 'false', weight: 0.974507} },
+{ data: { source: 'CALB2', target: 'HPCA', directed: 'false', weight: 0.714739} },
+{ data: { source: 'KIF5B', target: 'KLC2', directed: 'false', weight: 0.993238} }]},
 
 style: [
     {
@@ -82,12 +105,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.56327
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>ERC1
+    Complex Score (from Super.Complex) = 0.50737
     </section>
     </body>
     </html>

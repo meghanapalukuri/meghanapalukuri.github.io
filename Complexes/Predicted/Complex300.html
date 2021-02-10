@@ -29,16 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GGNBP2', score: 4, href: "https://www.uniprot.org/uniprot/Q9H3C7" }},
-{data: { id: 'LTBP1', score: 5, href: "https://www.uniprot.org/uniprot/Q14766" }},
-{data: { id: 'FBN1', score: 5, href: "https://www.uniprot.org/uniprot/P35555" }},
-{data: { id: 'ZFP41', score: 4, href: "https://www.uniprot.org/uniprot/Q8N8Y5" }}], 
- edges: [{ data: { source: 'FBN1', target: 'ZFP41', directed: 'false', weight: 0.927283} },
-{ data: { source: 'FBN1', target: 'GGNBP2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'FBN1', target: 'LTBP1', directed: 'false', weight: 0.133451} },
-{ data: { source: 'LTBP1', target: 'ZFP41', directed: 'false', weight: 0.796165} },
-{ data: { source: 'LTBP1', target: 'GGNBP2', directed: 'false', weight: 0.117318} },
-{ data: { source: 'ZFP41', target: 'GGNBP2', directed: 'false', weight: 0.8305790000000001} }]},
+elements:{nodes: [{data: { id: 'ALS2', score: 5, href: "https://www.uniprot.org/uniprot/Q96Q42" }},
+{data: { id: 'DNAAF2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVR5" }},
+{data: { id: 'DPP6', score: 5, href: "https://www.uniprot.org/uniprot/P42658" }}], 
+ edges: [{ data: { source: 'ALS2', target: 'DNAAF2', directed: 'false', weight: 0.953428} },
+{ data: { source: 'ALS2', target: 'DPP6', directed: 'false', weight: 0.151455} },
+{ data: { source: 'DNAAF2', target: 'DPP6', directed: 'false', weight: 0.63341} }]},
 
 style: [
     {
@@ -80,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77382
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>FBN1
+    Complex Score (from Super.Complex) = 0.76746
     </section>
     </body>
     </html>

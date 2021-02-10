@@ -29,12 +29,23 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RD3', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z3Z2" }},
-{data: { id: 'NBEA', score: 5, href: "https://www.uniprot.org/uniprot/Q8NFP9" }},
-{data: { id: 'LRBA', score: 5, href: "https://www.uniprot.org/uniprot/P50851" }}], 
- edges: [{ data: { source: 'LRBA', target: 'RD3', directed: 'false', weight: 0.400767} },
-{ data: { source: 'LRBA', target: 'NBEA', directed: 'false', weight: 0.108694} },
-{ data: { source: 'RD3', target: 'NBEA', directed: 'false', weight: 0.8411290000000001} }]},
+elements:{nodes: [{data: { id: 'VTA1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NP79" }},
+{data: { id: 'UBA2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBT2" }},
+{data: { id: 'CHMP5', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZZ3" }},
+{data: { id: 'CAPN7', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6W3" }},
+{data: { id: 'VPS9D1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2B5" }},
+{data: { id: 'VPS4B', score: 5, href: "https://www.uniprot.org/uniprot/O75351" }}], 
+ edges: [{ data: { source: 'VTA1', target: 'VPS4B', directed: 'false', weight: 0.930861} },
+{ data: { source: 'VTA1', target: 'VPS9D1', directed: 'false', weight: 0.133179} },
+{ data: { source: 'VTA1', target: 'CAPN7', directed: 'false', weight: 0.125737} },
+{ data: { source: 'VTA1', target: 'CHMP5', directed: 'false', weight: 0.102352} },
+{ data: { source: 'UBA2', target: 'CHMP5', directed: 'false', weight: 0.970268} },
+{ data: { source: 'VPS4B', target: 'VPS9D1', directed: 'false', weight: 0.943733} },
+{ data: { source: 'VPS4B', target: 'CHMP5', directed: 'false', weight: 0.7478090000000001} },
+{ data: { source: 'VPS4B', target: 'CAPN7', directed: 'false', weight: 0.595145} },
+{ data: { source: 'CHMP5', target: 'CAPN7', directed: 'false', weight: 0.313765} },
+{ data: { source: 'CHMP5', target: 'VPS9D1', directed: 'false', weight: 0.222125} },
+{ data: { source: 'VPS9D1', target: 'CAPN7', directed: 'false', weight: 0.396848} }]},
 
 style: [
     {
@@ -76,7 +87,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.68190
+    Complex Score (from Super.Complex) = 0.63438
     </section>
     </body>
     </html>

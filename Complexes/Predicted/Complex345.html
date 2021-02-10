@@ -29,15 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ZNF597', score: 4, href: "https://www.uniprot.org/uniprot/Q96LX8" }},
-{data: { id: 'MPHOSPH8', score: 5, href: "https://www.uniprot.org/uniprot/Q99549" }},
-{data: { id: 'TASOR2', score: 5, href: "https://www.uniprot.org/uniprot/Q5VWN6" }},
-{data: { id: 'TASOR', score: 5, href: "https://www.uniprot.org/uniprot/Q9UK61" }}], 
- edges: [{ data: { source: 'MPHOSPH8', target: 'ZNF597', directed: 'false', weight: 0.9825200000000001} },
-{ data: { source: 'MPHOSPH8', target: 'TASOR2', directed: 'false', weight: 0.8843850000000001} },
-{ data: { source: 'MPHOSPH8', target: 'TASOR', directed: 'false', weight: 0.8178850000000001} },
-{ data: { source: 'ZNF597', target: 'TASOR2', directed: 'false', weight: 0.961757} },
-{ data: { source: 'TASOR2', target: 'TASOR', directed: 'false', weight: 0.18832100000000002} }]},
+elements:{nodes: [{data: { id: 'SHC1', score: 5, href: "https://www.uniprot.org/uniprot/P29353" }},
+{data: { id: 'RNF34', score: 0 }},
+{data: { id: 'RFFL', score: 5, href: "https://www.uniprot.org/uniprot/Q8WZ73" }}], 
+ edges: [{ data: { source: 'RNF34', target: 'RFFL', directed: 'false', weight: 0.5} },
+{ data: { source: 'RNF34', target: 'SHC1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'RFFL', target: 'SHC1', directed: 'false', weight: 0.950053} }]},
 
 style: [
     {
@@ -79,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77197
+    Complex Score (from Super.Complex) = 0.76380
     </section>
     </body>
     </html>

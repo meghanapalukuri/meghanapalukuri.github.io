@@ -29,12 +29,38 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'UBL7', score: 4, href: "https://www.uniprot.org/uniprot/Q96S82" }},
-{data: { id: 'UBE4B', score: 5, href: "https://www.uniprot.org/uniprot/O95155" }},
-{data: { id: 'STUB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UNE7" }}], 
- edges: [{ data: { source: 'UBE4B', target: 'UBL7', directed: 'false', weight: 0.942742} },
-{ data: { source: 'UBE4B', target: 'STUB1', directed: 'false', weight: 0.874994} },
-{ data: { source: 'UBL7', target: 'STUB1', directed: 'false', weight: 0.0521983} }]},
+elements:{nodes: [{data: { id: 'CHMP5', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZZ3" }},
+{data: { id: 'TSG101', score: 5, href: "https://www.uniprot.org/uniprot/Q99816" }},
+{data: { id: 'VPS37C', score: 5, href: "https://www.uniprot.org/uniprot/A5D8V6" }},
+{data: { id: 'VPS37B', score: 5, href: "https://www.uniprot.org/uniprot/Q9H9H4" }},
+{data: { id: 'MVB12A', score: 5, href: "https://www.uniprot.org/uniprot/Q96EY5" }},
+{data: { id: 'UBAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZ09" }},
+{data: { id: 'VPS37A', score: 5, href: "https://www.uniprot.org/uniprot/Q8NEZ2" }},
+{data: { id: 'UBA2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBT2" }},
+{data: { id: 'VPS28', score: 5, href: "https://www.uniprot.org/uniprot/Q9UK41" }}], 
+ edges: [{ data: { source: 'VPS37A', target: 'VPS28', directed: 'false', weight: 0.999566} },
+{ data: { source: 'VPS37A', target: 'TSG101', directed: 'false', weight: 0.9888680000000001} },
+{ data: { source: 'VPS37A', target: 'UBAP1', directed: 'false', weight: 0.5523239999999999} },
+{ data: { source: 'VPS37A', target: 'VPS37B', directed: 'false', weight: 0.5523239999999999} },
+{ data: { source: 'VPS37A', target: 'MVB12A', directed: 'false', weight: 0.288208} },
+{ data: { source: 'VPS37A', target: 'VPS37C', directed: 'false', weight: 0.229492} },
+{ data: { source: 'TSG101', target: 'MVB12A', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'TSG101', target: 'UBAP1', directed: 'false', weight: 0.998718} },
+{ data: { source: 'TSG101', target: 'VPS28', directed: 'false', weight: 0.988642} },
+{ data: { source: 'TSG101', target: 'VPS37B', directed: 'false', weight: 0.9561709999999999} },
+{ data: { source: 'TSG101', target: 'VPS37C', directed: 'false', weight: 0.9220440000000001} },
+{ data: { source: 'TSG101', target: 'CHMP5', directed: 'false', weight: 0.911365} },
+{ data: { source: 'UBAP1', target: 'VPS28', directed: 'false', weight: 0.9968110000000001} },
+{ data: { source: 'UBAP1', target: 'VPS37B', directed: 'false', weight: 0.590437} },
+{ data: { source: 'UBAP1', target: 'MVB12A', directed: 'false', weight: 0.321033} },
+{ data: { source: 'UBAP1', target: 'VPS37C', directed: 'false', weight: 0.229492} },
+{ data: { source: 'UBA2', target: 'CHMP5', directed: 'false', weight: 0.970268} },
+{ data: { source: 'VPS28', target: 'VPS37B', directed: 'false', weight: 0.9994770000000001} },
+{ data: { source: 'VPS28', target: 'MVB12A', directed: 'false', weight: 0.997492} },
+{ data: { source: 'VPS28', target: 'VPS37C', directed: 'false', weight: 0.9819040000000001} },
+{ data: { source: 'VPS37C', target: 'MVB12A', directed: 'false', weight: 0.572934} },
+{ data: { source: 'VPS37C', target: 'VPS37B', directed: 'false', weight: 0.229492} },
+{ data: { source: 'VPS37B', target: 'MVB12A', directed: 'false', weight: 0.997244} }]},
 
 style: [
     {
@@ -76,7 +102,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76794
+    Complex Score (from Super.Complex) = 0.74906
     </section>
     </body>
     </html>

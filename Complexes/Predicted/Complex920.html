@@ -29,29 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TMEM30A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NV96" }},
-{data: { id: 'HLA-DRB1', score: 5, href: "https://www.uniprot.org/uniprot/P01911" }},
-{data: { id: 'IMPAD1', score: 3, href: "https://www.uniprot.org/uniprot/A0A024R7W0" }},
-{data: { id: 'NETO2', score: 4, href: "https://www.uniprot.org/uniprot/Q8NC67" }},
-{data: { id: 'CHST14', score: 5, href: "https://www.uniprot.org/uniprot/Q8NCH0" }},
-{data: { id: 'PGAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q75T13" }},
-{data: { id: 'DIPK1B', score: 3, href: "https://www.uniprot.org/uniprot/Q5VUD6" }}], 
- edges: [{ data: { source: 'HLA-DRB1', target: 'TMEM30A', directed: 'false', weight: 0.470394} },
-{ data: { source: 'HLA-DRB1', target: 'NETO2', directed: 'false', weight: 0.365568} },
-{ data: { source: 'HLA-DRB1', target: 'PGAP1', directed: 'false', weight: 0.35996500000000003} },
-{ data: { source: 'NETO2', target: 'DIPK1B', directed: 'false', weight: 0.49374300000000004} },
-{ data: { source: 'NETO2', target: 'TMEM30A', directed: 'false', weight: 0.400802} },
-{ data: { source: 'NETO2', target: 'PGAP1', directed: 'false', weight: 0.299547} },
-{ data: { source: 'NETO2', target: 'CHST14', directed: 'false', weight: 0.170156} },
-{ data: { source: 'NETO2', target: 'IMPAD1', directed: 'false', weight: 0.143488} },
-{ data: { source: 'CHST14', target: 'PGAP1', directed: 'false', weight: 0.41782600000000003} },
-{ data: { source: 'CHST14', target: 'TMEM30A', directed: 'false', weight: 0.26962800000000003} },
-{ data: { source: 'CHST14', target: 'DIPK1B', directed: 'false', weight: 0.180576} },
-{ data: { source: 'CHST14', target: 'IMPAD1', directed: 'false', weight: 0.100271} },
-{ data: { source: 'DIPK1B', target: 'IMPAD1', directed: 'false', weight: 0.276586} },
-{ data: { source: 'PGAP1', target: 'TMEM30A', directed: 'false', weight: 0.780148} },
-{ data: { source: 'PGAP1', target: 'IMPAD1', directed: 'false', weight: 0.34665999999999997} },
-{ data: { source: 'TMEM30A', target: 'IMPAD1', directed: 'false', weight: 0.154798} }]},
+elements:{nodes: [{data: { id: 'DHRS11', score: 5, href: "https://www.uniprot.org/uniprot/Q6UWP2" }},
+{data: { id: 'PAICS', score: 5, href: "https://www.uniprot.org/uniprot/P22234" }},
+{data: { id: 'TSTA3', score: 0 }}], 
+ edges: [{ data: { source: 'DHRS11', target: 'TSTA3', directed: 'false', weight: 0.6767350000000001} },
+{ data: { source: 'DHRS11', target: 'PAICS', directed: 'false', weight: 0.550031} }]},
 
 style: [
     {
@@ -93,7 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.58821
+    Complex Score (from Super.Complex) = 0.53903
     </section>
     </body>
     </html>

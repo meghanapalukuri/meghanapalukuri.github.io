@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DNAJC18', score: 2, href: "https://www.uniprot.org/uniprot/Q9H819" }},
-{data: { id: 'CHEK1', score: 5, href: "https://www.uniprot.org/uniprot/O14757" }},
-{data: { id: 'CHRNA9', score: 5, href: "https://www.uniprot.org/uniprot/Q9UGM1" }},
-{data: { id: 'ZIC2', score: 5, href: "https://www.uniprot.org/uniprot/O95409" }}], 
- edges: [{ data: { source: 'DNAJC18', target: 'CHRNA9', directed: 'false', weight: 0.804603} },
-{ data: { source: 'DNAJC18', target: 'ZIC2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'DNAJC18', target: 'CHEK1', directed: 'false', weight: 0.11248399999999999} },
-{ data: { source: 'CHRNA9', target: 'ZIC2', directed: 'false', weight: 0.8541489999999999} },
-{ data: { source: 'CHRNA9', target: 'CHEK1', directed: 'false', weight: 0.639065} },
-{ data: { source: 'CHEK1', target: 'ZIC2', directed: 'false', weight: 0.11248399999999999} }]},
+elements:{nodes: [{data: { id: 'CBWD2', score: 2, href: "https://www.uniprot.org/uniprot/Q8IUF1" }},
+{data: { id: 'CBWD1', score: 3, href: "https://www.uniprot.org/uniprot/Q9BRT8" }},
+{data: { id: 'CBWD6', score: 2, href: "https://www.uniprot.org/uniprot/Q4V339" }},
+{data: { id: 'CBWD7', score: 0 }}], 
+ edges: [{ data: { source: 'CBWD2', target: 'CBWD1', directed: 'false', weight: 0.800557} },
+{ data: { source: 'CBWD2', target: 'CBWD7', directed: 'false', weight: 0.37721} },
+{ data: { source: 'CBWD2', target: 'CBWD6', directed: 'false', weight: 0.108694} },
+{ data: { source: 'CBWD6', target: 'CBWD1', directed: 'false', weight: 0.836441} },
+{ data: { source: 'CBWD6', target: 'CBWD7', directed: 'false', weight: 0.117318} },
+{ data: { source: 'CBWD1', target: 'CBWD7', directed: 'false', weight: 0.8468969999999999} }]},
 
 style: [
     {
@@ -80,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76505
+    Complex Score (from Super.Complex) = 0.71754
     </section>
     </body>
     </html>

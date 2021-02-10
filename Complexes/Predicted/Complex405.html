@@ -29,16 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'LAMA1', score: 5, href: "https://www.uniprot.org/uniprot/P25391" }},
-{data: { id: 'SDK1', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z5N4" }},
-{data: { id: 'LGALS3', score: 5, href: "https://www.uniprot.org/uniprot/P17931" }},
-{data: { id: 'SDK2', score: 5, href: "https://www.uniprot.org/uniprot/Q58EX2" }}], 
- edges: [{ data: { source: 'SDK1', target: 'LGALS3', directed: 'false', weight: 0.8939290000000001} },
-{ data: { source: 'SDK1', target: 'SDK2', directed: 'false', weight: 0.133456} },
-{ data: { source: 'SDK1', target: 'LAMA1', directed: 'false', weight: 0.133456} },
-{ data: { source: 'LAMA1', target: 'LGALS3', directed: 'false', weight: 0.825314} },
-{ data: { source: 'LAMA1', target: 'SDK2', directed: 'false', weight: 0.133456} },
-{ data: { source: 'LGALS3', target: 'SDK2', directed: 'false', weight: 0.679067} }]},
+elements:{nodes: [{data: { id: 'NARS', score: 0 }},
+{data: { id: 'ATXN2', score: 5, href: "https://www.uniprot.org/uniprot/Q99700" }},
+{data: { id: 'YTHDF2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5A9" }}], 
+ edges: [{ data: { source: 'YTHDF2', target: 'NARS', directed: 'false', weight: 0.688185} },
+{ data: { source: 'YTHDF2', target: 'ATXN2', directed: 'false', weight: 0.0721025} },
+{ data: { source: 'NARS', target: 'ATXN2', directed: 'false', weight: 0.797044} }]},
 
 style: [
     {
@@ -80,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76880
+    Complex Score (from Super.Complex) = 0.75593
     </section>
     </body>
     </html>

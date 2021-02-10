@@ -29,20 +29,19 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PCYOX1L', score: 4, href: "https://www.uniprot.org/uniprot/Q8NBM8" }},
-{data: { id: 'PKN1', score: 5, href: "https://www.uniprot.org/uniprot/Q16512" }},
-{data: { id: 'LARGE1', score: 5, href: "https://www.uniprot.org/uniprot/O95461" }},
-{data: { id: 'DDX11', score: 5, href: "https://www.uniprot.org/uniprot/Q96FC9" }},
-{data: { id: 'PLAUR', score: 5, href: "https://www.uniprot.org/uniprot/Q03405" }}], 
- edges: [{ data: { source: 'PLAUR', target: 'DDX11', directed: 'false', weight: 0.572026} },
-{ data: { source: 'PLAUR', target: 'LARGE1', directed: 'false', weight: 0.539473} },
-{ data: { source: 'PLAUR', target: 'PKN1', directed: 'false', weight: 0.5} },
-{ data: { source: 'PLAUR', target: 'PCYOX1L', directed: 'false', weight: 0.277057} },
-{ data: { source: 'PCYOX1L', target: 'LARGE1', directed: 'false', weight: 0.133456} },
-{ data: { source: 'PCYOX1L', target: 'PKN1', directed: 'false', weight: 0.123797} },
-{ data: { source: 'LARGE1', target: 'DDX11', directed: 'false', weight: 0.133456} },
-{ data: { source: 'LARGE1', target: 'PKN1', directed: 'false', weight: 0.123797} },
-{ data: { source: 'PKN1', target: 'DDX11', directed: 'false', weight: 0.0961868} }]},
+elements:{nodes: [{data: { id: 'EFHD2', score: 4, href: "https://www.uniprot.org/uniprot/Q96C19" }},
+{data: { id: 'ENSA', score: 5, href: "https://www.uniprot.org/uniprot/O43768" }},
+{data: { id: 'TPD52L2', score: 5, href: "https://www.uniprot.org/uniprot/O43399" }},
+{data: { id: 'PMVK', score: 5, href: "https://www.uniprot.org/uniprot/Q15126" }},
+{data: { id: 'ALDH9A1', score: 5, href: "https://www.uniprot.org/uniprot/P49189" }}], 
+ edges: [{ data: { source: 'ALDH9A1', target: 'EFHD2', directed: 'false', weight: 0.419642} },
+{ data: { source: 'ALDH9A1', target: 'ENSA', directed: 'false', weight: 0.101187} },
+{ data: { source: 'ALDH9A1', target: 'TPD52L2', directed: 'false', weight: 0.00534947} },
+{ data: { source: 'PMVK', target: 'TPD52L2', directed: 'false', weight: 0.42663199999999996} },
+{ data: { source: 'PMVK', target: 'EFHD2', directed: 'false', weight: 0.31085} },
+{ data: { source: 'EFHD2', target: 'ENSA', directed: 'false', weight: 0.582588} },
+{ data: { source: 'EFHD2', target: 'TPD52L2', directed: 'false', weight: 0.463966} },
+{ data: { source: 'TPD52L2', target: 'ENSA', directed: 'false', weight: 0.00727403} }]},
 
 style: [
     {
@@ -84,7 +83,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65170
+    Complex Score (from Super.Complex) = 0.58121
     </section>
     </body>
     </html>

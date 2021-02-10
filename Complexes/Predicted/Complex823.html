@@ -29,18 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ELMSAN1', score: 0 }},
-{data: { id: 'WDFY2', score: 5, href: "https://www.uniprot.org/uniprot/Q96P53" }},
-{data: { id: 'UTP6', score: 4, href: "https://www.uniprot.org/uniprot/Q9NYH9" }},
-{data: { id: 'DNTTIP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H147" }},
-{data: { id: 'SLC7A3', score: 5, href: "https://www.uniprot.org/uniprot/Q8WY07" }}], 
- edges: [{ data: { source: 'DNTTIP1', target: 'ELMSAN1', directed: 'false', weight: 0.999426} },
-{ data: { source: 'DNTTIP1', target: 'WDFY2', directed: 'false', weight: 0.9757} },
-{ data: { source: 'DNTTIP1', target: 'UTP6', directed: 'false', weight: 0.171414} },
-{ data: { source: 'DNTTIP1', target: 'SLC7A3', directed: 'false', weight: 0.133451} },
-{ data: { source: 'UTP6', target: 'WDFY2', directed: 'false', weight: 0.967066} },
-{ data: { source: 'UTP6', target: 'SLC7A3', directed: 'false', weight: 0.133451} },
-{ data: { source: 'SLC7A3', target: 'WDFY2', directed: 'false', weight: 0.62142} }]},
+elements:{nodes: [{data: { id: 'CASP3', score: 5, href: "https://www.uniprot.org/uniprot/P42574" }},
+{data: { id: 'SERPINB8', score: 5, href: "https://www.uniprot.org/uniprot/P50452" }},
+{data: { id: 'THOP1', score: 5, href: "https://www.uniprot.org/uniprot/P52888" }},
+{data: { id: 'IDE', score: 5, href: "https://www.uniprot.org/uniprot/P14735" }}], 
+ edges: [{ data: { source: 'THOP1', target: 'IDE', directed: 'false', weight: 0.58515} },
+{ data: { source: 'THOP1', target: 'CASP3', directed: 'false', weight: 0.171296} },
+{ data: { source: 'CASP3', target: 'IDE', directed: 'false', weight: 0.588596} },
+{ data: { source: 'IDE', target: 'SERPINB8', directed: 'false', weight: 0.6832020000000001} }]},
 
 style: [
     {
@@ -82,7 +78,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.63104
+    Complex Score (from Super.Complex) = 0.56969
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>IDE
     </section>
     </body>
     </html>

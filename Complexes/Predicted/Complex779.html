@@ -29,15 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CCT2', score: 5, href: "https://www.uniprot.org/uniprot/P78371" }},
-{data: { id: 'ARMH3', score: 4, href: "https://www.uniprot.org/uniprot/Q5T2E6" }},
-{data: { id: 'PTGR2', score: 5, href: "https://www.uniprot.org/uniprot/Q8N8N7" }},
-{data: { id: 'FASN', score: 5, href: "https://www.uniprot.org/uniprot/A0A0U1RQF0" }}], 
- edges: [{ data: { source: 'PTGR2', target: 'FASN', directed: 'false', weight: 0.9416950000000001} },
-{ data: { source: 'PTGR2', target: 'ARMH3', directed: 'false', weight: 0.171414} },
-{ data: { source: 'PTGR2', target: 'CCT2', directed: 'false', weight: 0.0475034} },
-{ data: { source: 'FASN', target: 'CCT2', directed: 'false', weight: 0.889423} },
-{ data: { source: 'FASN', target: 'ARMH3', directed: 'false', weight: 0.388561} }]},
+elements:{nodes: [{data: { id: 'DCK', score: 5, href: "https://www.uniprot.org/uniprot/P27707" }},
+{data: { id: 'DGUOK', score: 5, href: "https://www.uniprot.org/uniprot/Q16854" }},
+{data: { id: 'ERC2', score: 4, href: "https://www.uniprot.org/uniprot/O15083" }},
+{data: { id: 'RNF10', score: 5, href: "https://www.uniprot.org/uniprot/Q8N5U6" }},
+{data: { id: 'SLC12A5', score: 5, href: "https://www.uniprot.org/uniprot/Q9H2X9" }}], 
+ edges: [{ data: { source: 'DCK', target: 'DGUOK', directed: 'false', weight: 0.980611} },
+{ data: { source: 'DCK', target: 'ERC2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'DCK', target: 'SLC12A5', directed: 'false', weight: 0.151455} },
+{ data: { source: 'DGUOK', target: 'SLC12A5', directed: 'false', weight: 0.367581} },
+{ data: { source: 'DGUOK', target: 'ERC2', directed: 'false', weight: 0.356491} },
+{ data: { source: 'SLC12A5', target: 'ERC2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ERC2', target: 'RNF10', directed: 'false', weight: 0.144297} }]},
 
 style: [
     {
@@ -79,7 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65068
+    Complex Score (from Super.Complex) = 0.58042
     </section>
     </body>
     </html>

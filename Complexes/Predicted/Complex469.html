@@ -29,12 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'P)HX', score: 0 }},
-{data: { id: 'GPX4', score: 5, href: "https://www.uniprot.org/uniprot/P36969" }},
-{data: { id: 'GLRX2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NS18" }}], 
- edges: [{ data: { source: 'GPX4', target: 'GLRX2', directed: 'false', weight: 0.8710530000000001} },
-{ data: { source: 'GPX4', target: 'P)HX', directed: 'false', weight: 0.314874} },
-{ data: { source: 'P)HX', target: 'GLRX2', directed: 'false', weight: 0.463138} }]},
+elements:{nodes: [{data: { id: 'THBS1', score: 5, href: "https://www.uniprot.org/uniprot/P07996" }},
+{data: { id: 'IQSEC2', score: 5, href: "https://www.uniprot.org/uniprot/Q5JU85" }},
+{data: { id: 'THBS4', score: 5, href: "https://www.uniprot.org/uniprot/P35443" }},
+{data: { id: 'THBS3', score: 5, href: "https://www.uniprot.org/uniprot/P49746" }},
+{data: { id: 'FANCB', score: 5, href: "https://www.uniprot.org/uniprot/Q8NB91" }}], 
+ edges: [{ data: { source: 'IQSEC2', target: 'THBS3', directed: 'false', weight: 0.605697} },
+{ data: { source: 'IQSEC2', target: 'THBS4', directed: 'false', weight: 0.171414} },
+{ data: { source: 'IQSEC2', target: 'THBS1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'THBS3', target: 'THBS4', directed: 'false', weight: 0.9913799999999999} },
+{ data: { source: 'THBS3', target: 'THBS1', directed: 'false', weight: 0.9906709999999999} },
+{ data: { source: 'THBS3', target: 'FANCB', directed: 'false', weight: 0.9197690000000001} },
+{ data: { source: 'THBS4', target: 'THBS1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'THBS4', target: 'FANCB', directed: 'false', weight: 0.171414} },
+{ data: { source: 'FANCB', target: 'THBS1', directed: 'false', weight: 0.171414} }]},
 
 style: [
     {
@@ -76,7 +84,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76439
+    Complex Score (from Super.Complex) = 0.70999
     </section>
     </body>
     </html>
