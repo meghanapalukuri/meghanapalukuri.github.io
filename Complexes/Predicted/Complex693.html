@@ -29,18 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'EIF1', score: 5, href: "https://www.uniprot.org/uniprot/P41567" }},
-{data: { id: 'TRIP12', score: 5, href: "https://www.uniprot.org/uniprot/Q14669" }},
-{data: { id: 'SNRPA', score: 5, href: "https://www.uniprot.org/uniprot/P09012" }},
-{data: { id: 'NXN', score: 5, href: "https://www.uniprot.org/uniprot/Q6DKJ4" }},
-{data: { id: 'DTD1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TEA8" }}], 
- edges: [{ data: { source: 'TRIP12', target: 'EIF1', directed: 'false', weight: 0.403783} },
-{ data: { source: 'EIF1', target: 'DTD1', directed: 'false', weight: 0.725036} },
-{ data: { source: 'EIF1', target: 'SNRPA', directed: 'false', weight: 0.659708} },
-{ data: { source: 'EIF1', target: 'NXN', directed: 'false', weight: 0.0938283} },
-{ data: { source: 'NXN', target: 'SNRPA', directed: 'false', weight: 0.425691} },
-{ data: { source: 'NXN', target: 'DTD1', directed: 'false', weight: 0.32729899999999995} },
-{ data: { source: 'SNRPA', target: 'DTD1', directed: 'false', weight: 0.773442} }]},
+elements:{nodes: [{data: { id: 'IL27RA', score: 5, href: "https://www.uniprot.org/uniprot/Q6UWB1" }},
+{data: { id: 'HLA-DPA1', score: 5, href: "https://www.uniprot.org/uniprot/P20036" }},
+{data: { id: 'HS3ST3B1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y662" }},
+{data: { id: 'DCBLD1', score: 3, href: "https://www.uniprot.org/uniprot/Q8N8Z6" }},
+{data: { id: 'NOB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULX3" }}], 
+ edges: [{ data: { source: 'DCBLD1', target: 'HLA-DPA1', directed: 'false', weight: 0.8911190000000001} },
+{ data: { source: 'DCBLD1', target: 'HS3ST3B1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'DCBLD1', target: 'IL27RA', directed: 'false', weight: 0.171414} },
+{ data: { source: 'HS3ST3B1', target: 'HLA-DPA1', directed: 'false', weight: 0.907113} },
+{ data: { source: 'HS3ST3B1', target: 'IL27RA', directed: 'false', weight: 0.171414} },
+{ data: { source: 'NOB1', target: 'HLA-DPA1', directed: 'false', weight: 0.547085} },
+{ data: { source: 'IL27RA', target: 'HLA-DPA1', directed: 'false', weight: 0.49271800000000004} }]},
 
 style: [
     {
@@ -82,7 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.61832
+    Complex Score (from Super.Complex) = 0.60820
     </section>
     </body>
     </html>

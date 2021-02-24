@@ -29,11 +29,35 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'KLHDC10', score: 5, href: "https://www.uniprot.org/uniprot/Q6PID8" }},
-{data: { id: 'KITLG', score: 5, href: "https://www.uniprot.org/uniprot/A0A024RBC0" }},
-{data: { id: 'PYCR1', score: 5, href: "https://www.uniprot.org/uniprot/P32322" }}], 
- edges: [{ data: { source: 'KITLG', target: 'KLHDC10', directed: 'false', weight: 0.507252} },
-{ data: { source: 'KLHDC10', target: 'PYCR1', directed: 'false', weight: 0.643682} }]},
+elements:{nodes: [{data: { id: 'ATP5F1A', score: 5, href: "https://www.uniprot.org/uniprot/P25705" }},
+{data: { id: 'DLAT', score: 5, href: "https://www.uniprot.org/uniprot/P10515" }},
+{data: { id: 'ATP5F1B', score: 5, href: "https://www.uniprot.org/uniprot/P06576" }},
+{data: { id: 'STAT5B', score: 5, href: "https://www.uniprot.org/uniprot/P51692" }},
+{data: { id: 'STAT5A', score: 5, href: "https://www.uniprot.org/uniprot/P42229" }},
+{data: { id: 'PDHA1', score: 5, href: "https://www.uniprot.org/uniprot/P08559" }},
+{data: { id: 'ATP5MG', score: 5, href: "https://www.uniprot.org/uniprot/O75964" }},
+{data: { id: 'PDHB', score: 5, href: "https://www.uniprot.org/uniprot/P11177" }},
+{data: { id: 'PDHX', score: 5, href: "https://www.uniprot.org/uniprot/O00330" }}], 
+ edges: [{ data: { source: 'PDHB', target: 'PDHA1', directed: 'false', weight: 0.999948} },
+{ data: { source: 'PDHB', target: 'DLAT', directed: 'false', weight: 0.9999299999999999} },
+{ data: { source: 'PDHB', target: 'PDHX', directed: 'false', weight: 0.9953219999999999} },
+{ data: { source: 'PDHB', target: 'STAT5A', directed: 'false', weight: 0.9294290000000001} },
+{ data: { source: 'PDHB', target: 'STAT5B', directed: 'false', weight: 0.8367879999999999} },
+{ data: { source: 'PDHA1', target: 'DLAT', directed: 'false', weight: 0.999826} },
+{ data: { source: 'PDHA1', target: 'STAT5A', directed: 'false', weight: 0.948998} },
+{ data: { source: 'PDHA1', target: 'PDHX', directed: 'false', weight: 0.933788} },
+{ data: { source: 'PDHA1', target: 'ATP5F1A', directed: 'false', weight: 0.885999} },
+{ data: { source: 'PDHA1', target: 'STAT5B', directed: 'false', weight: 0.6547029999999999} },
+{ data: { source: 'PDHA1', target: 'ATP5F1B', directed: 'false', weight: 0.479871} },
+{ data: { source: 'PDHA1', target: 'ATP5MG', directed: 'false', weight: 0.370243} },
+{ data: { source: 'ATP5F1B', target: 'ATP5F1A', directed: 'false', weight: 0.999692} },
+{ data: { source: 'ATP5F1B', target: 'ATP5MG', directed: 'false', weight: 0.951416} },
+{ data: { source: 'STAT5B', target: 'PDHX', directed: 'false', weight: 0.8918950000000001} },
+{ data: { source: 'STAT5B', target: 'DLAT', directed: 'false', weight: 0.734251} },
+{ data: { source: 'STAT5A', target: 'PDHX', directed: 'false', weight: 0.9594379999999999} },
+{ data: { source: 'STAT5A', target: 'DLAT', directed: 'false', weight: 0.898526} },
+{ data: { source: 'PDHX', target: 'DLAT', directed: 'false', weight: 0.840566} },
+{ data: { source: 'ATP5F1A', target: 'ATP5MG', directed: 'false', weight: 0.9946659999999999} }]},
 
 style: [
     {
@@ -75,7 +99,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53595
+    Complex Score (from Super.Complex) = 0.52729
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>ATP5MG
     </section>
     </body>
     </html>

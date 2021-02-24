@@ -29,12 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'LIMD1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UGP4" }},
-{data: { id: 'PPP2R3A', score: 5, href: "https://www.uniprot.org/uniprot/Q06190" }},
-{data: { id: 'LPP', score: 5, href: "https://www.uniprot.org/uniprot/Q93052" }}], 
- edges: [{ data: { source: 'PPP2R3A', target: 'LPP', directed: 'false', weight: 0.8797780000000001} },
-{ data: { source: 'PPP2R3A', target: 'LIMD1', directed: 'false', weight: 0.8210139999999999} },
-{ data: { source: 'LPP', target: 'LIMD1', directed: 'false', weight: 0.25852800000000004} }]},
+elements:{nodes: [{data: { id: 'FAU', score: 5, href: "https://www.uniprot.org/uniprot/P62861" }},
+{data: { id: 'RPS12', score: 5, href: "https://www.uniprot.org/uniprot/P25398" }},
+{data: { id: 'RPL36', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3U8" }},
+{data: { id: 'COX5B', score: 5, href: "https://www.uniprot.org/uniprot/P10606" }},
+{data: { id: 'RPL13A', score: 5, href: "https://www.uniprot.org/uniprot/P40429" }}], 
+ edges: [{ data: { source: 'COX5B', target: 'RPS12', directed: 'false', weight: 0.30086999999999997} },
+{ data: { source: 'RPS12', target: 'RPL36', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPS12', target: 'RPL13A', directed: 'false', weight: 0.9961639999999999} },
+{ data: { source: 'RPS12', target: 'FAU', directed: 'false', weight: 0.99374} },
+{ data: { source: 'FAU', target: 'RPL36', directed: 'false', weight: 0.999991} },
+{ data: { source: 'FAU', target: 'RPL13A', directed: 'false', weight: 0.9759059999999999} },
+{ data: { source: 'RPL36', target: 'RPL13A', directed: 'false', weight: 1.0} }]},
 
 style: [
     {
@@ -76,7 +82,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77403
+    Complex Score (from Super.Complex) = 0.77378
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>RPL36
     </section>
     </body>
     </html>

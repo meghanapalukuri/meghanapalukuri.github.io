@@ -29,14 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'C11orf42', score: 1, href: "https://www.uniprot.org/uniprot/Q8N5U0" }},
-{data: { id: 'VPS29', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBQ0" }},
-{data: { id: 'SNX1', score: 5, href: "https://www.uniprot.org/uniprot/Q13596" }},
-{data: { id: 'SNX5', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5X3" }}], 
- edges: [{ data: { source: 'SNX5', target: 'SNX1', directed: 'false', weight: 0.997165} },
-{ data: { source: 'SNX5', target: 'C11orf42', directed: 'false', weight: 0.43806000000000006} },
-{ data: { source: 'SNX5', target: 'VPS29', directed: 'false', weight: 0.09363780000000001} },
-{ data: { source: 'SNX1', target: 'VPS29', directed: 'false', weight: 0.9759540000000001} }]},
+elements:{nodes: [{data: { id: 'CERS2', score: 5, href: "https://www.uniprot.org/uniprot/Q96G23" }},
+{data: { id: 'CXCR4', score: 5, href: "https://www.uniprot.org/uniprot/P61073" }},
+{data: { id: 'GOLGA5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TBA6" }},
+{data: { id: 'ABCC1', score: 5, href: "https://www.uniprot.org/uniprot/P33527" }},
+{data: { id: 'KCNK1', score: 5, href: "https://www.uniprot.org/uniprot/O00180" }}], 
+ edges: [{ data: { source: 'CERS2', target: 'KCNK1', directed: 'false', weight: 0.632021} },
+{ data: { source: 'KCNK1', target: 'ABCC1', directed: 'false', weight: 0.855417} },
+{ data: { source: 'KCNK1', target: 'GOLGA5', directed: 'false', weight: 0.707076} },
+{ data: { source: 'KCNK1', target: 'CXCR4', directed: 'false', weight: 0.705331} },
+{ data: { source: 'ABCC1', target: 'CXCR4', directed: 'false', weight: 0.19934000000000002} },
+{ data: { source: 'ABCC1', target: 'GOLGA5', directed: 'false', weight: 0.0972698} },
+{ data: { source: 'CXCR4', target: 'GOLGA5', directed: 'false', weight: 0.132679} }]},
 
 style: [
     {
@@ -78,7 +82,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.61483
+    Complex Score (from Super.Complex) = 0.60624
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>ABCC1
     </section>
     </body>
     </html>

@@ -29,11 +29,36 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'HSP90B1', score: 5, href: "https://www.uniprot.org/uniprot/P14625" }},
-{data: { id: 'CHD7', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2D1" }},
-{data: { id: 'CALR', score: 5, href: "https://www.uniprot.org/uniprot/P27797" }}], 
- edges: [{ data: { source: 'HSP90B1', target: 'CHD7', directed: 'false', weight: 0.572112} },
-{ data: { source: 'HSP90B1', target: 'CALR', directed: 'false', weight: 0.481293} }]},
+elements:{nodes: [{data: { id: 'MPRIP', score: 5, href: "https://www.uniprot.org/uniprot/Q6WCQ1" }},
+{data: { id: 'PSMD1', score: 5, href: "https://www.uniprot.org/uniprot/Q99460" }},
+{data: { id: 'STKLD1', score: 4, href: "https://www.uniprot.org/uniprot/Q8NE28" }},
+{data: { id: 'PSMD14', score: 5, href: "https://www.uniprot.org/uniprot/O00487" }},
+{data: { id: 'FAM117B', score: 3, href: "https://www.uniprot.org/uniprot/Q6P1L5" }},
+{data: { id: 'TRAF4', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUZ4" }},
+{data: { id: 'PSMC3', score: 5, href: "https://www.uniprot.org/uniprot/P17980" }},
+{data: { id: 'PSMD13', score: 5, href: "https://www.uniprot.org/uniprot/Q9UNM6" }},
+{data: { id: 'TPD52L1', score: 5, href: "https://www.uniprot.org/uniprot/Q16890" }}], 
+ edges: [{ data: { source: 'TRAF4', target: 'PSMC3', directed: 'false', weight: 0.550786} },
+{ data: { source: 'TRAF4', target: 'TPD52L1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'TRAF4', target: 'STKLD1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'TRAF4', target: 'FAM117B', directed: 'false', weight: 0.117318} },
+{ data: { source: 'TRAF4', target: 'MPRIP', directed: 'false', weight: 0.0901617} },
+{ data: { source: 'PSMD13', target: 'PSMC3', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMD1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMD13', target: 'PSMD14', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'MPRIP', target: 'PSMC3', directed: 'false', weight: 0.65885} },
+{ data: { source: 'MPRIP', target: 'TPD52L1', directed: 'false', weight: 0.11730499999999999} },
+{ data: { source: 'MPRIP', target: 'STKLD1', directed: 'false', weight: 0.11730499999999999} },
+{ data: { source: 'MPRIP', target: 'FAM117B', directed: 'false', weight: 0.102922} },
+{ data: { source: 'STKLD1', target: 'PSMC3', directed: 'false', weight: 0.509793} },
+{ data: { source: 'STKLD1', target: 'TPD52L1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'STKLD1', target: 'FAM117B', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PSMC3', target: 'PSMD14', directed: 'false', weight: 1.0} },
+{ data: { source: 'PSMC3', target: 'PSMD1', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'PSMC3', target: 'TPD52L1', directed: 'false', weight: 0.8286459999999999} },
+{ data: { source: 'PSMC3', target: 'FAM117B', directed: 'false', weight: 0.600685} },
+{ data: { source: 'TPD52L1', target: 'FAM117B', directed: 'false', weight: 0.151455} },
+{ data: { source: 'PSMD14', target: 'PSMD1', directed: 'false', weight: 1.0} }]},
 
 style: [
     {
@@ -75,7 +100,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53192
+    Complex Score (from Super.Complex) = 0.51550
     </section>
     </body>
     </html>

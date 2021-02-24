@@ -29,16 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'AUP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y679" }},
-{data: { id: 'TUBB6', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUF5" }},
-{data: { id: 'ATAD3A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVI7" }},
-{data: { id: 'TUBA1C', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQE3" }}], 
- edges: [{ data: { source: 'AUP1', target: 'TUBA1C', directed: 'false', weight: 0.43848100000000007} },
-{ data: { source: 'AUP1', target: 'ATAD3A', directed: 'false', weight: 0.12529} },
-{ data: { source: 'AUP1', target: 'TUBB6', directed: 'false', weight: 0.12529} },
-{ data: { source: 'TUBB6', target: 'TUBA1C', directed: 'false', weight: 0.8143229999999999} },
-{ data: { source: 'TUBB6', target: 'ATAD3A', directed: 'false', weight: 0.13574} },
-{ data: { source: 'TUBA1C', target: 'ATAD3A', directed: 'false', weight: 0.632849} }]},
+elements:{nodes: [{data: { id: 'SIPA1L3', score: 5, href: "https://www.uniprot.org/uniprot/O60292" }},
+{data: { id: 'WDR83', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRX9" }},
+{data: { id: 'SIPA1L1', score: 5, href: "https://www.uniprot.org/uniprot/O43166" }},
+{data: { id: 'RNF187', score: 5, href: "https://www.uniprot.org/uniprot/Q5TA31" }},
+{data: { id: 'EXO1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UQ84" }}], 
+ edges: [{ data: { source: 'RNF187', target: 'WDR83', directed: 'false', weight: 0.930794} },
+{ data: { source: 'RNF187', target: 'EXO1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'RNF187', target: 'SIPA1L3', directed: 'false', weight: 0.140692} },
+{ data: { source: 'RNF187', target: 'SIPA1L1', directed: 'false', weight: 0.114755} },
+{ data: { source: 'SIPA1L3', target: 'WDR83', directed: 'false', weight: 0.94758} },
+{ data: { source: 'SIPA1L3', target: 'SIPA1L1', directed: 'false', weight: 0.476318} },
+{ data: { source: 'SIPA1L3', target: 'EXO1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'EXO1', target: 'WDR83', directed: 'false', weight: 0.976735} },
+{ data: { source: 'EXO1', target: 'SIPA1L1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'SIPA1L1', target: 'WDR83', directed: 'false', weight: 0.581317} }]},
 
 style: [
     {
@@ -80,7 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.75372
+    Complex Score (from Super.Complex) = 0.74552
     </section>
     </body>
     </html>

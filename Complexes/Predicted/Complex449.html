@@ -29,20 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CEP135', score: 5, href: "https://www.uniprot.org/uniprot/Q66GS9" }},
-{data: { id: 'SSX2IP', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2D8" }},
-{data: { id: 'ZBTB44', score: 5, href: "https://www.uniprot.org/uniprot/Q8NCP5" }},
-{data: { id: 'ASNSP6', score: 0 }},
-{data: { id: 'WRAP73', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2S5" }}], 
- edges: [{ data: { source: 'SSX2IP', target: 'ASNSP6', directed: 'false', weight: 0.804967} },
-{ data: { source: 'SSX2IP', target: 'WRAP73', directed: 'false', weight: 0.154145} },
-{ data: { source: 'SSX2IP', target: 'CEP135', directed: 'false', weight: 0.0848573} },
-{ data: { source: 'CEP135', target: 'ASNSP6', directed: 'false', weight: 0.714367} },
-{ data: { source: 'CEP135', target: 'WRAP73', directed: 'false', weight: 0.533414} },
-{ data: { source: 'CEP135', target: 'ZBTB44', directed: 'false', weight: 0.114755} },
-{ data: { source: 'ZBTB44', target: 'ASNSP6', directed: 'false', weight: 0.853987} },
-{ data: { source: 'ZBTB44', target: 'WRAP73', directed: 'false', weight: 0.083384} },
-{ data: { source: 'WRAP73', target: 'ASNSP6', directed: 'false', weight: 0.9397030000000001} }]},
+elements:{nodes: [{data: { id: 'CBWD1', score: 3, href: "https://www.uniprot.org/uniprot/Q9BRT8" }},
+{data: { id: 'CBWD7', score: 0 }},
+{data: { id: 'CBWD6', score: 2, href: "https://www.uniprot.org/uniprot/Q4V339" }},
+{data: { id: 'CBWD2', score: 2, href: "https://www.uniprot.org/uniprot/Q8IUF1" }}], 
+ edges: [{ data: { source: 'CBWD7', target: 'CBWD1', directed: 'false', weight: 0.8468969999999999} },
+{ data: { source: 'CBWD7', target: 'CBWD2', directed: 'false', weight: 0.37721} },
+{ data: { source: 'CBWD7', target: 'CBWD6', directed: 'false', weight: 0.117318} },
+{ data: { source: 'CBWD1', target: 'CBWD6', directed: 'false', weight: 0.836441} },
+{ data: { source: 'CBWD1', target: 'CBWD2', directed: 'false', weight: 0.800557} },
+{ data: { source: 'CBWD6', target: 'CBWD2', directed: 'false', weight: 0.108694} }]},
 
 style: [
     {
@@ -84,12 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.72539
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>CEP135
+    Complex Score (from Super.Complex) = 0.71754
     </section>
     </body>
     </html>

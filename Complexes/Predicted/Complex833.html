@@ -29,23 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PLEKHA5', score: 5, href: "https://www.uniprot.org/uniprot/Q9HAU0" }},
-{data: { id: 'RCHY1', score: 5, href: "https://www.uniprot.org/uniprot/Q96PM5" }},
-{data: { id: 'CALCB', score: 5, href: "https://www.uniprot.org/uniprot/P10092" }},
-{data: { id: 'INHBA', score: 5, href: "https://www.uniprot.org/uniprot/P08476" }},
-{data: { id: 'ITGB8', score: 5, href: "https://www.uniprot.org/uniprot/P26012" }},
-{data: { id: 'GINM1', score: 2, href: "https://www.uniprot.org/uniprot/Q9NU53" }}], 
- edges: [{ data: { source: 'ITGB8', target: 'GINM1', directed: 'false', weight: 0.8125220000000001} },
-{ data: { source: 'GINM1', target: 'INHBA', directed: 'false', weight: 0.967566} },
-{ data: { source: 'GINM1', target: 'RCHY1', directed: 'false', weight: 0.9159860000000001} },
-{ data: { source: 'GINM1', target: 'CALCB', directed: 'false', weight: 0.8759600000000001} },
-{ data: { source: 'GINM1', target: 'PLEKHA5', directed: 'false', weight: 0.857978} },
-{ data: { source: 'INHBA', target: 'CALCB', directed: 'false', weight: 0.171414} },
-{ data: { source: 'INHBA', target: 'PLEKHA5', directed: 'false', weight: 0.151455} },
-{ data: { source: 'INHBA', target: 'RCHY1', directed: 'false', weight: 0.151455} },
-{ data: { source: 'RCHY1', target: 'CALCB', directed: 'false', weight: 0.151455} },
-{ data: { source: 'RCHY1', target: 'PLEKHA5', directed: 'false', weight: 0.133456} },
-{ data: { source: 'CALCB', target: 'PLEKHA5', directed: 'false', weight: 0.151455} }]},
+elements:{nodes: [{data: { id: 'GRWD1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQ67" }},
+{data: { id: 'RRP36', score: 4, href: "https://www.uniprot.org/uniprot/Q96EU6" }},
+{data: { id: 'IPO5', score: 5, href: "https://www.uniprot.org/uniprot/O00410" }},
+{data: { id: 'RO60', score: 5, href: "https://www.uniprot.org/uniprot/P10155" }}], 
+ edges: [{ data: { source: 'IPO5', target: 'GRWD1', directed: 'false', weight: 0.6185649999999999} },
+{ data: { source: 'IPO5', target: 'RO60', directed: 'false', weight: 0.0812327} },
+{ data: { source: 'GRWD1', target: 'RO60', directed: 'false', weight: 0.676473} },
+{ data: { source: 'GRWD1', target: 'RRP36', directed: 'false', weight: 0.310388} }]},
 
 style: [
     {
@@ -87,12 +78,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.56677
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>PLEKHA5
+    Complex Score (from Super.Complex) = 0.55751
     </section>
     </body>
     </html>

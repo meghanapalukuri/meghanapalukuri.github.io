@@ -29,15 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'JUND', score: 5, href: "https://www.uniprot.org/uniprot/P17535" }},
-{data: { id: 'JUNB', score: 5, href: "https://www.uniprot.org/uniprot/P17275" }},
-{data: { id: 'BATF3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NR55" }},
-{data: { id: 'FOS', score: 5, href: "https://www.uniprot.org/uniprot/P01100" }}], 
- edges: [{ data: { source: 'BATF3', target: 'JUND', directed: 'false', weight: 0.811241} },
-{ data: { source: 'BATF3', target: 'JUNB', directed: 'false', weight: 0.653433} },
-{ data: { source: 'JUND', target: 'JUNB', directed: 'false', weight: 0.864432} },
-{ data: { source: 'JUND', target: 'FOS', directed: 'false', weight: 0.7145630000000001} },
-{ data: { source: 'JUNB', target: 'FOS', directed: 'false', weight: 0.964181} }]},
+elements:{nodes: [{data: { id: 'DFFA', score: 5, href: "https://www.uniprot.org/uniprot/O00273" }},
+{data: { id: 'DFFB', score: 5, href: "https://www.uniprot.org/uniprot/O76075" }},
+{data: { id: 'TSPYL4', score: 4, href: "https://www.uniprot.org/uniprot/Q9UJ04" }}], 
+ edges: [{ data: { source: 'TSPYL4', target: 'DFFA', directed: 'false', weight: 0.779187} },
+{ data: { source: 'TSPYL4', target: 'DFFB', directed: 'false', weight: 0.117318} },
+{ data: { source: 'DFFA', target: 'DFFB', directed: 'false', weight: 0.9790639999999999} }]},
 
 style: [
     {
@@ -79,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77232
+    Complex Score (from Super.Complex) = 0.77180
     </section>
     </body>
     </html>

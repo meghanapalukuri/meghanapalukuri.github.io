@@ -29,12 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TCP10', score: 0 }},
-{data: { id: 'GRIPAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q4V328" }},
-{data: { id: 'TCP10L2', score: 1, href: "https://www.uniprot.org/uniprot/F5GYV4" }}], 
- edges: [{ data: { source: 'GRIPAP1', target: 'TCP10L2', directed: 'false', weight: 0.793308} },
-{ data: { source: 'GRIPAP1', target: 'TCP10', directed: 'false', weight: 0.140692} },
-{ data: { source: 'TCP10L2', target: 'TCP10', directed: 'false', weight: 0.980618} }]},
+elements:{nodes: [{data: { id: 'SIRT2', score: 5, href: "https://www.uniprot.org/uniprot/Q8IXJ6" }},
+{data: { id: 'MTDH', score: 5, href: "https://www.uniprot.org/uniprot/Q86UE4" }},
+{data: { id: 'RAB3GAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q15042" }},
+{data: { id: 'GPAM', score: 5, href: "https://www.uniprot.org/uniprot/Q9HCL2" }}], 
+ edges: [{ data: { source: 'MTDH', target: 'SIRT2', directed: 'false', weight: 0.6558350000000001} },
+{ data: { source: 'MTDH', target: 'GPAM', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'MTDH', target: 'RAB3GAP1', directed: 'false', weight: 0.0952728} },
+{ data: { source: 'GPAM', target: 'SIRT2', directed: 'false', weight: 0.964918} },
+{ data: { source: 'GPAM', target: 'RAB3GAP1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'SIRT2', target: 'RAB3GAP1', directed: 'false', weight: 0.9304969999999999} }]},
 
 style: [
     {
@@ -76,12 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77357
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>GRIPAP1
+    Complex Score (from Super.Complex) = 0.77336
     </section>
     </body>
     </html>

@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'HLA-DQB1', score: 5, href: "https://www.uniprot.org/uniprot/P01920" }},
-{data: { id: 'CNNM3', score: 5, href: "https://www.uniprot.org/uniprot/Q8NE01" }},
-{data: { id: 'CNNM1', score: 4, href: "https://www.uniprot.org/uniprot/Q9NRU3" }}], 
- edges: [{ data: { source: 'CNNM3', target: 'CNNM1', directed: 'false', weight: 0.41561800000000004} },
-{ data: { source: 'CNNM3', target: 'HLA-DQB1', directed: 'false', weight: 0.175861} },
-{ data: { source: 'CNNM1', target: 'HLA-DQB1', directed: 'false', weight: 0.26776300000000003} }]},
+elements:{nodes: [{data: { id: 'SLC30A7', score: 5, href: "https://www.uniprot.org/uniprot/Q8NEW0" }},
+{data: { id: 'SLC30A6', score: 4, href: "https://www.uniprot.org/uniprot/Q6NXT4" }},
+{data: { id: 'SLC30A5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAD4" }}], 
+ edges: [{ data: { source: 'SLC30A5', target: 'SLC30A6', directed: 'false', weight: 0.345713} },
+{ data: { source: 'SLC30A5', target: 'SLC30A7', directed: 'false', weight: 0.29496700000000003} },
+{ data: { source: 'SLC30A6', target: 'SLC30A7', directed: 'false', weight: 0.130385} }]},
 
 style: [
     {
@@ -76,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66434
+    Complex Score (from Super.Complex) = 0.65932
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>SLC30A7 SLC30A6
     </section>
     </body>
     </html>

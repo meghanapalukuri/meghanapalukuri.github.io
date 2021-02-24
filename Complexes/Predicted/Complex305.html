@@ -29,16 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SLC41A3', score: 5, href: "https://www.uniprot.org/uniprot/Q96GZ6" }},
-{data: { id: 'SLC43A1', score: 5, href: "https://www.uniprot.org/uniprot/O75387" }},
-{data: { id: 'ZACN', score: 5, href: "https://www.uniprot.org/uniprot/Q401N2" }},
-{data: { id: 'DPY19L4', score: 3, href: "https://www.uniprot.org/uniprot/Q7Z388" }}], 
- edges: [{ data: { source: 'ZACN', target: 'SLC41A3', directed: 'false', weight: 0.9185770000000001} },
-{ data: { source: 'ZACN', target: 'SLC43A1', directed: 'false', weight: 0.8899799999999999} },
-{ data: { source: 'ZACN', target: 'DPY19L4', directed: 'false', weight: 0.468113} },
-{ data: { source: 'DPY19L4', target: 'SLC43A1', directed: 'false', weight: 0.151455} },
-{ data: { source: 'DPY19L4', target: 'SLC41A3', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SLC43A1', target: 'SLC41A3', directed: 'false', weight: 0.171414} }]},
+elements:{nodes: [{data: { id: 'TLE4', score: 5, href: "https://www.uniprot.org/uniprot/Q04727" }},
+{data: { id: 'TLE1', score: 5, href: "https://www.uniprot.org/uniprot/Q04724" }},
+{data: { id: 'TBX20', score: 5, href: "https://www.uniprot.org/uniprot/Q9UMR3" }}], 
+ edges: [{ data: { source: 'TBX20', target: 'TLE4', directed: 'false', weight: 0.88481} },
+{ data: { source: 'TBX20', target: 'TLE1', directed: 'false', weight: 0.685321} },
+{ data: { source: 'TLE1', target: 'TLE4', directed: 'false', weight: 0.163688} }]},
 
 style: [
     {
@@ -80,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76724
+    Complex Score (from Super.Complex) = 0.76685
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>TLE1
     </section>
     </body>
     </html>

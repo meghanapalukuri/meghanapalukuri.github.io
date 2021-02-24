@@ -29,12 +29,19 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'VPS4A', score: 5, href: "https://www.uniprot.org/uniprot/Q9UN37" }},
-{data: { id: 'HNRNPH3', score: 5, href: "https://www.uniprot.org/uniprot/P31942" }},
-{data: { id: 'HMBS', score: 5, href: "https://www.uniprot.org/uniprot/P08397" }}], 
- edges: [{ data: { source: 'HMBS', target: 'HNRNPH3', directed: 'false', weight: 0.709562} },
-{ data: { source: 'HMBS', target: 'VPS4A', directed: 'false', weight: 0.0743525} },
-{ data: { source: 'HNRNPH3', target: 'VPS4A', directed: 'false', weight: 0.72877} }]},
+elements:{nodes: [{data: { id: 'TCF3', score: 5, href: "https://www.uniprot.org/uniprot/P15923" }},
+{data: { id: 'NEUROD1', score: 5, href: "https://www.uniprot.org/uniprot/Q13562" }},
+{data: { id: 'TCF4', score: 5, href: "https://www.uniprot.org/uniprot/P15884" }},
+{data: { id: 'ID1', score: 5, href: "https://www.uniprot.org/uniprot/P41134" }},
+{data: { id: 'TCF12', score: 5, href: "https://www.uniprot.org/uniprot/Q99081" }}], 
+ edges: [{ data: { source: 'TCF12', target: 'ID1', directed: 'false', weight: 0.9329209999999999} },
+{ data: { source: 'TCF12', target: 'NEUROD1', directed: 'false', weight: 0.8481559999999999} },
+{ data: { source: 'TCF12', target: 'TCF4', directed: 'false', weight: 0.714739} },
+{ data: { source: 'TCF12', target: 'TCF3', directed: 'false', weight: 0.631472} },
+{ data: { source: 'ID1', target: 'TCF3', directed: 'false', weight: 0.941651} },
+{ data: { source: 'NEUROD1', target: 'TCF4', directed: 'false', weight: 0.763899} },
+{ data: { source: 'NEUROD1', target: 'TCF3', directed: 'false', weight: 0.753492} },
+{ data: { source: 'TCF4', target: 'TCF3', directed: 'false', weight: 0.463714} }]},
 
 style: [
     {
@@ -76,7 +83,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.75499
+    Complex Score (from Super.Complex) = 0.75149
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>TCF12
     </section>
     </body>
     </html>

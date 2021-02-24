@@ -29,15 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RAD51D', score: 5, href: "https://www.uniprot.org/uniprot/O75771" }},
-{data: { id: 'NDUFAF5', score: 5, href: "https://www.uniprot.org/uniprot/Q5TEU4" }},
-{data: { id: 'XRCC2', score: 5, href: "https://www.uniprot.org/uniprot/O43543" }},
-{data: { id: 'RAD51B', score: 5, href: "https://www.uniprot.org/uniprot/O15315" }}], 
- edges: [{ data: { source: 'RAD51B', target: 'XRCC2', directed: 'false', weight: 0.755131} },
-{ data: { source: 'RAD51B', target: 'RAD51D', directed: 'false', weight: 0.151455} },
-{ data: { source: 'RAD51D', target: 'XRCC2', directed: 'false', weight: 0.931998} },
-{ data: { source: 'RAD51D', target: 'NDUFAF5', directed: 'false', weight: 0.06392719999999999} },
-{ data: { source: 'NDUFAF5', target: 'XRCC2', directed: 'false', weight: 0.8134819999999999} }]},
+elements:{nodes: [{data: { id: 'FAM3A', score: 4, href: "https://www.uniprot.org/uniprot/P98173" }},
+{data: { id: 'MFGE8', score: 5, href: "https://www.uniprot.org/uniprot/Q08431" }},
+{data: { id: 'ITGB5', score: 5, href: "https://www.uniprot.org/uniprot/P18084" }}], 
+ edges: [{ data: { source: 'ITGB5', target: 'MFGE8', directed: 'false', weight: 0.422306} },
+{ data: { source: 'ITGB5', target: 'FAM3A', directed: 'false', weight: 0.0809483} },
+{ data: { source: 'FAM3A', target: 'MFGE8', directed: 'false', weight: 0.280667} }]},
 
 style: [
     {
@@ -79,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66177
+    Complex Score (from Super.Complex) = 0.65849
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>MFGE8
     </section>
     </body>
     </html>

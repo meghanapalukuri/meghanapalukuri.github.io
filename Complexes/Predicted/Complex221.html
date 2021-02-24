@@ -29,15 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TASOR', score: 5, href: "https://www.uniprot.org/uniprot/Q9UK61" }},
-{data: { id: 'MPHOSPH8', score: 5, href: "https://www.uniprot.org/uniprot/Q99549" }},
-{data: { id: 'ZNF597', score: 4, href: "https://www.uniprot.org/uniprot/Q96LX8" }},
-{data: { id: 'TASOR2', score: 5, href: "https://www.uniprot.org/uniprot/Q5VWN6" }}], 
- edges: [{ data: { source: 'TASOR', target: 'MPHOSPH8', directed: 'false', weight: 0.8178850000000001} },
-{ data: { source: 'TASOR', target: 'TASOR2', directed: 'false', weight: 0.18832100000000002} },
-{ data: { source: 'TASOR2', target: 'ZNF597', directed: 'false', weight: 0.961757} },
-{ data: { source: 'TASOR2', target: 'MPHOSPH8', directed: 'false', weight: 0.8843850000000001} },
-{ data: { source: 'MPHOSPH8', target: 'ZNF597', directed: 'false', weight: 0.9825200000000001} }]},
+elements:{nodes: [{data: { id: 'CRKL', score: 5, href: "https://www.uniprot.org/uniprot/P46109" }},
+{data: { id: 'RAPGEF1', score: 5, href: "https://www.uniprot.org/uniprot/Q13905" }},
+{data: { id: 'C15orf54', score: 1, href: "https://www.uniprot.org/uniprot/Q8N8G6" }},
+{data: { id: 'PRAG1', score: 5, href: "https://www.uniprot.org/uniprot/Q86YV5" }}], 
+ edges: [{ data: { source: 'C15orf54', target: 'CRKL', directed: 'false', weight: 0.48613900000000004} },
+{ data: { source: 'C15orf54', target: 'PRAG1', directed: 'false', weight: 0.165074} },
+{ data: { source: 'C15orf54', target: 'RAPGEF1', directed: 'false', weight: 0.144297} },
+{ data: { source: 'PRAG1', target: 'CRKL', directed: 'false', weight: 0.9634590000000001} },
+{ data: { source: 'PRAG1', target: 'RAPGEF1', directed: 'false', weight: 0.144297} },
+{ data: { source: 'RAPGEF1', target: 'CRKL', directed: 'false', weight: 0.939994} }]},
 
 style: [
     {
@@ -79,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77197
+    Complex Score (from Super.Complex) = 0.77157
     </section>
     </body>
     </html>

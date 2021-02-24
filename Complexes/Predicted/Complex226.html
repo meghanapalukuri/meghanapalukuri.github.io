@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'METTL1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBP6" }},
-{data: { id: 'TRMT1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NXH9" }},
-{data: { id: 'AMPD2', score: 5, href: "https://www.uniprot.org/uniprot/Q01433" }}], 
- edges: [{ data: { source: 'METTL1', target: 'AMPD2', directed: 'false', weight: 0.6808069999999999} },
-{ data: { source: 'METTL1', target: 'TRMT1', directed: 'false', weight: 0.433179} },
-{ data: { source: 'AMPD2', target: 'TRMT1', directed: 'false', weight: 0.7113229999999999} }]},
+elements:{nodes: [{data: { id: 'C12orf45', score: 2, href: "https://www.uniprot.org/uniprot/Q8N5I9" }},
+{data: { id: 'CT55', score: 5, href: "https://www.uniprot.org/uniprot/Q8WUE5" }},
+{data: { id: 'UHRF1BP1L', score: 4, href: "https://www.uniprot.org/uniprot/A0JNW5" }}], 
+ edges: [{ data: { source: 'CT55', target: 'C12orf45', directed: 'false', weight: 0.91456} },
+{ data: { source: 'CT55', target: 'UHRF1BP1L', directed: 'false', weight: 0.8378639999999999} },
+{ data: { source: 'UHRF1BP1L', target: 'C12orf45', directed: 'false', weight: 0.114755} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77169
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>TRMT1
+    Complex Score (from Super.Complex) = 0.77125
     </section>
     </body>
     </html>

@@ -29,12 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MBL2', score: 5, href: "https://www.uniprot.org/uniprot/P11226" }},
-{data: { id: 'UAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q16222" }},
-{data: { id: 'SERPINC1', score: 0 }}], 
- edges: [{ data: { source: 'SERPINC1', target: 'UAP1', directed: 'false', weight: 0.48585900000000004} },
-{ data: { source: 'SERPINC1', target: 'MBL2', directed: 'false', weight: 0.101333} },
-{ data: { source: 'MBL2', target: 'UAP1', directed: 'false', weight: 0.436141} }]},
+elements:{nodes: [{data: { id: 'TSPAN3', score: 3, href: "https://www.uniprot.org/uniprot/O60637" }},
+{data: { id: 'RDH14', score: 5, href: "https://www.uniprot.org/uniprot/Q9HBH5" }},
+{data: { id: 'ARL17A', score: 4, href: "https://www.uniprot.org/uniprot/Q8IVW1" }},
+{data: { id: 'PI4K2A', score: 5, href: "https://www.uniprot.org/uniprot/Q9BTU6" }},
+{data: { id: 'EPHA5', score: 5, href: "https://www.uniprot.org/uniprot/P54756" }}], 
+ edges: [{ data: { source: 'RDH14', target: 'TSPAN3', directed: 'false', weight: 0.351585} },
+{ data: { source: 'RDH14', target: 'EPHA5', directed: 'false', weight: 0.133456} },
+{ data: { source: 'RDH14', target: 'PI4K2A', directed: 'false', weight: 0.123797} },
+{ data: { source: 'EPHA5', target: 'TSPAN3', directed: 'false', weight: 0.749365} },
+{ data: { source: 'EPHA5', target: 'ARL17A', directed: 'false', weight: 0.133456} },
+{ data: { source: 'EPHA5', target: 'PI4K2A', directed: 'false', weight: 0.123797} },
+{ data: { source: 'PI4K2A', target: 'TSPAN3', directed: 'false', weight: 0.579284} },
+{ data: { source: 'PI4K2A', target: 'ARL17A', directed: 'false', weight: 0.123797} },
+{ data: { source: 'ARL17A', target: 'TSPAN3', directed: 'false', weight: 0.301996} }]},
 
 style: [
     {
@@ -76,7 +84,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66351
+    Complex Score (from Super.Complex) = 0.65891
     </section>
     </body>
     </html>

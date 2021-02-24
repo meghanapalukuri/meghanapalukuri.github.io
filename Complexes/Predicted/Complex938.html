@@ -29,11 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ETFA', score: 5, href: "https://www.uniprot.org/uniprot/P13804" }},
-{data: { id: 'MPST', score: 5, href: "https://www.uniprot.org/uniprot/P25325" }},
-{data: { id: 'AKR1A1', score: 5, href: "https://www.uniprot.org/uniprot/P14550" }}], 
- edges: [{ data: { source: 'AKR1A1', target: 'MPST', directed: 'false', weight: 0.587206} },
-{ data: { source: 'ETFA', target: 'MPST', directed: 'false', weight: 0.619154} }]},
+elements:{nodes: [{data: { id: 'RPS17', score: 5, href: "https://www.uniprot.org/uniprot/P08708" }},
+{data: { id: 'HIST1H1D', score: 0 }},
+{data: { id: 'CCNB1IP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPC3" }}], 
+ edges: [{ data: { source: 'RPS17', target: 'HIST1H1D', directed: 'false', weight: 0.582805} },
+{ data: { source: 'HIST1H1D', target: 'CCNB1IP1', directed: 'false', weight: 0.331133} }]},
 
 style: [
     {
@@ -75,12 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53606
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>ETFA
+    Complex Score (from Super.Complex) = 0.52764
     </section>
     </body>
     </html>

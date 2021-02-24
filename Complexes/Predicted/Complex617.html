@@ -29,12 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PUM1', score: 5, href: "https://www.uniprot.org/uniprot/Q14671" }},
-{data: { id: 'HELZ', score: 5, href: "https://www.uniprot.org/uniprot/P42694" }},
-{data: { id: 'USP54', score: 5, href: "https://www.uniprot.org/uniprot/Q70EL1" }}], 
- edges: [{ data: { source: 'PUM1', target: 'HELZ', directed: 'false', weight: 0.300708} },
-{ data: { source: 'PUM1', target: 'USP54', directed: 'false', weight: 0.0815261} },
-{ data: { source: 'USP54', target: 'HELZ', directed: 'false', weight: 0.363892} }]},
+elements:{nodes: [{data: { id: 'ABCA7', score: 5, href: "https://www.uniprot.org/uniprot/Q8IZY2" }},
+{data: { id: 'HEXA', score: 5, href: "https://www.uniprot.org/uniprot/P06865" }},
+{data: { id: 'ARHGAP32', score: 5, href: "https://www.uniprot.org/uniprot/A7KAX9" }},
+{data: { id: 'ZNF286B', score: 3, href: "https://www.uniprot.org/uniprot/P0CG31" }},
+{data: { id: 'RET', score: 5, href: "https://www.uniprot.org/uniprot/A0A024R7T2" }}], 
+ edges: [{ data: { source: 'ABCA7', target: 'RET', directed: 'false', weight: 0.33265500000000003} },
+{ data: { source: 'ABCA7', target: 'ARHGAP32', directed: 'false', weight: 0.292026} },
+{ data: { source: 'ABCA7', target: 'ZNF286B', directed: 'false', weight: 0.189659} },
+{ data: { source: 'ABCA7', target: 'HEXA', directed: 'false', weight: 0.171006} },
+{ data: { source: 'HEXA', target: 'ZNF286B', directed: 'false', weight: 0.292026} },
+{ data: { source: 'HEXA', target: 'RET', directed: 'false', weight: 0.292026} },
+{ data: { source: 'ZNF286B', target: 'RET', directed: 'false', weight: 0.33265500000000003} },
+{ data: { source: 'ZNF286B', target: 'ARHGAP32', directed: 'false', weight: 0.171006} },
+{ data: { source: 'ARHGAP32', target: 'RET', directed: 'false', weight: 0.292026} }]},
 
 style: [
     {
@@ -76,12 +84,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65641
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>USP54
+    Complex Score (from Super.Complex) = 0.65004
     </section>
     </body>
     </html>

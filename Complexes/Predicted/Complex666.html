@@ -29,15 +29,34 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'KIAA0232', score: 2, href: "https://www.uniprot.org/uniprot/Q92628" }},
-{data: { id: 'HSPBAP1', score: 4, href: "https://www.uniprot.org/uniprot/Q96EW2" }},
-{data: { id: 'FOXD2', score: 5, href: "https://www.uniprot.org/uniprot/O60548" }},
-{data: { id: 'FOXD4L6', score: 2, href: "https://www.uniprot.org/uniprot/Q3SYB3" }}], 
- edges: [{ data: { source: 'FOXD2', target: 'FOXD4L6', directed: 'false', weight: 0.6264270000000001} },
-{ data: { source: 'FOXD2', target: 'HSPBAP1', directed: 'false', weight: 0.133456} },
-{ data: { source: 'KIAA0232', target: 'FOXD4L6', directed: 'false', weight: 0.435532} },
-{ data: { source: 'KIAA0232', target: 'HSPBAP1', directed: 'false', weight: 0.112499} },
-{ data: { source: 'FOXD4L6', target: 'HSPBAP1', directed: 'false', weight: 0.719233} }]},
+elements:{nodes: [{data: { id: 'MAGEA10', score: 3, href: "https://www.uniprot.org/uniprot/P43363" }},
+{data: { id: 'FOXJ2', score: 5, href: "https://www.uniprot.org/uniprot/Q9P0K8" }},
+{data: { id: 'FAM216A', score: 2, href: "https://www.uniprot.org/uniprot/Q8WUB2" }},
+{data: { id: 'MAGEA4', score: 5, href: "https://www.uniprot.org/uniprot/P43358" }},
+{data: { id: 'NCOA2', score: 5, href: "https://www.uniprot.org/uniprot/Q15596" }},
+{data: { id: 'QSER1', score: 3, href: "https://www.uniprot.org/uniprot/Q2KHR3" }},
+{data: { id: 'ERI1', score: 5, href: "https://www.uniprot.org/uniprot/Q8IV48" }},
+{data: { id: 'MAGEA9B', score: 1, href: "https://www.uniprot.org/uniprot/A0A075B794" }}], 
+ edges: [{ data: { source: 'QSER1', target: 'MAGEA10', directed: 'false', weight: 0.485458} },
+{ data: { source: 'QSER1', target: 'FOXJ2', directed: 'false', weight: 0.229616} },
+{ data: { source: 'QSER1', target: 'FAM216A', directed: 'false', weight: 0.229616} },
+{ data: { source: 'FAM216A', target: 'MAGEA10', directed: 'false', weight: 0.999934} },
+{ data: { source: 'FAM216A', target: 'FOXJ2', directed: 'false', weight: 0.373051} },
+{ data: { source: 'FAM216A', target: 'NCOA2', directed: 'false', weight: 0.284598} },
+{ data: { source: 'FAM216A', target: 'ERI1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'FAM216A', target: 'MAGEA9B', directed: 'false', weight: 0.133451} },
+{ data: { source: 'MAGEA10', target: 'FOXJ2', directed: 'false', weight: 0.9998549999999999} },
+{ data: { source: 'MAGEA10', target: 'NCOA2', directed: 'false', weight: 0.9976010000000001} },
+{ data: { source: 'MAGEA10', target: 'ERI1', directed: 'false', weight: 0.989351} },
+{ data: { source: 'MAGEA10', target: 'MAGEA4', directed: 'false', weight: 0.965569} },
+{ data: { source: 'MAGEA10', target: 'MAGEA9B', directed: 'false', weight: 0.784668} },
+{ data: { source: 'ERI1', target: 'FOXJ2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ERI1', target: 'NCOA2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ERI1', target: 'MAGEA9B', directed: 'false', weight: 0.133451} },
+{ data: { source: 'MAGEA4', target: 'MAGEA9B', directed: 'false', weight: 0.9174329999999999} },
+{ data: { source: 'MAGEA9B', target: 'FOXJ2', directed: 'false', weight: 0.133451} },
+{ data: { source: 'MAGEA9B', target: 'NCOA2', directed: 'false', weight: 0.117318} },
+{ data: { source: 'NCOA2', target: 'FOXJ2', directed: 'false', weight: 0.284598} }]},
 
 style: [
     {
@@ -79,7 +98,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.63228
+    Complex Score (from Super.Complex) = 0.62553
     </section>
     </body>
     </html>

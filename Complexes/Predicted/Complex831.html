@@ -29,18 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PLXNB2', score: 5, href: "https://www.uniprot.org/uniprot/O15031" }},
-{data: { id: 'CACNA2D2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NY47" }},
-{data: { id: 'RHOD', score: 5, href: "https://www.uniprot.org/uniprot/O00212" }},
-{data: { id: 'DAAM1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y4D1" }},
-{data: { id: 'C1orf198', score: 3, href: "https://www.uniprot.org/uniprot/Q9H425" }}], 
- edges: [{ data: { source: 'PLXNB2', target: 'RHOD', directed: 'false', weight: 0.457848} },
-{ data: { source: 'PLXNB2', target: 'CACNA2D2', directed: 'false', weight: 0.383635} },
-{ data: { source: 'PLXNB2', target: 'C1orf198', directed: 'false', weight: 0.0938091} },
-{ data: { source: 'PLXNB2', target: 'DAAM1', directed: 'false', weight: 0.0621592} },
-{ data: { source: 'C1orf198', target: 'RHOD', directed: 'false', weight: 0.573116} },
-{ data: { source: 'C1orf198', target: 'DAAM1', directed: 'false', weight: 0.08909589999999999} },
-{ data: { source: 'RHOD', target: 'DAAM1', directed: 'false', weight: 0.5138520000000001} }]},
+elements:{nodes: [{data: { id: 'CTNNA2', score: 5, href: "https://www.uniprot.org/uniprot/P26232" }},
+{data: { id: 'CTNNB1', score: 5, href: "https://www.uniprot.org/uniprot/A0A024R2Q3" }},
+{data: { id: 'CTNNA1', score: 5, href: "https://www.uniprot.org/uniprot/P35221" }},
+{data: { id: 'CDH10', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6N8" }},
+{data: { id: 'CDH1', score: 5, href: "https://www.uniprot.org/uniprot/P12830" }}], 
+ edges: [{ data: { source: 'CTNNB1', target: 'CTNNA1', directed: 'false', weight: 0.998742} },
+{ data: { source: 'CTNNB1', target: 'CDH10', directed: 'false', weight: 0.9932620000000001} },
+{ data: { source: 'CTNNB1', target: 'CTNNA2', directed: 'false', weight: 0.939585} },
+{ data: { source: 'CTNNB1', target: 'CDH1', directed: 'false', weight: 0.889547} },
+{ data: { source: 'CDH10', target: 'CDH1', directed: 'false', weight: 0.237166} },
+{ data: { source: 'CDH10', target: 'CTNNA1', directed: 'false', weight: 0.142378} },
+{ data: { source: 'CTNNA2', target: 'CTNNA1', directed: 'false', weight: 0.00486286} }]},
 
 style: [
     {
@@ -82,7 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.56721
+    Complex Score (from Super.Complex) = 0.55769
     </section>
     </body>
     </html>

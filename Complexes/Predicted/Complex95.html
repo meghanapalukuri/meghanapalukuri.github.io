@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MAT2B', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZL9" }},
-{data: { id: 'MAT1A', score: 5, href: "https://www.uniprot.org/uniprot/Q00266" }},
-{data: { id: 'MAT2A', score: 5, href: "https://www.uniprot.org/uniprot/P31153" }}], 
- edges: [{ data: { source: 'MAT2A', target: 'MAT2B', directed: 'false', weight: 0.878325} },
-{ data: { source: 'MAT2A', target: 'MAT1A', directed: 'false', weight: 0.853417} },
-{ data: { source: 'MAT1A', target: 'MAT2B', directed: 'false', weight: 0.7502909999999999} }]},
+elements:{nodes: [{data: { id: 'KCNIP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZI2" }},
+{data: { id: 'KCNIP4', score: 5, href: "https://www.uniprot.org/uniprot/Q6PIL6" }},
+{data: { id: 'KCNIP2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NS61" }}], 
+ edges: [{ data: { source: 'KCNIP1', target: 'KCNIP4', directed: 'false', weight: 0.980333} },
+{ data: { source: 'KCNIP1', target: 'KCNIP2', directed: 'false', weight: 0.641536} },
+{ data: { source: 'KCNIP2', target: 'KCNIP4', directed: 'false', weight: 0.751804} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.79737
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>MAT2B
+    Complex Score (from Super.Complex) = 0.79301
     </section>
     </body>
     </html>

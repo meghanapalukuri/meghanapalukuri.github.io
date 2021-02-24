@@ -29,25 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RCAN3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKA8" }},
-{data: { id: 'SIK3', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2K2" }},
-{data: { id: 'PPP3CA', score: 5, href: "https://www.uniprot.org/uniprot/A0A0S2Z4C6" }},
-{data: { id: 'RCAN2', score: 4, href: "https://www.uniprot.org/uniprot/Q14206" }},
-{data: { id: 'PPP3CC', score: 5, href: "https://www.uniprot.org/uniprot/P48454" }},
-{data: { id: 'PPP3CB', score: 5, href: "https://www.uniprot.org/uniprot/P16298" }}], 
- edges: [{ data: { source: 'PPP3CA', target: 'RCAN3', directed: 'false', weight: 0.41858199999999995} },
-{ data: { source: 'PPP3CA', target: 'PPP3CB', directed: 'false', weight: 0.355147} },
-{ data: { source: 'PPP3CA', target: 'RCAN2', directed: 'false', weight: 0.319637} },
-{ data: { source: 'PPP3CA', target: 'PPP3CC', directed: 'false', weight: 0.205204} },
-{ data: { source: 'PPP3CA', target: 'SIK3', directed: 'false', weight: 0.19629100000000002} },
-{ data: { source: 'SIK3', target: 'PPP3CC', directed: 'false', weight: 0.622642} },
-{ data: { source: 'SIK3', target: 'RCAN3', directed: 'false', weight: 0.28781100000000004} },
-{ data: { source: 'SIK3', target: 'PPP3CB', directed: 'false', weight: 0.09685880000000001} },
-{ data: { source: 'RCAN3', target: 'PPP3CC', directed: 'false', weight: 0.748009} },
-{ data: { source: 'RCAN3', target: 'PPP3CB', directed: 'false', weight: 0.7437239999999999} },
-{ data: { source: 'PPP3CB', target: 'PPP3CC', directed: 'false', weight: 0.5} },
-{ data: { source: 'PPP3CB', target: 'RCAN2', directed: 'false', weight: 0.301571} },
-{ data: { source: 'RCAN2', target: 'PPP3CC', directed: 'false', weight: 0.31799499999999997} }]},
+elements:{nodes: [{data: { id: 'TMEM131', score: 3, href: "https://www.uniprot.org/uniprot/Q92545" }},
+{data: { id: 'ATF6', score: 5, href: "https://www.uniprot.org/uniprot/P18850" }},
+{data: { id: 'TTC17', score: 5, href: "https://www.uniprot.org/uniprot/Q96AE7" }}], 
+ edges: [{ data: { source: 'TMEM131', target: 'TTC17', directed: 'false', weight: 0.399592} },
+{ data: { source: 'TMEM131', target: 'ATF6', directed: 'false', weight: 0.281457} },
+{ data: { source: 'TTC17', target: 'ATF6', directed: 'false', weight: 0.0741446} }]},
 
 style: [
     {
@@ -89,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65982
+    Complex Score (from Super.Complex) = 0.65702
     </section>
     </body>
     </html>

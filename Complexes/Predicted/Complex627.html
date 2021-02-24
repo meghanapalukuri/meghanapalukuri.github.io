@@ -29,19 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ELOC', score: 5, href: "https://www.uniprot.org/uniprot/Q15369" }},
-{data: { id: 'OGDHL', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULD0" }},
-{data: { id: 'CUL5', score: 5, href: "https://www.uniprot.org/uniprot/Q93034" }},
-{data: { id: 'ASB9', score: 5, href: "https://www.uniprot.org/uniprot/Q96DX5" }},
-{data: { id: 'ELOB', score: 5, href: "https://www.uniprot.org/uniprot/Q15370" }}], 
- edges: [{ data: { source: 'CUL5', target: 'ELOC', directed: 'false', weight: 0.909113} },
-{ data: { source: 'CUL5', target: 'ELOB', directed: 'false', weight: 0.68042} },
-{ data: { source: 'CUL5', target: 'ASB9', directed: 'false', weight: 0.23909499999999997} },
-{ data: { source: 'OGDHL', target: 'ELOB', directed: 'false', weight: 0.554299} },
-{ data: { source: 'OGDHL', target: 'ELOC', directed: 'false', weight: 0.021366299999999998} },
-{ data: { source: 'ELOC', target: 'ELOB', directed: 'false', weight: 0.999216} },
-{ data: { source: 'ELOC', target: 'ASB9', directed: 'false', weight: 0.5640069999999999} },
-{ data: { source: 'ELOB', target: 'ASB9', directed: 'false', weight: 0.28641} }]},
+elements:{nodes: [{data: { id: 'MAP11', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVR3" }},
+{data: { id: 'BCL2L14', score: 5, href: "https://www.uniprot.org/uniprot/Q9BZR8" }},
+{data: { id: 'TRAPPC6B', score: 5, href: "https://www.uniprot.org/uniprot/Q86SZ2" }},
+{data: { id: 'TRAPPC9', score: 5, href: "https://www.uniprot.org/uniprot/Q96Q05" }}], 
+ edges: [{ data: { source: 'TRAPPC6B', target: 'BCL2L14', directed: 'false', weight: 0.9188120000000001} },
+{ data: { source: 'TRAPPC6B', target: 'MAP11', directed: 'false', weight: 0.133456} },
+{ data: { source: 'TRAPPC6B', target: 'TRAPPC9', directed: 'false', weight: 0.102922} },
+{ data: { source: 'TRAPPC9', target: 'BCL2L14', directed: 'false', weight: 0.41198999999999997} },
+{ data: { source: 'MAP11', target: 'BCL2L14', directed: 'false', weight: 0.804624} }]},
 
 style: [
     {
@@ -83,12 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65144
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        2 interacting protein(s): <br>ELOC ELOB
+    Complex Score (from Super.Complex) = 0.64810
     </section>
     </body>
     </html>

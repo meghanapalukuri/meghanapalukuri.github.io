@@ -29,18 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'COX5B', score: 5, href: "https://www.uniprot.org/uniprot/P10606" }},
-{data: { id: 'FAU', score: 5, href: "https://www.uniprot.org/uniprot/P62861" }},
-{data: { id: 'RPS12', score: 5, href: "https://www.uniprot.org/uniprot/P25398" }},
-{data: { id: 'RPL13A', score: 5, href: "https://www.uniprot.org/uniprot/P40429" }},
-{data: { id: 'RPL36', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3U8" }}], 
- edges: [{ data: { source: 'FAU', target: 'RPL36', directed: 'false', weight: 0.999991} },
-{ data: { source: 'FAU', target: 'RPS12', directed: 'false', weight: 0.99374} },
-{ data: { source: 'FAU', target: 'RPL13A', directed: 'false', weight: 0.9759059999999999} },
-{ data: { source: 'COX5B', target: 'RPS12', directed: 'false', weight: 0.30086999999999997} },
-{ data: { source: 'RPL36', target: 'RPL13A', directed: 'false', weight: 1.0} },
-{ data: { source: 'RPL36', target: 'RPS12', directed: 'false', weight: 0.9999969999999999} },
-{ data: { source: 'RPL13A', target: 'RPS12', directed: 'false', weight: 0.9961639999999999} }]},
+elements:{nodes: [{data: { id: 'GRIPAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q4V328" }},
+{data: { id: 'TCP10L2', score: 1, href: "https://www.uniprot.org/uniprot/F5GYV4" }},
+{data: { id: 'TCP10', score: 0 }}], 
+ edges: [{ data: { source: 'TCP10', target: 'TCP10L2', directed: 'false', weight: 0.980618} },
+{ data: { source: 'TCP10', target: 'GRIPAP1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'GRIPAP1', target: 'TCP10L2', directed: 'false', weight: 0.793308} }]},
 
 style: [
     {
@@ -82,12 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77378
+    Complex Score (from Super.Complex) = 0.77357
         <br> 
         <br>
         Connection to SARS-COV2: 
         <br>
-        1 interacting protein(s): <br>RPL36
+        1 interacting protein(s): <br>GRIPAP1
     </section>
     </body>
     </html>

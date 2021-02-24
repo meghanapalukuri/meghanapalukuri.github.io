@@ -29,26 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ZNF770', score: 3, href: "https://www.uniprot.org/uniprot/Q6IQ21" }},
-{data: { id: 'ZBTB21', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULJ3" }},
-{data: { id: 'ZNF845', score: 3, href: "https://www.uniprot.org/uniprot/Q96IR2" }},
-{data: { id: 'ZNF574', score: 5, href: "https://www.uniprot.org/uniprot/Q6ZN55" }},
-{data: { id: 'ZNF445', score: 5, href: "https://www.uniprot.org/uniprot/P59923" }},
-{data: { id: 'SET', score: 5, href: "https://www.uniprot.org/uniprot/Q01105" }},
-{data: { id: 'IKZF5', score: 5, href: "https://www.uniprot.org/uniprot/Q9H5V7" }}], 
- edges: [{ data: { source: 'ZNF574', target: 'ZNF770', directed: 'false', weight: 0.691844} },
-{ data: { source: 'ZNF574', target: 'SET', directed: 'false', weight: 0.5667840000000001} },
-{ data: { source: 'ZNF770', target: 'SET', directed: 'false', weight: 0.7035060000000001} },
-{ data: { source: 'IKZF5', target: 'SET', directed: 'false', weight: 0.838254} },
-{ data: { source: 'IKZF5', target: 'ZNF845', directed: 'false', weight: 0.144297} },
-{ data: { source: 'IKZF5', target: 'ZBTB21', directed: 'false', weight: 0.144297} },
-{ data: { source: 'IKZF5', target: 'ZNF445', directed: 'false', weight: 0.144297} },
-{ data: { source: 'SET', target: 'ZNF445', directed: 'false', weight: 0.890706} },
-{ data: { source: 'SET', target: 'ZBTB21', directed: 'false', weight: 0.816756} },
-{ data: { source: 'SET', target: 'ZNF845', directed: 'false', weight: 0.633113} },
-{ data: { source: 'ZNF445', target: 'ZNF845', directed: 'false', weight: 0.125749} },
-{ data: { source: 'ZNF445', target: 'ZBTB21', directed: 'false', weight: 0.125749} },
-{ data: { source: 'ZBTB21', target: 'ZNF845', directed: 'false', weight: 0.125749} }]},
+elements:{nodes: [{data: { id: 'TXNDC15', score: 5, href: "https://www.uniprot.org/uniprot/Q96J42" }},
+{data: { id: 'PIGN', score: 5, href: "https://www.uniprot.org/uniprot/O95427" }},
+{data: { id: 'MARCH6', score: 0 }}], 
+ edges: [{ data: { source: 'MARCH6', target: 'TXNDC15', directed: 'false', weight: 0.56824} },
+{ data: { source: 'PIGN', target: 'TXNDC15', directed: 'false', weight: 0.580974} }]},
 
 style: [
     {
@@ -90,7 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.54539
+    Complex Score (from Super.Complex) = 0.53623
     </section>
     </body>
     </html>

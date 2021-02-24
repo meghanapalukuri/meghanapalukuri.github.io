@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MON1A', score: 4, href: "https://www.uniprot.org/uniprot/Q86VX9" }},
-{data: { id: 'DNAAF3', score: 4, href: "https://www.uniprot.org/uniprot/Q8N9W5" }},
-{data: { id: 'RMC1', score: 5, href: "https://www.uniprot.org/uniprot/Q96DM3" }},
-{data: { id: 'SP6', score: 3, href: "https://www.uniprot.org/uniprot/Q3SY56" }}], 
- edges: [{ data: { source: 'DNAAF3', target: 'SP6', directed: 'false', weight: 0.9791479999999999} },
-{ data: { source: 'DNAAF3', target: 'MON1A', directed: 'false', weight: 0.171414} },
-{ data: { source: 'DNAAF3', target: 'RMC1', directed: 'false', weight: 0.140692} },
-{ data: { source: 'SP6', target: 'MON1A', directed: 'false', weight: 0.985253} },
-{ data: { source: 'SP6', target: 'RMC1', directed: 'false', weight: 0.931522} },
-{ data: { source: 'MON1A', target: 'RMC1', directed: 'false', weight: 0.140692} }]},
+elements:{nodes: [{data: { id: 'SMAD2', score: 5, href: "https://www.uniprot.org/uniprot/Q15796" }},
+{data: { id: 'SMAD3', score: 5, href: "https://www.uniprot.org/uniprot/A0A024R5Z3" }},
+{data: { id: 'LEMD3', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2U8" }},
+{data: { id: 'SMAD9', score: 5, href: "https://www.uniprot.org/uniprot/O15198" }}], 
+ edges: [{ data: { source: 'SMAD2', target: 'SMAD3', directed: 'false', weight: 0.987474} },
+{ data: { source: 'SMAD2', target: 'SMAD9', directed: 'false', weight: 0.133456} },
+{ data: { source: 'SMAD2', target: 'LEMD3', directed: 'false', weight: 0.0833615} },
+{ data: { source: 'SMAD3', target: 'SMAD9', directed: 'false', weight: 0.984751} },
+{ data: { source: 'SMAD3', target: 'LEMD3', directed: 'false', weight: 0.715896} },
+{ data: { source: 'LEMD3', target: 'SMAD9', directed: 'false', weight: 0.186304} }]},
 
 style: [
     {
@@ -80,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.71222
+    Complex Score (from Super.Complex) = 0.70482
     </section>
     </body>
     </html>

@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CHCHD4', score: 5, href: "https://www.uniprot.org/uniprot/Q8N4Q1" }},
-{data: { id: 'TOR1AIP1', score: 5, href: "https://www.uniprot.org/uniprot/Q5JTV8" }},
-{data: { id: 'MREG', score: 5, href: "https://www.uniprot.org/uniprot/Q8N565" }}], 
- edges: [{ data: { source: 'MREG', target: 'TOR1AIP1', directed: 'false', weight: 0.5172439999999999} },
-{ data: { source: 'MREG', target: 'CHCHD4', directed: 'false', weight: 0.109293} },
-{ data: { source: 'TOR1AIP1', target: 'CHCHD4', directed: 'false', weight: 0.710132} }]},
+elements:{nodes: [{data: { id: 'DPP6', score: 5, href: "https://www.uniprot.org/uniprot/P42658" }},
+{data: { id: 'CLPB', score: 5, href: "https://www.uniprot.org/uniprot/Q9H078" }},
+{data: { id: 'HAX1', score: 5, href: "https://www.uniprot.org/uniprot/O00165" }}], 
+ edges: [{ data: { source: 'HAX1', target: 'CLPB', directed: 'false', weight: 0.762718} },
+{ data: { source: 'HAX1', target: 'DPP6', directed: 'false', weight: 0.484108} },
+{ data: { source: 'CLPB', target: 'DPP6', directed: 'false', weight: 0.102922} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.68414
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>TOR1AIP1
+    Complex Score (from Super.Complex) = 0.68050
     </section>
     </body>
     </html>

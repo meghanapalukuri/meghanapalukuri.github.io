@@ -29,12 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'UHRF1BP1L', score: 4, href: "https://www.uniprot.org/uniprot/A0JNW5" }},
-{data: { id: 'C12orf45', score: 2, href: "https://www.uniprot.org/uniprot/Q8N5I9" }},
-{data: { id: 'CT55', score: 5, href: "https://www.uniprot.org/uniprot/Q8WUE5" }}], 
- edges: [{ data: { source: 'C12orf45', target: 'CT55', directed: 'false', weight: 0.91456} },
-{ data: { source: 'C12orf45', target: 'UHRF1BP1L', directed: 'false', weight: 0.114755} },
-{ data: { source: 'CT55', target: 'UHRF1BP1L', directed: 'false', weight: 0.8378639999999999} }]},
+elements:{nodes: [{data: { id: 'KCTD15', score: 5, href: "https://www.uniprot.org/uniprot/Q96SI1" }},
+{data: { id: 'PPRC1', score: 5, href: "https://www.uniprot.org/uniprot/Q5VV67" }},
+{data: { id: 'CA10', score: 3, href: "https://www.uniprot.org/uniprot/Q9NS85" }},
+{data: { id: 'PIAS4', score: 5, href: "https://www.uniprot.org/uniprot/Q8N2W9" }}], 
+ edges: [{ data: { source: 'KCTD15', target: 'CA10', directed: 'false', weight: 0.49291} },
+{ data: { source: 'KCTD15', target: 'PIAS4', directed: 'false', weight: 0.171414} },
+{ data: { source: 'KCTD15', target: 'PPRC1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PIAS4', target: 'CA10', directed: 'false', weight: 0.985661} },
+{ data: { source: 'PIAS4', target: 'PPRC1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'PPRC1', target: 'CA10', directed: 'false', weight: 0.891602} }]},
 
 style: [
     {
@@ -76,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77125
+    Complex Score (from Super.Complex) = 0.77071
     </section>
     </body>
     </html>

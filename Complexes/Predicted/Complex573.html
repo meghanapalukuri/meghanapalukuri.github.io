@@ -29,12 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SLC25A29', score: 5, href: "https://www.uniprot.org/uniprot/Q8N8R3" }},
-{data: { id: 'SEC24A', score: 5, href: "https://www.uniprot.org/uniprot/O95486" }},
-{data: { id: 'TRMT1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NXH9" }}], 
- edges: [{ data: { source: 'SLC25A29', target: 'TRMT1', directed: 'false', weight: 0.32416300000000003} },
-{ data: { source: 'SLC25A29', target: 'SEC24A', directed: 'false', weight: 0.0860789} },
-{ data: { source: 'TRMT1', target: 'SEC24A', directed: 'false', weight: 0.633968} }]},
+elements:{nodes: [{data: { id: 'KPNA1', score: 5, href: "https://www.uniprot.org/uniprot/P52294" }},
+{data: { id: 'KPNA6', score: 5, href: "https://www.uniprot.org/uniprot/O60684" }},
+{data: { id: 'IPO5', score: 5, href: "https://www.uniprot.org/uniprot/O00410" }},
+{data: { id: 'RANBP6', score: 4, href: "https://www.uniprot.org/uniprot/O60518" }}], 
+ edges: [{ data: { source: 'RANBP6', target: 'KPNA6', directed: 'false', weight: 0.697757} },
+{ data: { source: 'RANBP6', target: 'IPO5', directed: 'false', weight: 0.39718000000000003} },
+{ data: { source: 'KPNA6', target: 'KPNA1', directed: 'false', weight: 0.7083079999999999} },
+{ data: { source: 'KPNA6', target: 'IPO5', directed: 'false', weight: 0.419707} },
+{ data: { source: 'IPO5', target: 'KPNA1', directed: 'false', weight: 0.7065859999999999} }]},
 
 style: [
     {
@@ -76,12 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66752
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>TRMT1
+    Complex Score (from Super.Complex) = 0.66505
     </section>
     </body>
     </html>

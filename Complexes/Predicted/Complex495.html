@@ -29,20 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SPATA2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UM82" }},
-{data: { id: 'ZNF282', score: 5, href: "https://www.uniprot.org/uniprot/Q9UDV7" }},
-{data: { id: 'KIF7', score: 5, href: "https://www.uniprot.org/uniprot/Q2M1P5" }},
-{data: { id: 'FGL2', score: 5, href: "https://www.uniprot.org/uniprot/Q14314" }},
-{data: { id: 'CYLD', score: 5, href: "https://www.uniprot.org/uniprot/Q9NQC7" }}], 
- edges: [{ data: { source: 'KIF7', target: 'FGL2', directed: 'false', weight: 0.505458} },
-{ data: { source: 'KIF7', target: 'SPATA2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'KIF7', target: 'ZNF282', directed: 'false', weight: 0.151455} },
-{ data: { source: 'CYLD', target: 'FGL2', directed: 'false', weight: 0.853147} },
-{ data: { source: 'CYLD', target: 'SPATA2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'CYLD', target: 'ZNF282', directed: 'false', weight: 0.151455} },
-{ data: { source: 'ZNF282', target: 'FGL2', directed: 'false', weight: 0.917507} },
-{ data: { source: 'ZNF282', target: 'SPATA2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'FGL2', target: 'SPATA2', directed: 'false', weight: 0.9860459999999999} }]},
+elements:{nodes: [{data: { id: 'FAM49B', score: 2, href: "https://www.uniprot.org/uniprot/A0A024R9G4" }},
+{data: { id: 'BLVRB', score: 5, href: "https://www.uniprot.org/uniprot/P30043" }},
+{data: { id: 'RAC1', score: 5, href: "https://www.uniprot.org/uniprot/P63000" }}], 
+ edges: [{ data: { source: 'FAM49B', target: 'RAC1', directed: 'false', weight: 0.79518} },
+{ data: { source: 'FAM49B', target: 'BLVRB', directed: 'false', weight: 0.106099} },
+{ data: { source: 'RAC1', target: 'BLVRB', directed: 'false', weight: 0.549967} }]},
 
 style: [
     {
@@ -84,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.69418
+    Complex Score (from Super.Complex) = 0.68487
     </section>
     </body>
     </html>

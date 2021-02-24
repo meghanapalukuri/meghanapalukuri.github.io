@@ -29,12 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MORC2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6X9" }},
-{data: { id: 'MORC1', score: 5, href: "https://www.uniprot.org/uniprot/Q86VD1" }},
-{data: { id: 'HERC1', score: 5, href: "https://www.uniprot.org/uniprot/Q15751" }}], 
- edges: [{ data: { source: 'MORC1', target: 'MORC2', directed: 'false', weight: 0.903148} },
-{ data: { source: 'MORC1', target: 'HERC1', directed: 'false', weight: 0.382006} },
-{ data: { source: 'MORC2', target: 'HERC1', directed: 'false', weight: 0.0881212} }]},
+elements:{nodes: [{data: { id: 'ABHD16A', score: 5, href: "https://www.uniprot.org/uniprot/O95870" }},
+{data: { id: 'HTR3C', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXA8" }},
+{data: { id: 'SEC11C', score: 5, href: "https://www.uniprot.org/uniprot/Q9BY50" }},
+{data: { id: 'METTL25', score: 2, href: "https://www.uniprot.org/uniprot/Q8N6Q8" }}], 
+ edges: [{ data: { source: 'SEC11C', target: 'HTR3C', directed: 'false', weight: 0.559121} },
+{ data: { source: 'SEC11C', target: 'METTL25', directed: 'false', weight: 0.140692} },
+{ data: { source: 'SEC11C', target: 'ABHD16A', directed: 'false', weight: 0.123797} },
+{ data: { source: 'ABHD16A', target: 'HTR3C', directed: 'false', weight: 0.6124350000000001} },
+{ data: { source: 'ABHD16A', target: 'METTL25', directed: 'false', weight: 0.151455} },
+{ data: { source: 'HTR3C', target: 'METTL25', directed: 'false', weight: 0.5660390000000001} }]},
 
 style: [
     {
@@ -76,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.68397
+    Complex Score (from Super.Complex) = 0.68042
     </section>
     </body>
     </html>

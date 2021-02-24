@@ -29,12 +29,25 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ISOC2', score: 3, href: "https://www.uniprot.org/uniprot/Q96AB3" }},
-{data: { id: 'TXNIP', score: 5, href: "https://www.uniprot.org/uniprot/Q9H3M7" }},
-{data: { id: 'IL12RB1', score: 5, href: "https://www.uniprot.org/uniprot/P42701" }}], 
- edges: [{ data: { source: 'ISOC2', target: 'IL12RB1', directed: 'false', weight: 0.357605} },
-{ data: { source: 'ISOC2', target: 'TXNIP', directed: 'false', weight: 0.171414} },
-{ data: { source: 'TXNIP', target: 'IL12RB1', directed: 'false', weight: 0.358612} }]},
+elements:{nodes: [{data: { id: 'RCAN2', score: 4, href: "https://www.uniprot.org/uniprot/Q14206" }},
+{data: { id: 'PPP3CC', score: 5, href: "https://www.uniprot.org/uniprot/P48454" }},
+{data: { id: 'RCAN3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKA8" }},
+{data: { id: 'SIK3', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2K2" }},
+{data: { id: 'PPP3CA', score: 5, href: "https://www.uniprot.org/uniprot/A0A0S2Z4C6" }},
+{data: { id: 'PPP3CB', score: 5, href: "https://www.uniprot.org/uniprot/P16298" }}], 
+ edges: [{ data: { source: 'RCAN3', target: 'PPP3CC', directed: 'false', weight: 0.748009} },
+{ data: { source: 'RCAN3', target: 'PPP3CB', directed: 'false', weight: 0.7437239999999999} },
+{ data: { source: 'RCAN3', target: 'PPP3CA', directed: 'false', weight: 0.41858199999999995} },
+{ data: { source: 'RCAN3', target: 'SIK3', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'RCAN2', target: 'PPP3CA', directed: 'false', weight: 0.319637} },
+{ data: { source: 'RCAN2', target: 'PPP3CC', directed: 'false', weight: 0.31799499999999997} },
+{ data: { source: 'RCAN2', target: 'PPP3CB', directed: 'false', weight: 0.301571} },
+{ data: { source: 'PPP3CA', target: 'PPP3CB', directed: 'false', weight: 0.355147} },
+{ data: { source: 'PPP3CA', target: 'PPP3CC', directed: 'false', weight: 0.205204} },
+{ data: { source: 'PPP3CA', target: 'SIK3', directed: 'false', weight: 0.19629100000000002} },
+{ data: { source: 'SIK3', target: 'PPP3CC', directed: 'false', weight: 0.622642} },
+{ data: { source: 'SIK3', target: 'PPP3CB', directed: 'false', weight: 0.09685880000000001} },
+{ data: { source: 'PPP3CB', target: 'PPP3CC', directed: 'false', weight: 0.5} }]},
 
 style: [
     {
@@ -76,7 +89,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66453
+    Complex Score (from Super.Complex) = 0.65982
     </section>
     </body>
     </html>

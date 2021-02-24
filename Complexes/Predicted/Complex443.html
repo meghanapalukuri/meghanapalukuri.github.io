@@ -29,21 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'USP51', score: 5, href: "https://www.uniprot.org/uniprot/Q70EK9" }},
-{data: { id: 'PRMT2', score: 5, href: "https://www.uniprot.org/uniprot/P55345" }},
-{data: { id: 'L3MBTL3', score: 5, href: "https://www.uniprot.org/uniprot/Q96JM7" }},
-{data: { id: 'HTT', score: 5, href: "https://www.uniprot.org/uniprot/P42858" }},
-{data: { id: 'SHANK3', score: 5, href: "https://www.uniprot.org/uniprot/A0A0U1RR93" }}], 
- edges: [{ data: { source: 'USP51', target: 'PRMT2', directed: 'false', weight: 0.964852} },
-{ data: { source: 'USP51', target: 'SHANK3', directed: 'false', weight: 0.171414} },
-{ data: { source: 'USP51', target: 'L3MBTL3', directed: 'false', weight: 0.151455} },
-{ data: { source: 'USP51', target: 'HTT', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SHANK3', target: 'PRMT2', directed: 'false', weight: 0.9731559999999999} },
-{ data: { source: 'SHANK3', target: 'HTT', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SHANK3', target: 'L3MBTL3', directed: 'false', weight: 0.151455} },
-{ data: { source: 'PRMT2', target: 'L3MBTL3', directed: 'false', weight: 0.9001680000000001} },
-{ data: { source: 'PRMT2', target: 'HTT', directed: 'false', weight: 0.8946290000000001} },
-{ data: { source: 'L3MBTL3', target: 'HTT', directed: 'false', weight: 0.133456} }]},
+elements:{nodes: [{data: { id: 'ZNF302', score: 4, href: "https://www.uniprot.org/uniprot/Q9NR11" }},
+{data: { id: 'ZNF784', score: 4, href: "https://www.uniprot.org/uniprot/Q8NCA9" }},
+{data: { id: 'RFPL4A', score: 3, href: "https://www.uniprot.org/uniprot/A6NLU0" }},
+{data: { id: 'RFPL4B', score: 2, href: "https://www.uniprot.org/uniprot/Q6ZWI9" }}], 
+ edges: [{ data: { source: 'ZNF784', target: 'RFPL4B', directed: 'false', weight: 0.9092520000000001} },
+{ data: { source: 'ZNF784', target: 'ZNF302', directed: 'false', weight: 0.151455} },
+{ data: { source: 'ZNF784', target: 'RFPL4A', directed: 'false', weight: 0.151455} },
+{ data: { source: 'RFPL4A', target: 'RFPL4B', directed: 'false', weight: 0.9107780000000001} },
+{ data: { source: 'RFPL4A', target: 'ZNF302', directed: 'false', weight: 0.133456} },
+{ data: { source: 'ZNF302', target: 'RFPL4B', directed: 'false', weight: 0.979225} }]},
 
 style: [
     {
@@ -85,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.73612
+    Complex Score (from Super.Complex) = 0.72125
     </section>
     </body>
     </html>

@@ -29,14 +29,19 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SDHA', score: 5, href: "https://www.uniprot.org/uniprot/P31040" }},
-{data: { id: 'SDHB', score: 5, href: "https://www.uniprot.org/uniprot/P21912" }},
-{data: { id: 'SDHAF2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX18" }},
-{data: { id: 'PDHA2', score: 5, href: "https://www.uniprot.org/uniprot/P29803" }}], 
- edges: [{ data: { source: 'PDHA2', target: 'SDHB', directed: 'false', weight: 0.576159} },
-{ data: { source: 'PDHA2', target: 'SDHA', directed: 'false', weight: 0.416279} },
-{ data: { source: 'SDHA', target: 'SDHB', directed: 'false', weight: 0.996382} },
-{ data: { source: 'SDHA', target: 'SDHAF2', directed: 'false', weight: 0.623471} }]},
+elements:{nodes: [{data: { id: 'TFG', score: 5, href: "https://www.uniprot.org/uniprot/Q92734" }},
+{data: { id: 'CHMP2A', score: 5, href: "https://www.uniprot.org/uniprot/O43633" }},
+{data: { id: 'CHMP3', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3E7" }},
+{data: { id: 'TM9SF1', score: 4, href: "https://www.uniprot.org/uniprot/O15321" }},
+{data: { id: 'CHMP1A', score: 5, href: "https://www.uniprot.org/uniprot/Q9HD42" }}], 
+ edges: [{ data: { source: 'CHMP2A', target: 'CHMP1A', directed: 'false', weight: 0.7485729999999999} },
+{ data: { source: 'CHMP2A', target: 'TM9SF1', directed: 'false', weight: 0.328185} },
+{ data: { source: 'CHMP1A', target: 'TFG', directed: 'false', weight: 0.444697} },
+{ data: { source: 'CHMP1A', target: 'TM9SF1', directed: 'false', weight: 0.328185} },
+{ data: { source: 'CHMP1A', target: 'CHMP3', directed: 'false', weight: 0.266359} },
+{ data: { source: 'TM9SF1', target: 'CHMP3', directed: 'false', weight: 0.260982} },
+{ data: { source: 'TM9SF1', target: 'TFG', directed: 'false', weight: 0.13006700000000002} },
+{ data: { source: 'CHMP3', target: 'TFG', directed: 'false', weight: 0.764069} }]},
 
 style: [
     {
@@ -78,7 +83,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.61658
+    Complex Score (from Super.Complex) = 0.60699
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>CHMP2A
     </section>
     </body>
     </html>

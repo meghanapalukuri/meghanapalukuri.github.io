@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TLE4', score: 5, href: "https://www.uniprot.org/uniprot/Q04727" }},
-{data: { id: 'TLE1', score: 5, href: "https://www.uniprot.org/uniprot/Q04724" }},
-{data: { id: 'TBX20', score: 5, href: "https://www.uniprot.org/uniprot/Q9UMR3" }}], 
- edges: [{ data: { source: 'TLE4', target: 'TBX20', directed: 'false', weight: 0.88481} },
-{ data: { source: 'TLE4', target: 'TLE1', directed: 'false', weight: 0.163688} },
-{ data: { source: 'TBX20', target: 'TLE1', directed: 'false', weight: 0.685321} }]},
+elements:{nodes: [{data: { id: 'SMG9', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0W8" }},
+{data: { id: 'SMG1', score: 5, href: "https://www.uniprot.org/uniprot/Q96Q15" }},
+{data: { id: 'SMG8', score: 5, href: "https://www.uniprot.org/uniprot/Q8ND04" }}], 
+ edges: [{ data: { source: 'SMG8', target: 'SMG9', directed: 'false', weight: 0.9275479999999999} },
+{ data: { source: 'SMG8', target: 'SMG1', directed: 'false', weight: 0.144297} },
+{ data: { source: 'SMG9', target: 'SMG1', directed: 'false', weight: 0.631102} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76685
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>TLE1
+    Complex Score (from Super.Complex) = 0.76617
     </section>
     </body>
     </html>

@@ -29,36 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'XRCC5', score: 5, href: "https://www.uniprot.org/uniprot/P13010" }},
-{data: { id: 'APTX', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z2E3" }},
-{data: { id: 'APLF', score: 5, href: "https://www.uniprot.org/uniprot/Q8IW19" }},
-{data: { id: 'POLB', score: 5, href: "https://www.uniprot.org/uniprot/P06746" }},
-{data: { id: 'PNKP', score: 5, href: "https://www.uniprot.org/uniprot/Q96T60" }},
-{data: { id: 'XRCC1', score: 5, href: "https://www.uniprot.org/uniprot/P18887" }},
-{data: { id: 'LIG3', score: 5, href: "https://www.uniprot.org/uniprot/P49916" }},
-{data: { id: 'HLTF', score: 5, href: "https://www.uniprot.org/uniprot/Q14527" }},
-{data: { id: 'MSH3', score: 5, href: "https://www.uniprot.org/uniprot/P20585" }}], 
- edges: [{ data: { source: 'HLTF', target: 'LIG3', directed: 'false', weight: 0.594344} },
-{ data: { source: 'HLTF', target: 'XRCC5', directed: 'false', weight: 0.5} },
-{ data: { source: 'HLTF', target: 'APLF', directed: 'false', weight: 0.45387299999999997} },
-{ data: { source: 'HLTF', target: 'XRCC1', directed: 'false', weight: 0.405673} },
-{ data: { source: 'HLTF', target: 'POLB', directed: 'false', weight: 0.212556} },
-{ data: { source: 'HLTF', target: 'MSH3', directed: 'false', weight: 0.10554300000000001} },
-{ data: { source: 'MSH3', target: 'APLF', directed: 'false', weight: 0.963989} },
-{ data: { source: 'LIG3', target: 'XRCC1', directed: 'false', weight: 0.9938379999999999} },
-{ data: { source: 'LIG3', target: 'POLB', directed: 'false', weight: 0.992373} },
-{ data: { source: 'LIG3', target: 'XRCC5', directed: 'false', weight: 0.7282689999999999} },
-{ data: { source: 'LIG3', target: 'APLF', directed: 'false', weight: 0.659787} },
-{ data: { source: 'LIG3', target: 'PNKP', directed: 'false', weight: 0.155246} },
-{ data: { source: 'XRCC1', target: 'POLB', directed: 'false', weight: 0.98935} },
-{ data: { source: 'XRCC1', target: 'APLF', directed: 'false', weight: 0.571429} },
-{ data: { source: 'XRCC1', target: 'APTX', directed: 'false', weight: 0.5531689999999999} },
-{ data: { source: 'XRCC1', target: 'PNKP', directed: 'false', weight: 0.466135} },
-{ data: { source: 'XRCC5', target: 'APLF', directed: 'false', weight: 0.815588} },
-{ data: { source: 'POLB', target: 'PNKP', directed: 'false', weight: 0.986183} },
-{ data: { source: 'POLB', target: 'APLF', directed: 'false', weight: 0.607927} },
-{ data: { source: 'POLB', target: 'APTX', directed: 'false', weight: 0.311327} },
-{ data: { source: 'APTX', target: 'PNKP', directed: 'false', weight: 0.469113} }]},
+elements:{nodes: [{data: { id: 'STRBP', score: 5, href: "https://www.uniprot.org/uniprot/Q96SI9" }},
+{data: { id: 'ZC3H7B', score: 5, href: "https://www.uniprot.org/uniprot/Q9UGR2" }},
+{data: { id: 'HNRNPL', score: 5, href: "https://www.uniprot.org/uniprot/P14866" }},
+{data: { id: 'ILF2', score: 5, href: "https://www.uniprot.org/uniprot/Q12905" }},
+{data: { id: 'SPTAN1', score: 5, href: "https://www.uniprot.org/uniprot/Q13813" }},
+{data: { id: 'FAM120A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZB2" }}], 
+ edges: [{ data: { source: 'HNRNPL', target: 'ILF2', directed: 'false', weight: 0.993767} },
+{ data: { source: 'HNRNPL', target: 'FAM120A', directed: 'false', weight: 0.333175} },
+{ data: { source: 'HNRNPL', target: 'ZC3H7B', directed: 'false', weight: 0.28529099999999996} },
+{ data: { source: 'HNRNPL', target: 'STRBP', directed: 'false', weight: 0.165698} },
+{ data: { source: 'ILF2', target: 'SPTAN1', directed: 'false', weight: 0.9828600000000001} },
+{ data: { source: 'ILF2', target: 'STRBP', directed: 'false', weight: 0.927007} },
+{ data: { source: 'ILF2', target: 'FAM120A', directed: 'false', weight: 0.48923999999999995} },
+{ data: { source: 'STRBP', target: 'SPTAN1', directed: 'false', weight: 0.5} },
+{ data: { source: 'STRBP', target: 'FAM120A', directed: 'false', weight: 0.146782} }]},
 
 style: [
     {
@@ -100,7 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.59186
+    Complex Score (from Super.Complex) = 0.58519
     </section>
     </body>
     </html>

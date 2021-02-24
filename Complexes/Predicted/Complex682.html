@@ -29,18 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SIPA1L2', score: 4, href: "https://www.uniprot.org/uniprot/Q9P2F8" }},
-{data: { id: 'LPP', score: 5, href: "https://www.uniprot.org/uniprot/Q93052" }},
-{data: { id: 'SESTD1', score: 5, href: "https://www.uniprot.org/uniprot/Q86VW0" }},
-{data: { id: 'LZTS1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y250" }},
-{data: { id: 'LZTS2', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRK4" }}], 
- edges: [{ data: { source: 'LPP', target: 'SESTD1', directed: 'false', weight: 0.957414} },
-{ data: { source: 'SESTD1', target: 'LZTS2', directed: 'false', weight: 0.7521180000000001} },
-{ data: { source: 'SESTD1', target: 'LZTS1', directed: 'false', weight: 0.140692} },
-{ data: { source: 'SESTD1', target: 'SIPA1L2', directed: 'false', weight: 0.123797} },
-{ data: { source: 'LZTS2', target: 'LZTS1', directed: 'false', weight: 0.981449} },
-{ data: { source: 'LZTS2', target: 'SIPA1L2', directed: 'false', weight: 0.7580060000000001} },
-{ data: { source: 'LZTS1', target: 'SIPA1L2', directed: 'false', weight: 0.151455} }]},
+elements:{nodes: [{data: { id: 'VPS29', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBQ0" }},
+{data: { id: 'SNX1', score: 5, href: "https://www.uniprot.org/uniprot/Q13596" }},
+{data: { id: 'SNX5', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5X3" }},
+{data: { id: 'C11orf42', score: 1, href: "https://www.uniprot.org/uniprot/Q8N5U0" }}], 
+ edges: [{ data: { source: 'C11orf42', target: 'SNX5', directed: 'false', weight: 0.43806000000000006} },
+{ data: { source: 'SNX1', target: 'SNX5', directed: 'false', weight: 0.997165} },
+{ data: { source: 'SNX1', target: 'VPS29', directed: 'false', weight: 0.9759540000000001} },
+{ data: { source: 'SNX5', target: 'VPS29', directed: 'false', weight: 0.09363780000000001} }]},
 
 style: [
     {
@@ -82,7 +78,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.62465
+    Complex Score (from Super.Complex) = 0.61483
     </section>
     </body>
     </html>

@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ARHGEF11', score: 5, href: "https://www.uniprot.org/uniprot/O15085" }},
-{data: { id: 'PAK6', score: 5, href: "https://www.uniprot.org/uniprot/Q9NQU5" }},
-{data: { id: 'PAK5', score: 5, href: "https://www.uniprot.org/uniprot/Q9P286" }},
-{data: { id: 'PAK4', score: 5, href: "https://www.uniprot.org/uniprot/O96013" }}], 
- edges: [{ data: { source: 'PAK5', target: 'PAK4', directed: 'false', weight: 0.9680979999999999} },
-{ data: { source: 'PAK5', target: 'PAK6', directed: 'false', weight: 0.171414} },
-{ data: { source: 'PAK5', target: 'ARHGEF11', directed: 'false', weight: 0.151455} },
-{ data: { source: 'ARHGEF11', target: 'PAK4', directed: 'false', weight: 0.95641} },
-{ data: { source: 'ARHGEF11', target: 'PAK6', directed: 'false', weight: 0.151455} },
-{ data: { source: 'PAK6', target: 'PAK4', directed: 'false', weight: 0.9742860000000001} }]},
+elements:{nodes: [{data: { id: 'NCOR1', score: 5, href: "https://www.uniprot.org/uniprot/O75376" }},
+{data: { id: 'HDAC3', score: 5, href: "https://www.uniprot.org/uniprot/O15379" }},
+{data: { id: 'ANKRD11', score: 5, href: "https://www.uniprot.org/uniprot/Q6UB99" }},
+{data: { id: 'GPS2', score: 5, href: "https://www.uniprot.org/uniprot/Q13227" }}], 
+ edges: [{ data: { source: 'HDAC3', target: 'GPS2', directed: 'false', weight: 0.852248} },
+{ data: { source: 'HDAC3', target: 'NCOR1', directed: 'false', weight: 0.194752} },
+{ data: { source: 'HDAC3', target: 'ANKRD11', directed: 'false', weight: 0.101714} },
+{ data: { source: 'GPS2', target: 'ANKRD11', directed: 'false', weight: 0.984268} },
+{ data: { source: 'GPS2', target: 'NCOR1', directed: 'false', weight: 0.902982} },
+{ data: { source: 'ANKRD11', target: 'NCOR1', directed: 'false', weight: 0.117494} }]},
 
 style: [
     {
@@ -80,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.71277
+    Complex Score (from Super.Complex) = 0.70619
     </section>
     </body>
     </html>

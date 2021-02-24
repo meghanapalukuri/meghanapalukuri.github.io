@@ -29,21 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'POR', score: 5, href: "https://www.uniprot.org/uniprot/P16435" }},
-{data: { id: 'TMOD3', score: 4, href: "https://www.uniprot.org/uniprot/Q9NYL9" }},
-{data: { id: 'UBXN6', score: 5, href: "https://www.uniprot.org/uniprot/Q9BZV1" }},
-{data: { id: 'UBXN2A', score: 4, href: "https://www.uniprot.org/uniprot/P68543" }},
-{data: { id: 'LRRFIP2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y608" }},
-{data: { id: 'VCPKMT', score: 5, href: "https://www.uniprot.org/uniprot/Q9H867" }}], 
- edges: [{ data: { source: 'POR', target: 'UBXN6', directed: 'false', weight: 0.616125} },
-{ data: { source: 'POR', target: 'VCPKMT', directed: 'false', weight: 0.120276} },
-{ data: { source: 'POR', target: 'UBXN2A', directed: 'false', weight: 0.10556600000000001} },
-{ data: { source: 'UBXN6', target: 'VCPKMT', directed: 'false', weight: 0.989974} },
-{ data: { source: 'UBXN6', target: 'UBXN2A', directed: 'false', weight: 0.9672430000000001} },
-{ data: { source: 'TMOD3', target: 'LRRFIP2', directed: 'false', weight: 0.874611} },
-{ data: { source: 'TMOD3', target: 'UBXN2A', directed: 'false', weight: 0.627835} },
-{ data: { source: 'VCPKMT', target: 'UBXN2A', directed: 'false', weight: 0.151455} },
-{ data: { source: 'UBXN2A', target: 'LRRFIP2', directed: 'false', weight: 0.12775599999999998} }]},
+elements:{nodes: [{data: { id: 'RBSN', score: 5, href: "https://www.uniprot.org/uniprot/Q9H1K0" }},
+{data: { id: 'VPS45', score: 5, href: "https://www.uniprot.org/uniprot/Q9NRW7" }},
+{data: { id: 'ACOT13', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPJ3" }}], 
+ edges: [{ data: { source: 'VPS45', target: 'RBSN', directed: 'false', weight: 0.679966} },
+{ data: { source: 'VPS45', target: 'ACOT13', directed: 'false', weight: 0.416839} }]},
 
 style: [
     {
@@ -85,12 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.54054
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>POR
+    Complex Score (from Super.Complex) = 0.53414
     </section>
     </body>
     </html>

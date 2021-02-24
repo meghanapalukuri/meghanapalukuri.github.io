@@ -29,12 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SDK1', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z5N4" }},
-{data: { id: 'LGALS3', score: 5, href: "https://www.uniprot.org/uniprot/P17931" }},
-{data: { id: 'PTPRZ1', score: 5, href: "https://www.uniprot.org/uniprot/P23471" }}], 
- edges: [{ data: { source: 'LGALS3', target: 'SDK1', directed: 'false', weight: 0.8939290000000001} },
-{ data: { source: 'LGALS3', target: 'PTPRZ1', directed: 'false', weight: 0.8449260000000001} },
-{ data: { source: 'SDK1', target: 'PTPRZ1', directed: 'false', weight: 0.151455} }]},
+elements:{nodes: [{data: { id: 'TASOR2', score: 5, href: "https://www.uniprot.org/uniprot/Q5VWN6" }},
+{data: { id: 'ZNF597', score: 4, href: "https://www.uniprot.org/uniprot/Q96LX8" }},
+{data: { id: 'MPHOSPH8', score: 5, href: "https://www.uniprot.org/uniprot/Q99549" }},
+{data: { id: 'TASOR', score: 5, href: "https://www.uniprot.org/uniprot/Q9UK61" }}], 
+ edges: [{ data: { source: 'TASOR', target: 'MPHOSPH8', directed: 'false', weight: 0.8178850000000001} },
+{ data: { source: 'TASOR', target: 'TASOR2', directed: 'false', weight: 0.18832100000000002} },
+{ data: { source: 'ZNF597', target: 'MPHOSPH8', directed: 'false', weight: 0.9825200000000001} },
+{ data: { source: 'ZNF597', target: 'TASOR2', directed: 'false', weight: 0.961757} },
+{ data: { source: 'MPHOSPH8', target: 'TASOR2', directed: 'false', weight: 0.8843850000000001} }]},
 
 style: [
     {
@@ -76,7 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77244
+    Complex Score (from Super.Complex) = 0.77197
     </section>
     </body>
     </html>

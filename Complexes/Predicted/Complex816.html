@@ -29,21 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PHF14', score: 4, href: "https://www.uniprot.org/uniprot/O94880" }},
-{data: { id: 'GSE1', score: 5, href: "https://www.uniprot.org/uniprot/Q14687" }},
-{data: { id: 'RAI1', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z5J4" }},
-{data: { id: 'HMG20A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NP66" }},
-{data: { id: 'TCF20', score: 5, href: "https://www.uniprot.org/uniprot/Q9UGU0" }},
-{data: { id: 'RCOR1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKL0" }}], 
- edges: [{ data: { source: 'TCF20', target: 'PHF14', directed: 'false', weight: 0.751259} },
-{ data: { source: 'TCF20', target: 'RAI1', directed: 'false', weight: 0.548266} },
-{ data: { source: 'TCF20', target: 'HMG20A', directed: 'false', weight: 0.19262} },
-{ data: { source: 'HMG20A', target: 'GSE1', directed: 'false', weight: 0.9537549999999999} },
-{ data: { source: 'HMG20A', target: 'RCOR1', directed: 'false', weight: 0.8753120000000001} },
-{ data: { source: 'HMG20A', target: 'RAI1', directed: 'false', weight: 0.7451439999999999} },
-{ data: { source: 'HMG20A', target: 'PHF14', directed: 'false', weight: 0.694072} },
-{ data: { source: 'RAI1', target: 'PHF14', directed: 'false', weight: 0.387818} },
-{ data: { source: 'GSE1', target: 'RCOR1', directed: 'false', weight: 0.8126800000000001} }]},
+elements:{nodes: [{data: { id: 'CYP1A1', score: 5, href: "https://www.uniprot.org/uniprot/A0N0X8" }},
+{data: { id: 'VRK1', score: 5, href: "https://www.uniprot.org/uniprot/Q99986" }},
+{data: { id: 'EIF2AK2', score: 5, href: "https://www.uniprot.org/uniprot/P19525" }},
+{data: { id: 'HPCAL1', score: 5, href: "https://www.uniprot.org/uniprot/P37235" }}], 
+ edges: [{ data: { source: 'HPCAL1', target: 'CYP1A1', directed: 'false', weight: 0.586348} },
+{ data: { source: 'HPCAL1', target: 'EIF2AK2', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'VRK1', target: 'CYP1A1', directed: 'false', weight: 0.575901} },
+{ data: { source: 'EIF2AK2', target: 'CYP1A1', directed: 'false', weight: 0.48992700000000006} }]},
 
 style: [
     {
@@ -85,7 +78,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.57109
+    Complex Score (from Super.Complex) = 0.56130
     </section>
     </body>
     </html>

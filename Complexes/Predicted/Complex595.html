@@ -29,16 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TXNDC11', score: 5, href: "https://www.uniprot.org/uniprot/Q6PKC3" }},
-{data: { id: 'EDEM2', score: 5, href: "https://www.uniprot.org/uniprot/Q9BV94" }},
-{data: { id: 'FBLN7', score: 4, href: "https://www.uniprot.org/uniprot/Q53RD9" }},
-{data: { id: 'ASPH', score: 0 }}], 
- edges: [{ data: { source: 'TXNDC11', target: 'EDEM2', directed: 'false', weight: 0.520771} },
-{ data: { source: 'TXNDC11', target: 'FBLN7', directed: 'false', weight: 0.153087} },
-{ data: { source: 'TXNDC11', target: 'ASPH', directed: 'false', weight: 0.11511199999999999} },
-{ data: { source: 'FBLN7', target: 'EDEM2', directed: 'false', weight: 0.271173} },
-{ data: { source: 'FBLN7', target: 'ASPH', directed: 'false', weight: 0.166388} },
-{ data: { source: 'EDEM2', target: 'ASPH', directed: 'false', weight: 0.42663199999999996} }]},
+elements:{nodes: [{data: { id: 'ITPRID2', score: 5, href: "https://www.uniprot.org/uniprot/P28290" }},
+{data: { id: 'VPS33B', score: 5, href: "https://www.uniprot.org/uniprot/Q9H267" }},
+{data: { id: 'FKBP15', score: 5, href: "https://www.uniprot.org/uniprot/Q5T1M5" }},
+{data: { id: 'ITPR3', score: 5, href: "https://www.uniprot.org/uniprot/Q14573" }}], 
+ edges: [{ data: { source: 'VPS33B', target: 'ITPRID2', directed: 'false', weight: 0.976133} },
+{ data: { source: 'VPS33B', target: 'FKBP15', directed: 'false', weight: 0.140692} },
+{ data: { source: 'FKBP15', target: 'ITPRID2', directed: 'false', weight: 0.657233} },
+{ data: { source: 'FKBP15', target: 'ITPR3', directed: 'false', weight: 0.108699} },
+{ data: { source: 'ITPR3', target: 'ITPRID2', directed: 'false', weight: 0.766808} }]},
 
 style: [
     {
@@ -80,7 +79,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66184
+    Complex Score (from Super.Complex) = 0.65873
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>FKBP15
     </section>
     </body>
     </html>

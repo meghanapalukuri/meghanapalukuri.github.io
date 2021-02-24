@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ENAH', score: 5, href: "https://www.uniprot.org/uniprot/Q8N8S7" }},
-{data: { id: 'EVL', score: 5, href: "https://www.uniprot.org/uniprot/Q9UI08" }},
-{data: { id: 'VASP', score: 5, href: "https://www.uniprot.org/uniprot/P50552" }}], 
- edges: [{ data: { source: 'VASP', target: 'ENAH', directed: 'false', weight: 0.975231} },
-{ data: { source: 'VASP', target: 'EVL', directed: 'false', weight: 0.941451} },
-{ data: { source: 'EVL', target: 'ENAH', directed: 'false', weight: 0.991416} }]},
+elements:{nodes: [{data: { id: 'OS9', score: 5, href: "https://www.uniprot.org/uniprot/Q13438" }},
+{data: { id: 'SEL1L', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBV2" }},
+{data: { id: 'ERLEC1', score: 5, href: "https://www.uniprot.org/uniprot/Q96DZ1" }}], 
+ edges: [{ data: { source: 'SEL1L', target: 'OS9', directed: 'false', weight: 0.9999790000000001} },
+{ data: { source: 'SEL1L', target: 'ERLEC1', directed: 'false', weight: 0.9998030000000001} },
+{ data: { source: 'OS9', target: 'ERLEC1', directed: 'false', weight: 0.826836} }]},
 
 style: [
     {
@@ -76,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.81229
+    Complex Score (from Super.Complex) = 0.80898
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>OS9 ERLEC1
     </section>
     </body>
     </html>

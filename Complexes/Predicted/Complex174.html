@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SKAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q86WV1" }},
-{data: { id: 'SUGCT', score: 5, href: "https://www.uniprot.org/uniprot/Q9HAC7" }},
-{data: { id: 'CC2D1B', score: 5, href: "https://www.uniprot.org/uniprot/Q5T0F9" }},
-{data: { id: 'PAX3', score: 5, href: "https://www.uniprot.org/uniprot/P23760" }}], 
- edges: [{ data: { source: 'SKAP1', target: 'PAX3', directed: 'false', weight: 0.949475} },
-{ data: { source: 'SKAP1', target: 'CC2D1B', directed: 'false', weight: 0.9175200000000001} },
-{ data: { source: 'SKAP1', target: 'SUGCT', directed: 'false', weight: 0.654682} },
-{ data: { source: 'PAX3', target: 'CC2D1B', directed: 'false', weight: 0.151455} },
-{ data: { source: 'PAX3', target: 'SUGCT', directed: 'false', weight: 0.133456} },
-{ data: { source: 'CC2D1B', target: 'SUGCT', directed: 'false', weight: 0.151455} }]},
+elements:{nodes: [{data: { id: 'ZFP41', score: 4, href: "https://www.uniprot.org/uniprot/Q8N8Y5" }},
+{data: { id: 'GGNBP2', score: 4, href: "https://www.uniprot.org/uniprot/Q9H3C7" }},
+{data: { id: 'LTBP1', score: 5, href: "https://www.uniprot.org/uniprot/Q14766" }},
+{data: { id: 'FBN1', score: 5, href: "https://www.uniprot.org/uniprot/P35555" }}], 
+ edges: [{ data: { source: 'ZFP41', target: 'FBN1', directed: 'false', weight: 0.927283} },
+{ data: { source: 'ZFP41', target: 'GGNBP2', directed: 'false', weight: 0.8305790000000001} },
+{ data: { source: 'ZFP41', target: 'LTBP1', directed: 'false', weight: 0.796165} },
+{ data: { source: 'GGNBP2', target: 'FBN1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'GGNBP2', target: 'LTBP1', directed: 'false', weight: 0.117318} },
+{ data: { source: 'LTBP1', target: 'FBN1', directed: 'false', weight: 0.133451} }]},
 
 style: [
     {
@@ -80,7 +80,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77407
+    Complex Score (from Super.Complex) = 0.77382
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>FBN1
     </section>
     </body>
     </html>

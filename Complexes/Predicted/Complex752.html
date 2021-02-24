@@ -29,23 +29,32 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CASP8', score: 5, href: "https://www.uniprot.org/uniprot/Q14790" }},
-{data: { id: 'FAM118B', score: 4, href: "https://www.uniprot.org/uniprot/Q9BPY3" }},
-{data: { id: 'UGCG', score: 5, href: "https://www.uniprot.org/uniprot/Q16739" }},
-{data: { id: 'RNF149', score: 5, href: "https://www.uniprot.org/uniprot/Q8NC42" }},
-{data: { id: 'TNFRSF10B', score: 5, href: "https://www.uniprot.org/uniprot/O14763" }},
-{data: { id: 'DDR1', score: 5, href: "https://www.uniprot.org/uniprot/Q08345" }}], 
- edges: [{ data: { source: 'RNF149', target: 'TNFRSF10B', directed: 'false', weight: 0.6033229999999999} },
-{ data: { source: 'RNF149', target: 'UGCG', directed: 'false', weight: 0.356858} },
-{ data: { source: 'RNF149', target: 'DDR1', directed: 'false', weight: 0.11248399999999999} },
-{ data: { source: 'RNF149', target: 'CASP8', directed: 'false', weight: 0.0912802} },
-{ data: { source: 'CASP8', target: 'TNFRSF10B', directed: 'false', weight: 0.641748} },
-{ data: { source: 'CASP8', target: 'DDR1', directed: 'false', weight: 0.140692} },
-{ data: { source: 'CASP8', target: 'UGCG', directed: 'false', weight: 0.104198} },
-{ data: { source: 'CASP8', target: 'FAM118B', directed: 'false', weight: 0.100649} },
-{ data: { source: 'UGCG', target: 'TNFRSF10B', directed: 'false', weight: 0.654183} },
-{ data: { source: 'UGCG', target: 'DDR1', directed: 'false', weight: 0.128057} },
-{ data: { source: 'TNFRSF10B', target: 'DDR1', directed: 'false', weight: 0.548381} }]},
+elements:{nodes: [{data: { id: 'PDPK1', score: 5, href: "https://www.uniprot.org/uniprot/O15530" }},
+{data: { id: 'POLK', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBT6" }},
+{data: { id: 'SLC1A3', score: 5, href: "https://www.uniprot.org/uniprot/P43003" }},
+{data: { id: 'KCTD5', score: 5, href: "https://www.uniprot.org/uniprot/Q9NXV2" }},
+{data: { id: 'TMEM45A', score: 3, href: "https://www.uniprot.org/uniprot/Q9NWC5" }},
+{data: { id: 'KCTD2', score: 3, href: "https://www.uniprot.org/uniprot/Q14681" }},
+{data: { id: 'PTPN4', score: 5, href: "https://www.uniprot.org/uniprot/P29074" }},
+{data: { id: 'KCTD17', score: 5, href: "https://www.uniprot.org/uniprot/Q8N5Z5" }}], 
+ edges: [{ data: { source: 'PDPK1', target: 'KCTD5', directed: 'false', weight: 0.98319} },
+{ data: { source: 'PDPK1', target: 'SLC1A3', directed: 'false', weight: 0.144297} },
+{ data: { source: 'PDPK1', target: 'TMEM45A', directed: 'false', weight: 0.144297} },
+{ data: { source: 'PDPK1', target: 'POLK', directed: 'false', weight: 0.115879} },
+{ data: { source: 'PDPK1', target: 'KCTD2', directed: 'false', weight: 0.10441700000000001} },
+{ data: { source: 'PTPN4', target: 'KCTD17', directed: 'false', weight: 0.971305} },
+{ data: { source: 'TMEM45A', target: 'KCTD5', directed: 'false', weight: 0.9907540000000001} },
+{ data: { source: 'TMEM45A', target: 'SLC1A3', directed: 'false', weight: 0.165074} },
+{ data: { source: 'TMEM45A', target: 'POLK', directed: 'false', weight: 0.133179} },
+{ data: { source: 'TMEM45A', target: 'KCTD2', directed: 'false', weight: 0.12021300000000001} },
+{ data: { source: 'KCTD2', target: 'KCTD5', directed: 'false', weight: 0.995977} },
+{ data: { source: 'KCTD2', target: 'KCTD17', directed: 'false', weight: 0.963677} },
+{ data: { source: 'KCTD2', target: 'POLK', directed: 'false', weight: 0.176452} },
+{ data: { source: 'KCTD2', target: 'SLC1A3', directed: 'false', weight: 0.12021300000000001} },
+{ data: { source: 'KCTD5', target: 'POLK', directed: 'false', weight: 0.949349} },
+{ data: { source: 'KCTD5', target: 'KCTD17', directed: 'false', weight: 0.927774} },
+{ data: { source: 'KCTD5', target: 'SLC1A3', directed: 'false', weight: 0.922241} },
+{ data: { source: 'POLK', target: 'SLC1A3', directed: 'false', weight: 0.133179} }]},
 
 style: [
     {
@@ -87,7 +96,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.58701
+    Complex Score (from Super.Complex) = 0.58094
     </section>
     </body>
     </html>

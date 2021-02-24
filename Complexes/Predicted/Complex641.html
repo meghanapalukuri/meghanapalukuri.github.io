@@ -29,15 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TRAPPC6B', score: 5, href: "https://www.uniprot.org/uniprot/Q86SZ2" }},
-{data: { id: 'MAP11', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVR3" }},
-{data: { id: 'TRAPPC9', score: 5, href: "https://www.uniprot.org/uniprot/Q96Q05" }},
-{data: { id: 'BCL2L14', score: 5, href: "https://www.uniprot.org/uniprot/Q9BZR8" }}], 
- edges: [{ data: { source: 'MAP11', target: 'BCL2L14', directed: 'false', weight: 0.804624} },
-{ data: { source: 'MAP11', target: 'TRAPPC6B', directed: 'false', weight: 0.133456} },
-{ data: { source: 'TRAPPC9', target: 'BCL2L14', directed: 'false', weight: 0.41198999999999997} },
-{ data: { source: 'TRAPPC9', target: 'TRAPPC6B', directed: 'false', weight: 0.102922} },
-{ data: { source: 'BCL2L14', target: 'TRAPPC6B', directed: 'false', weight: 0.9188120000000001} }]},
+elements:{nodes: [{data: { id: 'CRELD2', score: 5, href: "https://www.uniprot.org/uniprot/Q6UXH1" }},
+{data: { id: 'LSM8', score: 5, href: "https://www.uniprot.org/uniprot/O95777" }},
+{data: { id: 'CRELD1', score: 5, href: "https://www.uniprot.org/uniprot/Q96HD1" }},
+{data: { id: 'LSM7', score: 5, href: "https://www.uniprot.org/uniprot/Q9UK45" }},
+{data: { id: 'CLIC1', score: 5, href: "https://www.uniprot.org/uniprot/O00299" }}], 
+ edges: [{ data: { source: 'CLIC1', target: 'LSM7', directed: 'false', weight: 0.969088} },
+{ data: { source: 'CLIC1', target: 'CRELD2', directed: 'false', weight: 0.797317} },
+{ data: { source: 'CLIC1', target: 'LSM8', directed: 'false', weight: 0.774389} },
+{ data: { source: 'LSM7', target: 'CRELD2', directed: 'false', weight: 0.645634} },
+{ data: { source: 'LSM7', target: 'CRELD1', directed: 'false', weight: 0.56413} },
+{ data: { source: 'LSM7', target: 'LSM8', directed: 'false', weight: 0.044931} },
+{ data: { source: 'CRELD2', target: 'LSM8', directed: 'false', weight: 0.417599} }]},
 
 style: [
     {
@@ -79,7 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.64810
+    Complex Score (from Super.Complex) = 0.63986
     </section>
     </body>
     </html>

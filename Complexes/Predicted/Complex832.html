@@ -29,22 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GMPR', score: 5, href: "https://www.uniprot.org/uniprot/P36959" }},
-{data: { id: 'ACSF3', score: 5, href: "https://www.uniprot.org/uniprot/Q4G176" }},
-{data: { id: 'GCLM', score: 5, href: "https://www.uniprot.org/uniprot/P48507" }},
-{data: { id: 'RPIA', score: 5, href: "https://www.uniprot.org/uniprot/P49247" }},
-{data: { id: 'ADHFE1', score: 5, href: "https://www.uniprot.org/uniprot/Q8IWW8" }},
-{data: { id: 'GMPR2', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2T1" }}], 
- edges: [{ data: { source: 'RPIA', target: 'GMPR2', directed: 'false', weight: 0.701434} },
-{ data: { source: 'RPIA', target: 'GMPR', directed: 'false', weight: 0.629831} },
-{ data: { source: 'RPIA', target: 'ADHFE1', directed: 'false', weight: 0.056223199999999994} },
-{ data: { source: 'ACSF3', target: 'GMPR', directed: 'false', weight: 0.355956} },
-{ data: { source: 'ACSF3', target: 'GMPR2', directed: 'false', weight: 0.347958} },
-{ data: { source: 'GMPR2', target: 'GMPR', directed: 'false', weight: 0.980734} },
-{ data: { source: 'GMPR2', target: 'ADHFE1', directed: 'false', weight: 0.599662} },
-{ data: { source: 'GMPR2', target: 'GCLM', directed: 'false', weight: 0.360664} },
-{ data: { source: 'GMPR', target: 'ADHFE1', directed: 'false', weight: 0.7787} },
-{ data: { source: 'GMPR', target: 'GCLM', directed: 'false', weight: 0.35541} }]},
+elements:{nodes: [{data: { id: 'MDN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NU22" }},
+{data: { id: 'PCBD1', score: 5, href: "https://www.uniprot.org/uniprot/P61457" }},
+{data: { id: 'COQ5', score: 5, href: "https://www.uniprot.org/uniprot/Q5HYK3" }},
+{data: { id: 'GPD1L', score: 5, href: "https://www.uniprot.org/uniprot/Q8N335" }}], 
+ edges: [{ data: { source: 'MDN1', target: 'GPD1L', directed: 'false', weight: 0.39475} },
+{ data: { source: 'MDN1', target: 'COQ5', directed: 'false', weight: 0.161324} },
+{ data: { source: 'GPD1L', target: 'PCBD1', directed: 'false', weight: 0.669782} },
+{ data: { source: 'GPD1L', target: 'COQ5', directed: 'false', weight: 0.444558} }]},
 
 style: [
     {
@@ -86,7 +78,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.56677
+    Complex Score (from Super.Complex) = 0.55751
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>MDN1
     </section>
     </body>
     </html>

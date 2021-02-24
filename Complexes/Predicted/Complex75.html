@@ -29,12 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NDUFAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y375" }},
-{data: { id: 'ACAD9', score: 5, href: "https://www.uniprot.org/uniprot/Q9H845" }},
-{data: { id: 'ECSIT', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQ95" }}], 
- edges: [{ data: { source: 'ECSIT', target: 'NDUFAF1', directed: 'false', weight: 0.985202} },
-{ data: { source: 'ECSIT', target: 'ACAD9', directed: 'false', weight: 0.979089} },
-{ data: { source: 'NDUFAF1', target: 'ACAD9', directed: 'false', weight: 0.9036569999999999} }]},
+elements:{nodes: [{data: { id: 'TPM3', score: 5, href: "https://www.uniprot.org/uniprot/P06753" }},
+{data: { id: 'ACTN2', score: 5, href: "https://www.uniprot.org/uniprot/P35609" }},
+{data: { id: 'TPM1', score: 5, href: "https://www.uniprot.org/uniprot/P09493" }},
+{data: { id: 'TPM4', score: 5, href: "https://www.uniprot.org/uniprot/P67936" }},
+{data: { id: 'DLG5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDM6" }}], 
+ edges: [{ data: { source: 'ACTN2', target: 'TPM1', directed: 'false', weight: 0.787251} },
+{ data: { source: 'ACTN2', target: 'TPM3', directed: 'false', weight: 0.705709} },
+{ data: { source: 'ACTN2', target: 'TPM4', directed: 'false', weight: 0.622981} },
+{ data: { source: 'TPM1', target: 'TPM4', directed: 'false', weight: 0.999985} },
+{ data: { source: 'TPM1', target: 'TPM3', directed: 'false', weight: 0.999857} },
+{ data: { source: 'TPM1', target: 'DLG5', directed: 'false', weight: 0.909151} },
+{ data: { source: 'TPM3', target: 'TPM4', directed: 'false', weight: 0.438697} },
+{ data: { source: 'TPM3', target: 'DLG5', directed: 'false', weight: 0.15628} },
+{ data: { source: 'TPM4', target: 'DLG5', directed: 'false', weight: 0.15529400000000002} }]},
 
 style: [
     {
@@ -76,12 +84,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.81078
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        3 interacting protein(s): <br>NDUFAF1 ACAD9 ECSIT
+    Complex Score (from Super.Complex) = 0.80527
     </section>
     </body>
     </html>

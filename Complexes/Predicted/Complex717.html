@@ -29,18 +29,36 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'KCNK1', score: 5, href: "https://www.uniprot.org/uniprot/O00180" }},
-{data: { id: 'GOLGA5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TBA6" }},
-{data: { id: 'ABCC1', score: 5, href: "https://www.uniprot.org/uniprot/P33527" }},
-{data: { id: 'CERS2', score: 5, href: "https://www.uniprot.org/uniprot/Q96G23" }},
-{data: { id: 'CXCR4', score: 5, href: "https://www.uniprot.org/uniprot/P61073" }}], 
- edges: [{ data: { source: 'KCNK1', target: 'ABCC1', directed: 'false', weight: 0.855417} },
-{ data: { source: 'KCNK1', target: 'GOLGA5', directed: 'false', weight: 0.707076} },
-{ data: { source: 'KCNK1', target: 'CXCR4', directed: 'false', weight: 0.705331} },
-{ data: { source: 'KCNK1', target: 'CERS2', directed: 'false', weight: 0.632021} },
-{ data: { source: 'ABCC1', target: 'CXCR4', directed: 'false', weight: 0.19934000000000002} },
-{ data: { source: 'ABCC1', target: 'GOLGA5', directed: 'false', weight: 0.0972698} },
-{ data: { source: 'CXCR4', target: 'GOLGA5', directed: 'false', weight: 0.132679} }]},
+elements:{nodes: [{data: { id: 'XRCC1', score: 5, href: "https://www.uniprot.org/uniprot/P18887" }},
+{data: { id: 'POLB', score: 5, href: "https://www.uniprot.org/uniprot/P06746" }},
+{data: { id: 'HLTF', score: 5, href: "https://www.uniprot.org/uniprot/Q14527" }},
+{data: { id: 'APLF', score: 5, href: "https://www.uniprot.org/uniprot/Q8IW19" }},
+{data: { id: 'PNKP', score: 5, href: "https://www.uniprot.org/uniprot/Q96T60" }},
+{data: { id: 'MSH3', score: 5, href: "https://www.uniprot.org/uniprot/P20585" }},
+{data: { id: 'XRCC5', score: 5, href: "https://www.uniprot.org/uniprot/P13010" }},
+{data: { id: 'LIG3', score: 5, href: "https://www.uniprot.org/uniprot/P49916" }},
+{data: { id: 'APTX', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z2E3" }}], 
+ edges: [{ data: { source: 'XRCC1', target: 'LIG3', directed: 'false', weight: 0.9938379999999999} },
+{ data: { source: 'XRCC1', target: 'POLB', directed: 'false', weight: 0.98935} },
+{ data: { source: 'XRCC1', target: 'APLF', directed: 'false', weight: 0.571429} },
+{ data: { source: 'XRCC1', target: 'APTX', directed: 'false', weight: 0.5531689999999999} },
+{ data: { source: 'XRCC1', target: 'PNKP', directed: 'false', weight: 0.466135} },
+{ data: { source: 'XRCC1', target: 'HLTF', directed: 'false', weight: 0.405673} },
+{ data: { source: 'MSH3', target: 'APLF', directed: 'false', weight: 0.963989} },
+{ data: { source: 'MSH3', target: 'HLTF', directed: 'false', weight: 0.10554300000000001} },
+{ data: { source: 'POLB', target: 'LIG3', directed: 'false', weight: 0.992373} },
+{ data: { source: 'POLB', target: 'PNKP', directed: 'false', weight: 0.986183} },
+{ data: { source: 'POLB', target: 'APLF', directed: 'false', weight: 0.607927} },
+{ data: { source: 'POLB', target: 'APTX', directed: 'false', weight: 0.311327} },
+{ data: { source: 'POLB', target: 'HLTF', directed: 'false', weight: 0.212556} },
+{ data: { source: 'XRCC5', target: 'APLF', directed: 'false', weight: 0.815588} },
+{ data: { source: 'XRCC5', target: 'LIG3', directed: 'false', weight: 0.7282689999999999} },
+{ data: { source: 'XRCC5', target: 'HLTF', directed: 'false', weight: 0.5} },
+{ data: { source: 'PNKP', target: 'APTX', directed: 'false', weight: 0.469113} },
+{ data: { source: 'PNKP', target: 'LIG3', directed: 'false', weight: 0.155246} },
+{ data: { source: 'LIG3', target: 'APLF', directed: 'false', weight: 0.659787} },
+{ data: { source: 'LIG3', target: 'HLTF', directed: 'false', weight: 0.594344} },
+{ data: { source: 'HLTF', target: 'APLF', directed: 'false', weight: 0.45387299999999997} }]},
 
 style: [
     {
@@ -82,12 +100,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.60624
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>ABCC1
+    Complex Score (from Super.Complex) = 0.59186
     </section>
     </body>
     </html>

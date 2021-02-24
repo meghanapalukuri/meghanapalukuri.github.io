@@ -29,18 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ZKSCAN8', score: 4, href: "https://www.uniprot.org/uniprot/Q15776" }},
-{data: { id: 'SET', score: 5, href: "https://www.uniprot.org/uniprot/Q01105" }},
-{data: { id: 'FAM111B', score: 4, href: "https://www.uniprot.org/uniprot/Q6SJ93" }},
-{data: { id: 'C14orf93', score: 3, href: "https://www.uniprot.org/uniprot/Q9H972" }},
-{data: { id: 'ZNF445', score: 5, href: "https://www.uniprot.org/uniprot/P59923" }}], 
- edges: [{ data: { source: 'C14orf93', target: 'SET', directed: 'false', weight: 0.572087} },
-{ data: { source: 'C14orf93', target: 'ZNF445', directed: 'false', weight: 0.144297} },
-{ data: { source: 'C14orf93', target: 'FAM111B', directed: 'false', weight: 0.10926300000000001} },
-{ data: { source: 'FAM111B', target: 'SET', directed: 'false', weight: 0.302551} },
-{ data: { source: 'FAM111B', target: 'ZNF445', directed: 'false', weight: 0.0947832} },
-{ data: { source: 'SET', target: 'ZNF445', directed: 'false', weight: 0.890706} },
-{ data: { source: 'SET', target: 'ZKSCAN8', directed: 'false', weight: 0.11296099999999999} }]},
+elements:{nodes: [{data: { id: 'SUMF1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NBK3" }},
+{data: { id: 'ARSA', score: 5, href: "https://www.uniprot.org/uniprot/P15289" }},
+{data: { id: 'POLDIP2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2S7" }},
+{data: { id: 'IDS', score: 5, href: "https://www.uniprot.org/uniprot/P22304" }},
+{data: { id: 'FBXO21', score: 3, href: "https://www.uniprot.org/uniprot/O94952" }}], 
+ edges: [{ data: { source: 'IDS', target: 'FBXO21', directed: 'false', weight: 0.666353} },
+{ data: { source: 'IDS', target: 'SUMF1', directed: 'false', weight: 0.443539} },
+{ data: { source: 'IDS', target: 'POLDIP2', directed: 'false', weight: 0.30445700000000003} },
+{ data: { source: 'SUMF1', target: 'ARSA', directed: 'false', weight: 0.583444} },
+{ data: { source: 'SUMF1', target: 'POLDIP2', directed: 'false', weight: 0.128057} },
+{ data: { source: 'SUMF1', target: 'FBXO21', directed: 'false', weight: 0.07988250000000001} },
+{ data: { source: 'FBXO21', target: 'POLDIP2', directed: 'false', weight: 0.108674} }]},
 
 style: [
     {
@@ -82,7 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.57966
+    Complex Score (from Super.Complex) = 0.57303
     </section>
     </body>
     </html>

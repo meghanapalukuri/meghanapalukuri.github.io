@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TIMM9', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5J7" }},
-{data: { id: 'TIMM10', score: 5, href: "https://www.uniprot.org/uniprot/P62072" }},
-{data: { id: 'TIMM8A', score: 5, href: "https://www.uniprot.org/uniprot/O60220" }}], 
- edges: [{ data: { source: 'TIMM10', target: 'TIMM9', directed: 'false', weight: 0.975943} },
-{ data: { source: 'TIMM10', target: 'TIMM8A', directed: 'false', weight: 0.15279} },
-{ data: { source: 'TIMM8A', target: 'TIMM9', directed: 'false', weight: 0.630654} }]},
+elements:{nodes: [{data: { id: 'SYNM', score: 5, href: "https://www.uniprot.org/uniprot/O15061" }},
+{data: { id: 'DNAJB5', score: 4, href: "https://www.uniprot.org/uniprot/O75953" }},
+{data: { id: 'DNAJB4', score: 5, href: "https://www.uniprot.org/uniprot/Q9UDY4" }}], 
+ edges: [{ data: { source: 'DNAJB4', target: 'SYNM', directed: 'false', weight: 0.9259129999999999} },
+{ data: { source: 'DNAJB4', target: 'DNAJB5', directed: 'false', weight: 0.74584} },
+{ data: { source: 'SYNM', target: 'DNAJB5', directed: 'false', weight: 0.10556600000000001} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76838
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        2 interacting protein(s): <br>TIMM9 TIMM10
+    Complex Score (from Super.Complex) = 0.76805
     </section>
     </body>
     </html>

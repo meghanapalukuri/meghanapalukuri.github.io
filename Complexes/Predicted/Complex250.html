@@ -29,16 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MAN1A2', score: 5, href: "https://www.uniprot.org/uniprot/O60476" }},
-{data: { id: 'GOLGA7', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z5G4" }},
-{data: { id: 'ZDHHC8', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULC8" }},
-{data: { id: 'CLDND1', score: 4, href: "https://www.uniprot.org/uniprot/Q9NY35" }}], 
- edges: [{ data: { source: 'CLDND1', target: 'GOLGA7', directed: 'false', weight: 0.9714969999999999} },
-{ data: { source: 'CLDND1', target: 'ZDHHC8', directed: 'false', weight: 0.9679559999999999} },
-{ data: { source: 'CLDND1', target: 'MAN1A2', directed: 'false', weight: 0.43397299999999994} },
-{ data: { source: 'MAN1A2', target: 'ZDHHC8', directed: 'false', weight: 0.11730499999999999} },
-{ data: { source: 'MAN1A2', target: 'GOLGA7', directed: 'false', weight: 0.0952688} },
-{ data: { source: 'ZDHHC8', target: 'GOLGA7', directed: 'false', weight: 0.140692} }]},
+elements:{nodes: [{data: { id: 'YJU2', score: 5, href: "https://www.uniprot.org/uniprot/Q9BW85" }},
+{data: { id: 'TRIM62', score: 5, href: "https://www.uniprot.org/uniprot/Q9BVG3" }},
+{data: { id: 'SETMAR', score: 5, href: "https://www.uniprot.org/uniprot/Q53H47" }}], 
+ edges: [{ data: { source: 'YJU2', target: 'SETMAR', directed: 'false', weight: 0.96619} },
+{ data: { source: 'YJU2', target: 'TRIM62', directed: 'false', weight: 0.730629} },
+{ data: { source: 'SETMAR', target: 'TRIM62', directed: 'false', weight: 0.123797} }]},
 
 style: [
     {
@@ -80,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77018
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>GOLGA7
+    Complex Score (from Super.Complex) = 0.76983
     </section>
     </body>
     </html>

@@ -29,18 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NSMAF', score: 5, href: "https://www.uniprot.org/uniprot/Q92636" }},
-{data: { id: 'HEXIM2', score: 5, href: "https://www.uniprot.org/uniprot/Q96MH2" }},
-{data: { id: 'CDK9', score: 5, href: "https://www.uniprot.org/uniprot/P50750" }},
-{data: { id: 'OSBPL1A', score: 5, href: "https://www.uniprot.org/uniprot/Q9BXW6" }},
-{data: { id: 'HEXIM1', score: 5, href: "https://www.uniprot.org/uniprot/O94992" }}], 
- edges: [{ data: { source: 'OSBPL1A', target: 'HEXIM1', directed: 'false', weight: 0.512482} },
-{ data: { source: 'OSBPL1A', target: 'NSMAF', directed: 'false', weight: 0.140692} },
-{ data: { source: 'OSBPL1A', target: 'HEXIM2', directed: 'false', weight: 0.123797} },
-{ data: { source: 'NSMAF', target: 'HEXIM1', directed: 'false', weight: 0.977773} },
-{ data: { source: 'NSMAF', target: 'HEXIM2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'CDK9', target: 'HEXIM2', directed: 'false', weight: 0.74747} },
-{ data: { source: 'HEXIM1', target: 'HEXIM2', directed: 'false', weight: 0.97964} }]},
+elements:{nodes: [{data: { id: 'TMEM205', score: 5, href: "https://www.uniprot.org/uniprot/Q6UW68" }},
+{data: { id: 'RHBDF2', score: 5, href: "https://www.uniprot.org/uniprot/Q6PJF5" }},
+{data: { id: 'FLT4', score: 5, href: "https://www.uniprot.org/uniprot/P35916" }},
+{data: { id: 'TMEM52B', score: 5, href: "https://www.uniprot.org/uniprot/Q4KMG9" }}], 
+ edges: [{ data: { source: 'FLT4', target: 'TMEM52B', directed: 'false', weight: 0.293631} },
+{ data: { source: 'FLT4', target: 'RHBDF2', directed: 'false', weight: 0.158424} },
+{ data: { source: 'TMEM52B', target: 'RHBDF2', directed: 'false', weight: 0.582333} },
+{ data: { source: 'TMEM52B', target: 'TMEM205', directed: 'false', weight: 0.41271899999999995} },
+{ data: { source: 'TMEM205', target: 'RHBDF2', directed: 'false', weight: 0.0977318} }]},
 
 style: [
     {
@@ -82,7 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.62140
+    Complex Score (from Super.Complex) = 0.61258
     </section>
     </body>
     </html>

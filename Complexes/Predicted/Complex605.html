@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'KLK4', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5K2" }},
-{data: { id: 'HLA-DRA', score: 5, href: "https://www.uniprot.org/uniprot/P01903" }},
-{data: { id: 'HLA-DMB', score: 5, href: "https://www.uniprot.org/uniprot/P28068" }}], 
- edges: [{ data: { source: 'HLA-DMB', target: 'HLA-DRA', directed: 'false', weight: 0.28668699999999997} },
-{ data: { source: 'HLA-DMB', target: 'KLK4', directed: 'false', weight: 0.133456} },
-{ data: { source: 'KLK4', target: 'HLA-DRA', directed: 'false', weight: 0.345528} }]},
+elements:{nodes: [{data: { id: 'SFXN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H9B4" }},
+{data: { id: 'FARSA', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y285" }},
+{data: { id: 'EPHA7', score: 5, href: "https://www.uniprot.org/uniprot/Q15375" }}], 
+ edges: [{ data: { source: 'SFXN1', target: 'FARSA', directed: 'false', weight: 0.265216} },
+{ data: { source: 'SFXN1', target: 'EPHA7', directed: 'false', weight: 0.0952728} },
+{ data: { source: 'FARSA', target: 'EPHA7', directed: 'false', weight: 0.37827} }]},
 
 style: [
     {
@@ -76,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65909
+    Complex Score (from Super.Complex) = 0.65623
     </section>
     </body>
     </html>

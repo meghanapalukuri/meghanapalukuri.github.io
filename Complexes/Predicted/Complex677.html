@@ -29,19 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'EML1', score: 5, href: "https://www.uniprot.org/uniprot/O00423" }},
-{data: { id: 'EML4', score: 4, href: "https://www.uniprot.org/uniprot/Q9HC35" }},
-{data: { id: 'EML3', score: 4, href: "https://www.uniprot.org/uniprot/Q32P44" }},
-{data: { id: 'NEK9', score: 5, href: "https://www.uniprot.org/uniprot/Q8TD19" }},
-{data: { id: 'EML2', score: 5, href: "https://www.uniprot.org/uniprot/O95834" }}], 
- edges: [{ data: { source: 'NEK9', target: 'EML3', directed: 'false', weight: 0.792075} },
-{ data: { source: 'NEK9', target: 'EML1', directed: 'false', weight: 0.74043} },
-{ data: { source: 'NEK9', target: 'EML2', directed: 'false', weight: 0.676632} },
-{ data: { source: 'NEK9', target: 'EML4', directed: 'false', weight: 0.317083} },
-{ data: { source: 'EML4', target: 'EML1', directed: 'false', weight: 0.305667} },
-{ data: { source: 'EML4', target: 'EML2', directed: 'false', weight: 0.271635} },
-{ data: { source: 'EML4', target: 'EML3', directed: 'false', weight: 0.172871} },
-{ data: { source: 'EML2', target: 'EML1', directed: 'false', weight: 0.571014} }]},
+elements:{nodes: [{data: { id: 'ARHGEF12', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZN5" }},
+{data: { id: 'DDI2', score: 5, href: "https://www.uniprot.org/uniprot/Q5TDH0" }},
+{data: { id: 'TRMT61A', score: 5, href: "https://www.uniprot.org/uniprot/Q96FX7" }},
+{data: { id: 'TRMT6', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJA5" }}], 
+ edges: [{ data: { source: 'DDI2', target: 'TRMT6', directed: 'false', weight: 0.8528389999999999} },
+{ data: { source: 'TRMT61A', target: 'TRMT6', directed: 'false', weight: 0.997475} },
+{ data: { source: 'TRMT61A', target: 'ARHGEF12', directed: 'false', weight: 0.764999} },
+{ data: { source: 'ARHGEF12', target: 'TRMT6', directed: 'false', weight: 0.0952688} }]},
 
 style: [
     {
@@ -83,12 +78,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.62743
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>NEK9
+    Complex Score (from Super.Complex) = 0.61897
     </section>
     </body>
     </html>

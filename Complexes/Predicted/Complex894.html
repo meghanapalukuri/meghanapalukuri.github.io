@@ -29,26 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TERF1', score: 5, href: "https://www.uniprot.org/uniprot/P54274" }},
-{data: { id: 'TGS1', score: 5, href: "https://www.uniprot.org/uniprot/Q96RS0" }},
-{data: { id: 'FBL', score: 5, href: "https://www.uniprot.org/uniprot/P22087" }},
-{data: { id: 'NAP1L2', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULW6" }},
-{data: { id: 'WDR43', score: 5, href: "https://www.uniprot.org/uniprot/Q15061" }},
-{data: { id: 'DDX51', score: 4, href: "https://www.uniprot.org/uniprot/Q8N8A6" }},
-{data: { id: 'PINX1', score: 5, href: "https://www.uniprot.org/uniprot/Q96BK5" }}], 
- edges: [{ data: { source: 'WDR43', target: 'FBL', directed: 'false', weight: 0.748786} },
-{ data: { source: 'WDR43', target: 'NAP1L2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'WDR43', target: 'PINX1', directed: 'false', weight: 0.140692} },
-{ data: { source: 'WDR43', target: 'TGS1', directed: 'false', weight: 0.140692} },
-{ data: { source: 'TGS1', target: 'FBL', directed: 'false', weight: 0.9184129999999999} },
-{ data: { source: 'TGS1', target: 'PINX1', directed: 'false', weight: 0.24226599999999998} },
-{ data: { source: 'TGS1', target: 'NAP1L2', directed: 'false', weight: 0.140692} },
-{ data: { source: 'PINX1', target: 'TERF1', directed: 'false', weight: 0.8859239999999999} },
-{ data: { source: 'PINX1', target: 'FBL', directed: 'false', weight: 0.774762} },
-{ data: { source: 'PINX1', target: 'NAP1L2', directed: 'false', weight: 0.140692} },
-{ data: { source: 'NAP1L2', target: 'FBL', directed: 'false', weight: 0.968807} },
-{ data: { source: 'NAP1L2', target: 'DDX51', directed: 'false', weight: 0.120276} },
-{ data: { source: 'FBL', target: 'DDX51', directed: 'false', weight: 0.73619} }]},
+elements:{nodes: [{data: { id: 'EIF2A', score: 5, href: "https://www.uniprot.org/uniprot/Q9BY44" }},
+{data: { id: 'DNAJC2', score: 5, href: "https://www.uniprot.org/uniprot/Q99543" }},
+{data: { id: 'MAP4K3', score: 5, href: "https://www.uniprot.org/uniprot/Q8IVH8" }}], 
+ edges: [{ data: { source: 'EIF2A', target: 'DNAJC2', directed: 'false', weight: 0.679031} },
+{ data: { source: 'EIF2A', target: 'MAP4K3', directed: 'false', weight: 0.482335} }]},
 
 style: [
     {
@@ -90,7 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.54439
+    Complex Score (from Super.Complex) = 0.53598
     </section>
     </body>
     </html>

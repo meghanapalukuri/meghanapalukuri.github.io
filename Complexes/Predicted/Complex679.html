@@ -29,14 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SCAMP4', score: 5, href: "https://www.uniprot.org/uniprot/Q969E2" }},
-{data: { id: 'ATP1B3', score: 5, href: "https://www.uniprot.org/uniprot/P54709" }},
-{data: { id: 'REEP6', score: 5, href: "https://www.uniprot.org/uniprot/Q96HR9" }},
-{data: { id: 'REEP5', score: 5, href: "https://www.uniprot.org/uniprot/Q00765" }}], 
- edges: [{ data: { source: 'ATP1B3', target: 'REEP5', directed: 'false', weight: 0.7400399999999999} },
-{ data: { source: 'REEP6', target: 'REEP5', directed: 'false', weight: 0.997417} },
-{ data: { source: 'REEP6', target: 'SCAMP4', directed: 'false', weight: 0.165074} },
-{ data: { source: 'SCAMP4', target: 'REEP5', directed: 'false', weight: 0.981615} }]},
+elements:{nodes: [{data: { id: 'SDHA', score: 5, href: "https://www.uniprot.org/uniprot/P31040" }},
+{data: { id: 'SDHB', score: 5, href: "https://www.uniprot.org/uniprot/P21912" }},
+{data: { id: 'PDHA2', score: 5, href: "https://www.uniprot.org/uniprot/P29803" }},
+{data: { id: 'SDHAF2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX18" }}], 
+ edges: [{ data: { source: 'SDHA', target: 'SDHB', directed: 'false', weight: 0.996382} },
+{ data: { source: 'SDHA', target: 'SDHAF2', directed: 'false', weight: 0.623471} },
+{ data: { source: 'SDHA', target: 'PDHA2', directed: 'false', weight: 0.416279} },
+{ data: { source: 'SDHB', target: 'PDHA2', directed: 'false', weight: 0.576159} }]},
 
 style: [
     {
@@ -78,12 +78,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.62602
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        2 interacting protein(s): <br>REEP6 REEP5
+    Complex Score (from Super.Complex) = 0.61658
     </section>
     </body>
     </html>

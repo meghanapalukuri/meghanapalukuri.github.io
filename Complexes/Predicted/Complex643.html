@@ -29,18 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'BICD1', score: 5, href: "https://www.uniprot.org/uniprot/Q96G01" }},
-{data: { id: 'MYH1', score: 5, href: "https://www.uniprot.org/uniprot/P12882" }},
-{data: { id: 'MYH8', score: 5, href: "https://www.uniprot.org/uniprot/P13535" }},
-{data: { id: 'ACTN2', score: 5, href: "https://www.uniprot.org/uniprot/P35609" }},
-{data: { id: 'TPM1', score: 5, href: "https://www.uniprot.org/uniprot/P09493" }}], 
- edges: [{ data: { source: 'TPM1', target: 'MYH8', directed: 'false', weight: 0.9438549999999999} },
-{ data: { source: 'TPM1', target: 'MYH1', directed: 'false', weight: 0.9386120000000001} },
-{ data: { source: 'TPM1', target: 'ACTN2', directed: 'false', weight: 0.787251} },
-{ data: { source: 'MYH8', target: 'ACTN2', directed: 'false', weight: 0.5586979999999999} },
-{ data: { source: 'MYH8', target: 'BICD1', directed: 'false', weight: 0.404239} },
-{ data: { source: 'MYH8', target: 'MYH1', directed: 'false', weight: 0.216185} },
-{ data: { source: 'MYH1', target: 'ACTN2', directed: 'false', weight: 0.560066} }]},
+elements:{nodes: [{data: { id: 'ZNF706', score: 2, href: "https://www.uniprot.org/uniprot/Q9Y5V0" }},
+{data: { id: 'RNMT', score: 5, href: "https://www.uniprot.org/uniprot/O43148" }},
+{data: { id: 'HYPK', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX55" }},
+{data: { id: 'MANF', score: 5, href: "https://www.uniprot.org/uniprot/P55145" }}], 
+ edges: [{ data: { source: 'MANF', target: 'HYPK', directed: 'false', weight: 0.78938} },
+{ data: { source: 'MANF', target: 'RNMT', directed: 'false', weight: 0.403238} },
+{ data: { source: 'MANF', target: 'ZNF706', directed: 'false', weight: 0.111331} },
+{ data: { source: 'ZNF706', target: 'HYPK', directed: 'false', weight: 0.31366700000000003} },
+{ data: { source: 'RNMT', target: 'HYPK', directed: 'false', weight: 0.41188199999999997} }]},
 
 style: [
     {
@@ -82,7 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.64711
+    Complex Score (from Super.Complex) = 0.63587
     </section>
     </body>
     </html>

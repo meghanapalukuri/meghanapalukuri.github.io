@@ -29,11 +29,32 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RCN3', score: 5, href: "https://www.uniprot.org/uniprot/Q96D15" }},
-{data: { id: 'INHA', score: 5, href: "https://www.uniprot.org/uniprot/P05111" }},
-{data: { id: 'CALR', score: 5, href: "https://www.uniprot.org/uniprot/P27797" }}], 
- edges: [{ data: { source: 'RCN3', target: 'CALR', directed: 'false', weight: 0.570491} },
-{ data: { source: 'INHA', target: 'CALR', directed: 'false', weight: 0.6686270000000001} }]},
+elements:{nodes: [{data: { id: 'MON2', score: 4, href: "https://www.uniprot.org/uniprot/Q7Z3U7" }},
+{data: { id: 'FASTKD1', score: 5, href: "https://www.uniprot.org/uniprot/Q53R41" }},
+{data: { id: 'PI4KA', score: 5, href: "https://www.uniprot.org/uniprot/P42356" }},
+{data: { id: 'CAND2', score: 5, href: "https://www.uniprot.org/uniprot/O75155" }},
+{data: { id: 'HEATR1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H583" }},
+{data: { id: 'FANCI', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVI1" }},
+{data: { id: 'NF1', score: 5, href: "https://www.uniprot.org/uniprot/P21359" }},
+{data: { id: 'IPO13', score: 5, href: "https://www.uniprot.org/uniprot/O94829" }}], 
+ edges: [{ data: { source: 'NF1', target: 'PI4KA', directed: 'false', weight: 0.519015} },
+{ data: { source: 'NF1', target: 'CAND2', directed: 'false', weight: 0.34057} },
+{ data: { source: 'NF1', target: 'HEATR1', directed: 'false', weight: 0.190295} },
+{ data: { source: 'NF1', target: 'MON2', directed: 'false', weight: 0.148302} },
+{ data: { source: 'NF1', target: 'FASTKD1', directed: 'false', weight: 0.130003} },
+{ data: { source: 'HEATR1', target: 'PI4KA', directed: 'false', weight: 0.722993} },
+{ data: { source: 'HEATR1', target: 'CAND2', directed: 'false', weight: 0.5} },
+{ data: { source: 'HEATR1', target: 'MON2', directed: 'false', weight: 0.316655} },
+{ data: { source: 'HEATR1', target: 'FASTKD1', directed: 'false', weight: 0.293991} },
+{ data: { source: 'FASTKD1', target: 'PI4KA', directed: 'false', weight: 0.39262800000000003} },
+{ data: { source: 'FASTKD1', target: 'CAND2', directed: 'false', weight: 0.35996500000000003} },
+{ data: { source: 'FASTKD1', target: 'MON2', directed: 'false', weight: 0.23357600000000003} },
+{ data: { source: 'CAND2', target: 'PI4KA', directed: 'false', weight: 0.844333} },
+{ data: { source: 'CAND2', target: 'MON2', directed: 'false', weight: 0.490224} },
+{ data: { source: 'PI4KA', target: 'MON2', directed: 'false', weight: 0.387855} },
+{ data: { source: 'MON2', target: 'FANCI', directed: 'false', weight: 0.6396350000000001} },
+{ data: { source: 'MON2', target: 'IPO13', directed: 'false', weight: 0.222255} },
+{ data: { source: 'IPO13', target: 'FANCI', directed: 'false', weight: 0.34665999999999997} }]},
 
 style: [
     {
@@ -75,7 +96,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53752
+    Complex Score (from Super.Complex) = 0.53081
     </section>
     </body>
     </html>
