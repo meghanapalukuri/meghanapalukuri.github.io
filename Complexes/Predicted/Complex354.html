@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FRYL', score: 5, href: "https://www.uniprot.org/uniprot/O94915" }},
-{data: { id: 'LMAN2L', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0V9" }},
-{data: { id: 'HOMER1', score: 5, href: "https://www.uniprot.org/uniprot/Q86YM7" }}], 
- edges: [{ data: { source: 'LMAN2L', target: 'HOMER1', directed: 'false', weight: 0.5} },
-{ data: { source: 'LMAN2L', target: 'FRYL', directed: 'false', weight: 0.18296800000000002} },
-{ data: { source: 'HOMER1', target: 'FRYL', directed: 'false', weight: 0.890991} }]},
+elements:{nodes: [{data: { id: 'HOMER1', score: 5, href: "https://www.uniprot.org/uniprot/Q86YM7" }},
+{data: { id: 'FRYL', score: 5, href: "https://www.uniprot.org/uniprot/O94915" }},
+{data: { id: 'LMAN2L', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0V9" }}], 
+ edges: [{ data: { source: 'FRYL', target: 'HOMER1', directed: 'false', weight: 0.890991} },
+{ data: { source: 'FRYL', target: 'LMAN2L', directed: 'false', weight: 0.18296800000000002} },
+{ data: { source: 'HOMER1', target: 'LMAN2L', directed: 'false', weight: 0.5} }]},
 
 style: [
     {

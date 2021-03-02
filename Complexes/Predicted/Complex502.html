@@ -29,12 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'HAT1', score: 5, href: "https://www.uniprot.org/uniprot/O14929" }},
-{data: { id: 'CDV3', score: 3, href: "https://www.uniprot.org/uniprot/Q9UKY7" }},
-{data: { id: 'HSPA4L', score: 4, href: "https://www.uniprot.org/uniprot/O95757" }}], 
- edges: [{ data: { source: 'HAT1', target: 'HSPA4L', directed: 'false', weight: 0.767663} },
-{ data: { source: 'HAT1', target: 'CDV3', directed: 'false', weight: 0.09328389999999999} },
-{ data: { source: 'CDV3', target: 'HSPA4L', directed: 'false', weight: 0.580743} }]},
+elements:{nodes: [{data: { id: 'GNAS', score: 5, href: "https://www.uniprot.org/uniprot/O95467" }},
+{data: { id: 'OCIAD1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX40" }},
+{data: { id: 'MAGED2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UNF1" }},
+{data: { id: 'GNAL', score: 5, href: "https://www.uniprot.org/uniprot/P38405" }}], 
+ edges: [{ data: { source: 'MAGED2', target: 'GNAS', directed: 'false', weight: 0.391493} },
+{ data: { source: 'MAGED2', target: 'GNAL', directed: 'false', weight: 0.222827} },
+{ data: { source: 'MAGED2', target: 'OCIAD1', directed: 'false', weight: 0.06745880000000001} },
+{ data: { source: 'GNAS', target: 'GNAL', directed: 'false', weight: 0.939933} },
+{ data: { source: 'GNAS', target: 'OCIAD1', directed: 'false', weight: 0.42815299999999995} },
+{ data: { source: 'GNAL', target: 'OCIAD1', directed: 'false', weight: 0.0833615} }]},
 
 style: [
     {
@@ -76,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.68417
+    Complex Score (from Super.Complex) = 0.68470
     </section>
     </body>
     </html>

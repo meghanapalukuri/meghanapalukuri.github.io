@@ -29,18 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'AC011462.1', score: 0 }},
-{data: { id: 'LGALS3', score: 5, href: "https://www.uniprot.org/uniprot/P17931" }},
-{data: { id: 'ABCB1', score: 5, href: "https://www.uniprot.org/uniprot/P08183" }},
-{data: { id: 'SDK2', score: 5, href: "https://www.uniprot.org/uniprot/Q58EX2" }},
-{data: { id: 'HEG1', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULI3" }}], 
- edges: [{ data: { source: 'SDK2', target: 'LGALS3', directed: 'false', weight: 0.679067} },
-{ data: { source: 'SDK2', target: 'ABCB1', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SDK2', target: 'HEG1', directed: 'false', weight: 0.133456} },
-{ data: { source: 'LGALS3', target: 'ABCB1', directed: 'false', weight: 0.5633130000000001} },
-{ data: { source: 'LGALS3', target: 'HEG1', directed: 'false', weight: 0.336084} },
-{ data: { source: 'LGALS3', target: 'AC011462.1', directed: 'false', weight: 0.334446} },
-{ data: { source: 'HEG1', target: 'ABCB1', directed: 'false', weight: 0.151455} }]},
+elements:{nodes: [{data: { id: 'ZC3H15', score: 5, href: "https://www.uniprot.org/uniprot/Q8WU90" }},
+{data: { id: 'DRG1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y295" }},
+{data: { id: 'NTMT1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BV86" }},
+{data: { id: 'LRRC41', score: 5, href: "https://www.uniprot.org/uniprot/Q15345" }}], 
+ edges: [{ data: { source: 'DRG1', target: 'ZC3H15', directed: 'false', weight: 0.9837229999999999} },
+{ data: { source: 'DRG1', target: 'NTMT1', directed: 'false', weight: 0.913383} },
+{ data: { source: 'DRG1', target: 'LRRC41', directed: 'false', weight: 0.897717} },
+{ data: { source: 'NTMT1', target: 'LRRC41', directed: 'false', weight: 0.0977318} },
+{ data: { source: 'ZC3H15', target: 'LRRC41', directed: 'false', weight: 0.10556600000000001} }]},
 
 style: [
     {
@@ -82,7 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.57474
+    Complex Score (from Super.Complex) = 0.57786
     </section>
     </body>
     </html>

@@ -29,14 +29,22 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GTF2A1', score: 5, href: "https://www.uniprot.org/uniprot/P52655" }},
-{data: { id: 'GTF2A2', score: 5, href: "https://www.uniprot.org/uniprot/P52657" }},
-{data: { id: 'TBPL1', score: 5, href: "https://www.uniprot.org/uniprot/P62380" }},
-{data: { id: 'RO60', score: 5, href: "https://www.uniprot.org/uniprot/P10155" }}], 
- edges: [{ data: { source: 'GTF2A2', target: 'GTF2A1', directed: 'false', weight: 0.993051} },
-{ data: { source: 'GTF2A2', target: 'TBPL1', directed: 'false', weight: 0.151455} },
-{ data: { source: 'GTF2A1', target: 'TBPL1', directed: 'false', weight: 0.982907} },
-{ data: { source: 'GTF2A1', target: 'RO60', directed: 'false', weight: 0.577842} }]},
+elements:{nodes: [{data: { id: 'IDH1', score: 5, href: "https://www.uniprot.org/uniprot/O75874" }},
+{data: { id: 'IDH3G', score: 5, href: "https://www.uniprot.org/uniprot/P51553" }},
+{data: { id: 'HPD', score: 5, href: "https://www.uniprot.org/uniprot/P32754" }},
+{data: { id: 'IDH2', score: 5, href: "https://www.uniprot.org/uniprot/P48735" }},
+{data: { id: 'UBQLN2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHD9" }},
+{data: { id: 'HAAO', score: 5, href: "https://www.uniprot.org/uniprot/P46952" }}], 
+ edges: [{ data: { source: 'UBQLN2', target: 'HAAO', directed: 'false', weight: 0.6365069999999999} },
+{ data: { source: 'UBQLN2', target: 'IDH2', directed: 'false', weight: 0.451531} },
+{ data: { source: 'IDH2', target: 'IDH1', directed: 'false', weight: 0.822733} },
+{ data: { source: 'IDH2', target: 'HAAO', directed: 'false', weight: 0.5662020000000001} },
+{ data: { source: 'IDH2', target: 'IDH3G', directed: 'false', weight: 0.358658} },
+{ data: { source: 'IDH1', target: 'IDH3G', directed: 'false', weight: 0.8074399999999999} },
+{ data: { source: 'IDH1', target: 'HPD', directed: 'false', weight: 0.59817} },
+{ data: { source: 'IDH1', target: 'HAAO', directed: 'false', weight: 0.572655} },
+{ data: { source: 'HAAO', target: 'IDH3G', directed: 'false', weight: 0.22737399999999997} },
+{ data: { source: 'HPD', target: 'IDH3G', directed: 'false', weight: 0.012840299999999999} }]},
 
 style: [
     {
@@ -78,7 +86,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.61903
+    Complex Score (from Super.Complex) = 0.62260
     </section>
     </body>
     </html>

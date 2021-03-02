@@ -29,20 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TACC1', score: 5, href: "https://www.uniprot.org/uniprot/O75410" }},
-{data: { id: 'CKAP5', score: 5, href: "https://www.uniprot.org/uniprot/Q14008" }},
-{data: { id: 'TACC2', score: 5, href: "https://www.uniprot.org/uniprot/O95359" }},
-{data: { id: 'SLAIN2', score: 5, href: "https://www.uniprot.org/uniprot/Q9P270" }},
-{data: { id: 'SLAIN1', score: 5, href: "https://www.uniprot.org/uniprot/Q8ND83" }}], 
- edges: [{ data: { source: 'SLAIN2', target: 'CKAP5', directed: 'false', weight: 0.364498} },
-{ data: { source: 'SLAIN2', target: 'TACC2', directed: 'false', weight: 0.141783} },
-{ data: { source: 'SLAIN2', target: 'TACC1', directed: 'false', weight: 0.09480110000000001} },
-{ data: { source: 'TACC2', target: 'CKAP5', directed: 'false', weight: 0.689547} },
-{ data: { source: 'TACC2', target: 'TACC1', directed: 'false', weight: 0.266934} },
-{ data: { source: 'TACC2', target: 'SLAIN1', directed: 'false', weight: 0.0293887} },
-{ data: { source: 'SLAIN1', target: 'CKAP5', directed: 'false', weight: 0.5465869999999999} },
-{ data: { source: 'SLAIN1', target: 'TACC1', directed: 'false', weight: 0.00806614} },
-{ data: { source: 'TACC1', target: 'CKAP5', directed: 'false', weight: 0.621142} }]},
+elements:{nodes: [{data: { id: 'TRMT1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NXH9" }},
+{data: { id: 'SLC25A29', score: 5, href: "https://www.uniprot.org/uniprot/Q8N8R3" }},
+{data: { id: 'SEC24A', score: 5, href: "https://www.uniprot.org/uniprot/O95486" }}], 
+ edges: [{ data: { source: 'SLC25A29', target: 'TRMT1', directed: 'false', weight: 0.32416300000000003} },
+{ data: { source: 'SLC25A29', target: 'SEC24A', directed: 'false', weight: 0.0860789} },
+{ data: { source: 'TRMT1', target: 'SEC24A', directed: 'false', weight: 0.633968} }]},
 
 style: [
     {
@@ -84,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66694
+    Complex Score (from Super.Complex) = 0.66752
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>TRMT1
     </section>
     </body>
     </html>

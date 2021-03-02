@@ -29,11 +29,26 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CAB39', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y376" }},
-{data: { id: 'COA6', score: 5, href: "https://www.uniprot.org/uniprot/Q5JTJ3" }},
-{data: { id: 'SRA1', score: 5, href: "https://www.uniprot.org/uniprot/Q9HD15" }}], 
- edges: [{ data: { source: 'COA6', target: 'CAB39', directed: 'false', weight: 0.652712} },
-{ data: { source: 'CAB39', target: 'SRA1', directed: 'false', weight: 0.585334} }]},
+elements:{nodes: [{data: { id: 'ZNF574', score: 5, href: "https://www.uniprot.org/uniprot/Q6ZN55" }},
+{data: { id: 'IKZF5', score: 5, href: "https://www.uniprot.org/uniprot/Q9H5V7" }},
+{data: { id: 'ZBTB21', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULJ3" }},
+{data: { id: 'ZNF445', score: 5, href: "https://www.uniprot.org/uniprot/P59923" }},
+{data: { id: 'ZNF770', score: 3, href: "https://www.uniprot.org/uniprot/Q6IQ21" }},
+{data: { id: 'SET', score: 5, href: "https://www.uniprot.org/uniprot/Q01105" }},
+{data: { id: 'ZNF845', score: 3, href: "https://www.uniprot.org/uniprot/Q96IR2" }}], 
+ edges: [{ data: { source: 'ZNF445', target: 'SET', directed: 'false', weight: 0.890706} },
+{ data: { source: 'ZNF445', target: 'IKZF5', directed: 'false', weight: 0.144297} },
+{ data: { source: 'ZNF445', target: 'ZNF845', directed: 'false', weight: 0.125749} },
+{ data: { source: 'ZNF445', target: 'ZBTB21', directed: 'false', weight: 0.125749} },
+{ data: { source: 'IKZF5', target: 'SET', directed: 'false', weight: 0.838254} },
+{ data: { source: 'IKZF5', target: 'ZNF845', directed: 'false', weight: 0.144297} },
+{ data: { source: 'IKZF5', target: 'ZBTB21', directed: 'false', weight: 0.144297} },
+{ data: { source: 'ZBTB21', target: 'SET', directed: 'false', weight: 0.816756} },
+{ data: { source: 'ZBTB21', target: 'ZNF845', directed: 'false', weight: 0.125749} },
+{ data: { source: 'ZNF770', target: 'SET', directed: 'false', weight: 0.7035060000000001} },
+{ data: { source: 'ZNF770', target: 'ZNF574', directed: 'false', weight: 0.691844} },
+{ data: { source: 'ZNF574', target: 'SET', directed: 'false', weight: 0.5667840000000001} },
+{ data: { source: 'SET', target: 'ZNF845', directed: 'false', weight: 0.633113} }]},
 
 style: [
     {
@@ -75,7 +90,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53942
+    Complex Score (from Super.Complex) = 0.54539
     </section>
     </body>
     </html>

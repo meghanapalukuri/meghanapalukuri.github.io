@@ -29,21 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TMEM94', score: 3, href: "https://www.uniprot.org/uniprot/Q12767" }},
-{data: { id: 'FIBP', score: 5, href: "https://www.uniprot.org/uniprot/O43427" }},
-{data: { id: 'CABLES2', score: 3, href: "https://www.uniprot.org/uniprot/Q9BTV7" }},
+elements:{nodes: [{data: { id: 'FIBP', score: 5, href: "https://www.uniprot.org/uniprot/O43427" }},
 {data: { id: 'C2CD5', score: 5, href: "https://www.uniprot.org/uniprot/Q86YS7" }},
-{data: { id: 'CABLES1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDN4" }}], 
- edges: [{ data: { source: 'C2CD5', target: 'FIBP', directed: 'false', weight: 0.9842139999999999} },
-{ data: { source: 'C2CD5', target: 'TMEM94', directed: 'false', weight: 0.5} },
-{ data: { source: 'C2CD5', target: 'CABLES1', directed: 'false', weight: 0.329598} },
-{ data: { source: 'C2CD5', target: 'CABLES2', directed: 'false', weight: 0.200625} },
-{ data: { source: 'TMEM94', target: 'FIBP', directed: 'false', weight: 0.738031} },
+{data: { id: 'TMEM94', score: 3, href: "https://www.uniprot.org/uniprot/Q12767" }},
+{data: { id: 'CABLES1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDN4" }},
+{data: { id: 'CABLES2', score: 3, href: "https://www.uniprot.org/uniprot/Q9BTV7" }}], 
+ edges: [{ data: { source: 'TMEM94', target: 'FIBP', directed: 'false', weight: 0.738031} },
+{ data: { source: 'TMEM94', target: 'C2CD5', directed: 'false', weight: 0.5} },
 { data: { source: 'TMEM94', target: 'CABLES2', directed: 'false', weight: 0.25848000000000004} },
 { data: { source: 'TMEM94', target: 'CABLES1', directed: 'false', weight: 0.216185} },
-{ data: { source: 'CABLES2', target: 'FIBP', directed: 'false', weight: 0.8327469999999999} },
-{ data: { source: 'CABLES2', target: 'CABLES1', directed: 'false', weight: 0.28781100000000004} },
-{ data: { source: 'FIBP', target: 'CABLES1', directed: 'false', weight: 0.99339} }]},
+{ data: { source: 'C2CD5', target: 'FIBP', directed: 'false', weight: 0.9842139999999999} },
+{ data: { source: 'C2CD5', target: 'CABLES1', directed: 'false', weight: 0.329598} },
+{ data: { source: 'C2CD5', target: 'CABLES2', directed: 'false', weight: 0.200625} },
+{ data: { source: 'FIBP', target: 'CABLES1', directed: 'false', weight: 0.99339} },
+{ data: { source: 'FIBP', target: 'CABLES2', directed: 'false', weight: 0.8327469999999999} },
+{ data: { source: 'CABLES2', target: 'CABLES1', directed: 'false', weight: 0.28781100000000004} }]},
 
 style: [
     {

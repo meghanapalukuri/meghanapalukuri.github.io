@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'INPP5K', score: 5, href: "https://www.uniprot.org/uniprot/Q9BT40" }},
-{data: { id: 'AAMP', score: 5, href: "https://www.uniprot.org/uniprot/Q13685" }},
-{data: { id: 'AEN', score: 5, href: "https://www.uniprot.org/uniprot/Q8WTP8" }},
-{data: { id: 'ACE2', score: 5, href: "https://www.uniprot.org/uniprot/Q9BYF1" }}], 
- edges: [{ data: { source: 'AAMP', target: 'ACE2', directed: 'false', weight: 0.9845079999999999} },
-{ data: { source: 'AAMP', target: 'AEN', directed: 'false', weight: 0.978721} },
-{ data: { source: 'AAMP', target: 'INPP5K', directed: 'false', weight: 0.367463} },
-{ data: { source: 'AEN', target: 'ACE2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'AEN', target: 'INPP5K', directed: 'false', weight: 0.10064} },
-{ data: { source: 'ACE2', target: 'INPP5K', directed: 'false', weight: 0.11473699999999999} }]},
+elements:{nodes: [{data: { id: 'GOLGA7', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z5G4" }},
+{data: { id: 'ZDHHC8', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULC8" }},
+{data: { id: 'MAN1A2', score: 5, href: "https://www.uniprot.org/uniprot/O60476" }},
+{data: { id: 'CLDND1', score: 4, href: "https://www.uniprot.org/uniprot/Q9NY35" }}], 
+ edges: [{ data: { source: 'ZDHHC8', target: 'CLDND1', directed: 'false', weight: 0.9679559999999999} },
+{ data: { source: 'ZDHHC8', target: 'GOLGA7', directed: 'false', weight: 0.140692} },
+{ data: { source: 'ZDHHC8', target: 'MAN1A2', directed: 'false', weight: 0.11730499999999999} },
+{ data: { source: 'GOLGA7', target: 'CLDND1', directed: 'false', weight: 0.9714969999999999} },
+{ data: { source: 'GOLGA7', target: 'MAN1A2', directed: 'false', weight: 0.0952688} },
+{ data: { source: 'MAN1A2', target: 'CLDND1', directed: 'false', weight: 0.43397299999999994} }]},
 
 style: [
     {
@@ -80,7 +80,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77021
+    Complex Score (from Super.Complex) = 0.77018
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>GOLGA7
     </section>
     </body>
     </html>

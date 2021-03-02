@@ -29,16 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ALG9', score: 5, href: "https://www.uniprot.org/uniprot/Q9H6U8" }},
-{data: { id: 'LMF2', score: 4, href: "https://www.uniprot.org/uniprot/Q9BU23" }},
-{data: { id: 'MGAT1', score: 5, href: "https://www.uniprot.org/uniprot/P26572" }},
-{data: { id: 'GLB1L2', score: 3, href: "https://www.uniprot.org/uniprot/Q8IW92" }}], 
- edges: [{ data: { source: 'MGAT1', target: 'GLB1L2', directed: 'false', weight: 0.34665999999999997} },
-{ data: { source: 'MGAT1', target: 'ALG9', directed: 'false', weight: 0.0939233} },
-{ data: { source: 'MGAT1', target: 'LMF2', directed: 'false', weight: 0.0880744} },
-{ data: { source: 'LMF2', target: 'ALG9', directed: 'false', weight: 0.39405999999999997} },
-{ data: { source: 'LMF2', target: 'GLB1L2', directed: 'false', weight: 0.373501} },
-{ data: { source: 'GLB1L2', target: 'ALG9', directed: 'false', weight: 0.282629} }]},
+elements:{nodes: [{data: { id: 'CNNM1', score: 4, href: "https://www.uniprot.org/uniprot/Q9NRU3" }},
+{data: { id: 'CNNM3', score: 5, href: "https://www.uniprot.org/uniprot/Q8NE01" }},
+{data: { id: 'HLA-DQB1', score: 5, href: "https://www.uniprot.org/uniprot/P01920" }}], 
+ edges: [{ data: { source: 'CNNM1', target: 'CNNM3', directed: 'false', weight: 0.41561800000000004} },
+{ data: { source: 'CNNM1', target: 'HLA-DQB1', directed: 'false', weight: 0.26776300000000003} },
+{ data: { source: 'HLA-DQB1', target: 'CNNM3', directed: 'false', weight: 0.175861} }]},
 
 style: [
     {
@@ -80,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66261
+    Complex Score (from Super.Complex) = 0.66434
     </section>
     </body>
     </html>

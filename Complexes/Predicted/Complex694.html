@@ -29,19 +29,17 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TFG', score: 5, href: "https://www.uniprot.org/uniprot/Q92734" }},
-{data: { id: 'CHMP2A', score: 5, href: "https://www.uniprot.org/uniprot/O43633" }},
-{data: { id: 'CHMP3', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3E7" }},
-{data: { id: 'TM9SF1', score: 4, href: "https://www.uniprot.org/uniprot/O15321" }},
-{data: { id: 'CHMP1A', score: 5, href: "https://www.uniprot.org/uniprot/Q9HD42" }}], 
- edges: [{ data: { source: 'CHMP2A', target: 'CHMP1A', directed: 'false', weight: 0.7485729999999999} },
-{ data: { source: 'CHMP2A', target: 'TM9SF1', directed: 'false', weight: 0.328185} },
-{ data: { source: 'CHMP1A', target: 'TFG', directed: 'false', weight: 0.444697} },
-{ data: { source: 'CHMP1A', target: 'TM9SF1', directed: 'false', weight: 0.328185} },
-{ data: { source: 'CHMP1A', target: 'CHMP3', directed: 'false', weight: 0.266359} },
-{ data: { source: 'TM9SF1', target: 'CHMP3', directed: 'false', weight: 0.260982} },
-{ data: { source: 'TM9SF1', target: 'TFG', directed: 'false', weight: 0.13006700000000002} },
-{ data: { source: 'CHMP3', target: 'TFG', directed: 'false', weight: 0.764069} }]},
+elements:{nodes: [{data: { id: 'PTPRF', score: 5, href: "https://www.uniprot.org/uniprot/P10586" }},
+{data: { id: 'DXO', score: 5, href: "https://www.uniprot.org/uniprot/O77932" }},
+{data: { id: 'GRK2', score: 5, href: "https://www.uniprot.org/uniprot/P25098" }},
+{data: { id: 'UFD1', score: 5, href: "https://www.uniprot.org/uniprot/Q92890" }},
+{data: { id: 'NPLOC4', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAT6" }}], 
+ edges: [{ data: { source: 'GRK2', target: 'PTPRF', directed: 'false', weight: 0.8929520000000001} },
+{ data: { source: 'DXO', target: 'UFD1', directed: 'false', weight: 0.5961930000000001} },
+{ data: { source: 'DXO', target: 'NPLOC4', directed: 'false', weight: 0.443671} },
+{ data: { source: 'NPLOC4', target: 'UFD1', directed: 'false', weight: 0.9960469999999999} },
+{ data: { source: 'NPLOC4', target: 'PTPRF', directed: 'false', weight: 0.33679000000000003} },
+{ data: { source: 'UFD1', target: 'PTPRF', directed: 'false', weight: 0.479336} }]},
 
 style: [
     {
@@ -83,12 +81,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.60699
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>CHMP2A
+    Complex Score (from Super.Complex) = 0.61189
     </section>
     </body>
     </html>

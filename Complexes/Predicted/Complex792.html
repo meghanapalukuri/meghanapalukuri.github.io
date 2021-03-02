@@ -29,14 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'THOP1', score: 5, href: "https://www.uniprot.org/uniprot/P52888" }},
-{data: { id: 'CASP3', score: 5, href: "https://www.uniprot.org/uniprot/P42574" }},
-{data: { id: 'IDE', score: 5, href: "https://www.uniprot.org/uniprot/P14735" }},
-{data: { id: 'SERPINB8', score: 5, href: "https://www.uniprot.org/uniprot/P50452" }}], 
- edges: [{ data: { source: 'SERPINB8', target: 'IDE', directed: 'false', weight: 0.6832020000000001} },
-{ data: { source: 'CASP3', target: 'IDE', directed: 'false', weight: 0.588596} },
-{ data: { source: 'CASP3', target: 'THOP1', directed: 'false', weight: 0.171296} },
-{ data: { source: 'THOP1', target: 'IDE', directed: 'false', weight: 0.58515} }]},
+elements:{nodes: [{data: { id: 'CDK15', score: 5, href: "https://www.uniprot.org/uniprot/Q96Q40" }},
+{data: { id: 'RNF138', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVD3" }},
+{data: { id: 'CHCHD1', score: 5, href: "https://www.uniprot.org/uniprot/Q96BP2" }},
+{data: { id: 'NAP1L5', score: 3, href: "https://www.uniprot.org/uniprot/Q96NT1" }},
+{data: { id: 'MARK2', score: 5, href: "https://www.uniprot.org/uniprot/Q7KZI7" }}], 
+ edges: [{ data: { source: 'CDK15', target: 'MARK2', directed: 'false', weight: 0.619775} },
+{ data: { source: 'RNF138', target: 'NAP1L5', directed: 'false', weight: 0.492245} },
+{ data: { source: 'RNF138', target: 'CHCHD1', directed: 'false', weight: 0.128057} },
+{ data: { source: 'RNF138', target: 'MARK2', directed: 'false', weight: 0.112499} },
+{ data: { source: 'MARK2', target: 'NAP1L5', directed: 'false', weight: 0.467817} },
+{ data: { source: 'MARK2', target: 'CHCHD1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'NAP1L5', target: 'CHCHD1', directed: 'false', weight: 0.357103} }]},
 
 style: [
     {
@@ -78,12 +82,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.56969
+    Complex Score (from Super.Complex) = 0.57169
         <br> 
         <br>
         Connection to SARS-COV2: 
         <br>
-        1 interacting protein(s): <br>IDE
+        1 interacting protein(s): <br>MARK2
     </section>
     </body>
     </html>

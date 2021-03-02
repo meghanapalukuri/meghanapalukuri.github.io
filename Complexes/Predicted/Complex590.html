@@ -29,20 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DARS2', score: 5, href: "https://www.uniprot.org/uniprot/Q6PI48" }},
-{data: { id: 'GFM1', score: 5, href: "https://www.uniprot.org/uniprot/Q96RP9" }},
-{data: { id: 'PREPL', score: 5, href: "https://www.uniprot.org/uniprot/Q4J6C6" }},
-{data: { id: 'LARS2', score: 5, href: "https://www.uniprot.org/uniprot/Q15031" }},
-{data: { id: 'MTIF2', score: 5, href: "https://www.uniprot.org/uniprot/P46199" }}], 
- edges: [{ data: { source: 'DARS2', target: 'GFM1', directed: 'false', weight: 0.398978} },
-{ data: { source: 'DARS2', target: 'MTIF2', directed: 'false', weight: 0.20761500000000002} },
-{ data: { source: 'DARS2', target: 'PREPL', directed: 'false', weight: 0.135212} },
-{ data: { source: 'LARS2', target: 'GFM1', directed: 'false', weight: 0.283637} },
-{ data: { source: 'LARS2', target: 'MTIF2', directed: 'false', weight: 0.177152} },
-{ data: { source: 'LARS2', target: 'PREPL', directed: 'false', weight: 0.14541400000000002} },
-{ data: { source: 'MTIF2', target: 'GFM1', directed: 'false', weight: 0.613494} },
-{ data: { source: 'MTIF2', target: 'PREPL', directed: 'false', weight: 0.301238} },
-{ data: { source: 'GFM1', target: 'PREPL', directed: 'false', weight: 0.398978} }]},
+elements:{nodes: [{data: { id: 'NLRP5', score: 4, href: "https://www.uniprot.org/uniprot/P59047" }},
+{data: { id: 'LTBP4', score: 5, href: "https://www.uniprot.org/uniprot/Q8N2S1" }},
+{data: { id: 'NLRP3', score: 5, href: "https://www.uniprot.org/uniprot/Q96P20" }}], 
+ edges: [{ data: { source: 'NLRP5', target: 'NLRP3', directed: 'false', weight: 0.403618} },
+{ data: { source: 'NLRP5', target: 'LTBP4', directed: 'false', weight: 0.133179} },
+{ data: { source: 'NLRP3', target: 'LTBP4', directed: 'false', weight: 0.269484} }]},
 
 style: [
     {
@@ -84,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65927
+    Complex Score (from Super.Complex) = 0.66115
     </section>
     </body>
     </html>

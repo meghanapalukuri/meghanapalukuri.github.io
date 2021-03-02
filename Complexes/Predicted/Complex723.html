@@ -29,14 +29,23 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PYGL', score: 5, href: "https://www.uniprot.org/uniprot/P06737" }},
-{data: { id: 'TACO1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BSH4" }},
-{data: { id: 'TRNT1', score: 5, href: "https://www.uniprot.org/uniprot/Q96Q11" }},
-{data: { id: 'HPRT1', score: 5, href: "https://www.uniprot.org/uniprot/P00492" }}], 
- edges: [{ data: { source: 'TRNT1', target: 'HPRT1', directed: 'false', weight: 0.680575} },
-{ data: { source: 'TRNT1', target: 'TACO1', directed: 'false', weight: 0.527817} },
-{ data: { source: 'TACO1', target: 'HPRT1', directed: 'false', weight: 0.511837} },
-{ data: { source: 'PYGL', target: 'HPRT1', directed: 'false', weight: 0.680589} }]},
+elements:{nodes: [{data: { id: 'RAD23B', score: 5, href: "https://www.uniprot.org/uniprot/P54727" }},
+{data: { id: 'UBQLN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UMX0" }},
+{data: { id: 'RIDA', score: 5, href: "https://www.uniprot.org/uniprot/P52758" }},
+{data: { id: 'PHGDH', score: 5, href: "https://www.uniprot.org/uniprot/O43175" }},
+{data: { id: 'UBQLN4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NRR5" }},
+{data: { id: 'UBQLN2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHD9" }}], 
+ edges: [{ data: { source: 'UBQLN1', target: 'RAD23B', directed: 'false', weight: 0.9829969999999999} },
+{ data: { source: 'UBQLN1', target: 'UBQLN2', directed: 'false', weight: 0.941853} },
+{ data: { source: 'UBQLN1', target: 'PHGDH', directed: 'false', weight: 0.8143600000000001} },
+{ data: { source: 'UBQLN1', target: 'RIDA', directed: 'false', weight: 0.448805} },
+{ data: { source: 'UBQLN1', target: 'UBQLN4', directed: 'false', weight: 0.0567064} },
+{ data: { source: 'UBQLN2', target: 'RAD23B', directed: 'false', weight: 0.965374} },
+{ data: { source: 'UBQLN2', target: 'RIDA', directed: 'false', weight: 0.487191} },
+{ data: { source: 'RAD23B', target: 'UBQLN4', directed: 'false', weight: 0.855642} },
+{ data: { source: 'RAD23B', target: 'RIDA', directed: 'false', weight: 0.108372} },
+{ data: { source: 'RAD23B', target: 'PHGDH', directed: 'false', weight: 0.0121182} },
+{ data: { source: 'UBQLN4', target: 'PHGDH', directed: 'false', weight: 0.866591} }]},
 
 style: [
     {
@@ -78,7 +87,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.58917
+    Complex Score (from Super.Complex) = 0.59267
     </section>
     </body>
     </html>

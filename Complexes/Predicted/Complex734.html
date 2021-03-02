@@ -29,18 +29,22 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'UBE2G1', score: 5, href: "https://www.uniprot.org/uniprot/P62253" }},
-{data: { id: 'FKBP4', score: 5, href: "https://www.uniprot.org/uniprot/Q02790" }},
-{data: { id: 'PPAT', score: 0 }},
-{data: { id: 'DPP3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NY33" }},
-{data: { id: 'NPEPL1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NDH3" }}], 
- edges: [{ data: { source: 'NPEPL1', target: 'DPP3', directed: 'false', weight: 0.530284} },
-{ data: { source: 'NPEPL1', target: 'FKBP4', directed: 'false', weight: 0.412943} },
-{ data: { source: 'NPEPL1', target: 'PPAT', directed: 'false', weight: 0.08357510000000001} },
-{ data: { source: 'PPAT', target: 'DPP3', directed: 'false', weight: 0.43505699999999997} },
-{ data: { source: 'PPAT', target: 'UBE2G1', directed: 'false', weight: 0.294635} },
-{ data: { source: 'PPAT', target: 'FKBP4', directed: 'false', weight: 0.00773535} },
-{ data: { source: 'DPP3', target: 'FKBP4', directed: 'false', weight: 0.8307979999999999} }]},
+elements:{nodes: [{data: { id: 'NPM1', score: 5, href: "https://www.uniprot.org/uniprot/P06748" }},
+{data: { id: 'SCAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H7N4" }},
+{data: { id: 'RACK1', score: 5, href: "https://www.uniprot.org/uniprot/P63244" }},
+{data: { id: 'HIST1H2BD', score: 2, href: "https://www.uniprot.org/uniprot/A0A024QZZ7" }},
+{data: { id: 'LARP4B', score: 5, href: "https://www.uniprot.org/uniprot/Q92615" }},
+{data: { id: 'MKI67', score: 5, href: "https://www.uniprot.org/uniprot/P46013" }}], 
+ edges: [{ data: { source: 'SCAF1', target: 'NPM1', directed: 'false', weight: 0.7554960000000001} },
+{ data: { source: 'SCAF1', target: 'HIST1H2BD', directed: 'false', weight: 0.109293} },
+{ data: { source: 'HIST1H2BD', target: 'NPM1', directed: 'false', weight: 0.750154} },
+{ data: { source: 'HIST1H2BD', target: 'MKI67', directed: 'false', weight: 0.0974347} },
+{ data: { source: 'HIST1H2BD', target: 'LARP4B', directed: 'false', weight: 0.0924993} },
+{ data: { source: 'MKI67', target: 'NPM1', directed: 'false', weight: 0.9215909999999999} },
+{ data: { source: 'MKI67', target: 'LARP4B', directed: 'false', weight: 0.00721661} },
+{ data: { source: 'RACK1', target: 'LARP4B', directed: 'false', weight: 0.947615} },
+{ data: { source: 'RACK1', target: 'NPM1', directed: 'false', weight: 0.29373} },
+{ data: { source: 'NPM1', target: 'LARP4B', directed: 'false', weight: 0.8893209999999999} }]},
 
 style: [
     {
@@ -82,7 +86,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.58652
+    Complex Score (from Super.Complex) = 0.58859
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>LARP4B
     </section>
     </body>
     </html>

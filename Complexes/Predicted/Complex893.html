@@ -29,11 +29,44 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'AKR1A1', score: 5, href: "https://www.uniprot.org/uniprot/P14550" }},
-{data: { id: 'MPST', score: 5, href: "https://www.uniprot.org/uniprot/P25325" }},
-{data: { id: 'ETFA', score: 5, href: "https://www.uniprot.org/uniprot/P13804" }}], 
- edges: [{ data: { source: 'MPST', target: 'ETFA', directed: 'false', weight: 0.619154} },
-{ data: { source: 'MPST', target: 'AKR1A1', directed: 'false', weight: 0.587206} }]},
+elements:{nodes: [{data: { id: 'BLOC1S6', score: 5, href: "https://www.uniprot.org/uniprot/Q9UL45" }},
+{data: { id: 'BLOC1S1', score: 5, href: "https://www.uniprot.org/uniprot/P78537" }},
+{data: { id: 'TXLNB', score: 5, href: "https://www.uniprot.org/uniprot/Q8N3L3" }},
+{data: { id: 'DTNBP1', score: 5, href: "https://www.uniprot.org/uniprot/Q96EV8" }},
+{data: { id: 'SYBU', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX95" }},
+{data: { id: 'BLOC1S4', score: 4, href: "https://www.uniprot.org/uniprot/Q9NUP1" }},
+{data: { id: 'ZFR2', score: 3, href: "https://www.uniprot.org/uniprot/Q9UPR6" }},
+{data: { id: 'BCAS4', score: 4, href: "https://www.uniprot.org/uniprot/Q8TDM0" }},
+{data: { id: 'LAMC2', score: 5, href: "https://www.uniprot.org/uniprot/Q13753" }},
+{data: { id: 'BLOC1S5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDH9" }}], 
+ edges: [{ data: { source: 'BLOC1S6', target: 'DTNBP1', directed: 'false', weight: 0.960728} },
+{ data: { source: 'BLOC1S6', target: 'BCAS4', directed: 'false', weight: 0.837858} },
+{ data: { source: 'BLOC1S6', target: 'BLOC1S5', directed: 'false', weight: 0.306052} },
+{ data: { source: 'BLOC1S6', target: 'BLOC1S1', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'BLOC1S6', target: 'BLOC1S4', directed: 'false', weight: 0.151455} },
+{ data: { source: 'BLOC1S6', target: 'LAMC2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'BLOC1S6', target: 'TXLNB', directed: 'false', weight: 0.151455} },
+{ data: { source: 'BLOC1S1', target: 'DTNBP1', directed: 'false', weight: 0.939768} },
+{ data: { source: 'BLOC1S1', target: 'BLOC1S5', directed: 'false', weight: 0.8309219999999999} },
+{ data: { source: 'BLOC1S1', target: 'BLOC1S4', directed: 'false', weight: 0.133451} },
+{ data: { source: 'BLOC1S1', target: 'LAMC2', directed: 'false', weight: 0.133451} },
+{ data: { source: 'BLOC1S1', target: 'TXLNB', directed: 'false', weight: 0.133451} },
+{ data: { source: 'ZFR2', target: 'TXLNB', directed: 'false', weight: 0.382466} },
+{ data: { source: 'LAMC2', target: 'DTNBP1', directed: 'false', weight: 0.9638709999999999} },
+{ data: { source: 'LAMC2', target: 'SYBU', directed: 'false', weight: 0.171414} },
+{ data: { source: 'LAMC2', target: 'BLOC1S4', directed: 'false', weight: 0.171414} },
+{ data: { source: 'LAMC2', target: 'TXLNB', directed: 'false', weight: 0.171414} },
+{ data: { source: 'LAMC2', target: 'BLOC1S5', directed: 'false', weight: 0.133451} },
+{ data: { source: 'BLOC1S4', target: 'DTNBP1', directed: 'false', weight: 0.9816950000000001} },
+{ data: { source: 'BLOC1S4', target: 'SYBU', directed: 'false', weight: 0.171414} },
+{ data: { source: 'BLOC1S4', target: 'TXLNB', directed: 'false', weight: 0.171414} },
+{ data: { source: 'BLOC1S4', target: 'BCAS4', directed: 'false', weight: 0.151455} },
+{ data: { source: 'BLOC1S4', target: 'BLOC1S5', directed: 'false', weight: 0.133451} },
+{ data: { source: 'TXLNB', target: 'DTNBP1', directed: 'false', weight: 0.9778030000000001} },
+{ data: { source: 'TXLNB', target: 'BLOC1S5', directed: 'false', weight: 0.133451} },
+{ data: { source: 'SYBU', target: 'DTNBP1', directed: 'false', weight: 0.978283} },
+{ data: { source: 'DTNBP1', target: 'BLOC1S5', directed: 'false', weight: 0.977383} },
+{ data: { source: 'DTNBP1', target: 'BCAS4', directed: 'false', weight: 0.9584159999999999} }]},
 
 style: [
     {
@@ -75,12 +108,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53606
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>ETFA
+    Complex Score (from Super.Complex) = 0.53923
     </section>
     </body>
     </html>

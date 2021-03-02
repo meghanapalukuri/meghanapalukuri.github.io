@@ -29,11 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'KITLG', score: 5, href: "https://www.uniprot.org/uniprot/A0A024RBC0" }},
-{data: { id: 'PYCR1', score: 5, href: "https://www.uniprot.org/uniprot/P32322" }},
-{data: { id: 'KLHDC10', score: 5, href: "https://www.uniprot.org/uniprot/Q6PID8" }}], 
- edges: [{ data: { source: 'KLHDC10', target: 'PYCR1', directed: 'false', weight: 0.643682} },
-{ data: { source: 'KLHDC10', target: 'KITLG', directed: 'false', weight: 0.507252} }]},
+elements:{nodes: [{data: { id: 'DHRS11', score: 5, href: "https://www.uniprot.org/uniprot/Q6UWP2" }},
+{data: { id: 'TSTA3', score: 0 }},
+{data: { id: 'PAICS', score: 5, href: "https://www.uniprot.org/uniprot/P22234" }}], 
+ edges: [{ data: { source: 'TSTA3', target: 'DHRS11', directed: 'false', weight: 0.6767350000000001} },
+{ data: { source: 'DHRS11', target: 'PAICS', directed: 'false', weight: 0.550031} }]},
 
 style: [
     {
@@ -75,7 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53595
+    Complex Score (from Super.Complex) = 0.53903
     </section>
     </body>
     </html>

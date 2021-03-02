@@ -29,11 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ANXA2', score: 5, href: "https://www.uniprot.org/uniprot/P07355" }},
-{data: { id: 'LAMB3', score: 5, href: "https://www.uniprot.org/uniprot/Q13751" }},
-{data: { id: 'TMTC3', score: 5, href: "https://www.uniprot.org/uniprot/Q6ZXV5" }}], 
- edges: [{ data: { source: 'ANXA2', target: 'TMTC3', directed: 'false', weight: 0.608068} },
-{ data: { source: 'TMTC3', target: 'LAMB3', directed: 'false', weight: 0.336098} }]},
+elements:{nodes: [{data: { id: 'HK2', score: 5, href: "https://www.uniprot.org/uniprot/P52789" }},
+{data: { id: 'PTGES3L-AARSD1', score: 1, href: "https://www.uniprot.org/uniprot/C9J5N1" }},
+{data: { id: 'TBCB', score: 5, href: "https://www.uniprot.org/uniprot/Q99426" }}], 
+ edges: [{ data: { source: 'PTGES3L-AARSD1', target: 'TBCB', directed: 'false', weight: 0.614302} },
+{ data: { source: 'HK2', target: 'TBCB', directed: 'false', weight: 0.417009} }]},
 
 style: [
     {
@@ -75,7 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.52588
+    Complex Score (from Super.Complex) = 0.52938
     </section>
     </body>
     </html>

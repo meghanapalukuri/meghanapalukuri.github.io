@@ -29,14 +29,22 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'HSPA1B', score: 5, href: "https://www.uniprot.org/uniprot/P0DMV9" }},
-{data: { id: 'BAG2', score: 5, href: "https://www.uniprot.org/uniprot/O95816" }},
-{data: { id: 'HSPA1L', score: 5, href: "https://www.uniprot.org/uniprot/P34931" }},
-{data: { id: 'HSPA2', score: 5, href: "https://www.uniprot.org/uniprot/P54652" }}], 
- edges: [{ data: { source: 'BAG2', target: 'HSPA2', directed: 'false', weight: 0.64179} },
-{ data: { source: 'BAG2', target: 'HSPA1B', directed: 'false', weight: 0.20629299999999998} },
-{ data: { source: 'HSPA1B', target: 'HSPA2', directed: 'false', weight: 0.487829} },
-{ data: { source: 'HSPA1B', target: 'HSPA1L', directed: 'false', weight: 0.39842} }]},
+elements:{nodes: [{data: { id: 'ACSF3', score: 5, href: "https://www.uniprot.org/uniprot/Q4G176" }},
+{data: { id: 'ADHFE1', score: 5, href: "https://www.uniprot.org/uniprot/Q8IWW8" }},
+{data: { id: 'RPIA', score: 5, href: "https://www.uniprot.org/uniprot/P49247" }},
+{data: { id: 'GCLM', score: 5, href: "https://www.uniprot.org/uniprot/P48507" }},
+{data: { id: 'GMPR2', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2T1" }},
+{data: { id: 'GMPR', score: 5, href: "https://www.uniprot.org/uniprot/P36959" }}], 
+ edges: [{ data: { source: 'ACSF3', target: 'GMPR', directed: 'false', weight: 0.355956} },
+{ data: { source: 'ACSF3', target: 'GMPR2', directed: 'false', weight: 0.347958} },
+{ data: { source: 'ADHFE1', target: 'GMPR', directed: 'false', weight: 0.7787} },
+{ data: { source: 'ADHFE1', target: 'GMPR2', directed: 'false', weight: 0.599662} },
+{ data: { source: 'ADHFE1', target: 'RPIA', directed: 'false', weight: 0.056223199999999994} },
+{ data: { source: 'GCLM', target: 'GMPR2', directed: 'false', weight: 0.360664} },
+{ data: { source: 'GCLM', target: 'GMPR', directed: 'false', weight: 0.35541} },
+{ data: { source: 'GMPR2', target: 'GMPR', directed: 'false', weight: 0.980734} },
+{ data: { source: 'GMPR2', target: 'RPIA', directed: 'false', weight: 0.701434} },
+{ data: { source: 'RPIA', target: 'GMPR', directed: 'false', weight: 0.629831} }]},
 
 style: [
     {
@@ -78,7 +86,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.56247
+    Complex Score (from Super.Complex) = 0.56677
     </section>
     </body>
     </html>

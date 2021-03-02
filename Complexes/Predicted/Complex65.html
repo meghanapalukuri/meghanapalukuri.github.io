@@ -29,26 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PNRC1', score: 4, href: "https://www.uniprot.org/uniprot/Q12796" }},
-{data: { id: 'EDC4', score: 5, href: "https://www.uniprot.org/uniprot/Q6P2E9" }},
-{data: { id: 'MARF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y4F3" }},
-{data: { id: 'DCP1B', score: 5, href: "https://www.uniprot.org/uniprot/Q8IZD4" }},
-{data: { id: 'EDC3', score: 5, href: "https://www.uniprot.org/uniprot/Q96F86" }},
-{data: { id: 'DCP1A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPI6" }}], 
- edges: [{ data: { source: 'EDC3', target: 'DCP1A', directed: 'false', weight: 0.999934} },
-{ data: { source: 'EDC3', target: 'EDC4', directed: 'false', weight: 0.9587700000000001} },
-{ data: { source: 'EDC3', target: 'DCP1B', directed: 'false', weight: 0.721554} },
-{ data: { source: 'EDC3', target: 'PNRC1', directed: 'false', weight: 0.5207729999999999} },
-{ data: { source: 'EDC3', target: 'MARF1', directed: 'false', weight: 0.44872399999999996} },
-{ data: { source: 'MARF1', target: 'EDC4', directed: 'false', weight: 0.727024} },
-{ data: { source: 'MARF1', target: 'PNRC1', directed: 'false', weight: 0.349582} },
-{ data: { source: 'MARF1', target: 'DCP1A', directed: 'false', weight: 0.314695} },
-{ data: { source: 'PNRC1', target: 'DCP1A', directed: 'false', weight: 0.785557} },
-{ data: { source: 'PNRC1', target: 'EDC4', directed: 'false', weight: 0.429989} },
-{ data: { source: 'PNRC1', target: 'DCP1B', directed: 'false', weight: 0.12378900000000001} },
-{ data: { source: 'EDC4', target: 'DCP1A', directed: 'false', weight: 0.9504459999999999} },
-{ data: { source: 'EDC4', target: 'DCP1B', directed: 'false', weight: 0.11311500000000001} },
-{ data: { source: 'DCP1A', target: 'DCP1B', directed: 'false', weight: 0.35689299999999996} }]},
+elements:{nodes: [{data: { id: 'EVL', score: 5, href: "https://www.uniprot.org/uniprot/Q9UI08" }},
+{data: { id: 'ENAH', score: 5, href: "https://www.uniprot.org/uniprot/Q8N8S7" }},
+{data: { id: 'VASP', score: 5, href: "https://www.uniprot.org/uniprot/P50552" }}], 
+ edges: [{ data: { source: 'EVL', target: 'ENAH', directed: 'false', weight: 0.991416} },
+{ data: { source: 'EVL', target: 'VASP', directed: 'false', weight: 0.941451} },
+{ data: { source: 'VASP', target: 'ENAH', directed: 'false', weight: 0.975231} }]},
 
 style: [
     {
@@ -90,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.81269
+    Complex Score (from Super.Complex) = 0.81229
     </section>
     </body>
     </html>

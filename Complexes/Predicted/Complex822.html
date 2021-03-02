@@ -29,18 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MAPRE1', score: 5, href: "https://www.uniprot.org/uniprot/Q15691" }},
-{data: { id: 'PDE4DIP', score: 5, href: "https://www.uniprot.org/uniprot/Q5VU43" }},
-{data: { id: 'CLASP2', score: 5, href: "https://www.uniprot.org/uniprot/O75122" }},
-{data: { id: 'KIF18B', score: 5, href: "https://www.uniprot.org/uniprot/Q86Y91" }},
-{data: { id: 'CLASP1', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z460" }}], 
- edges: [{ data: { source: 'CLASP2', target: 'MAPRE1', directed: 'false', weight: 0.9049659999999999} },
-{ data: { source: 'CLASP2', target: 'CLASP1', directed: 'false', weight: 0.544525} },
-{ data: { source: 'CLASP2', target: 'KIF18B', directed: 'false', weight: 0.145554} },
-{ data: { source: 'CLASP2', target: 'PDE4DIP', directed: 'false', weight: 0.114755} },
-{ data: { source: 'MAPRE1', target: 'KIF18B', directed: 'false', weight: 0.9749479999999999} },
-{ data: { source: 'MAPRE1', target: 'PDE4DIP', directed: 'false', weight: 0.80548} },
-{ data: { source: 'KIF18B', target: 'PDE4DIP', directed: 'false', weight: 0.123797} }]},
+elements:{nodes: [{data: { id: 'BAG2', score: 5, href: "https://www.uniprot.org/uniprot/O95816" }},
+{data: { id: 'HSPA1B', score: 5, href: "https://www.uniprot.org/uniprot/P0DMV9" }},
+{data: { id: 'HSPA2', score: 5, href: "https://www.uniprot.org/uniprot/P54652" }},
+{data: { id: 'HSPA1L', score: 5, href: "https://www.uniprot.org/uniprot/P34931" }}], 
+ edges: [{ data: { source: 'BAG2', target: 'HSPA2', directed: 'false', weight: 0.64179} },
+{ data: { source: 'BAG2', target: 'HSPA1B', directed: 'false', weight: 0.20629299999999998} },
+{ data: { source: 'HSPA1L', target: 'HSPA1B', directed: 'false', weight: 0.39842} },
+{ data: { source: 'HSPA2', target: 'HSPA1B', directed: 'false', weight: 0.487829} }]},
 
 style: [
     {
@@ -82,12 +78,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.55952
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>PDE4DIP
+    Complex Score (from Super.Complex) = 0.56247
     </section>
     </body>
     </html>

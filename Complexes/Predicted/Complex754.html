@@ -29,18 +29,37 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ERC2', score: 4, href: "https://www.uniprot.org/uniprot/O15083" }},
-{data: { id: 'SLC12A5', score: 5, href: "https://www.uniprot.org/uniprot/Q9H2X9" }},
-{data: { id: 'DCK', score: 5, href: "https://www.uniprot.org/uniprot/P27707" }},
-{data: { id: 'RNF10', score: 5, href: "https://www.uniprot.org/uniprot/Q8N5U6" }},
-{data: { id: 'DGUOK', score: 5, href: "https://www.uniprot.org/uniprot/Q16854" }}], 
- edges: [{ data: { source: 'DCK', target: 'DGUOK', directed: 'false', weight: 0.980611} },
-{ data: { source: 'DCK', target: 'ERC2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'DCK', target: 'SLC12A5', directed: 'false', weight: 0.151455} },
-{ data: { source: 'ERC2', target: 'DGUOK', directed: 'false', weight: 0.356491} },
-{ data: { source: 'ERC2', target: 'SLC12A5', directed: 'false', weight: 0.151455} },
-{ data: { source: 'ERC2', target: 'RNF10', directed: 'false', weight: 0.144297} },
-{ data: { source: 'DGUOK', target: 'SLC12A5', directed: 'false', weight: 0.367581} }]},
+elements:{nodes: [{data: { id: 'SIDT2', score: 5, href: "https://www.uniprot.org/uniprot/Q8NBJ9" }},
+{data: { id: 'GP1BB', score: 5, href: "https://www.uniprot.org/uniprot/P13224" }},
+{data: { id: 'AGPAT3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NRZ7" }},
+{data: { id: 'FITM2', score: 5, href: "https://www.uniprot.org/uniprot/Q8N6M3" }},
+{data: { id: 'VKORC1L1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N0U8" }},
+{data: { id: 'GPR89A', score: 5, href: "https://www.uniprot.org/uniprot/B7ZAQ6" }},
+{data: { id: 'GJA1', score: 5, href: "https://www.uniprot.org/uniprot/P17302" }},
+{data: { id: 'AGPAT4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NRZ5" }}], 
+ edges: [{ data: { source: 'AGPAT3', target: 'AGPAT4', directed: 'false', weight: 0.44013800000000003} },
+{ data: { source: 'AGPAT3', target: 'VKORC1L1', directed: 'false', weight: 0.44013800000000003} },
+{ data: { source: 'AGPAT3', target: 'GPR89A', directed: 'false', weight: 0.22236999999999998} },
+{ data: { source: 'AGPAT3', target: 'GP1BB', directed: 'false', weight: 0.209405} },
+{ data: { source: 'AGPAT3', target: 'GJA1', directed: 'false', weight: 0.19996} },
+{ data: { source: 'AGPAT3', target: 'FITM2', directed: 'false', weight: 0.121121} },
+{ data: { source: 'GP1BB', target: 'AGPAT4', directed: 'false', weight: 0.33407800000000004} },
+{ data: { source: 'GP1BB', target: 'GJA1', directed: 'false', weight: 0.33407800000000004} },
+{ data: { source: 'GP1BB', target: 'VKORC1L1', directed: 'false', weight: 0.33407800000000004} },
+{ data: { source: 'GP1BB', target: 'SIDT2', directed: 'false', weight: 0.270404} },
+{ data: { source: 'GP1BB', target: 'GPR89A', directed: 'false', weight: 0.23624299999999998} },
+{ data: { source: 'GP1BB', target: 'FITM2', directed: 'false', weight: 0.12495} },
+{ data: { source: 'GPR89A', target: 'VKORC1L1', directed: 'false', weight: 0.447834} },
+{ data: { source: 'GPR89A', target: 'AGPAT4', directed: 'false', weight: 0.27714} },
+{ data: { source: 'GPR89A', target: 'GJA1', directed: 'false', weight: 0.173333} },
+{ data: { source: 'GPR89A', target: 'FITM2', directed: 'false', weight: 0.154109} },
+{ data: { source: 'GJA1', target: 'SIDT2', directed: 'false', weight: 0.33384} },
+{ data: { source: 'GJA1', target: 'AGPAT4', directed: 'false', weight: 0.269524} },
+{ data: { source: 'GJA1', target: 'VKORC1L1', directed: 'false', weight: 0.269524} },
+{ data: { source: 'GJA1', target: 'FITM2', directed: 'false', weight: 0.1711} },
+{ data: { source: 'AGPAT4', target: 'VKORC1L1', directed: 'false', weight: 0.544746} },
+{ data: { source: 'AGPAT4', target: 'FITM2', directed: 'false', weight: 0.309205} },
+{ data: { source: 'FITM2', target: 'VKORC1L1', directed: 'false', weight: 0.309205} }]},
 
 style: [
     {
@@ -82,7 +101,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.58042
+    Complex Score (from Super.Complex) = 0.58263
     </section>
     </body>
     </html>

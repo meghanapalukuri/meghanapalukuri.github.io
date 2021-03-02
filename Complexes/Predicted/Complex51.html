@@ -29,21 +29,42 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NELFE', score: 5, href: "https://www.uniprot.org/uniprot/P18615" }},
-{data: { id: 'NELFCD', score: 5, href: "https://www.uniprot.org/uniprot/Q8IXH7" }},
-{data: { id: 'NELFB', score: 5, href: "https://www.uniprot.org/uniprot/Q8WX92" }},
-{data: { id: 'NELFA', score: 5, href: "https://www.uniprot.org/uniprot/Q9H3P2" }},
-{data: { id: 'IGHMBP2', score: 5, href: "https://www.uniprot.org/uniprot/P38935" }}], 
- edges: [{ data: { source: 'NELFE', target: 'NELFA', directed: 'false', weight: 0.999951} },
-{ data: { source: 'NELFE', target: 'NELFB', directed: 'false', weight: 0.999934} },
-{ data: { source: 'NELFE', target: 'NELFCD', directed: 'false', weight: 0.9759110000000001} },
-{ data: { source: 'NELFE', target: 'IGHMBP2', directed: 'false', weight: 0.79956} },
-{ data: { source: 'IGHMBP2', target: 'NELFA', directed: 'false', weight: 0.171414} },
-{ data: { source: 'IGHMBP2', target: 'NELFCD', directed: 'false', weight: 0.171414} },
-{ data: { source: 'IGHMBP2', target: 'NELFB', directed: 'false', weight: 0.171414} },
-{ data: { source: 'NELFCD', target: 'NELFB', directed: 'false', weight: 0.975941} },
-{ data: { source: 'NELFCD', target: 'NELFA', directed: 'false', weight: 0.71812} },
-{ data: { source: 'NELFB', target: 'NELFA', directed: 'false', weight: 0.967915} }]},
+elements:{nodes: [{data: { id: 'MAB21L1', score: 5, href: "https://www.uniprot.org/uniprot/Q13394" }},
+{data: { id: 'PBX3', score: 5, href: "https://www.uniprot.org/uniprot/P40426" }},
+{data: { id: 'PBX1', score: 5, href: "https://www.uniprot.org/uniprot/P40424" }},
+{data: { id: 'PIGL', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2B2" }},
+{data: { id: 'PBX2', score: 5, href: "https://www.uniprot.org/uniprot/P40425" }},
+{data: { id: 'MEIS3', score: 5, href: "https://www.uniprot.org/uniprot/Q99687" }},
+{data: { id: 'MEIS1', score: 5, href: "https://www.uniprot.org/uniprot/O00470" }},
+{data: { id: 'MEIS2', score: 5, href: "https://www.uniprot.org/uniprot/O14770" }}], 
+ edges: [{ data: { source: 'MEIS2', target: 'MEIS3', directed: 'false', weight: 0.981441} },
+{ data: { source: 'MEIS2', target: 'MAB21L1', directed: 'false', weight: 0.970283} },
+{ data: { source: 'MEIS2', target: 'PIGL', directed: 'false', weight: 0.9690270000000001} },
+{ data: { source: 'MEIS2', target: 'PBX3', directed: 'false', weight: 0.9369569999999999} },
+{ data: { source: 'MEIS2', target: 'PBX2', directed: 'false', weight: 0.930668} },
+{ data: { source: 'MEIS2', target: 'MEIS1', directed: 'false', weight: 0.838651} },
+{ data: { source: 'MEIS2', target: 'PBX1', directed: 'false', weight: 0.831751} },
+{ data: { source: 'MEIS3', target: 'PIGL', directed: 'false', weight: 0.171414} },
+{ data: { source: 'MEIS3', target: 'MAB21L1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'MEIS3', target: 'MEIS1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'MEIS3', target: 'PBX3', directed: 'false', weight: 0.128057} },
+{ data: { source: 'MEIS3', target: 'PBX2', directed: 'false', weight: 0.11473699999999999} },
+{ data: { source: 'MEIS3', target: 'PBX1', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'PBX2', target: 'PBX1', directed: 'false', weight: 0.9583370000000001} },
+{ data: { source: 'PBX2', target: 'PBX3', directed: 'false', weight: 0.6435810000000001} },
+{ data: { source: 'PBX2', target: 'MEIS1', directed: 'false', weight: 0.46998900000000005} },
+{ data: { source: 'PBX2', target: 'MAB21L1', directed: 'false', weight: 0.385114} },
+{ data: { source: 'PBX2', target: 'PIGL', directed: 'false', weight: 0.11473699999999999} },
+{ data: { source: 'PIGL', target: 'MAB21L1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'PIGL', target: 'MEIS1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'PIGL', target: 'PBX3', directed: 'false', weight: 0.128057} },
+{ data: { source: 'PIGL', target: 'PBX1', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'PBX1', target: 'PBX3', directed: 'false', weight: 0.579203} },
+{ data: { source: 'PBX1', target: 'MEIS1', directed: 'false', weight: 0.41868} },
+{ data: { source: 'PBX1', target: 'MAB21L1', directed: 'false', weight: 0.275252} },
+{ data: { source: 'MEIS1', target: 'MAB21L1', directed: 'false', weight: 0.817917} },
+{ data: { source: 'MEIS1', target: 'PBX3', directed: 'false', weight: 0.6375390000000001} },
+{ data: { source: 'MAB21L1', target: 'PBX3', directed: 'false', weight: 0.5} }]},
 
 style: [
     {
@@ -85,7 +106,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.83241
+    Complex Score (from Super.Complex) = 0.83042
     </section>
     </body>
     </html>

@@ -29,14 +29,17 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MDN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NU22" }},
-{data: { id: 'PCBD1', score: 5, href: "https://www.uniprot.org/uniprot/P61457" }},
-{data: { id: 'COQ5', score: 5, href: "https://www.uniprot.org/uniprot/Q5HYK3" }},
-{data: { id: 'GPD1L', score: 5, href: "https://www.uniprot.org/uniprot/Q8N335" }}], 
- edges: [{ data: { source: 'MDN1', target: 'GPD1L', directed: 'false', weight: 0.39475} },
-{ data: { source: 'MDN1', target: 'COQ5', directed: 'false', weight: 0.161324} },
-{ data: { source: 'GPD1L', target: 'PCBD1', directed: 'false', weight: 0.669782} },
-{ data: { source: 'GPD1L', target: 'COQ5', directed: 'false', weight: 0.444558} }]},
+elements:{nodes: [{data: { id: 'ARPP19', score: 5, href: "https://www.uniprot.org/uniprot/P56211" }},
+{data: { id: 'DNAJB1', score: 5, href: "https://www.uniprot.org/uniprot/P25685" }},
+{data: { id: 'TRIM25', score: 5, href: "https://www.uniprot.org/uniprot/Q14258" }},
+{data: { id: 'PSPC1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXF1" }},
+{data: { id: 'SH3PXD2B', score: 5, href: "https://www.uniprot.org/uniprot/A1X283" }}], 
+ edges: [{ data: { source: 'TRIM25', target: 'DNAJB1', directed: 'false', weight: 0.612809} },
+{ data: { source: 'TRIM25', target: 'ARPP19', directed: 'false', weight: 0.536369} },
+{ data: { source: 'TRIM25', target: 'SH3PXD2B', directed: 'false', weight: 0.193931} },
+{ data: { source: 'PSPC1', target: 'SH3PXD2B', directed: 'false', weight: 0.5301} },
+{ data: { source: 'ARPP19', target: 'SH3PXD2B', directed: 'false', weight: 0.5} },
+{ data: { source: 'ARPP19', target: 'DNAJB1', directed: 'false', weight: 0.353657} }]},
 
 style: [
     {
@@ -78,12 +81,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.55751
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>MDN1
+    Complex Score (from Super.Complex) = 0.56005
     </section>
     </body>
     </html>

@@ -29,17 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PITPNA', score: 5, href: "https://www.uniprot.org/uniprot/Q00169" }},
-{data: { id: 'FSCN1', score: 5, href: "https://www.uniprot.org/uniprot/Q16658" }},
-{data: { id: 'RBP1', score: 5, href: "https://www.uniprot.org/uniprot/P09455" }},
-{data: { id: 'CELF2', score: 5, href: "https://www.uniprot.org/uniprot/O95319" }},
-{data: { id: 'PPIA', score: 5, href: "https://www.uniprot.org/uniprot/P62937" }}], 
- edges: [{ data: { source: 'PITPNA', target: 'FSCN1', directed: 'false', weight: 0.63962} },
-{ data: { source: 'PPIA', target: 'FSCN1', directed: 'false', weight: 0.6811699999999999} },
-{ data: { source: 'PPIA', target: 'RBP1', directed: 'false', weight: 0.5676640000000001} },
-{ data: { source: 'PPIA', target: 'CELF2', directed: 'false', weight: 0.43631400000000004} },
-{ data: { source: 'RBP1', target: 'CELF2', directed: 'false', weight: 0.018595} },
-{ data: { source: 'FSCN1', target: 'CELF2', directed: 'false', weight: 0.06573580000000001} }]},
+elements:{nodes: [{data: { id: 'JUNB', score: 5, href: "https://www.uniprot.org/uniprot/P17275" }},
+{data: { id: 'ADCK5', score: 3, href: "https://www.uniprot.org/uniprot/Q3MIX3" }},
+{data: { id: 'RGPD3', score: 3, href: "https://www.uniprot.org/uniprot/A6NKT7" }},
+{data: { id: 'RCC1', score: 5, href: "https://www.uniprot.org/uniprot/P18754" }},
+{data: { id: 'OXSM', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWU1" }},
+{data: { id: 'DLGAP5', score: 5, href: "https://www.uniprot.org/uniprot/Q15398" }}], 
+ edges: [{ data: { source: 'JUNB', target: 'RGPD3', directed: 'false', weight: 0.940319} },
+{ data: { source: 'JUNB', target: 'ADCK5', directed: 'false', weight: 0.9151739999999999} },
+{ data: { source: 'JUNB', target: 'OXSM', directed: 'false', weight: 0.903634} },
+{ data: { source: 'ADCK5', target: 'RGPD3', directed: 'false', weight: 0.165074} },
+{ data: { source: 'ADCK5', target: 'OXSM', directed: 'false', weight: 0.165074} },
+{ data: { source: 'OXSM', target: 'RGPD3', directed: 'false', weight: 0.165074} },
+{ data: { source: 'RGPD3', target: 'RCC1', directed: 'false', weight: 0.8493729999999999} },
+{ data: { source: 'RGPD3', target: 'DLGAP5', directed: 'false', weight: 0.151455} },
+{ data: { source: 'RCC1', target: 'DLGAP5', directed: 'false', weight: 0.9930969999999999} }]},
 
 style: [
     {
@@ -81,7 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.55185
+    Complex Score (from Super.Complex) = 0.55606
     </section>
     </body>
     </html>

@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ULK3', score: 5, href: "https://www.uniprot.org/uniprot/Q6PHR2" }},
-{data: { id: 'VCAN', score: 5, href: "https://www.uniprot.org/uniprot/P13611" }},
-{data: { id: 'BCAN', score: 5, href: "https://www.uniprot.org/uniprot/Q96GW7" }}], 
- edges: [{ data: { source: 'BCAN', target: 'ULK3', directed: 'false', weight: 0.960834} },
-{ data: { source: 'BCAN', target: 'VCAN', directed: 'false', weight: 0.9377989999999999} },
-{ data: { source: 'VCAN', target: 'ULK3', directed: 'false', weight: 0.151455} }]},
+elements:{nodes: [{data: { id: 'BTN3A1', score: 5, href: "https://www.uniprot.org/uniprot/O00481" }},
+{data: { id: 'BTN3A3', score: 5, href: "https://www.uniprot.org/uniprot/O00478" }},
+{data: { id: 'BTN3A2', score: 5, href: "https://www.uniprot.org/uniprot/P78410" }}], 
+ edges: [{ data: { source: 'BTN3A2', target: 'BTN3A1', directed: 'false', weight: 0.967799} },
+{ data: { source: 'BTN3A2', target: 'BTN3A3', directed: 'false', weight: 0.961867} },
+{ data: { source: 'BTN3A1', target: 'BTN3A3', directed: 'false', weight: 0.133456} }]},
 
 style: [
     {
@@ -76,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77720
+    Complex Score (from Super.Complex) = 0.77710
     </section>
     </body>
     </html>

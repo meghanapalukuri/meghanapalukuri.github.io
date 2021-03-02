@@ -29,12 +29,34 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TAF6', score: 5, href: "https://www.uniprot.org/uniprot/P49848" }},
-{data: { id: 'TAF1', score: 5, href: "https://www.uniprot.org/uniprot/P21675" }},
-{data: { id: 'TAF3', score: 5, href: "https://www.uniprot.org/uniprot/Q5VWG9" }}], 
- edges: [{ data: { source: 'TAF1', target: 'TAF6', directed: 'false', weight: 0.981833} },
-{ data: { source: 'TAF1', target: 'TAF3', directed: 'false', weight: 0.9391139999999999} },
-{ data: { source: 'TAF6', target: 'TAF3', directed: 'false', weight: 0.9386469999999999} }]},
+elements:{nodes: [{data: { id: 'ZNHIT2', score: 4, href: "https://www.uniprot.org/uniprot/Q9UHR6" }},
+{data: { id: 'ECD', score: 5, href: "https://www.uniprot.org/uniprot/O95905" }},
+{data: { id: 'EAPP', score: 5, href: "https://www.uniprot.org/uniprot/Q56P03" }},
+{data: { id: 'AAR2', score: 3, href: "https://www.uniprot.org/uniprot/Q9Y312" }},
+{data: { id: 'SLC7A6OS', score: 3, href: "https://www.uniprot.org/uniprot/Q96CW6" }},
+{data: { id: 'NCDN', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBB6" }},
+{data: { id: 'TSSC4', score: 4, href: "https://www.uniprot.org/uniprot/Q9Y5U2" }}], 
+ edges: [{ data: { source: 'EAPP', target: 'AAR2', directed: 'false', weight: 0.991351} },
+{ data: { source: 'EAPP', target: 'TSSC4', directed: 'false', weight: 0.588785} },
+{ data: { source: 'EAPP', target: 'SLC7A6OS', directed: 'false', weight: 0.222827} },
+{ data: { source: 'EAPP', target: 'NCDN', directed: 'false', weight: 0.117374} },
+{ data: { source: 'EAPP', target: 'ZNHIT2', directed: 'false', weight: 0.11311500000000001} },
+{ data: { source: 'EAPP', target: 'ECD', directed: 'false', weight: 0.101316} },
+{ data: { source: 'ZNHIT2', target: 'AAR2', directed: 'false', weight: 0.671511} },
+{ data: { source: 'ZNHIT2', target: 'TSSC4', directed: 'false', weight: 0.609873} },
+{ data: { source: 'ZNHIT2', target: 'ECD', directed: 'false', weight: 0.351971} },
+{ data: { source: 'ZNHIT2', target: 'NCDN', directed: 'false', weight: 0.220348} },
+{ data: { source: 'ZNHIT2', target: 'SLC7A6OS', directed: 'false', weight: 0.184885} },
+{ data: { source: 'NCDN', target: 'AAR2', directed: 'false', weight: 0.48670399999999997} },
+{ data: { source: 'NCDN', target: 'TSSC4', directed: 'false', weight: 0.330176} },
+{ data: { source: 'NCDN', target: 'ECD', directed: 'false', weight: 0.28171199999999996} },
+{ data: { source: 'NCDN', target: 'SLC7A6OS', directed: 'false', weight: 0.192166} },
+{ data: { source: 'SLC7A6OS', target: 'AAR2', directed: 'false', weight: 0.884288} },
+{ data: { source: 'SLC7A6OS', target: 'TSSC4', directed: 'false', weight: 0.583025} },
+{ data: { source: 'SLC7A6OS', target: 'ECD', directed: 'false', weight: 0.167849} },
+{ data: { source: 'AAR2', target: 'TSSC4', directed: 'false', weight: 0.9408549999999999} },
+{ data: { source: 'AAR2', target: 'ECD', directed: 'false', weight: 0.931425} },
+{ data: { source: 'ECD', target: 'TSSC4', directed: 'false', weight: 0.699637} }]},
 
 style: [
     {
@@ -76,7 +98,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.81068
+    Complex Score (from Super.Complex) = 0.81061
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>AAR2
     </section>
     </body>
     </html>

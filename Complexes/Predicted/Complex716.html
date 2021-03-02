@@ -29,23 +29,50 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'UBQLN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UMX0" }},
-{data: { id: 'RIDA', score: 5, href: "https://www.uniprot.org/uniprot/P52758" }},
-{data: { id: 'RAD23B', score: 5, href: "https://www.uniprot.org/uniprot/P54727" }},
-{data: { id: 'UBQLN4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NRR5" }},
-{data: { id: 'UBQLN2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHD9" }},
-{data: { id: 'PHGDH', score: 5, href: "https://www.uniprot.org/uniprot/O43175" }}], 
- edges: [{ data: { source: 'UBQLN4', target: 'PHGDH', directed: 'false', weight: 0.866591} },
-{ data: { source: 'UBQLN4', target: 'RAD23B', directed: 'false', weight: 0.855642} },
-{ data: { source: 'UBQLN4', target: 'UBQLN1', directed: 'false', weight: 0.0567064} },
-{ data: { source: 'UBQLN2', target: 'RAD23B', directed: 'false', weight: 0.965374} },
-{ data: { source: 'UBQLN2', target: 'UBQLN1', directed: 'false', weight: 0.941853} },
-{ data: { source: 'UBQLN2', target: 'RIDA', directed: 'false', weight: 0.487191} },
-{ data: { source: 'RAD23B', target: 'UBQLN1', directed: 'false', weight: 0.9829969999999999} },
-{ data: { source: 'RAD23B', target: 'RIDA', directed: 'false', weight: 0.108372} },
-{ data: { source: 'RAD23B', target: 'PHGDH', directed: 'false', weight: 0.0121182} },
-{ data: { source: 'UBQLN1', target: 'PHGDH', directed: 'false', weight: 0.8143600000000001} },
-{ data: { source: 'UBQLN1', target: 'RIDA', directed: 'false', weight: 0.448805} }]},
+elements:{nodes: [{data: { id: 'KDM1A', score: 5, href: "https://www.uniprot.org/uniprot/O60341" }},
+{data: { id: 'RCOR1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKL0" }},
+{data: { id: 'MTA2', score: 5, href: "https://www.uniprot.org/uniprot/O94776" }},
+{data: { id: 'RCOR2', score: 3, href: "https://www.uniprot.org/uniprot/Q8IZ40" }},
+{data: { id: 'HMG20A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NP66" }},
+{data: { id: 'HDAC1', score: 5, href: "https://www.uniprot.org/uniprot/Q13547" }},
+{data: { id: 'RCOR3', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2K3" }},
+{data: { id: 'PHF21A', score: 5, href: "https://www.uniprot.org/uniprot/Q96BD5" }},
+{data: { id: 'HDAC2', score: 5, href: "https://www.uniprot.org/uniprot/Q92769" }},
+{data: { id: 'GSE1', score: 5, href: "https://www.uniprot.org/uniprot/Q14687" }},
+{data: { id: 'HMG20B', score: 5, href: "https://www.uniprot.org/uniprot/Q9P0W2" }}], 
+ edges: [{ data: { source: 'RCOR2', target: 'HMG20B', directed: 'false', weight: 0.6514770000000001} },
+{ data: { source: 'RCOR2', target: 'RCOR1', directed: 'false', weight: 0.21064699999999997} },
+{ data: { source: 'RCOR2', target: 'KDM1A', directed: 'false', weight: 0.192166} },
+{ data: { source: 'RCOR2', target: 'RCOR3', directed: 'false', weight: 0.178521} },
+{ data: { source: 'RCOR2', target: 'PHF21A', directed: 'false', weight: 0.151455} },
+{ data: { source: 'RCOR2', target: 'GSE1', directed: 'false', weight: 0.112499} },
+{ data: { source: 'MTA2', target: 'HDAC1', directed: 'false', weight: 0.999965} },
+{ data: { source: 'MTA2', target: 'HDAC2', directed: 'false', weight: 0.999833} },
+{ data: { source: 'HDAC2', target: 'HDAC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'RCOR3', target: 'KDM1A', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'RCOR3', target: 'RCOR1', directed: 'false', weight: 0.994741} },
+{ data: { source: 'RCOR3', target: 'HMG20B', directed: 'false', weight: 0.9528469999999999} },
+{ data: { source: 'RCOR3', target: 'GSE1', directed: 'false', weight: 0.7229} },
+{ data: { source: 'RCOR3', target: 'HMG20A', directed: 'false', weight: 0.718121} },
+{ data: { source: 'RCOR3', target: 'HDAC1', directed: 'false', weight: 0.521836} },
+{ data: { source: 'RCOR3', target: 'PHF21A', directed: 'false', weight: 0.190632} },
+{ data: { source: 'HDAC1', target: 'RCOR1', directed: 'false', weight: 0.9042190000000001} },
+{ data: { source: 'HDAC1', target: 'KDM1A', directed: 'false', weight: 0.8338209999999999} },
+{ data: { source: 'HDAC1', target: 'GSE1', directed: 'false', weight: 0.49390100000000003} },
+{ data: { source: 'HDAC1', target: 'HMG20B', directed: 'false', weight: 0.425537} },
+{ data: { source: 'RCOR1', target: 'KDM1A', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RCOR1', target: 'HMG20B', directed: 'false', weight: 0.96454} },
+{ data: { source: 'RCOR1', target: 'HMG20A', directed: 'false', weight: 0.8753120000000001} },
+{ data: { source: 'RCOR1', target: 'GSE1', directed: 'false', weight: 0.8126800000000001} },
+{ data: { source: 'RCOR1', target: 'PHF21A', directed: 'false', weight: 0.206618} },
+{ data: { source: 'PHF21A', target: 'HMG20B', directed: 'false', weight: 0.828659} },
+{ data: { source: 'PHF21A', target: 'GSE1', directed: 'false', weight: 0.21914699999999998} },
+{ data: { source: 'PHF21A', target: 'KDM1A', directed: 'false', weight: 0.157086} },
+{ data: { source: 'HMG20B', target: 'GSE1', directed: 'false', weight: 0.991149} },
+{ data: { source: 'HMG20B', target: 'KDM1A', directed: 'false', weight: 0.919858} },
+{ data: { source: 'HMG20A', target: 'GSE1', directed: 'false', weight: 0.9537549999999999} },
+{ data: { source: 'HMG20A', target: 'KDM1A', directed: 'false', weight: 0.8104439999999999} },
+{ data: { source: 'GSE1', target: 'KDM1A', directed: 'false', weight: 0.706178} }]},
 
 style: [
     {
@@ -87,7 +114,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.59267
+    Complex Score (from Super.Complex) = 0.59592
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>HDAC2
     </section>
     </body>
     </html>

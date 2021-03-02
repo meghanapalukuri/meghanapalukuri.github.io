@@ -29,29 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'INTS6', score: 5, href: "https://www.uniprot.org/uniprot/Q9UL03" }},
-{data: { id: 'INTS5', score: 5, href: "https://www.uniprot.org/uniprot/Q6P9B9" }},
-{data: { id: 'INTS4P2', score: 0 }},
-{data: { id: 'INTS12', score: 5, href: "https://www.uniprot.org/uniprot/Q96CB8" }},
-{data: { id: 'INTS11', score: 5, href: "https://www.uniprot.org/uniprot/Q5TA45" }},
-{data: { id: 'INTS9', score: 5, href: "https://www.uniprot.org/uniprot/Q9NV88" }},
-{data: { id: 'INTS4', score: 5, href: "https://www.uniprot.org/uniprot/Q96HW7" }}], 
- edges: [{ data: { source: 'INTS6', target: 'INTS4', directed: 'false', weight: 0.9819379999999999} },
-{ data: { source: 'INTS6', target: 'INTS11', directed: 'false', weight: 0.7521329999999999} },
-{ data: { source: 'INTS6', target: 'INTS9', directed: 'false', weight: 0.594072} },
-{ data: { source: 'INTS6', target: 'INTS12', directed: 'false', weight: 0.5} },
-{ data: { source: 'INTS6', target: 'INTS5', directed: 'false', weight: 0.113652} },
-{ data: { source: 'INTS12', target: 'INTS4', directed: 'false', weight: 0.9956809999999999} },
-{ data: { source: 'INTS12', target: 'INTS9', directed: 'false', weight: 0.65632} },
-{ data: { source: 'INTS12', target: 'INTS11', directed: 'false', weight: 0.56548} },
-{ data: { source: 'INTS12', target: 'INTS5', directed: 'false', weight: 0.376256} },
-{ data: { source: 'INTS5', target: 'INTS4', directed: 'false', weight: 0.9738540000000001} },
-{ data: { source: 'INTS5', target: 'INTS9', directed: 'false', weight: 0.906415} },
-{ data: { source: 'INTS5', target: 'INTS11', directed: 'false', weight: 0.126941} },
-{ data: { source: 'INTS4P2', target: 'INTS4', directed: 'false', weight: 0.809639} },
-{ data: { source: 'INTS11', target: 'INTS4', directed: 'false', weight: 0.9990889999999999} },
-{ data: { source: 'INTS11', target: 'INTS9', directed: 'false', weight: 0.9990610000000001} },
-{ data: { source: 'INTS9', target: 'INTS4', directed: 'false', weight: 0.9917809999999999} }]},
+elements:{nodes: [{data: { id: 'SLTM', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWH9" }},
+{data: { id: 'LAMC1', score: 5, href: "https://www.uniprot.org/uniprot/P11047" }},
+{data: { id: 'PURB', score: 5, href: "https://www.uniprot.org/uniprot/Q96QR8" }},
+{data: { id: 'ABCF1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NE71" }},
+{data: { id: 'CCAR1', score: 5, href: "https://www.uniprot.org/uniprot/Q8IX12" }}], 
+ edges: [{ data: { source: 'PURB', target: 'SLTM', directed: 'false', weight: 0.748572} },
+{ data: { source: 'PURB', target: 'CCAR1', directed: 'false', weight: 0.44991800000000004} },
+{ data: { source: 'PURB', target: 'ABCF1', directed: 'false', weight: 0.00640338} },
+{ data: { source: 'CCAR1', target: 'SLTM', directed: 'false', weight: 0.872268} },
+{ data: { source: 'CCAR1', target: 'LAMC1', directed: 'false', weight: 0.8066760000000001} },
+{ data: { source: 'CCAR1', target: 'ABCF1', directed: 'false', weight: 0.170396} },
+{ data: { source: 'SLTM', target: 'ABCF1', directed: 'false', weight: 0.938271} }]},
 
 style: [
     {
@@ -93,12 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.62947
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>INTS4
+    Complex Score (from Super.Complex) = 0.63228
     </section>
     </body>
     </html>

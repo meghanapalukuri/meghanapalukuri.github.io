@@ -30,11 +30,11 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: 'TBCE', score: 5, href: "https://www.uniprot.org/uniprot/Q15813" }},
-{data: { id: 'BHMT2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H2M3" }},
-{data: { id: 'BHMT', score: 5, href: "https://www.uniprot.org/uniprot/Q93088" }}], 
- edges: [{ data: { source: 'TBCE', target: 'BHMT2', directed: 'false', weight: 0.938884} },
-{ data: { source: 'TBCE', target: 'BHMT', directed: 'false', weight: 0.0952688} },
-{ data: { source: 'BHMT', target: 'BHMT2', directed: 'false', weight: 0.782634} }]},
+{data: { id: 'BHMT', score: 5, href: "https://www.uniprot.org/uniprot/Q93088" }},
+{data: { id: 'BHMT2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H2M3" }}], 
+ edges: [{ data: { source: 'BHMT', target: 'BHMT2', directed: 'false', weight: 0.782634} },
+{ data: { source: 'BHMT', target: 'TBCE', directed: 'false', weight: 0.0952688} },
+{ data: { source: 'TBCE', target: 'BHMT2', directed: 'false', weight: 0.938884} }]},
 
 style: [
     {

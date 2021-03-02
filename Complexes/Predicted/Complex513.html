@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PTX3', score: 5, href: "https://www.uniprot.org/uniprot/P26022" }},
-{data: { id: 'COLEC10', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6Z7" }},
-{data: { id: 'INHBE', score: 4, href: "https://www.uniprot.org/uniprot/P58166" }}], 
- edges: [{ data: { source: 'INHBE', target: 'COLEC10', directed: 'false', weight: 0.30688200000000004} },
-{ data: { source: 'INHBE', target: 'PTX3', directed: 'false', weight: 0.151455} },
-{ data: { source: 'PTX3', target: 'COLEC10', directed: 'false', weight: 0.766653} }]},
+elements:{nodes: [{data: { id: 'KIAA0930', score: 2, href: "https://www.uniprot.org/uniprot/Q6ICG6" }},
+{data: { id: 'WRN', score: 5, href: "https://www.uniprot.org/uniprot/Q14191" }},
+{data: { id: 'KLHL11', score: 3, href: "https://www.uniprot.org/uniprot/Q9NVR0" }}], 
+ edges: [{ data: { source: 'WRN', target: 'KIAA0930', directed: 'false', weight: 0.43287299999999995} },
+{ data: { source: 'WRN', target: 'KLHL11', directed: 'false', weight: 0.133456} },
+{ data: { source: 'KLHL11', target: 'KIAA0930', directed: 'false', weight: 0.716437} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.68095
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>INHBE
+    Complex Score (from Super.Complex) = 0.68216
     </section>
     </body>
     </html>

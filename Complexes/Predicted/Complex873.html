@@ -29,11 +29,26 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'EZR', score: 5, href: "https://www.uniprot.org/uniprot/P15311" }},
-{data: { id: 'HMGN5', score: 5, href: "https://www.uniprot.org/uniprot/P82970" }},
-{data: { id: 'SLC9A3R1', score: 5, href: "https://www.uniprot.org/uniprot/O14745" }}], 
- edges: [{ data: { source: 'SLC9A3R1', target: 'EZR', directed: 'false', weight: 0.685369} },
-{ data: { source: 'SLC9A3R1', target: 'HMGN5', directed: 'false', weight: 0.544746} }]},
+elements:{nodes: [{data: { id: 'TERF1', score: 5, href: "https://www.uniprot.org/uniprot/P54274" }},
+{data: { id: 'FBL', score: 5, href: "https://www.uniprot.org/uniprot/P22087" }},
+{data: { id: 'DDX51', score: 4, href: "https://www.uniprot.org/uniprot/Q8N8A6" }},
+{data: { id: 'NAP1L2', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULW6" }},
+{data: { id: 'PINX1', score: 5, href: "https://www.uniprot.org/uniprot/Q96BK5" }},
+{data: { id: 'WDR43', score: 5, href: "https://www.uniprot.org/uniprot/Q15061" }},
+{data: { id: 'TGS1', score: 5, href: "https://www.uniprot.org/uniprot/Q96RS0" }}], 
+ edges: [{ data: { source: 'DDX51', target: 'FBL', directed: 'false', weight: 0.73619} },
+{ data: { source: 'DDX51', target: 'NAP1L2', directed: 'false', weight: 0.120276} },
+{ data: { source: 'PINX1', target: 'TERF1', directed: 'false', weight: 0.8859239999999999} },
+{ data: { source: 'PINX1', target: 'FBL', directed: 'false', weight: 0.774762} },
+{ data: { source: 'PINX1', target: 'TGS1', directed: 'false', weight: 0.24226599999999998} },
+{ data: { source: 'PINX1', target: 'NAP1L2', directed: 'false', weight: 0.140692} },
+{ data: { source: 'PINX1', target: 'WDR43', directed: 'false', weight: 0.140692} },
+{ data: { source: 'WDR43', target: 'FBL', directed: 'false', weight: 0.748786} },
+{ data: { source: 'WDR43', target: 'NAP1L2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'WDR43', target: 'TGS1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'TGS1', target: 'FBL', directed: 'false', weight: 0.9184129999999999} },
+{ data: { source: 'TGS1', target: 'NAP1L2', directed: 'false', weight: 0.140692} },
+{ data: { source: 'FBL', target: 'NAP1L2', directed: 'false', weight: 0.968807} }]},
 
 style: [
     {
@@ -75,12 +90,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53928
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>SLC9A3R1
+    Complex Score (from Super.Complex) = 0.54439
     </section>
     </body>
     </html>

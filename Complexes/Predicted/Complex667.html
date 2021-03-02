@@ -29,18 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'LPP', score: 5, href: "https://www.uniprot.org/uniprot/Q93052" }},
-{data: { id: 'SIPA1L2', score: 4, href: "https://www.uniprot.org/uniprot/Q9P2F8" }},
-{data: { id: 'LZTS1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y250" }},
-{data: { id: 'SESTD1', score: 5, href: "https://www.uniprot.org/uniprot/Q86VW0" }},
-{data: { id: 'LZTS2', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRK4" }}], 
- edges: [{ data: { source: 'SIPA1L2', target: 'LZTS2', directed: 'false', weight: 0.7580060000000001} },
-{ data: { source: 'SIPA1L2', target: 'LZTS1', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SIPA1L2', target: 'SESTD1', directed: 'false', weight: 0.123797} },
-{ data: { source: 'SESTD1', target: 'LPP', directed: 'false', weight: 0.957414} },
-{ data: { source: 'SESTD1', target: 'LZTS2', directed: 'false', weight: 0.7521180000000001} },
-{ data: { source: 'SESTD1', target: 'LZTS1', directed: 'false', weight: 0.140692} },
-{ data: { source: 'LZTS2', target: 'LZTS1', directed: 'false', weight: 0.981449} }]},
+elements:{nodes: [{data: { id: 'IGSF8', score: 5, href: "https://www.uniprot.org/uniprot/Q969P0" }},
+{data: { id: 'SARNP', score: 5, href: "https://www.uniprot.org/uniprot/P82979" }},
+{data: { id: 'DNAJC14', score: 3, href: "https://www.uniprot.org/uniprot/Q6Y2X3" }},
+{data: { id: 'ANTXR2', score: 5, href: "https://www.uniprot.org/uniprot/P58335" }},
+{data: { id: 'CD9', score: 5, href: "https://www.uniprot.org/uniprot/P21926" }}], 
+ edges: [{ data: { source: 'ANTXR2', target: 'IGSF8', directed: 'false', weight: 0.695002} },
+{ data: { source: 'ANTXR2', target: 'CD9', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ANTXR2', target: 'DNAJC14', directed: 'false', weight: 0.151455} },
+{ data: { source: 'DNAJC14', target: 'IGSF8', directed: 'false', weight: 0.907481} },
+{ data: { source: 'DNAJC14', target: 'SARNP', directed: 'false', weight: 0.8694200000000001} },
+{ data: { source: 'DNAJC14', target: 'CD9', directed: 'false', weight: 0.151455} },
+{ data: { source: 'CD9', target: 'IGSF8', directed: 'false', weight: 0.9717129999999999} }]},
 
 style: [
     {
@@ -82,7 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.62465
+    Complex Score (from Super.Complex) = 0.62755
     </section>
     </body>
     </html>

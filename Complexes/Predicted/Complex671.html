@@ -29,18 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CDK9', score: 5, href: "https://www.uniprot.org/uniprot/P50750" }},
-{data: { id: 'NSMAF', score: 5, href: "https://www.uniprot.org/uniprot/Q92636" }},
-{data: { id: 'OSBPL1A', score: 5, href: "https://www.uniprot.org/uniprot/Q9BXW6" }},
-{data: { id: 'HEXIM1', score: 5, href: "https://www.uniprot.org/uniprot/O94992" }},
-{data: { id: 'HEXIM2', score: 5, href: "https://www.uniprot.org/uniprot/Q96MH2" }}], 
- edges: [{ data: { source: 'HEXIM1', target: 'HEXIM2', directed: 'false', weight: 0.97964} },
-{ data: { source: 'HEXIM1', target: 'NSMAF', directed: 'false', weight: 0.977773} },
-{ data: { source: 'HEXIM1', target: 'OSBPL1A', directed: 'false', weight: 0.512482} },
-{ data: { source: 'NSMAF', target: 'HEXIM2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'NSMAF', target: 'OSBPL1A', directed: 'false', weight: 0.140692} },
-{ data: { source: 'HEXIM2', target: 'CDK9', directed: 'false', weight: 0.74747} },
-{ data: { source: 'HEXIM2', target: 'OSBPL1A', directed: 'false', weight: 0.123797} }]},
+elements:{nodes: [{data: { id: 'HSPH1', score: 5, href: "https://www.uniprot.org/uniprot/Q92598" }},
+{data: { id: 'STIP1', score: 5, href: "https://www.uniprot.org/uniprot/P31948" }},
+{data: { id: 'HSPA1B', score: 5, href: "https://www.uniprot.org/uniprot/P0DMV9" }},
+{data: { id: 'TUSC2', score: 5, href: "https://www.uniprot.org/uniprot/O75896" }},
+{data: { id: 'USP9Y', score: 5, href: "https://www.uniprot.org/uniprot/O00507" }}], 
+ edges: [{ data: { source: 'TUSC2', target: 'HSPH1', directed: 'false', weight: 0.906078} },
+{ data: { source: 'TUSC2', target: 'USP9Y', directed: 'false', weight: 0.165074} },
+{ data: { source: 'TUSC2', target: 'HSPA1B', directed: 'false', weight: 0.10926300000000001} },
+{ data: { source: 'HSPH1', target: 'HSPA1B', directed: 'false', weight: 0.761379} },
+{ data: { source: 'HSPH1', target: 'STIP1', directed: 'false', weight: 0.468325} },
+{ data: { source: 'HSPH1', target: 'USP9Y', directed: 'false', weight: 0.434943} },
+{ data: { source: 'STIP1', target: 'HSPA1B', directed: 'false', weight: 0.850669} }]},
 
 style: [
     {
@@ -82,7 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.62140
+    Complex Score (from Super.Complex) = 0.62596
     </section>
     </body>
     </html>

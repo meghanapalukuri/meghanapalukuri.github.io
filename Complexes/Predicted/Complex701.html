@@ -29,37 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ALDOC', score: 5, href: "https://www.uniprot.org/uniprot/P09972" }},
-{data: { id: 'GARS', score: 2, href: "https://www.uniprot.org/uniprot/A0A090N8G0" }},
-{data: { id: 'GORASP2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H8Y8" }},
-{data: { id: 'PGD', score: 5, href: "https://www.uniprot.org/uniprot/P52209" }},
-{data: { id: 'ISYNA1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPH2" }},
-{data: { id: 'ALDOA', score: 5, href: "https://www.uniprot.org/uniprot/P04075" }},
-{data: { id: 'PGP', score: 5, href: "https://www.uniprot.org/uniprot/A6NDG6" }},
-{data: { id: 'GALE', score: 5, href: "https://www.uniprot.org/uniprot/Q14376" }},
-{data: { id: 'GPD1L', score: 5, href: "https://www.uniprot.org/uniprot/Q8N335" }}], 
- edges: [{ data: { source: 'ALDOC', target: 'GPD1L', directed: 'false', weight: 0.9169149999999999} },
-{ data: { source: 'ALDOC', target: 'GORASP2', directed: 'false', weight: 0.847726} },
-{ data: { source: 'ALDOC', target: 'GALE', directed: 'false', weight: 0.83836} },
-{ data: { source: 'ALDOC', target: 'PGD', directed: 'false', weight: 0.765273} },
-{ data: { source: 'ALDOC', target: 'PGP', directed: 'false', weight: 0.74417} },
-{ data: { source: 'ALDOC', target: 'ALDOA', directed: 'false', weight: 0.6952649999999999} },
-{ data: { source: 'ALDOC', target: 'ISYNA1', directed: 'false', weight: 0.682411} },
-{ data: { source: 'PGD', target: 'ALDOA', directed: 'false', weight: 0.86755} },
-{ data: { source: 'PGD', target: 'ISYNA1', directed: 'false', weight: 0.842706} },
-{ data: { source: 'PGD', target: 'GALE', directed: 'false', weight: 0.819348} },
-{ data: { source: 'PGD', target: 'GPD1L', directed: 'false', weight: 0.0632839} },
-{ data: { source: 'PGD', target: 'PGP', directed: 'false', weight: 0.037307599999999996} },
-{ data: { source: 'GALE', target: 'GARS', directed: 'false', weight: 0.755182} },
-{ data: { source: 'GALE', target: 'ALDOA', directed: 'false', weight: 0.508292} },
-{ data: { source: 'GALE', target: 'GPD1L', directed: 'false', weight: 0.052387800000000005} },
-{ data: { source: 'GALE', target: 'PGP', directed: 'false', weight: 0.0349329} },
-{ data: { source: 'GPD1L', target: 'ALDOA', directed: 'false', weight: 0.8995280000000001} },
-{ data: { source: 'GPD1L', target: 'PGP', directed: 'false', weight: 0.014352700000000001} },
-{ data: { source: 'PGP', target: 'ALDOA', directed: 'false', weight: 0.705696} },
-{ data: { source: 'PGP', target: 'GORASP2', directed: 'false', weight: 0.0585136} },
-{ data: { source: 'ALDOA', target: 'GORASP2', directed: 'false', weight: 0.7543850000000001} },
-{ data: { source: 'ALDOA', target: 'ISYNA1', directed: 'false', weight: 0.605905} }]},
+elements:{nodes: [{data: { id: 'TXN2', score: 5, href: "https://www.uniprot.org/uniprot/Q99757" }},
+{data: { id: 'AIP', score: 5, href: "https://www.uniprot.org/uniprot/O00170" }},
+{data: { id: 'TXN', score: 5, href: "https://www.uniprot.org/uniprot/P10599" }},
+{data: { id: 'DPY30', score: 5, href: "https://www.uniprot.org/uniprot/Q9C005" }}], 
+ edges: [{ data: { source: 'TXN2', target: 'TXN', directed: 'false', weight: 0.40166799999999997} },
+{ data: { source: 'TXN2', target: 'DPY30', directed: 'false', weight: 0.025281799999999997} },
+{ data: { source: 'TXN', target: 'DPY30', directed: 'false', weight: 0.614686} },
+{ data: { source: 'TXN', target: 'AIP', directed: 'false', weight: 0.341364} },
+{ data: { source: 'AIP', target: 'DPY30', directed: 'false', weight: 0.051016399999999996} }]},
 
 style: [
     {
@@ -101,7 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.59952
+    Complex Score (from Super.Complex) = 0.60687
     </section>
     </body>
     </html>

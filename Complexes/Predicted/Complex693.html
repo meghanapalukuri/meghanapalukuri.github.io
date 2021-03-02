@@ -29,18 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'IL27RA', score: 5, href: "https://www.uniprot.org/uniprot/Q6UWB1" }},
-{data: { id: 'HLA-DPA1', score: 5, href: "https://www.uniprot.org/uniprot/P20036" }},
-{data: { id: 'HS3ST3B1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y662" }},
-{data: { id: 'DCBLD1', score: 3, href: "https://www.uniprot.org/uniprot/Q8N8Z6" }},
-{data: { id: 'NOB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULX3" }}], 
- edges: [{ data: { source: 'DCBLD1', target: 'HLA-DPA1', directed: 'false', weight: 0.8911190000000001} },
-{ data: { source: 'DCBLD1', target: 'HS3ST3B1', directed: 'false', weight: 0.171414} },
-{ data: { source: 'DCBLD1', target: 'IL27RA', directed: 'false', weight: 0.171414} },
-{ data: { source: 'HS3ST3B1', target: 'HLA-DPA1', directed: 'false', weight: 0.907113} },
-{ data: { source: 'HS3ST3B1', target: 'IL27RA', directed: 'false', weight: 0.171414} },
-{ data: { source: 'NOB1', target: 'HLA-DPA1', directed: 'false', weight: 0.547085} },
-{ data: { source: 'IL27RA', target: 'HLA-DPA1', directed: 'false', weight: 0.49271800000000004} }]},
+elements:{nodes: [{data: { id: 'PGBD5', score: 5, href: "https://www.uniprot.org/uniprot/Q8N414" }},
+{data: { id: 'NR1I3', score: 5, href: "https://www.uniprot.org/uniprot/Q14994" }},
+{data: { id: 'RABGGTB', score: 5, href: "https://www.uniprot.org/uniprot/P53611" }},
+{data: { id: 'NCOA1', score: 5, href: "https://www.uniprot.org/uniprot/Q15788" }},
+{data: { id: 'FBXL20', score: 4, href: "https://www.uniprot.org/uniprot/Q96IG2" }}], 
+ edges: [{ data: { source: 'FBXL20', target: 'RABGGTB', directed: 'false', weight: 0.5671579999999999} },
+{ data: { source: 'FBXL20', target: 'PGBD5', directed: 'false', weight: 0.171414} },
+{ data: { source: 'FBXL20', target: 'NCOA1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'NR1I3', target: 'NCOA1', directed: 'false', weight: 0.490021} },
+{ data: { source: 'NCOA1', target: 'RABGGTB', directed: 'false', weight: 0.837102} },
+{ data: { source: 'NCOA1', target: 'PGBD5', directed: 'false', weight: 0.151455} },
+{ data: { source: 'RABGGTB', target: 'PGBD5', directed: 'false', weight: 0.972649} }]},
 
 style: [
     {
@@ -82,7 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.60820
+    Complex Score (from Super.Complex) = 0.61243
     </section>
     </body>
     </html>

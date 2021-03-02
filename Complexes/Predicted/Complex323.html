@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DNAJC18', score: 2, href: "https://www.uniprot.org/uniprot/Q9H819" }},
+elements:{nodes: [{data: { id: 'ZIC2', score: 5, href: "https://www.uniprot.org/uniprot/O95409" }},
 {data: { id: 'CHEK1', score: 5, href: "https://www.uniprot.org/uniprot/O14757" }},
-{data: { id: 'ZIC2', score: 5, href: "https://www.uniprot.org/uniprot/O95409" }},
-{data: { id: 'CHRNA9', score: 5, href: "https://www.uniprot.org/uniprot/Q9UGM1" }}], 
- edges: [{ data: { source: 'DNAJC18', target: 'CHRNA9', directed: 'false', weight: 0.804603} },
-{ data: { source: 'DNAJC18', target: 'ZIC2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'DNAJC18', target: 'CHEK1', directed: 'false', weight: 0.11248399999999999} },
-{ data: { source: 'ZIC2', target: 'CHRNA9', directed: 'false', weight: 0.8541489999999999} },
+{data: { id: 'CHRNA9', score: 5, href: "https://www.uniprot.org/uniprot/Q9UGM1" }},
+{data: { id: 'DNAJC18', score: 2, href: "https://www.uniprot.org/uniprot/Q9H819" }}], 
+ edges: [{ data: { source: 'CHRNA9', target: 'ZIC2', directed: 'false', weight: 0.8541489999999999} },
+{ data: { source: 'CHRNA9', target: 'DNAJC18', directed: 'false', weight: 0.804603} },
+{ data: { source: 'CHRNA9', target: 'CHEK1', directed: 'false', weight: 0.639065} },
+{ data: { source: 'ZIC2', target: 'DNAJC18', directed: 'false', weight: 0.171414} },
 { data: { source: 'ZIC2', target: 'CHEK1', directed: 'false', weight: 0.11248399999999999} },
-{ data: { source: 'CHEK1', target: 'CHRNA9', directed: 'false', weight: 0.639065} }]},
+{ data: { source: 'DNAJC18', target: 'CHEK1', directed: 'false', weight: 0.11248399999999999} }]},
 
 style: [
     {

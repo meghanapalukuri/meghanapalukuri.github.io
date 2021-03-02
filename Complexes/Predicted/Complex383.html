@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CDK17', score: 5, href: "https://www.uniprot.org/uniprot/Q00537" }},
-{data: { id: 'CDK16', score: 5, href: "https://www.uniprot.org/uniprot/Q00536" }},
-{data: { id: 'BRCA1', score: 5, href: "https://www.uniprot.org/uniprot/P38398" }}], 
- edges: [{ data: { source: 'CDK16', target: 'BRCA1', directed: 'false', weight: 0.70698} },
-{ data: { source: 'CDK16', target: 'CDK17', directed: 'false', weight: 0.676455} },
-{ data: { source: 'BRCA1', target: 'CDK17', directed: 'false', weight: 0.112499} }]},
+elements:{nodes: [{data: { id: 'CDK16', score: 5, href: "https://www.uniprot.org/uniprot/Q00536" }},
+{data: { id: 'BRCA1', score: 5, href: "https://www.uniprot.org/uniprot/P38398" }},
+{data: { id: 'CDK17', score: 5, href: "https://www.uniprot.org/uniprot/Q00537" }}], 
+ edges: [{ data: { source: 'BRCA1', target: 'CDK16', directed: 'false', weight: 0.70698} },
+{ data: { source: 'BRCA1', target: 'CDK17', directed: 'false', weight: 0.112499} },
+{ data: { source: 'CDK17', target: 'CDK16', directed: 'false', weight: 0.676455} }]},
 
 style: [
     {

@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GSTA1', score: 5, href: "https://www.uniprot.org/uniprot/P08263" }},
-{data: { id: 'GSTA3', score: 5, href: "https://www.uniprot.org/uniprot/Q16772" }},
-{data: { id: 'GSTA4', score: 5, href: "https://www.uniprot.org/uniprot/O15217" }}], 
- edges: [{ data: { source: 'GSTA1', target: 'GSTA4', directed: 'false', weight: 0.764609} },
-{ data: { source: 'GSTA1', target: 'GSTA3', directed: 'false', weight: 0.667367} },
-{ data: { source: 'GSTA4', target: 'GSTA3', directed: 'false', weight: 0.33813200000000004} }]},
+elements:{nodes: [{data: { id: 'TIMM8A', score: 5, href: "https://www.uniprot.org/uniprot/O60220" }},
+{data: { id: 'TIMM10', score: 5, href: "https://www.uniprot.org/uniprot/P62072" }},
+{data: { id: 'TIMM9', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5J7" }}], 
+ edges: [{ data: { source: 'TIMM9', target: 'TIMM10', directed: 'false', weight: 0.975943} },
+{ data: { source: 'TIMM9', target: 'TIMM8A', directed: 'false', weight: 0.630654} },
+{ data: { source: 'TIMM10', target: 'TIMM8A', directed: 'false', weight: 0.15279} }]},
 
 style: [
     {
@@ -76,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76843
+    Complex Score (from Super.Complex) = 0.76838
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>TIMM10 TIMM9
     </section>
     </body>
     </html>

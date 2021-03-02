@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NECAP2', score: 4, href: "https://www.uniprot.org/uniprot/Q9NVZ3" }},
-{data: { id: 'FSCN1', score: 5, href: "https://www.uniprot.org/uniprot/Q16658" }},
+elements:{nodes: [{data: { id: 'FSCN1', score: 5, href: "https://www.uniprot.org/uniprot/Q16658" }},
+{data: { id: 'NECAP2', score: 4, href: "https://www.uniprot.org/uniprot/Q9NVZ3" }},
 {data: { id: 'NECAP1', score: 4, href: "https://www.uniprot.org/uniprot/Q8NC96" }}], 
- edges: [{ data: { source: 'FSCN1', target: 'NECAP2', directed: 'false', weight: 0.777504} },
-{ data: { source: 'FSCN1', target: 'NECAP1', directed: 'false', weight: 0.038931099999999996} },
-{ data: { source: 'NECAP2', target: 'NECAP1', directed: 'false', weight: 0.962525} }]},
+ edges: [{ data: { source: 'NECAP2', target: 'NECAP1', directed: 'false', weight: 0.962525} },
+{ data: { source: 'NECAP2', target: 'FSCN1', directed: 'false', weight: 0.777504} },
+{ data: { source: 'FSCN1', target: 'NECAP1', directed: 'false', weight: 0.038931099999999996} }]},
 
 style: [
     {

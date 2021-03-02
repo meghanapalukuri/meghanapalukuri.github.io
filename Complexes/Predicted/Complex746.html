@@ -29,30 +29,24 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TEAD4', score: 5, href: "https://www.uniprot.org/uniprot/Q15561" }},
-{data: { id: 'WWTR1', score: 5, href: "https://www.uniprot.org/uniprot/Q9GZV5" }},
-{data: { id: 'TEAD3', score: 5, href: "https://www.uniprot.org/uniprot/Q99594" }},
-{data: { id: 'IRF2BPL', score: 5, href: "https://www.uniprot.org/uniprot/Q9H1B7" }},
-{data: { id: 'TEAD2', score: 5, href: "https://www.uniprot.org/uniprot/Q15562" }},
-{data: { id: 'TEAD1', score: 5, href: "https://www.uniprot.org/uniprot/P28347" }},
-{data: { id: 'VGLL4', score: 5, href: "https://www.uniprot.org/uniprot/Q14135" }},
-{data: { id: 'YAP1', score: 5, href: "https://www.uniprot.org/uniprot/P46937" }}], 
- edges: [{ data: { source: 'VGLL4', target: 'IRF2BPL', directed: 'false', weight: 0.9690989999999999} },
-{ data: { source: 'VGLL4', target: 'TEAD3', directed: 'false', weight: 0.932099} },
-{ data: { source: 'VGLL4', target: 'TEAD4', directed: 'false', weight: 0.7507050000000001} },
-{ data: { source: 'VGLL4', target: 'TEAD1', directed: 'false', weight: 0.7328399999999999} },
-{ data: { source: 'VGLL4', target: 'TEAD2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'VGLL4', target: 'WWTR1', directed: 'false', weight: 0.133456} },
-{ data: { source: 'WWTR1', target: 'TEAD4', directed: 'false', weight: 0.9311229999999999} },
-{ data: { source: 'WWTR1', target: 'TEAD1', directed: 'false', weight: 0.5} },
-{ data: { source: 'WWTR1', target: 'TEAD3', directed: 'false', weight: 0.471671} },
-{ data: { source: 'WWTR1', target: 'TEAD2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'YAP1', target: 'TEAD3', directed: 'false', weight: 0.942687} },
-{ data: { source: 'TEAD1', target: 'TEAD4', directed: 'false', weight: 0.9948540000000001} },
-{ data: { source: 'TEAD1', target: 'TEAD3', directed: 'false', weight: 0.514948} },
-{ data: { source: 'TEAD1', target: 'TEAD2', directed: 'false', weight: 0.133451} },
-{ data: { source: 'TEAD2', target: 'TEAD4', directed: 'false', weight: 0.9644809999999999} },
-{ data: { source: 'TEAD3', target: 'TEAD4', directed: 'false', weight: 0.552964} }]},
+elements:{nodes: [{data: { id: 'ECEL1', score: 5, href: "https://www.uniprot.org/uniprot/O95672" }},
+{data: { id: 'HLA-E', score: 5, href: "https://www.uniprot.org/uniprot/P13747" }},
+{data: { id: 'HLA-C', score: 5, href: "https://www.uniprot.org/uniprot/P10321" }},
+{data: { id: 'HLA-H', score: 5, href: "https://www.uniprot.org/uniprot/P01893" }},
+{data: { id: 'EIF2AK3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZJ5" }},
+{data: { id: 'HLA-A', score: 5, href: "https://www.uniprot.org/uniprot/P04439" }}], 
+ edges: [{ data: { source: 'HLA-E', target: 'HLA-H', directed: 'false', weight: 0.561453} },
+{ data: { source: 'HLA-E', target: 'ECEL1', directed: 'false', weight: 0.48900200000000005} },
+{ data: { source: 'HLA-E', target: 'HLA-C', directed: 'false', weight: 0.42016899999999996} },
+{ data: { source: 'HLA-E', target: 'EIF2AK3', directed: 'false', weight: 0.305055} },
+{ data: { source: 'HLA-H', target: 'HLA-C', directed: 'false', weight: 0.29441999999999996} },
+{ data: { source: 'HLA-H', target: 'HLA-A', directed: 'false', weight: 0.185937} },
+{ data: { source: 'HLA-H', target: 'EIF2AK3', directed: 'false', weight: 0.184918} },
+{ data: { source: 'HLA-H', target: 'ECEL1', directed: 'false', weight: 0.123797} },
+{ data: { source: 'HLA-C', target: 'HLA-A', directed: 'false', weight: 0.746871} },
+{ data: { source: 'HLA-C', target: 'ECEL1', directed: 'false', weight: 0.105939} },
+{ data: { source: 'HLA-C', target: 'EIF2AK3', directed: 'false', weight: 0.0364249} },
+{ data: { source: 'EIF2AK3', target: 'ECEL1', directed: 'false', weight: 0.108694} }]},
 
 style: [
     {
@@ -94,7 +88,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.58310
+    Complex Score (from Super.Complex) = 0.58507
     </section>
     </body>
     </html>

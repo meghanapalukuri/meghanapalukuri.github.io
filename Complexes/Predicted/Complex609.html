@@ -29,18 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PLOD2', score: 5, href: "https://www.uniprot.org/uniprot/O00469" }},
-{data: { id: 'COLGALT2', score: 5, href: "https://www.uniprot.org/uniprot/Q8IYK4" }},
-{data: { id: 'ILKAP', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0C8" }},
-{data: { id: 'PLOD3', score: 5, href: "https://www.uniprot.org/uniprot/O60568" }},
-{data: { id: 'COLGALT1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NBJ5" }}], 
- edges: [{ data: { source: 'PLOD2', target: 'PLOD3', directed: 'false', weight: 0.887066} },
-{ data: { source: 'PLOD2', target: 'COLGALT1', directed: 'false', weight: 0.8697739999999999} },
-{ data: { source: 'PLOD2', target: 'COLGALT2', directed: 'false', weight: 0.373501} },
-{ data: { source: 'ILKAP', target: 'COLGALT1', directed: 'false', weight: 0.40465100000000004} },
-{ data: { source: 'PLOD3', target: 'COLGALT1', directed: 'false', weight: 0.96995} },
-{ data: { source: 'PLOD3', target: 'COLGALT2', directed: 'false', weight: 0.819121} },
-{ data: { source: 'COLGALT2', target: 'COLGALT1', directed: 'false', weight: 0.0968222} }]},
+elements:{nodes: [{data: { id: 'FEN1', score: 5, href: "https://www.uniprot.org/uniprot/P39748" }},
+{data: { id: 'MSH2', score: 5, href: "https://www.uniprot.org/uniprot/P43246" }},
+{data: { id: 'MSH6', score: 5, href: "https://www.uniprot.org/uniprot/P52701" }},
+{data: { id: 'RECQL', score: 5, href: "https://www.uniprot.org/uniprot/P46063" }}], 
+ edges: [{ data: { source: 'FEN1', target: 'MSH2', directed: 'false', weight: 0.86455} },
+{ data: { source: 'FEN1', target: 'RECQL', directed: 'false', weight: 0.566632} },
+{ data: { source: 'RECQL', target: 'MSH2', directed: 'false', weight: 0.6079} },
+{ data: { source: 'RECQL', target: 'MSH6', directed: 'false', weight: 0.45055} },
+{ data: { source: 'MSH6', target: 'MSH2', directed: 'false', weight: 0.9995040000000001} }]},
 
 style: [
     {
@@ -82,12 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65315
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        2 interacting protein(s): <br>PLOD2 COLGALT1
+    Complex Score (from Super.Complex) = 0.65626
     </section>
     </body>
     </html>

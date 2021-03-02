@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'WDR34', score: 0 }},
-{data: { id: 'DYNLRB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NP97" }},
-{data: { id: 'WDR60', score: 0 }}], 
- edges: [{ data: { source: 'WDR60', target: 'DYNLRB1', directed: 'false', weight: 0.737887} },
-{ data: { source: 'WDR60', target: 'WDR34', directed: 'false', weight: 0.182548} },
-{ data: { source: 'WDR34', target: 'DYNLRB1', directed: 'false', weight: 0.904751} }]},
+elements:{nodes: [{data: { id: 'GSTA3', score: 5, href: "https://www.uniprot.org/uniprot/Q16772" }},
+{data: { id: 'GSTA1', score: 5, href: "https://www.uniprot.org/uniprot/P08263" }},
+{data: { id: 'GSTA4', score: 5, href: "https://www.uniprot.org/uniprot/O15217" }}], 
+ edges: [{ data: { source: 'GSTA1', target: 'GSTA4', directed: 'false', weight: 0.764609} },
+{ data: { source: 'GSTA1', target: 'GSTA3', directed: 'false', weight: 0.667367} },
+{ data: { source: 'GSTA3', target: 'GSTA4', directed: 'false', weight: 0.33813200000000004} }]},
 
 style: [
     {
@@ -76,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76849
+    Complex Score (from Super.Complex) = 0.76843
     </section>
     </body>
     </html>

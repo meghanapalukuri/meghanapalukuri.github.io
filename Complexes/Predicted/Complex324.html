@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PGAM1', score: 5, href: "https://www.uniprot.org/uniprot/P18669" }},
-{data: { id: 'SERPINB1', score: 5, href: "https://www.uniprot.org/uniprot/P30740" }},
-{data: { id: 'ITPA', score: 5, href: "https://www.uniprot.org/uniprot/Q9BY32" }}], 
- edges: [{ data: { source: 'PGAM1', target: 'SERPINB1', directed: 'false', weight: 0.6867880000000001} },
-{ data: { source: 'PGAM1', target: 'ITPA', directed: 'false', weight: 0.015553399999999998} },
-{ data: { source: 'SERPINB1', target: 'ITPA', directed: 'false', weight: 0.961023} }]},
+elements:{nodes: [{data: { id: 'SERPINB1', score: 5, href: "https://www.uniprot.org/uniprot/P30740" }},
+{data: { id: 'ITPA', score: 5, href: "https://www.uniprot.org/uniprot/Q9BY32" }},
+{data: { id: 'PGAM1', score: 5, href: "https://www.uniprot.org/uniprot/P18669" }}], 
+ edges: [{ data: { source: 'ITPA', target: 'SERPINB1', directed: 'false', weight: 0.961023} },
+{ data: { source: 'ITPA', target: 'PGAM1', directed: 'false', weight: 0.015553399999999998} },
+{ data: { source: 'SERPINB1', target: 'PGAM1', directed: 'false', weight: 0.6867880000000001} }]},
 
 style: [
     {

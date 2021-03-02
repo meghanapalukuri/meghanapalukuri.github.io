@@ -29,11 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RAB10', score: 5, href: "https://www.uniprot.org/uniprot/P61026" }},
-{data: { id: 'SNX12', score: 5, href: "https://www.uniprot.org/uniprot/Q9UMY4" }},
-{data: { id: 'RBM12', score: 4, href: "https://www.uniprot.org/uniprot/Q9NTZ6" }}], 
- edges: [{ data: { source: 'RBM12', target: 'RAB10', directed: 'false', weight: 0.598409} },
-{ data: { source: 'SNX12', target: 'RAB10', directed: 'false', weight: 0.627408} }]},
+elements:{nodes: [{data: { id: 'ANKRD55', score: 5, href: "https://www.uniprot.org/uniprot/Q3KP44" }},
+{data: { id: 'TTC30A', score: 3, href: "https://www.uniprot.org/uniprot/Q86WT1" }},
+{data: { id: 'IFT52', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y366" }},
+{data: { id: 'TTC30B', score: 4, href: "https://www.uniprot.org/uniprot/Q8N4P2" }},
+{data: { id: 'TRAF3IP1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDR0" }},
+{data: { id: 'IFT57', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWB7" }}], 
+ edges: [{ data: { source: 'IFT52', target: 'ANKRD55', directed: 'false', weight: 0.7813060000000001} },
+{ data: { source: 'IFT52', target: 'TTC30A', directed: 'false', weight: 0.5378149999999999} },
+{ data: { source: 'IFT52', target: 'TTC30B', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'ANKRD55', target: 'TTC30B', directed: 'false', weight: 0.615665} },
+{ data: { source: 'ANKRD55', target: 'TTC30A', directed: 'false', weight: 0.349554} },
+{ data: { source: 'TTC30B', target: 'IFT57', directed: 'false', weight: 0.879188} },
+{ data: { source: 'TTC30B', target: 'TTC30A', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'TTC30B', target: 'TRAF3IP1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'IFT57', target: 'TRAF3IP1', directed: 'false', weight: 0.9803719999999999} }]},
 
 style: [
     {
@@ -75,12 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53711
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>RAB10
+    Complex Score (from Super.Complex) = 0.53943
     </section>
     </body>
     </html>

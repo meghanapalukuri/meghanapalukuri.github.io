@@ -29,15 +29,23 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FOXD4L6', score: 2, href: "https://www.uniprot.org/uniprot/Q3SYB3" }},
-{data: { id: 'FOXD2', score: 5, href: "https://www.uniprot.org/uniprot/O60548" }},
-{data: { id: 'KIAA0232', score: 2, href: "https://www.uniprot.org/uniprot/Q92628" }},
-{data: { id: 'HSPBAP1', score: 4, href: "https://www.uniprot.org/uniprot/Q96EW2" }}], 
- edges: [{ data: { source: 'HSPBAP1', target: 'FOXD4L6', directed: 'false', weight: 0.719233} },
-{ data: { source: 'HSPBAP1', target: 'FOXD2', directed: 'false', weight: 0.133456} },
-{ data: { source: 'HSPBAP1', target: 'KIAA0232', directed: 'false', weight: 0.112499} },
-{ data: { source: 'FOXD2', target: 'FOXD4L6', directed: 'false', weight: 0.6264270000000001} },
-{ data: { source: 'FOXD4L6', target: 'KIAA0232', directed: 'false', weight: 0.435532} }]},
+elements:{nodes: [{data: { id: 'FAM219A', score: 3, href: "https://www.uniprot.org/uniprot/Q8IW50" }},
+{data: { id: 'NBN', score: 5, href: "https://www.uniprot.org/uniprot/O60934" }},
+{data: { id: 'MRE11', score: 5, href: "https://www.uniprot.org/uniprot/P49959" }},
+{data: { id: 'FBXO10', score: 5, href: "https://www.uniprot.org/uniprot/Q9UK96" }},
+{data: { id: 'RAD50', score: 5, href: "https://www.uniprot.org/uniprot/Q92878" }},
+{data: { id: 'SHPK', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHJ6" }}], 
+ edges: [{ data: { source: 'SHPK', target: 'FAM219A', directed: 'false', weight: 0.742621} },
+{ data: { source: 'SHPK', target: 'FBXO10', directed: 'false', weight: 0.117318} },
+{ data: { source: 'SHPK', target: 'NBN', directed: 'false', weight: 0.117318} },
+{ data: { source: 'SHPK', target: 'RAD50', directed: 'false', weight: 0.07711060000000002} },
+{ data: { source: 'FAM219A', target: 'NBN', directed: 'false', weight: 0.9463590000000001} },
+{ data: { source: 'FAM219A', target: 'RAD50', directed: 'false', weight: 0.663708} },
+{ data: { source: 'FAM219A', target: 'FBXO10', directed: 'false', weight: 0.5} },
+{ data: { source: 'NBN', target: 'RAD50', directed: 'false', weight: 0.802246} },
+{ data: { source: 'NBN', target: 'FBXO10', directed: 'false', weight: 0.133456} },
+{ data: { source: 'RAD50', target: 'MRE11', directed: 'false', weight: 0.978749} },
+{ data: { source: 'RAD50', target: 'FBXO10', directed: 'false', weight: 0.0881212} }]},
 
 style: [
     {
@@ -79,7 +87,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.63228
+    Complex Score (from Super.Complex) = 0.63540
     </section>
     </body>
     </html>

@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TIMM9', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5J7" }},
-{data: { id: 'TIMM8A', score: 5, href: "https://www.uniprot.org/uniprot/O60220" }},
-{data: { id: 'TIMM10', score: 5, href: "https://www.uniprot.org/uniprot/P62072" }}], 
- edges: [{ data: { source: 'TIMM9', target: 'TIMM10', directed: 'false', weight: 0.975943} },
-{ data: { source: 'TIMM9', target: 'TIMM8A', directed: 'false', weight: 0.630654} },
-{ data: { source: 'TIMM10', target: 'TIMM8A', directed: 'false', weight: 0.15279} }]},
+elements:{nodes: [{data: { id: 'BRD2', score: 5, href: "https://www.uniprot.org/uniprot/P25440" }},
+{data: { id: 'PWWP2B', score: 3, href: "https://www.uniprot.org/uniprot/Q6NUJ5" }},
+{data: { id: 'FARP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y4F1" }}], 
+ edges: [{ data: { source: 'PWWP2B', target: 'BRD2', directed: 'false', weight: 0.927758} },
+{ data: { source: 'PWWP2B', target: 'FARP1', directed: 'false', weight: 0.09242919999999999} },
+{ data: { source: 'BRD2', target: 'FARP1', directed: 'false', weight: 0.8587049999999999} }]},
 
 style: [
     {
@@ -76,12 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76838
+    Complex Score (from Super.Complex) = 0.76827
         <br> 
         <br>
         Connection to SARS-COV2: 
         <br>
-        2 interacting protein(s): <br>TIMM9 TIMM10
+        1 interacting protein(s): <br>BRD2
     </section>
     </body>
     </html>

@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FAM3A', score: 4, href: "https://www.uniprot.org/uniprot/P98173" }},
-{data: { id: 'MFGE8', score: 5, href: "https://www.uniprot.org/uniprot/Q08431" }},
-{data: { id: 'ITGB5', score: 5, href: "https://www.uniprot.org/uniprot/P18084" }}], 
- edges: [{ data: { source: 'ITGB5', target: 'MFGE8', directed: 'false', weight: 0.422306} },
-{ data: { source: 'ITGB5', target: 'FAM3A', directed: 'false', weight: 0.0809483} },
-{ data: { source: 'FAM3A', target: 'MFGE8', directed: 'false', weight: 0.280667} }]},
+elements:{nodes: [{data: { id: 'HLA-DRA', score: 5, href: "https://www.uniprot.org/uniprot/P01903" }},
+{data: { id: 'KLK4', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5K2" }},
+{data: { id: 'HLA-DMB', score: 5, href: "https://www.uniprot.org/uniprot/P28068" }}], 
+ edges: [{ data: { source: 'HLA-DRA', target: 'KLK4', directed: 'false', weight: 0.345528} },
+{ data: { source: 'HLA-DRA', target: 'HLA-DMB', directed: 'false', weight: 0.28668699999999997} },
+{ data: { source: 'HLA-DMB', target: 'KLK4', directed: 'false', weight: 0.133456} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65849
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>MFGE8
+    Complex Score (from Super.Complex) = 0.65909
     </section>
     </body>
     </html>

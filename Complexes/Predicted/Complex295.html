@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'API5', score: 5, href: "https://www.uniprot.org/uniprot/Q9BZZ5" }},
-{data: { id: 'HMGB1', score: 5, href: "https://www.uniprot.org/uniprot/A0A024RDR0" }},
-{data: { id: 'HMGB2', score: 5, href: "https://www.uniprot.org/uniprot/P26583" }}], 
- edges: [{ data: { source: 'HMGB2', target: 'HMGB1', directed: 'false', weight: 0.938623} },
-{ data: { source: 'HMGB2', target: 'API5', directed: 'false', weight: 0.46027799999999996} },
-{ data: { source: 'API5', target: 'HMGB1', directed: 'false', weight: 0.32350500000000004} }]},
+elements:{nodes: [{data: { id: 'MIPOL1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TD10" }},
+{data: { id: 'LRRC39', score: 4, href: "https://www.uniprot.org/uniprot/Q96DD0" }},
+{data: { id: 'NINL', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2I6" }}], 
+ edges: [{ data: { source: 'NINL', target: 'LRRC39', directed: 'false', weight: 0.979173} },
+{ data: { source: 'NINL', target: 'MIPOL1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'LRRC39', target: 'MIPOL1', directed: 'false', weight: 0.9759760000000001} }]},
 
 style: [
     {
@@ -76,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76741
+    Complex Score (from Super.Complex) = 0.76734
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>MIPOL1 NINL
     </section>
     </body>
     </html>

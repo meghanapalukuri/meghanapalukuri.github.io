@@ -29,15 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'WNT3A', score: 5, href: "https://www.uniprot.org/uniprot/P56704" }},
-{data: { id: 'PPP2R5A', score: 5, href: "https://www.uniprot.org/uniprot/Q15172" }},
-{data: { id: 'WNT3', score: 5, href: "https://www.uniprot.org/uniprot/P56703" }},
-{data: { id: 'PPP2R5B', score: 5, href: "https://www.uniprot.org/uniprot/Q15173" }}], 
- edges: [{ data: { source: 'WNT3A', target: 'WNT3', directed: 'false', weight: 0.9884040000000001} },
-{ data: { source: 'WNT3A', target: 'PPP2R5B', directed: 'false', weight: 0.8632629999999999} },
-{ data: { source: 'WNT3A', target: 'PPP2R5A', directed: 'false', weight: 0.847476} },
-{ data: { source: 'PPP2R5B', target: 'WNT3', directed: 'false', weight: 0.151455} },
-{ data: { source: 'WNT3', target: 'PPP2R5A', directed: 'false', weight: 0.133451} }]},
+elements:{nodes: [{data: { id: 'P4HB', score: 5, href: "https://www.uniprot.org/uniprot/P07237" }},
+{data: { id: 'CALU', score: 5, href: "https://www.uniprot.org/uniprot/O43852" }},
+{data: { id: 'CCAR1', score: 5, href: "https://www.uniprot.org/uniprot/Q8IX12" }},
+{data: { id: 'P4HA1', score: 5, href: "https://www.uniprot.org/uniprot/P13674" }},
+{data: { id: 'P4HA2', score: 5, href: "https://www.uniprot.org/uniprot/O15460" }},
+{data: { id: 'CALR', score: 5, href: "https://www.uniprot.org/uniprot/P27797" }}], 
+ edges: [{ data: { source: 'P4HA2', target: 'P4HB', directed: 'false', weight: 0.995332} },
+{ data: { source: 'P4HA2', target: 'P4HA1', directed: 'false', weight: 0.65385} },
+{ data: { source: 'P4HA2', target: 'CCAR1', directed: 'false', weight: 0.6095689999999999} },
+{ data: { source: 'P4HA2', target: 'CALU', directed: 'false', weight: 0.0771217} },
+{ data: { source: 'P4HB', target: 'CALR', directed: 'false', weight: 0.991848} },
+{ data: { source: 'P4HB', target: 'CALU', directed: 'false', weight: 0.843224} },
+{ data: { source: 'P4HB', target: 'P4HA1', directed: 'false', weight: 0.40069499999999997} },
+{ data: { source: 'P4HA1', target: 'CCAR1', directed: 'false', weight: 0.524408} },
+{ data: { source: 'CALR', target: 'CALU', directed: 'false', weight: 0.9126049999999999} }]},
 
 style: [
     {
@@ -79,7 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.56357
+    Complex Score (from Super.Complex) = 0.56858
     </section>
     </body>
     </html>

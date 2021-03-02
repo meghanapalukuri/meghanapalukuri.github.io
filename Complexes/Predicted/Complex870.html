@@ -29,11 +29,26 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GMFB', score: 4, href: "https://www.uniprot.org/uniprot/P60983" }},
-{data: { id: 'GSS', score: 5, href: "https://www.uniprot.org/uniprot/P48637" }},
-{data: { id: 'TARDBP', score: 5, href: "https://www.uniprot.org/uniprot/Q13148" }}], 
- edges: [{ data: { source: 'TARDBP', target: 'GSS', directed: 'false', weight: 0.657313} },
-{ data: { source: 'TARDBP', target: 'GMFB', directed: 'false', weight: 0.622836} }]},
+elements:{nodes: [{data: { id: 'NPM1', score: 5, href: "https://www.uniprot.org/uniprot/P06748" }},
+{data: { id: 'MKI67', score: 5, href: "https://www.uniprot.org/uniprot/P46013" }},
+{data: { id: 'MTPAP', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVV4" }},
+{data: { id: 'MUS81', score: 5, href: "https://www.uniprot.org/uniprot/Q96NY9" }},
+{data: { id: 'DHX33', score: 5, href: "https://www.uniprot.org/uniprot/Q9H6R0" }},
+{data: { id: 'DECR1', score: 5, href: "https://www.uniprot.org/uniprot/Q16698" }},
+{data: { id: 'NOP56', score: 5, href: "https://www.uniprot.org/uniprot/O00567" }}], 
+ edges: [{ data: { source: 'NOP56', target: 'DHX33', directed: 'false', weight: 0.9538200000000001} },
+{ data: { source: 'NOP56', target: 'MKI67', directed: 'false', weight: 0.9239149999999999} },
+{ data: { source: 'DHX33', target: 'MKI67', directed: 'false', weight: 0.138752} },
+{ data: { source: 'MKI67', target: 'NPM1', directed: 'false', weight: 0.9215909999999999} },
+{ data: { source: 'MKI67', target: 'MTPAP', directed: 'false', weight: 0.14852200000000002} },
+{ data: { source: 'MKI67', target: 'MUS81', directed: 'false', weight: 0.100875} },
+{ data: { source: 'MKI67', target: 'DECR1', directed: 'false', weight: 0.0853872} },
+{ data: { source: 'MTPAP', target: 'NPM1', directed: 'false', weight: 0.7507739999999999} },
+{ data: { source: 'MTPAP', target: 'MUS81', directed: 'false', weight: 0.14852200000000002} },
+{ data: { source: 'MTPAP', target: 'DECR1', directed: 'false', weight: 0.102369} },
+{ data: { source: 'MUS81', target: 'NPM1', directed: 'false', weight: 0.849734} },
+{ data: { source: 'MUS81', target: 'DECR1', directed: 'false', weight: 0.0687198} },
+{ data: { source: 'NPM1', target: 'DECR1', directed: 'false', weight: 0.87745} }]},
 
 style: [
     {
@@ -75,7 +90,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53958
+    Complex Score (from Super.Complex) = 0.54549
     </section>
     </body>
     </html>

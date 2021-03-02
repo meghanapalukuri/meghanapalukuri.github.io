@@ -29,18 +29,36 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SUMF1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NBK3" }},
-{data: { id: 'ARSA', score: 5, href: "https://www.uniprot.org/uniprot/P15289" }},
-{data: { id: 'POLDIP2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2S7" }},
-{data: { id: 'IDS', score: 5, href: "https://www.uniprot.org/uniprot/P22304" }},
-{data: { id: 'FBXO21', score: 3, href: "https://www.uniprot.org/uniprot/O94952" }}], 
- edges: [{ data: { source: 'IDS', target: 'FBXO21', directed: 'false', weight: 0.666353} },
-{ data: { source: 'IDS', target: 'SUMF1', directed: 'false', weight: 0.443539} },
-{ data: { source: 'IDS', target: 'POLDIP2', directed: 'false', weight: 0.30445700000000003} },
-{ data: { source: 'SUMF1', target: 'ARSA', directed: 'false', weight: 0.583444} },
-{ data: { source: 'SUMF1', target: 'POLDIP2', directed: 'false', weight: 0.128057} },
-{ data: { source: 'SUMF1', target: 'FBXO21', directed: 'false', weight: 0.07988250000000001} },
-{ data: { source: 'FBXO21', target: 'POLDIP2', directed: 'false', weight: 0.108674} }]},
+elements:{nodes: [{data: { id: 'TAGLN3', score: 3, href: "https://www.uniprot.org/uniprot/Q9UI15" }},
+{data: { id: 'AKR1B15', score: 5, href: "https://www.uniprot.org/uniprot/C9JRZ8" }},
+{data: { id: 'HINT1', score: 5, href: "https://www.uniprot.org/uniprot/P49773" }},
+{data: { id: 'TAGLN2', score: 5, href: "https://www.uniprot.org/uniprot/P37802" }},
+{data: { id: 'TALDO1', score: 5, href: "https://www.uniprot.org/uniprot/P37837" }},
+{data: { id: 'TAGLN', score: 4, href: "https://www.uniprot.org/uniprot/Q01995" }},
+{data: { id: 'FABP5', score: 5, href: "https://www.uniprot.org/uniprot/Q01469" }},
+{data: { id: 'FABP7', score: 5, href: "https://www.uniprot.org/uniprot/O15540" }},
+{data: { id: 'AKR1B10', score: 5, href: "https://www.uniprot.org/uniprot/O60218" }}], 
+ edges: [{ data: { source: 'TALDO1', target: 'HINT1', directed: 'false', weight: 0.9654969999999999} },
+{ data: { source: 'TALDO1', target: 'TAGLN3', directed: 'false', weight: 0.864368} },
+{ data: { source: 'TALDO1', target: 'FABP7', directed: 'false', weight: 0.748765} },
+{ data: { source: 'TALDO1', target: 'FABP5', directed: 'false', weight: 0.421095} },
+{ data: { source: 'AKR1B15', target: 'AKR1B10', directed: 'false', weight: 0.9731780000000001} },
+{ data: { source: 'AKR1B15', target: 'HINT1', directed: 'false', weight: 0.8961459999999999} },
+{ data: { source: 'AKR1B15', target: 'TAGLN', directed: 'false', weight: 0.511219} },
+{ data: { source: 'HINT1', target: 'FABP7', directed: 'false', weight: 0.9995799999999999} },
+{ data: { source: 'HINT1', target: 'FABP5', directed: 'false', weight: 0.9815389999999999} },
+{ data: { source: 'HINT1', target: 'TAGLN', directed: 'false', weight: 0.860395} },
+{ data: { source: 'HINT1', target: 'TAGLN3', directed: 'false', weight: 0.740899} },
+{ data: { source: 'HINT1', target: 'AKR1B10', directed: 'false', weight: 0.6846180000000001} },
+{ data: { source: 'HINT1', target: 'TAGLN2', directed: 'false', weight: 0.14537} },
+{ data: { source: 'FABP5', target: 'TAGLN3', directed: 'false', weight: 0.979226} },
+{ data: { source: 'FABP5', target: 'TAGLN', directed: 'false', weight: 0.967041} },
+{ data: { source: 'FABP5', target: 'TAGLN2', directed: 'false', weight: 0.759424} },
+{ data: { source: 'FABP7', target: 'TAGLN3', directed: 'false', weight: 0.998524} },
+{ data: { source: 'FABP7', target: 'TAGLN2', directed: 'false', weight: 0.995718} },
+{ data: { source: 'FABP7', target: 'TAGLN', directed: 'false', weight: 0.9855959999999999} },
+{ data: { source: 'TAGLN3', target: 'TAGLN2', directed: 'false', weight: 0.8828950000000001} },
+{ data: { source: 'TAGLN', target: 'TAGLN2', directed: 'false', weight: 0.00930371} }]},
 
 style: [
     {
@@ -82,7 +100,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.57303
+    Complex Score (from Super.Complex) = 0.57545
     </section>
     </body>
     </html>
