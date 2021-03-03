@@ -29,16 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FAM9A', score: 5, href: "https://www.uniprot.org/uniprot/Q8IZU1" }},
-{data: { id: 'NAP1L3', score: 2, href: "https://www.uniprot.org/uniprot/Q99457" }},
-{data: { id: 'GOPC', score: 5, href: "https://www.uniprot.org/uniprot/Q9HD26" }},
-{data: { id: 'CAVIN1', score: 5, href: "https://www.uniprot.org/uniprot/Q6NZI2" }}], 
- edges: [{ data: { source: 'GOPC', target: 'FAM9A', directed: 'false', weight: 0.807496} },
-{ data: { source: 'GOPC', target: 'CAVIN1', directed: 'false', weight: 0.0912673} },
-{ data: { source: 'GOPC', target: 'NAP1L3', directed: 'false', weight: 0.0844279} },
-{ data: { source: 'CAVIN1', target: 'FAM9A', directed: 'false', weight: 0.9022209999999999} },
-{ data: { source: 'CAVIN1', target: 'NAP1L3', directed: 'false', weight: 0.123797} },
-{ data: { source: 'NAP1L3', target: 'FAM9A', directed: 'false', weight: 0.7085779999999999} }]},
+elements:{nodes: [{data: { id: 'DNAJB8', score: 5, href: "https://www.uniprot.org/uniprot/Q8NHS0" }},
+{data: { id: 'DNAJB2', score: 5, href: "https://www.uniprot.org/uniprot/P25686" }},
+{data: { id: 'DNAJB6', score: 5, href: "https://www.uniprot.org/uniprot/O75190" }}], 
+ edges: [{ data: { source: 'DNAJB6', target: 'DNAJB2', directed: 'false', weight: 0.563365} },
+{ data: { source: 'DNAJB6', target: 'DNAJB8', directed: 'false', weight: 0.26953} },
+{ data: { source: 'DNAJB8', target: 'DNAJB2', directed: 'false', weight: 0.9059959999999999} }]},
 
 style: [
     {
@@ -80,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76730
+    Complex Score (from Super.Complex) = 0.76757
     </section>
     </body>
     </html>

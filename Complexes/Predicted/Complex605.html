@@ -29,12 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'OSBPL6', score: 5, href: "https://www.uniprot.org/uniprot/Q9BZF3" }},
-{data: { id: 'GLMN', score: 5, href: "https://www.uniprot.org/uniprot/Q92990" }},
-{data: { id: 'ARRDC1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N5I2" }}], 
- edges: [{ data: { source: 'OSBPL6', target: 'ARRDC1', directed: 'false', weight: 0.330363} },
-{ data: { source: 'OSBPL6', target: 'GLMN', directed: 'false', weight: 0.0881436} },
-{ data: { source: 'ARRDC1', target: 'GLMN', directed: 'false', weight: 0.36186599999999997} }]},
+elements:{nodes: [{data: { id: 'ITPRID2', score: 5, href: "https://www.uniprot.org/uniprot/P28290" }},
+{data: { id: 'VPS33B', score: 5, href: "https://www.uniprot.org/uniprot/Q9H267" }},
+{data: { id: 'ITPR3', score: 5, href: "https://www.uniprot.org/uniprot/Q14573" }},
+{data: { id: 'FKBP15', score: 5, href: "https://www.uniprot.org/uniprot/Q5T1M5" }}], 
+ edges: [{ data: { source: 'FKBP15', target: 'ITPRID2', directed: 'false', weight: 0.657233} },
+{ data: { source: 'FKBP15', target: 'VPS33B', directed: 'false', weight: 0.140692} },
+{ data: { source: 'FKBP15', target: 'ITPR3', directed: 'false', weight: 0.108699} },
+{ data: { source: 'VPS33B', target: 'ITPRID2', directed: 'false', weight: 0.976133} },
+{ data: { source: 'ITPR3', target: 'ITPRID2', directed: 'false', weight: 0.766808} }]},
 
 style: [
     {
@@ -76,7 +79,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65799
+    Complex Score (from Super.Complex) = 0.65873
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>FKBP15
     </section>
     </body>
     </html>

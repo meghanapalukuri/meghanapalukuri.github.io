@@ -29,18 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'POLE4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NR33" }},
-{data: { id: 'POLA1', score: 5, href: "https://www.uniprot.org/uniprot/P09884" }},
-{data: { id: 'POLE', score: 5, href: "https://www.uniprot.org/uniprot/Q07864" }},
-{data: { id: 'POLE2', score: 5, href: "https://www.uniprot.org/uniprot/P56282" }},
-{data: { id: 'POLE3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NRF9" }}], 
- edges: [{ data: { source: 'POLE', target: 'POLE2', directed: 'false', weight: 0.999613} },
-{ data: { source: 'POLE', target: 'POLE3', directed: 'false', weight: 0.9902799999999999} },
-{ data: { source: 'POLE', target: 'POLE4', directed: 'false', weight: 0.8370709999999999} },
-{ data: { source: 'POLE', target: 'POLA1', directed: 'false', weight: 0.0942341} },
-{ data: { source: 'POLE3', target: 'POLE4', directed: 'false', weight: 0.976413} },
-{ data: { source: 'POLE3', target: 'POLA1', directed: 'false', weight: 0.762173} },
-{ data: { source: 'POLA1', target: 'POLE4', directed: 'false', weight: 0.973456} }]},
+elements:{nodes: [{data: { id: 'GNPDA2', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDQ7" }},
+{data: { id: 'AMDHD2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y303" }},
+{data: { id: 'GNPDA1', score: 5, href: "https://www.uniprot.org/uniprot/P46926" }}], 
+ edges: [{ data: { source: 'GNPDA2', target: 'AMDHD2', directed: 'false', weight: 0.9439549999999999} },
+{ data: { source: 'GNPDA2', target: 'GNPDA1', directed: 'false', weight: 0.484098} },
+{ data: { source: 'AMDHD2', target: 'GNPDA1', directed: 'false', weight: 0.9975280000000001} }]},
 
 style: [
     {
@@ -82,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.74621
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>POLA1
+    Complex Score (from Super.Complex) = 0.75391
     </section>
     </body>
     </html>

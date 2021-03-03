@@ -29,18 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FARSB', score: 5, href: "https://www.uniprot.org/uniprot/Q9NSD9" }},
-{data: { id: 'ARPC5', score: 5, href: "https://www.uniprot.org/uniprot/O15511" }},
-{data: { id: 'FAM98B', score: 5, href: "https://www.uniprot.org/uniprot/Q52LJ0" }},
-{data: { id: 'AASS', score: 5, href: "https://www.uniprot.org/uniprot/Q9UDR5" }},
-{data: { id: 'DIS3', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2L1" }}], 
- edges: [{ data: { source: 'DIS3', target: 'FARSB', directed: 'false', weight: 0.7892239999999999} },
-{ data: { source: 'DIS3', target: 'ARPC5', directed: 'false', weight: 0.47865699999999994} },
-{ data: { source: 'DIS3', target: 'FAM98B', directed: 'false', weight: 0.137547} },
-{ data: { source: 'FARSB', target: 'FAM98B', directed: 'false', weight: 0.5462229999999999} },
-{ data: { source: 'FARSB', target: 'ARPC5', directed: 'false', weight: 0.47391000000000005} },
-{ data: { source: 'FARSB', target: 'AASS', directed: 'false', weight: 0.270567} },
-{ data: { source: 'ARPC5', target: 'FAM98B', directed: 'false', weight: 0.49481099999999995} }]},
+elements:{nodes: [{data: { id: 'NNT', score: 5, href: "https://www.uniprot.org/uniprot/Q13423" }},
+{data: { id: 'FDXR', score: 5, href: "https://www.uniprot.org/uniprot/P22570" }},
+{data: { id: 'CPS1', score: 5, href: "https://www.uniprot.org/uniprot/P31327" }},
+{data: { id: 'PCCA', score: 5, href: "https://www.uniprot.org/uniprot/P05165" }}], 
+ edges: [{ data: { source: 'FDXR', target: 'PCCA', directed: 'false', weight: 0.292948} },
+{ data: { source: 'FDXR', target: 'CPS1', directed: 'false', weight: 0.131827} },
+{ data: { source: 'CPS1', target: 'PCCA', directed: 'false', weight: 0.427584} },
+{ data: { source: 'CPS1', target: 'NNT', directed: 'false', weight: 0.18651500000000001} },
+{ data: { source: 'PCCA', target: 'NNT', directed: 'false', weight: 0.29130700000000004} }]},
 
 style: [
     {
@@ -82,12 +79,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.60655
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>AASS
+    Complex Score (from Super.Complex) = 0.60859
     </section>
     </body>
     </html>

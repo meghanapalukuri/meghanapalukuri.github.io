@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NCOR1', score: 5, href: "https://www.uniprot.org/uniprot/O75376" }},
-{data: { id: 'HDAC3', score: 5, href: "https://www.uniprot.org/uniprot/O15379" }},
-{data: { id: 'GPS2', score: 5, href: "https://www.uniprot.org/uniprot/Q13227" }},
-{data: { id: 'ANKRD11', score: 5, href: "https://www.uniprot.org/uniprot/Q6UB99" }}], 
- edges: [{ data: { source: 'HDAC3', target: 'GPS2', directed: 'false', weight: 0.852248} },
-{ data: { source: 'HDAC3', target: 'NCOR1', directed: 'false', weight: 0.194752} },
-{ data: { source: 'HDAC3', target: 'ANKRD11', directed: 'false', weight: 0.101714} },
-{ data: { source: 'NCOR1', target: 'GPS2', directed: 'false', weight: 0.902982} },
-{ data: { source: 'NCOR1', target: 'ANKRD11', directed: 'false', weight: 0.117494} },
-{ data: { source: 'GPS2', target: 'ANKRD11', directed: 'false', weight: 0.984268} }]},
+elements:{nodes: [{data: { id: 'WDR62', score: 5, href: "https://www.uniprot.org/uniprot/O43379" }},
+{data: { id: 'DUSP8', score: 5, href: "https://www.uniprot.org/uniprot/Q13202" }},
+{data: { id: 'MAPK9', score: 5, href: "https://www.uniprot.org/uniprot/P45984" }},
+{data: { id: 'MAPK8', score: 5, href: "https://www.uniprot.org/uniprot/P45983" }}], 
+ edges: [{ data: { source: 'MAPK9', target: 'MAPK8', directed: 'false', weight: 0.9850979999999999} },
+{ data: { source: 'MAPK9', target: 'DUSP8', directed: 'false', weight: 0.140692} },
+{ data: { source: 'MAPK9', target: 'WDR62', directed: 'false', weight: 0.0931445} },
+{ data: { source: 'WDR62', target: 'MAPK8', directed: 'false', weight: 0.640672} },
+{ data: { source: 'WDR62', target: 'DUSP8', directed: 'false', weight: 0.11473699999999999} },
+{ data: { source: 'MAPK8', target: 'DUSP8', directed: 'false', weight: 0.9437540000000001} }]},
 
 style: [
     {
@@ -80,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.70619
+    Complex Score (from Super.Complex) = 0.71254
     </section>
     </body>
     </html>

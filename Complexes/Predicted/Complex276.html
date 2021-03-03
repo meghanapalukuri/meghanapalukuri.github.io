@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'BRD2', score: 5, href: "https://www.uniprot.org/uniprot/P25440" }},
-{data: { id: 'PWWP2B', score: 3, href: "https://www.uniprot.org/uniprot/Q6NUJ5" }},
-{data: { id: 'FARP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y4F1" }}], 
- edges: [{ data: { source: 'PWWP2B', target: 'BRD2', directed: 'false', weight: 0.927758} },
-{ data: { source: 'PWWP2B', target: 'FARP1', directed: 'false', weight: 0.09242919999999999} },
-{ data: { source: 'BRD2', target: 'FARP1', directed: 'false', weight: 0.8587049999999999} }]},
+elements:{nodes: [{data: { id: 'CASQ2', score: 5, href: "https://www.uniprot.org/uniprot/O14958" }},
+{data: { id: 'ZBTB21', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULJ3" }},
+{data: { id: 'PRDM10', score: 5, href: "https://www.uniprot.org/uniprot/Q9NQV6" }}], 
+ edges: [{ data: { source: 'CASQ2', target: 'ZBTB21', directed: 'false', weight: 0.9419780000000001} },
+{ data: { source: 'CASQ2', target: 'PRDM10', directed: 'false', weight: 0.651452} },
+{ data: { source: 'ZBTB21', target: 'PRDM10', directed: 'false', weight: 0.228167} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76827
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>BRD2
+    Complex Score (from Super.Complex) = 0.76872
     </section>
     </body>
     </html>

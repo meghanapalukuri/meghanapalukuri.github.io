@@ -29,11 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SRP14', score: 5, href: "https://www.uniprot.org/uniprot/P37108" }},
-{data: { id: 'SRP9', score: 5, href: "https://www.uniprot.org/uniprot/P49458" }},
-{data: { id: 'NEUROG2', score: 0 }}], 
- edges: [{ data: { source: 'NEUROG2', target: 'SRP9', directed: 'false', weight: 0.34608099999999997} },
-{ data: { source: 'SRP9', target: 'SRP14', directed: 'false', weight: 0.9963209999999999} }]},
+elements:{nodes: [{data: { id: 'CHCHD1', score: 5, href: "https://www.uniprot.org/uniprot/Q96BP2" }},
+{data: { id: 'RNF138', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVD3" }},
+{data: { id: 'NAP1L5', score: 3, href: "https://www.uniprot.org/uniprot/Q96NT1" }},
+{data: { id: 'MARK2', score: 5, href: "https://www.uniprot.org/uniprot/Q7KZI7" }},
+{data: { id: 'CDK15', score: 5, href: "https://www.uniprot.org/uniprot/Q96Q40" }}], 
+ edges: [{ data: { source: 'RNF138', target: 'NAP1L5', directed: 'false', weight: 0.492245} },
+{ data: { source: 'RNF138', target: 'CHCHD1', directed: 'false', weight: 0.128057} },
+{ data: { source: 'RNF138', target: 'MARK2', directed: 'false', weight: 0.112499} },
+{ data: { source: 'CDK15', target: 'MARK2', directed: 'false', weight: 0.619775} },
+{ data: { source: 'MARK2', target: 'NAP1L5', directed: 'false', weight: 0.467817} },
+{ data: { source: 'MARK2', target: 'CHCHD1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'CHCHD1', target: 'NAP1L5', directed: 'false', weight: 0.357103} }]},
 
 style: [
     {
@@ -75,7 +82,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.57040
+    Complex Score (from Super.Complex) = 0.57169
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>MARK2
     </section>
     </body>
     </html>

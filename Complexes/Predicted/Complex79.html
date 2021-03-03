@@ -29,16 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MIOS', score: 5, href: "https://www.uniprot.org/uniprot/Q9NXC5" }},
-{data: { id: 'SESN2', score: 5, href: "https://www.uniprot.org/uniprot/P58004" }},
-{data: { id: 'WDR59', score: 5, href: "https://www.uniprot.org/uniprot/Q6PJI9" }},
-{data: { id: 'WDR24', score: 5, href: "https://www.uniprot.org/uniprot/Q96S15" }}], 
- edges: [{ data: { source: 'WDR24', target: 'SESN2', directed: 'false', weight: 0.911826} },
-{ data: { source: 'WDR24', target: 'MIOS', directed: 'false', weight: 0.623583} },
-{ data: { source: 'WDR24', target: 'WDR59', directed: 'false', weight: 0.478204} },
-{ data: { source: 'MIOS', target: 'SESN2', directed: 'false', weight: 0.777762} },
-{ data: { source: 'MIOS', target: 'WDR59', directed: 'false', weight: 0.391286} },
-{ data: { source: 'SESN2', target: 'WDR59', directed: 'false', weight: 0.913478} }]},
+elements:{nodes: [{data: { id: 'ACTN2', score: 5, href: "https://www.uniprot.org/uniprot/P35609" }},
+{data: { id: 'DLG5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDM6" }},
+{data: { id: 'TPM1', score: 5, href: "https://www.uniprot.org/uniprot/P09493" }},
+{data: { id: 'TPM4', score: 5, href: "https://www.uniprot.org/uniprot/P67936" }},
+{data: { id: 'TPM3', score: 5, href: "https://www.uniprot.org/uniprot/P06753" }}], 
+ edges: [{ data: { source: 'TPM3', target: 'TPM1', directed: 'false', weight: 0.999857} },
+{ data: { source: 'TPM3', target: 'ACTN2', directed: 'false', weight: 0.705709} },
+{ data: { source: 'TPM3', target: 'TPM4', directed: 'false', weight: 0.438697} },
+{ data: { source: 'TPM3', target: 'DLG5', directed: 'false', weight: 0.15628} },
+{ data: { source: 'ACTN2', target: 'TPM1', directed: 'false', weight: 0.787251} },
+{ data: { source: 'ACTN2', target: 'TPM4', directed: 'false', weight: 0.622981} },
+{ data: { source: 'TPM1', target: 'TPM4', directed: 'false', weight: 0.999985} },
+{ data: { source: 'TPM1', target: 'DLG5', directed: 'false', weight: 0.909151} },
+{ data: { source: 'TPM4', target: 'DLG5', directed: 'false', weight: 0.15529400000000002} }]},
 
 style: [
     {
@@ -80,7 +84,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.80217
+    Complex Score (from Super.Complex) = 0.80527
     </section>
     </body>
     </html>

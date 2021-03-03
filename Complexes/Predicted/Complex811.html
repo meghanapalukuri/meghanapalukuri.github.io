@@ -29,22 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ACSF3', score: 5, href: "https://www.uniprot.org/uniprot/Q4G176" }},
-{data: { id: 'ADHFE1', score: 5, href: "https://www.uniprot.org/uniprot/Q8IWW8" }},
-{data: { id: 'RPIA', score: 5, href: "https://www.uniprot.org/uniprot/P49247" }},
-{data: { id: 'GCLM', score: 5, href: "https://www.uniprot.org/uniprot/P48507" }},
-{data: { id: 'GMPR2', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2T1" }},
-{data: { id: 'GMPR', score: 5, href: "https://www.uniprot.org/uniprot/P36959" }}], 
- edges: [{ data: { source: 'ACSF3', target: 'GMPR', directed: 'false', weight: 0.355956} },
-{ data: { source: 'ACSF3', target: 'GMPR2', directed: 'false', weight: 0.347958} },
-{ data: { source: 'ADHFE1', target: 'GMPR', directed: 'false', weight: 0.7787} },
-{ data: { source: 'ADHFE1', target: 'GMPR2', directed: 'false', weight: 0.599662} },
-{ data: { source: 'ADHFE1', target: 'RPIA', directed: 'false', weight: 0.056223199999999994} },
-{ data: { source: 'GCLM', target: 'GMPR2', directed: 'false', weight: 0.360664} },
-{ data: { source: 'GCLM', target: 'GMPR', directed: 'false', weight: 0.35541} },
-{ data: { source: 'GMPR2', target: 'GMPR', directed: 'false', weight: 0.980734} },
-{ data: { source: 'GMPR2', target: 'RPIA', directed: 'false', weight: 0.701434} },
-{ data: { source: 'RPIA', target: 'GMPR', directed: 'false', weight: 0.629831} }]},
+elements:{nodes: [{data: { id: 'SERPINB8', score: 5, href: "https://www.uniprot.org/uniprot/P50452" }},
+{data: { id: 'THOP1', score: 5, href: "https://www.uniprot.org/uniprot/P52888" }},
+{data: { id: 'IDE', score: 5, href: "https://www.uniprot.org/uniprot/P14735" }},
+{data: { id: 'CASP3', score: 5, href: "https://www.uniprot.org/uniprot/P42574" }}], 
+ edges: [{ data: { source: 'IDE', target: 'SERPINB8', directed: 'false', weight: 0.6832020000000001} },
+{ data: { source: 'IDE', target: 'CASP3', directed: 'false', weight: 0.588596} },
+{ data: { source: 'IDE', target: 'THOP1', directed: 'false', weight: 0.58515} },
+{ data: { source: 'THOP1', target: 'CASP3', directed: 'false', weight: 0.171296} }]},
 
 style: [
     {
@@ -86,7 +78,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.56677
+    Complex Score (from Super.Complex) = 0.56969
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>IDE
     </section>
     </body>
     </html>

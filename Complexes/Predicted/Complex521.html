@@ -29,16 +29,25 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SEC11C', score: 5, href: "https://www.uniprot.org/uniprot/Q9BY50" }},
-{data: { id: 'METTL25', score: 2, href: "https://www.uniprot.org/uniprot/Q8N6Q8" }},
-{data: { id: 'ABHD16A', score: 5, href: "https://www.uniprot.org/uniprot/O95870" }},
-{data: { id: 'HTR3C', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXA8" }}], 
- edges: [{ data: { source: 'METTL25', target: 'HTR3C', directed: 'false', weight: 0.5660390000000001} },
-{ data: { source: 'METTL25', target: 'ABHD16A', directed: 'false', weight: 0.151455} },
-{ data: { source: 'METTL25', target: 'SEC11C', directed: 'false', weight: 0.140692} },
-{ data: { source: 'SEC11C', target: 'HTR3C', directed: 'false', weight: 0.559121} },
-{ data: { source: 'SEC11C', target: 'ABHD16A', directed: 'false', weight: 0.123797} },
-{ data: { source: 'ABHD16A', target: 'HTR3C', directed: 'false', weight: 0.6124350000000001} }]},
+elements:{nodes: [{data: { id: 'FAM160A2', score: 5, href: "https://www.uniprot.org/uniprot/Q8N612" }},
+{data: { id: 'HOOK3', score: 5, href: "https://www.uniprot.org/uniprot/Q86VS8" }},
+{data: { id: 'HOOK1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJC3" }},
+{data: { id: 'NAB1', score: 4, href: "https://www.uniprot.org/uniprot/Q13506" }},
+{data: { id: 'FAM160A1', score: 2, href: "https://www.uniprot.org/uniprot/Q05DH4" }},
+{data: { id: 'AKTIP', score: 5, href: "https://www.uniprot.org/uniprot/Q9H8T0" }}], 
+ edges: [{ data: { source: 'HOOK1', target: 'AKTIP', directed: 'false', weight: 0.8411540000000001} },
+{ data: { source: 'HOOK1', target: 'FAM160A2', directed: 'false', weight: 0.14871800000000002} },
+{ data: { source: 'HOOK1', target: 'FAM160A1', directed: 'false', weight: 0.100611} },
+{ data: { source: 'HOOK1', target: 'NAB1', directed: 'false', weight: 0.100611} },
+{ data: { source: 'FAM160A1', target: 'AKTIP', directed: 'false', weight: 0.9752879999999999} },
+{ data: { source: 'FAM160A1', target: 'NAB1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'FAM160A1', target: 'FAM160A2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'FAM160A1', target: 'HOOK3', directed: 'false', weight: 0.11047699999999999} },
+{ data: { source: 'FAM160A2', target: 'AKTIP', directed: 'false', weight: 0.9875360000000001} },
+{ data: { source: 'FAM160A2', target: 'HOOK3', directed: 'false', weight: 0.178521} },
+{ data: { source: 'FAM160A2', target: 'NAB1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'NAB1', target: 'AKTIP', directed: 'false', weight: 0.97051} },
+{ data: { source: 'AKTIP', target: 'HOOK3', directed: 'false', weight: 0.952498} }]},
 
 style: [
     {
@@ -80,7 +89,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.68042
+    Complex Score (from Super.Complex) = 0.68165
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>HOOK1
     </section>
     </body>
     </html>

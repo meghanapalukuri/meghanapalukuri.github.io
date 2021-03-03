@@ -1,0 +1,111 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title>SARS-CoV2 nsp6</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SARS-CoV2 nsp6', score: 2, type:  'sars'  }},
+{data: { id: 'ATP5MG', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/O75964" }},
+{data: { id: 'ATP6AP1', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q15904" }},
+{data: { id: 'SIGMAR1', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q99720" }},
+{data: { id: 'ATP13A3', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q9H7F0" }},
+{data: { id: 'Complex788', score: 0, type: 'complex', href: "../Predicted/Complex788.html" }},
+{data: { id: 'Complex980', score: 0, type: 'complex', href: "../Predicted/Complex980.html" }},
+{data: { id: 'Complex42', score: 0, type: 'complex', href: "../Predicted/Complex42.html" }},
+{data: { id: 'Complex641', score: 0, type: 'complex', href: "../Predicted/Complex641.html" }}], 
+ edges: [{ data: { source: 'ATP5MG', target: 'Complex42', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'ATP5MG', target: 'Complex980', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'ATP6AP1', target: 'Complex641', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'SIGMAR1', target: 'Complex788', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'SARS-CoV2 nsp6', target: 'ATP5MG', directed: 'false', type: 'sars2prot',weight: 0.717265558} },
+{ data: { source: 'SARS-CoV2 nsp6', target: 'ATP6AP1', directed: 'false', type: 'sars2prot',weight: 0.989106922} },
+{ data: { source: 'SARS-CoV2 nsp6', target: 'SIGMAR1', directed: 'false', type: 'sars2prot',weight: 0.842213253} },
+{ data: { source: 'SARS-CoV2 nsp6', target: 'ATP13A3', directed: 'false', type: 'sars2prot',weight: 0.805525853} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'rectangle'}
+                                if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                
+  return 'circle';
+  },
+            'background-color': function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'blue'}
+                                if ( ele.data('type') == 'sars' ){return 'red'}             
+  return 'yellow';
+  },
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.5, 1, 0.1, 2.5)',
+								'line-color': function( ele ){ 
+                                if ( ele.data('type') == 'prot2complex' ){return 'blue'}
+  return 'red';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'concentric',
+  concentric: function( ele ){ // returns numeric value for each node, placing higher nodes in levels towards the centre
+  return ele.data('score');
+  },
+  equidistant: true, 
+  levelWidth: function( nodes ){ // the variation of concentric values in each level
+  return 1;
+  },
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+    </script>
+
+    	<section>
+    	<br>
+    	<br>
+    	<br> 
+    
+    </section>
+    </body>
+    </html>
+    

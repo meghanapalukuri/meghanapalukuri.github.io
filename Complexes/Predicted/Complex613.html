@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CHD6', score: 5, href: "https://www.uniprot.org/uniprot/Q8TD26" }},
-{data: { id: 'HSP90B1', score: 5, href: "https://www.uniprot.org/uniprot/P14625" }},
-{data: { id: 'CHD9', score: 5, href: "https://www.uniprot.org/uniprot/Q3L8U1" }}], 
- edges: [{ data: { source: 'CHD6', target: 'HSP90B1', directed: 'false', weight: 0.27141} },
-{ data: { source: 'CHD6', target: 'CHD9', directed: 'false', weight: 0.0730688} },
-{ data: { source: 'CHD9', target: 'HSP90B1', directed: 'false', weight: 0.352985} }]},
+elements:{nodes: [{data: { id: 'PUM1', score: 5, href: "https://www.uniprot.org/uniprot/Q14671" }},
+{data: { id: 'HELZ', score: 5, href: "https://www.uniprot.org/uniprot/P42694" }},
+{data: { id: 'USP54', score: 5, href: "https://www.uniprot.org/uniprot/Q70EL1" }}], 
+ edges: [{ data: { source: 'PUM1', target: 'HELZ', directed: 'false', weight: 0.300708} },
+{ data: { source: 'PUM1', target: 'USP54', directed: 'false', weight: 0.0815261} },
+{ data: { source: 'USP54', target: 'HELZ', directed: 'false', weight: 0.363892} }]},
 
 style: [
     {
@@ -76,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65415
+    Complex Score (from Super.Complex) = 0.65641
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>USP54
     </section>
     </body>
     </html>

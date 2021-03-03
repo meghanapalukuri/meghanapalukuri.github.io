@@ -29,18 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'AKR1E2', score: 5, href: "https://www.uniprot.org/uniprot/Q96JD6" }},
-{data: { id: 'DNM1', score: 5, href: "https://www.uniprot.org/uniprot/Q05193" }},
-{data: { id: 'DNM3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UQ16" }},
-{data: { id: 'RPE', score: 5, href: "https://www.uniprot.org/uniprot/Q96AT9" }},
-{data: { id: 'DNM2', score: 5, href: "https://www.uniprot.org/uniprot/P50570" }}], 
- edges: [{ data: { source: 'DNM2', target: 'RPE', directed: 'false', weight: 0.9178059999999999} },
-{ data: { source: 'DNM2', target: 'DNM3', directed: 'false', weight: 0.9033399999999999} },
-{ data: { source: 'DNM2', target: 'DNM1', directed: 'false', weight: 0.445935} },
-{ data: { source: 'DNM3', target: 'DNM1', directed: 'false', weight: 0.9600209999999999} },
-{ data: { source: 'DNM3', target: 'RPE', directed: 'false', weight: 0.48095600000000005} },
-{ data: { source: 'DNM1', target: 'RPE', directed: 'false', weight: 0.733112} },
-{ data: { source: 'RPE', target: 'AKR1E2', directed: 'false', weight: 0.401905} }]},
+elements:{nodes: [{data: { id: 'SLC30A7', score: 5, href: "https://www.uniprot.org/uniprot/Q8NEW0" }},
+{data: { id: 'SLC30A6', score: 4, href: "https://www.uniprot.org/uniprot/Q6NXT4" }},
+{data: { id: 'SLC30A5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAD4" }}], 
+ edges: [{ data: { source: 'SLC30A5', target: 'SLC30A6', directed: 'false', weight: 0.345713} },
+{ data: { source: 'SLC30A5', target: 'SLC30A7', directed: 'false', weight: 0.29496700000000003} },
+{ data: { source: 'SLC30A6', target: 'SLC30A7', directed: 'false', weight: 0.130385} }]},
 
 style: [
     {
@@ -82,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65875
+    Complex Score (from Super.Complex) = 0.65932
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>SLC30A7 SLC30A6
     </section>
     </body>
     </html>

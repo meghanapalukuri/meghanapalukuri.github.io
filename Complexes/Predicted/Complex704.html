@@ -29,18 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CXCR4', score: 5, href: "https://www.uniprot.org/uniprot/P61073" }},
-{data: { id: 'CERS2', score: 5, href: "https://www.uniprot.org/uniprot/Q96G23" }},
-{data: { id: 'KCNK1', score: 5, href: "https://www.uniprot.org/uniprot/O00180" }},
-{data: { id: 'ABCC1', score: 5, href: "https://www.uniprot.org/uniprot/P33527" }},
-{data: { id: 'GOLGA5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TBA6" }}], 
- edges: [{ data: { source: 'CERS2', target: 'KCNK1', directed: 'false', weight: 0.632021} },
-{ data: { source: 'KCNK1', target: 'ABCC1', directed: 'false', weight: 0.855417} },
-{ data: { source: 'KCNK1', target: 'GOLGA5', directed: 'false', weight: 0.707076} },
-{ data: { source: 'KCNK1', target: 'CXCR4', directed: 'false', weight: 0.705331} },
-{ data: { source: 'GOLGA5', target: 'CXCR4', directed: 'false', weight: 0.132679} },
-{ data: { source: 'GOLGA5', target: 'ABCC1', directed: 'false', weight: 0.0972698} },
-{ data: { source: 'CXCR4', target: 'ABCC1', directed: 'false', weight: 0.19934000000000002} }]},
+elements:{nodes: [{data: { id: 'DCBLD1', score: 3, href: "https://www.uniprot.org/uniprot/Q8N8Z6" }},
+{data: { id: 'HS3ST3B1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y662" }},
+{data: { id: 'IL27RA', score: 5, href: "https://www.uniprot.org/uniprot/Q6UWB1" }},
+{data: { id: 'HLA-DPA1', score: 5, href: "https://www.uniprot.org/uniprot/P20036" }},
+{data: { id: 'NOB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULX3" }}], 
+ edges: [{ data: { source: 'NOB1', target: 'HLA-DPA1', directed: 'false', weight: 0.547085} },
+{ data: { source: 'IL27RA', target: 'HLA-DPA1', directed: 'false', weight: 0.49271800000000004} },
+{ data: { source: 'IL27RA', target: 'HS3ST3B1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'IL27RA', target: 'DCBLD1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'HS3ST3B1', target: 'HLA-DPA1', directed: 'false', weight: 0.907113} },
+{ data: { source: 'HS3ST3B1', target: 'DCBLD1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'HLA-DPA1', target: 'DCBLD1', directed: 'false', weight: 0.8911190000000001} }]},
 
 style: [
     {
@@ -82,12 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.60624
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>ABCC1
+    Complex Score (from Super.Complex) = 0.60820
     </section>
     </body>
     </html>

@@ -29,18 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NXN', score: 5, href: "https://www.uniprot.org/uniprot/Q6DKJ4" }},
-{data: { id: 'DTD1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TEA8" }},
-{data: { id: 'EIF1', score: 5, href: "https://www.uniprot.org/uniprot/P41567" }},
-{data: { id: 'TRIP12', score: 5, href: "https://www.uniprot.org/uniprot/Q14669" }},
-{data: { id: 'SNRPA', score: 5, href: "https://www.uniprot.org/uniprot/P09012" }}], 
- edges: [{ data: { source: 'NXN', target: 'SNRPA', directed: 'false', weight: 0.425691} },
-{ data: { source: 'NXN', target: 'DTD1', directed: 'false', weight: 0.32729899999999995} },
-{ data: { source: 'NXN', target: 'EIF1', directed: 'false', weight: 0.0938283} },
-{ data: { source: 'EIF1', target: 'DTD1', directed: 'false', weight: 0.725036} },
-{ data: { source: 'EIF1', target: 'SNRPA', directed: 'false', weight: 0.659708} },
-{ data: { source: 'EIF1', target: 'TRIP12', directed: 'false', weight: 0.403783} },
-{ data: { source: 'SNRPA', target: 'DTD1', directed: 'false', weight: 0.773442} }]},
+elements:{nodes: [{data: { id: 'COL8A2', score: 5, href: "https://www.uniprot.org/uniprot/P25067" }},
+{data: { id: 'COL2A1', score: 5, href: "https://www.uniprot.org/uniprot/P02458" }},
+{data: { id: 'COL4A5', score: 5, href: "https://www.uniprot.org/uniprot/P29400" }},
+{data: { id: 'COL5A1', score: 5, href: "https://www.uniprot.org/uniprot/P20908" }},
+{data: { id: 'PTPN2', score: 5, href: "https://www.uniprot.org/uniprot/P17706" }}], 
+ edges: [{ data: { source: 'PTPN2', target: 'COL5A1', directed: 'false', weight: 0.681534} },
+{ data: { source: 'COL2A1', target: 'COL8A2', directed: 'false', weight: 0.695153} },
+{ data: { source: 'COL2A1', target: 'COL5A1', directed: 'false', weight: 0.175861} },
+{ data: { source: 'COL2A1', target: 'COL4A5', directed: 'false', weight: 0.128057} },
+{ data: { source: 'COL4A5', target: 'COL8A2', directed: 'false', weight: 0.9342280000000001} },
+{ data: { source: 'COL4A5', target: 'COL5A1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'COL5A1', target: 'COL8A2', directed: 'false', weight: 0.861261} }]},
 
 style: [
     {
@@ -82,7 +82,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.61832
+    Complex Score (from Super.Complex) = 0.61906
     </section>
     </body>
     </html>

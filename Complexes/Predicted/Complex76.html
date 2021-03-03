@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SULT1A1', score: 5, href: "https://www.uniprot.org/uniprot/P50225" }},
-{data: { id: 'SULT1A2', score: 5, href: "https://www.uniprot.org/uniprot/P50226" }},
-{data: { id: 'SULT1A3', score: 5, href: "https://www.uniprot.org/uniprot/P0DMM9" }}], 
- edges: [{ data: { source: 'SULT1A1', target: 'SULT1A2', directed: 'false', weight: 0.9401870000000001} },
-{ data: { source: 'SULT1A1', target: 'SULT1A3', directed: 'false', weight: 0.853824} },
-{ data: { source: 'SULT1A2', target: 'SULT1A3', directed: 'false', weight: 0.856864} }]},
+elements:{nodes: [{data: { id: 'OS9', score: 5, href: "https://www.uniprot.org/uniprot/Q13438" }},
+{data: { id: 'SEL1L', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBV2" }},
+{data: { id: 'ERLEC1', score: 5, href: "https://www.uniprot.org/uniprot/Q96DZ1" }}], 
+ edges: [{ data: { source: 'ERLEC1', target: 'SEL1L', directed: 'false', weight: 0.9998030000000001} },
+{ data: { source: 'ERLEC1', target: 'OS9', directed: 'false', weight: 0.826836} },
+{ data: { source: 'SEL1L', target: 'OS9', directed: 'false', weight: 0.9999790000000001} }]},
 
 style: [
     {
@@ -76,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.80348
+    Complex Score (from Super.Complex) = 0.80898
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>OS9 ERLEC1
     </section>
     </body>
     </html>

@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FGL1', score: 5, href: "https://www.uniprot.org/uniprot/Q08830" }},
-{data: { id: 'ZADH2', score: 5, href: "https://www.uniprot.org/uniprot/Q8N4Q0" }},
-{data: { id: 'LCMT2', score: 5, href: "https://www.uniprot.org/uniprot/O60294" }},
-{data: { id: 'PRR12', score: 3, href: "https://www.uniprot.org/uniprot/Q9ULL5" }}], 
- edges: [{ data: { source: 'FGL1', target: 'LCMT2', directed: 'false', weight: 0.976685} },
-{ data: { source: 'FGL1', target: 'ZADH2', directed: 'false', weight: 0.773647} },
-{ data: { source: 'FGL1', target: 'PRR12', directed: 'false', weight: 0.764392} },
-{ data: { source: 'ZADH2', target: 'PRR12', directed: 'false', weight: 0.140692} },
-{ data: { source: 'ZADH2', target: 'LCMT2', directed: 'false', weight: 0.123797} },
-{ data: { source: 'LCMT2', target: 'PRR12', directed: 'false', weight: 0.151455} }]},
+elements:{nodes: [{data: { id: 'PNKD', score: 5, href: "https://www.uniprot.org/uniprot/Q8N490" }},
+{data: { id: 'DCUN1D5', score: 5, href: "https://www.uniprot.org/uniprot/Q9BTE7" }},
+{data: { id: 'PRMT9', score: 5, href: "https://www.uniprot.org/uniprot/Q6P2P2" }},
+{data: { id: 'PPARGC1B', score: 5, href: "https://www.uniprot.org/uniprot/Q86YN6" }}], 
+ edges: [{ data: { source: 'PRMT9', target: 'PNKD', directed: 'false', weight: 0.775234} },
+{ data: { source: 'PRMT9', target: 'PPARGC1B', directed: 'false', weight: 0.140692} },
+{ data: { source: 'PRMT9', target: 'DCUN1D5', directed: 'false', weight: 0.104198} },
+{ data: { source: 'DCUN1D5', target: 'PNKD', directed: 'false', weight: 0.819524} },
+{ data: { source: 'DCUN1D5', target: 'PPARGC1B', directed: 'false', weight: 0.128057} },
+{ data: { source: 'PPARGC1B', target: 'PNKD', directed: 'false', weight: 0.9599260000000001} }]},
 
 style: [
     {
@@ -80,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77308
+    Complex Score (from Super.Complex) = 0.77332
     </section>
     </body>
     </html>

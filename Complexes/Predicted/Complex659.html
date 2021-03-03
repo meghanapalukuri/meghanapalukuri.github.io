@@ -29,14 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'METTL14', score: 5, href: "https://www.uniprot.org/uniprot/Q9HCE5" }},
-{data: { id: 'RBM15B', score: 5, href: "https://www.uniprot.org/uniprot/Q8NDT2" }},
-{data: { id: 'WTAP', score: 5, href: "https://www.uniprot.org/uniprot/Q15007" }},
-{data: { id: 'METTL3', score: 5, href: "https://www.uniprot.org/uniprot/Q86U44" }}], 
- edges: [{ data: { source: 'RBM15B', target: 'METTL3', directed: 'false', weight: 0.9676680000000001} },
-{ data: { source: 'RBM15B', target: 'METTL14', directed: 'false', weight: 0.1067} },
-{ data: { source: 'METTL3', target: 'WTAP', directed: 'false', weight: 0.993452} },
-{ data: { source: 'METTL3', target: 'METTL14', directed: 'false', weight: 0.9568180000000001} }]},
+elements:{nodes: [{data: { id: 'MAD1L1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6D9" }},
+{data: { id: 'MAD2L1BP', score: 5, href: "https://www.uniprot.org/uniprot/Q15013" }},
+{data: { id: 'EPM2AIP1', score: 5, href: "https://www.uniprot.org/uniprot/Q7L775" }},
+{data: { id: 'BAG5', score: 5, href: "https://www.uniprot.org/uniprot/Q9UL15" }},
+{data: { id: 'MAD2L1', score: 5, href: "https://www.uniprot.org/uniprot/Q13257" }}], 
+ edges: [{ data: { source: 'MAD2L1', target: 'MAD2L1BP', directed: 'false', weight: 0.941802} },
+{ data: { source: 'MAD2L1', target: 'MAD1L1', directed: 'false', weight: 0.64625} },
+{ data: { source: 'MAD2L1', target: 'EPM2AIP1', directed: 'false', weight: 0.579746} },
+{ data: { source: 'BAG5', target: 'MAD1L1', directed: 'false', weight: 0.806249} },
+{ data: { source: 'MAD1L1', target: 'MAD2L1BP', directed: 'false', weight: 0.715875} },
+{ data: { source: 'MAD1L1', target: 'EPM2AIP1', directed: 'false', weight: 0.133179} },
+{ data: { source: 'MAD2L1BP', target: 'EPM2AIP1', directed: 'false', weight: 0.144297} }]},
 
 style: [
     {
@@ -78,7 +82,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.63204
+    Complex Score (from Super.Complex) = 0.63358
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>BAG5
     </section>
     </body>
     </html>

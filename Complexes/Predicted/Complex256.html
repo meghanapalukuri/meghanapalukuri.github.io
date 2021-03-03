@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PSME3', score: 5, href: "https://www.uniprot.org/uniprot/P61289" }},
-{data: { id: 'CBX2', score: 5, href: "https://www.uniprot.org/uniprot/Q14781" }},
-{data: { id: 'FAM192A', score: 0 }},
-{data: { id: 'ZBTB9', score: 5, href: "https://www.uniprot.org/uniprot/Q96C00" }}], 
- edges: [{ data: { source: 'FAM192A', target: 'PSME3', directed: 'false', weight: 1.0} },
-{ data: { source: 'FAM192A', target: 'CBX2', directed: 'false', weight: 0.0968222} },
-{ data: { source: 'FAM192A', target: 'ZBTB9', directed: 'false', weight: 0.0895252} },
-{ data: { source: 'ZBTB9', target: 'PSME3', directed: 'false', weight: 0.48449200000000003} },
-{ data: { source: 'ZBTB9', target: 'CBX2', directed: 'false', weight: 0.128057} },
-{ data: { source: 'CBX2', target: 'PSME3', directed: 'false', weight: 0.939678} }]},
+elements:{nodes: [{data: { id: 'SPINT2', score: 5, href: "https://www.uniprot.org/uniprot/O43291" }},
+{data: { id: 'CNTNAP1', score: 5, href: "https://www.uniprot.org/uniprot/P78357" }},
+{data: { id: 'HGFAC', score: 5, href: "https://www.uniprot.org/uniprot/Q04756" }},
+{data: { id: 'SCARF2', score: 5, href: "https://www.uniprot.org/uniprot/Q96GP6" }}], 
+ edges: [{ data: { source: 'SCARF2', target: 'SPINT2', directed: 'false', weight: 0.9291370000000001} },
+{ data: { source: 'SCARF2', target: 'CNTNAP1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'SCARF2', target: 'HGFAC', directed: 'false', weight: 0.171414} },
+{ data: { source: 'SPINT2', target: 'HGFAC', directed: 'false', weight: 0.8419409999999999} },
+{ data: { source: 'SPINT2', target: 'CNTNAP1', directed: 'false', weight: 0.601113} },
+{ data: { source: 'CNTNAP1', target: 'HGFAC', directed: 'false', weight: 0.171414} }]},
 
 style: [
     {
@@ -80,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76938
+    Complex Score (from Super.Complex) = 0.76979
     </section>
     </body>
     </html>

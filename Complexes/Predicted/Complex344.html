@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GOLGA2', score: 5, href: "https://www.uniprot.org/uniprot/Q08379" }},
-{data: { id: 'TICAM2', score: 5, href: "https://www.uniprot.org/uniprot/Q86XR7" }},
-{data: { id: 'GORASP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQQ3" }}], 
- edges: [{ data: { source: 'TICAM2', target: 'GORASP1', directed: 'false', weight: 0.605524} },
-{ data: { source: 'TICAM2', target: 'GOLGA2', directed: 'false', weight: 0.11136700000000001} },
-{ data: { source: 'GORASP1', target: 'GOLGA2', directed: 'false', weight: 0.990994} }]},
+elements:{nodes: [{data: { id: '80196', score: 0 }},
+{data: { id: 'RFFL', score: 5, href: "https://www.uniprot.org/uniprot/Q8WZ73" }},
+{data: { id: 'SHC1', score: 5, href: "https://www.uniprot.org/uniprot/P29353" }}], 
+ edges: [{ data: { source: 'RFFL', target: 'SHC1', directed: 'false', weight: 0.950053} },
+{ data: { source: 'RFFL', target: '80196', directed: 'false', weight: 0.5} },
+{ data: { source: 'SHC1', target: '80196', directed: 'false', weight: 0.171414} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76286
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        2 interacting protein(s): <br>GOLGA2 GORASP1
+    Complex Score (from Super.Complex) = 0.76380
     </section>
     </body>
     </html>

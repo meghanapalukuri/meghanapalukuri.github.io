@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ACAD9', score: 5, href: "https://www.uniprot.org/uniprot/Q9H845" }},
-{data: { id: 'NDUFAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y375" }},
-{data: { id: 'ECSIT', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQ95" }}], 
- edges: [{ data: { source: 'ACAD9', target: 'ECSIT', directed: 'false', weight: 0.979089} },
-{ data: { source: 'ACAD9', target: 'NDUFAF1', directed: 'false', weight: 0.9036569999999999} },
-{ data: { source: 'ECSIT', target: 'NDUFAF1', directed: 'false', weight: 0.985202} }]},
+elements:{nodes: [{data: { id: 'KATNA1', score: 5, href: "https://www.uniprot.org/uniprot/O75449" }},
+{data: { id: 'KATNBL1', score: 5, href: "https://www.uniprot.org/uniprot/Q9H079" }},
+{data: { id: 'KATNB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BVA0" }}], 
+ edges: [{ data: { source: 'KATNA1', target: 'KATNBL1', directed: 'false', weight: 0.992715} },
+{ data: { source: 'KATNA1', target: 'KATNB1', directed: 'false', weight: 0.983751} },
+{ data: { source: 'KATNBL1', target: 'KATNB1', directed: 'false', weight: 0.9622959999999999} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.81078
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        3 interacting protein(s): <br>ACAD9 NDUFAF1 ECSIT
+    Complex Score (from Super.Complex) = 0.81339
     </section>
     </body>
     </html>

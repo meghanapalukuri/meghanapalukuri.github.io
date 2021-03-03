@@ -29,16 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RBCK1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BYM8" }},
-{data: { id: 'SMURF2', score: 5, href: "https://www.uniprot.org/uniprot/Q9HAU4" }},
-{data: { id: 'STXBP4', score: 5, href: "https://www.uniprot.org/uniprot/Q6ZWJ1" }},
-{data: { id: 'LDLRAD4', score: 5, href: "https://www.uniprot.org/uniprot/O15165" }}], 
- edges: [{ data: { source: 'SMURF2', target: 'LDLRAD4', directed: 'false', weight: 0.991762} },
-{ data: { source: 'SMURF2', target: 'RBCK1', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SMURF2', target: 'STXBP4', directed: 'false', weight: 0.11730499999999999} },
-{ data: { source: 'RBCK1', target: 'LDLRAD4', directed: 'false', weight: 0.727386} },
-{ data: { source: 'RBCK1', target: 'STXBP4', directed: 'false', weight: 0.102922} },
-{ data: { source: 'STXBP4', target: 'LDLRAD4', directed: 'false', weight: 0.8342} }]},
+elements:{nodes: [{data: { id: 'PRPS1L1', score: 5, href: "https://www.uniprot.org/uniprot/P21108" }},
+{data: { id: 'PRPS2', score: 5, href: "https://www.uniprot.org/uniprot/P11908" }},
+{data: { id: 'PRPS1', score: 5, href: "https://www.uniprot.org/uniprot/P60891" }}], 
+ edges: [{ data: { source: 'PRPS1L1', target: 'PRPS1', directed: 'false', weight: 0.857893} },
+{ data: { source: 'PRPS1L1', target: 'PRPS2', directed: 'false', weight: 0.117318} },
+{ data: { source: 'PRPS1', target: 'PRPS2', directed: 'false', weight: 0.9989889999999999} }]},
 
 style: [
     {
@@ -80,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77349
+    Complex Score (from Super.Complex) = 0.77361
     </section>
     </body>
     </html>

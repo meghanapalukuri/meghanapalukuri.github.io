@@ -29,18 +29,37 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PNISR', score: 5, href: "https://www.uniprot.org/uniprot/Q8TF01" }},
-{data: { id: 'NAA15', score: 5, href: "https://www.uniprot.org/uniprot/Q9BXJ9" }},
-{data: { id: 'TOP3A', score: 5, href: "https://www.uniprot.org/uniprot/Q13472" }},
-{data: { id: 'RAP1GDS1', score: 5, href: "https://www.uniprot.org/uniprot/P52306" }},
-{data: { id: 'NAA10', score: 5, href: "https://www.uniprot.org/uniprot/P41227" }}], 
- edges: [{ data: { source: 'PNISR', target: 'NAA10', directed: 'false', weight: 0.5399510000000001} },
-{ data: { source: 'PNISR', target: 'NAA15', directed: 'false', weight: 0.0775955} },
-{ data: { source: 'NAA15', target: 'NAA10', directed: 'false', weight: 0.7004100000000001} },
-{ data: { source: 'NAA15', target: 'TOP3A', directed: 'false', weight: 0.376756} },
-{ data: { source: 'NAA15', target: 'RAP1GDS1', directed: 'false', weight: 0.364562} },
-{ data: { source: 'TOP3A', target: 'NAA10', directed: 'false', weight: 0.7921189999999999} },
-{ data: { source: 'NAA10', target: 'RAP1GDS1', directed: 'false', weight: 0.570575} }]},
+elements:{nodes: [{data: { id: 'FH', score: 5, href: "https://www.uniprot.org/uniprot/P07954" }},
+{data: { id: 'DBI', score: 5, href: "https://www.uniprot.org/uniprot/P07108" }},
+{data: { id: 'OXCT1', score: 5, href: "https://www.uniprot.org/uniprot/P55809" }},
+{data: { id: 'ETFA', score: 5, href: "https://www.uniprot.org/uniprot/P13804" }},
+{data: { id: 'CRYZ', score: 5, href: "https://www.uniprot.org/uniprot/Q08257" }},
+{data: { id: 'ADSL', score: 5, href: "https://www.uniprot.org/uniprot/P30566" }},
+{data: { id: 'LDHAL6A', score: 4, href: "https://www.uniprot.org/uniprot/Q6ZMR3" }},
+{data: { id: 'GPT2', score: 5, href: "https://www.uniprot.org/uniprot/Q8TD30" }},
+{data: { id: 'ETFB', score: 5, href: "https://www.uniprot.org/uniprot/P38117" }}], 
+ edges: [{ data: { source: 'ETFB', target: 'ETFA', directed: 'false', weight: 0.9852040000000001} },
+{ data: { source: 'ETFB', target: 'LDHAL6A', directed: 'false', weight: 0.934895} },
+{ data: { source: 'ETFB', target: 'DBI', directed: 'false', weight: 0.844612} },
+{ data: { source: 'ETFB', target: 'OXCT1', directed: 'false', weight: 0.818574} },
+{ data: { source: 'ETFB', target: 'FH', directed: 'false', weight: 0.742309} },
+{ data: { source: 'ETFB', target: 'ADSL', directed: 'false', weight: 0.668679} },
+{ data: { source: 'ETFB', target: 'CRYZ', directed: 'false', weight: 0.46421899999999994} },
+{ data: { source: 'ETFB', target: 'GPT2', directed: 'false', weight: 0.315386} },
+{ data: { source: 'FH', target: 'GPT2', directed: 'false', weight: 0.9064129999999999} },
+{ data: { source: 'FH', target: 'ADSL', directed: 'false', weight: 0.71212} },
+{ data: { source: 'FH', target: 'OXCT1', directed: 'false', weight: 0.6769} },
+{ data: { source: 'FH', target: 'DBI', directed: 'false', weight: 0.00922051} },
+{ data: { source: 'GPT2', target: 'OXCT1', directed: 'false', weight: 0.763948} },
+{ data: { source: 'GPT2', target: 'ADSL', directed: 'false', weight: 0.551646} },
+{ data: { source: 'GPT2', target: 'DBI', directed: 'false', weight: 0.5} },
+{ data: { source: 'DBI', target: 'ADSL', directed: 'false', weight: 0.890991} },
+{ data: { source: 'DBI', target: 'OXCT1', directed: 'false', weight: 0.544892} },
+{ data: { source: 'ETFA', target: 'CRYZ', directed: 'false', weight: 0.7604609999999999} },
+{ data: { source: 'ETFA', target: 'LDHAL6A', directed: 'false', weight: 0.712561} },
+{ data: { source: 'ETFA', target: 'ADSL', directed: 'false', weight: 0.335897} },
+{ data: { source: 'CRYZ', target: 'LDHAL6A', directed: 'false', weight: 0.0424403} },
+{ data: { source: 'OXCT1', target: 'ADSL', directed: 'false', weight: 0.8523440000000001} }]},
 
 style: [
     {
@@ -82,12 +101,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53937
+    Complex Score (from Super.Complex) = 0.54330
         <br> 
         <br>
         Connection to SARS-COV2: 
         <br>
-        1 interacting protein(s): <br>RAP1GDS1
+        1 interacting protein(s): <br>ETFA
     </section>
     </body>
     </html>

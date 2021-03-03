@@ -29,21 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CDK4', score: 5, href: "https://www.uniprot.org/uniprot/A0A024RBB6" }},
-{data: { id: 'CDKN2C', score: 5, href: "https://www.uniprot.org/uniprot/P42773" }},
-{data: { id: 'CDKN2B', score: 5, href: "https://www.uniprot.org/uniprot/P42772" }},
-{data: { id: 'CDKN2A', score: 5, href: "https://www.uniprot.org/uniprot/P42771" }},
-{data: { id: 'OGFRL1', score: 2, href: "https://www.uniprot.org/uniprot/Q5TC84" }}], 
- edges: [{ data: { source: 'CDKN2A', target: 'CDK4', directed: 'false', weight: 0.980915} },
-{ data: { source: 'CDKN2A', target: 'CDKN2B', directed: 'false', weight: 0.402805} },
-{ data: { source: 'CDKN2A', target: 'CDKN2C', directed: 'false', weight: 0.198303} },
-{ data: { source: 'CDKN2A', target: 'OGFRL1', directed: 'false', weight: 0.140692} },
-{ data: { source: 'OGFRL1', target: 'CDK4', directed: 'false', weight: 0.983915} },
-{ data: { source: 'OGFRL1', target: 'CDKN2B', directed: 'false', weight: 0.151455} },
-{ data: { source: 'OGFRL1', target: 'CDKN2C', directed: 'false', weight: 0.128057} },
-{ data: { source: 'CDKN2C', target: 'CDK4', directed: 'false', weight: 0.676475} },
-{ data: { source: 'CDKN2C', target: 'CDKN2B', directed: 'false', weight: 0.238157} },
-{ data: { source: 'CDKN2B', target: 'CDK4', directed: 'false', weight: 0.7832399999999999} }]},
+elements:{nodes: [{data: { id: 'PPFIA3', score: 5, href: "https://www.uniprot.org/uniprot/O75145" }},
+{data: { id: 'RAB3IL1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TBN0" }},
+{data: { id: 'RAB3IP', score: 5, href: "https://www.uniprot.org/uniprot/Q96QF0" }},
+{data: { id: 'TMEM102', score: 5, href: "https://www.uniprot.org/uniprot/Q8N9M5" }}], 
+ edges: [{ data: { source: 'TMEM102', target: 'RAB3IL1', directed: 'false', weight: 0.940917} },
+{ data: { source: 'TMEM102', target: 'RAB3IP', directed: 'false', weight: 0.463714} },
+{ data: { source: 'TMEM102', target: 'PPFIA3', directed: 'false', weight: 0.123797} },
+{ data: { source: 'RAB3IP', target: 'RAB3IL1', directed: 'false', weight: 0.967507} },
+{ data: { source: 'RAB3IP', target: 'PPFIA3', directed: 'false', weight: 0.117318} },
+{ data: { source: 'RAB3IL1', target: 'PPFIA3', directed: 'false', weight: 0.898891} }]},
 
 style: [
     {
@@ -85,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.74144
+    Complex Score (from Super.Complex) = 0.74666
     </section>
     </body>
     </html>

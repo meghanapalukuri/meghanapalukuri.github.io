@@ -29,12 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FSCN1', score: 5, href: "https://www.uniprot.org/uniprot/Q16658" }},
-{data: { id: 'NECAP2', score: 4, href: "https://www.uniprot.org/uniprot/Q9NVZ3" }},
-{data: { id: 'NECAP1', score: 4, href: "https://www.uniprot.org/uniprot/Q8NC96" }}], 
- edges: [{ data: { source: 'NECAP2', target: 'NECAP1', directed: 'false', weight: 0.962525} },
-{ data: { source: 'NECAP2', target: 'FSCN1', directed: 'false', weight: 0.777504} },
-{ data: { source: 'FSCN1', target: 'NECAP1', directed: 'false', weight: 0.038931099999999996} }]},
+elements:{nodes: [{data: { id: 'ZIC2', score: 5, href: "https://www.uniprot.org/uniprot/O95409" }},
+{data: { id: 'CHRNA9', score: 5, href: "https://www.uniprot.org/uniprot/Q9UGM1" }},
+{data: { id: 'DNAJC18', score: 2, href: "https://www.uniprot.org/uniprot/Q9H819" }},
+{data: { id: 'CHEK1', score: 5, href: "https://www.uniprot.org/uniprot/O14757" }}], 
+ edges: [{ data: { source: 'ZIC2', target: 'CHRNA9', directed: 'false', weight: 0.8541489999999999} },
+{ data: { source: 'ZIC2', target: 'DNAJC18', directed: 'false', weight: 0.171414} },
+{ data: { source: 'ZIC2', target: 'CHEK1', directed: 'false', weight: 0.11248399999999999} },
+{ data: { source: 'CHRNA9', target: 'DNAJC18', directed: 'false', weight: 0.804603} },
+{ data: { source: 'CHRNA9', target: 'CHEK1', directed: 'false', weight: 0.639065} },
+{ data: { source: 'DNAJC18', target: 'CHEK1', directed: 'false', weight: 0.11248399999999999} }]},
 
 style: [
     {
@@ -76,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76477
+    Complex Score (from Super.Complex) = 0.76505
     </section>
     </body>
     </html>

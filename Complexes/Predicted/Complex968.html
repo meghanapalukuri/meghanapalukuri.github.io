@@ -29,11 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'HARS2', score: 5, href: "https://www.uniprot.org/uniprot/P49590" }},
-{data: { id: 'SARS2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NP81" }},
-{data: { id: 'CROCC', score: 5, href: "https://www.uniprot.org/uniprot/Q5TZA2" }}], 
- edges: [{ data: { source: 'SARS2', target: 'HARS2', directed: 'false', weight: 0.361782} },
-{ data: { source: 'HARS2', target: 'CROCC', directed: 'false', weight: 0.55698} }]},
+elements:{nodes: [{data: { id: 'RP2', score: 5, href: "https://www.uniprot.org/uniprot/O75695" }},
+{data: { id: 'SLC44A2', score: 5, href: "https://www.uniprot.org/uniprot/Q8IWA5" }},
+{data: { id: 'FAM174A', score: 5, href: "https://www.uniprot.org/uniprot/Q8TBP5" }},
+{data: { id: 'MARC2', score: 0 }},
+{data: { id: 'PEX19', score: 5, href: "https://www.uniprot.org/uniprot/P40855" }},
+{data: { id: 'OSTF1', score: 5, href: "https://www.uniprot.org/uniprot/Q92882" }}], 
+ edges: [{ data: { source: 'SLC44A2', target: 'RP2', directed: 'false', weight: 0.9531200000000001} },
+{ data: { source: 'SLC44A2', target: 'OSTF1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'SLC44A2', target: 'MARC2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'OSTF1', target: 'RP2', directed: 'false', weight: 0.983613} },
+{ data: { source: 'OSTF1', target: 'MARC2', directed: 'false', weight: 0.133456} },
+{ data: { source: 'FAM174A', target: 'PEX19', directed: 'false', weight: 0.8782260000000001} },
+{ data: { source: 'FAM174A', target: 'MARC2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'MARC2', target: 'PEX19', directed: 'false', weight: 0.49180100000000004} },
+{ data: { source: 'MARC2', target: 'RP2', directed: 'false', weight: 0.36932800000000005} }]},
 
 style: [
     {
@@ -75,7 +85,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.52600
+    Complex Score (from Super.Complex) = 0.52967
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>SLC44A2
     </section>
     </body>
     </html>

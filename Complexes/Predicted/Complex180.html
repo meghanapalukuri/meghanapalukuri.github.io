@@ -29,12 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SIX1', score: 5, href: "https://www.uniprot.org/uniprot/Q15475" }},
-{data: { id: 'EYA1', score: 5, href: "https://www.uniprot.org/uniprot/A0A024R813" }},
-{data: { id: 'EYA4', score: 5, href: "https://www.uniprot.org/uniprot/O95677" }}], 
- edges: [{ data: { source: 'SIX1', target: 'EYA1', directed: 'false', weight: 0.9761559999999999} },
-{ data: { source: 'SIX1', target: 'EYA4', directed: 'false', weight: 0.8708020000000001} },
-{ data: { source: 'EYA4', target: 'EYA1', directed: 'false', weight: 0.171414} }]},
+elements:{nodes: [{data: { id: 'RPL36', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3U8" }},
+{data: { id: 'RPS12', score: 5, href: "https://www.uniprot.org/uniprot/P25398" }},
+{data: { id: 'RPL13A', score: 5, href: "https://www.uniprot.org/uniprot/P40429" }},
+{data: { id: 'FAU', score: 5, href: "https://www.uniprot.org/uniprot/P62861" }},
+{data: { id: 'COX5B', score: 5, href: "https://www.uniprot.org/uniprot/P10606" }}], 
+ edges: [{ data: { source: 'RPL36', target: 'RPL13A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL36', target: 'RPS12', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPL36', target: 'FAU', directed: 'false', weight: 0.999991} },
+{ data: { source: 'RPL13A', target: 'RPS12', directed: 'false', weight: 0.9961639999999999} },
+{ data: { source: 'RPL13A', target: 'FAU', directed: 'false', weight: 0.9759059999999999} },
+{ data: { source: 'COX5B', target: 'RPS12', directed: 'false', weight: 0.30086999999999997} },
+{ data: { source: 'FAU', target: 'RPS12', directed: 'false', weight: 0.99374} }]},
 
 style: [
     {
@@ -76,7 +82,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77365
+    Complex Score (from Super.Complex) = 0.77378
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>RPL36
     </section>
     </body>
     </html>

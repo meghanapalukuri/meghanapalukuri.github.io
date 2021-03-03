@@ -29,20 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FAM199X', score: 2, href: "https://www.uniprot.org/uniprot/Q6PEV8" }},
-{data: { id: 'ZXDC', score: 5, href: "https://www.uniprot.org/uniprot/Q2QGD7" }},
-{data: { id: 'ATN1', score: 5, href: "https://www.uniprot.org/uniprot/P54259" }},
-{data: { id: 'WDR5', score: 5, href: "https://www.uniprot.org/uniprot/P61964" }},
-{data: { id: 'RERE', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2R6" }}], 
- edges: [{ data: { source: 'ZXDC', target: 'WDR5', directed: 'false', weight: 0.475641} },
-{ data: { source: 'ZXDC', target: 'ATN1', directed: 'false', weight: 0.171414} },
-{ data: { source: 'ZXDC', target: 'FAM199X', directed: 'false', weight: 0.133451} },
-{ data: { source: 'RERE', target: 'WDR5', directed: 'false', weight: 0.956375} },
-{ data: { source: 'RERE', target: 'ATN1', directed: 'false', weight: 0.171414} },
-{ data: { source: 'RERE', target: 'FAM199X', directed: 'false', weight: 0.133451} },
-{ data: { source: 'ATN1', target: 'WDR5', directed: 'false', weight: 0.982352} },
-{ data: { source: 'ATN1', target: 'FAM199X', directed: 'false', weight: 0.133451} },
-{ data: { source: 'WDR5', target: 'FAM199X', directed: 'false', weight: 0.87913} }]},
+elements:{nodes: [{data: { id: 'LIPF', score: 5, href: "https://www.uniprot.org/uniprot/P07098" }},
+{data: { id: 'SHARPIN', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0F6" }},
+{data: { id: 'LRSAM1', score: 5, href: "https://www.uniprot.org/uniprot/Q6UWE0" }},
+{data: { id: 'RNF31', score: 5, href: "https://www.uniprot.org/uniprot/Q96EP0" }}], 
+ edges: [{ data: { source: 'LIPF', target: 'SHARPIN', directed: 'false', weight: 0.9741709999999999} },
+{ data: { source: 'LIPF', target: 'LRSAM1', directed: 'false', weight: 0.9687459999999999} },
+{ data: { source: 'LIPF', target: 'RNF31', directed: 'false', weight: 0.813453} },
+{ data: { source: 'LRSAM1', target: 'SHARPIN', directed: 'false', weight: 0.133456} },
+{ data: { source: 'LRSAM1', target: 'RNF31', directed: 'false', weight: 0.108694} },
+{ data: { source: 'RNF31', target: 'SHARPIN', directed: 'false', weight: 0.222827} }]},
 
 style: [
     {
@@ -84,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.70240
+    Complex Score (from Super.Complex) = 0.70840
     </section>
     </body>
     </html>

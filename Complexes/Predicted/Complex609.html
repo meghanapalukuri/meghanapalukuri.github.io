@@ -29,15 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FEN1', score: 5, href: "https://www.uniprot.org/uniprot/P39748" }},
-{data: { id: 'MSH2', score: 5, href: "https://www.uniprot.org/uniprot/P43246" }},
-{data: { id: 'MSH6', score: 5, href: "https://www.uniprot.org/uniprot/P52701" }},
-{data: { id: 'RECQL', score: 5, href: "https://www.uniprot.org/uniprot/P46063" }}], 
- edges: [{ data: { source: 'FEN1', target: 'MSH2', directed: 'false', weight: 0.86455} },
-{ data: { source: 'FEN1', target: 'RECQL', directed: 'false', weight: 0.566632} },
-{ data: { source: 'RECQL', target: 'MSH2', directed: 'false', weight: 0.6079} },
-{ data: { source: 'RECQL', target: 'MSH6', directed: 'false', weight: 0.45055} },
-{ data: { source: 'MSH6', target: 'MSH2', directed: 'false', weight: 0.9995040000000001} }]},
+elements:{nodes: [{data: { id: 'GSTK1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2Q3" }},
+{data: { id: 'CYCS', score: 5, href: "https://www.uniprot.org/uniprot/P99999" }},
+{data: { id: 'CYB5B', score: 5, href: "https://www.uniprot.org/uniprot/O43169" }}], 
+ edges: [{ data: { source: 'CYB5B', target: 'CYCS', directed: 'false', weight: 0.387406} },
+{ data: { source: 'CYB5B', target: 'GSTK1', directed: 'false', weight: 0.00816064} },
+{ data: { source: 'GSTK1', target: 'CYCS', directed: 'false', weight: 0.33565100000000003} }]},
 
 style: [
     {
@@ -79,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65626
+    Complex Score (from Super.Complex) = 0.65816
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>CYB5B
     </section>
     </body>
     </html>

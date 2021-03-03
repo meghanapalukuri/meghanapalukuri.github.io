@@ -29,16 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SDC3', score: 5, href: "https://www.uniprot.org/uniprot/A0A0S2Z4U3" }},
-{data: { id: 'EPHB4', score: 5, href: "https://www.uniprot.org/uniprot/P54760" }},
-{data: { id: 'EFNB2', score: 5, href: "https://www.uniprot.org/uniprot/P52799" }},
-{data: { id: 'EPHB3', score: 5, href: "https://www.uniprot.org/uniprot/P54753" }}], 
- edges: [{ data: { source: 'EPHB3', target: 'EFNB2', directed: 'false', weight: 0.8570639999999999} },
-{ data: { source: 'EPHB3', target: 'SDC3', directed: 'false', weight: 0.151455} },
-{ data: { source: 'EPHB3', target: 'EPHB4', directed: 'false', weight: 0.133451} },
-{ data: { source: 'EPHB4', target: 'EFNB2', directed: 'false', weight: 0.9031809999999999} },
-{ data: { source: 'EPHB4', target: 'SDC3', directed: 'false', weight: 0.117318} },
-{ data: { source: 'SDC3', target: 'EFNB2', directed: 'false', weight: 0.985073} }]},
+elements:{nodes: [{data: { id: 'CEP135', score: 5, href: "https://www.uniprot.org/uniprot/Q66GS9" }},
+{data: { id: 'ZBTB44', score: 5, href: "https://www.uniprot.org/uniprot/Q8NCP5" }},
+{data: { id: 'ASNSP6', score: 0 }},
+{data: { id: 'WRAP73', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2S5" }},
+{data: { id: 'SSX2IP', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2D8" }}], 
+ edges: [{ data: { source: 'WRAP73', target: 'ASNSP6', directed: 'false', weight: 0.9397030000000001} },
+{ data: { source: 'WRAP73', target: 'CEP135', directed: 'false', weight: 0.533414} },
+{ data: { source: 'WRAP73', target: 'SSX2IP', directed: 'false', weight: 0.154145} },
+{ data: { source: 'WRAP73', target: 'ZBTB44', directed: 'false', weight: 0.083384} },
+{ data: { source: 'CEP135', target: 'ASNSP6', directed: 'false', weight: 0.714367} },
+{ data: { source: 'CEP135', target: 'ZBTB44', directed: 'false', weight: 0.114755} },
+{ data: { source: 'CEP135', target: 'SSX2IP', directed: 'false', weight: 0.0848573} },
+{ data: { source: 'SSX2IP', target: 'ASNSP6', directed: 'false', weight: 0.804967} },
+{ data: { source: 'ASNSP6', target: 'ZBTB44', directed: 'false', weight: 0.853987} }]},
 
 style: [
     {
@@ -80,7 +84,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.71868
+    Complex Score (from Super.Complex) = 0.72539
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>CEP135
     </section>
     </body>
     </html>

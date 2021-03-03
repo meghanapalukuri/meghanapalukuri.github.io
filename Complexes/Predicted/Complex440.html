@@ -29,16 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DMXL2', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDJ6" }},
-{data: { id: 'DMXL1', score: 3, href: "https://www.uniprot.org/uniprot/Q9Y485" }},
-{data: { id: 'ROGDI', score: 5, href: "https://www.uniprot.org/uniprot/Q9GZN7" }},
-{data: { id: 'WDR7', score: 3, href: "https://www.uniprot.org/uniprot/Q9Y4E6" }}], 
- edges: [{ data: { source: 'WDR7', target: 'ROGDI', directed: 'false', weight: 0.963785} },
-{ data: { source: 'WDR7', target: 'DMXL1', directed: 'false', weight: 0.28781100000000004} },
-{ data: { source: 'WDR7', target: 'DMXL2', directed: 'false', weight: 0.108694} },
-{ data: { source: 'ROGDI', target: 'DMXL2', directed: 'false', weight: 0.93405} },
-{ data: { source: 'ROGDI', target: 'DMXL1', directed: 'false', weight: 0.9317639999999999} },
-{ data: { source: 'DMXL1', target: 'DMXL2', directed: 'false', weight: 0.100649} }]},
+elements:{nodes: [{data: { id: 'RPS6KA5', score: 5, href: "https://www.uniprot.org/uniprot/O75582" }},
+{data: { id: 'HOXB9', score: 5, href: "https://www.uniprot.org/uniprot/P17482" }},
+{data: { id: 'HOXC9', score: 5, href: "https://www.uniprot.org/uniprot/P31274" }},
+{data: { id: 'MAPK14', score: 5, href: "https://www.uniprot.org/uniprot/L7RSM2" }},
+{data: { id: 'MKNK2', score: 5, href: "https://www.uniprot.org/uniprot/Q9HBH9" }}], 
+ edges: [{ data: { source: 'HOXC9', target: 'MAPK14', directed: 'false', weight: 0.941005} },
+{ data: { source: 'HOXC9', target: 'RPS6KA5', directed: 'false', weight: 0.151455} },
+{ data: { source: 'HOXC9', target: 'MKNK2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'HOXC9', target: 'HOXB9', directed: 'false', weight: 0.133456} },
+{ data: { source: 'MAPK14', target: 'MKNK2', directed: 'false', weight: 0.984476} },
+{ data: { source: 'MAPK14', target: 'RPS6KA5', directed: 'false', weight: 0.978792} },
+{ data: { source: 'MAPK14', target: 'HOXB9', directed: 'false', weight: 0.8835040000000001} },
+{ data: { source: 'HOXB9', target: 'RPS6KA5', directed: 'false', weight: 0.151455} },
+{ data: { source: 'HOXB9', target: 'MKNK2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'MKNK2', target: 'RPS6KA5', directed: 'false', weight: 0.171414} }]},
 
 style: [
     {
@@ -80,7 +85,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.72573
+    Complex Score (from Super.Complex) = 0.73766
     </section>
     </body>
     </html>

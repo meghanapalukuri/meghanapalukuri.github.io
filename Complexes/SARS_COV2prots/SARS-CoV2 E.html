@@ -1,0 +1,118 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title>SARS-CoV2 E</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SARS-CoV2 E', score: 2, type:  'sars'  }},
+{data: { id: 'AP3B1', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/O00203" }},
+{data: { id: 'BRD4', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/O60885" }},
+{data: { id: 'BRD2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P25440" }},
+{data: { id: 'CWC27', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q6UX04" }},
+{data: { id: 'ZC3H18', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q86VM9" }},
+{data: { id: 'SLC44A2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q8IWA5" }},
+{data: { id: 'Complex495', score: 0, type: 'complex', href: "../Predicted/Complex495.html" }},
+{data: { id: 'Complex282', score: 0, type: 'complex', href: "../Predicted/Complex282.html" }},
+{data: { id: 'Complex368', score: 0, type: 'complex', href: "../Predicted/Complex368.html" }},
+{data: { id: 'Complex968', score: 0, type: 'complex', href: "../Predicted/Complex968.html" }},
+{data: { id: 'Complex10', score: 0, type: 'complex', href: "../Predicted/Complex10.html" }}], 
+ edges: [{ data: { source: 'AP3B1', target: 'Complex368', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'BRD4', target: 'Complex495', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'BRD2', target: 'Complex282', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'BRD2', target: 'Complex495', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'ZC3H18', target: 'Complex10', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'SLC44A2', target: 'Complex968', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'SARS-CoV2 E', target: 'AP3B1', directed: 'false', type: 'sars2prot',weight: 0.963550095} },
+{ data: { source: 'SARS-CoV2 E', target: 'BRD4', directed: 'false', type: 'sars2prot',weight: 0.97848835} },
+{ data: { source: 'SARS-CoV2 E', target: 'BRD2', directed: 'false', type: 'sars2prot',weight: 0.906592876} },
+{ data: { source: 'SARS-CoV2 E', target: 'CWC27', directed: 'false', type: 'sars2prot',weight: 0.89310916} },
+{ data: { source: 'SARS-CoV2 E', target: 'ZC3H18', directed: 'false', type: 'sars2prot',weight: 0.796415039} },
+{ data: { source: 'SARS-CoV2 E', target: 'SLC44A2', directed: 'false', type: 'sars2prot',weight: 0.950342834} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'rectangle'}
+                                if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                
+  return 'circle';
+  },
+            'background-color': function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'blue'}
+                                if ( ele.data('type') == 'sars' ){return 'red'}             
+  return 'yellow';
+  },
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.5, 1, 0.1, 2.5)',
+								'line-color': function( ele ){ 
+                                if ( ele.data('type') == 'prot2complex' ){return 'blue'}
+  return 'red';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'concentric',
+  concentric: function( ele ){ // returns numeric value for each node, placing higher nodes in levels towards the centre
+  return ele.data('score');
+  },
+  equidistant: true, 
+  levelWidth: function( nodes ){ // the variation of concentric values in each level
+  return 1;
+  },
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+    </script>
+
+    	<section>
+    	<br>
+    	<br>
+    	<br> 
+    
+    </section>
+    </body>
+    </html>
+    

@@ -29,11 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PITRM1', score: 5, href: "https://www.uniprot.org/uniprot/Q5JRX3" }},
-{data: { id: 'CLVS2', score: 5, href: "https://www.uniprot.org/uniprot/Q5SYC1" }},
-{data: { id: 'DDX41', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJV9" }}], 
- edges: [{ data: { source: 'DDX41', target: 'CLVS2', directed: 'false', weight: 0.552906} },
-{ data: { source: 'DDX41', target: 'PITRM1', directed: 'false', weight: 0.523963} }]},
+elements:{nodes: [{data: { id: 'TPD52', score: 5, href: "https://www.uniprot.org/uniprot/P55327" }},
+{data: { id: 'SYNE1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NF91" }},
+{data: { id: 'SYNE2', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXH0" }}], 
+ edges: [{ data: { source: 'SYNE1', target: 'TPD52', directed: 'false', weight: 0.625278} },
+{ data: { source: 'TPD52', target: 'SYNE2', directed: 'false', weight: 0.5132399999999999} }]},
 
 style: [
     {
@@ -75,12 +75,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53148
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>PITRM1
+    Complex Score (from Super.Complex) = 0.53369
     </section>
     </body>
     </html>

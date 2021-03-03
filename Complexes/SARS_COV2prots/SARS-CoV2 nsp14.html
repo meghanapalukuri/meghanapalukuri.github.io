@@ -1,0 +1,103 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title>SARS-CoV2 nsp14</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SARS-CoV2 nsp14', score: 2, type:  'sars'  }},
+{data: { id: 'GLA', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P06280" }},
+{data: { id: 'IMPDH2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P12268" }},
+{data: { id: 'SIRT5', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/A0A024R012" }},
+{data: { id: 'Complex792', score: 0, type: 'complex', href: "../Predicted/Complex792.html" }}], 
+ edges: [{ data: { source: 'IMPDH2', target: 'Complex792', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'SARS-CoV2 nsp14', target: 'GLA', directed: 'false', type: 'sars2prot',weight: 0.841137578} },
+{ data: { source: 'SARS-CoV2 nsp14', target: 'IMPDH2', directed: 'false', type: 'sars2prot',weight: 0.989667608} },
+{ data: { source: 'SARS-CoV2 nsp14', target: 'SIRT5', directed: 'false', type: 'sars2prot',weight: 0.99363281} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'rectangle'}
+                                if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                
+  return 'circle';
+  },
+            'background-color': function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'blue'}
+                                if ( ele.data('type') == 'sars' ){return 'red'}             
+  return 'yellow';
+  },
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.5, 1, 0.1, 2.5)',
+								'line-color': function( ele ){ 
+                                if ( ele.data('type') == 'prot2complex' ){return 'blue'}
+  return 'red';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'concentric',
+  concentric: function( ele ){ // returns numeric value for each node, placing higher nodes in levels towards the centre
+  return ele.data('score');
+  },
+  equidistant: true, 
+  levelWidth: function( nodes ){ // the variation of concentric values in each level
+  return 1;
+  },
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+    </script>
+
+    	<section>
+    	<br>
+    	<br>
+    	<br> 
+    
+    </section>
+    </body>
+    </html>
+    

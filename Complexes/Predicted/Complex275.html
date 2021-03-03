@@ -29,12 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TIMM8A', score: 5, href: "https://www.uniprot.org/uniprot/O60220" }},
-{data: { id: 'TIMM10', score: 5, href: "https://www.uniprot.org/uniprot/P62072" }},
-{data: { id: 'TIMM9', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5J7" }}], 
- edges: [{ data: { source: 'TIMM9', target: 'TIMM10', directed: 'false', weight: 0.975943} },
-{ data: { source: 'TIMM9', target: 'TIMM8A', directed: 'false', weight: 0.630654} },
-{ data: { source: 'TIMM10', target: 'TIMM8A', directed: 'false', weight: 0.15279} }]},
+elements:{nodes: [{data: { id: 'CTBP1', score: 5, href: "https://www.uniprot.org/uniprot/Q13363" }},
+{data: { id: 'C15orf39', score: 3, href: "https://www.uniprot.org/uniprot/Q6ZRI6" }},
+{data: { id: 'RREB1', score: 5, href: "https://www.uniprot.org/uniprot/Q92766" }},
+{data: { id: 'HIC2', score: 5, href: "https://www.uniprot.org/uniprot/Q96JB3" }}], 
+ edges: [{ data: { source: 'HIC2', target: 'CTBP1', directed: 'false', weight: 0.7730020000000001} },
+{ data: { source: 'HIC2', target: 'RREB1', directed: 'false', weight: 0.151455} },
+{ data: { source: 'HIC2', target: 'C15orf39', directed: 'false', weight: 0.112499} },
+{ data: { source: 'CTBP1', target: 'RREB1', directed: 'false', weight: 0.9772209999999999} },
+{ data: { source: 'CTBP1', target: 'C15orf39', directed: 'false', weight: 0.614613} },
+{ data: { source: 'RREB1', target: 'C15orf39', directed: 'false', weight: 0.128057} }]},
 
 style: [
     {
@@ -76,12 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76838
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        2 interacting protein(s): <br>TIMM10 TIMM9
+    Complex Score (from Super.Complex) = 0.76881
     </section>
     </body>
     </html>

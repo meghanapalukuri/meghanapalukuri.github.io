@@ -29,11 +29,26 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ZPR1', score: 5, href: "https://www.uniprot.org/uniprot/O75312" }},
-{data: { id: 'YTHDF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BYJ9" }},
-{data: { id: 'PDAP1', score: 4, href: "https://www.uniprot.org/uniprot/Q13442" }}], 
- edges: [{ data: { source: 'ZPR1', target: 'PDAP1', directed: 'false', weight: 0.648967} },
-{ data: { source: 'PDAP1', target: 'YTHDF1', directed: 'false', weight: 0.631414} }]},
+elements:{nodes: [{data: { id: 'TGS1', score: 5, href: "https://www.uniprot.org/uniprot/Q96RS0" }},
+{data: { id: 'TERF1', score: 5, href: "https://www.uniprot.org/uniprot/P54274" }},
+{data: { id: 'PINX1', score: 5, href: "https://www.uniprot.org/uniprot/Q96BK5" }},
+{data: { id: 'DDX51', score: 4, href: "https://www.uniprot.org/uniprot/Q8N8A6" }},
+{data: { id: 'WDR43', score: 5, href: "https://www.uniprot.org/uniprot/Q15061" }},
+{data: { id: 'NAP1L2', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULW6" }},
+{data: { id: 'FBL', score: 5, href: "https://www.uniprot.org/uniprot/P22087" }}], 
+ edges: [{ data: { source: 'DDX51', target: 'FBL', directed: 'false', weight: 0.73619} },
+{ data: { source: 'DDX51', target: 'NAP1L2', directed: 'false', weight: 0.120276} },
+{ data: { source: 'WDR43', target: 'FBL', directed: 'false', weight: 0.748786} },
+{ data: { source: 'WDR43', target: 'NAP1L2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'WDR43', target: 'PINX1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'WDR43', target: 'TGS1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'NAP1L2', target: 'FBL', directed: 'false', weight: 0.968807} },
+{ data: { source: 'NAP1L2', target: 'PINX1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'NAP1L2', target: 'TGS1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'PINX1', target: 'TERF1', directed: 'false', weight: 0.8859239999999999} },
+{ data: { source: 'PINX1', target: 'FBL', directed: 'false', weight: 0.774762} },
+{ data: { source: 'PINX1', target: 'TGS1', directed: 'false', weight: 0.24226599999999998} },
+{ data: { source: 'TGS1', target: 'FBL', directed: 'false', weight: 0.9184129999999999} }]},
 
 style: [
     {
@@ -75,7 +90,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53958
+    Complex Score (from Super.Complex) = 0.54439
     </section>
     </body>
     </html>

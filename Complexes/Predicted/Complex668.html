@@ -29,19 +29,29 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NEK9', score: 5, href: "https://www.uniprot.org/uniprot/Q8TD19" }},
-{data: { id: 'EML1', score: 5, href: "https://www.uniprot.org/uniprot/O00423" }},
-{data: { id: 'EML2', score: 5, href: "https://www.uniprot.org/uniprot/O95834" }},
-{data: { id: 'EML4', score: 4, href: "https://www.uniprot.org/uniprot/Q9HC35" }},
-{data: { id: 'EML3', score: 4, href: "https://www.uniprot.org/uniprot/Q32P44" }}], 
- edges: [{ data: { source: 'EML3', target: 'NEK9', directed: 'false', weight: 0.792075} },
-{ data: { source: 'EML3', target: 'EML4', directed: 'false', weight: 0.172871} },
-{ data: { source: 'EML4', target: 'NEK9', directed: 'false', weight: 0.317083} },
-{ data: { source: 'EML4', target: 'EML1', directed: 'false', weight: 0.305667} },
-{ data: { source: 'EML4', target: 'EML2', directed: 'false', weight: 0.271635} },
-{ data: { source: 'EML1', target: 'NEK9', directed: 'false', weight: 0.74043} },
-{ data: { source: 'EML1', target: 'EML2', directed: 'false', weight: 0.571014} },
-{ data: { source: 'NEK9', target: 'EML2', directed: 'false', weight: 0.676632} }]},
+elements:{nodes: [{data: { id: 'INTS12', score: 5, href: "https://www.uniprot.org/uniprot/Q96CB8" }},
+{data: { id: 'INTS6', score: 5, href: "https://www.uniprot.org/uniprot/Q9UL03" }},
+{data: { id: 'INTS4', score: 5, href: "https://www.uniprot.org/uniprot/Q96HW7" }},
+{data: { id: 'INTS5', score: 5, href: "https://www.uniprot.org/uniprot/Q6P9B9" }},
+{data: { id: 'INTS11', score: 5, href: "https://www.uniprot.org/uniprot/Q5TA45" }},
+{data: { id: 'INTS4P2', score: 0 }},
+{data: { id: 'INTS9', score: 5, href: "https://www.uniprot.org/uniprot/Q9NV88" }}], 
+ edges: [{ data: { source: 'INTS11', target: 'INTS4', directed: 'false', weight: 0.9990889999999999} },
+{ data: { source: 'INTS11', target: 'INTS9', directed: 'false', weight: 0.9990610000000001} },
+{ data: { source: 'INTS11', target: 'INTS6', directed: 'false', weight: 0.7521329999999999} },
+{ data: { source: 'INTS11', target: 'INTS12', directed: 'false', weight: 0.56548} },
+{ data: { source: 'INTS11', target: 'INTS5', directed: 'false', weight: 0.126941} },
+{ data: { source: 'INTS4P2', target: 'INTS4', directed: 'false', weight: 0.809639} },
+{ data: { source: 'INTS4', target: 'INTS12', directed: 'false', weight: 0.9956809999999999} },
+{ data: { source: 'INTS4', target: 'INTS9', directed: 'false', weight: 0.9917809999999999} },
+{ data: { source: 'INTS4', target: 'INTS6', directed: 'false', weight: 0.9819379999999999} },
+{ data: { source: 'INTS4', target: 'INTS5', directed: 'false', weight: 0.9738540000000001} },
+{ data: { source: 'INTS9', target: 'INTS5', directed: 'false', weight: 0.906415} },
+{ data: { source: 'INTS9', target: 'INTS12', directed: 'false', weight: 0.65632} },
+{ data: { source: 'INTS9', target: 'INTS6', directed: 'false', weight: 0.594072} },
+{ data: { source: 'INTS5', target: 'INTS12', directed: 'false', weight: 0.376256} },
+{ data: { source: 'INTS5', target: 'INTS6', directed: 'false', weight: 0.113652} },
+{ data: { source: 'INTS12', target: 'INTS6', directed: 'false', weight: 0.5} }]},
 
 style: [
     {
@@ -83,12 +93,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.62743
+    Complex Score (from Super.Complex) = 0.62947
         <br> 
         <br>
         Connection to SARS-COV2: 
         <br>
-        1 interacting protein(s): <br>NEK9
+        1 interacting protein(s): <br>INTS4
     </section>
     </body>
     </html>

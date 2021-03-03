@@ -29,12 +29,24 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ACSS1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NUB1" }},
-{data: { id: 'PPA2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H2U2" }},
-{data: { id: 'NADK2', score: 5, href: "https://www.uniprot.org/uniprot/Q4G0N4" }}], 
- edges: [{ data: { source: 'PPA2', target: 'ACSS1', directed: 'false', weight: 0.5} },
-{ data: { source: 'PPA2', target: 'NADK2', directed: 'false', weight: 0.329264} },
-{ data: { source: 'NADK2', target: 'ACSS1', directed: 'false', weight: 0.133451} }]},
+elements:{nodes: [{data: { id: 'ORC2', score: 5, href: "https://www.uniprot.org/uniprot/Q13416" }},
+{data: { id: 'LRWD1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UFC0" }},
+{data: { id: 'ORC1', score: 5, href: "https://www.uniprot.org/uniprot/Q13415" }},
+{data: { id: 'ORC5', score: 5, href: "https://www.uniprot.org/uniprot/O43913" }},
+{data: { id: 'ORC6', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y5N6" }},
+{data: { id: 'FAM210A', score: 3, href: "https://www.uniprot.org/uniprot/Q96ND0" }}], 
+ edges: [{ data: { source: 'ORC1', target: 'LRWD1', directed: 'false', weight: 0.576238} },
+{ data: { source: 'ORC1', target: 'ORC2', directed: 'false', weight: 0.322364} },
+{ data: { source: 'ORC1', target: 'ORC5', directed: 'false', weight: 0.219367} },
+{ data: { source: 'ORC1', target: 'FAM210A', directed: 'false', weight: 0.11585699999999999} },
+{ data: { source: 'FAM210A', target: 'ORC2', directed: 'false', weight: 0.7703909999999999} },
+{ data: { source: 'FAM210A', target: 'ORC5', directed: 'false', weight: 0.133179} },
+{ data: { source: 'FAM210A', target: 'LRWD1', directed: 'false', weight: 0.11103900000000001} },
+{ data: { source: 'LRWD1', target: 'ORC2', directed: 'false', weight: 0.999957} },
+{ data: { source: 'LRWD1', target: 'ORC5', directed: 'false', weight: 0.959946} },
+{ data: { source: 'LRWD1', target: 'ORC6', directed: 'false', weight: 0.30834} },
+{ data: { source: 'ORC2', target: 'ORC6', directed: 'false', weight: 0.9394049999999999} },
+{ data: { source: 'ORC2', target: 'ORC5', directed: 'false', weight: 0.870692} }]},
 
 style: [
     {
@@ -76,7 +88,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66802
+    Complex Score (from Super.Complex) = 0.66917
     </section>
     </body>
     </html>

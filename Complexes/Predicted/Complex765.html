@@ -29,15 +29,34 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'AKAP14', score: 5, href: "https://www.uniprot.org/uniprot/Q86UN6" }},
-{data: { id: 'EFCAB7', score: 4, href: "https://www.uniprot.org/uniprot/A8K855" }},
-{data: { id: 'SPA17', score: 5, href: "https://www.uniprot.org/uniprot/Q15506" }},
-{data: { id: 'ROPN1L', score: 5, href: "https://www.uniprot.org/uniprot/Q96C74" }}], 
- edges: [{ data: { source: 'EFCAB7', target: 'SPA17', directed: 'false', weight: 0.9582809999999999} },
-{ data: { source: 'EFCAB7', target: 'ROPN1L', directed: 'false', weight: 0.117318} },
-{ data: { source: 'EFCAB7', target: 'AKAP14', directed: 'false', weight: 0.0936635} },
-{ data: { source: 'SPA17', target: 'AKAP14', directed: 'false', weight: 0.9289040000000001} },
-{ data: { source: 'SPA17', target: 'ROPN1L', directed: 'false', weight: 0.808106} }]},
+elements:{nodes: [{data: { id: 'SETD3', score: 5, href: "https://www.uniprot.org/uniprot/Q86TU7" }},
+{data: { id: 'RNASEH2A', score: 5, href: "https://www.uniprot.org/uniprot/O75792" }},
+{data: { id: 'CCDC186', score: 3, href: "https://www.uniprot.org/uniprot/Q7Z3E2" }},
+{data: { id: 'RNASEH2B', score: 5, href: "https://www.uniprot.org/uniprot/Q5TBB1" }},
+{data: { id: 'RNASEH2C', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDP1" }},
+{data: { id: 'CMTR1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N1G2" }},
+{data: { id: 'MAGEB1', score: 2, href: "https://www.uniprot.org/uniprot/P43366" }},
+{data: { id: 'KIAA1143', score: 2, href: "https://www.uniprot.org/uniprot/Q96AT1" }}], 
+ edges: [{ data: { source: 'RNASEH2A', target: 'RNASEH2C', directed: 'false', weight: 0.9510379999999999} },
+{ data: { source: 'RNASEH2A', target: 'RNASEH2B', directed: 'false', weight: 0.9254030000000001} },
+{ data: { source: 'RNASEH2A', target: 'CMTR1', directed: 'false', weight: 0.691289} },
+{ data: { source: 'RNASEH2A', target: 'CCDC186', directed: 'false', weight: 0.44428199999999995} },
+{ data: { source: 'RNASEH2A', target: 'MAGEB1', directed: 'false', weight: 0.29122800000000004} },
+{ data: { source: 'RNASEH2A', target: 'SETD3', directed: 'false', weight: 0.280563} },
+{ data: { source: 'RNASEH2A', target: 'KIAA1143', directed: 'false', weight: 0.26105} },
+{ data: { source: 'MAGEB1', target: 'RNASEH2B', directed: 'false', weight: 0.311947} },
+{ data: { source: 'MAGEB1', target: 'RNASEH2C', directed: 'false', weight: 0.237725} },
+{ data: { source: 'CCDC186', target: 'RNASEH2B', directed: 'false', weight: 0.44388} },
+{ data: { source: 'CCDC186', target: 'RNASEH2C', directed: 'false', weight: 0.30451100000000003} },
+{ data: { source: 'CCDC186', target: 'CMTR1', directed: 'false', weight: 0.0931492} },
+{ data: { source: 'RNASEH2C', target: 'KIAA1143', directed: 'false', weight: 0.9699610000000001} },
+{ data: { source: 'RNASEH2C', target: 'RNASEH2B', directed: 'false', weight: 0.911386} },
+{ data: { source: 'RNASEH2C', target: 'CMTR1', directed: 'false', weight: 0.46649700000000005} },
+{ data: { source: 'SETD3', target: 'CMTR1', directed: 'false', weight: 0.47345} },
+{ data: { source: 'SETD3', target: 'RNASEH2B', directed: 'false', weight: 0.433251} },
+{ data: { source: 'KIAA1143', target: 'RNASEH2B', directed: 'false', weight: 0.153804} },
+{ data: { source: 'KIAA1143', target: 'CMTR1', directed: 'false', weight: 0.019294099999999998} },
+{ data: { source: 'CMTR1', target: 'RNASEH2B', directed: 'false', weight: 0.57393} }]},
 
 style: [
     {
@@ -79,7 +98,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.57956
+    Complex Score (from Super.Complex) = 0.58097
     </section>
     </body>
     </html>

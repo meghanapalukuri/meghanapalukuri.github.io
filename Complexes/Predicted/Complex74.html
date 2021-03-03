@@ -29,20 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DLG5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TDM6" }},
-{data: { id: 'ACTN2', score: 5, href: "https://www.uniprot.org/uniprot/P35609" }},
-{data: { id: 'TPM4', score: 5, href: "https://www.uniprot.org/uniprot/P67936" }},
-{data: { id: 'TPM1', score: 5, href: "https://www.uniprot.org/uniprot/P09493" }},
-{data: { id: 'TPM3', score: 5, href: "https://www.uniprot.org/uniprot/P06753" }}], 
- edges: [{ data: { source: 'TPM1', target: 'TPM4', directed: 'false', weight: 0.999985} },
-{ data: { source: 'TPM1', target: 'TPM3', directed: 'false', weight: 0.999857} },
-{ data: { source: 'TPM1', target: 'DLG5', directed: 'false', weight: 0.909151} },
-{ data: { source: 'TPM1', target: 'ACTN2', directed: 'false', weight: 0.787251} },
-{ data: { source: 'TPM4', target: 'ACTN2', directed: 'false', weight: 0.622981} },
-{ data: { source: 'TPM4', target: 'TPM3', directed: 'false', weight: 0.438697} },
-{ data: { source: 'TPM4', target: 'DLG5', directed: 'false', weight: 0.15529400000000002} },
-{ data: { source: 'DLG5', target: 'TPM3', directed: 'false', weight: 0.15628} },
-{ data: { source: 'ACTN2', target: 'TPM3', directed: 'false', weight: 0.705709} }]},
+elements:{nodes: [{data: { id: 'TAF6', score: 5, href: "https://www.uniprot.org/uniprot/P49848" }},
+{data: { id: 'TAF1', score: 5, href: "https://www.uniprot.org/uniprot/P21675" }},
+{data: { id: 'TAF3', score: 5, href: "https://www.uniprot.org/uniprot/Q5VWG9" }}], 
+ edges: [{ data: { source: 'TAF1', target: 'TAF6', directed: 'false', weight: 0.981833} },
+{ data: { source: 'TAF1', target: 'TAF3', directed: 'false', weight: 0.9391139999999999} },
+{ data: { source: 'TAF3', target: 'TAF6', directed: 'false', weight: 0.9386469999999999} }]},
 
 style: [
     {
@@ -84,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.80527
+    Complex Score (from Super.Complex) = 0.81068
     </section>
     </body>
     </html>

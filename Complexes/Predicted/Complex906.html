@@ -29,21 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MRI1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BV20" }},
-{data: { id: 'GSS', score: 5, href: "https://www.uniprot.org/uniprot/P48637" }},
-{data: { id: 'RBKS', score: 5, href: "https://www.uniprot.org/uniprot/Q9H477" }},
-{data: { id: 'CFAP298', score: 5, href: "https://www.uniprot.org/uniprot/P57076" }},
-{data: { id: 'TIMM44', score: 5, href: "https://www.uniprot.org/uniprot/O43615" }},
-{data: { id: 'SERPINB8', score: 5, href: "https://www.uniprot.org/uniprot/P50452" }}], 
- edges: [{ data: { source: 'RBKS', target: 'TIMM44', directed: 'false', weight: 0.534096} },
-{ data: { source: 'RBKS', target: 'GSS', directed: 'false', weight: 0.5} },
-{ data: { source: 'RBKS', target: 'MRI1', directed: 'false', weight: 0.028545400000000002} },
-{ data: { source: 'GSS', target: 'MRI1', directed: 'false', weight: 0.814638} },
-{ data: { source: 'GSS', target: 'SERPINB8', directed: 'false', weight: 0.7901779999999999} },
-{ data: { source: 'GSS', target: 'TIMM44', directed: 'false', weight: 0.494062} },
-{ data: { source: 'GSS', target: 'CFAP298', directed: 'false', weight: 0.0767256} },
-{ data: { source: 'CFAP298', target: 'SERPINB8', directed: 'false', weight: 0.743157} },
-{ data: { source: 'SERPINB8', target: 'MRI1', directed: 'false', weight: 0.648859} }]},
+elements:{nodes: [{data: { id: 'SLC9A3R1', score: 5, href: "https://www.uniprot.org/uniprot/O14745" }},
+{data: { id: 'EZR', score: 5, href: "https://www.uniprot.org/uniprot/P15311" }},
+{data: { id: 'HMGN5', score: 5, href: "https://www.uniprot.org/uniprot/P82970" }}], 
+ edges: [{ data: { source: 'HMGN5', target: 'SLC9A3R1', directed: 'false', weight: 0.544746} },
+{ data: { source: 'SLC9A3R1', target: 'EZR', directed: 'false', weight: 0.685369} }]},
 
 style: [
     {
@@ -85,7 +75,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.53677
+    Complex Score (from Super.Complex) = 0.53928
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>SLC9A3R1
     </section>
     </body>
     </html>

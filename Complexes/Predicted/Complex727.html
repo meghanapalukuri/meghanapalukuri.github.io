@@ -29,22 +29,39 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ADK', score: 5, href: "https://www.uniprot.org/uniprot/P55263" }},
-{data: { id: 'COA6', score: 5, href: "https://www.uniprot.org/uniprot/Q5JTJ3" }},
-{data: { id: 'PRCP', score: 5, href: "https://www.uniprot.org/uniprot/P42785" }},
-{data: { id: 'TAX1BP3', score: 5, href: "https://www.uniprot.org/uniprot/O14907" }},
-{data: { id: 'NEDD8', score: 5, href: "https://www.uniprot.org/uniprot/Q15843" }},
-{data: { id: 'ETFB', score: 5, href: "https://www.uniprot.org/uniprot/P38117" }}], 
- edges: [{ data: { source: 'PRCP', target: 'ETFB', directed: 'false', weight: 0.712162} },
-{ data: { source: 'PRCP', target: 'NEDD8', directed: 'false', weight: 0.294921} },
-{ data: { source: 'PRCP', target: 'TAX1BP3', directed: 'false', weight: 0.161889} },
-{ data: { source: 'ADK', target: 'ETFB', directed: 'false', weight: 0.67802} },
-{ data: { source: 'ADK', target: 'NEDD8', directed: 'false', weight: 0.661678} },
-{ data: { source: 'COA6', target: 'ETFB', directed: 'false', weight: 0.73292} },
-{ data: { source: 'COA6', target: 'TAX1BP3', directed: 'false', weight: 0.00409448} },
-{ data: { source: 'ETFB', target: 'NEDD8', directed: 'false', weight: 0.9610879999999999} },
-{ data: { source: 'ETFB', target: 'TAX1BP3', directed: 'false', weight: 0.596692} },
-{ data: { source: 'TAX1BP3', target: 'NEDD8', directed: 'false', weight: 0.0259866} }]},
+elements:{nodes: [{data: { id: 'IMMT', score: 5, href: "https://www.uniprot.org/uniprot/Q16891" }},
+{data: { id: 'CCDC127', score: 1, href: "https://www.uniprot.org/uniprot/D6R9R2" }},
+{data: { id: 'CHCHD6', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRQ6" }},
+{data: { id: 'SAMM50', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y512" }},
+{data: { id: 'TRAK2', score: 5, href: "https://www.uniprot.org/uniprot/O60296" }},
+{data: { id: 'MTX2', score: 5, href: "https://www.uniprot.org/uniprot/O75431" }},
+{data: { id: 'MTX3', score: 4, href: "https://www.uniprot.org/uniprot/Q5HYI7" }},
+{data: { id: 'TRAK1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UPV9" }},
+{data: { id: 'CARD19', score: 5, href: "https://www.uniprot.org/uniprot/Q96LW7" }}], 
+ edges: [{ data: { source: 'CARD19', target: 'MTX2', directed: 'false', weight: 0.9979309999999999} },
+{ data: { source: 'CARD19', target: 'TRAK2', directed: 'false', weight: 0.8804420000000001} },
+{ data: { source: 'CARD19', target: 'SAMM50', directed: 'false', weight: 0.239448} },
+{ data: { source: 'CARD19', target: 'IMMT', directed: 'false', weight: 0.226713} },
+{ data: { source: 'CARD19', target: 'MTX3', directed: 'false', weight: 0.22550599999999998} },
+{ data: { source: 'CARD19', target: 'CHCHD6', directed: 'false', weight: 0.142787} },
+{ data: { source: 'CARD19', target: 'TRAK1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'CARD19', target: 'CCDC127', directed: 'false', weight: 0.11585699999999999} },
+{ data: { source: 'TRAK1', target: 'TRAK2', directed: 'false', weight: 0.982584} },
+{ data: { source: 'CHCHD6', target: 'MTX2', directed: 'false', weight: 0.9954360000000001} },
+{ data: { source: 'CHCHD6', target: 'IMMT', directed: 'false', weight: 0.958348} },
+{ data: { source: 'CHCHD6', target: 'SAMM50', directed: 'false', weight: 0.374546} },
+{ data: { source: 'CHCHD6', target: 'MTX3', directed: 'false', weight: 0.21383899999999997} },
+{ data: { source: 'CHCHD6', target: 'CCDC127', directed: 'false', weight: 0.144789} },
+{ data: { source: 'SAMM50', target: 'MTX2', directed: 'false', weight: 0.9589290000000001} },
+{ data: { source: 'SAMM50', target: 'IMMT', directed: 'false', weight: 0.333518} },
+{ data: { source: 'SAMM50', target: 'MTX3', directed: 'false', weight: 0.322238} },
+{ data: { source: 'SAMM50', target: 'CCDC127', directed: 'false', weight: 0.100579} },
+{ data: { source: 'MTX2', target: 'IMMT', directed: 'false', weight: 0.997603} },
+{ data: { source: 'MTX2', target: 'MTX3', directed: 'false', weight: 0.997007} },
+{ data: { source: 'MTX2', target: 'CCDC127', directed: 'false', weight: 0.8038609999999999} },
+{ data: { source: 'IMMT', target: 'MTX3', directed: 'false', weight: 0.248928} },
+{ data: { source: 'IMMT', target: 'CCDC127', directed: 'false', weight: 0.0925168} },
+{ data: { source: 'MTX3', target: 'CCDC127', directed: 'false', weight: 0.11585699999999999} }]},
 
 style: [
     {
@@ -86,7 +103,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.59011
+    Complex Score (from Super.Complex) = 0.59407
     </section>
     </body>
     </html>

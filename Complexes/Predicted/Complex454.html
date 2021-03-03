@@ -29,16 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SNX16', score: 5, href: "https://www.uniprot.org/uniprot/P57768" }},
-{data: { id: 'FEZ2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHY8" }},
-{data: { id: 'KIF6', score: 4, href: "https://www.uniprot.org/uniprot/Q6ZMV9" }},
-{data: { id: 'HEATR5A', score: 3, href: "https://www.uniprot.org/uniprot/Q86XA9" }}], 
- edges: [{ data: { source: 'FEZ2', target: 'KIF6', directed: 'false', weight: 0.758065} },
-{ data: { source: 'FEZ2', target: 'HEATR5A', directed: 'false', weight: 0.151455} },
-{ data: { source: 'FEZ2', target: 'SNX16', directed: 'false', weight: 0.133456} },
-{ data: { source: 'HEATR5A', target: 'KIF6', directed: 'false', weight: 0.9781549999999999} },
-{ data: { source: 'HEATR5A', target: 'SNX16', directed: 'false', weight: 0.151455} },
-{ data: { source: 'KIF6', target: 'SNX16', directed: 'false', weight: 0.8336889999999999} }]},
+elements:{nodes: [{data: { id: 'SPTBN4', score: 5, href: "https://www.uniprot.org/uniprot/Q9H254" }},
+{data: { id: 'HOMER3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NSC5" }},
+{data: { id: 'TRAF5', score: 5, href: "https://www.uniprot.org/uniprot/O00463" }},
+{data: { id: 'HOMER1', score: 5, href: "https://www.uniprot.org/uniprot/Q86YM7" }},
+{data: { id: 'HOMER2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NSB8" }}], 
+ edges: [{ data: { source: 'HOMER3', target: 'HOMER1', directed: 'false', weight: 0.9999450000000001} },
+{ data: { source: 'HOMER3', target: 'HOMER2', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'HOMER3', target: 'SPTBN4', directed: 'false', weight: 0.151455} },
+{ data: { source: 'HOMER1', target: 'SPTBN4', directed: 'false', weight: 0.966875} },
+{ data: { source: 'HOMER1', target: 'HOMER2', directed: 'false', weight: 0.9605} },
+{ data: { source: 'HOMER1', target: 'TRAF5', directed: 'false', weight: 0.9311290000000001} },
+{ data: { source: 'TRAF5', target: 'SPTBN4', directed: 'false', weight: 0.151455} },
+{ data: { source: 'TRAF5', target: 'HOMER2', directed: 'false', weight: 0.123797} },
+{ data: { source: 'HOMER2', target: 'SPTBN4', directed: 'false', weight: 0.140692} }]},
 
 style: [
     {
@@ -80,7 +84,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.71376
+    Complex Score (from Super.Complex) = 0.71951
     </section>
     </body>
     </html>

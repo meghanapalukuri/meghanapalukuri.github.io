@@ -29,12 +29,25 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'UROC1', score: 5, href: "https://www.uniprot.org/uniprot/Q96N76" }},
-{data: { id: 'NAA20', score: 5, href: "https://www.uniprot.org/uniprot/P61599" }},
-{data: { id: 'NAA25', score: 5, href: "https://www.uniprot.org/uniprot/Q14CX7" }}], 
- edges: [{ data: { source: 'NAA20', target: 'NAA25', directed: 'false', weight: 0.5346989999999999} },
-{ data: { source: 'NAA20', target: 'UROC1', directed: 'false', weight: 0.11224200000000001} },
-{ data: { source: 'UROC1', target: 'NAA25', directed: 'false', weight: 0.529643} }]},
+elements:{nodes: [{data: { id: 'SYNE2', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXH0" }},
+{data: { id: 'BEGAIN', score: 5, href: "https://www.uniprot.org/uniprot/Q9BUH8" }},
+{data: { id: 'KIFC3', score: 5, href: "https://www.uniprot.org/uniprot/Q9BVG8" }},
+{data: { id: 'FRAT2', score: 3, href: "https://www.uniprot.org/uniprot/O75474" }},
+{data: { id: 'CEP170', score: 5, href: "https://www.uniprot.org/uniprot/Q5SW79" }},
+{data: { id: 'RFWD3', score: 5, href: "https://www.uniprot.org/uniprot/Q6PCD5" }}], 
+ edges: [{ data: { source: 'BEGAIN', target: 'CEP170', directed: 'false', weight: 0.9714020000000001} },
+{ data: { source: 'BEGAIN', target: 'KIFC3', directed: 'false', weight: 0.171414} },
+{ data: { source: 'BEGAIN', target: 'FRAT2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'BEGAIN', target: 'RFWD3', directed: 'false', weight: 0.140692} },
+{ data: { source: 'FRAT2', target: 'CEP170', directed: 'false', weight: 0.9795389999999999} },
+{ data: { source: 'FRAT2', target: 'KIFC3', directed: 'false', weight: 0.171414} },
+{ data: { source: 'FRAT2', target: 'SYNE2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'FRAT2', target: 'RFWD3', directed: 'false', weight: 0.140692} },
+{ data: { source: 'CEP170', target: 'KIFC3', directed: 'false', weight: 0.9934139999999999} },
+{ data: { source: 'CEP170', target: 'SYNE2', directed: 'false', weight: 0.902016} },
+{ data: { source: 'CEP170', target: 'RFWD3', directed: 'false', weight: 0.751552} },
+{ data: { source: 'KIFC3', target: 'RFWD3', directed: 'false', weight: 0.15268900000000002} },
+{ data: { source: 'KIFC3', target: 'SYNE2', directed: 'false', weight: 0.151455} }]},
 
 style: [
     {
@@ -76,7 +89,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.67641
+    Complex Score (from Super.Complex) = 0.67840
     </section>
     </body>
     </html>

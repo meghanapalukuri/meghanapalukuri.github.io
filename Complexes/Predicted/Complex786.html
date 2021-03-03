@@ -29,18 +29,45 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'LPAR1', score: 5, href: "https://www.uniprot.org/uniprot/Q92633" }},
-{data: { id: 'GJC1', score: 0 }},
-{data: { id: 'SLC9A1', score: 5, href: "https://www.uniprot.org/uniprot/P19634" }},
-{data: { id: 'MFSD5', score: 5, href: "https://www.uniprot.org/uniprot/Q6N075" }},
-{data: { id: 'EXTL2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBQ6" }}], 
- edges: [{ data: { source: 'SLC9A1', target: 'LPAR1', directed: 'false', weight: 0.8268559999999999} },
-{ data: { source: 'SLC9A1', target: 'MFSD5', directed: 'false', weight: 0.128057} },
-{ data: { source: 'SLC9A1', target: 'EXTL2', directed: 'false', weight: 0.112499} },
-{ data: { source: 'EXTL2', target: 'LPAR1', directed: 'false', weight: 0.37145} },
-{ data: { source: 'EXTL2', target: 'GJC1', directed: 'false', weight: 0.312709} },
-{ data: { source: 'EXTL2', target: 'MFSD5', directed: 'false', weight: 0.151455} },
-{ data: { source: 'LPAR1', target: 'MFSD5', directed: 'false', weight: 0.391302} }]},
+elements:{nodes: [{data: { id: 'PGK1', score: 5, href: "https://www.uniprot.org/uniprot/P00558" }},
+{data: { id: 'TKT', score: 5, href: "https://www.uniprot.org/uniprot/P29401" }},
+{data: { id: 'ENO3', score: 5, href: "https://www.uniprot.org/uniprot/P13929" }},
+{data: { id: 'PEBP1', score: 5, href: "https://www.uniprot.org/uniprot/P30086" }},
+{data: { id: 'PCMT1', score: 5, href: "https://www.uniprot.org/uniprot/P22061" }},
+{data: { id: 'ENO2', score: 5, href: "https://www.uniprot.org/uniprot/P09104" }},
+{data: { id: 'GPI', score: 5, href: "https://www.uniprot.org/uniprot/P06744" }},
+{data: { id: 'TPI1', score: 5, href: "https://www.uniprot.org/uniprot/P60174" }},
+{data: { id: 'GAPDH', score: 5, href: "https://www.uniprot.org/uniprot/P04406" }},
+{data: { id: 'ENO1', score: 5, href: "https://www.uniprot.org/uniprot/P06733" }}], 
+ edges: [{ data: { source: 'ENO3', target: 'PGK1', directed: 'false', weight: 0.981416} },
+{ data: { source: 'ENO3', target: 'TPI1', directed: 'false', weight: 0.92661} },
+{ data: { source: 'ENO3', target: 'GAPDH', directed: 'false', weight: 0.855907} },
+{ data: { source: 'ENO3', target: 'TKT', directed: 'false', weight: 0.822731} },
+{ data: { source: 'ENO3', target: 'GPI', directed: 'false', weight: 0.45288999999999996} },
+{ data: { source: 'ENO3', target: 'ENO2', directed: 'false', weight: 0.302063} },
+{ data: { source: 'ENO3', target: 'ENO1', directed: 'false', weight: 0.133451} },
+{ data: { source: 'PGK1', target: 'GAPDH', directed: 'false', weight: 0.987232} },
+{ data: { source: 'PGK1', target: 'ENO2', directed: 'false', weight: 0.953594} },
+{ data: { source: 'PGK1', target: 'ENO1', directed: 'false', weight: 0.534612} },
+{ data: { source: 'PGK1', target: 'GPI', directed: 'false', weight: 0.417437} },
+{ data: { source: 'PGK1', target: 'TPI1', directed: 'false', weight: 0.27197} },
+{ data: { source: 'TKT', target: 'TPI1', directed: 'false', weight: 0.97372} },
+{ data: { source: 'TKT', target: 'GPI', directed: 'false', weight: 0.960907} },
+{ data: { source: 'TKT', target: 'ENO1', directed: 'false', weight: 0.947681} },
+{ data: { source: 'TKT', target: 'PCMT1', directed: 'false', weight: 0.8710030000000001} },
+{ data: { source: 'TKT', target: 'GAPDH', directed: 'false', weight: 0.00538335} },
+{ data: { source: 'GPI', target: 'PCMT1', directed: 'false', weight: 0.428112} },
+{ data: { source: 'GPI', target: 'ENO1', directed: 'false', weight: 0.23263000000000003} },
+{ data: { source: 'PEBP1', target: 'ENO2', directed: 'false', weight: 0.9840110000000001} },
+{ data: { source: 'PEBP1', target: 'GAPDH', directed: 'false', weight: 0.922599} },
+{ data: { source: 'ENO2', target: 'GAPDH', directed: 'false', weight: 0.943759} },
+{ data: { source: 'ENO2', target: 'ENO1', directed: 'false', weight: 0.41747700000000004} },
+{ data: { source: 'TPI1', target: 'GAPDH', directed: 'false', weight: 0.861877} },
+{ data: { source: 'TPI1', target: 'ENO1', directed: 'false', weight: 0.816924} },
+{ data: { source: 'TPI1', target: 'PCMT1', directed: 'false', weight: 0.43292700000000006} },
+{ data: { source: 'GAPDH', target: 'PCMT1', directed: 'false', weight: 0.956367} },
+{ data: { source: 'GAPDH', target: 'ENO1', directed: 'false', weight: 0.576869} },
+{ data: { source: 'PCMT1', target: 'ENO1', directed: 'false', weight: 0.938699} }]},
 
 style: [
     {
@@ -82,7 +109,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.57384
+    Complex Score (from Super.Complex) = 0.57547
     </section>
     </body>
     </html>

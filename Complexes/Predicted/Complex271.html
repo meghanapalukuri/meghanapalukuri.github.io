@@ -29,12 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'HCFC1', score: 5, href: "https://www.uniprot.org/uniprot/P51610" }},
-{data: { id: 'ANXA5', score: 5, href: "https://www.uniprot.org/uniprot/P08758" }},
-{data: { id: 'HSPA8', score: 5, href: "https://www.uniprot.org/uniprot/P11142" }}], 
- edges: [{ data: { source: 'HSPA8', target: 'ANXA5', directed: 'false', weight: 0.942494} },
-{ data: { source: 'HSPA8', target: 'HCFC1', directed: 'false', weight: 0.9034770000000001} },
-{ data: { source: 'HCFC1', target: 'ANXA5', directed: 'false', weight: 0.043519800000000004} }]},
+elements:{nodes: [{data: { id: 'FCN1', score: 5, href: "https://www.uniprot.org/uniprot/O00602" }},
+{data: { id: 'FCN2', score: 5, href: "https://www.uniprot.org/uniprot/Q15485" }},
+{data: { id: 'DNAJC13', score: 5, href: "https://www.uniprot.org/uniprot/O75165" }},
+{data: { id: 'SEZ6L2', score: 5, href: "https://www.uniprot.org/uniprot/Q6UXD5" }}], 
+ edges: [{ data: { source: 'DNAJC13', target: 'FCN1', directed: 'false', weight: 0.892482} },
+{ data: { source: 'DNAJC13', target: 'FCN2', directed: 'false', weight: 0.133451} },
+{ data: { source: 'DNAJC13', target: 'SEZ6L2', directed: 'false', weight: 0.117318} },
+{ data: { source: 'SEZ6L2', target: 'FCN1', directed: 'false', weight: 0.447308} },
+{ data: { source: 'SEZ6L2', target: 'FCN2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'FCN2', target: 'FCN1', directed: 'false', weight: 0.9855079999999999} }]},
 
 style: [
     {
@@ -76,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76866
+    Complex Score (from Super.Complex) = 0.76902
     </section>
     </body>
     </html>

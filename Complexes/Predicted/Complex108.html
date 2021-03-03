@@ -29,15 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RASSF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NS23" }},
-{data: { id: 'RASSF2', score: 5, href: "https://www.uniprot.org/uniprot/P50749" }},
-{data: { id: 'STK4', score: 5, href: "https://www.uniprot.org/uniprot/Q13043" }},
-{data: { id: 'STK3', score: 5, href: "https://www.uniprot.org/uniprot/Q13188" }}], 
- edges: [{ data: { source: 'STK3', target: 'STK4', directed: 'false', weight: 0.997532} },
-{ data: { source: 'STK3', target: 'RASSF1', directed: 'false', weight: 0.9464959999999999} },
-{ data: { source: 'STK3', target: 'RASSF2', directed: 'false', weight: 0.7561439999999999} },
-{ data: { source: 'RASSF2', target: 'STK4', directed: 'false', weight: 0.7739729999999999} },
-{ data: { source: 'STK4', target: 'RASSF1', directed: 'false', weight: 0.990691} }]},
+elements:{nodes: [{data: { id: 'CCSER2', score: 4, href: "https://www.uniprot.org/uniprot/Q9H7U1" }},
+{data: { id: 'NDE1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NXR1" }},
+{data: { id: 'NDEL1', score: 5, href: "https://www.uniprot.org/uniprot/Q9GZM8" }}], 
+ edges: [{ data: { source: 'CCSER2', target: 'NDEL1', directed: 'false', weight: 0.935575} },
+{ data: { source: 'CCSER2', target: 'NDE1', directed: 'false', weight: 0.7299720000000001} },
+{ data: { source: 'NDE1', target: 'NDEL1', directed: 'false', weight: 0.601626} }]},
 
 style: [
     {
@@ -79,7 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.78590
+    Complex Score (from Super.Complex) = 0.78910
     </section>
     </body>
     </html>

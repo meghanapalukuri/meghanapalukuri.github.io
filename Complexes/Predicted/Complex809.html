@@ -29,28 +29,22 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RMDN3', score: 5, href: "https://www.uniprot.org/uniprot/Q96TC7" }},
-{data: { id: 'TMUB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BVT8" }},
-{data: { id: 'KIDINS220', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULH0" }},
-{data: { id: 'ACBD5', score: 5, href: "https://www.uniprot.org/uniprot/Q5T8D3" }},
-{data: { id: 'DNAJC11', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVH1" }},
-{data: { id: 'FAM8A1', score: 4, href: "https://www.uniprot.org/uniprot/Q9UBU6" }},
-{data: { id: 'ATAD1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NBU5" }}], 
- edges: [{ data: { source: 'FAM8A1', target: 'RMDN3', directed: 'false', weight: 0.555599} },
-{ data: { source: 'FAM8A1', target: 'TMUB1', directed: 'false', weight: 0.31501} },
-{ data: { source: 'FAM8A1', target: 'DNAJC11', directed: 'false', weight: 0.247491} },
-{ data: { source: 'FAM8A1', target: 'ACBD5', directed: 'false', weight: 0.152394} },
-{ data: { source: 'FAM8A1', target: 'KIDINS220', directed: 'false', weight: 0.100967} },
-{ data: { source: 'ATAD1', target: 'RMDN3', directed: 'false', weight: 0.35567} },
-{ data: { source: 'ATAD1', target: 'ACBD5', directed: 'false', weight: 0.10694300000000001} },
-{ data: { source: 'ATAD1', target: 'DNAJC11', directed: 'false', weight: 0.09203960000000001} },
-{ data: { source: 'TMUB1', target: 'RMDN3', directed: 'false', weight: 0.5} },
-{ data: { source: 'RMDN3', target: 'KIDINS220', directed: 'false', weight: 0.606375} },
-{ data: { source: 'RMDN3', target: 'ACBD5', directed: 'false', weight: 0.46153999999999995} },
-{ data: { source: 'RMDN3', target: 'DNAJC11', directed: 'false', weight: 0.389824} },
-{ data: { source: 'ACBD5', target: 'DNAJC11', directed: 'false', weight: 0.12287999999999999} },
-{ data: { source: 'ACBD5', target: 'KIDINS220', directed: 'false', weight: 0.0496209} },
-{ data: { source: 'DNAJC11', target: 'KIDINS220', directed: 'false', weight: 0.0975998} }]},
+elements:{nodes: [{data: { id: 'ARL13B', score: 5, href: "https://www.uniprot.org/uniprot/Q3SXY8" }},
+{data: { id: 'IFT74', score: 5, href: "https://www.uniprot.org/uniprot/Q96LB3" }},
+{data: { id: 'IFT46', score: 5, href: "https://www.uniprot.org/uniprot/Q9NQC8" }},
+{data: { id: 'IFT22', score: 4, href: "https://www.uniprot.org/uniprot/Q9H7X7" }},
+{data: { id: 'IFT81', score: 5, href: "https://www.uniprot.org/uniprot/Q8WYA0" }},
+{data: { id: 'IFT57', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWB7" }}], 
+ edges: [{ data: { source: 'IFT74', target: 'IFT46', directed: 'false', weight: 0.684525} },
+{ data: { source: 'IFT74', target: 'IFT81', directed: 'false', weight: 0.41767} },
+{ data: { source: 'IFT74', target: 'ARL13B', directed: 'false', weight: 0.11700999999999999} },
+{ data: { source: 'IFT74', target: 'IFT22', directed: 'false', weight: 0.0507858} },
+{ data: { source: 'ARL13B', target: 'IFT46', directed: 'false', weight: 0.36448800000000003} },
+{ data: { source: 'ARL13B', target: 'IFT81', directed: 'false', weight: 0.277991} },
+{ data: { source: 'IFT57', target: 'IFT22', directed: 'false', weight: 0.601388} },
+{ data: { source: 'IFT46', target: 'IFT81', directed: 'false', weight: 0.595807} },
+{ data: { source: 'IFT46', target: 'IFT22', directed: 'false', weight: 0.414998} },
+{ data: { source: 'IFT22', target: 'IFT81', directed: 'false', weight: 0.414998} }]},
 
 style: [
     {
@@ -92,12 +86,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.56831
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        2 interacting protein(s): <br>DNAJC11 FAM8A1
+    Complex Score (from Super.Complex) = 0.57021
     </section>
     </body>
     </html>

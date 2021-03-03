@@ -29,19 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'OGDHL', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULD0" }},
-{data: { id: 'ELOC', score: 5, href: "https://www.uniprot.org/uniprot/Q15369" }},
-{data: { id: 'ASB9', score: 5, href: "https://www.uniprot.org/uniprot/Q96DX5" }},
-{data: { id: 'ELOB', score: 5, href: "https://www.uniprot.org/uniprot/Q15370" }},
-{data: { id: 'CUL5', score: 5, href: "https://www.uniprot.org/uniprot/Q93034" }}], 
- edges: [{ data: { source: 'OGDHL', target: 'ELOB', directed: 'false', weight: 0.554299} },
-{ data: { source: 'OGDHL', target: 'ELOC', directed: 'false', weight: 0.021366299999999998} },
-{ data: { source: 'ELOB', target: 'ELOC', directed: 'false', weight: 0.999216} },
-{ data: { source: 'ELOB', target: 'CUL5', directed: 'false', weight: 0.68042} },
-{ data: { source: 'ELOB', target: 'ASB9', directed: 'false', weight: 0.28641} },
-{ data: { source: 'ELOC', target: 'CUL5', directed: 'false', weight: 0.909113} },
-{ data: { source: 'ELOC', target: 'ASB9', directed: 'false', weight: 0.5640069999999999} },
-{ data: { source: 'CUL5', target: 'ASB9', directed: 'false', weight: 0.23909499999999997} }]},
+elements:{nodes: [{data: { id: 'CHD6', score: 5, href: "https://www.uniprot.org/uniprot/Q8TD26" }},
+{data: { id: 'CHD9', score: 5, href: "https://www.uniprot.org/uniprot/Q3L8U1" }},
+{data: { id: 'HSP90B1', score: 5, href: "https://www.uniprot.org/uniprot/P14625" }}], 
+ edges: [{ data: { source: 'HSP90B1', target: 'CHD9', directed: 'false', weight: 0.352985} },
+{ data: { source: 'HSP90B1', target: 'CHD6', directed: 'false', weight: 0.27141} },
+{ data: { source: 'CHD9', target: 'CHD6', directed: 'false', weight: 0.0730688} }]},
 
 style: [
     {
@@ -83,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.65144
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        2 interacting protein(s): <br>ELOC ELOB
+    Complex Score (from Super.Complex) = 0.65415
     </section>
     </body>
     </html>

@@ -1,0 +1,120 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title>SARS-CoV2 nsp1</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'SARS-CoV2 nsp1', score: 2, type:  'sars'  }},
+{data: { id: 'POLA1', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P09884" }},
+{data: { id: 'PRIM1', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P49642" }},
+{data: { id: 'PRIM2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P49643" }},
+{data: { id: 'POLA2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q14181" }},
+{data: { id: 'COLGALT1', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q8NBJ5" }},
+{data: { id: 'PKP2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q99959" }},
+{data: { id: 'Complex781', score: 0, type: 'complex', href: "../Predicted/Complex781.html" }},
+{data: { id: 'Complex747', score: 0, type: 'complex', href: "../Predicted/Complex747.html" }},
+{data: { id: 'Complex646', score: 0, type: 'complex', href: "../Predicted/Complex646.html" }},
+{data: { id: 'Complex619', score: 0, type: 'complex', href: "../Predicted/Complex619.html" }},
+{data: { id: 'Complex423', score: 0, type: 'complex', href: "../Predicted/Complex423.html" }}], 
+ edges: [{ data: { source: 'POLA1', target: 'Complex423', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'POLA1', target: 'Complex646', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'PRIM1', target: 'Complex646', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'PRIM2', target: 'Complex646', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'POLA2', target: 'Complex646', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'COLGALT1', target: 'Complex619', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'PKP2', target: 'Complex747', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'PKP2', target: 'Complex781', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'SARS-CoV2 nsp1', target: 'POLA1', directed: 'false', type: 'sars2prot',weight: 0.981264591} },
+{ data: { source: 'SARS-CoV2 nsp1', target: 'PRIM1', directed: 'false', type: 'sars2prot',weight: 0.981268688} },
+{ data: { source: 'SARS-CoV2 nsp1', target: 'PRIM2', directed: 'false', type: 'sars2prot',weight: 0.993975192} },
+{ data: { source: 'SARS-CoV2 nsp1', target: 'POLA2', directed: 'false', type: 'sars2prot',weight: 0.943678488} },
+{ data: { source: 'SARS-CoV2 nsp1', target: 'COLGALT1', directed: 'false', type: 'sars2prot',weight: 0.794123974} },
+{ data: { source: 'SARS-CoV2 nsp1', target: 'PKP2', directed: 'false', type: 'sars2prot',weight: 0.964585351} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+            shape: function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'rectangle'}
+                                if ( ele.data('type') == 'sars' ){return 'triangle'}
+                                
+  return 'circle';
+  },
+            'background-color': function( ele ){ 
+                                if ( ele.data('type') == 'complex' ){return 'blue'}
+                                if ( ele.data('type') == 'sars' ){return 'red'}             
+  return 'yellow';
+  },
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0.5, 1, 0.1, 2.5)',
+								'line-color': function( ele ){ 
+                                if ( ele.data('type') == 'prot2complex' ){return 'blue'}
+  return 'red';
+  },
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'concentric',
+  concentric: function( ele ){ // returns numeric value for each node, placing higher nodes in levels towards the centre
+  return ele.data('score');
+  },
+  equidistant: true, 
+  levelWidth: function( nodes ){ // the variation of concentric values in each level
+  return 1;
+  },
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+    </script>
+
+    	<section>
+    	<br>
+    	<br>
+    	<br> 
+    
+    </section>
+    </body>
+    </html>
+    

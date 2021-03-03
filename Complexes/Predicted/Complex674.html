@@ -29,16 +29,14 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TSC2', score: 5, href: "https://www.uniprot.org/uniprot/P49815" }},
-{data: { id: 'TBC1D7', score: 5, href: "https://www.uniprot.org/uniprot/Q9P0N9" }},
-{data: { id: 'KIF27', score: 5, href: "https://www.uniprot.org/uniprot/Q86VH2" }},
-{data: { id: 'TSC1', score: 5, href: "https://www.uniprot.org/uniprot/Q86WV8" }}], 
- edges: [{ data: { source: 'TSC1', target: 'TBC1D7', directed: 'false', weight: 0.9979469999999999} },
-{ data: { source: 'TSC1', target: 'TSC2', directed: 'false', weight: 0.978151} },
-{ data: { source: 'TSC1', target: 'KIF27', directed: 'false', weight: 0.151455} },
-{ data: { source: 'TBC1D7', target: 'TSC2', directed: 'false', weight: 0.9979610000000001} },
-{ data: { source: 'TBC1D7', target: 'KIF27', directed: 'false', weight: 0.9844219999999999} },
-{ data: { source: 'KIF27', target: 'TSC2', directed: 'false', weight: 0.10554300000000001} }]},
+elements:{nodes: [{data: { id: 'SCAMP4', score: 5, href: "https://www.uniprot.org/uniprot/Q969E2" }},
+{data: { id: 'REEP6', score: 5, href: "https://www.uniprot.org/uniprot/Q96HR9" }},
+{data: { id: 'REEP5', score: 5, href: "https://www.uniprot.org/uniprot/Q00765" }},
+{data: { id: 'ATP1B3', score: 5, href: "https://www.uniprot.org/uniprot/P54709" }}], 
+ edges: [{ data: { source: 'REEP5', target: 'REEP6', directed: 'false', weight: 0.997417} },
+{ data: { source: 'REEP5', target: 'SCAMP4', directed: 'false', weight: 0.981615} },
+{ data: { source: 'REEP5', target: 'ATP1B3', directed: 'false', weight: 0.7400399999999999} },
+{ data: { source: 'REEP6', target: 'SCAMP4', directed: 'false', weight: 0.165074} }]},
 
 style: [
     {
@@ -80,7 +78,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.62271
+    Complex Score (from Super.Complex) = 0.62602
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>REEP6 REEP5
     </section>
     </body>
     </html>

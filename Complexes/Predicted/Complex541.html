@@ -29,12 +29,25 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CD276', score: 0 }},
-{data: { id: 'CLEC5A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NY25" }},
-{data: { id: 'TMBIM6', score: 5, href: "https://www.uniprot.org/uniprot/P55061" }}], 
- edges: [{ data: { source: 'CLEC5A', target: 'TMBIM6', directed: 'false', weight: 0.656716} },
-{ data: { source: 'CLEC5A', target: 'CD276', directed: 'false', weight: 0.5} },
-{ data: { source: 'CD276', target: 'TMBIM6', directed: 'false', weight: 0.086378} }]},
+elements:{nodes: [{data: { id: 'PHRF1', score: 4, href: "https://www.uniprot.org/uniprot/Q9P1Y6" }},
+{data: { id: 'CSNK2A2', score: 5, href: "https://www.uniprot.org/uniprot/P19784" }},
+{data: { id: 'GPATCH2L', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWQ4" }},
+{data: { id: 'HAGHL', score: 3, href: "https://www.uniprot.org/uniprot/Q6PII5" }},
+{data: { id: 'GPATCH2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NW75" }},
+{data: { id: 'NKAP', score: 5, href: "https://www.uniprot.org/uniprot/Q8N5F7" }}], 
+ edges: [{ data: { source: 'NKAP', target: 'CSNK2A2', directed: 'false', weight: 0.7466659999999999} },
+{ data: { source: 'NKAP', target: 'PHRF1', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'NKAP', target: 'GPATCH2', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'CSNK2A2', target: 'PHRF1', directed: 'false', weight: 0.9654360000000001} },
+{ data: { source: 'CSNK2A2', target: 'GPATCH2', directed: 'false', weight: 0.9632850000000001} },
+{ data: { source: 'CSNK2A2', target: 'HAGHL', directed: 'false', weight: 0.963183} },
+{ data: { source: 'CSNK2A2', target: 'GPATCH2L', directed: 'false', weight: 0.947767} },
+{ data: { source: 'GPATCH2', target: 'HAGHL', directed: 'false', weight: 0.171414} },
+{ data: { source: 'GPATCH2', target: 'PHRF1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'GPATCH2', target: 'GPATCH2L', directed: 'false', weight: 0.171414} },
+{ data: { source: 'GPATCH2L', target: 'HAGHL', directed: 'false', weight: 0.171414} },
+{ data: { source: 'GPATCH2L', target: 'PHRF1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'HAGHL', target: 'PHRF1', directed: 'false', weight: 0.171414} }]},
 
 style: [
     {
@@ -76,7 +89,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.67499
+    Complex Score (from Super.Complex) = 0.67619
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>CSNK2A2
     </section>
     </body>
     </html>

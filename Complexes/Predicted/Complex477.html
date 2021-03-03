@@ -29,16 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NPRL2', score: 5, href: "https://www.uniprot.org/uniprot/Q8WTW4" }},
-{data: { id: 'DEPDC5', score: 5, href: "https://www.uniprot.org/uniprot/O75140" }},
-{data: { id: 'ZNF414', score: 5, href: "https://www.uniprot.org/uniprot/Q96IQ9" }},
-{data: { id: 'KDM4B', score: 5, href: "https://www.uniprot.org/uniprot/O94953" }}], 
- edges: [{ data: { source: 'ZNF414', target: 'KDM4B', directed: 'false', weight: 0.9686969999999999} },
-{ data: { source: 'ZNF414', target: 'DEPDC5', directed: 'false', weight: 0.921325} },
-{ data: { source: 'ZNF414', target: 'NPRL2', directed: 'false', weight: 0.579339} },
-{ data: { source: 'KDM4B', target: 'DEPDC5', directed: 'false', weight: 0.171414} },
-{ data: { source: 'KDM4B', target: 'NPRL2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'DEPDC5', target: 'NPRL2', directed: 'false', weight: 0.171414} }]},
+elements:{nodes: [{data: { id: 'IFT22', score: 4, href: "https://www.uniprot.org/uniprot/Q9H7X7" }},
+{data: { id: 'IFT88', score: 5, href: "https://www.uniprot.org/uniprot/Q13099" }},
+{data: { id: 'TTC30B', score: 4, href: "https://www.uniprot.org/uniprot/Q8N4P2" }},
+{data: { id: 'IFT57', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWB7" }},
+{data: { id: 'RABEP2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H5N1" }}], 
+ edges: [{ data: { source: 'TTC30B', target: 'IFT57', directed: 'false', weight: 0.879188} },
+{ data: { source: 'TTC30B', target: 'RABEP2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'TTC30B', target: 'IFT22', directed: 'false', weight: 0.123797} },
+{ data: { source: 'TTC30B', target: 'IFT88', directed: 'false', weight: 0.0177621} },
+{ data: { source: 'IFT88', target: 'IFT57', directed: 'false', weight: 0.9256190000000001} },
+{ data: { source: 'IFT88', target: 'IFT22', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'IFT88', target: 'RABEP2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'RABEP2', target: 'IFT57', directed: 'false', weight: 0.9639770000000001} },
+{ data: { source: 'IFT57', target: 'IFT22', directed: 'false', weight: 0.601388} }]},
 
 style: [
     {
@@ -80,7 +84,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.70001
+    Complex Score (from Super.Complex) = 0.70386
     </section>
     </body>
     </html>

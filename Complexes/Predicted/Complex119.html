@@ -29,12 +29,24 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DERA', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y315" }},
-{data: { id: 'ALDH16A1', score: 4, href: "https://www.uniprot.org/uniprot/Q8IZ83" }},
-{data: { id: 'LANCL1', score: 5, href: "https://www.uniprot.org/uniprot/O43813" }}], 
- edges: [{ data: { source: 'DERA', target: 'ALDH16A1', directed: 'false', weight: 0.9778530000000001} },
-{ data: { source: 'DERA', target: 'LANCL1', directed: 'false', weight: 0.574666} },
-{ data: { source: 'ALDH16A1', target: 'LANCL1', directed: 'false', weight: 0.5} }]},
+elements:{nodes: [{data: { id: 'MGA', score: 5, href: "https://www.uniprot.org/uniprot/Q8IWI9" }},
+{data: { id: 'MSANTD2', score: 2, href: "https://www.uniprot.org/uniprot/Q6P1R3" }},
+{data: { id: 'L3MBTL2', score: 5, href: "https://www.uniprot.org/uniprot/Q969R5" }},
+{data: { id: 'E2F6', score: 5, href: "https://www.uniprot.org/uniprot/O75461" }},
+{data: { id: 'PCGF6', score: 5, href: "https://www.uniprot.org/uniprot/Q9BYE7" }},
+{data: { id: 'TFDP1', score: 5, href: "https://www.uniprot.org/uniprot/Q14186" }}], 
+ edges: [{ data: { source: 'PCGF6', target: 'MGA', directed: 'false', weight: 0.9909680000000001} },
+{ data: { source: 'PCGF6', target: 'MSANTD2', directed: 'false', weight: 0.965399} },
+{ data: { source: 'PCGF6', target: 'L3MBTL2', directed: 'false', weight: 0.921307} },
+{ data: { source: 'PCGF6', target: 'E2F6', directed: 'false', weight: 0.8198190000000001} },
+{ data: { source: 'PCGF6', target: 'TFDP1', directed: 'false', weight: 0.33257600000000004} },
+{ data: { source: 'E2F6', target: 'MGA', directed: 'false', weight: 0.99721} },
+{ data: { source: 'E2F6', target: 'L3MBTL2', directed: 'false', weight: 0.987186} },
+{ data: { source: 'E2F6', target: 'TFDP1', directed: 'false', weight: 0.912517} },
+{ data: { source: 'TFDP1', target: 'L3MBTL2', directed: 'false', weight: 0.51793} },
+{ data: { source: 'TFDP1', target: 'MGA', directed: 'false', weight: 0.349698} },
+{ data: { source: 'MGA', target: 'L3MBTL2', directed: 'false', weight: 0.990717} },
+{ data: { source: 'MGA', target: 'MSANTD2', directed: 'false', weight: 0.102896} }]},
 
 style: [
     {
@@ -76,7 +88,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77951
+    Complex Score (from Super.Complex) = 0.78277
     </section>
     </body>
     </html>

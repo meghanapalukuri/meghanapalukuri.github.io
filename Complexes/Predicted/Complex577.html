@@ -29,15 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'IPO5', score: 5, href: "https://www.uniprot.org/uniprot/O00410" }},
-{data: { id: 'KPNA1', score: 5, href: "https://www.uniprot.org/uniprot/P52294" }},
-{data: { id: 'RANBP6', score: 4, href: "https://www.uniprot.org/uniprot/O60518" }},
-{data: { id: 'KPNA6', score: 5, href: "https://www.uniprot.org/uniprot/O60684" }}], 
- edges: [{ data: { source: 'KPNA1', target: 'KPNA6', directed: 'false', weight: 0.7083079999999999} },
-{ data: { source: 'KPNA1', target: 'IPO5', directed: 'false', weight: 0.7065859999999999} },
-{ data: { source: 'IPO5', target: 'KPNA6', directed: 'false', weight: 0.419707} },
-{ data: { source: 'IPO5', target: 'RANBP6', directed: 'false', weight: 0.39718000000000003} },
-{ data: { source: 'KPNA6', target: 'RANBP6', directed: 'false', weight: 0.697757} }]},
+elements:{nodes: [{data: { id: 'ETNK1', score: 5, href: "https://www.uniprot.org/uniprot/Q9HBU6" }},
+{data: { id: 'EVA1C', score: 4, href: "https://www.uniprot.org/uniprot/P58658" }},
+{data: { id: 'BMPR1B', score: 5, href: "https://www.uniprot.org/uniprot/O00238" }},
+{data: { id: 'PIGA', score: 5, href: "https://www.uniprot.org/uniprot/P37287" }}], 
+ edges: [{ data: { source: 'EVA1C', target: 'PIGA', directed: 'false', weight: 0.516898} },
+{ data: { source: 'EVA1C', target: 'ETNK1', directed: 'false', weight: 0.46391899999999997} },
+{ data: { source: 'EVA1C', target: 'BMPR1B', directed: 'false', weight: 0.311582} },
+{ data: { source: 'PIGA', target: 'BMPR1B', directed: 'false', weight: 0.140692} },
+{ data: { source: 'PIGA', target: 'ETNK1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'ETNK1', target: 'BMPR1B', directed: 'false', weight: 0.171414} }]},
 
 style: [
     {
@@ -79,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.66505
+    Complex Score (from Super.Complex) = 0.66609
     </section>
     </body>
     </html>

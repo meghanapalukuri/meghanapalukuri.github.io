@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CBX5', score: 5, href: "https://www.uniprot.org/uniprot/P45973" }},
-{data: { id: 'CBX1', score: 5, href: "https://www.uniprot.org/uniprot/P83916" }},
-{data: { id: 'RLF', score: 5, href: "https://www.uniprot.org/uniprot/Q13129" }},
-{data: { id: 'CBX3', score: 5, href: "https://www.uniprot.org/uniprot/Q13185" }}], 
- edges: [{ data: { source: 'RLF', target: 'CBX1', directed: 'false', weight: 0.47709399999999996} },
-{ data: { source: 'RLF', target: 'CBX3', directed: 'false', weight: 0.11585699999999999} },
-{ data: { source: 'RLF', target: 'CBX5', directed: 'false', weight: 0.102352} },
-{ data: { source: 'CBX3', target: 'CBX1', directed: 'false', weight: 0.5924659999999999} },
-{ data: { source: 'CBX3', target: 'CBX5', directed: 'false', weight: 0.529051} },
-{ data: { source: 'CBX5', target: 'CBX1', directed: 'false', weight: 0.882597} }]},
+elements:{nodes: [{data: { id: 'CDK13', score: 5, href: "https://www.uniprot.org/uniprot/Q14004" }},
+{data: { id: 'FBXO44', score: 5, href: "https://www.uniprot.org/uniprot/Q9H4M3" }},
+{data: { id: 'NEK3', score: 5, href: "https://www.uniprot.org/uniprot/P51956" }},
+{data: { id: 'SPSB3', score: 4, href: "https://www.uniprot.org/uniprot/Q6PJ21" }}], 
+ edges: [{ data: { source: 'SPSB3', target: 'CDK13', directed: 'false', weight: 0.733957} },
+{ data: { source: 'SPSB3', target: 'FBXO44', directed: 'false', weight: 0.133456} },
+{ data: { source: 'SPSB3', target: 'NEK3', directed: 'false', weight: 0.133456} },
+{ data: { source: 'CDK13', target: 'FBXO44', directed: 'false', weight: 0.909515} },
+{ data: { source: 'CDK13', target: 'NEK3', directed: 'false', weight: 0.83435} },
+{ data: { source: 'NEK3', target: 'FBXO44', directed: 'false', weight: 0.133456} }]},
 
 style: [
     {
@@ -80,7 +80,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.77053
+    Complex Score (from Super.Complex) = 0.77104
     </section>
     </body>
     </html>

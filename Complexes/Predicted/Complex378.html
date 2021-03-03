@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TFAP4', score: 5, href: "https://www.uniprot.org/uniprot/Q01664" }},
-{data: { id: 'NEU2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3R4" }},
-{data: { id: 'PEX5', score: 5, href: "https://www.uniprot.org/uniprot/P50542" }}], 
- edges: [{ data: { source: 'PEX5', target: 'NEU2', directed: 'false', weight: 0.566451} },
-{ data: { source: 'PEX5', target: 'TFAP4', directed: 'false', weight: 0.140692} },
-{ data: { source: 'TFAP4', target: 'NEU2', directed: 'false', weight: 0.811322} }]},
+elements:{nodes: [{data: { id: 'SASS6', score: 5, href: "https://www.uniprot.org/uniprot/Q6UVJ0" }},
+{data: { id: 'FYCO1', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQS8" }},
+{data: { id: 'MLYCD', score: 5, href: "https://www.uniprot.org/uniprot/O95822" }}], 
+ edges: [{ data: { source: 'FYCO1', target: 'SASS6', directed: 'false', weight: 0.764461} },
+{ data: { source: 'FYCO1', target: 'MLYCD', directed: 'false', weight: 0.633092} },
+{ data: { source: 'SASS6', target: 'MLYCD', directed: 'false', weight: 0.140692} }]},
 
 style: [
     {
@@ -76,7 +76,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.75883
+    Complex Score (from Super.Complex) = 0.75959
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>FYCO1
     </section>
     </body>
     </html>

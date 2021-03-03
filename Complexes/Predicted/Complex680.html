@@ -29,18 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'COL4A5', score: 5, href: "https://www.uniprot.org/uniprot/P29400" }},
-{data: { id: 'COL2A1', score: 5, href: "https://www.uniprot.org/uniprot/P02458" }},
-{data: { id: 'COL8A2', score: 5, href: "https://www.uniprot.org/uniprot/P25067" }},
-{data: { id: 'COL5A1', score: 5, href: "https://www.uniprot.org/uniprot/P20908" }},
-{data: { id: 'PTPN2', score: 5, href: "https://www.uniprot.org/uniprot/P17706" }}], 
- edges: [{ data: { source: 'COL4A5', target: 'COL8A2', directed: 'false', weight: 0.9342280000000001} },
-{ data: { source: 'COL4A5', target: 'COL5A1', directed: 'false', weight: 0.133451} },
-{ data: { source: 'COL4A5', target: 'COL2A1', directed: 'false', weight: 0.128057} },
-{ data: { source: 'PTPN2', target: 'COL5A1', directed: 'false', weight: 0.681534} },
-{ data: { source: 'COL2A1', target: 'COL8A2', directed: 'false', weight: 0.695153} },
-{ data: { source: 'COL2A1', target: 'COL5A1', directed: 'false', weight: 0.175861} },
-{ data: { source: 'COL8A2', target: 'COL5A1', directed: 'false', weight: 0.861261} }]},
+elements:{nodes: [{data: { id: 'SPRYD3', score: 2, href: "https://www.uniprot.org/uniprot/Q8NCJ5" }},
+{data: { id: 'FBXO45', score: 5, href: "https://www.uniprot.org/uniprot/P0C2W1" }},
+{data: { id: 'LGALS3BP', score: 5, href: "https://www.uniprot.org/uniprot/Q08380" }},
+{data: { id: 'MYCBP2', score: 5, href: "https://www.uniprot.org/uniprot/O75592" }}], 
+ edges: [{ data: { source: 'MYCBP2', target: 'FBXO45', directed: 'false', weight: 0.352435} },
+{ data: { source: 'MYCBP2', target: 'LGALS3BP', directed: 'false', weight: 0.193009} },
+{ data: { source: 'LGALS3BP', target: 'FBXO45', directed: 'false', weight: 0.49482} },
+{ data: { source: 'LGALS3BP', target: 'SPRYD3', directed: 'false', weight: 0.312211} },
+{ data: { source: 'FBXO45', target: 'SPRYD3', directed: 'false', weight: 0.349582} }]},
 
 style: [
     {
@@ -82,7 +79,12 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.61906
+    Complex Score (from Super.Complex) = 0.62214
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>MYCBP2
     </section>
     </body>
     </html>

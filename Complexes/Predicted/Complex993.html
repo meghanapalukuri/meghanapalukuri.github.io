@@ -29,37 +29,22 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'AP1S3', score: 5, href: "https://www.uniprot.org/uniprot/Q96PC3" }},
-{data: { id: 'MLF1', score: 5, href: "https://www.uniprot.org/uniprot/P58340" }},
-{data: { id: 'SYNRG', score: 5, href: "https://www.uniprot.org/uniprot/Q9UMZ2" }},
-{data: { id: 'AP1M2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6Q5" }},
-{data: { id: 'AP1G2', score: 5, href: "https://www.uniprot.org/uniprot/O75843" }},
-{data: { id: 'AP1S2', score: 5, href: "https://www.uniprot.org/uniprot/P56377" }},
-{data: { id: 'AP1AR', score: 5, href: "https://www.uniprot.org/uniprot/Q63HQ0" }},
-{data: { id: 'HEATR5B', score: 3, href: "https://www.uniprot.org/uniprot/Q9P2D3" }},
-{data: { id: 'AFTPH', score: 5, href: "https://www.uniprot.org/uniprot/Q6ULP2" }}], 
- edges: [{ data: { source: 'AP1AR', target: 'AP1S2', directed: 'false', weight: 0.989459} },
-{ data: { source: 'AP1AR', target: 'AP1G2', directed: 'false', weight: 0.165074} },
-{ data: { source: 'AP1AR', target: 'HEATR5B', directed: 'false', weight: 0.165074} },
-{ data: { source: 'AP1AR', target: 'AFTPH', directed: 'false', weight: 0.144297} },
-{ data: { source: 'AFTPH', target: 'AP1S2', directed: 'false', weight: 0.9918969999999999} },
-{ data: { source: 'AFTPH', target: 'AP1M2', directed: 'false', weight: 0.756907} },
-{ data: { source: 'AFTPH', target: 'HEATR5B', directed: 'false', weight: 0.285983} },
-{ data: { source: 'AFTPH', target: 'AP1G2', directed: 'false', weight: 0.27327399999999996} },
-{ data: { source: 'AFTPH', target: 'AP1S3', directed: 'false', weight: 0.140692} },
-{ data: { source: 'AP1S3', target: 'AP1M2', directed: 'false', weight: 0.693691} },
-{ data: { source: 'AP1S3', target: 'AP1S2', directed: 'false', weight: 0.463714} },
-{ data: { source: 'AP1S3', target: 'AP1G2', directed: 'false', weight: 0.463714} },
-{ data: { source: 'AP1S3', target: 'HEATR5B', directed: 'false', weight: 0.114755} },
-{ data: { source: 'AP1S2', target: 'AP1G2', directed: 'false', weight: 0.9992700000000001} },
-{ data: { source: 'AP1S2', target: 'HEATR5B', directed: 'false', weight: 0.9296209999999999} },
-{ data: { source: 'AP1S2', target: 'SYNRG', directed: 'false', weight: 0.918314} },
-{ data: { source: 'AP1S2', target: 'AP1M2', directed: 'false', weight: 0.701676} },
-{ data: { source: 'AP1G2', target: 'AP1M2', directed: 'false', weight: 0.9594950000000001} },
-{ data: { source: 'AP1G2', target: 'HEATR5B', directed: 'false', weight: 0.25805900000000004} },
-{ data: { source: 'HEATR5B', target: 'SYNRG', directed: 'false', weight: 0.48655} },
-{ data: { source: 'HEATR5B', target: 'AP1M2', directed: 'false', weight: 0.43786400000000003} },
-{ data: { source: 'SYNRG', target: 'MLF1', directed: 'false', weight: 0.967533} }]},
+elements:{nodes: [{data: { id: 'IFI16', score: 5, href: "https://www.uniprot.org/uniprot/Q16666" }},
+{data: { id: 'WDR43', score: 5, href: "https://www.uniprot.org/uniprot/Q15061" }},
+{data: { id: 'WDR75', score: 4, href: "https://www.uniprot.org/uniprot/Q8IWA0" }},
+{data: { id: 'COIL', score: 5, href: "https://www.uniprot.org/uniprot/P38432" }},
+{data: { id: 'FBL', score: 5, href: "https://www.uniprot.org/uniprot/P22087" }},
+{data: { id: 'ZNF430', score: 3, href: "https://www.uniprot.org/uniprot/Q9H8G1" }}], 
+ edges: [{ data: { source: 'WDR43', target: 'FBL', directed: 'false', weight: 0.748786} },
+{ data: { source: 'WDR43', target: 'WDR75', directed: 'false', weight: 0.171414} },
+{ data: { source: 'WDR43', target: 'ZNF430', directed: 'false', weight: 0.171414} },
+{ data: { source: 'WDR43', target: 'COIL', directed: 'false', weight: 0.108674} },
+{ data: { source: 'ZNF430', target: 'FBL', directed: 'false', weight: 0.381463} },
+{ data: { source: 'ZNF430', target: 'COIL', directed: 'false', weight: 0.108674} },
+{ data: { source: 'IFI16', target: 'FBL', directed: 'false', weight: 0.43052799999999997} },
+{ data: { source: 'IFI16', target: 'COIL', directed: 'false', weight: 0.109293} },
+{ data: { source: 'FBL', target: 'COIL', directed: 'false', weight: 0.463508} },
+{ data: { source: 'FBL', target: 'WDR75', directed: 'false', weight: 0.318333} }]},
 
 style: [
     {
@@ -101,7 +86,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.51502
+    Complex Score (from Super.Complex) = 0.52517
     </section>
     </body>
     </html>

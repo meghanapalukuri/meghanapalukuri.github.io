@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'YIPF5', score: 5, href: "https://www.uniprot.org/uniprot/Q969M3" }},
-{data: { id: 'YIF1A', score: 5, href: "https://www.uniprot.org/uniprot/O95070" }},
-{data: { id: 'YIF1B', score: 5, href: "https://www.uniprot.org/uniprot/Q5BJH7" }}], 
- edges: [{ data: { source: 'YIF1A', target: 'YIPF5', directed: 'false', weight: 0.854605} },
-{ data: { source: 'YIF1A', target: 'YIF1B', directed: 'false', weight: 0.193571} },
-{ data: { source: 'YIF1B', target: 'YIPF5', directed: 'false', weight: 0.5} }]},
+elements:{nodes: [{data: { id: 'DDIT4', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX09" }},
+{data: { id: 'KIAA1586', score: 4, href: "https://www.uniprot.org/uniprot/Q9HCI6" }},
+{data: { id: 'SPACA1', score: 5, href: "https://www.uniprot.org/uniprot/Q9HBV2" }}], 
+ edges: [{ data: { source: 'SPACA1', target: 'DDIT4', directed: 'false', weight: 0.752261} },
+{ data: { source: 'SPACA1', target: 'KIAA1586', directed: 'false', weight: 0.638636} },
+{ data: { source: 'DDIT4', target: 'KIAA1586', directed: 'false', weight: 0.151455} }]},
 
 style: [
     {
@@ -76,12 +76,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.75927
-        <br> 
-        <br>
-        Connection to SARS-COV2: 
-        <br>
-        1 interacting protein(s): <br>YIF1A
+    Complex Score (from Super.Complex) = 0.75972
     </section>
     </body>
     </html>

@@ -29,16 +29,20 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'OSBP2', score: 5, href: "https://www.uniprot.org/uniprot/Q969R2" }},
-{data: { id: 'BTNL8', score: 5, href: "https://www.uniprot.org/uniprot/Q6UX41" }},
-{data: { id: 'LEPR', score: 5, href: "https://www.uniprot.org/uniprot/P48357" }},
-{data: { id: 'GLRB', score: 5, href: "https://www.uniprot.org/uniprot/P48167" }}], 
- edges: [{ data: { source: 'OSBP2', target: 'BTNL8', directed: 'false', weight: 0.9856520000000001} },
-{ data: { source: 'OSBP2', target: 'LEPR', directed: 'false', weight: 0.171414} },
-{ data: { source: 'OSBP2', target: 'GLRB', directed: 'false', weight: 0.171414} },
-{ data: { source: 'GLRB', target: 'BTNL8', directed: 'false', weight: 0.779569} },
-{ data: { source: 'GLRB', target: 'LEPR', directed: 'false', weight: 0.171414} },
-{ data: { source: 'LEPR', target: 'BTNL8', directed: 'false', weight: 0.7207399999999999} }]},
+elements:{nodes: [{data: { id: 'EIF4ENIF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NRA8" }},
+{data: { id: 'ANGEL1', score: 4, href: "https://www.uniprot.org/uniprot/Q9UNK9" }},
+{data: { id: 'EIF4EBP1', score: 5, href: "https://www.uniprot.org/uniprot/Q13541" }},
+{data: { id: 'EIF4E', score: 5, href: "https://www.uniprot.org/uniprot/P06730" }},
+{data: { id: 'EIF4G3', score: 5, href: "https://www.uniprot.org/uniprot/O43432" }}], 
+ edges: [{ data: { source: 'EIF4E', target: 'EIF4G3', directed: 'false', weight: 0.9843799999999999} },
+{ data: { source: 'EIF4E', target: 'EIF4ENIF1', directed: 'false', weight: 0.982555} },
+{ data: { source: 'EIF4E', target: 'ANGEL1', directed: 'false', weight: 0.8904989999999999} },
+{ data: { source: 'EIF4E', target: 'EIF4EBP1', directed: 'false', weight: 0.850827} },
+{ data: { source: 'EIF4ENIF1', target: 'EIF4EBP1', directed: 'false', weight: 0.171414} },
+{ data: { source: 'EIF4ENIF1', target: 'ANGEL1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'EIF4ENIF1', target: 'EIF4G3', directed: 'false', weight: 0.108674} },
+{ data: { source: 'ANGEL1', target: 'EIF4EBP1', directed: 'false', weight: 0.140692} },
+{ data: { source: 'ANGEL1', target: 'EIF4G3', directed: 'false', weight: 0.08813739999999999} }]},
 
 style: [
     {
@@ -80,7 +84,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.69983
+    Complex Score (from Super.Complex) = 0.70304
     </section>
     </body>
     </html>
