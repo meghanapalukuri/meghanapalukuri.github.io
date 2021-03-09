@@ -29,10 +29,10 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TMEM205', score: 5, href: "https://www.uniprot.org/uniprot/Q6UW68" }},
-{data: { id: 'TMEM52B', score: 5, href: "https://www.uniprot.org/uniprot/Q4KMG9" }},
-{data: { id: 'FLT4', score: 5, href: "https://www.uniprot.org/uniprot/P35916" }},
-{data: { id: 'RHBDF2', score: 5, href: "https://www.uniprot.org/uniprot/Q6PJF5" }}], 
+elements:{nodes: [{data: { id: 'TMEM205', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6UW68" }},
+{data: { id: 'TMEM52B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q4KMG9" }},
+{data: { id: 'FLT4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P35916" }},
+{data: { id: 'RHBDF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6PJF5" }}], 
  edges: [{ data: { source: 'TMEM205', target: 'TMEM52B', directed: 'false', weight: 0.41271899999999995} },
 { data: { source: 'TMEM205', target: 'RHBDF2', directed: 'false', weight: 0.0977318} },
 { data: { source: 'FLT4', target: 'TMEM52B', directed: 'false', weight: 0.293631} },
@@ -43,16 +43,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

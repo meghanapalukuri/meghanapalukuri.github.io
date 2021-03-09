@@ -29,10 +29,10 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GOPC', score: 5, href: "https://www.uniprot.org/uniprot/Q9HD26" }},
-{data: { id: 'FAM9A', score: 5, href: "https://www.uniprot.org/uniprot/Q8IZU1" }},
-{data: { id: 'NAP1L3', score: 2, href: "https://www.uniprot.org/uniprot/Q99457" }},
-{data: { id: 'CAVIN1', score: 5, href: "https://www.uniprot.org/uniprot/Q6NZI2" }}], 
+elements:{nodes: [{data: { id: 'GOPC', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HD26" }},
+{data: { id: 'FAM9A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IZU1" }},
+{data: { id: 'NAP1L3', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q99457" }},
+{data: { id: 'CAVIN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6NZI2" }}], 
  edges: [{ data: { source: 'CAVIN1', target: 'FAM9A', directed: 'false', weight: 0.9022209999999999} },
 { data: { source: 'CAVIN1', target: 'NAP1L3', directed: 'false', weight: 0.123797} },
 { data: { source: 'CAVIN1', target: 'GOPC', directed: 'false', weight: 0.0912673} },
@@ -44,16 +44,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

@@ -32,8 +32,8 @@
 elements:{nodes: [{data: { id: 'RANBP9', score: 5, href: "https://www.uniprot.org/uniprot/Q96S59" }},
 {data: { id: 'MAEA', score: 5, href: "https://www.uniprot.org/uniprot/Q7L5Y9" }},
 {data: { id: 'RMND5A', score: 5, href: "https://www.uniprot.org/uniprot/Q9H871" }},
-{data: { id: 'ARMC8', score: 5, href: "https://www.uniprot.org/uniprot/Q8IUR7" }},
-{data: { id: 'MKLN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UL63" }}], 
+{data: { id: 'MKLN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UL63" }},
+{data: { id: 'ARMC8', score: 5, href: "https://www.uniprot.org/uniprot/Q8IUR7" }}], 
  edges: [{ data: { source: 'RANBP9', target: 'MKLN1', directed: 'false', weight: 0.9999979999999999} },
 { data: { source: 'RANBP9', target: 'MAEA', directed: 'false', weight: 0.9999959999999999} },
 { data: { source: 'RANBP9', target: 'RMND5A', directed: 'false', weight: 0.999482} },
@@ -43,12 +43,14 @@ elements:{nodes: [{data: { id: 'RANBP9', score: 5, href: "https://www.uniprot.or
 { data: { source: 'MAEA', target: 'ARMC8', directed: 'false', weight: 0.9932479999999999} },
 { data: { source: 'RMND5A', target: 'MKLN1', directed: 'false', weight: 0.9993290000000001} },
 { data: { source: 'RMND5A', target: 'ARMC8', directed: 'false', weight: 0.997948} },
-{ data: { source: 'ARMC8', target: 'MKLN1', directed: 'false', weight: 0.994081} }]},
+{ data: { source: 'MKLN1', target: 'ARMC8', directed: 'false', weight: 0.994081} }]},
 
 style: [
     {
         selector: 'node',
         style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
             shape: 'rectangle',
             'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'

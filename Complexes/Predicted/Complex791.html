@@ -29,15 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TPM2', score: 5, href: "https://www.uniprot.org/uniprot/P07951" }},
-{data: { id: 'SORBS2', score: 5, href: "https://www.uniprot.org/uniprot/O94875" }},
-{data: { id: 'TPM4', score: 5, href: "https://www.uniprot.org/uniprot/P67936" }},
-{data: { id: 'CALM1', score: 5, href: "https://www.uniprot.org/uniprot/P0DP23" }},
-{data: { id: 'PDIA4', score: 5, href: "https://www.uniprot.org/uniprot/P13667" }},
-{data: { id: 'ITSN1', score: 5, href: "https://www.uniprot.org/uniprot/Q15811" }},
-{data: { id: 'CLIC1', score: 5, href: "https://www.uniprot.org/uniprot/O00299" }},
-{data: { id: 'ACTN4', score: 5, href: "https://www.uniprot.org/uniprot/O43707" }},
-{data: { id: 'ACTN1', score: 5, href: "https://www.uniprot.org/uniprot/P12814" }}], 
+elements:{nodes: [{data: { id: 'TPM2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P07951" }},
+{data: { id: 'SORBS2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O94875" }},
+{data: { id: 'TPM4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P67936" }},
+{data: { id: 'CALM1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P0DP23" }},
+{data: { id: 'PDIA4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P13667" }},
+{data: { id: 'ITSN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15811" }},
+{data: { id: 'CLIC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00299" }},
+{data: { id: 'ACTN4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43707" }},
+{data: { id: 'ACTN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P12814" }}], 
  edges: [{ data: { source: 'ITSN1', target: 'CLIC1', directed: 'false', weight: 0.611648} },
 { data: { source: 'CLIC1', target: 'ACTN4', directed: 'false', weight: 0.70987} },
 { data: { source: 'CLIC1', target: 'PDIA4', directed: 'false', weight: 0.560373} },
@@ -63,16 +63,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

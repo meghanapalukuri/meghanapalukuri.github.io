@@ -29,16 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NDUFS3', score: 5, href: "https://www.uniprot.org/uniprot/O75489" }},
+elements:{nodes: [{data: { id: 'ECSIT', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQ95" }},
 {data: { id: 'NDUFAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y375" }},
-{data: { id: 'ECSIT', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQ95" }}], 
- edges: [{ data: { source: 'NDUFS3', target: 'ECSIT', directed: 'false', weight: 0.314687} },
-{ data: { source: 'NDUFAF1', target: 'ECSIT', directed: 'false', weight: 0.985202} }]},
+{data: { id: 'NDUFS3', score: 5, href: "https://www.uniprot.org/uniprot/O75489" }}], 
+ edges: [{ data: { source: 'ECSIT', target: 'NDUFAF1', directed: 'false', weight: 0.985202} },
+{ data: { source: 'ECSIT', target: 'NDUFS3', directed: 'false', weight: 0.314687} }]},
 
 style: [
     {
         selector: 'node',
         style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
             shape: 'rectangle',
             'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
@@ -77,7 +79,7 @@ cy.on('tap', 'node', function(){
         <br>
         Connection to SARS-COV2: 
         <br>
-        2 interacting protein(s): <br>NDUFAF1 ECSIT
+        2 interacting protein(s): <br>ECSIT NDUFAF1
     </section>
     </body>
     </html>

@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DAZAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q96EP5" }},
-{data: { id: 'TAGLN2', score: 5, href: "https://www.uniprot.org/uniprot/P37802" }},
-{data: { id: 'TAGLN3', score: 3, href: "https://www.uniprot.org/uniprot/Q9UI15" }},
-{data: { id: 'PIN1', score: 5, href: "https://www.uniprot.org/uniprot/Q13526" }},
-{data: { id: 'FKBP2', score: 5, href: "https://www.uniprot.org/uniprot/P26885" }},
-{data: { id: 'ATP6V1C1', score: 5, href: "https://www.uniprot.org/uniprot/P21283" }},
-{data: { id: 'SOD1', score: 5, href: "https://www.uniprot.org/uniprot/P00441" }},
-{data: { id: 'ENO1', score: 5, href: "https://www.uniprot.org/uniprot/P06733" }},
-{data: { id: 'NME2', score: 5, href: "https://www.uniprot.org/uniprot/P22392" }},
-{data: { id: 'FKBP1A', score: 5, href: "https://www.uniprot.org/uniprot/P62942" }}], 
+elements:{nodes: [{data: { id: 'DAZAP1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96EP5" }},
+{data: { id: 'TAGLN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P37802" }},
+{data: { id: 'TAGLN3', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9UI15" }},
+{data: { id: 'PIN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13526" }},
+{data: { id: 'FKBP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P26885" }},
+{data: { id: 'ATP6V1C1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P21283" }},
+{data: { id: 'SOD1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P00441" }},
+{data: { id: 'ENO1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P06733" }},
+{data: { id: 'NME2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P22392" }},
+{data: { id: 'FKBP1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62942" }}], 
  edges: [{ data: { source: 'ATP6V1C1', target: 'TAGLN3', directed: 'false', weight: 0.9886729999999999} },
 { data: { source: 'ATP6V1C1', target: 'FKBP1A', directed: 'false', weight: 0.986625} },
 { data: { source: 'ATP6V1C1', target: 'FKBP2', directed: 'false', weight: 0.78192} },
@@ -76,16 +76,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

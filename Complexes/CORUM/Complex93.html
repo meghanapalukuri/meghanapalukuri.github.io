@@ -29,16 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GNG10', score: 5, href: "https://www.uniprot.org/uniprot/P50151" }},
+elements:{nodes: [{data: { id: 'GNB1', score: 5, href: "https://www.uniprot.org/uniprot/P62873" }},
 {data: { id: 'GNAI1', score: 5, href: "https://www.uniprot.org/uniprot/P63096" }},
-{data: { id: 'GNB1', score: 5, href: "https://www.uniprot.org/uniprot/P62873" }}], 
- edges: [{ data: { source: 'GNG10', target: 'GNB1', directed: 'false', weight: 0.538582} },
-{ data: { source: 'GNAI1', target: 'GNB1', directed: 'false', weight: 0.568619} }]},
+{data: { id: 'GNG10', score: 5, href: "https://www.uniprot.org/uniprot/P50151" }}], 
+ edges: [{ data: { source: 'GNB1', target: 'GNAI1', directed: 'false', weight: 0.568619} },
+{ data: { source: 'GNB1', target: 'GNG10', directed: 'false', weight: 0.538582} }]},
 
 style: [
     {
         selector: 'node',
         style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
             shape: 'rectangle',
             'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'

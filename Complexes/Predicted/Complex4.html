@@ -29,37 +29,39 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RPL13', score: 5, href: "https://www.uniprot.org/uniprot/P26373" }},
-{data: { id: 'RPL23', score: 5, href: "https://www.uniprot.org/uniprot/P62829" }},
-{data: { id: 'RPL30', score: 5, href: "https://www.uniprot.org/uniprot/P62888" }},
-{data: { id: 'RPS12', score: 5, href: "https://www.uniprot.org/uniprot/P25398" }},
-{data: { id: 'NAP1L4', score: 5, href: "https://www.uniprot.org/uniprot/Q99733" }},
-{data: { id: 'RPL7', score: 5, href: "https://www.uniprot.org/uniprot/P18124" }},
-{data: { id: 'RPL27A', score: 5, href: "https://www.uniprot.org/uniprot/P46776" }},
-{data: { id: 'RPL7A', score: 5, href: "https://www.uniprot.org/uniprot/P62424" }},
-{data: { id: 'RPS18', score: 5, href: "https://www.uniprot.org/uniprot/P62269" }},
-{data: { id: 'RPS14', score: 5, href: "https://www.uniprot.org/uniprot/P62263" }},
-{data: { id: 'RPS19', score: 5, href: "https://www.uniprot.org/uniprot/P39019" }},
-{data: { id: 'RPLP2', score: 5, href: "https://www.uniprot.org/uniprot/P05387" }},
-{data: { id: 'RPL36', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3U8" }},
-{data: { id: 'RPL31', score: 5, href: "https://www.uniprot.org/uniprot/P62899" }},
-{data: { id: 'CCDC124', score: 4, href: "https://www.uniprot.org/uniprot/Q96CT7" }},
-{data: { id: 'RPS2', score: 5, href: "https://www.uniprot.org/uniprot/P15880" }},
-{data: { id: 'RPS6', score: 5, href: "https://www.uniprot.org/uniprot/P62753" }},
-{data: { id: 'RPS13', score: 5, href: "https://www.uniprot.org/uniprot/P62277" }},
-{data: { id: 'RPL37A', score: 4, href: "https://www.uniprot.org/uniprot/P61513" }},
-{data: { id: 'YBX1', score: 5, href: "https://www.uniprot.org/uniprot/P67809" }},
-{data: { id: 'RPS9', score: 5, href: "https://www.uniprot.org/uniprot/P46781" }},
-{data: { id: 'RPL17-C18orf32', score: 2, href: "https://www.uniprot.org/uniprot/A0A0A6YYL6" }},
-{data: { id: 'RPS25', score: 5, href: "https://www.uniprot.org/uniprot/P62851" }},
-{data: { id: 'RPL10', score: 5, href: "https://www.uniprot.org/uniprot/P27635" }},
-{data: { id: 'RPL21', score: 5, href: "https://www.uniprot.org/uniprot/P46778" }},
-{data: { id: 'RPL6', score: 5, href: "https://www.uniprot.org/uniprot/Q02878" }},
-{data: { id: 'RPL27', score: 5, href: "https://www.uniprot.org/uniprot/P61353" }},
-{data: { id: 'RPL8', score: 5, href: "https://www.uniprot.org/uniprot/P62917" }},
-{data: { id: 'RPL3', score: 5, href: "https://www.uniprot.org/uniprot/P39023" }},
-{data: { id: 'RPL4', score: 5, href: "https://www.uniprot.org/uniprot/P36578" }}], 
- edges: [{ data: { source: 'RPLP2', target: 'RPS13', directed: 'false', weight: 1.0} },
+elements:{nodes: [{data: { id: 'RPL13', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P26373" }},
+{data: { id: 'RPL23', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62829" }},
+{data: { id: 'RPL30', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62888" }},
+{data: { id: 'RPS12', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P25398" }},
+{data: { id: 'NAP1L4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q99733" }},
+{data: { id: 'RPL7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P18124" }},
+{data: { id: 'RPL27A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46776" }},
+{data: { id: 'RPL7A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62424" }},
+{data: { id: 'RPS18', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62269" }},
+{data: { id: 'RPS14', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62263" }},
+{data: { id: 'RPS19', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P39019" }},
+{data: { id: 'RPLP2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P05387" }},
+{data: { id: 'SARS-CoV2 N', score: 0, type: 'sars'  }},
+{data: { id: 'RPL36', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q9Y3U8" }},
+{data: { id: 'RPL31', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62899" }},
+{data: { id: 'CCDC124', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q96CT7" }},
+{data: { id: 'RPS2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P15880" }},
+{data: { id: 'RPS6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62753" }},
+{data: { id: 'RPS13', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62277" }},
+{data: { id: 'RPL37A', score: 4, type: '', href: "https://www.uniprot.org/uniprot/P61513" }},
+{data: { id: 'YBX1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P67809" }},
+{data: { id: 'RPS9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46781" }},
+{data: { id: 'RPL17-C18orf32', score: 2, type: '', href: "https://www.uniprot.org/uniprot/A0A0A6YYL6" }},
+{data: { id: 'RPS25', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62851" }},
+{data: { id: 'RPL10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P27635" }},
+{data: { id: 'RPL21', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46778" }},
+{data: { id: 'RPL6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q02878" }},
+{data: { id: 'RPL27', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P61353" }},
+{data: { id: 'RPL8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62917" }},
+{data: { id: 'RPL3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P39023" }},
+{data: { id: 'RPL4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P36578" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 N', target: 'RPL36', directed: 'false', weight: 0.631167513, type: 'sars'} },
+{ data: { source: 'RPLP2', target: 'RPS13', directed: 'false', weight: 1.0} },
 { data: { source: 'RPLP2', target: 'RPL21', directed: 'false', weight: 1.0} },
 { data: { source: 'RPLP2', target: 'RPL27', directed: 'false', weight: 1.0} },
 { data: { source: 'RPLP2', target: 'RPL7A', directed: 'false', weight: 1.0} },
@@ -496,16 +498,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

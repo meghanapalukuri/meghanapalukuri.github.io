@@ -29,10 +29,10 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ZIC2', score: 5, href: "https://www.uniprot.org/uniprot/O95409" }},
-{data: { id: 'CHRNA9', score: 5, href: "https://www.uniprot.org/uniprot/Q9UGM1" }},
-{data: { id: 'DNAJC18', score: 2, href: "https://www.uniprot.org/uniprot/Q9H819" }},
-{data: { id: 'CHEK1', score: 5, href: "https://www.uniprot.org/uniprot/O14757" }}], 
+elements:{nodes: [{data: { id: 'ZIC2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O95409" }},
+{data: { id: 'CHRNA9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UGM1" }},
+{data: { id: 'DNAJC18', score: 2, type: '', href: "https://www.uniprot.org/uniprot/Q9H819" }},
+{data: { id: 'CHEK1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14757" }}], 
  edges: [{ data: { source: 'ZIC2', target: 'CHRNA9', directed: 'false', weight: 0.8541489999999999} },
 { data: { source: 'ZIC2', target: 'DNAJC18', directed: 'false', weight: 0.171414} },
 { data: { source: 'ZIC2', target: 'CHEK1', directed: 'false', weight: 0.11248399999999999} },
@@ -44,16 +44,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

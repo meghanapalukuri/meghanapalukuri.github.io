@@ -36,14 +36,16 @@ elements:{nodes: [{data: { id: 'SMARCC2', score: 5, href: "https://www.uniprot.o
  edges: [{ data: { source: 'SMARCC2', target: 'SMARCB1', directed: 'false', weight: 0.9999969999999999} },
 { data: { source: 'SMARCC2', target: 'SMARCC1', directed: 'false', weight: 0.999553} },
 { data: { source: 'SMARCC2', target: 'ACTL6A', directed: 'false', weight: 0.9977520000000001} },
-{ data: { source: 'SMARCC1', target: 'SMARCB1', directed: 'false', weight: 1.0} },
-{ data: { source: 'SMARCC1', target: 'ACTL6A', directed: 'false', weight: 0.999959} },
-{ data: { source: 'SMARCB1', target: 'ACTL6A', directed: 'false', weight: 0.995555} }]},
+{ data: { source: 'SMARCB1', target: 'SMARCC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCB1', target: 'ACTL6A', directed: 'false', weight: 0.995555} },
+{ data: { source: 'SMARCC1', target: 'ACTL6A', directed: 'false', weight: 0.999959} }]},
 
 style: [
     {
         selector: 'node',
         style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
             shape: 'rectangle',
             'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'

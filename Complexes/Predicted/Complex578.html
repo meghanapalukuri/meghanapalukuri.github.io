@@ -29,22 +29,22 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TADA2B', score: 5, href: "https://www.uniprot.org/uniprot/Q86TJ2" }},
-{data: { id: 'TAF10', score: 5, href: "https://www.uniprot.org/uniprot/Q12962" }},
-{data: { id: 'TAF9', score: 5, href: "https://www.uniprot.org/uniprot/Q16594" }},
-{data: { id: 'TADA3', score: 5, href: "https://www.uniprot.org/uniprot/O75528" }},
-{data: { id: 'TAF8', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z7C8" }},
-{data: { id: 'KAT2A', score: 5, href: "https://www.uniprot.org/uniprot/Q92830" }},
-{data: { id: 'TAF5L', score: 5, href: "https://www.uniprot.org/uniprot/O75529" }},
-{data: { id: 'TADA1', score: 5, href: "https://www.uniprot.org/uniprot/Q96BN2" }},
-{data: { id: 'TAF12', score: 5, href: "https://www.uniprot.org/uniprot/Q16514" }},
-{data: { id: 'SUPT7L', score: 5, href: "https://www.uniprot.org/uniprot/O94864" }},
-{data: { id: 'SGF29', score: 5, href: "https://www.uniprot.org/uniprot/Q96ES7" }},
-{data: { id: 'SUPT20H', score: 5, href: "https://www.uniprot.org/uniprot/Q8NEM7" }},
-{data: { id: 'SUPT3H', score: 5, href: "https://www.uniprot.org/uniprot/O75486" }},
-{data: { id: 'TAF9B', score: 5, href: "https://www.uniprot.org/uniprot/Q9HBM6" }},
-{data: { id: 'TAF6L', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6J9" }},
-{data: { id: 'TAF4', score: 5, href: "https://www.uniprot.org/uniprot/O00268" }}], 
+elements:{nodes: [{data: { id: 'TADA2B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86TJ2" }},
+{data: { id: 'TAF10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q12962" }},
+{data: { id: 'TAF9', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16594" }},
+{data: { id: 'TADA3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75528" }},
+{data: { id: 'TAF8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q7Z7C8" }},
+{data: { id: 'KAT2A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q92830" }},
+{data: { id: 'TAF5L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75529" }},
+{data: { id: 'TADA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96BN2" }},
+{data: { id: 'TAF12', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16514" }},
+{data: { id: 'SUPT7L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O94864" }},
+{data: { id: 'SGF29', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96ES7" }},
+{data: { id: 'SUPT20H', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8NEM7" }},
+{data: { id: 'SUPT3H', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O75486" }},
+{data: { id: 'TAF9B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9HBM6" }},
+{data: { id: 'TAF6L', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y6J9" }},
+{data: { id: 'TAF4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00268" }}], 
  edges: [{ data: { source: 'TADA1', target: 'SUPT7L', directed: 'false', weight: 0.99903} },
 { data: { source: 'TADA1', target: 'TAF5L', directed: 'false', weight: 0.997868} },
 { data: { source: 'TADA1', target: 'TADA2B', directed: 'false', weight: 0.9970049999999999} },
@@ -126,16 +126,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GEMIN4', score: 5, href: "https://www.uniprot.org/uniprot/P57678" }},
-{data: { id: 'GEMIN6', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXD5" }},
-{data: { id: 'GEMIN5', score: 5, href: "https://www.uniprot.org/uniprot/Q8TEQ6" }},
-{data: { id: 'GEMIN2', score: 5, href: "https://www.uniprot.org/uniprot/O14893" }},
-{data: { id: 'GEMIN8', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWZ8" }},
-{data: { id: 'GEMIN7', score: 5, href: "https://www.uniprot.org/uniprot/Q9H840" }},
-{data: { id: 'STRAP', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3F4" }},
-{data: { id: 'SMN1', score: 5, href: "https://www.uniprot.org/uniprot/Q16637" }},
-{data: { id: 'DDX20', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHI6" }},
-{data: { id: 'CIP2A', score: 5, href: "https://www.uniprot.org/uniprot/Q8TCG1" }}], 
+elements:{nodes: [{data: { id: 'GEMIN4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P57678" }},
+{data: { id: 'GEMIN6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8WXD5" }},
+{data: { id: 'GEMIN5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TEQ6" }},
+{data: { id: 'GEMIN2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O14893" }},
+{data: { id: 'GEMIN8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NWZ8" }},
+{data: { id: 'GEMIN7', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H840" }},
+{data: { id: 'STRAP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9Y3F4" }},
+{data: { id: 'SMN1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16637" }},
+{data: { id: 'DDX20', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9UHI6" }},
+{data: { id: 'CIP2A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8TCG1" }}], 
  edges: [{ data: { source: 'CIP2A', target: 'GEMIN4', directed: 'false', weight: 0.764292} },
 { data: { source: 'CIP2A', target: 'DDX20', directed: 'false', weight: 0.708716} },
 { data: { source: 'GEMIN8', target: 'GEMIN7', directed: 'false', weight: 0.905611} },
@@ -71,16 +71,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

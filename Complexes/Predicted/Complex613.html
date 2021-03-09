@@ -29,10 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PUM1', score: 5, href: "https://www.uniprot.org/uniprot/Q14671" }},
-{data: { id: 'HELZ', score: 5, href: "https://www.uniprot.org/uniprot/P42694" }},
-{data: { id: 'USP54', score: 5, href: "https://www.uniprot.org/uniprot/Q70EL1" }}], 
- edges: [{ data: { source: 'PUM1', target: 'HELZ', directed: 'false', weight: 0.300708} },
+elements:{nodes: [{data: { id: 'PUM1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14671" }},
+{data: { id: 'HELZ', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P42694" }},
+{data: { id: 'SARS-CoV2 nsp12', score: 0, type: 'sars'  }},
+{data: { id: 'USP54', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q70EL1" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp12', target: 'USP54', directed: 'false', weight: 0.980964951, type: 'sars'} },
+{ data: { source: 'PUM1', target: 'HELZ', directed: 'false', weight: 0.300708} },
 { data: { source: 'PUM1', target: 'USP54', directed: 'false', weight: 0.0815261} },
 { data: { source: 'USP54', target: 'HELZ', directed: 'false', weight: 0.363892} }]},
 
@@ -40,16 +42,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

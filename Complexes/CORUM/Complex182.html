@@ -29,17 +29,19 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'IDH3A', score: 5, href: "https://www.uniprot.org/uniprot/P50213" }},
+elements:{nodes: [{data: { id: 'IDH3G', score: 5, href: "https://www.uniprot.org/uniprot/P51553" }},
 {data: { id: 'IDH3B', score: 5, href: "https://www.uniprot.org/uniprot/O43837" }},
-{data: { id: 'IDH3G', score: 5, href: "https://www.uniprot.org/uniprot/P51553" }}], 
- edges: [{ data: { source: 'IDH3A', target: 'IDH3G', directed: 'false', weight: 0.980927} },
-{ data: { source: 'IDH3A', target: 'IDH3B', directed: 'false', weight: 0.8492860000000001} },
-{ data: { source: 'IDH3B', target: 'IDH3G', directed: 'false', weight: 0.341016} }]},
+{data: { id: 'IDH3A', score: 5, href: "https://www.uniprot.org/uniprot/P50213" }}], 
+ edges: [{ data: { source: 'IDH3G', target: 'IDH3A', directed: 'false', weight: 0.980927} },
+{ data: { source: 'IDH3G', target: 'IDH3B', directed: 'false', weight: 0.341016} },
+{ data: { source: 'IDH3B', target: 'IDH3A', directed: 'false', weight: 0.8492860000000001} }]},
 
 style: [
     {
         selector: 'node',
         style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
             shape: 'rectangle',
             'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'

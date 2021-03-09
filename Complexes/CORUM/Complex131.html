@@ -29,17 +29,19 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CUL5', score: 5, href: "https://www.uniprot.org/uniprot/Q93034" }},
+elements:{nodes: [{data: { id: 'ELOC', score: 5, href: "https://www.uniprot.org/uniprot/Q15369" }},
 {data: { id: 'ELOB', score: 5, href: "https://www.uniprot.org/uniprot/Q15370" }},
-{data: { id: 'ELOC', score: 5, href: "https://www.uniprot.org/uniprot/Q15369" }}], 
- edges: [{ data: { source: 'CUL5', target: 'ELOC', directed: 'false', weight: 0.909113} },
-{ data: { source: 'CUL5', target: 'ELOB', directed: 'false', weight: 0.68042} },
-{ data: { source: 'ELOB', target: 'ELOC', directed: 'false', weight: 0.999216} }]},
+{data: { id: 'CUL5', score: 5, href: "https://www.uniprot.org/uniprot/Q93034" }}], 
+ edges: [{ data: { source: 'ELOC', target: 'ELOB', directed: 'false', weight: 0.999216} },
+{ data: { source: 'ELOC', target: 'CUL5', directed: 'false', weight: 0.909113} },
+{ data: { source: 'ELOB', target: 'CUL5', directed: 'false', weight: 0.68042} }]},
 
 style: [
     {
         selector: 'node',
         style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
             shape: 'rectangle',
             'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'
@@ -78,7 +80,7 @@ cy.on('tap', 'node', function(){
         <br>
         Connection to SARS-COV2: 
         <br>
-        2 interacting protein(s): <br>ELOB ELOC
+        2 interacting protein(s): <br>ELOC ELOB
     </section>
     </body>
     </html>

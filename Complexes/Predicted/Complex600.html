@@ -29,11 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MTIF2', score: 5, href: "https://www.uniprot.org/uniprot/P46199" }},
-{data: { id: 'LARS2', score: 5, href: "https://www.uniprot.org/uniprot/Q15031" }},
-{data: { id: 'PREPL', score: 5, href: "https://www.uniprot.org/uniprot/Q4J6C6" }},
-{data: { id: 'DARS2', score: 5, href: "https://www.uniprot.org/uniprot/Q6PI48" }},
-{data: { id: 'GFM1', score: 5, href: "https://www.uniprot.org/uniprot/Q96RP9" }}], 
+elements:{nodes: [{data: { id: 'MTIF2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46199" }},
+{data: { id: 'LARS2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15031" }},
+{data: { id: 'PREPL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q4J6C6" }},
+{data: { id: 'DARS2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6PI48" }},
+{data: { id: 'GFM1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96RP9" }}], 
  edges: [{ data: { source: 'PREPL', target: 'GFM1', directed: 'false', weight: 0.398978} },
 { data: { source: 'PREPL', target: 'MTIF2', directed: 'false', weight: 0.301238} },
 { data: { source: 'PREPL', target: 'LARS2', directed: 'false', weight: 0.14541400000000002} },
@@ -48,16 +48,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

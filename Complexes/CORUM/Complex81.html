@@ -29,16 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PRKCI', score: 5, href: "https://www.uniprot.org/uniprot/P41743" }},
-{data: { id: 'LLGL1', score: 5, href: "https://www.uniprot.org/uniprot/Q15334" }},
-{data: { id: 'PARD6B', score: 5, href: "https://www.uniprot.org/uniprot/Q9BYG5" }}], 
- edges: [{ data: { source: 'PRKCI', target: 'PARD6B', directed: 'false', weight: 0.9999899999999999} },
-{ data: { source: 'LLGL1', target: 'PARD6B', directed: 'false', weight: 0.998967} }]},
+elements:{nodes: [{data: { id: 'LLGL1', score: 5, href: "https://www.uniprot.org/uniprot/Q15334" }},
+{data: { id: 'PARD6B', score: 5, href: "https://www.uniprot.org/uniprot/Q9BYG5" }},
+{data: { id: 'PRKCI', score: 5, href: "https://www.uniprot.org/uniprot/P41743" }}], 
+ edges: [{ data: { source: 'LLGL1', target: 'PARD6B', directed: 'false', weight: 0.998967} },
+{ data: { source: 'PARD6B', target: 'PRKCI', directed: 'false', weight: 0.9999899999999999} }]},
 
 style: [
     {
         selector: 'node',
         style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
             shape: 'rectangle',
             'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'

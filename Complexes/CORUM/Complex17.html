@@ -34,12 +34,14 @@ elements:{nodes: [{data: { id: 'CSNK2A2', score: 5, href: "https://www.uniprot.o
 {data: { id: 'CSNK2A1', score: 5, href: "https://www.uniprot.org/uniprot/P68400" }}], 
  edges: [{ data: { source: 'CSNK2A2', target: 'CSNK2B', directed: 'false', weight: 0.9965440000000001} },
 { data: { source: 'CSNK2A2', target: 'CSNK2A1', directed: 'false', weight: 0.990316} },
-{ data: { source: 'CSNK2B', target: 'CSNK2A1', directed: 'false', weight: 0.9759} }]},
+{ data: { source: 'CSNK2A1', target: 'CSNK2B', directed: 'false', weight: 0.9759} }]},
 
 style: [
     {
         selector: 'node',
         style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
             shape: 'rectangle',
             'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'

@@ -29,10 +29,10 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CRKL', score: 5, href: "https://www.uniprot.org/uniprot/P46109" }},
-{data: { id: 'PRAG1', score: 5, href: "https://www.uniprot.org/uniprot/Q86YV5" }},
-{data: { id: 'C15orf54', score: 1, href: "https://www.uniprot.org/uniprot/Q8N8G6" }},
-{data: { id: 'RAPGEF1', score: 5, href: "https://www.uniprot.org/uniprot/Q13905" }}], 
+elements:{nodes: [{data: { id: 'CRKL', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46109" }},
+{data: { id: 'PRAG1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q86YV5" }},
+{data: { id: 'C15orf54', score: 1, type: '', href: "https://www.uniprot.org/uniprot/Q8N8G6" }},
+{data: { id: 'RAPGEF1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q13905" }}], 
  edges: [{ data: { source: 'CRKL', target: 'PRAG1', directed: 'false', weight: 0.9634590000000001} },
 { data: { source: 'CRKL', target: 'RAPGEF1', directed: 'false', weight: 0.939994} },
 { data: { source: 'CRKL', target: 'C15orf54', directed: 'false', weight: 0.48613900000000004} },
@@ -44,16 +44,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

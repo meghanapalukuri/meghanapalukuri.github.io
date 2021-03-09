@@ -29,15 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MBTPS1', score: 5, href: "https://www.uniprot.org/uniprot/Q14703" }},
-{data: { id: 'ITGA8', score: 5, href: "https://www.uniprot.org/uniprot/P53708" }},
-{data: { id: 'HYAL2', score: 5, href: "https://www.uniprot.org/uniprot/Q12891" }},
-{data: { id: 'GALNT18', score: 5, href: "https://www.uniprot.org/uniprot/Q6P9A2" }},
-{data: { id: 'TMEM132A', score: 5, href: "https://www.uniprot.org/uniprot/Q24JP5" }},
-{data: { id: 'EGFR', score: 5, href: "https://www.uniprot.org/uniprot/P00533" }},
-{data: { id: 'CHST10', score: 5, href: "https://www.uniprot.org/uniprot/O43529" }},
-{data: { id: 'CACNA2D2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NY47" }},
-{data: { id: 'ARSK', score: 4, href: "https://www.uniprot.org/uniprot/Q6UWY0" }}], 
+elements:{nodes: [{data: { id: 'MBTPS1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q14703" }},
+{data: { id: 'ITGA8', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P53708" }},
+{data: { id: 'HYAL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q12891" }},
+{data: { id: 'GALNT18', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6P9A2" }},
+{data: { id: 'TMEM132A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q24JP5" }},
+{data: { id: 'EGFR', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P00533" }},
+{data: { id: 'CHST10', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O43529" }},
+{data: { id: 'CACNA2D2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NY47" }},
+{data: { id: 'ARSK', score: 4, type: '', href: "https://www.uniprot.org/uniprot/Q6UWY0" }}], 
  edges: [{ data: { source: 'MBTPS1', target: 'ARSK', directed: 'false', weight: 0.560215} },
 { data: { source: 'MBTPS1', target: 'CACNA2D2', directed: 'false', weight: 0.329342} },
 { data: { source: 'MBTPS1', target: 'TMEM132A', directed: 'false', weight: 0.322601} },
@@ -73,16 +73,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

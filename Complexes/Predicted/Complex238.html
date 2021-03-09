@@ -29,10 +29,10 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PPRC1', score: 5, href: "https://www.uniprot.org/uniprot/Q5VV67" }},
-{data: { id: 'CA10', score: 3, href: "https://www.uniprot.org/uniprot/Q9NS85" }},
-{data: { id: 'PIAS4', score: 5, href: "https://www.uniprot.org/uniprot/Q8N2W9" }},
-{data: { id: 'KCTD15', score: 5, href: "https://www.uniprot.org/uniprot/Q96SI1" }}], 
+elements:{nodes: [{data: { id: 'PPRC1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q5VV67" }},
+{data: { id: 'CA10', score: 3, type: '', href: "https://www.uniprot.org/uniprot/Q9NS85" }},
+{data: { id: 'PIAS4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8N2W9" }},
+{data: { id: 'KCTD15', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96SI1" }}], 
  edges: [{ data: { source: 'PPRC1', target: 'CA10', directed: 'false', weight: 0.891602} },
 { data: { source: 'PPRC1', target: 'KCTD15', directed: 'false', weight: 0.171414} },
 { data: { source: 'PPRC1', target: 'PIAS4', directed: 'false', weight: 0.171414} },
@@ -44,16 +44,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

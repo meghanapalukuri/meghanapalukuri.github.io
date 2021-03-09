@@ -29,10 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RAP1GDS1', score: 5, href: "https://www.uniprot.org/uniprot/P52306" }},
-{data: { id: 'GRB2', score: 5, href: "https://www.uniprot.org/uniprot/P62993" }},
-{data: { id: 'OSBPL2', score: 5, href: "https://www.uniprot.org/uniprot/Q9H1P3" }}], 
- edges: [{ data: { source: 'OSBPL2', target: 'RAP1GDS1', directed: 'false', weight: 0.56285} },
+elements:{nodes: [{data: { id: 'SARS-CoV2 nsp2', score: 0, type: 'sars'  }},
+{data: { id: 'RAP1GDS1', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/P52306" }},
+{data: { id: 'GRB2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P62993" }},
+{data: { id: 'OSBPL2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H1P3" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp2', target: 'RAP1GDS1', directed: 'false', weight: 0.991635744, type: 'sars'} },
+{ data: { source: 'OSBPL2', target: 'RAP1GDS1', directed: 'false', weight: 0.56285} },
 { data: { source: 'OSBPL2', target: 'GRB2', directed: 'false', weight: 0.241558} },
 { data: { source: 'GRB2', target: 'RAP1GDS1', directed: 'false', weight: 0.740863} }]},
 
@@ -40,16 +42,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

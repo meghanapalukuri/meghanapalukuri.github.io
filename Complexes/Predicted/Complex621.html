@@ -29,10 +29,10 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'FIGNL1', score: 5, href: "https://www.uniprot.org/uniprot/Q6PIW4" }},
-{data: { id: 'WDR47', score: 3, href: "https://www.uniprot.org/uniprot/O94967" }},
-{data: { id: 'RHEX', score: 5, href: "https://www.uniprot.org/uniprot/Q6ZWK4" }},
-{data: { id: 'SNX17', score: 5, href: "https://www.uniprot.org/uniprot/Q15036" }}], 
+elements:{nodes: [{data: { id: 'FIGNL1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6PIW4" }},
+{data: { id: 'WDR47', score: 3, type: '', href: "https://www.uniprot.org/uniprot/O94967" }},
+{data: { id: 'RHEX', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q6ZWK4" }},
+{data: { id: 'SNX17', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q15036" }}], 
  edges: [{ data: { source: 'RHEX', target: 'WDR47', directed: 'false', weight: 0.8726200000000001} },
 { data: { source: 'RHEX', target: 'SNX17', directed: 'false', weight: 0.856975} },
 { data: { source: 'RHEX', target: 'FIGNL1', directed: 'false', weight: 0.456479} },
@@ -43,16 +43,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

@@ -29,16 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PDHA1', score: 5, href: "https://www.uniprot.org/uniprot/P08559" }},
-{data: { id: 'STAT5A', score: 5, href: "https://www.uniprot.org/uniprot/P42229" }},
-{data: { id: 'PDHB', score: 5, href: "https://www.uniprot.org/uniprot/P11177" }},
-{data: { id: 'ATP5F1A', score: 5, href: "https://www.uniprot.org/uniprot/P25705" }},
-{data: { id: 'STAT5B', score: 5, href: "https://www.uniprot.org/uniprot/P51692" }},
-{data: { id: 'ATP5MG', score: 5, href: "https://www.uniprot.org/uniprot/O75964" }},
-{data: { id: 'ATP5F1B', score: 5, href: "https://www.uniprot.org/uniprot/P06576" }},
-{data: { id: 'PDHX', score: 5, href: "https://www.uniprot.org/uniprot/O00330" }},
-{data: { id: 'DLAT', score: 5, href: "https://www.uniprot.org/uniprot/P10515" }}], 
- edges: [{ data: { source: 'DLAT', target: 'PDHB', directed: 'false', weight: 0.9999299999999999} },
+elements:{nodes: [{data: { id: 'PDHA1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P08559" }},
+{data: { id: 'STAT5A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P42229" }},
+{data: { id: 'PDHB', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P11177" }},
+{data: { id: 'ATP5F1A', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P25705" }},
+{data: { id: 'STAT5B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P51692" }},
+{data: { id: 'SARS-CoV2 nsp6', score: 0, type: 'sars'  }},
+{data: { id: 'ATP5MG', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/O75964" }},
+{data: { id: 'ATP5F1B', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P06576" }},
+{data: { id: 'PDHX', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00330" }},
+{data: { id: 'DLAT', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P10515" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp6', target: 'ATP5MG', directed: 'false', weight: 0.717265558, type: 'sars'} },
+{ data: { source: 'DLAT', target: 'PDHB', directed: 'false', weight: 0.9999299999999999} },
 { data: { source: 'DLAT', target: 'PDHA1', directed: 'false', weight: 0.999826} },
 { data: { source: 'DLAT', target: 'STAT5A', directed: 'false', weight: 0.898526} },
 { data: { source: 'DLAT', target: 'PDHX', directed: 'false', weight: 0.840566} },
@@ -63,16 +65,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

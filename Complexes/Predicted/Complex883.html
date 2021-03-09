@@ -29,13 +29,13 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DECR1', score: 5, href: "https://www.uniprot.org/uniprot/Q16698" }},
-{data: { id: 'DHX33', score: 5, href: "https://www.uniprot.org/uniprot/Q9H6R0" }},
-{data: { id: 'NOP56', score: 5, href: "https://www.uniprot.org/uniprot/O00567" }},
-{data: { id: 'MUS81', score: 5, href: "https://www.uniprot.org/uniprot/Q96NY9" }},
-{data: { id: 'MTPAP', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVV4" }},
-{data: { id: 'MKI67', score: 5, href: "https://www.uniprot.org/uniprot/P46013" }},
-{data: { id: 'NPM1', score: 5, href: "https://www.uniprot.org/uniprot/P06748" }}], 
+elements:{nodes: [{data: { id: 'DECR1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q16698" }},
+{data: { id: 'DHX33', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H6R0" }},
+{data: { id: 'NOP56', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O00567" }},
+{data: { id: 'MUS81', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q96NY9" }},
+{data: { id: 'MTPAP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NVV4" }},
+{data: { id: 'MKI67', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P46013" }},
+{data: { id: 'NPM1', score: 5, type: '', href: "https://www.uniprot.org/uniprot/P06748" }}], 
  edges: [{ data: { source: 'NOP56', target: 'DHX33', directed: 'false', weight: 0.9538200000000001} },
 { data: { source: 'NOP56', target: 'MKI67', directed: 'false', weight: 0.9239149999999999} },
 { data: { source: 'MUS81', target: 'NPM1', directed: 'false', weight: 0.849734} },
@@ -54,16 +54,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

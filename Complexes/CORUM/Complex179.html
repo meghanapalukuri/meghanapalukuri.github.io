@@ -30,15 +30,17 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: 'ELMO1', score: 5, href: "https://www.uniprot.org/uniprot/Q92556" }},
-{data: { id: 'DOCK1', score: 5, href: "https://www.uniprot.org/uniprot/Q14185" }},
-{data: { id: 'CRK', score: 5, href: "https://www.uniprot.org/uniprot/A0A0S2Z3Q4" }}], 
+{data: { id: 'CRK', score: 5, href: "https://www.uniprot.org/uniprot/A0A0S2Z3Q4" }},
+{data: { id: 'DOCK1', score: 5, href: "https://www.uniprot.org/uniprot/Q14185" }}], 
  edges: [{ data: { source: 'ELMO1', target: 'DOCK1', directed: 'false', weight: 0.944997} },
-{ data: { source: 'DOCK1', target: 'CRK', directed: 'false', weight: 0.801182} }]},
+{ data: { source: 'CRK', target: 'DOCK1', directed: 'false', weight: 0.801182} }]},
 
 style: [
     {
         selector: 'node',
         style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
             shape: 'rectangle',
             'background-color': 'mapData(score, 0, 5, yellow, green)',
             label: 'data(id)'

@@ -29,12 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'COLGALT1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NBJ5" }},
-{data: { id: 'ILKAP', score: 5, href: "https://www.uniprot.org/uniprot/Q9H0C8" }},
-{data: { id: 'PLOD2', score: 5, href: "https://www.uniprot.org/uniprot/O00469" }},
-{data: { id: 'COLGALT2', score: 5, href: "https://www.uniprot.org/uniprot/Q8IYK4" }},
-{data: { id: 'PLOD3', score: 5, href: "https://www.uniprot.org/uniprot/O60568" }}], 
- edges: [{ data: { source: 'COLGALT2', target: 'PLOD3', directed: 'false', weight: 0.819121} },
+elements:{nodes: [{data: { id: 'SARS-CoV2 nsp1', score: 0, type: 'sars'  }},
+{data: { id: 'COLGALT1', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q8NBJ5" }},
+{data: { id: 'ILKAP', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9H0C8" }},
+{data: { id: 'SARS-CoV2 orf8', score: 0, type: 'sars'  }},
+{data: { id: 'PLOD2', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/O00469" }},
+{data: { id: 'COLGALT2', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q8IYK4" }},
+{data: { id: 'PLOD3', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O60568" }}], 
+ edges: [{ data: { source: 'SARS-CoV2 nsp1', target: 'COLGALT1', directed: 'false', weight: 0.794123974, type: 'sars'} },
+{ data: { source: 'SARS-CoV2 orf8', target: 'PLOD2', directed: 'false', weight: 0.992483418, type: 'sars'} },
+{ data: { source: 'COLGALT2', target: 'PLOD3', directed: 'false', weight: 0.819121} },
 { data: { source: 'COLGALT2', target: 'PLOD2', directed: 'false', weight: 0.373501} },
 { data: { source: 'COLGALT2', target: 'COLGALT1', directed: 'false', weight: 0.0968222} },
 { data: { source: 'ILKAP', target: 'COLGALT1', directed: 'false', weight: 0.40465100000000004} },
@@ -46,16 +50,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}

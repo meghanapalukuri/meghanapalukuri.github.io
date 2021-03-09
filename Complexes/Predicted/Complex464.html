@@ -29,10 +29,10 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PAK4', score: 5, href: "https://www.uniprot.org/uniprot/O96013" }},
-{data: { id: 'PAK6', score: 5, href: "https://www.uniprot.org/uniprot/Q9NQU5" }},
-{data: { id: 'PAK5', score: 5, href: "https://www.uniprot.org/uniprot/Q9P286" }},
-{data: { id: 'ARHGEF11', score: 5, href: "https://www.uniprot.org/uniprot/O15085" }}], 
+elements:{nodes: [{data: { id: 'PAK4', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O96013" }},
+{data: { id: 'PAK6', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9NQU5" }},
+{data: { id: 'PAK5', score: 5, type: '', href: "https://www.uniprot.org/uniprot/Q9P286" }},
+{data: { id: 'ARHGEF11', score: 5, type: '', href: "https://www.uniprot.org/uniprot/O15085" }}], 
  edges: [{ data: { source: 'PAK4', target: 'PAK6', directed: 'false', weight: 0.9742860000000001} },
 { data: { source: 'PAK4', target: 'PAK5', directed: 'false', weight: 0.9680979999999999} },
 { data: { source: 'PAK4', target: 'ARHGEF11', directed: 'false', weight: 0.95641} },
@@ -44,16 +44,24 @@ style: [
     {
         selector: 'node',
         style: {
-            shape: 'rectangle',
+		'font-size': 30,
+        'font-weight': 'bold',
+        'shape': function( ele ){ 
+                                if ( ele.data('type') == 'cov_link' ){return 'star'}  
+                                 if ( ele.data('type') == 'sars' ){return 'triangle'}   
+  return 'rectangle';
+  },            
             'background-color': 'mapData(score, 0, 5, yellow, green)',
-            label: 'data(id)'
-        }
+            'label': 'data(id)'        }
     },
 							{
 							selector: 'edge',
 							style: {
 								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
-								'line-color': 'blue',
+								'line-color': function( ele ){ 
+                                 if ( ele.data('type') == 'sars' ){return 'red'}   
+  return 'blue';
+  },
 								'opacity': 0.5
 							}
 						}
