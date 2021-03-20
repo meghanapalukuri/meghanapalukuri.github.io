@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 171</title>
+<title> KNTC1-ZW10-ZWILCH complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'KNTC1', score: 5, href: "https://www.uniprot.org/uniprot/P50748" }},
-{data: { id: 'ZWILCH', score: 5, href: "https://www.uniprot.org/uniprot/Q9H900" }},
-{data: { id: 'ZW10', score: 5, href: "https://www.uniprot.org/uniprot/O43264" }}], 
- edges: [{ data: { source: 'KNTC1', target: 'ZW10', directed: 'false', weight: 0.9975639999999999} },
-{ data: { source: 'KNTC1', target: 'ZWILCH', directed: 'false', weight: 0.125737} },
-{ data: { source: 'ZWILCH', target: 'ZW10', directed: 'false', weight: 0.831451} }]},
+elements:{nodes: [{data: { id: 'ZWILCH', score: 5, href: "https://www.uniprot.org/uniprot/Q9H900" }},
+{data: { id: 'ZW10', score: 5, href: "https://www.uniprot.org/uniprot/O43264" }},
+{data: { id: 'KNTC1', score: 5, href: "https://www.uniprot.org/uniprot/P50748" }}], 
+ edges: [{ data: { source: 'ZWILCH', target: 'ZW10', directed: 'false', weight: 0.831451} },
+{ data: { source: 'ZWILCH', target: 'KNTC1', directed: 'false', weight: 0.125737} },
+{ data: { source: 'ZW10', target: 'KNTC1', directed: 'false', weight: 0.9975639999999999} }]},
 
 style: [
     {

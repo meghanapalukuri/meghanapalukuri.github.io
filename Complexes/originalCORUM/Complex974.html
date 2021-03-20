@@ -1,0 +1,87 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Profilin 2 complex</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex975.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ROCK2', score: 5, href: "https://www.uniprot.org/uniprot/O75116" }},
+{data: { id: 'HSPA8', score: 5, href: "https://www.uniprot.org/uniprot/P11142" }},
+{data: { id: 'SYN1', score: 5, href: "https://www.uniprot.org/uniprot/P17600" }},
+{data: { id: 'PFN2', score: 5, href: "https://www.uniprot.org/uniprot/P35080" }},
+{data: { id: 'ACTB', score: 5, href: "https://www.uniprot.org/uniprot/P60709" }},
+{data: { id: 'DNM1', score: 5, href: "https://www.uniprot.org/uniprot/Q05193" }},
+{data: { id: 'CYFIP1', score: 5, href: "https://www.uniprot.org/uniprot/Q7L576" }},
+{data: { id: 'SYN2', score: 5, href: "https://www.uniprot.org/uniprot/Q92777" }},
+{data: { id: 'NCKAP1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2A7" }}], 
+ edges: [{ data: { source: 'SYN1', target: 'SYN2', directed: 'false', weight: 0.556438} },
+{ data: { source: 'CYFIP1', target: 'NCKAP1', directed: 'false', weight: 0.931861} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+    </section>
+    </body>
+    </html>
+    

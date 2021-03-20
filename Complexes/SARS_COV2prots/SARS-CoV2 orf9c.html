@@ -29,7 +29,7 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SARS-CoV2 orf9c', score: 2, type:  'sars'  }},
+elements:{nodes: [{data: { id: 'SARS-CoV2 orf9c', score: 2, type:  'sars' , href: "https://covid-19.uniprot.org/uniprotkb/P0DTD3" }},
 {data: { id: 'UBXN8', score: 1, type:  'human'  }},
 {data: { id: 'GPAA1', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/O43292" }},
 {data: { id: 'WFS1', score: 1, type:  'human'  }},
@@ -56,27 +56,27 @@ elements:{nodes: [{data: { id: 'SARS-CoV2 orf9c', score: 2, type:  'sars'  }},
 {data: { id: 'TMED5', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q9Y3A6" }},
 {data: { id: 'NDUFB9', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q9Y6M9" }},
 {data: { id: 'PIGS', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q96S52" }},
-{data: { id: 'Complex365', score: 0, type: 'complex', href: "../Predicted/Complex365.html" }},
-{data: { id: 'Complex781', score: 0, type: 'complex', href: "../Predicted/Complex781.html" }},
-{data: { id: 'Complex59', score: 0, type: 'complex', href: "../Predicted/Complex59.html" }},
-{data: { id: 'Complex1015', score: 0, type: 'complex', href: "../Predicted/Complex1015.html" }},
-{data: { id: 'Complex599', score: 0, type: 'complex', href: "../Predicted/Complex599.html" }},
-{data: { id: 'Complex788', score: 0, type: 'complex', href: "../Predicted/Complex788.html" }},
-{data: { id: 'Complex73', score: 0, type: 'complex', href: "../Predicted/Complex73.html" }},
-{data: { id: 'Complex461', score: 0, type: 'complex', href: "../Predicted/Complex461.html" }},
-{data: { id: 'Complex709', score: 0, type: 'complex', href: "../Predicted/Complex709.html" }}], 
- edges: [{ data: { source: 'GPAA1', target: 'Complex59', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'ABCC1', target: 'Complex709', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'SLC30A6', target: 'Complex599', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'SLC30A6', target: 'Complex781', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'TAPT1', target: 'Complex365', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'ECSIT', target: 'Complex73', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'ALG8', target: 'Complex788', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'ACAD9', target: 'Complex73', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'BCS1L', target: 'Complex461', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'NDUFAF1', target: 'Complex73', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'TMED5', target: 'Complex1015', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'PIGS', target: 'Complex59', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{data: { id: '0.2 ADRA1A-CXCR4 complex', score: 0, type: 'complex', href: "../Predicted/Complex709.html" }},
+{data: { id: 'SLC30A7 SLC30A6 SLC30A5', score: 0, type: 'complex', href: "../Predicted/Complex599.html" }},
+{data: { id: 'GAA1-GPI8-PIGT-PIG-PIGS complex', score: 0, type: 'complex', href: "../Predicted/Complex59.html" }},
+{data: { id: '0.1 TNF-alpha/NF-kappa B signaling complex (SEC16A, CHUK, IKBKB, NFKB2, REL, IKBKG, MAP3K14, RELA, FBXW7, USP2)', score: 0, type: 'complex', href: "../Predicted/Complex781.html" }},
+{data: { id: '0.2 FIF-FGR2 complex', score: 0, type: 'complex', href: "../Predicted/Complex461.html" }},
+{data: { id: '0.2 GM130-GRASP65 complex', score: 0, type: 'complex', href: "../Predicted/Complex1015.html" }},
+{data: { id: '0.2 SIGMAR1-KCNH2 complex', score: 0, type: 'complex', href: "../Predicted/Complex788.html" }},
+{data: { id: '0.2 erlin1/2-RNF170 complex', score: 0, type: 'complex', href: "../Predicted/Complex365.html" }},
+{data: { id: '0.5 Ecsit complex (ECSIT, NDUFS3, NDUFAF1)', score: 0, type: 'complex', href: "../Predicted/Complex73.html" }}], 
+ edges: [{ data: { source: 'GPAA1', target: 'GAA1-GPI8-PIGT-PIG-PIGS complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'ABCC1', target: '0.2 ADRA1A-CXCR4 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'SLC30A6', target: 'SLC30A7 SLC30A6 SLC30A5', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'SLC30A6', target: '0.1 TNF-alpha/NF-kappa B signaling complex (SEC16A, CHUK, IKBKB, NFKB2, REL, IKBKG, MAP3K14, RELA, FBXW7, USP2)', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'TAPT1', target: '0.2 erlin1/2-RNF170 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'ECSIT', target: '0.5 Ecsit complex (ECSIT, NDUFS3, NDUFAF1)', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'ALG8', target: '0.2 SIGMAR1-KCNH2 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'ACAD9', target: '0.5 Ecsit complex (ECSIT, NDUFS3, NDUFAF1)', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'BCS1L', target: '0.2 FIF-FGR2 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'NDUFAF1', target: '0.5 Ecsit complex (ECSIT, NDUFS3, NDUFAF1)', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'TMED5', target: '0.2 GM130-GRASP65 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'PIGS', target: 'GAA1-GPI8-PIGT-PIG-PIGS complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'SARS-CoV2 orf9c', target: 'UBXN8', directed: 'false', type: 'sars2prot',weight: 0.770566762} },
 { data: { source: 'SARS-CoV2 orf9c', target: 'GPAA1', directed: 'false', type: 'sars2prot',weight: 0.804405154} },
 { data: { source: 'SARS-CoV2 orf9c', target: 'WFS1', directed: 'false', type: 'sars2prot',weight: 0.955124813} },
@@ -108,6 +108,10 @@ style: [
     {
         selector: 'node',
         style: {
+                				'font-size': 20,
+        'font-weight': 'bold',
+                      'text-wrap': 'wrap',
+    'text-max-width': '300',
             shape: function( ele ){ 
                                 if ( ele.data('type') == 'complex' ){return 'rectangle'}
                                 if ( ele.data('type') == 'sars' ){return 'triangle'}
@@ -138,14 +142,14 @@ style: [
 });
 
 cy.layout({
-    name: 'concentric',
-  concentric: function( ele ){ // returns numeric value for each node, placing higher nodes in levels towards the centre
-  return ele.data('score');
-  },
-  equidistant: true, 
-  levelWidth: function( nodes ){ // the variation of concentric values in each level
-  return 1;
-  },
+    'name': 'cose',
+	'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'padding': 1,
+	'componentSpacing': 1,
+	 'idealEdgeLength': function( edge ){ return 1; },
+	 // Divisor to compute edge forces
+  'edgeElasticity': function( edge ){ return 20; }
 }).run();
     
 cy.on('tap', 'node', function(){

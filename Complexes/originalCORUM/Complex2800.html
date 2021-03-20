@@ -1,0 +1,132 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> BRD7-SWI\u2013SNF complex</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex2801.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ARID1A', score: 5, href: "https://www.uniprot.org/uniprot/O14497" }},
+{data: { id: 'PRMT5', score: 5, href: "https://www.uniprot.org/uniprot/O14744" }},
+{data: { id: 'ACTL6A', score: 5, href: "https://www.uniprot.org/uniprot/O96019" }},
+{data: { id: 'SMARCA2', score: 5, href: "https://www.uniprot.org/uniprot/P51531" }},
+{data: { id: 'SMARCA4', score: 5, href: "https://www.uniprot.org/uniprot/P51532" }},
+{data: { id: 'SMARCC2', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAQ2" }},
+{data: { id: 'PHF10', score: 5, href: "https://www.uniprot.org/uniprot/Q8WUB8" }},
+{data: { id: 'SMARCC1', score: 5, href: "https://www.uniprot.org/uniprot/Q92922" }},
+{data: { id: 'SMARCE1', score: 5, href: "https://www.uniprot.org/uniprot/Q969G3" }},
+{data: { id: 'SMARCD1', score: 5, href: "https://www.uniprot.org/uniprot/Q96GM5" }},
+{data: { id: 'BRD7', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPI1" }}], 
+ edges: [{ data: { source: 'ARID1A', target: 'SMARCE1', directed: 'false', weight: 0.999951} },
+{ data: { source: 'ARID1A', target: 'SMARCC2', directed: 'false', weight: 0.999833} },
+{ data: { source: 'ARID1A', target: 'SMARCC1', directed: 'false', weight: 0.999194} },
+{ data: { source: 'ARID1A', target: 'SMARCD1', directed: 'false', weight: 0.998976} },
+{ data: { source: 'ARID1A', target: 'SMARCA4', directed: 'false', weight: 0.998769} },
+{ data: { source: 'ARID1A', target: 'ACTL6A', directed: 'false', weight: 0.998017} },
+{ data: { source: 'ARID1A', target: 'SMARCA2', directed: 'false', weight: 0.9962} },
+{ data: { source: 'ARID1A', target: 'BRD7', directed: 'false', weight: 0.906708} },
+{ data: { source: 'ARID1A', target: 'PHF10', directed: 'false', weight: 0.222874} },
+{ data: { source: 'SMARCD1', target: 'SMARCC1', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'SMARCD1', target: 'SMARCC2', directed: 'false', weight: 0.999992} },
+{ data: { source: 'SMARCD1', target: 'SMARCE1', directed: 'false', weight: 0.999883} },
+{ data: { source: 'SMARCD1', target: 'SMARCA4', directed: 'false', weight: 0.9996459999999999} },
+{ data: { source: 'SMARCD1', target: 'ACTL6A', directed: 'false', weight: 0.998872} },
+{ data: { source: 'SMARCD1', target: 'SMARCA2', directed: 'false', weight: 0.996129} },
+{ data: { source: 'SMARCD1', target: 'BRD7', directed: 'false', weight: 0.8827309999999999} },
+{ data: { source: 'SMARCD1', target: 'PHF10', directed: 'false', weight: 0.791715} },
+{ data: { source: 'SMARCE1', target: 'SMARCC2', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'SMARCE1', target: 'SMARCC1', directed: 'false', weight: 0.999992} },
+{ data: { source: 'SMARCE1', target: 'SMARCA4', directed: 'false', weight: 0.999857} },
+{ data: { source: 'SMARCE1', target: 'SMARCA2', directed: 'false', weight: 0.999691} },
+{ data: { source: 'SMARCE1', target: 'ACTL6A', directed: 'false', weight: 0.998042} },
+{ data: { source: 'SMARCE1', target: 'BRD7', directed: 'false', weight: 0.855533} },
+{ data: { source: 'SMARCE1', target: 'PHF10', directed: 'false', weight: 0.5378109999999999} },
+{ data: { source: 'SMARCC2', target: 'SMARCA4', directed: 'false', weight: 0.9999120000000001} },
+{ data: { source: 'SMARCC2', target: 'SMARCA2', directed: 'false', weight: 0.999741} },
+{ data: { source: 'SMARCC2', target: 'SMARCC1', directed: 'false', weight: 0.999553} },
+{ data: { source: 'SMARCC2', target: 'ACTL6A', directed: 'false', weight: 0.9977520000000001} },
+{ data: { source: 'SMARCC2', target: 'BRD7', directed: 'false', weight: 0.9633209999999999} },
+{ data: { source: 'SMARCC2', target: 'PHF10', directed: 'false', weight: 0.30805} },
+{ data: { source: 'SMARCA4', target: 'SMARCC1', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'SMARCA4', target: 'ACTL6A', directed: 'false', weight: 0.99954} },
+{ data: { source: 'SMARCA4', target: 'BRD7', directed: 'false', weight: 0.949256} },
+{ data: { source: 'SMARCA4', target: 'SMARCA2', directed: 'false', weight: 0.768} },
+{ data: { source: 'SMARCA4', target: 'PHF10', directed: 'false', weight: 0.35689299999999996} },
+{ data: { source: 'ACTL6A', target: 'SMARCC1', directed: 'false', weight: 0.999959} },
+{ data: { source: 'ACTL6A', target: 'SMARCA2', directed: 'false', weight: 0.993091} },
+{ data: { source: 'ACTL6A', target: 'BRD7', directed: 'false', weight: 0.547408} },
+{ data: { source: 'ACTL6A', target: 'PHF10', directed: 'false', weight: 0.222874} },
+{ data: { source: 'PHF10', target: 'BRD7', directed: 'false', weight: 0.313012} },
+{ data: { source: 'PHF10', target: 'SMARCA2', directed: 'false', weight: 0.27255} },
+{ data: { source: 'PHF10', target: 'SMARCC1', directed: 'false', weight: 0.192211} },
+{ data: { source: 'SMARCA2', target: 'SMARCC1', directed: 'false', weight: 0.9999790000000001} },
+{ data: { source: 'SMARCA2', target: 'BRD7', directed: 'false', weight: 0.584504} },
+{ data: { source: 'SMARCC1', target: 'BRD7', directed: 'false', weight: 0.728067} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+    </section>
+    </body>
+    </html>
+    

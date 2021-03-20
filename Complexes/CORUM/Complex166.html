@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 166</title>
+<title> Ecsit complex (ECSIT, NDUFS3, NDUFAF1)</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,11 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ECSIT', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQ95" }},
-{data: { id: 'NDUFAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y375" }},
-{data: { id: 'NDUFS3', score: 5, href: "https://www.uniprot.org/uniprot/O75489" }}], 
- edges: [{ data: { source: 'ECSIT', target: 'NDUFAF1', directed: 'false', weight: 0.985202} },
-{ data: { source: 'ECSIT', target: 'NDUFS3', directed: 'false', weight: 0.314687} }]},
+elements:{nodes: [{data: { id: 'NDUFS3', score: 5, href: "https://www.uniprot.org/uniprot/O75489" }},
+{data: { id: 'ECSIT', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQ95" }},
+{data: { id: 'NDUFAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y375" }}], 
+ edges: [{ data: { source: 'NDUFS3', target: 'ECSIT', directed: 'false', weight: 0.314687} },
+{ data: { source: 'ECSIT', target: 'NDUFAF1', directed: 'false', weight: 0.985202} }]},
 
 style: [
     {

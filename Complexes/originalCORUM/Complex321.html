@@ -1,0 +1,93 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> p300-CBP-p270-SWI/SNF complex</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex322.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'ARID1A', score: 5, href: "https://www.uniprot.org/uniprot/O14497" }},
+{data: { id: 'SMARCA4', score: 5, href: "https://www.uniprot.org/uniprot/P51532" }},
+{data: { id: 'EP300', score: 5, href: "https://www.uniprot.org/uniprot/Q09472" }},
+{data: { id: 'SMARCB1', score: 5, href: "https://www.uniprot.org/uniprot/Q12824" }},
+{data: { id: 'SMARCC2', score: 5, href: "https://www.uniprot.org/uniprot/Q8TAQ2" }},
+{data: { id: 'CREBBP', score: 5, href: "https://www.uniprot.org/uniprot/Q92793" }},
+{data: { id: 'SMARCC1', score: 5, href: "https://www.uniprot.org/uniprot/Q92922" }}], 
+ edges: [{ data: { source: 'ARID1A', target: 'SMARCC2', directed: 'false', weight: 0.999833} },
+{ data: { source: 'ARID1A', target: 'SMARCB1', directed: 'false', weight: 0.9992709999999999} },
+{ data: { source: 'ARID1A', target: 'SMARCC1', directed: 'false', weight: 0.999194} },
+{ data: { source: 'ARID1A', target: 'SMARCA4', directed: 'false', weight: 0.998769} },
+{ data: { source: 'SMARCC2', target: 'SMARCB1', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'SMARCC2', target: 'SMARCA4', directed: 'false', weight: 0.9999120000000001} },
+{ data: { source: 'SMARCC2', target: 'SMARCC1', directed: 'false', weight: 0.999553} },
+{ data: { source: 'SMARCB1', target: 'SMARCC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'SMARCB1', target: 'SMARCA4', directed: 'false', weight: 0.999704} },
+{ data: { source: 'SMARCA4', target: 'SMARCC1', directed: 'false', weight: 0.9999959999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+    </section>
+    </body>
+    </html>
+    

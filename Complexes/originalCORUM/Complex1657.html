@@ -1,0 +1,316 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> TRBP containing complex (DICER, RPL7A, EIF6, MOV10 and subunits of the 60S ribosomal particle)</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1658.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RPLP1', score: 5, href: "https://www.uniprot.org/uniprot/P05386" }},
+{data: { id: 'RPLP2', score: 5, href: "https://www.uniprot.org/uniprot/P05387" }},
+{data: { id: 'RPL35A', score: 5, href: "https://www.uniprot.org/uniprot/P18077" }},
+{data: { id: 'RPL7', score: 5, href: "https://www.uniprot.org/uniprot/P18124" }},
+{data: { id: 'RPL13', score: 5, href: "https://www.uniprot.org/uniprot/P26373" }},
+{data: { id: 'RPL12', score: 5, href: "https://www.uniprot.org/uniprot/P30050" }},
+{data: { id: 'RPL21', score: 5, href: "https://www.uniprot.org/uniprot/P46778" }},
+{data: { id: 'RPL28', score: 5, href: "https://www.uniprot.org/uniprot/P46779" }},
+{data: { id: 'RPL34', score: 5, href: "https://www.uniprot.org/uniprot/P49207" }},
+{data: { id: 'RPL14', score: 5, href: "https://www.uniprot.org/uniprot/P50914" }},
+{data: { id: 'EIF6', score: 5, href: "https://www.uniprot.org/uniprot/P56537" }},
+{data: { id: 'RPL15', score: 5, href: "https://www.uniprot.org/uniprot/P61313" }},
+{data: { id: 'RPL27', score: 5, href: "https://www.uniprot.org/uniprot/P61353" }},
+{data: { id: 'RPL37A', score: 4, href: "https://www.uniprot.org/uniprot/P61513" }},
+{data: { id: 'RPL7A', score: 5, href: "https://www.uniprot.org/uniprot/P62424" }},
+{data: { id: 'RPL30', score: 5, href: "https://www.uniprot.org/uniprot/P62888" }},
+{data: { id: 'RPL10A', score: 5, href: "https://www.uniprot.org/uniprot/P62906" }},
+{data: { id: 'RPL32', score: 5, href: "https://www.uniprot.org/uniprot/P62910" }},
+{data: { id: 'RPL11', score: 5, href: "https://www.uniprot.org/uniprot/P62913" }},
+{data: { id: 'RPL19', score: 5, href: "https://www.uniprot.org/uniprot/P84098" }},
+{data: { id: 'RPL18A', score: 5, href: "https://www.uniprot.org/uniprot/Q02543" }},
+{data: { id: 'MOV10', score: 5, href: "https://www.uniprot.org/uniprot/Q9HCE1" }},
+{data: { id: 'RSL24D1', score: 4, href: "https://www.uniprot.org/uniprot/Q9UHA3" }},
+{data: { id: 'DICER1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UPY3" }},
+{data: { id: 'RPL36', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3U8" }}], 
+ edges: [{ data: { source: 'RPL11', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL11', target: 'RPL37A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL11', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL11', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL11', target: 'RPL15', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL11', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL11', target: 'RPL21', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL11', target: 'RPL7A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL11', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL11', target: 'RPL10A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL11', target: 'RPL36', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL11', target: 'RPL27', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL11', target: 'RPL18A', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPL11', target: 'RPL30', directed: 'false', weight: 0.999992} },
+{ data: { source: 'RPL11', target: 'RPL12', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'RPL11', target: 'RPLP1', directed: 'false', weight: 0.999868} },
+{ data: { source: 'RPL11', target: 'RPL35A', directed: 'false', weight: 0.999603} },
+{ data: { source: 'RPL11', target: 'RPLP2', directed: 'false', weight: 0.9992030000000001} },
+{ data: { source: 'RPL11', target: 'RPL28', directed: 'false', weight: 0.11136700000000001} },
+{ data: { source: 'RPL15', target: 'RPL37A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL15', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL15', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL15', target: 'RPL18A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL15', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL15', target: 'RPL27', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL15', target: 'RPL21', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL15', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL15', target: 'RPL12', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL15', target: 'RPL7', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL15', target: 'RPL10A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL15', target: 'RPL36', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL15', target: 'RPL30', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL15', target: 'RPLP2', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'RPL15', target: 'RPL35A', directed: 'false', weight: 0.999704} },
+{ data: { source: 'RPL15', target: 'RPL34', directed: 'false', weight: 0.9987030000000001} },
+{ data: { source: 'RPL15', target: 'RPLP1', directed: 'false', weight: 0.9839030000000001} },
+{ data: { source: 'RPL15', target: 'MOV10', directed: 'false', weight: 0.644473} },
+{ data: { source: 'RPL15', target: 'RPL28', directed: 'false', weight: 0.624926} },
+{ data: { source: 'RPL15', target: 'RSL24D1', directed: 'false', weight: 0.62316} },
+{ data: { source: 'RPL7', target: 'RPL37A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'RPL18A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'RPL7A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'RPL14', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'RPL30', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'RPL27', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'RPL10A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'RPL36', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7', target: 'RPL12', directed: 'false', weight: 0.9999899999999999} },
+{ data: { source: 'RPL7', target: 'RPL21', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'RPL7', target: 'RPL35A', directed: 'false', weight: 0.999984} },
+{ data: { source: 'RPL7', target: 'RPLP2', directed: 'false', weight: 0.999957} },
+{ data: { source: 'RPL7', target: 'RPLP1', directed: 'false', weight: 0.999092} },
+{ data: { source: 'RPL7', target: 'RPL34', directed: 'false', weight: 0.9968520000000001} },
+{ data: { source: 'RPL7', target: 'RPL28', directed: 'false', weight: 0.9943049999999999} },
+{ data: { source: 'RPL14', target: 'RPL30', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL21', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL37A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL27', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL18A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL7A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL10A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL36', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL14', target: 'RPL34', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL14', target: 'RPL35A', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL14', target: 'RPL12', directed: 'false', weight: 0.999993} },
+{ data: { source: 'RPL14', target: 'RPLP2', directed: 'false', weight: 0.999992} },
+{ data: { source: 'RPL14', target: 'RPLP1', directed: 'false', weight: 0.9990870000000001} },
+{ data: { source: 'RPL14', target: 'RPL28', directed: 'false', weight: 0.9981459999999999} },
+{ data: { source: 'RPL30', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPL21', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPL18A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPL7A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPL10A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPL36', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL30', target: 'RPL37A', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL30', target: 'RPL27', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL30', target: 'RPLP2', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPL30', target: 'RPL12', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'RPL30', target: 'RPL34', directed: 'false', weight: 0.999657} },
+{ data: { source: 'RPL30', target: 'RPLP1', directed: 'false', weight: 0.999387} },
+{ data: { source: 'RPL30', target: 'RPL35A', directed: 'false', weight: 0.6322439999999999} },
+{ data: { source: 'RPL30', target: 'RPL28', directed: 'false', weight: 0.41935600000000006} },
+{ data: { source: 'RPL10A', target: 'RPL37A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPL18A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPL12', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPL7A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPL27', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPL21', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPL36', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL10A', target: 'RPLP2', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'RPL10A', target: 'RPL35A', directed: 'false', weight: 0.999992} },
+{ data: { source: 'RPL10A', target: 'RPLP1', directed: 'false', weight: 0.999617} },
+{ data: { source: 'RPL10A', target: 'RPL34', directed: 'false', weight: 0.998935} },
+{ data: { source: 'RPL10A', target: 'RPL28', directed: 'false', weight: 0.444033} },
+{ data: { source: 'RPL37A', target: 'RPL13', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL37A', target: 'RPL12', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL37A', target: 'RPL36', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL37A', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL37A', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL37A', target: 'RPL18A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL37A', target: 'RPL21', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL37A', target: 'RPL7A', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL37A', target: 'RPL34', directed: 'false', weight: 0.9999870000000001} },
+{ data: { source: 'RPL37A', target: 'RPLP1', directed: 'false', weight: 0.999984} },
+{ data: { source: 'RPL37A', target: 'RPL27', directed: 'false', weight: 0.999974} },
+{ data: { source: 'RPL37A', target: 'RPLP2', directed: 'false', weight: 0.9999100000000001} },
+{ data: { source: 'RPL37A', target: 'RPL28', directed: 'false', weight: 0.363798} },
+{ data: { source: 'RPL37A', target: 'RPL35A', directed: 'false', weight: 0.341402} },
+{ data: { source: 'RPL13', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL13', target: 'RPL27', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL13', target: 'RPL19', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL13', target: 'RPL18A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL13', target: 'RPL21', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL13', target: 'RPL12', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL13', target: 'RPL7A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL13', target: 'RPL36', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL13', target: 'RPL34', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'RPL13', target: 'RPL35A', directed: 'false', weight: 0.999992} },
+{ data: { source: 'RPL13', target: 'RPLP1', directed: 'false', weight: 0.99998} },
+{ data: { source: 'RPL13', target: 'RPL28', directed: 'false', weight: 0.999928} },
+{ data: { source: 'RPL13', target: 'RPLP2', directed: 'false', weight: 0.349464} },
+{ data: { source: 'RPL35A', target: 'RPL18A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL35A', target: 'RPL27', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL35A', target: 'RPL19', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL35A', target: 'RPL36', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL35A', target: 'RPL7A', directed: 'false', weight: 0.9999879999999999} },
+{ data: { source: 'RPL35A', target: 'RPL21', directed: 'false', weight: 0.999984} },
+{ data: { source: 'RPL35A', target: 'RPL34', directed: 'false', weight: 0.9999170000000001} },
+{ data: { source: 'RPL35A', target: 'RPL32', directed: 'false', weight: 0.99989} },
+{ data: { source: 'RPL35A', target: 'RPLP2', directed: 'false', weight: 0.9998670000000001} },
+{ data: { source: 'RPL35A', target: 'RPL12', directed: 'false', weight: 0.999818} },
+{ data: { source: 'RPL35A', target: 'RPL28', directed: 'false', weight: 0.142373} },
+{ data: { source: 'RPL19', target: 'RPLP2', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL19', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL19', target: 'RPL27', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL19', target: 'RPL21', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL19', target: 'RPL18A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL19', target: 'RPL12', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL19', target: 'RPL7A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL19', target: 'RPL36', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL19', target: 'RPL34', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL19', target: 'RPL28', directed: 'false', weight: 0.999842} },
+{ data: { source: 'RPL19', target: 'RPLP1', directed: 'false', weight: 0.999175} },
+{ data: { source: 'RPLP1', target: 'RPL21', directed: 'false', weight: 0.9999610000000001} },
+{ data: { source: 'RPLP1', target: 'RPL12', directed: 'false', weight: 0.999776} },
+{ data: { source: 'RPLP1', target: 'RPL18A', directed: 'false', weight: 0.999761} },
+{ data: { source: 'RPLP1', target: 'RPL36', directed: 'false', weight: 0.998417} },
+{ data: { source: 'RPLP1', target: 'RPL27', directed: 'false', weight: 0.99797} },
+{ data: { source: 'RPLP1', target: 'RPL28', directed: 'false', weight: 0.9913790000000001} },
+{ data: { source: 'RPLP1', target: 'RPL7A', directed: 'false', weight: 0.9853959999999999} },
+{ data: { source: 'RPLP1', target: 'RPLP2', directed: 'false', weight: 0.98369} },
+{ data: { source: 'RPLP1', target: 'RPL32', directed: 'false', weight: 0.97998} },
+{ data: { source: 'RPLP1', target: 'RPL34', directed: 'false', weight: 0.977714} },
+{ data: { source: 'RPLP2', target: 'RPL21', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP2', target: 'RPL27', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP2', target: 'RPL7A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPLP2', target: 'RPL36', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPLP2', target: 'RPL18A', directed: 'false', weight: 0.999943} },
+{ data: { source: 'RPLP2', target: 'RPL12', directed: 'false', weight: 0.999539} },
+{ data: { source: 'RPLP2', target: 'RPL28', directed: 'false', weight: 0.990447} },
+{ data: { source: 'RPLP2', target: 'RPL32', directed: 'false', weight: 0.42709300000000006} },
+{ data: { source: 'RPLP2', target: 'RPL34', directed: 'false', weight: 0.08656269999999999} },
+{ data: { source: 'RPL18A', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL18A', target: 'RPL27', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL18A', target: 'RPL21', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL18A', target: 'RPL7A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL18A', target: 'RPL36', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL18A', target: 'RPL12', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL18A', target: 'RPL28', directed: 'false', weight: 0.47581599999999996} },
+{ data: { source: 'RPL18A', target: 'RPL34', directed: 'false', weight: 0.339729} },
+{ data: { source: 'RPL21', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL21', target: 'RPL27', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL21', target: 'RPL7A', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL21', target: 'RPL36', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL21', target: 'RPL12', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL21', target: 'RPL34', directed: 'false', weight: 0.999959} },
+{ data: { source: 'RPL21', target: 'RPL28', directed: 'false', weight: 0.940577} },
+{ data: { source: 'MOV10', target: 'RSL24D1', directed: 'false', weight: 0.30509000000000003} },
+{ data: { source: 'RPL7A', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7A', target: 'RPL27', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL7A', target: 'RPL36', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL7A', target: 'RPL12', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'RPL7A', target: 'RPL34', directed: 'false', weight: 0.998532} },
+{ data: { source: 'RPL7A', target: 'RPL28', directed: 'false', weight: 0.353831} },
+{ data: { source: 'RPL34', target: 'RPL27', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'RPL34', target: 'RPL36', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RPL34', target: 'RPL32', directed: 'false', weight: 0.999994} },
+{ data: { source: 'RPL34', target: 'RPL12', directed: 'false', weight: 0.999886} },
+{ data: { source: 'RPL34', target: 'RPL28', directed: 'false', weight: 0.9682360000000001} },
+{ data: { source: 'RPL27', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL27', target: 'RPL36', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL27', target: 'RPL12', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL27', target: 'RPL28', directed: 'false', weight: 0.147125} },
+{ data: { source: 'RPL36', target: 'RPL32', directed: 'false', weight: 1.0} },
+{ data: { source: 'RPL36', target: 'RPL12', directed: 'false', weight: 0.999999} },
+{ data: { source: 'RPL36', target: 'RPL28', directed: 'false', weight: 0.999734} },
+{ data: { source: 'RPL28', target: 'RPL32', directed: 'false', weight: 0.57053} },
+{ data: { source: 'RPL28', target: 'RPL12', directed: 'false', weight: 0.12378900000000001} },
+{ data: { source: 'RPL32', target: 'RPL12', directed: 'false', weight: 0.9999319999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        2 interacting protein(s): <br>MOV10 RPL36
+    </section>
+    </body>
+    </html>
+    

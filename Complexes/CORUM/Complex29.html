@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 29</title>
+<title> SMN complex (GEMIN6,7, UNRIP), SMN-independent intermediate</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GEMIN6', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXD5" }},
-{data: { id: 'GEMIN7', score: 5, href: "https://www.uniprot.org/uniprot/Q9H840" }},
-{data: { id: 'STRAP', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3F4" }}], 
- edges: [{ data: { source: 'GEMIN6', target: 'STRAP', directed: 'false', weight: 0.45418500000000006} },
-{ data: { source: 'GEMIN6', target: 'GEMIN7', directed: 'false', weight: 0.18085} },
-{ data: { source: 'STRAP', target: 'GEMIN7', directed: 'false', weight: 0.849706} }]},
+elements:{nodes: [{data: { id: 'STRAP', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3F4" }},
+{data: { id: 'GEMIN6', score: 5, href: "https://www.uniprot.org/uniprot/Q8WXD5" }},
+{data: { id: 'GEMIN7', score: 5, href: "https://www.uniprot.org/uniprot/Q9H840" }}], 
+ edges: [{ data: { source: 'STRAP', target: 'GEMIN7', directed: 'false', weight: 0.849706} },
+{ data: { source: 'STRAP', target: 'GEMIN6', directed: 'false', weight: 0.45418500000000006} },
+{ data: { source: 'GEMIN6', target: 'GEMIN7', directed: 'false', weight: 0.18085} }]},
 
 style: [
     {

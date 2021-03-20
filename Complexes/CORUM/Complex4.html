@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 4</title>
+<title> KEOPS complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'LAGE3', score: 5, href: "https://www.uniprot.org/uniprot/Q14657" }},
+elements:{nodes: [{data: { id: 'OSGEP', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPF4" }},
 {data: { id: 'TP53RK', score: 5, href: "https://www.uniprot.org/uniprot/Q96S44" }},
-{data: { id: 'OSGEP', score: 5, href: "https://www.uniprot.org/uniprot/Q9NPF4" }},
-{data: { id: 'TPRKB', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3C4" }}], 
- edges: [{ data: { source: 'LAGE3', target: 'OSGEP', directed: 'false', weight: 0.999994} },
-{ data: { source: 'LAGE3', target: 'TPRKB', directed: 'false', weight: 0.8092739999999999} },
-{ data: { source: 'LAGE3', target: 'TP53RK', directed: 'false', weight: 0.7510859999999999} },
-{ data: { source: 'TPRKB', target: 'OSGEP', directed: 'false', weight: 0.999265} },
-{ data: { source: 'TPRKB', target: 'TP53RK', directed: 'false', weight: 0.9451139999999999} },
-{ data: { source: 'OSGEP', target: 'TP53RK', directed: 'false', weight: 0.9993700000000001} }]},
+{data: { id: 'TPRKB', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y3C4" }},
+{data: { id: 'LAGE3', score: 5, href: "https://www.uniprot.org/uniprot/Q14657" }}], 
+ edges: [{ data: { source: 'OSGEP', target: 'LAGE3', directed: 'false', weight: 0.999994} },
+{ data: { source: 'OSGEP', target: 'TP53RK', directed: 'false', weight: 0.9993700000000001} },
+{ data: { source: 'OSGEP', target: 'TPRKB', directed: 'false', weight: 0.999265} },
+{ data: { source: 'TP53RK', target: 'TPRKB', directed: 'false', weight: 0.9451139999999999} },
+{ data: { source: 'TP53RK', target: 'LAGE3', directed: 'false', weight: 0.7510859999999999} },
+{ data: { source: 'TPRKB', target: 'LAGE3', directed: 'false', weight: 0.8092739999999999} }]},
 
 style: [
     {

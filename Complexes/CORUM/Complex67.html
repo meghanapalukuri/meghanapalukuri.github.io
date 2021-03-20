@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 67</title>
+<title> RBPJ-NOTCH1-MAML1 complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NOTCH1', score: 5, href: "https://www.uniprot.org/uniprot/P46531" }},
-{data: { id: 'MAML1', score: 5, href: "https://www.uniprot.org/uniprot/Q92585" }},
-{data: { id: 'RBPJ', score: 5, href: "https://www.uniprot.org/uniprot/Q06330" }}], 
+elements:{nodes: [{data: { id: 'RBPJ', score: 5, href: "https://www.uniprot.org/uniprot/Q06330" }},
+{data: { id: 'NOTCH1', score: 5, href: "https://www.uniprot.org/uniprot/P46531" }},
+{data: { id: 'MAML1', score: 5, href: "https://www.uniprot.org/uniprot/Q92585" }}], 
  edges: [{ data: { source: 'RBPJ', target: 'MAML1', directed: 'false', weight: 0.9995879999999999} },
 { data: { source: 'RBPJ', target: 'NOTCH1', directed: 'false', weight: 0.920143} },
-{ data: { source: 'MAML1', target: 'NOTCH1', directed: 'false', weight: 0.304485} }]},
+{ data: { source: 'NOTCH1', target: 'MAML1', directed: 'false', weight: 0.304485} }]},
 
 style: [
     {

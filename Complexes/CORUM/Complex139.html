@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 139</title>
+<title> AATF-NGDN-NOL10 complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NOL10', score: 3, href: "https://www.uniprot.org/uniprot/Q9BSC4" }},
-{data: { id: 'NGDN', score: 5, href: "https://www.uniprot.org/uniprot/Q8NEJ9" }},
-{data: { id: 'AATF', score: 5, href: "https://www.uniprot.org/uniprot/Q9NY61" }}], 
- edges: [{ data: { source: 'NGDN', target: 'AATF', directed: 'false', weight: 0.45249700000000004} },
-{ data: { source: 'NGDN', target: 'NOL10', directed: 'false', weight: 0.175861} },
-{ data: { source: 'NOL10', target: 'AATF', directed: 'false', weight: 0.287896} }]},
+elements:{nodes: [{data: { id: 'AATF', score: 5, href: "https://www.uniprot.org/uniprot/Q9NY61" }},
+{data: { id: 'NOL10', score: 3, href: "https://www.uniprot.org/uniprot/Q9BSC4" }},
+{data: { id: 'NGDN', score: 5, href: "https://www.uniprot.org/uniprot/Q8NEJ9" }}], 
+ edges: [{ data: { source: 'AATF', target: 'NGDN', directed: 'false', weight: 0.45249700000000004} },
+{ data: { source: 'AATF', target: 'NOL10', directed: 'false', weight: 0.287896} },
+{ data: { source: 'NOL10', target: 'NGDN', directed: 'false', weight: 0.175861} }]},
 
 style: [
     {
@@ -80,7 +80,7 @@ cy.on('tap', 'node', function(){
         <br>
         Connection to SARS-COV2: 
         <br>
-        3 interacting protein(s): <br>NOL10 NGDN AATF
+        3 interacting protein(s): <br>AATF NOL10 NGDN
     </section>
     </body>
     </html>

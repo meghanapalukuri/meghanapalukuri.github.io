@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SARS-CoV2 nsp14', score: 2, type:  'sars'  }},
+elements:{nodes: [{data: { id: 'SARS-CoV2 nsp14', score: 2, type:  'sars' , href: "https://covid-19.uniprot.org/uniprotkb/P0DTD1" }},
 {data: { id: 'GLA', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P06280" }},
 {data: { id: 'IMPDH2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P12268" }},
 {data: { id: 'SIRT5', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/A0A024R012" }},
-{data: { id: 'Complex792', score: 0, type: 'complex', href: "../Predicted/Complex792.html" }}], 
- edges: [{ data: { source: 'IMPDH2', target: 'Complex792', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{data: { id: 'ANKRD9 DDX53 IMPDH1 SLC25A44 IMPDH2', score: 0, type: 'complex', href: "../Predicted/Complex792.html" }}], 
+ edges: [{ data: { source: 'IMPDH2', target: 'ANKRD9 DDX53 IMPDH1 SLC25A44 IMPDH2', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'SARS-CoV2 nsp14', target: 'GLA', directed: 'false', type: 'sars2prot',weight: 0.841137578} },
 { data: { source: 'SARS-CoV2 nsp14', target: 'IMPDH2', directed: 'false', type: 'sars2prot',weight: 0.989667608} },
 { data: { source: 'SARS-CoV2 nsp14', target: 'SIRT5', directed: 'false', type: 'sars2prot',weight: 0.99363281} }]},
@@ -43,6 +43,10 @@ style: [
     {
         selector: 'node',
         style: {
+                				'font-size': 20,
+        'font-weight': 'bold',
+                      'text-wrap': 'wrap',
+    'text-max-width': '300',
             shape: function( ele ){ 
                                 if ( ele.data('type') == 'complex' ){return 'rectangle'}
                                 if ( ele.data('type') == 'sars' ){return 'triangle'}
@@ -73,14 +77,14 @@ style: [
 });
 
 cy.layout({
-    name: 'concentric',
-  concentric: function( ele ){ // returns numeric value for each node, placing higher nodes in levels towards the centre
-  return ele.data('score');
-  },
-  equidistant: true, 
-  levelWidth: function( nodes ){ // the variation of concentric values in each level
-  return 1;
-  },
+    'name': 'cose',
+	'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'padding': 1,
+	'componentSpacing': 1,
+	 'idealEdgeLength': function( edge ){ return 1; },
+	 // Divisor to compute edge forces
+  'edgeElasticity': function( edge ){ return 20; }
 }).run();
     
 cy.on('tap', 'node', function(){

@@ -1,0 +1,91 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> RICH1/AMOT polarity complex, Flag-Amot precipitated</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex484.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'MPDZ', score: 5, href: "https://www.uniprot.org/uniprot/O75970" }},
+{data: { id: 'AMOT', score: 5, href: "https://www.uniprot.org/uniprot/A2BDD9" }},
+{data: { id: 'MPP7', score: 5, href: "https://www.uniprot.org/uniprot/Q5T2T1" }},
+{data: { id: 'ARHGAP17', score: 5, href: "https://www.uniprot.org/uniprot/Q68EM7" }},
+{data: { id: 'AMOTL1', score: 5, href: "https://www.uniprot.org/uniprot/Q8IY63" }},
+{data: { id: 'MPP5', score: 5, href: "https://www.uniprot.org/uniprot/Q8N3R9" }},
+{data: { id: 'PATJ', score: 5, href: "https://www.uniprot.org/uniprot/Q8NI35" }},
+{data: { id: 'AMOTL2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y2J4" }}], 
+ edges: [{ data: { source: 'PATJ', target: 'MPDZ', directed: 'false', weight: 0.333706} },
+{ data: { source: 'PATJ', target: 'MPP5', directed: 'false', weight: 0.293097} },
+{ data: { source: 'PATJ', target: 'MPP7', directed: 'false', weight: 0.165845} },
+{ data: { source: 'MPP7', target: 'MPP5', directed: 'false', weight: 0.270991} },
+{ data: { source: 'MPP7', target: 'MPDZ', directed: 'false', weight: 0.176172} },
+{ data: { source: 'AMOT', target: 'AMOTL1', directed: 'false', weight: 0.9997440000000001} },
+{ data: { source: 'MPDZ', target: 'MPP5', directed: 'false', weight: 0.255052} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+    </section>
+    </body>
+    </html>
+    

@@ -1,0 +1,100 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> TNF-alpha/NF-kappa B signaling complex (CHUK, BTRC, NFKB2, PPP6C, REL, CUL1, IKBKE, SAPS2, SAPS1, ANKRD28, RELA, SKP1)</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1583.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'PPP6C', score: 5, href: "https://www.uniprot.org/uniprot/O00743" }},
+{data: { id: 'ANKRD28', score: 5, href: "https://www.uniprot.org/uniprot/O15084" }},
+{data: { id: 'CHUK', score: 5, href: "https://www.uniprot.org/uniprot/O15111" }},
+{data: { id: 'PPP6R2', score: 5, href: "https://www.uniprot.org/uniprot/O75170" }},
+{data: { id: 'SKP1', score: 5, href: "https://www.uniprot.org/uniprot/P63208" }},
+{data: { id: 'NFKB2', score: 5, href: "https://www.uniprot.org/uniprot/Q00653" }},
+{data: { id: 'RELA', score: 5, href: "https://www.uniprot.org/uniprot/Q04206" }},
+{data: { id: 'REL', score: 5, href: "https://www.uniprot.org/uniprot/Q04864" }},
+{data: { id: 'CUL1', score: 5, href: "https://www.uniprot.org/uniprot/Q13616" }},
+{data: { id: 'IKBKE', score: 5, href: "https://www.uniprot.org/uniprot/Q14164" }},
+{data: { id: 'PPP6R1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UPN7" }},
+{data: { id: 'BTRC', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y297" }}], 
+ edges: [{ data: { source: 'REL', target: 'RELA', directed: 'false', weight: 0.49259200000000003} },
+{ data: { source: 'REL', target: 'NFKB2', directed: 'false', weight: 0.450801} },
+{ data: { source: 'REL', target: 'CHUK', directed: 'false', weight: 0.140692} },
+{ data: { source: 'PPP6R1', target: 'ANKRD28', directed: 'false', weight: 0.9687790000000001} },
+{ data: { source: 'PPP6R1', target: 'PPP6C', directed: 'false', weight: 0.9629280000000001} },
+{ data: { source: 'PPP6R1', target: 'PPP6R2', directed: 'false', weight: 0.650718} },
+{ data: { source: 'ANKRD28', target: 'PPP6R2', directed: 'false', weight: 0.997617} },
+{ data: { source: 'ANKRD28', target: 'PPP6C', directed: 'false', weight: 0.9256690000000001} },
+{ data: { source: 'NFKB2', target: 'RELA', directed: 'false', weight: 0.450801} },
+{ data: { source: 'NFKB2', target: 'CHUK', directed: 'false', weight: 0.140692} },
+{ data: { source: 'PPP6C', target: 'PPP6R2', directed: 'false', weight: 0.971986} },
+{ data: { source: 'CHUK', target: 'RELA', directed: 'false', weight: 0.140692} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+    </section>
+    </body>
+    </html>
+    

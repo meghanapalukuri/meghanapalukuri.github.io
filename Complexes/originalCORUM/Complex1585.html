@@ -1,0 +1,111 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Kinase maturation complex 1</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1586.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'HSP90AA1', score: 5, href: "https://www.uniprot.org/uniprot/P07900" }},
+{data: { id: 'HSP90AB1', score: 5, href: "https://www.uniprot.org/uniprot/A0A024RD80" }},
+{data: { id: 'YWHAQ', score: 5, href: "https://www.uniprot.org/uniprot/P27348" }},
+{data: { id: 'YWHAB', score: 5, href: "https://www.uniprot.org/uniprot/P31946" }},
+{data: { id: 'HSPA4', score: 5, href: "https://www.uniprot.org/uniprot/P34932" }},
+{data: { id: 'YWHAG', score: 5, href: "https://www.uniprot.org/uniprot/P61981" }},
+{data: { id: 'YWHAE', score: 5, href: "https://www.uniprot.org/uniprot/P62258" }},
+{data: { id: 'YWHAZ', score: 5, href: "https://www.uniprot.org/uniprot/P63104" }},
+{data: { id: 'YWHAH', score: 5, href: "https://www.uniprot.org/uniprot/Q04917" }},
+{data: { id: 'MAP2K5', score: 5, href: "https://www.uniprot.org/uniprot/Q13163" }},
+{data: { id: 'CDC37', score: 5, href: "https://www.uniprot.org/uniprot/Q16543" }},
+{data: { id: 'TRAF7', score: 5, href: "https://www.uniprot.org/uniprot/Q6Q0C0" }},
+{data: { id: 'MARK2', score: 5, href: "https://www.uniprot.org/uniprot/Q7KZI7" }},
+{data: { id: 'MAP3K3', score: 5, href: "https://www.uniprot.org/uniprot/Q99759" }},
+{data: { id: 'PDRG1', score: 3, href: "https://www.uniprot.org/uniprot/Q9NUG6" }},
+{data: { id: 'PFDN2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHV9" }}], 
+ edges: [{ data: { source: 'HSPA4', target: 'HSP90AB1', directed: 'false', weight: 0.8380540000000001} },
+{ data: { source: 'HSPA4', target: 'HSP90AA1', directed: 'false', weight: 0.696837} },
+{ data: { source: 'YWHAQ', target: 'YWHAG', directed: 'false', weight: 0.994755} },
+{ data: { source: 'YWHAQ', target: 'YWHAH', directed: 'false', weight: 0.98755} },
+{ data: { source: 'YWHAQ', target: 'YWHAB', directed: 'false', weight: 0.985627} },
+{ data: { source: 'YWHAQ', target: 'YWHAE', directed: 'false', weight: 0.970675} },
+{ data: { source: 'HSP90AA1', target: 'HSP90AB1', directed: 'false', weight: 0.9997860000000001} },
+{ data: { source: 'YWHAH', target: 'YWHAG', directed: 'false', weight: 0.999892} },
+{ data: { source: 'YWHAH', target: 'YWHAB', directed: 'false', weight: 0.997915} },
+{ data: { source: 'YWHAH', target: 'YWHAE', directed: 'false', weight: 0.705971} },
+{ data: { source: 'PDRG1', target: 'PFDN2', directed: 'false', weight: 0.9972479999999999} },
+{ data: { source: 'YWHAE', target: 'YWHAG', directed: 'false', weight: 0.979721} },
+{ data: { source: 'YWHAE', target: 'YWHAB', directed: 'false', weight: 0.857569} },
+{ data: { source: 'YWHAG', target: 'YWHAB', directed: 'false', weight: 0.999977} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>MARK2
+    </section>
+    </body>
+    </html>
+    

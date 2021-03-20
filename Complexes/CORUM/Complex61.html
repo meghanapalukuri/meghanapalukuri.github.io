@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 61</title>
+<title> p16-cyclin D2-CDK4 complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CCND2', score: 5, href: "https://www.uniprot.org/uniprot/P30279" }},
-{data: { id: 'CDKN2A', score: 5, href: "https://www.uniprot.org/uniprot/P42771" }},
-{data: { id: 'CDK4', score: 5, href: "https://www.uniprot.org/uniprot/A0A024RBB6" }}], 
- edges: [{ data: { source: 'CCND2', target: 'CDK4', directed: 'false', weight: 0.692639} },
-{ data: { source: 'CCND2', target: 'CDKN2A', directed: 'false', weight: 0.123797} },
-{ data: { source: 'CDKN2A', target: 'CDK4', directed: 'false', weight: 0.980915} }]},
+elements:{nodes: [{data: { id: 'CDKN2A', score: 5, href: "https://www.uniprot.org/uniprot/P42771" }},
+{data: { id: 'CDK4', score: 5, href: "https://www.uniprot.org/uniprot/A0A024RBB6" }},
+{data: { id: 'CCND2', score: 5, href: "https://www.uniprot.org/uniprot/P30279" }}], 
+ edges: [{ data: { source: 'CDKN2A', target: 'CDK4', directed: 'false', weight: 0.980915} },
+{ data: { source: 'CDKN2A', target: 'CCND2', directed: 'false', weight: 0.123797} },
+{ data: { source: 'CDK4', target: 'CCND2', directed: 'false', weight: 0.692639} }]},
 
 style: [
     {

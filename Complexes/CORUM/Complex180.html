@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 180</title>
+<title> TAK1 complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TAB1', score: 5, href: "https://www.uniprot.org/uniprot/Q15750" }},
-{data: { id: 'MAP3K7', score: 5, href: "https://www.uniprot.org/uniprot/O43318" }},
-{data: { id: 'TAB2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NYJ8" }}], 
- edges: [{ data: { source: 'TAB1', target: 'MAP3K7', directed: 'false', weight: 0.356858} },
-{ data: { source: 'TAB1', target: 'TAB2', directed: 'false', weight: 0.294644} },
-{ data: { source: 'MAP3K7', target: 'TAB2', directed: 'false', weight: 0.198303} }]},
+elements:{nodes: [{data: { id: 'MAP3K7', score: 5, href: "https://www.uniprot.org/uniprot/O43318" }},
+{data: { id: 'TAB2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NYJ8" }},
+{data: { id: 'TAB1', score: 5, href: "https://www.uniprot.org/uniprot/Q15750" }}], 
+ edges: [{ data: { source: 'MAP3K7', target: 'TAB1', directed: 'false', weight: 0.356858} },
+{ data: { source: 'MAP3K7', target: 'TAB2', directed: 'false', weight: 0.198303} },
+{ data: { source: 'TAB2', target: 'TAB1', directed: 'false', weight: 0.294644} }]},
 
 style: [
     {

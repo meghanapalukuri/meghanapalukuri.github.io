@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 52</title>
+<title> Apoptosis- and splicing-associated protein complex (ASAP-L), SAP18, RNPS1, Acinus-L</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,11 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ACIN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKV3" }},
-{data: { id: 'SAP18', score: 5, href: "https://www.uniprot.org/uniprot/O00422" }},
-{data: { id: 'RNPS1', score: 5, href: "https://www.uniprot.org/uniprot/Q15287" }}], 
+elements:{nodes: [{data: { id: 'SAP18', score: 5, href: "https://www.uniprot.org/uniprot/O00422" }},
+{data: { id: 'RNPS1', score: 5, href: "https://www.uniprot.org/uniprot/Q15287" }},
+{data: { id: 'ACIN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKV3" }}], 
  edges: [{ data: { source: 'SAP18', target: 'RNPS1', directed: 'false', weight: 0.9643430000000001} },
-{ data: { source: 'ACIN1', target: 'RNPS1', directed: 'false', weight: 0.99926} }]},
+{ data: { source: 'RNPS1', target: 'ACIN1', directed: 'false', weight: 0.99926} }]},
 
 style: [
     {

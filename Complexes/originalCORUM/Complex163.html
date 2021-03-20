@@ -1,0 +1,131 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> SNF2h-cohesin-NuRD complex</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex164.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'RAD21', score: 5, href: "https://www.uniprot.org/uniprot/O60216" }},
+{data: { id: 'SMARCA5', score: 5, href: "https://www.uniprot.org/uniprot/O60264" }},
+{data: { id: 'MTA2', score: 5, href: "https://www.uniprot.org/uniprot/O94776" }},
+{data: { id: 'MBD3', score: 5, href: "https://www.uniprot.org/uniprot/O95983" }},
+{data: { id: 'RBBP4', score: 5, href: "https://www.uniprot.org/uniprot/Q09028" }},
+{data: { id: 'CHD3', score: 5, href: "https://www.uniprot.org/uniprot/Q12873" }},
+{data: { id: 'MTA1', score: 5, href: "https://www.uniprot.org/uniprot/Q13330" }},
+{data: { id: 'HDAC1', score: 5, href: "https://www.uniprot.org/uniprot/Q13547" }},
+{data: { id: 'SMC1A', score: 5, href: "https://www.uniprot.org/uniprot/Q14683" }},
+{data: { id: 'RBBP7', score: 5, href: "https://www.uniprot.org/uniprot/Q16576" }},
+{data: { id: 'STAG2', score: 5, href: "https://www.uniprot.org/uniprot/Q8N3U4" }},
+{data: { id: 'STAG1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVM7" }},
+{data: { id: 'HDAC2', score: 5, href: "https://www.uniprot.org/uniprot/Q92769" }},
+{data: { id: 'BAZ1A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NRL2" }},
+{data: { id: 'MBD2', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBB5" }},
+{data: { id: 'SMC3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UQE7" }}], 
+ edges: [{ data: { source: 'STAG1', target: 'SMC1A', directed: 'false', weight: 0.996499} },
+{ data: { source: 'STAG1', target: 'RAD21', directed: 'false', weight: 0.983316} },
+{ data: { source: 'STAG1', target: 'SMC3', directed: 'false', weight: 0.975893} },
+{ data: { source: 'STAG1', target: 'STAG2', directed: 'false', weight: 0.755897} },
+{ data: { source: 'RBBP4', target: 'HDAC2', directed: 'false', weight: 0.999713} },
+{ data: { source: 'RBBP4', target: 'MTA2', directed: 'false', weight: 0.996554} },
+{ data: { source: 'RBBP4', target: 'MBD3', directed: 'false', weight: 0.9773209999999999} },
+{ data: { source: 'RBBP4', target: 'MBD2', directed: 'false', weight: 0.9603209999999999} },
+{ data: { source: 'RBBP4', target: 'CHD3', directed: 'false', weight: 0.950577} },
+{ data: { source: 'MBD3', target: 'MTA2', directed: 'false', weight: 0.999075} },
+{ data: { source: 'MBD3', target: 'MTA1', directed: 'false', weight: 0.9990129999999999} },
+{ data: { source: 'MBD3', target: 'RBBP7', directed: 'false', weight: 0.99449} },
+{ data: { source: 'MBD3', target: 'MBD2', directed: 'false', weight: 0.9208770000000001} },
+{ data: { source: 'MBD3', target: 'CHD3', directed: 'false', weight: 0.805497} },
+{ data: { source: 'MBD3', target: 'HDAC2', directed: 'false', weight: 0.37599499999999997} },
+{ data: { source: 'HDAC1', target: 'HDAC2', directed: 'false', weight: 1.0} },
+{ data: { source: 'HDAC1', target: 'MTA2', directed: 'false', weight: 0.999965} },
+{ data: { source: 'RAD21', target: 'SMC1A', directed: 'false', weight: 0.993503} },
+{ data: { source: 'RAD21', target: 'SMC3', directed: 'false', weight: 0.991294} },
+{ data: { source: 'RAD21', target: 'STAG2', directed: 'false', weight: 0.9759389999999999} },
+{ data: { source: 'STAG2', target: 'SMC1A', directed: 'false', weight: 0.993922} },
+{ data: { source: 'STAG2', target: 'SMC3', directed: 'false', weight: 0.9759200000000001} },
+{ data: { source: 'MTA1', target: 'MBD2', directed: 'false', weight: 0.9995129999999999} },
+{ data: { source: 'MTA1', target: 'RBBP7', directed: 'false', weight: 0.998778} },
+{ data: { source: 'MTA1', target: 'CHD3', directed: 'false', weight: 0.306371} },
+{ data: { source: 'HDAC2', target: 'MTA2', directed: 'false', weight: 0.999833} },
+{ data: { source: 'HDAC2', target: 'MBD2', directed: 'false', weight: 0.9986450000000001} },
+{ data: { source: 'HDAC2', target: 'CHD3', directed: 'false', weight: 0.8404860000000001} },
+{ data: { source: 'MTA2', target: 'MBD2', directed: 'false', weight: 0.999884} },
+{ data: { source: 'MTA2', target: 'CHD3', directed: 'false', weight: 0.4869} },
+{ data: { source: 'MBD2', target: 'RBBP7', directed: 'false', weight: 0.977986} },
+{ data: { source: 'MBD2', target: 'CHD3', directed: 'false', weight: 0.8775069999999999} },
+{ data: { source: 'CHD3', target: 'RBBP7', directed: 'false', weight: 0.9554549999999999} },
+{ data: { source: 'SMC1A', target: 'SMC3', directed: 'false', weight: 0.988532} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>HDAC2
+    </section>
+    </body>
+    </html>
+    

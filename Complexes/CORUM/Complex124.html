@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 124</title>
+<title> Cell division cycle complex (CDC27, CDC16, ANAPC7)</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ANAPC7', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJX3" }},
-{data: { id: 'CDC16', score: 5, href: "https://www.uniprot.org/uniprot/Q13042" }},
-{data: { id: 'CDC27', score: 5, href: "https://www.uniprot.org/uniprot/P30260" }}], 
- edges: [{ data: { source: 'ANAPC7', target: 'CDC16', directed: 'false', weight: 0.9990690000000001} },
-{ data: { source: 'ANAPC7', target: 'CDC27', directed: 'false', weight: 0.996358} },
-{ data: { source: 'CDC16', target: 'CDC27', directed: 'false', weight: 0.9999950000000001} }]},
+elements:{nodes: [{data: { id: 'CDC27', score: 5, href: "https://www.uniprot.org/uniprot/P30260" }},
+{data: { id: 'ANAPC7', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJX3" }},
+{data: { id: 'CDC16', score: 5, href: "https://www.uniprot.org/uniprot/Q13042" }}], 
+ edges: [{ data: { source: 'CDC27', target: 'CDC16', directed: 'false', weight: 0.9999950000000001} },
+{ data: { source: 'CDC27', target: 'ANAPC7', directed: 'false', weight: 0.996358} },
+{ data: { source: 'CDC16', target: 'ANAPC7', directed: 'false', weight: 0.9990690000000001} }]},
 
 style: [
     {

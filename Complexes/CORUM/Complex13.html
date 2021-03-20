@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 13</title>
+<title> hPRC1L complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'BMI1', score: 5, href: "https://www.uniprot.org/uniprot/P35226" }},
+elements:{nodes: [{data: { id: 'RING1', score: 5, href: "https://www.uniprot.org/uniprot/Q06587" }},
+{data: { id: 'BMI1', score: 5, href: "https://www.uniprot.org/uniprot/P35226" }},
 {data: { id: 'RNF2', score: 5, href: "https://www.uniprot.org/uniprot/Q99496" }},
-{data: { id: 'PHC2', score: 5, href: "https://www.uniprot.org/uniprot/Q8IXK0" }},
-{data: { id: 'RING1', score: 5, href: "https://www.uniprot.org/uniprot/Q06587" }}], 
+{data: { id: 'PHC2', score: 5, href: "https://www.uniprot.org/uniprot/Q8IXK0" }}], 
  edges: [{ data: { source: 'BMI1', target: 'RNF2', directed: 'false', weight: 0.8609690000000001} },
 { data: { source: 'BMI1', target: 'RING1', directed: 'false', weight: 0.763912} },
 { data: { source: 'BMI1', target: 'PHC2', directed: 'false', weight: 0.667403} },
-{ data: { source: 'RNF2', target: 'RING1', directed: 'false', weight: 0.9988950000000001} },
-{ data: { source: 'RNF2', target: 'PHC2', directed: 'false', weight: 0.792925} },
-{ data: { source: 'PHC2', target: 'RING1', directed: 'false', weight: 0.5957060000000001} }]},
+{ data: { source: 'RING1', target: 'RNF2', directed: 'false', weight: 0.9988950000000001} },
+{ data: { source: 'RING1', target: 'PHC2', directed: 'false', weight: 0.5957060000000001} },
+{ data: { source: 'RNF2', target: 'PHC2', directed: 'false', weight: 0.792925} }]},
 
 style: [
     {

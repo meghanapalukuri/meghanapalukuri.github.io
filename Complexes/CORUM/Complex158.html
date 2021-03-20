@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 158</title>
+<title> ESCRT-II complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'VPS36', score: 5, href: "https://www.uniprot.org/uniprot/Q86VN1" }},
-{data: { id: 'VPS25', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRG1" }},
-{data: { id: 'SNF8', score: 5, href: "https://www.uniprot.org/uniprot/Q96H20" }}], 
- edges: [{ data: { source: 'VPS36', target: 'VPS25', directed: 'false', weight: 0.634412} },
-{ data: { source: 'VPS36', target: 'SNF8', directed: 'false', weight: 0.436906} },
-{ data: { source: 'VPS25', target: 'SNF8', directed: 'false', weight: 0.9823} }]},
+elements:{nodes: [{data: { id: 'SNF8', score: 5, href: "https://www.uniprot.org/uniprot/Q96H20" }},
+{data: { id: 'VPS36', score: 5, href: "https://www.uniprot.org/uniprot/Q86VN1" }},
+{data: { id: 'VPS25', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRG1" }}], 
+ edges: [{ data: { source: 'SNF8', target: 'VPS25', directed: 'false', weight: 0.9823} },
+{ data: { source: 'SNF8', target: 'VPS36', directed: 'false', weight: 0.436906} },
+{ data: { source: 'VPS36', target: 'VPS25', directed: 'false', weight: 0.634412} }]},
 
 style: [
     {

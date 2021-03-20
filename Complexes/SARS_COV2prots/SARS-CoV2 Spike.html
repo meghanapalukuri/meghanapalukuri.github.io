@@ -29,13 +29,13 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SARS-CoV2 Spike', score: 2, type:  'sars'  }},
+elements:{nodes: [{data: { id: 'SARS-CoV2 Spike', score: 2, type:  'sars' , href: "https://covid-19.uniprot.org/uniprotkb/P0DTC2" }},
 {data: { id: 'GOLGA7', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q7Z5G4" }},
 {data: { id: 'ZDHHC5', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q9C0B5" }},
-{data: { id: 'Complex23', score: 0, type: 'complex', href: "../Predicted/Complex23.html" }},
-{data: { id: 'Complex249', score: 0, type: 'complex', href: "../Predicted/Complex249.html" }}], 
- edges: [{ data: { source: 'GOLGA7', target: 'Complex249', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'ZDHHC5', target: 'Complex23', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{data: { id: '0.1 CART complex', score: 0, type: 'complex', href: "../Predicted/Complex23.html" }},
+{data: { id: 'ZDHHC8 CLDND1 MAN1A2 GOLGA7', score: 0, type: 'complex', href: "../Predicted/Complex249.html" }}], 
+ edges: [{ data: { source: 'GOLGA7', target: 'ZDHHC8 CLDND1 MAN1A2 GOLGA7', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'ZDHHC5', target: '0.1 CART complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'SARS-CoV2 Spike', target: 'GOLGA7', directed: 'false', type: 'sars2prot',weight: 0.978892719} },
 { data: { source: 'SARS-CoV2 Spike', target: 'ZDHHC5', directed: 'false', type: 'sars2prot',weight: 0.982389013} }]},
 
@@ -43,6 +43,10 @@ style: [
     {
         selector: 'node',
         style: {
+                				'font-size': 20,
+        'font-weight': 'bold',
+                      'text-wrap': 'wrap',
+    'text-max-width': '300',
             shape: function( ele ){ 
                                 if ( ele.data('type') == 'complex' ){return 'rectangle'}
                                 if ( ele.data('type') == 'sars' ){return 'triangle'}
@@ -73,14 +77,14 @@ style: [
 });
 
 cy.layout({
-    name: 'concentric',
-  concentric: function( ele ){ // returns numeric value for each node, placing higher nodes in levels towards the centre
-  return ele.data('score');
-  },
-  equidistant: true, 
-  levelWidth: function( nodes ){ // the variation of concentric values in each level
-  return 1;
-  },
+    'name': 'cose',
+	'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'padding': 1,
+	'componentSpacing': 1,
+	 'idealEdgeLength': function( edge ){ return 1; },
+	 // Divisor to compute edge forces
+  'edgeElasticity': function( edge ){ return 20; }
 }).run();
     
 cy.on('tap', 'node', function(){

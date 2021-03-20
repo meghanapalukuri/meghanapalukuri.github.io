@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 176</title>
+<title> PPP3CA-PPP3CA-RCAN1 complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PPP3CA', score: 5, href: "https://www.uniprot.org/uniprot/A0A0S2Z4C6" }},
-{data: { id: 'RCAN1', score: 5, href: "https://www.uniprot.org/uniprot/P53805" }},
-{data: { id: 'PPP3CB', score: 5, href: "https://www.uniprot.org/uniprot/P16298" }}], 
- edges: [{ data: { source: 'PPP3CA', target: 'RCAN1', directed: 'false', weight: 0.749869} },
-{ data: { source: 'PPP3CA', target: 'PPP3CB', directed: 'false', weight: 0.355147} },
-{ data: { source: 'RCAN1', target: 'PPP3CB', directed: 'false', weight: 0.0896254} }]},
+elements:{nodes: [{data: { id: 'PPP3CB', score: 5, href: "https://www.uniprot.org/uniprot/P16298" }},
+{data: { id: 'PPP3CA', score: 5, href: "https://www.uniprot.org/uniprot/A0A0S2Z4C6" }},
+{data: { id: 'RCAN1', score: 5, href: "https://www.uniprot.org/uniprot/P53805" }}], 
+ edges: [{ data: { source: 'PPP3CB', target: 'PPP3CA', directed: 'false', weight: 0.355147} },
+{ data: { source: 'PPP3CB', target: 'RCAN1', directed: 'false', weight: 0.0896254} },
+{ data: { source: 'PPP3CA', target: 'RCAN1', directed: 'false', weight: 0.749869} }]},
 
 style: [
     {

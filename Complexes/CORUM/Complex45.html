@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 45</title>
+<title> Ubiquitin E3 ligase (CUL3, KLHL24, RBX1)</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,11 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CUL3', score: 5, href: "https://www.uniprot.org/uniprot/Q13618" }},
+elements:{nodes: [{data: { id: 'RBX1', score: 5, href: "https://www.uniprot.org/uniprot/P62877" }},
 {data: { id: 'KLHL24', score: 5, href: "https://www.uniprot.org/uniprot/Q6TFL4" }},
-{data: { id: 'RBX1', score: 5, href: "https://www.uniprot.org/uniprot/P62877" }}], 
- edges: [{ data: { source: 'CUL3', target: 'KLHL24', directed: 'false', weight: 0.661305} },
-{ data: { source: 'CUL3', target: 'RBX1', directed: 'false', weight: 0.658836} }]},
+{data: { id: 'CUL3', score: 5, href: "https://www.uniprot.org/uniprot/Q13618" }}], 
+ edges: [{ data: { source: 'RBX1', target: 'CUL3', directed: 'false', weight: 0.658836} },
+{ data: { source: 'KLHL24', target: 'CUL3', directed: 'false', weight: 0.661305} }]},
 
 style: [
     {

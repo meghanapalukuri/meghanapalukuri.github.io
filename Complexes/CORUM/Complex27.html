@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 27</title>
+<title> Paf complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,21 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CTR9', score: 5, href: "https://www.uniprot.org/uniprot/Q6PD62" }},
-{data: { id: 'WDR61', score: 5, href: "https://www.uniprot.org/uniprot/Q9GZS3" }},
+elements:{nodes: [{data: { id: 'LEO1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVC0" }},
 {data: { id: 'PAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N7H5" }},
-{data: { id: 'CDC73', score: 5, href: "https://www.uniprot.org/uniprot/Q6P1J9" }},
-{data: { id: 'LEO1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVC0" }}], 
- edges: [{ data: { source: 'CTR9', target: 'LEO1', directed: 'false', weight: 0.996927} },
-{ data: { source: 'CTR9', target: 'PAF1', directed: 'false', weight: 0.996073} },
+{data: { id: 'CTR9', score: 5, href: "https://www.uniprot.org/uniprot/Q6PD62" }},
+{data: { id: 'WDR61', score: 5, href: "https://www.uniprot.org/uniprot/Q9GZS3" }},
+{data: { id: 'CDC73', score: 5, href: "https://www.uniprot.org/uniprot/Q6P1J9" }}], 
+ edges: [{ data: { source: 'LEO1', target: 'WDR61', directed: 'false', weight: 0.9984870000000001} },
+{ data: { source: 'LEO1', target: 'CDC73', directed: 'false', weight: 0.998446} },
+{ data: { source: 'LEO1', target: 'CTR9', directed: 'false', weight: 0.996927} },
+{ data: { source: 'LEO1', target: 'PAF1', directed: 'false', weight: 0.721615} },
+{ data: { source: 'PAF1', target: 'CDC73', directed: 'false', weight: 0.9998819999999999} },
+{ data: { source: 'PAF1', target: 'WDR61', directed: 'false', weight: 0.9976959999999999} },
+{ data: { source: 'PAF1', target: 'CTR9', directed: 'false', weight: 0.996073} },
 { data: { source: 'CTR9', target: 'CDC73', directed: 'false', weight: 0.993296} },
 { data: { source: 'CTR9', target: 'WDR61', directed: 'false', weight: 0.9731200000000001} },
-{ data: { source: 'WDR61', target: 'CDC73', directed: 'false', weight: 0.9994270000000001} },
-{ data: { source: 'WDR61', target: 'LEO1', directed: 'false', weight: 0.9984870000000001} },
-{ data: { source: 'WDR61', target: 'PAF1', directed: 'false', weight: 0.9976959999999999} },
-{ data: { source: 'PAF1', target: 'CDC73', directed: 'false', weight: 0.9998819999999999} },
-{ data: { source: 'PAF1', target: 'LEO1', directed: 'false', weight: 0.721615} },
-{ data: { source: 'CDC73', target: 'LEO1', directed: 'false', weight: 0.998446} }]},
+{ data: { source: 'WDR61', target: 'CDC73', directed: 'false', weight: 0.9994270000000001} }]},
 
 style: [
     {

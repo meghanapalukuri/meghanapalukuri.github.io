@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 40</title>
+<title> IMP3-IMP4-MPP10 complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'IMP3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NV31" }},
-{data: { id: 'MPHOSPH10', score: 5, href: "https://www.uniprot.org/uniprot/O00566" }},
+elements:{nodes: [{data: { id: 'MPHOSPH10', score: 5, href: "https://www.uniprot.org/uniprot/O00566" }},
+{data: { id: 'IMP3', score: 5, href: "https://www.uniprot.org/uniprot/Q9NV31" }},
 {data: { id: 'IMP4', score: 5, href: "https://www.uniprot.org/uniprot/Q96G21" }}], 
- edges: [{ data: { source: 'IMP3', target: 'MPHOSPH10', directed: 'false', weight: 0.99982} },
-{ data: { source: 'IMP3', target: 'IMP4', directed: 'false', weight: 0.70173} },
-{ data: { source: 'IMP4', target: 'MPHOSPH10', directed: 'false', weight: 0.9759389999999999} }]},
+ edges: [{ data: { source: 'MPHOSPH10', target: 'IMP3', directed: 'false', weight: 0.99982} },
+{ data: { source: 'MPHOSPH10', target: 'IMP4', directed: 'false', weight: 0.9759389999999999} },
+{ data: { source: 'IMP3', target: 'IMP4', directed: 'false', weight: 0.70173} }]},
 
 style: [
     {

@@ -1,0 +1,145 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Respiratory chain complex I (beta subunit) mitochondrial</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1286.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NDUFA4', score: 5, href: "https://www.uniprot.org/uniprot/O00483" }},
+{data: { id: 'NDUFAB1', score: 5, href: "https://www.uniprot.org/uniprot/O14561" }},
+{data: { id: 'NDUFB5', score: 5, href: "https://www.uniprot.org/uniprot/O43674" }},
+{data: { id: 'NDUFB3', score: 5, href: "https://www.uniprot.org/uniprot/O43676" }},
+{data: { id: 'NDUFB1', score: 5, href: "https://www.uniprot.org/uniprot/O75438" }},
+{data: { id: 'NDUFB6', score: 5, href: "https://www.uniprot.org/uniprot/O95139" }},
+{data: { id: 'NDUFB4', score: 5, href: "https://www.uniprot.org/uniprot/O95168" }},
+{data: { id: 'NDUFB8', score: 5, href: "https://www.uniprot.org/uniprot/O95169" }},
+{data: { id: 'NDUFB2', score: 4, href: "https://www.uniprot.org/uniprot/O95178" }},
+{data: { id: 'NDUFC2', score: 5, href: "https://www.uniprot.org/uniprot/O95298" }},
+{data: { id: 'NDUFB10', score: 5, href: "https://www.uniprot.org/uniprot/O96000" }},
+{data: { id: 'ND4', score: 3, href: "https://www.uniprot.org/uniprot/A0A1X7RBN5" }},
+{data: { id: 'ND5', score: 3, href: "https://www.uniprot.org/uniprot/Q6RMK4" }},
+{data: { id: 'NDUFB7', score: 5, href: "https://www.uniprot.org/uniprot/P17568" }},
+{data: { id: 'NDUFB11', score: 5, href: "https://www.uniprot.org/uniprot/Q9NX14" }},
+{data: { id: 'NDUFB9', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y6M9" }}], 
+ edges: [{ data: { source: 'NDUFB6', target: 'NDUFB1', directed: 'false', weight: 0.28781100000000004} },
+{ data: { source: 'NDUFB6', target: 'NDUFB11', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'NDUFB6', target: 'NDUFB3', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'NDUFB6', target: 'NDUFB5', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'NDUFB6', target: 'ND5', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'NDUFB6', target: 'ND4', directed: 'false', weight: 0.25848000000000004} },
+{ data: { source: 'NDUFB6', target: 'NDUFB10', directed: 'false', weight: 0.238157} },
+{ data: { source: 'NDUFB6', target: 'NDUFB9', directed: 'false', weight: 0.222827} },
+{ data: { source: 'NDUFB6', target: 'NDUFB8', directed: 'false', weight: 0.222827} },
+{ data: { source: 'NDUFB8', target: 'NDUFB4', directed: 'false', weight: 0.769668} },
+{ data: { source: 'NDUFB8', target: 'NDUFB5', directed: 'false', weight: 0.5830649999999999} },
+{ data: { source: 'NDUFB8', target: 'NDUFB1', directed: 'false', weight: 0.539538} },
+{ data: { source: 'NDUFB8', target: 'NDUFB9', directed: 'false', weight: 0.442675} },
+{ data: { source: 'NDUFB8', target: 'NDUFB3', directed: 'false', weight: 0.313012} },
+{ data: { source: 'NDUFB8', target: 'ND5', directed: 'false', weight: 0.313012} },
+{ data: { source: 'NDUFB8', target: 'ND4', directed: 'false', weight: 0.313012} },
+{ data: { source: 'NDUFB8', target: 'NDUFB10', directed: 'false', weight: 0.27255} },
+{ data: { source: 'NDUFB8', target: 'NDUFB11', directed: 'false', weight: 0.163688} },
+{ data: { source: 'ND4', target: 'NDUFB1', directed: 'false', weight: 0.463714} },
+{ data: { source: 'ND4', target: 'NDUFB5', directed: 'false', weight: 0.390018} },
+{ data: { source: 'ND4', target: 'NDUFB10', directed: 'false', weight: 0.345713} },
+{ data: { source: 'ND4', target: 'NDUFB11', directed: 'false', weight: 0.1922} },
+{ data: { source: 'ND4', target: 'ND5', directed: 'false', weight: 0.1922} },
+{ data: { source: 'ND4', target: 'NDUFB3', directed: 'false', weight: 0.1922} },
+{ data: { source: 'ND4', target: 'NDUFB9', directed: 'false', weight: 0.163688} },
+{ data: { source: 'NDUFB3', target: 'ND5', directed: 'false', weight: 0.714739} },
+{ data: { source: 'NDUFB3', target: 'NDUFB5', directed: 'false', weight: 0.390018} },
+{ data: { source: 'NDUFB3', target: 'NDUFB9', directed: 'false', weight: 0.313012} },
+{ data: { source: 'NDUFB3', target: 'NDUFB1', directed: 'false', weight: 0.216185} },
+{ data: { source: 'NDUFB3', target: 'NDUFB11', directed: 'false', weight: 0.1922} },
+{ data: { source: 'NDUFB3', target: 'NDUFB10', directed: 'false', weight: 0.175861} },
+{ data: { source: 'NDUFB4', target: 'NDUFB7', directed: 'false', weight: 0.32712600000000003} },
+{ data: { source: 'NDUFB4', target: 'NDUFB1', directed: 'false', weight: 0.226503} },
+{ data: { source: 'NDUFB10', target: 'NDUFB1', directed: 'false', weight: 0.414998} },
+{ data: { source: 'NDUFB10', target: 'NDUFB11', directed: 'false', weight: 0.345713} },
+{ data: { source: 'NDUFB10', target: 'NDUFB5', directed: 'false', weight: 0.345713} },
+{ data: { source: 'NDUFB10', target: 'ND5', directed: 'false', weight: 0.175861} },
+{ data: { source: 'NDUFB10', target: 'NDUFB9', directed: 'false', weight: 0.149338} },
+{ data: { source: 'NDUFB5', target: 'NDUFB1', directed: 'false', weight: 0.463714} },
+{ data: { source: 'NDUFB5', target: 'ND5', directed: 'false', weight: 0.390018} },
+{ data: { source: 'NDUFB5', target: 'NDUFB9', directed: 'false', weight: 0.313012} },
+{ data: { source: 'NDUFB5', target: 'NDUFB11', directed: 'false', weight: 0.1922} },
+{ data: { source: 'NDUFB11', target: 'NDUFB1', directed: 'false', weight: 0.313963} },
+{ data: { source: 'NDUFB11', target: 'ND5', directed: 'false', weight: 0.1922} },
+{ data: { source: 'NDUFB11', target: 'NDUFB9', directed: 'false', weight: 0.163688} },
+{ data: { source: 'NDUFB9', target: 'ND5', directed: 'false', weight: 0.313012} },
+{ data: { source: 'NDUFB9', target: 'NDUFB1', directed: 'false', weight: 0.184918} },
+{ data: { source: 'NDUFB1', target: 'ND5', directed: 'false', weight: 0.216185} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+        <br> 
+        <br>
+        Connection to SARS-COV2: 
+        <br>
+        1 interacting protein(s): <br>NDUFB9
+    </section>
+    </body>
+    </html>
+    

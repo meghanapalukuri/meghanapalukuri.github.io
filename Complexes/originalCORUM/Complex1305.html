@@ -1,0 +1,107 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Respiratory chain complex I (incomplete intermediate), mitochondrial</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1306.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NDUFS4', score: 5, href: "https://www.uniprot.org/uniprot/O43181" }},
+{data: { id: 'NDUFS7', score: 5, href: "https://www.uniprot.org/uniprot/O75251" }},
+{data: { id: 'NDUFS2', score: 5, href: "https://www.uniprot.org/uniprot/O75306" }},
+{data: { id: 'NDUFS6', score: 5, href: "https://www.uniprot.org/uniprot/O75380" }},
+{data: { id: 'NDUFB8', score: 5, href: "https://www.uniprot.org/uniprot/O95169" }},
+{data: { id: 'NDUFA10', score: 5, href: "https://www.uniprot.org/uniprot/O95299" }},
+{data: { id: 'NDUFV2', score: 5, href: "https://www.uniprot.org/uniprot/P19404" }},
+{data: { id: 'NDUFS1', score: 5, href: "https://www.uniprot.org/uniprot/P28331" }},
+{data: { id: 'NDUFV1', score: 5, href: "https://www.uniprot.org/uniprot/P49821" }},
+{data: { id: 'NDUFV3', score: 5, href: "https://www.uniprot.org/uniprot/P56181" }},
+{data: { id: 'NDUFA9', score: 5, href: "https://www.uniprot.org/uniprot/Q16795" }}], 
+ edges: [{ data: { source: 'NDUFS4', target: 'NDUFV3', directed: 'false', weight: 0.6375390000000001} },
+{ data: { source: 'NDUFS4', target: 'NDUFB8', directed: 'false', weight: 0.506258} },
+{ data: { source: 'NDUFS4', target: 'NDUFS2', directed: 'false', weight: 0.337502} },
+{ data: { source: 'NDUFS4', target: 'NDUFS7', directed: 'false', weight: 0.216185} },
+{ data: { source: 'NDUFS4', target: 'NDUFV1', directed: 'false', weight: 0.175311} },
+{ data: { source: 'NDUFS1', target: 'NDUFS6', directed: 'false', weight: 0.8113640000000001} },
+{ data: { source: 'NDUFS1', target: 'NDUFV2', directed: 'false', weight: 0.21909} },
+{ data: { source: 'NDUFV3', target: 'NDUFB8', directed: 'false', weight: 0.27255} },
+{ data: { source: 'NDUFV3', target: 'NDUFS7', directed: 'false', weight: 0.198303} },
+{ data: { source: 'NDUFV3', target: 'NDUFV1', directed: 'false', weight: 0.175861} },
+{ data: { source: 'NDUFV3', target: 'NDUFS2', directed: 'false', weight: 0.133243} },
+{ data: { source: 'NDUFB8', target: 'NDUFV1', directed: 'false', weight: 0.41181} },
+{ data: { source: 'NDUFB8', target: 'NDUFS2', directed: 'false', weight: 0.40205100000000005} },
+{ data: { source: 'NDUFB8', target: 'NDUFS7', directed: 'false', weight: 0.37808600000000003} },
+{ data: { source: 'NDUFS2', target: 'NDUFV1', directed: 'false', weight: 0.646989} },
+{ data: { source: 'NDUFS2', target: 'NDUFS7', directed: 'false', weight: 0.329598} },
+{ data: { source: 'NDUFS6', target: 'NDUFV2', directed: 'false', weight: 0.9284399999999999} },
+{ data: { source: 'NDUFS6', target: 'NDUFV1', directed: 'false', weight: 0.654465} },
+{ data: { source: 'NDUFV2', target: 'NDUFV1', directed: 'false', weight: 0.9885870000000001} },
+{ data: { source: 'NDUFS7', target: 'NDUFV1', directed: 'false', weight: 0.216185} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+    </section>
+    </body>
+    </html>
+    

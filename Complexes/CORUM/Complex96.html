@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 96</title>
+<title> Ubiquitin E3 ligase (CUL3, KLHL9, KLHL13, RBX1)</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,13 +29,13 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CUL3', score: 5, href: "https://www.uniprot.org/uniprot/Q13618" }},
-{data: { id: 'KLHL13', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2N7" }},
+elements:{nodes: [{data: { id: 'RBX1', score: 5, href: "https://www.uniprot.org/uniprot/P62877" }},
+{data: { id: 'CUL3', score: 5, href: "https://www.uniprot.org/uniprot/Q13618" }},
 {data: { id: 'KLHL9', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2J3" }},
-{data: { id: 'RBX1', score: 5, href: "https://www.uniprot.org/uniprot/P62877" }}], 
- edges: [{ data: { source: 'CUL3', target: 'KLHL13', directed: 'false', weight: 0.692847} },
-{ data: { source: 'CUL3', target: 'RBX1', directed: 'false', weight: 0.658836} },
-{ data: { source: 'KLHL13', target: 'KLHL9', directed: 'false', weight: 0.9706030000000001} }]},
+{data: { id: 'KLHL13', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2N7" }}], 
+ edges: [{ data: { source: 'RBX1', target: 'CUL3', directed: 'false', weight: 0.658836} },
+{ data: { source: 'KLHL13', target: 'KLHL9', directed: 'false', weight: 0.9706030000000001} },
+{ data: { source: 'KLHL13', target: 'CUL3', directed: 'false', weight: 0.692847} }]},
 
 style: [
     {

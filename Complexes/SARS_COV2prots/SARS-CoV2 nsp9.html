@@ -29,7 +29,7 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SARS-CoV2 nsp9', score: 2, type:  'sars'  }},
+elements:{nodes: [{data: { id: 'SARS-CoV2 nsp9', score: 2, type:  'sars' , href: "https://covid-19.uniprot.org/uniprotkb/P0DTC1" }},
 {data: { id: 'GTF2F2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P13984" }},
 {data: { id: 'FBN1', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P35555" }},
 {data: { id: 'FBN2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P35556" }},
@@ -46,18 +46,18 @@ elements:{nodes: [{data: { id: 'SARS-CoV2 nsp9', score: 2, type:  'sars'  }},
 {data: { id: 'NUP58', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q9BVL2" }},
 {data: { id: 'MAT2B', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q9NZL9" }},
 {data: { id: 'FBLN5', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q9UBX5" }},
-{data: { id: 'Complex178', score: 0, type: 'complex', href: "../Predicted/Complex178.html" }},
-{data: { id: 'Complex92', score: 0, type: 'complex', href: "../Predicted/Complex92.html" }},
-{data: { id: 'Complex762', score: 0, type: 'complex', href: "../Predicted/Complex762.html" }},
-{data: { id: 'Complex868', score: 0, type: 'complex', href: "../Predicted/Complex868.html" }},
-{data: { id: 'Complex672', score: 0, type: 'complex', href: "../Predicted/Complex672.html" }},
-{data: { id: 'Complex846', score: 0, type: 'complex', href: "../Predicted/Complex846.html" }}], 
- edges: [{ data: { source: 'GTF2F2', target: 'Complex868', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'FBN1', target: 'Complex178', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'FBN2', target: 'Complex846', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'EIF4H', target: 'Complex762', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'NEK9', target: 'Complex672', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'MAT2B', target: 'Complex92', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{data: { id: '0.2 DSIF complex (DRB sensitivity-inducing factor complex)', score: 0, type: 'complex', href: "../Predicted/Complex868.html" }},
+{data: { id: '0.2 ELN-FBLN2-FBN1 complex', score: 0, type: 'complex', href: "../Predicted/Complex178.html" }},
+{data: { id: '0.7 Methionine adenosyltransferase alpha2 beta-v1', score: 0, type: 'complex', href: "../Predicted/Complex92.html" }},
+{data: { id: '0.1 FACT-NEK9 complex', score: 0, type: 'complex', href: "../Predicted/Complex672.html" }},
+{data: { id: '0.4 tRNA Splicing Ligase Complex', score: 0, type: 'complex', href: "../Predicted/Complex762.html" }},
+{data: { id: '0.5 Prefoldin complex', score: 0, type: 'complex', href: "../Predicted/Complex846.html" }}], 
+ edges: [{ data: { source: 'GTF2F2', target: '0.2 DSIF complex (DRB sensitivity-inducing factor complex)', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'FBN1', target: '0.2 ELN-FBLN2-FBN1 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'FBN2', target: '0.5 Prefoldin complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'EIF4H', target: '0.4 tRNA Splicing Ligase Complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'NEK9', target: '0.1 FACT-NEK9 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'MAT2B', target: '0.7 Methionine adenosyltransferase alpha2 beta-v1', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'SARS-CoV2 nsp9', target: 'GTF2F2', directed: 'false', type: 'sars2prot',weight: 0.877426938} },
 { data: { source: 'SARS-CoV2 nsp9', target: 'FBN1', directed: 'false', type: 'sars2prot',weight: 0.992372395} },
 { data: { source: 'SARS-CoV2 nsp9', target: 'FBN2', directed: 'false', type: 'sars2prot',weight: 0.991012329} },
@@ -79,6 +79,10 @@ style: [
     {
         selector: 'node',
         style: {
+                				'font-size': 20,
+        'font-weight': 'bold',
+                      'text-wrap': 'wrap',
+    'text-max-width': '300',
             shape: function( ele ){ 
                                 if ( ele.data('type') == 'complex' ){return 'rectangle'}
                                 if ( ele.data('type') == 'sars' ){return 'triangle'}
@@ -109,14 +113,14 @@ style: [
 });
 
 cy.layout({
-    name: 'concentric',
-  concentric: function( ele ){ // returns numeric value for each node, placing higher nodes in levels towards the centre
-  return ele.data('score');
-  },
-  equidistant: true, 
-  levelWidth: function( nodes ){ // the variation of concentric values in each level
-  return 1;
-  },
+    'name': 'cose',
+	'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'padding': 1,
+	'componentSpacing': 1,
+	 'idealEdgeLength': function( edge ){ return 1; },
+	 // Divisor to compute edge forces
+  'edgeElasticity': function( edge ){ return 20; }
 }).run();
     
 cy.on('tap', 'node', function(){

@@ -29,7 +29,7 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SARS-CoV2 nsp2', score: 2, type:  'sars'  }},
+elements:{nodes: [{data: { id: 'SARS-CoV2 nsp2', score: 2, type:  'sars' , href: "https://covid-19.uniprot.org/uniprotkb/P0DTC1" }},
 {data: { id: 'SLC27A2', score: 1, type:  'human'  }},
 {data: { id: 'EIF4E2', score: 1, type:  'human'  }},
 {data: { id: 'POR', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P16435" }},
@@ -37,17 +37,17 @@ elements:{nodes: [{data: { id: 'SARS-CoV2 nsp2', score: 2, type:  'sars'  }},
 {data: { id: 'WASHC4', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q2M389" }},
 {data: { id: 'FKBP15', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q5T1M5" }},
 {data: { id: 'GIGYF2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q6Y7W6" }},
-{data: { id: 'Complex375', score: 0, type: 'complex', href: "../Predicted/Complex375.html" }},
-{data: { id: 'Complex899', score: 0, type: 'complex', href: "../Predicted/Complex899.html" }},
-{data: { id: 'Complex754', score: 0, type: 'complex', href: "../Predicted/Complex754.html" }},
-{data: { id: 'Complex905', score: 0, type: 'complex', href: "../Predicted/Complex905.html" }},
-{data: { id: 'Complex605', score: 0, type: 'complex', href: "../Predicted/Complex605.html" }}], 
- edges: [{ data: { source: 'POR', target: 'Complex899', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'RAP1GDS1', target: 'Complex375', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'RAP1GDS1', target: 'Complex905', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'WASHC4', target: 'Complex754', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'FKBP15', target: 'Complex605', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'FKBP15', target: 'Complex754', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{data: { id: '0.2 ARD1-NATH complex', score: 0, type: 'complex', href: "../Predicted/Complex905.html" }},
+{data: { id: 'POR LRRFIP2 VCPKMT TMOD3 UBXN6 UBXN2A', score: 0, type: 'complex', href: "../Predicted/Complex899.html" }},
+{data: { id: '0.2 BCR-ABL (p185 fusion protein)-GRB2 complex', score: 0, type: 'complex', href: "../Predicted/Complex375.html" }},
+{data: { id: '0.4 Retromer complex (SNX1, SNX2, VPS35, VPS29, VPS26A)', score: 0, type: 'complex', href: "../Predicted/Complex754.html" }},
+{data: { id: '0.2 Endosomal targeting complex (VIPAS39-VPS33B)', score: 0, type: 'complex', href: "../Predicted/Complex605.html" }}], 
+ edges: [{ data: { source: 'POR', target: 'POR LRRFIP2 VCPKMT TMOD3 UBXN6 UBXN2A', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'RAP1GDS1', target: '0.2 BCR-ABL (p185 fusion protein)-GRB2 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'RAP1GDS1', target: '0.2 ARD1-NATH complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'WASHC4', target: '0.4 Retromer complex (SNX1, SNX2, VPS35, VPS29, VPS26A)', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'FKBP15', target: '0.2 Endosomal targeting complex (VIPAS39-VPS33B)', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'FKBP15', target: '0.4 Retromer complex (SNX1, SNX2, VPS35, VPS29, VPS26A)', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'SARS-CoV2 nsp2', target: 'SLC27A2', directed: 'false', type: 'sars2prot',weight: 0.915803486} },
 { data: { source: 'SARS-CoV2 nsp2', target: 'EIF4E2', directed: 'false', type: 'sars2prot',weight: 0.806833749} },
 { data: { source: 'SARS-CoV2 nsp2', target: 'POR', directed: 'false', type: 'sars2prot',weight: 0.710961769} },
@@ -60,6 +60,10 @@ style: [
     {
         selector: 'node',
         style: {
+                				'font-size': 20,
+        'font-weight': 'bold',
+                      'text-wrap': 'wrap',
+    'text-max-width': '300',
             shape: function( ele ){ 
                                 if ( ele.data('type') == 'complex' ){return 'rectangle'}
                                 if ( ele.data('type') == 'sars' ){return 'triangle'}
@@ -90,14 +94,14 @@ style: [
 });
 
 cy.layout({
-    name: 'concentric',
-  concentric: function( ele ){ // returns numeric value for each node, placing higher nodes in levels towards the centre
-  return ele.data('score');
-  },
-  equidistant: true, 
-  levelWidth: function( nodes ){ // the variation of concentric values in each level
-  return 1;
-  },
+    'name': 'cose',
+	'animate':false,
+	'nodeDimensionsIncludeLabels':true,
+	'padding': 1,
+	'componentSpacing': 1,
+	 'idealEdgeLength': function( edge ){ return 1; },
+	 // Divisor to compute edge forces
+  'edgeElasticity': function( edge ){ return 20; }
 }).run();
     
 cy.on('tap', 'node', function(){

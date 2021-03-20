@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 147</title>
+<title> GINS complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GINS3', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRX5" }},
+elements:{nodes: [{data: { id: 'GINS1', score: 5, href: "https://www.uniprot.org/uniprot/Q14691" }},
+{data: { id: 'GINS2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y248" }},
 {data: { id: 'GINS4', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRT9" }},
-{data: { id: 'GINS1', score: 5, href: "https://www.uniprot.org/uniprot/Q14691" }},
-{data: { id: 'GINS2', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y248" }}], 
- edges: [{ data: { source: 'GINS3', target: 'GINS4', directed: 'false', weight: 0.9985780000000001} },
-{ data: { source: 'GINS3', target: 'GINS2', directed: 'false', weight: 0.9946219999999999} },
-{ data: { source: 'GINS3', target: 'GINS1', directed: 'false', weight: 0.7327600000000001} },
+{data: { id: 'GINS3', score: 5, href: "https://www.uniprot.org/uniprot/Q9BRX5" }}], 
+ edges: [{ data: { source: 'GINS2', target: 'GINS3', directed: 'false', weight: 0.9946219999999999} },
 { data: { source: 'GINS2', target: 'GINS4', directed: 'false', weight: 0.934578} },
 { data: { source: 'GINS2', target: 'GINS1', directed: 'false', weight: 0.926638} },
-{ data: { source: 'GINS1', target: 'GINS4', directed: 'false', weight: 0.597964} }]},
+{ data: { source: 'GINS4', target: 'GINS3', directed: 'false', weight: 0.9985780000000001} },
+{ data: { source: 'GINS4', target: 'GINS1', directed: 'false', weight: 0.597964} },
+{ data: { source: 'GINS1', target: 'GINS3', directed: 'false', weight: 0.7327600000000001} }]},
 
 style: [
     {

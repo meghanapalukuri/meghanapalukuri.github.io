@@ -1,0 +1,89 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> H2AX complex II</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex696.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'NPM1', score: 5, href: "https://www.uniprot.org/uniprot/P06748" }},
+{data: { id: 'HSPA5', score: 5, href: "https://www.uniprot.org/uniprot/P11021" }},
+{data: { id: 'H2AFX', score: 0 }},
+{data: { id: 'YBX3', score: 5, href: "https://www.uniprot.org/uniprot/P16989" }},
+{data: { id: 'CALR', score: 5, href: "https://www.uniprot.org/uniprot/P27797" }},
+{data: { id: 'H2BC3', score: 5, href: "https://www.uniprot.org/uniprot/P33778" }},
+{data: { id: 'None', score: 0 }},
+{data: { id: 'H2BU1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N257" }},
+{data: { id: 'PTCD3', score: 5, href: "https://www.uniprot.org/uniprot/Q96EY7" }},
+{data: { id: 'H2BC14', score: 5, href: "https://www.uniprot.org/uniprot/Q99879" }}], 
+ edges: [{ data: { source: 'NPM1', target: 'H2AFX', directed: 'false', weight: 0.323793} },
+{ data: { source: 'NPM1', target: 'YBX3', directed: 'false', weight: 0.0850495} },
+{ data: { source: 'YBX3', target: 'H2AFX', directed: 'false', weight: 0.09128789999999999} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+    </section>
+    </body>
+    </html>
+    

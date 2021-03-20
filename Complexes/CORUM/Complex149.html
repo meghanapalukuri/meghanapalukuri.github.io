@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 149</title>
+<title> DDX27-PeBoW complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'BOP1', score: 5, href: "https://www.uniprot.org/uniprot/Q14137" }},
-{data: { id: 'WDR12', score: 5, href: "https://www.uniprot.org/uniprot/Q9GZL7" }},
+elements:{nodes: [{data: { id: 'DDX27', score: 5, href: "https://www.uniprot.org/uniprot/Q96GQ7" }},
+{data: { id: 'BOP1', score: 5, href: "https://www.uniprot.org/uniprot/Q14137" }},
 {data: { id: 'PES1', score: 5, href: "https://www.uniprot.org/uniprot/O00541" }},
-{data: { id: 'DDX27', score: 5, href: "https://www.uniprot.org/uniprot/Q96GQ7" }}], 
- edges: [{ data: { source: 'BOP1', target: 'PES1', directed: 'false', weight: 0.930841} },
+{data: { id: 'WDR12', score: 5, href: "https://www.uniprot.org/uniprot/Q9GZL7" }}], 
+ edges: [{ data: { source: 'DDX27', target: 'PES1', directed: 'false', weight: 0.9996860000000001} },
+{ data: { source: 'DDX27', target: 'BOP1', directed: 'false', weight: 0.736426} },
+{ data: { source: 'DDX27', target: 'WDR12', directed: 'false', weight: 0.259965} },
+{ data: { source: 'BOP1', target: 'PES1', directed: 'false', weight: 0.930841} },
 { data: { source: 'BOP1', target: 'WDR12', directed: 'false', weight: 0.880358} },
-{ data: { source: 'BOP1', target: 'DDX27', directed: 'false', weight: 0.736426} },
-{ data: { source: 'WDR12', target: 'PES1', directed: 'false', weight: 0.583155} },
-{ data: { source: 'WDR12', target: 'DDX27', directed: 'false', weight: 0.259965} },
-{ data: { source: 'PES1', target: 'DDX27', directed: 'false', weight: 0.9996860000000001} }]},
+{ data: { source: 'PES1', target: 'WDR12', directed: 'false', weight: 0.583155} }]},
 
 style: [
     {

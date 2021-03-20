@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 44</title>
+<title> STAGA core complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,11 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TAF9', score: 5, href: "https://www.uniprot.org/uniprot/Q16594" }},
-{data: { id: 'SUPT3H', score: 5, href: "https://www.uniprot.org/uniprot/O75486" }},
-{data: { id: 'KAT2A', score: 5, href: "https://www.uniprot.org/uniprot/Q92830" }}], 
- edges: [{ data: { source: 'TAF9', target: 'SUPT3H', directed: 'false', weight: 0.16064} },
-{ data: { source: 'SUPT3H', target: 'KAT2A', directed: 'false', weight: 0.352722} }]},
+elements:{nodes: [{data: { id: 'KAT2A', score: 5, href: "https://www.uniprot.org/uniprot/Q92830" }},
+{data: { id: 'TAF9', score: 5, href: "https://www.uniprot.org/uniprot/Q16594" }},
+{data: { id: 'SUPT3H', score: 5, href: "https://www.uniprot.org/uniprot/O75486" }}], 
+ edges: [{ data: { source: 'KAT2A', target: 'SUPT3H', directed: 'false', weight: 0.352722} },
+{ data: { source: 'TAF9', target: 'SUPT3H', directed: 'false', weight: 0.16064} }]},
 
 style: [
     {

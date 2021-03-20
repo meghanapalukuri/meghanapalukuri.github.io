@@ -1,0 +1,95 @@
+
+<!doctype html>
+
+<html>
+
+<head>
+<title> Dynein-2 complex, cytoplasmic</title>
+
+        <script src="../cytoscape.js"></script>
+    </head>
+    
+    <style>
+        #cy {
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            middle: 0px;
+            left: 0px;
+        }
+    </style>
+    
+    <body>
+    <section>
+    <a href="Complex1994.html">Next</a>
+
+     </section>
+        <div id="cy"></div>
+        <script>
+          var cy = cytoscape({
+      container: document.getElementById('cy'),
+      
+elements:{nodes: [{data: { id: 'DYNLT3', score: 5, href: "https://www.uniprot.org/uniprot/P51808" }},
+{data: { id: 'DYNLL1', score: 5, href: "https://www.uniprot.org/uniprot/P63167" }},
+{data: { id: 'DYNLT1', score: 5, href: "https://www.uniprot.org/uniprot/P63172" }},
+{data: { id: 'NUDCD3', score: 5, href: "https://www.uniprot.org/uniprot/Q8IVD9" }},
+{data: { id: 'DYNC2H1', score: 5, href: "https://www.uniprot.org/uniprot/Q8NCM8" }},
+{data: { id: 'DYNC2LI1', score: 5, href: "https://www.uniprot.org/uniprot/Q8TCX1" }},
+{data: { id: 'DYNLRB2', score: 5, href: "https://www.uniprot.org/uniprot/Q8TF09" }},
+{data: { id: 'WDR60', score: 0 }},
+{data: { id: 'TCTEX1D2', score: 1, href: "https://www.uniprot.org/uniprot/E7ER86" }},
+{data: { id: 'WDR34', score: 0 }},
+{data: { id: 'DYNLL2', score: 5, href: "https://www.uniprot.org/uniprot/Q96FJ2" }},
+{data: { id: 'DYNLRB1', score: 5, href: "https://www.uniprot.org/uniprot/Q9NP97" }}], 
+ edges: [{ data: { source: 'WDR60', target: 'DYNLRB1', directed: 'false', weight: 0.737887} },
+{ data: { source: 'WDR60', target: 'WDR34', directed: 'false', weight: 0.182548} },
+{ data: { source: 'WDR60', target: 'DYNLT3', directed: 'false', weight: 0.115879} },
+{ data: { source: 'DYNLRB1', target: 'WDR34', directed: 'false', weight: 0.904751} },
+{ data: { source: 'DYNLRB1', target: 'DYNLT3', directed: 'false', weight: 0.563569} },
+{ data: { source: 'DYNLT3', target: 'WDR34', directed: 'false', weight: 0.144297} },
+{ data: { source: 'DYNLL2', target: 'DYNLL1', directed: 'false', weight: 0.384302} }]},
+
+style: [
+    {
+        selector: 'node',
+        style: {
+        		'font-size': 30,
+        'font-weight': 'bold',
+            shape: 'rectangle',
+            'background-color': 'mapData(score, 0, 5, yellow, green)',
+            label: 'data(id)'
+        }
+    },
+							{
+							selector: 'edge',
+							style: {
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
+								'line-color': 'blue',
+								'opacity': 0.5
+							}
+						}
+	]
+    
+});
+
+cy.layout({
+    name: 'circle'
+}).run();
+    
+cy.on('tap', 'node', function(){
+  try { // your browser may block popups
+    window.open( this.data('href') );
+  } catch(e){ // fall back on url change
+    window.location.href = this.data('href');
+  }
+});      
+
+
+    </script>
+
+    	<section>
+    
+    </section>
+    </body>
+    </html>
+    

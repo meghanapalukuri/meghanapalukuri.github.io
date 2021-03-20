@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 165</title>
+<title> 0.8 RFC complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,26 +29,26 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RFC3', score: 5, href: "https://www.uniprot.org/uniprot/P40938" }},
+elements:{nodes: [{data: { id: 'RFC4', score: 5, href: "https://www.uniprot.org/uniprot/P35249" }},
+{data: { id: 'RFC1', score: 5, href: "https://www.uniprot.org/uniprot/P35251" }},
 {data: { id: 'PCNA', score: 5, href: "https://www.uniprot.org/uniprot/P12004" }},
-{data: { id: 'RFC4', score: 5, href: "https://www.uniprot.org/uniprot/P35249" }},
-{data: { id: 'RFC5', score: 5, href: "https://www.uniprot.org/uniprot/P40937" }},
 {data: { id: 'RFC2', score: 5, href: "https://www.uniprot.org/uniprot/P35250" }},
-{data: { id: 'RFC1', score: 5, href: "https://www.uniprot.org/uniprot/P35251" }}], 
- edges: [{ data: { source: 'RFC3', target: 'RFC5', directed: 'false', weight: 0.9998870000000001} },
-{ data: { source: 'RFC3', target: 'RFC2', directed: 'false', weight: 0.999223} },
-{ data: { source: 'RFC3', target: 'RFC1', directed: 'false', weight: 0.999183} },
-{ data: { source: 'RFC3', target: 'RFC4', directed: 'false', weight: 0.974938} },
-{ data: { source: 'RFC3', target: 'PCNA', directed: 'false', weight: 0.9304309999999999} },
-{ data: { source: 'PCNA', target: 'RFC1', directed: 'false', weight: 0.975967} },
-{ data: { source: 'PCNA', target: 'RFC2', directed: 'false', weight: 0.0935558} },
-{ data: { source: 'PCNA', target: 'RFC4', directed: 'false', weight: 0.038694} },
-{ data: { source: 'RFC4', target: 'RFC5', directed: 'false', weight: 0.9992479999999999} },
+{data: { id: 'RFC3', score: 5, href: "https://www.uniprot.org/uniprot/P40938" }},
+{data: { id: 'RFC5', score: 5, href: "https://www.uniprot.org/uniprot/P40937" }}], 
+ edges: [{ data: { source: 'RFC4', target: 'RFC5', directed: 'false', weight: 0.9992479999999999} },
 { data: { source: 'RFC4', target: 'RFC2', directed: 'false', weight: 0.997909} },
 { data: { source: 'RFC4', target: 'RFC1', directed: 'false', weight: 0.9863190000000001} },
-{ data: { source: 'RFC5', target: 'RFC2', directed: 'false', weight: 0.999799} },
-{ data: { source: 'RFC5', target: 'RFC1', directed: 'false', weight: 0.9992989999999999} },
-{ data: { source: 'RFC2', target: 'RFC1', directed: 'false', weight: 0.9978469999999999} }]},
+{ data: { source: 'RFC4', target: 'RFC3', directed: 'false', weight: 0.974938} },
+{ data: { source: 'RFC4', target: 'PCNA', directed: 'false', weight: 0.038694} },
+{ data: { source: 'RFC1', target: 'RFC5', directed: 'false', weight: 0.9992989999999999} },
+{ data: { source: 'RFC1', target: 'RFC3', directed: 'false', weight: 0.999183} },
+{ data: { source: 'RFC1', target: 'RFC2', directed: 'false', weight: 0.9978469999999999} },
+{ data: { source: 'RFC1', target: 'PCNA', directed: 'false', weight: 0.975967} },
+{ data: { source: 'PCNA', target: 'RFC3', directed: 'false', weight: 0.9304309999999999} },
+{ data: { source: 'PCNA', target: 'RFC2', directed: 'false', weight: 0.0935558} },
+{ data: { source: 'RFC2', target: 'RFC5', directed: 'false', weight: 0.999799} },
+{ data: { source: 'RFC2', target: 'RFC3', directed: 'false', weight: 0.999223} },
+{ data: { source: 'RFC3', target: 'RFC5', directed: 'false', weight: 0.9998870000000001} }]},
 
 style: [
     {

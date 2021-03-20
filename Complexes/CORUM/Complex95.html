@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 95</title>
+<title> BHC complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,22 +29,22 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PHF21A', score: 5, href: "https://www.uniprot.org/uniprot/Q96BD5" }},
-{data: { id: 'HMG20B', score: 5, href: "https://www.uniprot.org/uniprot/Q9P0W2" }},
-{data: { id: 'HDAC2', score: 5, href: "https://www.uniprot.org/uniprot/Q92769" }},
-{data: { id: 'HDAC1', score: 5, href: "https://www.uniprot.org/uniprot/Q13547" }},
+elements:{nodes: [{data: { id: 'HDAC2', score: 5, href: "https://www.uniprot.org/uniprot/Q92769" }},
+{data: { id: 'PHF21A', score: 5, href: "https://www.uniprot.org/uniprot/Q96BD5" }},
+{data: { id: 'RCOR1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKL0" }},
 {data: { id: 'KDM1A', score: 5, href: "https://www.uniprot.org/uniprot/O60341" }},
-{data: { id: 'RCOR1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UKL0" }}], 
- edges: [{ data: { source: 'PHF21A', target: 'HMG20B', directed: 'false', weight: 0.828659} },
+{data: { id: 'HDAC1', score: 5, href: "https://www.uniprot.org/uniprot/Q13547" }},
+{data: { id: 'HMG20B', score: 5, href: "https://www.uniprot.org/uniprot/Q9P0W2" }}], 
+ edges: [{ data: { source: 'HDAC2', target: 'HDAC1', directed: 'false', weight: 1.0} },
+{ data: { source: 'PHF21A', target: 'HMG20B', directed: 'false', weight: 0.828659} },
 { data: { source: 'PHF21A', target: 'RCOR1', directed: 'false', weight: 0.206618} },
 { data: { source: 'PHF21A', target: 'KDM1A', directed: 'false', weight: 0.157086} },
-{ data: { source: 'HMG20B', target: 'RCOR1', directed: 'false', weight: 0.96454} },
-{ data: { source: 'HMG20B', target: 'KDM1A', directed: 'false', weight: 0.919858} },
-{ data: { source: 'HMG20B', target: 'HDAC1', directed: 'false', weight: 0.425537} },
-{ data: { source: 'HDAC2', target: 'HDAC1', directed: 'false', weight: 1.0} },
-{ data: { source: 'HDAC1', target: 'RCOR1', directed: 'false', weight: 0.9042190000000001} },
-{ data: { source: 'HDAC1', target: 'KDM1A', directed: 'false', weight: 0.8338209999999999} },
-{ data: { source: 'KDM1A', target: 'RCOR1', directed: 'false', weight: 0.9999969999999999} }]},
+{ data: { source: 'RCOR1', target: 'KDM1A', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'RCOR1', target: 'HMG20B', directed: 'false', weight: 0.96454} },
+{ data: { source: 'RCOR1', target: 'HDAC1', directed: 'false', weight: 0.9042190000000001} },
+{ data: { source: 'KDM1A', target: 'HMG20B', directed: 'false', weight: 0.919858} },
+{ data: { source: 'KDM1A', target: 'HDAC1', directed: 'false', weight: 0.8338209999999999} },
+{ data: { source: 'HDAC1', target: 'HMG20B', directed: 'false', weight: 0.425537} }]},
 
 style: [
     {

@@ -4,7 +4,7 @@
 <html>
 
 <head>
-<title> Complex 107</title>
+<title> CAK-ERCC2 complex</title>
 
         <script src="../cytoscape.js"></script>
     </head>
@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MNAT1', score: 5, href: "https://www.uniprot.org/uniprot/P51948" }},
-{data: { id: 'CCNH', score: 5, href: "https://www.uniprot.org/uniprot/P51946" }},
+elements:{nodes: [{data: { id: 'CDK7', score: 5, href: "https://www.uniprot.org/uniprot/P50613" }},
 {data: { id: 'ERCC2', score: 5, href: "https://www.uniprot.org/uniprot/P18074" }},
-{data: { id: 'CDK7', score: 5, href: "https://www.uniprot.org/uniprot/P50613" }}], 
- edges: [{ data: { source: 'MNAT1', target: 'CDK7', directed: 'false', weight: 0.9999979999999999} },
+{data: { id: 'CCNH', score: 5, href: "https://www.uniprot.org/uniprot/P51946" }},
+{data: { id: 'MNAT1', score: 5, href: "https://www.uniprot.org/uniprot/P51948" }}], 
+ edges: [{ data: { source: 'CDK7', target: 'MNAT1', directed: 'false', weight: 0.9999979999999999} },
+{ data: { source: 'CDK7', target: 'CCNH', directed: 'false', weight: 0.9999129999999999} },
+{ data: { source: 'CDK7', target: 'ERCC2', directed: 'false', weight: 0.819623} },
 { data: { source: 'MNAT1', target: 'CCNH', directed: 'false', weight: 0.999893} },
 { data: { source: 'MNAT1', target: 'ERCC2', directed: 'false', weight: 0.6261899999999999} },
-{ data: { source: 'CCNH', target: 'CDK7', directed: 'false', weight: 0.9999129999999999} },
-{ data: { source: 'CCNH', target: 'ERCC2', directed: 'false', weight: 0.872467} },
-{ data: { source: 'ERCC2', target: 'CDK7', directed: 'false', weight: 0.819623} }]},
+{ data: { source: 'CCNH', target: 'ERCC2', directed: 'false', weight: 0.872467} }]},
 
 style: [
     {
