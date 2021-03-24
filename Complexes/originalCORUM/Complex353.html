@@ -29,13 +29,13 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RANBP9', score: 5, href: "https://www.uniprot.org/uniprot/Q96S59" }},
+elements:{nodes: [{data: { id: 'RANBP9', score: 5, href: "https://www.uniprot.org/uniprot/Q96P70" }},
 {data: { id: 'MPHOSPH8', score: 5, href: "https://www.uniprot.org/uniprot/Q99549" }},
 {data: { id: 'GID8', score: 5, href: "https://www.uniprot.org/uniprot/Q9NWU2" }},
 {data: { id: 'MKLN1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UL63" }}], 
- edges: [{ data: { source: 'MKLN1', target: 'RANBP9', directed: 'false', weight: 0.9999979999999999} },
-{ data: { source: 'MKLN1', target: 'GID8', directed: 'false', weight: 0.9999969999999999} },
-{ data: { source: 'RANBP9', target: 'GID8', directed: 'false', weight: 0.9999959999999999} }]},
+ edges: [{ data: { source: 'GID8', target: 'MKLN1', directed: 'false', weight: 0.9999969999999999} },
+{ data: { source: 'GID8', target: 'RANBP9', directed: 'false', weight: 0.9999959999999999} },
+{ data: { source: 'RANBP9', target: 'MKLN1', directed: 'false', weight: 0.9999979999999999} }]},
 
 style: [
     {

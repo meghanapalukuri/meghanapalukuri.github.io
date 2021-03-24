@@ -30,17 +30,17 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: 'MEAF6', score: 5, href: "https://www.uniprot.org/uniprot/Q9HAF1" }},
+{data: { id: 'KAT7', score: 5, href: "https://www.uniprot.org/uniprot/O95251" }},
 {data: { id: 'JADE1', score: 5, href: "https://www.uniprot.org/uniprot/Q6IE81" }},
 {data: { id: 'ING4', score: 5, href: "https://www.uniprot.org/uniprot/Q9UNL4" }},
-{data: { id: 'KAT7', score: 5, href: "https://www.uniprot.org/uniprot/O95251" }},
 {data: { id: 'JADE3', score: 5, href: "https://www.uniprot.org/uniprot/Q92613" }}], 
  edges: [{ data: { source: 'MEAF6', target: 'ING4', directed: 'false', weight: 0.7714449999999999} },
-{ data: { source: 'JADE1', target: 'KAT7', directed: 'false', weight: 0.959558} },
+{ data: { source: 'KAT7', target: 'JADE1', directed: 'false', weight: 0.959558} },
+{ data: { source: 'KAT7', target: 'ING4', directed: 'false', weight: 0.48738400000000004} },
+{ data: { source: 'KAT7', target: 'JADE3', directed: 'false', weight: 0.301404} },
 { data: { source: 'JADE1', target: 'ING4', directed: 'false', weight: 0.880559} },
 { data: { source: 'JADE1', target: 'JADE3', directed: 'false', weight: 0.129685} },
-{ data: { source: 'ING4', target: 'JADE3', directed: 'false', weight: 0.850561} },
-{ data: { source: 'ING4', target: 'KAT7', directed: 'false', weight: 0.48738400000000004} },
-{ data: { source: 'KAT7', target: 'JADE3', directed: 'false', weight: 0.301404} }]},
+{ data: { source: 'ING4', target: 'JADE3', directed: 'false', weight: 0.850561} }]},
 
 style: [
     {
@@ -56,7 +56,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

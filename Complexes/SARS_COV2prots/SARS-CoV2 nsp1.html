@@ -36,12 +36,14 @@ elements:{nodes: [{data: { id: 'SARS-CoV2 nsp1', score: 2, type:  'sars' , href:
 {data: { id: 'POLA2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q14181" }},
 {data: { id: 'COLGALT1', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q8NBJ5" }},
 {data: { id: 'PKP2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q99959" }},
-{data: { id: '0.3 DNA synthesome complex (15 subunits)', score: 0, type: 'complex', href: "../Predicted/Complex423.html" }},
-{data: { id: '0.3 ADIPOQ-PLOD3-GLT25D1 complex', score: 0, type: 'complex', href: "../Predicted/Complex619.html" }},
 {data: { id: '0.1 SEC23-SEC24 adaptor complex', score: 0, type: 'complex', href: "../Predicted/Complex747.html" }},
+{data: { id: '0.3 ADIPOQ-PLOD3-GLT25D1 complex', score: 0, type: 'complex', href: "../Predicted/Complex619.html" }},
+{data: { id: '0.3 DNA synthesome complex (15 subunits)', score: 0, type: 'complex', href: "../Predicted/Complex423.html" }},
 {data: { id: '0.1 TNF-alpha/NF-kappa B signaling complex (SEC16A, CHUK, IKBKB, NFKB2, REL, IKBKG, MAP3K14, RELA, FBXW7, USP2)', score: 0, type: 'complex', href: "../Predicted/Complex781.html" }},
 {data: { id: '0.8 DNA polymerase alpha-primase complex', score: 0, type: 'complex', href: "../Predicted/Complex646.html" }}], 
- edges: [{ data: { source: 'POLA1', target: '0.3 DNA synthesome complex (15 subunits)', directed: 'false',type: 'prot2complex', weight: 0.99} },
+ edges: [{ data: { source: '0.1 SEC23-SEC24 adaptor complex', target: '0.1 TNF-alpha/NF-kappa B signaling complex (SEC16A, CHUK, IKBKB, NFKB2, REL, IKBKG, MAP3K14, RELA, FBXW7, USP2)', directed: 'false',type: 'complex2complex', weight: 0.2857142857142857} },
+{ data: { source: '0.3 DNA synthesome complex (15 subunits)', target: '0.8 DNA polymerase alpha-primase complex', directed: 'false',type: 'complex2complex', weight: 0.1111111111111111} },
+{ data: { source: 'POLA1', target: '0.3 DNA synthesome complex (15 subunits)', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'POLA1', target: '0.8 DNA polymerase alpha-primase complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'PRIM1', target: '0.8 DNA polymerase alpha-primase complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'PRIM2', target: '0.8 DNA polymerase alpha-primase complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
@@ -81,9 +83,10 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.5, 1, 0.1, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 5)',
 								'line-color': function( ele ){ 
-                                if ( ele.data('type') == 'prot2complex' ){return 'blue'}
+                                if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                  if ( ele.data('type') == 'complex2complex' ){return 'blue'}
   return 'red';
   },
 								'opacity': 0.5

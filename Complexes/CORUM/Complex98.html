@@ -30,11 +30,11 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: 'NFKBIA', score: 5, href: "https://www.uniprot.org/uniprot/P25963" }},
-{data: { id: 'NFKB1', score: 5, href: "https://www.uniprot.org/uniprot/P19838" }},
-{data: { id: 'RELA', score: 5, href: "https://www.uniprot.org/uniprot/Q04206" }}], 
- edges: [{ data: { source: 'NFKB1', target: 'NFKBIA', directed: 'false', weight: 0.997028} },
-{ data: { source: 'NFKB1', target: 'RELA', directed: 'false', weight: 0.6554449999999999} },
-{ data: { source: 'RELA', target: 'NFKBIA', directed: 'false', weight: 0.9952340000000001} }]},
+{data: { id: 'RELA', score: 5, href: "https://www.uniprot.org/uniprot/Q04206" }},
+{data: { id: 'NFKB1', score: 5, href: "https://www.uniprot.org/uniprot/P19838" }}], 
+ edges: [{ data: { source: 'NFKBIA', target: 'NFKB1', directed: 'false', weight: 0.997028} },
+{ data: { source: 'NFKBIA', target: 'RELA', directed: 'false', weight: 0.9952340000000001} },
+{ data: { source: 'RELA', target: 'NFKB1', directed: 'false', weight: 0.6554449999999999} }]},
 
 style: [
     {
@@ -50,7 +50,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

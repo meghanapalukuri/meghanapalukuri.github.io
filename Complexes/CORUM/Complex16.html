@@ -29,21 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SNAPC5', score: 5, href: "https://www.uniprot.org/uniprot/O75971" }},
-{data: { id: 'SNAPC3', score: 5, href: "https://www.uniprot.org/uniprot/Q92966" }},
+elements:{nodes: [{data: { id: 'SNAPC3', score: 5, href: "https://www.uniprot.org/uniprot/Q92966" }},
+{data: { id: 'SNAPC5', score: 5, href: "https://www.uniprot.org/uniprot/O75971" }},
+{data: { id: 'SNAPC4', score: 5, href: "https://www.uniprot.org/uniprot/Q5SXM2" }},
 {data: { id: 'SNAPC1', score: 5, href: "https://www.uniprot.org/uniprot/Q16533" }},
-{data: { id: 'SNAPC2', score: 5, href: "https://www.uniprot.org/uniprot/Q13487" }},
-{data: { id: 'SNAPC4', score: 5, href: "https://www.uniprot.org/uniprot/Q5SXM2" }}], 
- edges: [{ data: { source: 'SNAPC5', target: 'SNAPC1', directed: 'false', weight: 0.966612} },
-{ data: { source: 'SNAPC5', target: 'SNAPC2', directed: 'false', weight: 0.171414} },
-{ data: { source: 'SNAPC5', target: 'SNAPC3', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SNAPC5', target: 'SNAPC4', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SNAPC3', target: 'SNAPC1', directed: 'false', weight: 0.9874059999999999} },
+{data: { id: 'SNAPC2', score: 5, href: "https://www.uniprot.org/uniprot/Q13487" }}], 
+ edges: [{ data: { source: 'SNAPC3', target: 'SNAPC1', directed: 'false', weight: 0.9874059999999999} },
 { data: { source: 'SNAPC3', target: 'SNAPC4', directed: 'false', weight: 0.33813200000000004} },
 { data: { source: 'SNAPC3', target: 'SNAPC2', directed: 'false', weight: 0.151455} },
-{ data: { source: 'SNAPC1', target: 'SNAPC2', directed: 'false', weight: 0.984986} },
-{ data: { source: 'SNAPC1', target: 'SNAPC4', directed: 'false', weight: 0.9759110000000001} },
-{ data: { source: 'SNAPC2', target: 'SNAPC4', directed: 'false', weight: 0.151455} }]},
+{ data: { source: 'SNAPC3', target: 'SNAPC5', directed: 'false', weight: 0.151455} },
+{ data: { source: 'SNAPC5', target: 'SNAPC1', directed: 'false', weight: 0.966612} },
+{ data: { source: 'SNAPC5', target: 'SNAPC2', directed: 'false', weight: 0.171414} },
+{ data: { source: 'SNAPC5', target: 'SNAPC4', directed: 'false', weight: 0.151455} },
+{ data: { source: 'SNAPC4', target: 'SNAPC1', directed: 'false', weight: 0.9759110000000001} },
+{ data: { source: 'SNAPC4', target: 'SNAPC2', directed: 'false', weight: 0.151455} },
+{ data: { source: 'SNAPC1', target: 'SNAPC2', directed: 'false', weight: 0.984986} }]},
 
 style: [
     {
@@ -59,7 +59,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

@@ -50,23 +50,23 @@ elements:{nodes: [{data: { id: 'SARS-CoV2 nsp12', score: 2, type:  'sars' , href
 {data: { id: 'TCF12', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q99081" }},
 {data: { id: 'PPIL3', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q9H2H8" }},
 {data: { id: 'PLEKHA5', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q9HAU0" }},
-{data: { id: 'MYCBP2 SPRYD3 LGALS3BP FBXO45', score: 0, type: 'complex', href: "../Predicted/Complex680.html" }},
-{data: { id: 'USP54 HELZ PUM1', score: 0, type: 'complex', href: "../Predicted/Complex613.html" }},
-{data: { id: '0.1 CTCF-nucleophosmin complex', score: 0, type: 'complex', href: "../Predicted/Complex740.html" }},
-{data: { id: '0.4 LSm2-8 complex', score: 0, type: 'complex', href: "../Predicted/Complex633.html" }},
-{data: { id: '0.2 BETA2-Cyclin D1 complex', score: 0, type: 'complex', href: "../Predicted/Complex419.html" }},
-{data: { id: '0.7 PLEKHA7-PDZD11 complex', score: 0, type: 'complex', href: "../Predicted/Complex338.html" }},
 {data: { id: '0.7 eIF3 complex (EIF3S6, EIF3S5, EIF3S4, EIF3S3, EIF3S6IP, EIF3S2, EIF3S9, EIF3S12,  EIF3S10, EIF3S8,  EIF3S1, EIF3S7, PCID1)', score: 0, type: 'complex', href: "../Predicted/Complex43.html" }},
-{data: { id: '0.1 DLGAP1-DLG4-DYNLL2 complex', score: 0, type: 'complex', href: "../Predicted/Complex827.html" }},
-{data: { id: '0.1 ITGAV-ITGB8-MMP14-TGFB1 complex', score: 0, type: 'complex', href: "../Predicted/Complex823.html" }}], 
- edges: [{ data: { source: 'MYCBP2', target: 'MYCBP2 SPRYD3 LGALS3BP FBXO45', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{data: { id: '0.1 DLGAP1-DLG4-DYNLL2 complex match 2', score: 0, type: 'complex', href: "../Predicted/Complex827.html" }},
+{data: { id: '0.1 ITGAV-ITGB8-MMP14-TGFB1 complex', score: 0, type: 'complex', href: "../Predicted/Complex823.html" }},
+{data: { id: '0.2 BETA2-Cyclin D1 complex', score: 0, type: 'complex', href: "../Predicted/Complex419.html" }},
+{data: { id: '0.1 CTCF-nucleophosmin complex', score: 0, type: 'complex', href: "../Predicted/Complex740.html" }},
+{data: { id: 'FBXO45 LGALS3BP MYCBP2 SPRYD3', score: 0, type: 'complex', href: "../Predicted/Complex680.html" }},
+{data: { id: '0.7 PLEKHA7-PDZD11 complex', score: 0, type: 'complex', href: "../Predicted/Complex338.html" }},
+{data: { id: 'HELZ USP54 PUM1', score: 0, type: 'complex', href: "../Predicted/Complex613.html" }},
+{data: { id: '0.4 LSm2-8 complex', score: 0, type: 'complex', href: "../Predicted/Complex633.html" }}], 
+ edges: [{ data: { source: 'MYCBP2', target: 'FBXO45 LGALS3BP MYCBP2 SPRYD3', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'SLU7', target: '0.4 LSm2-8 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'PDZD11', target: '0.7 PLEKHA7-PDZD11 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'PRRC2B', target: '0.7 eIF3 complex (EIF3S6, EIF3S5, EIF3S4, EIF3S3, EIF3S6IP, EIF3S2, EIF3S9, EIF3S12,  EIF3S10, EIF3S8,  EIF3S1, EIF3S7, PCID1)', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'USP54', target: 'USP54 HELZ PUM1', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'USP54', target: 'HELZ USP54 PUM1', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'LARP4B', target: '0.1 CTCF-nucleophosmin complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'TCF12', target: '0.2 BETA2-Cyclin D1 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'PPIL3', target: '0.1 DLGAP1-DLG4-DYNLL2 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{ data: { source: 'PPIL3', target: '0.1 DLGAP1-DLG4-DYNLL2 complex match 2', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'PLEKHA5', target: '0.1 ITGAV-ITGB8-MMP14-TGFB1 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'SARS-CoV2 nsp12', target: 'SBNO1', directed: 'false', type: 'sars2prot',weight: 0.969888009} },
 { data: { source: 'SARS-CoV2 nsp12', target: 'BCKDK', directed: 'false', type: 'sars2prot',weight: 0.98581764} },
@@ -114,9 +114,10 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.5, 1, 0.1, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 5)',
 								'line-color': function( ele ){ 
-                                if ( ele.data('type') == 'prot2complex' ){return 'blue'}
+                                if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                  if ( ele.data('type') == 'complex2complex' ){return 'blue'}
   return 'red';
   },
 								'opacity': 0.5

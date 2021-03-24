@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MED23', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULK4" }},
+elements:{nodes: [{data: { id: 'CCNC', score: 5, href: "https://www.uniprot.org/uniprot/P24863" }},
+{data: { id: 'MED7', score: 5, href: "https://www.uniprot.org/uniprot/O43513" }},
 {data: { id: 'CDK8', score: 5, href: "https://www.uniprot.org/uniprot/P49336" }},
-{data: { id: 'CCNC', score: 5, href: "https://www.uniprot.org/uniprot/P24863" }},
-{data: { id: 'MED7', score: 5, href: "https://www.uniprot.org/uniprot/O43513" }}], 
- edges: [{ data: { source: 'MED23', target: 'CDK8', directed: 'false', weight: 0.9992040000000001} },
-{ data: { source: 'MED23', target: 'MED7', directed: 'false', weight: 0.9669270000000001} },
-{ data: { source: 'MED23', target: 'CCNC', directed: 'false', weight: 0.8870899999999999} },
-{ data: { source: 'CDK8', target: 'CCNC', directed: 'false', weight: 0.9998309999999999} },
-{ data: { source: 'CDK8', target: 'MED7', directed: 'false', weight: 0.943742} },
-{ data: { source: 'CCNC', target: 'MED7', directed: 'false', weight: 0.657655} }]},
+{data: { id: 'MED23', score: 5, href: "https://www.uniprot.org/uniprot/Q9ULK4" }}], 
+ edges: [{ data: { source: 'CCNC', target: 'CDK8', directed: 'false', weight: 0.9998309999999999} },
+{ data: { source: 'CCNC', target: 'MED23', directed: 'false', weight: 0.8870899999999999} },
+{ data: { source: 'CCNC', target: 'MED7', directed: 'false', weight: 0.657655} },
+{ data: { source: 'MED7', target: 'MED23', directed: 'false', weight: 0.9669270000000001} },
+{ data: { source: 'MED7', target: 'CDK8', directed: 'false', weight: 0.943742} },
+{ data: { source: 'CDK8', target: 'MED23', directed: 'false', weight: 0.9992040000000001} }]},
 
 style: [
     {
@@ -54,7 +54,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

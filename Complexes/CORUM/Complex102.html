@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'ASB9', score: 5, href: "https://www.uniprot.org/uniprot/Q96DX5" }},
-{data: { id: 'ELOB', score: 5, href: "https://www.uniprot.org/uniprot/Q15370" }},
+elements:{nodes: [{data: { id: 'CUL5', score: 5, href: "https://www.uniprot.org/uniprot/Q93034" }},
 {data: { id: 'ELOC', score: 5, href: "https://www.uniprot.org/uniprot/Q15369" }},
-{data: { id: 'CUL5', score: 5, href: "https://www.uniprot.org/uniprot/Q93034" }}], 
- edges: [{ data: { source: 'ASB9', target: 'ELOC', directed: 'false', weight: 0.5640069999999999} },
-{ data: { source: 'ASB9', target: 'ELOB', directed: 'false', weight: 0.28641} },
-{ data: { source: 'ASB9', target: 'CUL5', directed: 'false', weight: 0.23909499999999997} },
-{ data: { source: 'ELOB', target: 'ELOC', directed: 'false', weight: 0.999216} },
-{ data: { source: 'ELOB', target: 'CUL5', directed: 'false', weight: 0.68042} },
-{ data: { source: 'ELOC', target: 'CUL5', directed: 'false', weight: 0.909113} }]},
+{data: { id: 'ELOB', score: 5, href: "https://www.uniprot.org/uniprot/Q15370" }},
+{data: { id: 'ASB9', score: 5, href: "https://www.uniprot.org/uniprot/Q96DX5" }}], 
+ edges: [{ data: { source: 'CUL5', target: 'ELOC', directed: 'false', weight: 0.909113} },
+{ data: { source: 'CUL5', target: 'ELOB', directed: 'false', weight: 0.68042} },
+{ data: { source: 'CUL5', target: 'ASB9', directed: 'false', weight: 0.23909499999999997} },
+{ data: { source: 'ELOC', target: 'ELOB', directed: 'false', weight: 0.999216} },
+{ data: { source: 'ELOC', target: 'ASB9', directed: 'false', weight: 0.5640069999999999} },
+{ data: { source: 'ELOB', target: 'ASB9', directed: 'false', weight: 0.28641} }]},
 
 style: [
     {
@@ -54,7 +54,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}
@@ -84,7 +84,7 @@ cy.on('tap', 'node', function(){
         <br>
         Connection to SARS-COV2: 
         <br>
-        2 interacting protein(s): <br>ELOB ELOC
+        2 interacting protein(s): <br>ELOC ELOB
     </section>
     </body>
     </html>

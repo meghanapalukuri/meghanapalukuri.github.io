@@ -30,20 +30,20 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: 'VPS18', score: 5, href: "https://www.uniprot.org/uniprot/Q9P253" }},
-{data: { id: 'VPS41', score: 5, href: "https://www.uniprot.org/uniprot/P49754" }},
-{data: { id: 'VPS33A', score: 5, href: "https://www.uniprot.org/uniprot/Q96AX1" }},
 {data: { id: 'VPS16', score: 5, href: "https://www.uniprot.org/uniprot/Q9H269" }},
+{data: { id: 'VPS33A', score: 5, href: "https://www.uniprot.org/uniprot/Q96AX1" }},
+{data: { id: 'VPS41', score: 5, href: "https://www.uniprot.org/uniprot/P49754" }},
 {data: { id: 'VPS11', score: 5, href: "https://www.uniprot.org/uniprot/Q9H270" }}], 
  edges: [{ data: { source: 'VPS18', target: 'VPS33A', directed: 'false', weight: 0.9999459999999999} },
 { data: { source: 'VPS18', target: 'VPS11', directed: 'false', weight: 0.999541} },
 { data: { source: 'VPS18', target: 'VPS16', directed: 'false', weight: 0.999315} },
 { data: { source: 'VPS18', target: 'VPS41', directed: 'false', weight: 0.999049} },
-{ data: { source: 'VPS33A', target: 'VPS16', directed: 'false', weight: 0.9993780000000001} },
+{ data: { source: 'VPS16', target: 'VPS33A', directed: 'false', weight: 0.9993780000000001} },
+{ data: { source: 'VPS16', target: 'VPS41', directed: 'false', weight: 0.9958889999999999} },
+{ data: { source: 'VPS16', target: 'VPS11', directed: 'false', weight: 0.952564} },
 { data: { source: 'VPS33A', target: 'VPS41', directed: 'false', weight: 0.9928540000000001} },
 { data: { source: 'VPS33A', target: 'VPS11', directed: 'false', weight: 0.938466} },
-{ data: { source: 'VPS41', target: 'VPS11', directed: 'false', weight: 0.9987440000000001} },
-{ data: { source: 'VPS41', target: 'VPS16', directed: 'false', weight: 0.9958889999999999} },
-{ data: { source: 'VPS16', target: 'VPS11', directed: 'false', weight: 0.952564} }]},
+{ data: { source: 'VPS41', target: 'VPS11', directed: 'false', weight: 0.9987440000000001} }]},
 
 style: [
     {
@@ -59,7 +59,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

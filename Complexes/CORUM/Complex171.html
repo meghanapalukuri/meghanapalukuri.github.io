@@ -30,11 +30,11 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: 'ZWILCH', score: 5, href: "https://www.uniprot.org/uniprot/Q9H900" }},
-{data: { id: 'ZW10', score: 5, href: "https://www.uniprot.org/uniprot/O43264" }},
-{data: { id: 'KNTC1', score: 5, href: "https://www.uniprot.org/uniprot/P50748" }}], 
+{data: { id: 'KNTC1', score: 5, href: "https://www.uniprot.org/uniprot/P50748" }},
+{data: { id: 'ZW10', score: 5, href: "https://www.uniprot.org/uniprot/O43264" }}], 
  edges: [{ data: { source: 'ZWILCH', target: 'ZW10', directed: 'false', weight: 0.831451} },
 { data: { source: 'ZWILCH', target: 'KNTC1', directed: 'false', weight: 0.125737} },
-{ data: { source: 'ZW10', target: 'KNTC1', directed: 'false', weight: 0.9975639999999999} }]},
+{ data: { source: 'KNTC1', target: 'ZW10', directed: 'false', weight: 0.9975639999999999} }]},
 
 style: [
     {
@@ -50,7 +50,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

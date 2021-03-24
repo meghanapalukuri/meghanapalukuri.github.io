@@ -29,9 +29,9 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'TCP10', score: 0, type: '' }},
+elements:{nodes: [{data: { id: 'TCP10', score: 5.0, type: '', href: "https://www.uniprot.org/uniprot/Q8TDR4" }},
 {data: { id: 'TCP10L2', score: 1, type: '', href: "https://www.uniprot.org/uniprot/F5GYV4" }},
-{data: { id: 'SARS-CoV2 nsp13', score: 0, type: 'sars'  }},
+{data: { id: 'SARS-CoV2 nsp13', score: 0, type: 'sars' , href: "../SARS_COV2prots/SARS-CoV2 nsp13.html" }},
 {data: { id: 'GRIPAP1', score: 5, type: 'cov_link', href: "https://www.uniprot.org/uniprot/Q4V328" }}], 
  edges: [{ data: { source: 'SARS-CoV2 nsp13', target: 'GRIPAP1', directed: 'false', weight: 0.989815969, type: 'sars'} },
 { data: { source: 'TCP10L2', target: 'TCP10', directed: 'false', weight: 0.980618} },

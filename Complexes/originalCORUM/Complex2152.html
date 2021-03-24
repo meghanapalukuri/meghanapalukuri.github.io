@@ -29,17 +29,17 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'BCL2', score: 5, href: "https://www.uniprot.org/uniprot/A0A024R2B3" }},
+elements:{nodes: [{data: { id: 'BCL2', score: 5, href: "https://www.uniprot.org/uniprot/P10415" }},
 {data: { id: 'BECN1', score: 5, href: "https://www.uniprot.org/uniprot/Q14457" }},
 {data: { id: 'PIK3C3', score: 5, href: "https://www.uniprot.org/uniprot/Q8NEB9" }},
 {data: { id: 'PIK3R4', score: 5, href: "https://www.uniprot.org/uniprot/Q99570" }},
 {data: { id: 'UVRAG', score: 5, href: "https://www.uniprot.org/uniprot/Q9P2Y5" }}], 
- edges: [{ data: { source: 'PIK3C3', target: 'PIK3R4', directed: 'false', weight: 0.995582} },
-{ data: { source: 'PIK3C3', target: 'BECN1', directed: 'false', weight: 0.99016} },
+ edges: [{ data: { source: 'BECN1', target: 'PIK3C3', directed: 'false', weight: 0.99016} },
+{ data: { source: 'BECN1', target: 'UVRAG', directed: 'false', weight: 0.962176} },
+{ data: { source: 'BECN1', target: 'PIK3R4', directed: 'false', weight: 0.870028} },
+{ data: { source: 'PIK3C3', target: 'PIK3R4', directed: 'false', weight: 0.995582} },
 { data: { source: 'PIK3C3', target: 'UVRAG', directed: 'false', weight: 0.125737} },
-{ data: { source: 'UVRAG', target: 'BECN1', directed: 'false', weight: 0.962176} },
-{ data: { source: 'UVRAG', target: 'PIK3R4', directed: 'false', weight: 0.09052510000000001} },
-{ data: { source: 'BECN1', target: 'PIK3R4', directed: 'false', weight: 0.870028} }]},
+{ data: { source: 'UVRAG', target: 'PIK3R4', directed: 'false', weight: 0.09052510000000001} }]},
 
 style: [
     {

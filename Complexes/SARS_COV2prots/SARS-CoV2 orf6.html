@@ -64,9 +64,10 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.5, 1, 0.1, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 5)',
 								'line-color': function( ele ){ 
-                                if ( ele.data('type') == 'prot2complex' ){return 'blue'}
+                                if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                  if ( ele.data('type') == 'complex2complex' ){return 'blue'}
   return 'red';
   },
 								'opacity': 0.5

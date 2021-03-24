@@ -36,9 +36,9 @@ elements:{nodes: [{data: { id: 'OSGEP', score: 5, href: "https://www.uniprot.org
  edges: [{ data: { source: 'OSGEP', target: 'LAGE3', directed: 'false', weight: 0.999994} },
 { data: { source: 'OSGEP', target: 'TP53RK', directed: 'false', weight: 0.9993700000000001} },
 { data: { source: 'OSGEP', target: 'TPRKB', directed: 'false', weight: 0.999265} },
-{ data: { source: 'TP53RK', target: 'TPRKB', directed: 'false', weight: 0.9451139999999999} },
-{ data: { source: 'TP53RK', target: 'LAGE3', directed: 'false', weight: 0.7510859999999999} },
-{ data: { source: 'TPRKB', target: 'LAGE3', directed: 'false', weight: 0.8092739999999999} }]},
+{ data: { source: 'LAGE3', target: 'TPRKB', directed: 'false', weight: 0.8092739999999999} },
+{ data: { source: 'LAGE3', target: 'TP53RK', directed: 'false', weight: 0.7510859999999999} },
+{ data: { source: 'TPRKB', target: 'TP53RK', directed: 'false', weight: 0.9451139999999999} }]},
 
 style: [
     {
@@ -54,7 +54,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

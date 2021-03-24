@@ -29,23 +29,23 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SNX2', score: 5, href: "https://www.uniprot.org/uniprot/O60749" }},
-{data: { id: 'VPS29', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBQ0" }},
+elements:{nodes: [{data: { id: 'VPS26A', score: 5, href: "https://www.uniprot.org/uniprot/O75436" }},
 {data: { id: 'SNX1', score: 5, href: "https://www.uniprot.org/uniprot/Q13596" }},
-{data: { id: 'VPS26A', score: 5, href: "https://www.uniprot.org/uniprot/O75436" }},
 {data: { id: 'VPS26B', score: 4, href: "https://www.uniprot.org/uniprot/Q4G0F5" }},
-{data: { id: 'VPS35', score: 5, href: "https://www.uniprot.org/uniprot/Q96QK1" }}], 
- edges: [{ data: { source: 'SNX2', target: 'VPS35', directed: 'false', weight: 0.9759209999999999} },
-{ data: { source: 'SNX2', target: 'VPS29', directed: 'false', weight: 0.975914} },
-{ data: { source: 'SNX2', target: 'SNX1', directed: 'false', weight: 0.111562} },
-{ data: { source: 'SNX1', target: 'VPS29', directed: 'false', weight: 0.9759540000000001} },
-{ data: { source: 'SNX1', target: 'VPS35', directed: 'false', weight: 0.975916} },
-{ data: { source: 'VPS29', target: 'VPS26B', directed: 'false', weight: 0.999649} },
-{ data: { source: 'VPS29', target: 'VPS26A', directed: 'false', weight: 0.9950889999999999} },
-{ data: { source: 'VPS29', target: 'VPS35', directed: 'false', weight: 0.9759110000000001} },
+{data: { id: 'SNX2', score: 5, href: "https://www.uniprot.org/uniprot/O60749" }},
+{data: { id: 'VPS35', score: 5, href: "https://www.uniprot.org/uniprot/Q96QK1" }},
+{data: { id: 'VPS29', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBQ0" }}], 
+ edges: [{ data: { source: 'VPS26A', target: 'VPS29', directed: 'false', weight: 0.9950889999999999} },
 { data: { source: 'VPS26A', target: 'VPS35', directed: 'false', weight: 0.975929} },
 { data: { source: 'VPS26A', target: 'VPS26B', directed: 'false', weight: 0.9759110000000001} },
-{ data: { source: 'VPS26B', target: 'VPS35', directed: 'false', weight: 0.998783} }]},
+{ data: { source: 'SNX1', target: 'VPS29', directed: 'false', weight: 0.9759540000000001} },
+{ data: { source: 'SNX1', target: 'VPS35', directed: 'false', weight: 0.975916} },
+{ data: { source: 'SNX1', target: 'SNX2', directed: 'false', weight: 0.111562} },
+{ data: { source: 'VPS26B', target: 'VPS29', directed: 'false', weight: 0.999649} },
+{ data: { source: 'VPS26B', target: 'VPS35', directed: 'false', weight: 0.998783} },
+{ data: { source: 'SNX2', target: 'VPS35', directed: 'false', weight: 0.9759209999999999} },
+{ data: { source: 'SNX2', target: 'VPS29', directed: 'false', weight: 0.975914} },
+{ data: { source: 'VPS35', target: 'VPS29', directed: 'false', weight: 0.9759110000000001} }]},
 
 style: [
     {
@@ -61,7 +61,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

@@ -34,11 +34,12 @@ elements:{nodes: [{data: { id: 'SARS-CoV2 nsp6', score: 2, type:  'sars' , href:
 {data: { id: 'ATP6AP1', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q15904" }},
 {data: { id: 'SIGMAR1', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q99720" }},
 {data: { id: 'ATP13A3', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q9H7F0" }},
-{data: { id: '0.1 F1F0-ATP synthase, mitochondrial', score: 0, type: 'complex', href: "../Predicted/Complex980.html" }},
 {data: { id: '0.2 SIGMAR1-KCNH2 complex', score: 0, type: 'complex', href: "../Predicted/Complex788.html" }},
 {data: { id: '0.1 v-ATPase-Ragulator-AXIN/LKB1-AMPK complex', score: 0, type: 'complex', href: "../Predicted/Complex641.html" }},
-{data: { id: '0.5 F1F0-ATP synthase, mitochondrial', score: 0, type: 'complex', href: "../Predicted/Complex42.html" }}], 
- edges: [{ data: { source: 'ATP5MG', target: '0.5 F1F0-ATP synthase, mitochondrial', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{data: { id: '0.5 F1F0-ATP synthase, mitochondrial', score: 0, type: 'complex', href: "../Predicted/Complex42.html" }},
+{data: { id: '0.1 F1F0-ATP synthase, mitochondrial', score: 0, type: 'complex', href: "../Predicted/Complex980.html" }}], 
+ edges: [{ data: { source: '0.5 F1F0-ATP synthase, mitochondrial', target: '0.1 F1F0-ATP synthase, mitochondrial', directed: 'false',type: 'complex2complex', weight: 0.12} },
+{ data: { source: 'ATP5MG', target: '0.5 F1F0-ATP synthase, mitochondrial', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'ATP5MG', target: '0.1 F1F0-ATP synthase, mitochondrial', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'ATP6AP1', target: '0.1 v-ATPase-Ragulator-AXIN/LKB1-AMPK complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'SIGMAR1', target: '0.2 SIGMAR1-KCNH2 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
@@ -72,9 +73,10 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.5, 1, 0.1, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 5)',
 								'line-color': function( ele ){ 
-                                if ( ele.data('type') == 'prot2complex' ){return 'blue'}
+                                if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                  if ( ele.data('type') == 'complex2complex' ){return 'blue'}
   return 'red';
   },
 								'opacity': 0.5

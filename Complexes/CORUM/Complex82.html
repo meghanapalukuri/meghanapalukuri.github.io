@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'STX6', score: 5, href: "https://www.uniprot.org/uniprot/O43752" }},
-{data: { id: 'VTI1A', score: 5, href: "https://www.uniprot.org/uniprot/Q96AJ9" }},
-{data: { id: 'VAMP3', score: 5, href: "https://www.uniprot.org/uniprot/Q15836" }}], 
- edges: [{ data: { source: 'STX6', target: 'VTI1A', directed: 'false', weight: 0.9210729999999999} },
-{ data: { source: 'STX6', target: 'VAMP3', directed: 'false', weight: 0.23933600000000002} },
-{ data: { source: 'VTI1A', target: 'VAMP3', directed: 'false', weight: 0.22501500000000002} }]},
+elements:{nodes: [{data: { id: 'VTI1A', score: 5, href: "https://www.uniprot.org/uniprot/Q96AJ9" }},
+{data: { id: 'VAMP3', score: 5, href: "https://www.uniprot.org/uniprot/Q15836" }},
+{data: { id: 'STX6', score: 5, href: "https://www.uniprot.org/uniprot/O43752" }}], 
+ edges: [{ data: { source: 'VTI1A', target: 'STX6', directed: 'false', weight: 0.9210729999999999} },
+{ data: { source: 'VTI1A', target: 'VAMP3', directed: 'false', weight: 0.22501500000000002} },
+{ data: { source: 'VAMP3', target: 'STX6', directed: 'false', weight: 0.23933600000000002} }]},
 
 style: [
     {
@@ -50,7 +50,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

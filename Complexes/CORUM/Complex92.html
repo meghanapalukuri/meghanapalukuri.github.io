@@ -29,21 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CCNC', score: 5, href: "https://www.uniprot.org/uniprot/P24863" }},
+elements:{nodes: [{data: { id: 'CDK8', score: 5, href: "https://www.uniprot.org/uniprot/P49336" }},
+{data: { id: 'CCNC', score: 5, href: "https://www.uniprot.org/uniprot/P24863" }},
 {data: { id: 'MED7', score: 5, href: "https://www.uniprot.org/uniprot/O43513" }},
-{data: { id: 'CDK8', score: 5, href: "https://www.uniprot.org/uniprot/P49336" }},
-{data: { id: 'MED6', score: 5, href: "https://www.uniprot.org/uniprot/O75586" }},
-{data: { id: 'MED1', score: 5, href: "https://www.uniprot.org/uniprot/Q15648" }}], 
- edges: [{ data: { source: 'CCNC', target: 'CDK8', directed: 'false', weight: 0.9998309999999999} },
+{data: { id: 'MED1', score: 5, href: "https://www.uniprot.org/uniprot/O95243" }},
+{data: { id: 'MED6', score: 5, href: "https://www.uniprot.org/uniprot/O75586" }}], 
+ edges: [{ data: { source: 'CDK8', target: 'MED6', directed: 'false', weight: 0.999899} },
+{ data: { source: 'CDK8', target: 'CCNC', directed: 'false', weight: 0.9998309999999999} },
+{ data: { source: 'CDK8', target: 'MED1', directed: 'false', weight: 0.997194} },
+{ data: { source: 'CDK8', target: 'MED7', directed: 'false', weight: 0.943742} },
 { data: { source: 'CCNC', target: 'MED6', directed: 'false', weight: 0.9852219999999999} },
 { data: { source: 'CCNC', target: 'MED1', directed: 'false', weight: 0.8875059999999999} },
 { data: { source: 'CCNC', target: 'MED7', directed: 'false', weight: 0.657655} },
 { data: { source: 'MED7', target: 'MED6', directed: 'false', weight: 0.9930110000000001} },
 { data: { source: 'MED7', target: 'MED1', directed: 'false', weight: 0.980928} },
-{ data: { source: 'MED7', target: 'CDK8', directed: 'false', weight: 0.943742} },
-{ data: { source: 'CDK8', target: 'MED6', directed: 'false', weight: 0.999899} },
-{ data: { source: 'CDK8', target: 'MED1', directed: 'false', weight: 0.997194} },
-{ data: { source: 'MED6', target: 'MED1', directed: 'false', weight: 0.9959950000000001} }]},
+{ data: { source: 'MED1', target: 'MED6', directed: 'false', weight: 0.9959950000000001} }]},
 
 style: [
     {
@@ -59,7 +59,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

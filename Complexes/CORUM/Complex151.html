@@ -29,18 +29,18 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'HOOK1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJC3" }},
+elements:{nodes: [{data: { id: 'HOOK3', score: 5, href: "https://www.uniprot.org/uniprot/Q86VS8" }},
 {data: { id: 'HOOK2', score: 5, href: "https://www.uniprot.org/uniprot/Q96ED9" }},
-{data: { id: 'FAM160A2', score: 5, href: "https://www.uniprot.org/uniprot/Q8N612" }},
+{data: { id: 'HOOK1', score: 5, href: "https://www.uniprot.org/uniprot/Q9UJC3" }},
 {data: { id: 'AKTIP', score: 5, href: "https://www.uniprot.org/uniprot/Q9H8T0" }},
-{data: { id: 'HOOK3', score: 5, href: "https://www.uniprot.org/uniprot/Q86VS8" }}], 
- edges: [{ data: { source: 'HOOK1', target: 'AKTIP', directed: 'false', weight: 0.8411540000000001} },
+{data: { id: 'FAM160A2', score: 5, href: "https://www.uniprot.org/uniprot/Q8N612" }}], 
+ edges: [{ data: { source: 'HOOK3', target: 'AKTIP', directed: 'false', weight: 0.952498} },
+{ data: { source: 'HOOK3', target: 'FAM160A2', directed: 'false', weight: 0.178521} },
+{ data: { source: 'AKTIP', target: 'FAM160A2', directed: 'false', weight: 0.9875360000000001} },
+{ data: { source: 'AKTIP', target: 'HOOK1', directed: 'false', weight: 0.8411540000000001} },
+{ data: { source: 'AKTIP', target: 'HOOK2', directed: 'false', weight: 0.717248} },
 { data: { source: 'HOOK1', target: 'FAM160A2', directed: 'false', weight: 0.14871800000000002} },
-{ data: { source: 'HOOK2', target: 'AKTIP', directed: 'false', weight: 0.717248} },
-{ data: { source: 'HOOK2', target: 'FAM160A2', directed: 'false', weight: 0.192166} },
-{ data: { source: 'FAM160A2', target: 'AKTIP', directed: 'false', weight: 0.9875360000000001} },
-{ data: { source: 'FAM160A2', target: 'HOOK3', directed: 'false', weight: 0.178521} },
-{ data: { source: 'AKTIP', target: 'HOOK3', directed: 'false', weight: 0.952498} }]},
+{ data: { source: 'HOOK2', target: 'FAM160A2', directed: 'false', weight: 0.192166} }]},
 
 style: [
     {
@@ -56,7 +56,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

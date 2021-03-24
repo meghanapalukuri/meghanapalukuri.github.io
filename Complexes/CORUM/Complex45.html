@@ -29,11 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'RBX1', score: 5, href: "https://www.uniprot.org/uniprot/P62877" }},
-{data: { id: 'KLHL24', score: 5, href: "https://www.uniprot.org/uniprot/Q6TFL4" }},
+elements:{nodes: [{data: { id: 'KLHL24', score: 5, href: "https://www.uniprot.org/uniprot/Q6TFL4" }},
+{data: { id: 'RBX1', score: 5, href: "https://www.uniprot.org/uniprot/P62877" }},
 {data: { id: 'CUL3', score: 5, href: "https://www.uniprot.org/uniprot/Q13618" }}], 
- edges: [{ data: { source: 'RBX1', target: 'CUL3', directed: 'false', weight: 0.658836} },
-{ data: { source: 'KLHL24', target: 'CUL3', directed: 'false', weight: 0.661305} }]},
+ edges: [{ data: { source: 'CUL3', target: 'KLHL24', directed: 'false', weight: 0.661305} },
+{ data: { source: 'CUL3', target: 'RBX1', directed: 'false', weight: 0.658836} }]},
 
 style: [
     {
@@ -49,7 +49,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

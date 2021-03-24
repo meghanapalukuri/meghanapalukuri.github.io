@@ -29,21 +29,21 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SEPTIN2', score: 5, href: "https://www.uniprot.org/uniprot/Q15019" }},
+elements:{nodes: [{data: { id: 'SEPTIN9', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHD8" }},
+{data: { id: 'SEPTIN8', score: 5, href: "https://www.uniprot.org/uniprot/Q92599" }},
 {data: { id: 'SEPTIN7', score: 5, href: "https://www.uniprot.org/uniprot/Q16181" }},
-{data: { id: 'SEPTIN9', score: 5, href: "https://www.uniprot.org/uniprot/Q9UHD8" }},
 {data: { id: 'SEPTIN11', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVA2" }},
-{data: { id: 'SEPTIN8', score: 5, href: "https://www.uniprot.org/uniprot/Q92599" }}], 
- edges: [{ data: { source: 'SEPTIN2', target: 'SEPTIN9', directed: 'false', weight: 1.0} },
-{ data: { source: 'SEPTIN2', target: 'SEPTIN7', directed: 'false', weight: 0.999567} },
-{ data: { source: 'SEPTIN2', target: 'SEPTIN11', directed: 'false', weight: 0.998223} },
-{ data: { source: 'SEPTIN2', target: 'SEPTIN8', directed: 'false', weight: 0.997885} },
-{ data: { source: 'SEPTIN7', target: 'SEPTIN9', directed: 'false', weight: 0.999757} },
-{ data: { source: 'SEPTIN7', target: 'SEPTIN11', directed: 'false', weight: 0.9699549999999999} },
-{ data: { source: 'SEPTIN7', target: 'SEPTIN8', directed: 'false', weight: 0.9239620000000001} },
+{data: { id: 'SEPTIN2', score: 5, href: "https://www.uniprot.org/uniprot/Q15019" }}], 
+ edges: [{ data: { source: 'SEPTIN9', target: 'SEPTIN2', directed: 'false', weight: 1.0} },
 { data: { source: 'SEPTIN9', target: 'SEPTIN11', directed: 'false', weight: 0.999885} },
+{ data: { source: 'SEPTIN9', target: 'SEPTIN7', directed: 'false', weight: 0.999757} },
 { data: { source: 'SEPTIN9', target: 'SEPTIN8', directed: 'false', weight: 0.997807} },
-{ data: { source: 'SEPTIN11', target: 'SEPTIN8', directed: 'false', weight: 0.99941} }]},
+{ data: { source: 'SEPTIN8', target: 'SEPTIN11', directed: 'false', weight: 0.99941} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN2', directed: 'false', weight: 0.997885} },
+{ data: { source: 'SEPTIN8', target: 'SEPTIN7', directed: 'false', weight: 0.9239620000000001} },
+{ data: { source: 'SEPTIN7', target: 'SEPTIN2', directed: 'false', weight: 0.999567} },
+{ data: { source: 'SEPTIN7', target: 'SEPTIN11', directed: 'false', weight: 0.9699549999999999} },
+{ data: { source: 'SEPTIN11', target: 'SEPTIN2', directed: 'false', weight: 0.998223} }]},
 
 style: [
     {
@@ -59,7 +59,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

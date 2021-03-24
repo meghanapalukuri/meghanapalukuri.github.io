@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CCNE1', score: 5, href: "https://www.uniprot.org/uniprot/P24864" }},
+elements:{nodes: [{data: { id: 'CDKN1B', score: 5, href: "https://www.uniprot.org/uniprot/P46527" }},
 {data: { id: 'CDK2', score: 5, href: "https://www.uniprot.org/uniprot/P24941" }},
-{data: { id: 'CDKN1B', score: 5, href: "https://www.uniprot.org/uniprot/P46527" }}], 
- edges: [{ data: { source: 'CDK2', target: 'CDKN1B', directed: 'false', weight: 0.9898290000000001} },
-{ data: { source: 'CDK2', target: 'CCNE1', directed: 'false', weight: 0.960686} },
-{ data: { source: 'CDKN1B', target: 'CCNE1', directed: 'false', weight: 0.593596} }]},
+{data: { id: 'CCNE1', score: 5, href: "https://www.uniprot.org/uniprot/P24864" }}], 
+ edges: [{ data: { source: 'CDKN1B', target: 'CDK2', directed: 'false', weight: 0.9898290000000001} },
+{ data: { source: 'CDKN1B', target: 'CCNE1', directed: 'false', weight: 0.593596} },
+{ data: { source: 'CDK2', target: 'CCNE1', directed: 'false', weight: 0.960686} }]},
 
 style: [
     {
@@ -50,7 +50,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

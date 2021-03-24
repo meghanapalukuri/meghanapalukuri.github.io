@@ -48,9 +48,9 @@ elements:{nodes: [{data: { id: 'SARS-CoV2 nsp9', score: 2, type:  'sars' , href:
 {data: { id: 'FBLN5', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q9UBX5" }},
 {data: { id: '0.2 DSIF complex (DRB sensitivity-inducing factor complex)', score: 0, type: 'complex', href: "../Predicted/Complex868.html" }},
 {data: { id: '0.2 ELN-FBLN2-FBN1 complex', score: 0, type: 'complex', href: "../Predicted/Complex178.html" }},
+{data: { id: '0.4 tRNA Splicing Ligase Complex', score: 0, type: 'complex', href: "../Predicted/Complex762.html" }},
 {data: { id: '0.7 Methionine adenosyltransferase alpha2 beta-v1', score: 0, type: 'complex', href: "../Predicted/Complex92.html" }},
 {data: { id: '0.1 FACT-NEK9 complex', score: 0, type: 'complex', href: "../Predicted/Complex672.html" }},
-{data: { id: '0.4 tRNA Splicing Ligase Complex', score: 0, type: 'complex', href: "../Predicted/Complex762.html" }},
 {data: { id: '0.5 Prefoldin complex', score: 0, type: 'complex', href: "../Predicted/Complex846.html" }}], 
  edges: [{ data: { source: 'GTF2F2', target: '0.2 DSIF complex (DRB sensitivity-inducing factor complex)', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'FBN1', target: '0.2 ELN-FBLN2-FBN1 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
@@ -100,9 +100,10 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.5, 1, 0.1, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 5)',
 								'line-color': function( ele ){ 
-                                if ( ele.data('type') == 'prot2complex' ){return 'blue'}
+                                if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                  if ( ele.data('type') == 'complex2complex' ){return 'blue'}
   return 'red';
   },
 								'opacity': 0.5

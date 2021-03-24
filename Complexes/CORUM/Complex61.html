@@ -30,7 +30,7 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: 'CDKN2A', score: 5, href: "https://www.uniprot.org/uniprot/P42771" }},
-{data: { id: 'CDK4', score: 5, href: "https://www.uniprot.org/uniprot/A0A024RBB6" }},
+{data: { id: 'CDK4', score: 5, href: "https://www.uniprot.org/uniprot/P11802" }},
 {data: { id: 'CCND2', score: 5, href: "https://www.uniprot.org/uniprot/P30279" }}], 
  edges: [{ data: { source: 'CDKN2A', target: 'CDK4', directed: 'false', weight: 0.980915} },
 { data: { source: 'CDKN2A', target: 'CCND2', directed: 'false', weight: 0.123797} },
@@ -50,7 +50,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

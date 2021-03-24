@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MPP7', score: 5, href: "https://www.uniprot.org/uniprot/Q5T2T1" }},
-{data: { id: 'DLG1', score: 5, href: "https://www.uniprot.org/uniprot/Q12959" }},
-{data: { id: 'LIN7C', score: 5, href: "https://www.uniprot.org/uniprot/Q9NUP9" }}], 
- edges: [{ data: { source: 'MPP7', target: 'LIN7C', directed: 'false', weight: 0.9997219999999999} },
-{ data: { source: 'MPP7', target: 'DLG1', directed: 'false', weight: 0.449295} },
-{ data: { source: 'DLG1', target: 'LIN7C', directed: 'false', weight: 0.9863620000000001} }]},
+elements:{nodes: [{data: { id: 'DLG1', score: 5, href: "https://www.uniprot.org/uniprot/Q12959" }},
+{data: { id: 'LIN7C', score: 5, href: "https://www.uniprot.org/uniprot/Q9NUP9" }},
+{data: { id: 'MPP7', score: 5, href: "https://www.uniprot.org/uniprot/Q13112" }}], 
+ edges: [{ data: { source: 'DLG1', target: 'LIN7C', directed: 'false', weight: 0.9863620000000001} },
+{ data: { source: 'DLG1', target: 'MPP7', directed: 'false', weight: 0.449295} },
+{ data: { source: 'LIN7C', target: 'MPP7', directed: 'false', weight: 0.9997219999999999} }]},
 
 style: [
     {
@@ -50,7 +50,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

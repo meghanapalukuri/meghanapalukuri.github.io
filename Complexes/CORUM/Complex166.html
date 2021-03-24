@@ -29,11 +29,11 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NDUFS3', score: 5, href: "https://www.uniprot.org/uniprot/O75489" }},
-{data: { id: 'ECSIT', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQ95" }},
-{data: { id: 'NDUFAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y375" }}], 
- edges: [{ data: { source: 'NDUFS3', target: 'ECSIT', directed: 'false', weight: 0.314687} },
-{ data: { source: 'ECSIT', target: 'NDUFAF1', directed: 'false', weight: 0.985202} }]},
+elements:{nodes: [{data: { id: 'NDUFAF1', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y375" }},
+{data: { id: 'NDUFS3', score: 5, href: "https://www.uniprot.org/uniprot/O75489" }},
+{data: { id: 'ECSIT', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQ95" }}], 
+ edges: [{ data: { source: 'NDUFAF1', target: 'ECSIT', directed: 'false', weight: 0.985202} },
+{ data: { source: 'NDUFS3', target: 'ECSIT', directed: 'false', weight: 0.314687} }]},
 
 style: [
     {
@@ -49,7 +49,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}
@@ -79,7 +79,7 @@ cy.on('tap', 'node', function(){
         <br>
         Connection to SARS-COV2: 
         <br>
-        2 interacting protein(s): <br>ECSIT NDUFAF1
+        2 interacting protein(s): <br>NDUFAF1 ECSIT
     </section>
     </body>
     </html>

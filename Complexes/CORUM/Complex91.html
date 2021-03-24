@@ -29,9 +29,9 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'GNG12', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBI6" }},
+elements:{nodes: [{data: { id: 'GNB1', score: 5, href: "https://www.uniprot.org/uniprot/P62873" }},
 {data: { id: 'GNAS', score: 5, href: "https://www.uniprot.org/uniprot/O95467" }},
-{data: { id: 'GNB1', score: 5, href: "https://www.uniprot.org/uniprot/P62873" }}], 
+{data: { id: 'GNG12', score: 5, href: "https://www.uniprot.org/uniprot/Q9UBI6" }}], 
  edges: [{ data: { source: 'GNB1', target: 'GNG12', directed: 'false', weight: 0.462776} },
 { data: { source: 'GNAS', target: 'GNG12', directed: 'false', weight: 0.313452} }]},
 
@@ -49,7 +49,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

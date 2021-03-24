@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CNOT2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZN8" }},
-{data: { id: 'CNOT3', score: 5, href: "https://www.uniprot.org/uniprot/O75175" }},
-{data: { id: 'CNOT1', score: 5, href: "https://www.uniprot.org/uniprot/A5YKK6" }}], 
- edges: [{ data: { source: 'CNOT3', target: 'CNOT2', directed: 'false', weight: 0.9999979999999999} },
-{ data: { source: 'CNOT3', target: 'CNOT1', directed: 'false', weight: 0.9998739999999999} },
-{ data: { source: 'CNOT2', target: 'CNOT1', directed: 'false', weight: 0.995035} }]},
+elements:{nodes: [{data: { id: 'CNOT1', score: 5, href: "https://www.uniprot.org/uniprot/A5YKK6" }},
+{data: { id: 'CNOT2', score: 5, href: "https://www.uniprot.org/uniprot/Q9NZN8" }},
+{data: { id: 'CNOT3', score: 5, href: "https://www.uniprot.org/uniprot/O75175" }}], 
+ edges: [{ data: { source: 'CNOT1', target: 'CNOT3', directed: 'false', weight: 0.9998739999999999} },
+{ data: { source: 'CNOT1', target: 'CNOT2', directed: 'false', weight: 0.995035} },
+{ data: { source: 'CNOT2', target: 'CNOT3', directed: 'false', weight: 0.9999979999999999} }]},
 
 style: [
     {
@@ -50,7 +50,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

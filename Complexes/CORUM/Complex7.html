@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'MIS18A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NYP9" }},
-{data: { id: 'OIP5', score: 5, href: "https://www.uniprot.org/uniprot/O43482" }},
-{data: { id: 'MIS18BP1', score: 5, href: "https://www.uniprot.org/uniprot/Q6P0N0" }}], 
- edges: [{ data: { source: 'MIS18A', target: 'OIP5', directed: 'false', weight: 0.954908} },
-{ data: { source: 'MIS18A', target: 'MIS18BP1', directed: 'false', weight: 0.117318} },
-{ data: { source: 'OIP5', target: 'MIS18BP1', directed: 'false', weight: 0.46097200000000005} }]},
+elements:{nodes: [{data: { id: 'OIP5', score: 5, href: "https://www.uniprot.org/uniprot/O43482" }},
+{data: { id: 'MIS18BP1', score: 5, href: "https://www.uniprot.org/uniprot/Q6P0N0" }},
+{data: { id: 'MIS18A', score: 5, href: "https://www.uniprot.org/uniprot/Q9NYP9" }}], 
+ edges: [{ data: { source: 'OIP5', target: 'MIS18A', directed: 'false', weight: 0.954908} },
+{ data: { source: 'OIP5', target: 'MIS18BP1', directed: 'false', weight: 0.46097200000000005} },
+{ data: { source: 'MIS18BP1', target: 'MIS18A', directed: 'false', weight: 0.117318} }]},
 
 style: [
     {
@@ -50,7 +50,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

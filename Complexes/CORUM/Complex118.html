@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'CCDC93', score: 5, href: "https://www.uniprot.org/uniprot/Q567U6" }},
-{data: { id: 'COMMD1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N668" }},
+elements:{nodes: [{data: { id: 'COMMD1', score: 5, href: "https://www.uniprot.org/uniprot/Q8N668" }},
+{data: { id: 'CCDC93', score: 5, href: "https://www.uniprot.org/uniprot/Q567U6" }},
 {data: { id: 'COMMD6', score: 5, href: "https://www.uniprot.org/uniprot/Q7Z4G1" }}], 
- edges: [{ data: { source: 'CCDC93', target: 'COMMD1', directed: 'false', weight: 0.9538610000000001} },
-{ data: { source: 'CCDC93', target: 'COMMD6', directed: 'false', weight: 0.8787379999999999} },
-{ data: { source: 'COMMD1', target: 'COMMD6', directed: 'false', weight: 0.874792} }]},
+ edges: [{ data: { source: 'COMMD1', target: 'CCDC93', directed: 'false', weight: 0.9538610000000001} },
+{ data: { source: 'COMMD1', target: 'COMMD6', directed: 'false', weight: 0.874792} },
+{ data: { source: 'CCDC93', target: 'COMMD6', directed: 'false', weight: 0.8787379999999999} }]},
 
 style: [
     {
@@ -50,7 +50,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

@@ -30,15 +30,15 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: 'DDX27', score: 5, href: "https://www.uniprot.org/uniprot/Q96GQ7" }},
-{data: { id: 'BOP1', score: 5, href: "https://www.uniprot.org/uniprot/Q14137" }},
 {data: { id: 'PES1', score: 5, href: "https://www.uniprot.org/uniprot/O00541" }},
+{data: { id: 'BOP1', score: 5, href: "https://www.uniprot.org/uniprot/Q14137" }},
 {data: { id: 'WDR12', score: 5, href: "https://www.uniprot.org/uniprot/Q9GZL7" }}], 
  edges: [{ data: { source: 'DDX27', target: 'PES1', directed: 'false', weight: 0.9996860000000001} },
 { data: { source: 'DDX27', target: 'BOP1', directed: 'false', weight: 0.736426} },
 { data: { source: 'DDX27', target: 'WDR12', directed: 'false', weight: 0.259965} },
-{ data: { source: 'BOP1', target: 'PES1', directed: 'false', weight: 0.930841} },
-{ data: { source: 'BOP1', target: 'WDR12', directed: 'false', weight: 0.880358} },
-{ data: { source: 'PES1', target: 'WDR12', directed: 'false', weight: 0.583155} }]},
+{ data: { source: 'PES1', target: 'BOP1', directed: 'false', weight: 0.930841} },
+{ data: { source: 'PES1', target: 'WDR12', directed: 'false', weight: 0.583155} },
+{ data: { source: 'BOP1', target: 'WDR12', directed: 'false', weight: 0.880358} }]},
 
 style: [
     {
@@ -54,7 +54,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

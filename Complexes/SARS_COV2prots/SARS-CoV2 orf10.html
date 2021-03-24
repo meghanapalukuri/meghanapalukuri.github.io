@@ -39,9 +39,9 @@ elements:{nodes: [{data: { id: 'SARS-CoV2 orf10', score: 2, type:  'sars' , href
 {data: { id: 'RBX1', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/P62877" }},
 {data: { id: 'ELOC', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q15369" }},
 {data: { id: 'ELOB', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q15370" }},
-{data: { id: '0.8 Cullin-RING E3 ubiquitin ligase complex', score: 0, type: 'complex', href: "../Predicted/Complex623.html" }},
 {data: { id: '0.2 TIMM8A-TIMM13 complex', score: 0, type: 'complex', href: "../Predicted/Complex118.html" }},
-{data: { id: '0.6 DDB2 complex', score: 0, type: 'complex', href: "../Predicted/Complex26.html" }}], 
+{data: { id: '0.6 DDB2 complex', score: 0, type: 'complex', href: "../Predicted/Complex26.html" }},
+{data: { id: '0.8 Cullin-RING E3 ubiquitin ligase complex', score: 0, type: 'complex', href: "../Predicted/Complex623.html" }}], 
  edges: [{ data: { source: 'CUL2', target: '0.6 DDB2 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'TIMM8B', target: '0.2 TIMM8A-TIMM13 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'RBX1', target: '0.6 DDB2 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
@@ -82,9 +82,10 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.5, 1, 0.1, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 5)',
 								'line-color': function( ele ){ 
-                                if ( ele.data('type') == 'prot2complex' ){return 'blue'}
+                                if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                  if ( ele.data('type') == 'complex2complex' ){return 'blue'}
   return 'red';
   },
 								'opacity': 0.5

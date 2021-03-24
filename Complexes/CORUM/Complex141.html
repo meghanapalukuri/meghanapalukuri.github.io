@@ -29,16 +29,16 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'NELFE', score: 5, href: "https://www.uniprot.org/uniprot/P18615" }},
+elements:{nodes: [{data: { id: 'NELFA', score: 5, href: "https://www.uniprot.org/uniprot/Q9H3P2" }},
 {data: { id: 'NELFCD', score: 5, href: "https://www.uniprot.org/uniprot/Q8IXH7" }},
 {data: { id: 'NELFB', score: 5, href: "https://www.uniprot.org/uniprot/Q8WX92" }},
-{data: { id: 'NELFA', score: 5, href: "https://www.uniprot.org/uniprot/Q9H3P2" }}], 
- edges: [{ data: { source: 'NELFE', target: 'NELFA', directed: 'false', weight: 0.999951} },
-{ data: { source: 'NELFE', target: 'NELFB', directed: 'false', weight: 0.999934} },
-{ data: { source: 'NELFE', target: 'NELFCD', directed: 'false', weight: 0.9759110000000001} },
-{ data: { source: 'NELFCD', target: 'NELFB', directed: 'false', weight: 0.975941} },
+{data: { id: 'NELFE', score: 5, href: "https://www.uniprot.org/uniprot/P18615" }}], 
+ edges: [{ data: { source: 'NELFCD', target: 'NELFB', directed: 'false', weight: 0.975941} },
+{ data: { source: 'NELFCD', target: 'NELFE', directed: 'false', weight: 0.9759110000000001} },
 { data: { source: 'NELFCD', target: 'NELFA', directed: 'false', weight: 0.71812} },
-{ data: { source: 'NELFB', target: 'NELFA', directed: 'false', weight: 0.967915} }]},
+{ data: { source: 'NELFA', target: 'NELFE', directed: 'false', weight: 0.999951} },
+{ data: { source: 'NELFA', target: 'NELFB', directed: 'false', weight: 0.967915} },
+{ data: { source: 'NELFB', target: 'NELFE', directed: 'false', weight: 0.999934} }]},
 
 style: [
     {
@@ -54,7 +54,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

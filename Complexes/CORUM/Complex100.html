@@ -30,20 +30,20 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: 'SMC1A', score: 5, href: "https://www.uniprot.org/uniprot/Q14683" }},
-{data: { id: 'STAG1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVM7" }},
-{data: { id: 'STAG2', score: 5, href: "https://www.uniprot.org/uniprot/Q8N3U4" }},
 {data: { id: 'RAD21', score: 5, href: "https://www.uniprot.org/uniprot/O60216" }},
-{data: { id: 'SMC3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UQE7" }}], 
- edges: [{ data: { source: 'STAG1', target: 'SMC1A', directed: 'false', weight: 0.996499} },
-{ data: { source: 'STAG1', target: 'RAD21', directed: 'false', weight: 0.983316} },
-{ data: { source: 'STAG1', target: 'SMC3', directed: 'false', weight: 0.975893} },
-{ data: { source: 'STAG1', target: 'STAG2', directed: 'false', weight: 0.755897} },
+{data: { id: 'STAG2', score: 5, href: "https://www.uniprot.org/uniprot/Q8N3U4" }},
+{data: { id: 'SMC3', score: 5, href: "https://www.uniprot.org/uniprot/Q9UQE7" }},
+{data: { id: 'STAG1', score: 5, href: "https://www.uniprot.org/uniprot/Q8WVM7" }}], 
+ edges: [{ data: { source: 'SMC1A', target: 'STAG1', directed: 'false', weight: 0.996499} },
 { data: { source: 'SMC1A', target: 'STAG2', directed: 'false', weight: 0.993922} },
 { data: { source: 'SMC1A', target: 'RAD21', directed: 'false', weight: 0.993503} },
 { data: { source: 'SMC1A', target: 'SMC3', directed: 'false', weight: 0.988532} },
-{ data: { source: 'STAG2', target: 'RAD21', directed: 'false', weight: 0.9759389999999999} },
+{ data: { source: 'RAD21', target: 'SMC3', directed: 'false', weight: 0.991294} },
+{ data: { source: 'RAD21', target: 'STAG1', directed: 'false', weight: 0.983316} },
+{ data: { source: 'RAD21', target: 'STAG2', directed: 'false', weight: 0.9759389999999999} },
 { data: { source: 'STAG2', target: 'SMC3', directed: 'false', weight: 0.9759200000000001} },
-{ data: { source: 'RAD21', target: 'SMC3', directed: 'false', weight: 0.991294} }]},
+{ data: { source: 'STAG2', target: 'STAG1', directed: 'false', weight: 0.755897} },
+{ data: { source: 'SMC3', target: 'STAG1', directed: 'false', weight: 0.975893} }]},
 
 style: [
     {
@@ -59,7 +59,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

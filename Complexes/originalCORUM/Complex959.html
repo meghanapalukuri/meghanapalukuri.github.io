@@ -30,13 +30,12 @@
       container: document.getElementById('cy'),
       
 elements:{nodes: [{data: { id: 'HIRA', score: 5, href: "https://www.uniprot.org/uniprot/P54198" }},
-{data: { id: 'None', score: 0 }},
 {data: { id: 'CHAF1A', score: 5, href: "https://www.uniprot.org/uniprot/Q13111" }},
 {data: { id: 'CHAF1B', score: 5, href: "https://www.uniprot.org/uniprot/Q13112" }},
 {data: { id: 'ASF1B', score: 5, href: "https://www.uniprot.org/uniprot/Q9NVP2" }},
 {data: { id: 'ASF1A', score: 5, href: "https://www.uniprot.org/uniprot/Q9Y294" }}], 
- edges: [{ data: { source: 'CHAF1A', target: 'CHAF1B', directed: 'false', weight: 0.998141} },
-{ data: { source: 'ASF1A', target: 'HIRA', directed: 'false', weight: 0.546316} }]},
+ edges: [{ data: { source: 'HIRA', target: 'ASF1A', directed: 'false', weight: 0.546316} },
+{ data: { source: 'CHAF1A', target: 'CHAF1B', directed: 'false', weight: 0.998141} }]},
 
 style: [
     {

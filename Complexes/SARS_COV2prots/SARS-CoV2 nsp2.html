@@ -37,12 +37,14 @@ elements:{nodes: [{data: { id: 'SARS-CoV2 nsp2', score: 2, type:  'sars' , href:
 {data: { id: 'WASHC4', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q2M389" }},
 {data: { id: 'FKBP15', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q5T1M5" }},
 {data: { id: 'GIGYF2', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q6Y7W6" }},
-{data: { id: '0.2 ARD1-NATH complex', score: 0, type: 'complex', href: "../Predicted/Complex905.html" }},
-{data: { id: 'POR LRRFIP2 VCPKMT TMOD3 UBXN6 UBXN2A', score: 0, type: 'complex', href: "../Predicted/Complex899.html" }},
 {data: { id: '0.2 BCR-ABL (p185 fusion protein)-GRB2 complex', score: 0, type: 'complex', href: "../Predicted/Complex375.html" }},
+{data: { id: '0.2 Endosomal targeting complex (VIPAS39-VPS33B)', score: 0, type: 'complex', href: "../Predicted/Complex605.html" }},
+{data: { id: 'LRRFIP2 UBXN6 VCPKMT POR UBXN2A TMOD3', score: 0, type: 'complex', href: "../Predicted/Complex899.html" }},
 {data: { id: '0.4 Retromer complex (SNX1, SNX2, VPS35, VPS29, VPS26A)', score: 0, type: 'complex', href: "../Predicted/Complex754.html" }},
-{data: { id: '0.2 Endosomal targeting complex (VIPAS39-VPS33B)', score: 0, type: 'complex', href: "../Predicted/Complex605.html" }}], 
- edges: [{ data: { source: 'POR', target: 'POR LRRFIP2 VCPKMT TMOD3 UBXN6 UBXN2A', directed: 'false',type: 'prot2complex', weight: 0.99} },
+{data: { id: '0.2 ARD1-NATH complex', score: 0, type: 'complex', href: "../Predicted/Complex905.html" }}], 
+ edges: [{ data: { source: '0.2 BCR-ABL (p185 fusion protein)-GRB2 complex', target: '0.2 ARD1-NATH complex', directed: 'false',type: 'complex2complex', weight: 0.14285714285714285} },
+{ data: { source: '0.2 Endosomal targeting complex (VIPAS39-VPS33B)', target: '0.4 Retromer complex (SNX1, SNX2, VPS35, VPS29, VPS26A)', directed: 'false',type: 'complex2complex', weight: 0.058823529411764705} },
+{ data: { source: 'POR', target: 'LRRFIP2 UBXN6 VCPKMT POR UBXN2A TMOD3', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'RAP1GDS1', target: '0.2 BCR-ABL (p185 fusion protein)-GRB2 complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'RAP1GDS1', target: '0.2 ARD1-NATH complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
 { data: { source: 'WASHC4', target: '0.4 Retromer complex (SNX1, SNX2, VPS35, VPS29, VPS26A)', directed: 'false',type: 'prot2complex', weight: 0.99} },
@@ -81,9 +83,10 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.5, 1, 0.1, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 5)',
 								'line-color': function( ele ){ 
-                                if ( ele.data('type') == 'prot2complex' ){return 'blue'}
+                                if ( ele.data('type') == 'prot2complex' ){return 'orange'}
+                                  if ( ele.data('type') == 'complex2complex' ){return 'blue'}
   return 'red';
   },
 								'opacity': 0.5

@@ -29,12 +29,12 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'PRMT5', score: 5, href: "https://www.uniprot.org/uniprot/O14744" }},
-{data: { id: 'CLNS1A', score: 5, href: "https://www.uniprot.org/uniprot/P54105" }},
-{data: { id: 'WDR77', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQA1" }}], 
- edges: [{ data: { source: 'PRMT5', target: 'WDR77', directed: 'false', weight: 0.99874} },
-{ data: { source: 'PRMT5', target: 'CLNS1A', directed: 'false', weight: 0.994735} },
-{ data: { source: 'CLNS1A', target: 'WDR77', directed: 'false', weight: 0.46472700000000006} }]},
+elements:{nodes: [{data: { id: 'WDR77', score: 5, href: "https://www.uniprot.org/uniprot/Q9BQA1" }},
+{data: { id: 'PRMT5', score: 5, href: "https://www.uniprot.org/uniprot/O14744" }},
+{data: { id: 'CLNS1A', score: 5, href: "https://www.uniprot.org/uniprot/P54105" }}], 
+ edges: [{ data: { source: 'WDR77', target: 'PRMT5', directed: 'false', weight: 0.99874} },
+{ data: { source: 'WDR77', target: 'CLNS1A', directed: 'false', weight: 0.46472700000000006} },
+{ data: { source: 'PRMT5', target: 'CLNS1A', directed: 'false', weight: 0.994735} }]},
 
 style: [
     {
@@ -50,7 +50,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}

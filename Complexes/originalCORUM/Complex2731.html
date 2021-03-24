@@ -29,13 +29,13 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'DLD', score: 5, href: "https://www.uniprot.org/uniprot/A0A024R713" }},
+elements:{nodes: [{data: { id: 'DLD', score: 5, href: "https://www.uniprot.org/uniprot/P09622" }},
 {data: { id: 'DLST', score: 5, href: "https://www.uniprot.org/uniprot/P36957" }},
 {data: { id: 'OGDH', score: 5, href: "https://www.uniprot.org/uniprot/Q02218" }},
 {data: { id: 'KAT2A', score: 5, href: "https://www.uniprot.org/uniprot/Q92830" }}], 
- edges: [{ data: { source: 'OGDH', target: 'DLST', directed: 'false', weight: 0.999834} },
-{ data: { source: 'OGDH', target: 'DLD', directed: 'false', weight: 0.9984559999999999} },
-{ data: { source: 'DLST', target: 'DLD', directed: 'false', weight: 0.9986430000000001} }]},
+ edges: [{ data: { source: 'DLD', target: 'DLST', directed: 'false', weight: 0.9986430000000001} },
+{ data: { source: 'DLD', target: 'OGDH', directed: 'false', weight: 0.9984559999999999} },
+{ data: { source: 'OGDH', target: 'DLST', directed: 'false', weight: 0.999834} }]},
 
 style: [
     {

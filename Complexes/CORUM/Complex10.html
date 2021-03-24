@@ -32,9 +32,9 @@
 elements:{nodes: [{data: { id: 'APBA1', score: 5, href: "https://www.uniprot.org/uniprot/Q02410" }},
 {data: { id: 'CASK', score: 5, href: "https://www.uniprot.org/uniprot/O14936" }},
 {data: { id: 'LIN7C', score: 5, href: "https://www.uniprot.org/uniprot/Q9NUP9" }}], 
- edges: [{ data: { source: 'LIN7C', target: 'CASK', directed: 'false', weight: 0.996451} },
-{ data: { source: 'LIN7C', target: 'APBA1', directed: 'false', weight: 0.966167} },
-{ data: { source: 'CASK', target: 'APBA1', directed: 'false', weight: 0.151455} }]},
+ edges: [{ data: { source: 'APBA1', target: 'LIN7C', directed: 'false', weight: 0.966167} },
+{ data: { source: 'APBA1', target: 'CASK', directed: 'false', weight: 0.151455} },
+{ data: { source: 'CASK', target: 'LIN7C', directed: 'false', weight: 0.996451} }]},
 
 style: [
     {
@@ -50,7 +50,7 @@ style: [
 							{
 							selector: 'edge',
 							style: {
-								'width': 'mapData(weight, 0.002, 1, 0.5, 2.5)',
+								'width': 'mapData(weight, 0, 1, 0, 2.5)',
 								'line-color': 'blue',
 								'opacity': 0.5
 							}
