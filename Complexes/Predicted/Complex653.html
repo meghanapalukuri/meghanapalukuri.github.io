@@ -6,7 +6,11 @@
 <head>
 <title> HYPK MANF ZNF706 RNMT</title>
 
-        <script src="../cytoscape.js"></script>
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
     </head>
     
     <style>
@@ -69,7 +73,7 @@ style: [
 });
 
 cy.layout({
-    name: 'circle'
+    'name': 'circle'
 }).run();
     
 cy.on('tap', 'node', function(){
@@ -87,7 +91,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.63587
+    HYPK MANF ZNF706 RNMT<br> Complex Score (from Super.Complex) = 0.63587<br> Unweighted Density = 0.83
     </section>
     </body>
     </html>

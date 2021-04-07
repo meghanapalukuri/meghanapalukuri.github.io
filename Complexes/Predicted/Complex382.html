@@ -6,7 +6,11 @@
 <head>
 <title> YIF1A YIF1B YIPF5</title>
 
-        <script src="../cytoscape.js"></script>
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
     </head>
     
     <style>
@@ -68,7 +72,7 @@ style: [
 });
 
 cy.layout({
-    name: 'circle'
+    'name': 'circle'
 }).run();
     
 cy.on('tap', 'node', function(){
@@ -86,7 +90,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.75927
+    YIF1A YIF1B YIPF5<br> Complex Score (from Super.Complex) = 0.75927<br> Unweighted Density = 1.00
         <br> 
         <br>
         Connection to SARS-COV2: 

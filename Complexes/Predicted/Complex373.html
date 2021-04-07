@@ -6,7 +6,11 @@
 <head>
 <title> UMAD1 TFG MTUS2</title>
 
-        <script src="../cytoscape.js"></script>
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
     </head>
     
     <style>
@@ -66,7 +70,7 @@ style: [
 });
 
 cy.layout({
-    name: 'circle'
+    'name': 'circle'
 }).run();
     
 cy.on('tap', 'node', function(){
@@ -84,7 +88,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.75995
+    UMAD1 TFG MTUS2<br> Complex Score (from Super.Complex) = 0.75995<br> Unweighted Density = 1.00
     </section>
     </body>
     </html>

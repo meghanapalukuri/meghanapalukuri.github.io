@@ -6,7 +6,11 @@
 <head>
 <title> 0.7 TIM (TIM9, TIM10) complex, mitochondrial</title>
 
-        <script src="../cytoscape.js"></script>
+		<script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+		<script src="https://unpkg.com/layout-base/layout-base.js"></script>
+<script src="https://unpkg.com/cose-base/cose-base.js"></script>
+<script src="https://unpkg.com/cytoscape-fcose/cytoscape-fcose.js"></script>
     </head>
     
     <style>
@@ -70,7 +74,7 @@ style: [
 });
 
 cy.layout({
-    name: 'circle'
+    'name': 'circle'
 }).run();
     
 cy.on('tap', 'node', function(){
@@ -88,7 +92,7 @@ cy.on('tap', 'node', function(){
 	<br>
 	<br>
 	<br> 
-    Complex Score (from Super.Complex) = 0.76838
+    0.7 TIM (TIM9, TIM10) complex, mitochondrial<br> Complex Score (from Super.Complex) = 0.76838<br> Unweighted Density = 1.00
         <br> 
         <br>
         Connection to SARS-COV2: 
