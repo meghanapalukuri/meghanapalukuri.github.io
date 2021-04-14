@@ -29,15 +29,15 @@
           var cy = cytoscape({
       container: document.getElementById('cy'),
       
-elements:{nodes: [{data: { id: 'SARS-CoV2 Spike', score: 2, type:  'sars' , href: "https://covid-19.uniprot.org/uniprotkb/P0DTC2" }},
-{data: { id: 'GOLGA7', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q7Z5G4" }},
-{data: { id: 'ZDHHC5', score: 1, type:  'human' , href: "https://www.uniprot.org/uniprot/Q9C0B5" }},
-{data: { id: 'GOLGA7 CLDND1 MAN1A2 ZDHHC8', score: 0, type: 'complex', href: "../Predicted/Complex249.html" }},
-{data: { id: '0.1 CART complex', score: 0, type: 'complex', href: "../Predicted/Complex23.html" }}], 
- edges: [{ data: { source: 'GOLGA7', target: 'GOLGA7 CLDND1 MAN1A2 ZDHHC8', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'ZDHHC5', target: '0.1 CART complex', directed: 'false',type: 'prot2complex', weight: 0.99} },
-{ data: { source: 'SARS-CoV2 Spike', target: 'GOLGA7', directed: 'false', type: 'sars2prot',weight: 0.978892719} },
-{ data: { source: 'SARS-CoV2 Spike', target: 'ZDHHC5', directed: 'false', type: 'sars2prot',weight: 0.982389013} }]},
+elements:{nodes: [{data: { id: "SARS-CoV2 Spike", score: 2, type:  "sars" , href: "https://covid-19.uniprot.org/uniprotkb/P0DTC2" }},
+{data: { id: "GOLGA7", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q7Z5G4" }},
+{data: { id: "ZDHHC5", score: 1, score_annot: 5, type:  "human" , href: "https://www.uniprot.org/uniprot/Q9C0B5" }},
+{data: { id: "0.1 CART complex", score: 0, type: "complex", href: "../Predicted/Complex23.html" }},
+{data: { id: "GOLGA7 CLDND1 MAN1A2 ZDHHC8", score: 0, type: "complex", href: "../Predicted/Complex249.html" }}], 
+ edges: [{ data: { source: "GOLGA7", target: "GOLGA7 CLDND1 MAN1A2 ZDHHC8", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "ZDHHC5", target: "0.1 CART complex", directed: "false",type: "prot2complex", weight: 0.99} },
+{ data: { source: "SARS-CoV2 Spike", target: "GOLGA7", directed: "false", type: "sars2prot",weight: 0.978892719} },
+{ data: { source: "SARS-CoV2 Spike", target: "ZDHHC5", directed: "false", type: "sars2prot",weight: 0.982389013} }]},
 
 style: [
     {
@@ -48,15 +48,20 @@ style: [
                       'text-wrap': 'wrap',
     'text-max-width': '300',
             shape: function( ele ){ 
-                                if ( ele.data('type') == 'complex' ){return 'rectangle'}
+                                if ( ele.data('type') == 'complex' ){return 'circle'}
                                 if ( ele.data('type') == 'sars' ){return 'triangle'}
                                 
-  return 'circle';
+  return 'star';
   },
             'background-color': function( ele ){ 
                                 if ( ele.data('type') == 'complex' ){return 'blue'}
                                 if ( ele.data('type') == 'sars' ){return 'red'}             
-  return 'yellow';
+                                if ( ele.data('score_annot') == 1 ){return 'rgb(201, 160, 54)'} 
+								if ( ele.data('score_annot') == 2 ){return 'rgb(211, 186, 63)'}  
+                                 if ( ele.data('score_annot') == 3 ){return 'rgb(160, 171, 105)'}   
+                                 if ( ele.data('score_annot') == 4 ){return 'rgb(78, 148, 70)'}   
+                                 if ( ele.data('score_annot') == 5 ){return 'rgb(52, 136, 74)'}   
+                                 return 'rgb(180, 131, 40)';
   },
             label: 'data(id)'
         }
